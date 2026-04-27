@@ -69,3 +69,21 @@ scornfully, derisively, tauntingly
 
 - vocab 數 > 1000 → 把 `_index.md` 分成 `_index_active.md`（90 天內複習）+ `_index_archive.md`
 - vocab 數 > 2000 → 評估按字首分子目錄（`vocab/m/mockingly.md`）或匯出 `vocab.json` 給程式查
+
+## Git commit 慣例
+
+格式：`<scope>: <短句>`（短句 ≤ 60 字，現在式祈使語氣）
+
+| scope | 用途 | 範例 |
+|---|---|---|
+| `vocab` | 新增 / 更新單字 | `vocab: add mockingly` ／ `vocab: review mockingly (★1→2)` |
+| `writing` | 新增寫作練習 | `writing: 2026-04-27 childhood-room` |
+| `conv` | 新增對話 log | `conv: 2026-04-27 ordering-coffee` |
+| `lesson` | 新增 podcast / 影片整理 | `lesson: ELI5 lead-uranium` |
+| `profile` | 更新 Profile | `profile: add weakness — past tense` |
+| `brain` | 改 BRAIN / CLAUDE / 索引／結構 | `brain: split _index by ★` |
+| `skill` | 改 english-tutor skill | `skill: switch HTML magazine to opt-in` |
+| `chore` | 雜項（gitignore、整理檔案等） | `chore: ignore .DS_Store` |
+
+LLM（含 Coach Max）寫入後 **不要自動 commit**——在回覆結尾建議一個 commit 訊息，由 Cian 親手執行 `git commit`。
+若一次回應同時動到多個 scope，分多筆 commit。

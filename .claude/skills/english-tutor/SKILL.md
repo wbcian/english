@@ -95,3 +95,11 @@ The English folder is Cian's persistent learning brain. Read `BRAIN.md` once per
 - Trivial single-turn exchanges that don't teach anything new.
 - Duplicates — check `vocab/_index.md` first before creating a new word file.
 - Example/placeholder data. Only real interactions get persisted.
+
+### After writing — suggest a commit
+
+Do **not** auto-`git commit`. After any write, end your reply with a one-line suggested commit message in BRAIN.md's convention, e.g.:
+
+> 💾 Suggested commit: `vocab: add mockingly`
+
+If multiple scopes were touched, suggest one commit per scope.
