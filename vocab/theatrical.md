@@ -1,0 +1,31 @@
+---
+word: theatrical
+phonetic: /θiˈætrɪkl/
+pos: adj
+zh: 戲劇性的；誇張的；舞台的
+proficiency: 2
+first_seen: 2026-04-27
+last_reviewed: 2026-04-27
+review_count: 1
+tags: [adjective, performance, manner]
+source: "RealLife App: Tom Holland × Gordon Ramsay"
+---
+
+## Examples
+> "Fishnets are often associated with sexy or theatrical fashion."
+> 漁網襪常常和性感或戲劇舞台風格的時尚扯上關係。
+
+> "His theatrical reaction made everyone laugh."
+> 他誇張戲劇化的反應讓大家笑翻。
+
+## Usage tip
+- 兩種主要用法：
+  1. 字面：和劇場 / 舞台相關 → "theatrical performance", "theatrical release"（電影院上映）
+  2. 引申：形容人「很愛演」、表情誇張 → "Don't be so theatrical."
+- 名詞 **theatre / theater** = 劇院；副詞 **theatrically**
+
+## Synonyms
+dramatic, exaggerated, ostentatious, showy
+
+## Encounters
+- 2026-04-27 — first learned (RealLife App: Tom Holland × Gordon Ramsay)
