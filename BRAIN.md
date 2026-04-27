@@ -1,0 +1,71 @@
+# Cian's English Brain
+
+> 給讀到此資料夾的 LLM：這是索引，不是資料本體。先看完此份再決定要展開哪些檔案。
+> **不要** Read 整個 `vocab/` 目錄；只在使用者問特定字、需要更新、或要做整體統計時才開單檔。
+
+## 學習者
+- 名稱：Cian（暱稱 Benson / Mr. Wu）
+- 教練：Coach Max（persona 定義在 `.claude/skills/english-tutor/SKILL.md`）
+- 詳細 Profile → [PROFILE.md](PROFILE.md)
+
+## 快照（隨更新同步）
+- 已收錄單字：0
+- 5★ 精熟：0　 3–4★ 學習中：0　 1–2★ 新／脆弱：0
+- 最近活動日期：2026-04-27（資料夾建立）
+- 最近寫作：（無）
+
+## 資料夾導覽
+- [`vocab/_index.md`](vocab/_index.md) — 單字快表（80% 問題從這裡找答案）
+- `vocab/<word>.md` — 單字深度檔（需要例句／encounter log 才開）
+- `writing/` — 寫作練習與 Coach Max 修改
+- `conversations/` — 對話練習摘要
+- `lessons/` — podcast / 影片轉換的學習筆記
+- [`ACTIVITY.md`](ACTIVITY.md) — 時間軸（最新在上）
+- [`PROFILE.md`](PROFILE.md) — 目標 / 弱點 / 偏好
+
+## 給 LLM 的維護規則
+
+1. **新單字** → 建立 `vocab/<word>.md`、在 `vocab/_index.md` 加一列、`ACTIVITY.md` 頂端加一行
+2. **舊單字再現** → 在該檔 `## Encounters` 補日期、更新 frontmatter 的 `last_reviewed` 與 `review_count`，視情況調 `proficiency`，並同步 `_index.md`
+3. **寫作 / 對話** → 對應資料夾；檔名 `YYYY-MM-DD-<topic>.md`；`ACTIVITY.md` 加一行
+4. **長文／字幕** → **預設**輸出 markdown 整理到 `lessons/YYYY-MM-DD-<topic>.md`；只有當使用者明確說「轉成 magazine」、「雜誌風格」、「HTML 版」等才產 HTML
+5. **發現新弱點 / 偏好** → 更新 `PROFILE.md`
+6. **更新此份快照** → 完成上述任一動作後同步本檔的「快照」段
+7. **永遠**：繁體中文翻譯；保留 Coach Max 風格（幽默、直白、像哥兒們）
+
+## 單字檔 Schema 範例
+
+```markdown
+---
+word: mockingly
+phonetic: /ˈmɑːkɪŋli/
+pos: adv
+zh: 嘲弄地
+proficiency: 2          # 1–5 ★
+first_seen: 2026-04-15
+last_reviewed: 2026-04-27
+review_count: 3
+tags: [emotion, manner-adverb]
+source: "podcast: ELI5 lead-uranium"
+---
+
+## Examples
+> "She looked at my burnt toast mockingly."
+> 她嘲弄地看著我燒焦的吐司。
+
+## Usage tip
+Often paired with verbs like "laugh", "smile", "look".
+
+## Synonyms
+scornfully, derisively, tauntingly
+
+## Encounters
+- 2026-04-15 — first learned (podcast ELI5)
+- 2026-04-22 — used in writing practice
+- 2026-04-27 — reviewed by Coach Max
+```
+
+## 可搜尋性升級觸發點
+
+- vocab 數 > 1000 → 把 `_index.md` 分成 `_index_active.md`（90 天內複習）+ `_index_archive.md`
+- vocab 數 > 2000 → 評估按字首分子目錄（`vocab/m/mockingly.md`）或匯出 `vocab.json` 給程式查
