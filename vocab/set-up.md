@@ -3,10 +3,10 @@ word: set up
 phonetic: /sɛt ʌp/
 pos: phr.v
 zh: 為…鋪路；建立；安排；介紹對象；陷害
-proficiency: 2
+proficiency: 4
 first_seen: 2026-04-27
-last_reviewed: 2026-04-27
-review_count: 2
+last_reviewed: 2026-04-28
+review_count: 3
 tags: [phrasal-verb, multi-meaning]
 source: "RealLife App: Tom Holland × Gordon Ramsay"
 ---
@@ -51,3 +51,4 @@ prepare, pave the way, lay the groundwork (for), arrange, fix up (sb with sb), f
 ## Encounters
 - 2026-04-27 — first learned (RealLife App: Tom Holland × Gordon Ramsay)
 - 2026-04-27 — deep dive on "set someone up" 五種型式（撮合 / 陷害 / 鋪路 / 配備 / 出資）
+- 2026-04-28 — used in writing drill: "My friend wants to set me up with a coworker from his company. He thinks we'd hit it off." — 滿分，native 等級！句型、idiom、假設語氣全到位

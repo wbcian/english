@@ -3,10 +3,10 @@ word: easy breezy
 phonetic: /ˈiːzi ˈbriːzi/
 pos: idiom (adj.phr.)
 zh: 輕鬆寫意；毫無壓力
-proficiency: 2
+proficiency: 3
 first_seen: 2026-04-27
-last_reviewed: 2026-04-27
-review_count: 1
+last_reviewed: 2026-04-28
+review_count: 2
 tags: [idiom, informal, casual]
 source: "RealLife App: Tom Holland × Gordon Ramsay"
 ---
@@ -30,3 +30,4 @@ a piece of cake, a walk in the park, no sweat
 
 ## Encounters
 - 2026-04-27 — first learned (RealLife App: Tom Holland × Gordon Ramsay)
+- 2026-04-28 — used in writing drill: "It'll be easy breezy." — `easy breezy` 用法正確，但隔壁的 `had practiced` 該是 `'ve practiced`（過去完成 vs 現在完成混淆）

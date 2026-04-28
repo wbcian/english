@@ -3,10 +3,10 @@ word: lit up
 phonetic: /lɪt ʌp/
 pos: phr.v / adj
 zh: 點亮；（臉/眼）為之一亮、綻放喜悅；嗨翻；微醺
-proficiency: 2
+proficiency: 3
 first_seen: 2026-04-27
-last_reviewed: 2026-04-27
-review_count: 1
+last_reviewed: 2026-04-28
+review_count: 2
 tags: [phrasal-verb, multi-meaning, slang]
 source: "user-asked"
 ---
@@ -67,3 +67,4 @@ source: "user-asked"
 
 ## Encounters
 - 2026-04-27 — first learned (user asked)
+- 2026-04-28 — used in writing drill: "Children's face lit up at the moment they saw Christmas tree." — `lit up` 動詞用對，但暴露三大魔王（複數 -s、冠詞 the、`the moment` 連接詞 vs `at the moment` 時間點）

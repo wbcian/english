@@ -5,8 +5,8 @@ pos: adj
 zh: 戲劇性的；誇張的；舞台的
 proficiency: 2
 first_seen: 2026-04-27
-last_reviewed: 2026-04-27
-review_count: 1
+last_reviewed: 2026-04-28
+review_count: 2
 tags: [adjective, performance, manner]
 source: "RealLife App: Tom Holland × Gordon Ramsay"
 ---
@@ -29,3 +29,4 @@ dramatic, exaggerated, ostentatious, showy
 
 ## Encounters
 - 2026-04-27 — first learned (RealLife App: Tom Holland × Gordon Ramsay)
+- 2026-04-28 — used in writing drill: 用對了 `in a theatrical way`，但句子結構大坑：`even he just buys X can be Y` 應為 `even buying X sounds like Y`（動作要名詞化才能當主詞）

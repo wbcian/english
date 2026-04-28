@@ -3,10 +3,10 @@ word: go all out
 phonetic: /ɡoʊ ɔːl aʊt/
 pos: phr.v
 zh: 卯足全力；火力全開
-proficiency: 2
+proficiency: 3
 first_seen: 2026-04-27
-last_reviewed: 2026-04-27
-review_count: 1
+last_reviewed: 2026-04-28
+review_count: 2
 tags: [idiom, effort, performance]
 source: "RealLife App: Tom Holland × Gordon Ramsay"
 ---
@@ -28,3 +28,4 @@ give it your all, pull out all the stops, leave nothing on the table
 
 ## Encounters
 - 2026-04-27 — first learned (RealLife App: Tom Holland × Gordon Ramsay)
+- 2026-04-28 — used in writing drill: "My sister is going all out for her wedding..." — 主結構抓對，但卡在 `for holding a wedding`（應為 `for + N`）和 3rd person sg `go → is going`

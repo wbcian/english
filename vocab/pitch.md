@@ -3,10 +3,10 @@ word: pitch
 phonetic: /pɪtʃ/
 pos: v / n
 zh: 推銷（點子／提案）；提案；投球
-proficiency: 2
+proficiency: 4
 first_seen: 2026-04-27
-last_reviewed: 2026-04-27
-review_count: 1
+last_reviewed: 2026-04-28
+review_count: 2
 tags: [business, communication, verb]
 source: "RealLife App: Tom Holland × Gordon Ramsay"
 ---
@@ -33,3 +33,4 @@ propose, present, sell (an idea), put forward
 
 ## Encounters
 - 2026-04-27 — first learned (RealLife App: Tom Holland × Gordon Ramsay)
+- 2026-04-28 — used in writing drill: "I'm going to pitch my new app to investors next week..." — `pitch X to Y` 句型完美，幾乎滿分，只差冠詞與標點微調
