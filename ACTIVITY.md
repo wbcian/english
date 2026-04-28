@@ -5,7 +5,13 @@
 
 ---
 
+## 2026-04-28
+- ✏️ 完成寫作 worksheet：vocab translation drill 6/6 → [drill](writing/2026-04-28-vocab-translation-drill.md)
+- 📚 複習 + 升級：go all out (★2→3)、easy breezy (★2→3)、lit up (★2→3)、pitch (★2→4)、set up (★2→4)
+- 🎯 觀察到弱點 pattern → 更新 [PROFILE.md](PROFILE.md)：(1) 動詞時態變化、(2) 名詞單複數 / 冠詞、(3) 中翻英直譯結構
+
 ## 2026-04-27
+- ✏️ 準備明日寫作 worksheet：vocab translation drill（6 字）→ [worksheet](writing/2026-04-28-vocab-translation-drill.md)
 - 📚 新增單字：lit up（含 slang "lit"）
 - 📚 複習 + 擴充：with a bang（come out / go out / kick off / end / go off）
 - 📚 新增單字：stockings（含絲襪整個 family：tights / pantyhose / fishnets…）

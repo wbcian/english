@@ -10,9 +10,9 @@
 
 ## 快照（隨更新同步）
 - 已收錄單字：18
-- 5★ 精熟：0　 3–4★ 學習中：5　 1–2★ 新／脆弱：13
-- 最近活動日期：2026-04-27（lesson: Tom Holland × Lip Sync Battle）
-- 最近寫作：（無）
+- 5★ 精熟：0　 3–4★ 學習中：10　 1–2★ 新／脆弱：8
+- 最近活動日期：2026-04-28（writing drill: 6 字翻譯練習）
+- 最近寫作：[2026-04-28 vocab-translation-drill](writing/2026-04-28-vocab-translation-drill.md)（6/6 完成，set up 與 pitch 滿分）
 
 ## 資料夾導覽
 - [`vocab/_index.md`](vocab/_index.md) — 單字快表（80% 問題從這裡找答案）
