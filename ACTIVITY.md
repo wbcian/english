@@ -5,6 +5,13 @@
 
 ---
 
+## 2026-04-29
+- 📚 新增 11 個單字／idiom：keen, eager, put heart and soul, haunt, framed, pour into, sketches, gallery, brought up, pause, habitually
+- 🤔 解答 idiom 翻譯：`pour blood/sweat/tears into` 中的 `poured` = 傾注、灌注
+- ✏️ 修正 Cian 例句：movie→move、City→city、make→made
+
+---
+
 ## 2026-04-28
 - ✏️ 完成寫作 worksheet：vocab translation drill 6/6 → [drill](writing/2026-04-28-vocab-translation-drill.md)
 - 📚 複習 + 升級：go all out (★2→3)、easy breezy (★2→3)、lit up (★2→3)、pitch (★2→4)、set up (★2→4)

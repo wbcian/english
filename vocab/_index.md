@@ -6,6 +6,21 @@
 
 | 單字 | 詞性 | 中文 | ★ | 上次複習 | tags |
 |---|---|---|---|---|---|
+| [incorrigible](incorrigible.md) | adj. | 無可救藥的；屢勸不改 | 2 | 2026-04-29 | adjective, personality |
+| [headed to](headed-to.md) | phr. | 前往；朝...而去 | 2 | 2026-04-29 | phrasal-verb, daily |
+| [excruciating](excruciating.md) | adj. | 極度痛苦的；難熬到極點的 | 2 | 2026-04-29 | adjective, intensity |
+| [cram](cram.md) | v. | 塞滿；臨時抱佛腳 | 2 | 2026-04-29 | verb, study, multi-meaning |
+| [keen](keen.md) | adj. | 熱衷的；敏銳的 | 2 | 2026-04-29 | adjective, emotion |
+| [eager](eager.md) | adj. | 渴望的；急切的 | 2 | 2026-04-29 | adjective, emotion |
+| [put heart and soul](put-heart-and-soul.md) | idiom | 全心全意投入 | 2 | 2026-04-29 | idiom, effort |
+| [haunt](haunt.md) | v./n. | 縈繞、糾纏；常去之地 | 2 | 2026-04-29 | verb, multi-meaning |
+| [framed](framed.md) | v./adj. | 被陷害；被裝框 | 2 | 2026-04-29 | verb, multi-meaning, crime |
+| [pour into](pour-into.md) | v. (idiom) | 傾注（心血、精力）於 | 2 | 2026-04-29 | verb, idiom, effort |
+| [sketches](sketches.md) | n. | 素描；草圖；短劇 | 2 | 2026-04-29 | noun, art, multi-meaning |
+| [gallery](gallery.md) | n. | 畫廊；藝廊；觀眾席 | 2 | 2026-04-29 | noun, art, place |
+| [brought up](brought-up.md) | phr.v. | 提起；撫養；嘔吐 | 2 | 2026-04-29 | phrasal-verb, multi-meaning |
+| [pause](pause.md) | v./n. | 停頓；暫停 | 2 | 2026-04-29 | verb, conversation, daily |
+| [habitually](habitually.md) | adv. | 習慣性地 | 2 | 2026-04-29 | adverb, behavior |
 | [viral](viral.md) | adj. | 病毒式傳播的；爆紅 | 2 | 2026-04-27 | internet, media |
 | [choreography](choreography.md) | n. | 編舞 | 2 | 2026-04-27 | performance, dance |
 | [with a bang](come-out-with-a-bang.md) | idiom | 轟動地（come out / go out / kick off…） | 2 | 2026-04-27 | idiom, performance |
