@@ -9,9 +9,9 @@
 - 詳細 Profile → [PROFILE.md](PROFILE.md)
 
 ## 快照（隨更新同步）
-- 已收錄單字：29
-- 5★ 精熟：0　 3–4★ 學習中：10　 1–2★ 新／脆弱：19
-- 最近活動日期：2026-04-29（vocab batch: 11 字 — keen / eager / haunt / framed / pour into 等）
+- 已收錄單字：33
+- 5★ 精熟：0　 3–4★ 學習中：10　 1–2★ 新／脆弱：23
+- 最近活動日期：2026-04-29（vocab batch: 累計 15 字 — incorrigible / headed-to / excruciating / cram + 第一批 11 字）
 - 最近寫作：[2026-04-28 vocab-translation-drill](writing/2026-04-28-vocab-translation-drill.md)（6/6 完成，set up 與 pitch 滿分）
 
 ## 資料夾導覽

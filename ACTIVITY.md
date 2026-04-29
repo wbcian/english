@@ -6,7 +6,8 @@
 ---
 
 ## 2026-04-29
-- 📚 新增 11 個單字／idiom：keen, eager, put heart and soul, haunt, framed, pour into, sketches, gallery, brought up, pause, habitually
+- 📚 新增 4 個單字（第二批）：incorrigible, headed to, excruciating, cram
+- 📚 新增 11 個單字／idiom（第一批）：keen, eager, put heart and soul, haunt, framed, pour into, sketches, gallery, brought up, pause, habitually
 - 🤔 解答 idiom 翻譯：`pour blood/sweat/tears into` 中的 `poured` = 傾注、灌注
 - ✏️ 修正 Cian 例句：movie→move、City→city、make→made
 
