@@ -6,6 +6,9 @@
 
 | 單字 | 詞性 | 中文 | ★ | 上次複習 | tags |
 |---|---|---|---|---|---|
+| [humorous twist](humorous-twist.md) | n.phr. | 幽默的轉折；反差萌 | 1 | 2026-04-30 | phrase, narrative, storytelling |
+| [terrified](terrified.md) | adj. | 嚇壞的；非常害怕的 | 1 | 2026-04-30 | adjective, emotion, fear |
+| [pinch](pinch.md) | v./n. | 捏；掐；偷；一小撮；困境（含三態） | 1 | 2026-04-30 | verb, multi-meaning, regular-verb |
 | [viral](viral.md) | adj. | 病毒式傳播的；爆紅 | 2 | 2026-04-27 | internet, media |
 | [choreography](choreography.md) | n. | 編舞 | 2 | 2026-04-27 | performance, dance |
 | [with a bang](come-out-with-a-bang.md) | idiom | 轟動地（come out / go out / kick off…） | 2 | 2026-04-27 | idiom, performance |
@@ -27,6 +30,12 @@
 | [habitually](habitually.md) | adv. | 習慣性地 | 2 | 2026-04-29 | adverb, behavior |
 | [brought up](brought-up.md) | phr.v. | 提起；撫養；嘔吐 | 2 | 2026-04-30 | phrasal-verb, multi-meaning, ⚠️quiz-miss |
 | [excruciating](excruciating.md) | adj. | 極度痛苦的；難熬到極點的 | 2 | 2026-04-30 | adjective, intensity, ⚠️quiz-miss |
+| [in a pinch](in-a-pinch.md) | idiom | 處境困難；緊要關頭；急用時 | 2 | 2026-04-30 | idiom, situation, business |
+| [count on](count-on.md) | phr.v. | 信賴；指望；依靠 | 2 | 2026-04-30 | phrasal-verb, trust, daily |
+| [go through a rough patch](go-through-a-rough-patch.md) | idiom | 經歷一段難熬期；過得不順 | 2 | 2026-04-30 | idiom, hardship, daily |
+| [get through](get-through.md) | phr.v. | 撐過；熬過；（電話）打通 | 2 | 2026-04-30 | phrasal-verb, multi-meaning, hardship |
+| [going under](going-under.md) | v.phr. | 倒掉；沉沒；麻醉 | 2 | 2026-04-30 | phrasal-verb, business, idiom |
+| [stink](stink.md) | v./n. | 發臭；爛透了 | 2 | 2026-04-30 | verb, multi-meaning, opinion |
 | [wig](wig.md) | n. | 假髮 | 3 | 2026-04-27 | fashion, costume |
 | [contestant](contestant.md) | n. | 參賽者 | 3 | 2026-04-27 | people, competition |
 | [costume](costume.md) | n. | 戲服；演出服 | 3 | 2026-04-27 | fashion, performance |

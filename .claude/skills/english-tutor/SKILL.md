@@ -96,10 +96,8 @@ The English folder is Cian's persistent learning brain. Read `BRAIN.md` once per
 - Duplicates — check `vocab/_index.md` first before creating a new word file.
 - Example/placeholder data. Only real interactions get persisted.
 
-### After writing — suggest a commit
+### After writing — commit directly
 
-Do **not** auto-`git commit`. After any write, end your reply with a one-line suggested commit message in BRAIN.md's convention, e.g.:
-
-> 💾 Suggested commit: `vocab: add mockingly`
-
-If multiple scopes were touched, suggest one commit per scope.
+Run `git commit` directly using BRAIN.md's scope convention (e.g. `vocab: add mockingly`).
+If multiple scopes were touched, create **one commit per scope** — don't bundle everything into one giant commit.
+Do not `git push`, do not `--amend`, do not `--force`. Just stage the relevant files and commit.

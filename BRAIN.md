@@ -9,9 +9,9 @@
 - 詳細 Profile → [PROFILE.md](PROFILE.md)
 
 ## 快照（隨更新同步）
-- 已收錄單字：33
-- 5★ 精熟：0　 3–4★ 學習中：12　 1–2★ 新／脆弱：21
-- 最近活動日期：2026-04-30（抽考 5 字：2 ✅ / 3 ❌；incorrigible & theatrical 升 ★3）
+- 已收錄單字：42
+- 5★ 精熟：0　 3–4★ 學習中：12　 1–2★ 新／脆弱：30
+- 最近活動日期：2026-04-30（早上抽考 5 字 2 ✅ / 3 ❌ → incorrigible & theatrical 升 ★3；後續 lesson: Monsters, Inc. business English + 9 字）
 - 最近寫作：[2026-04-28 vocab-translation-drill](writing/2026-04-28-vocab-translation-drill.md)（6/6 完成，set up 與 pitch 滿分）
 - 待加強清單：brought up（vs set up 易混淆）、excruciating（記不住）、go all out（vs pour into 易混淆）
 
@@ -86,5 +86,6 @@ scornfully, derisively, tauntingly
 | `skill` | 改 english-tutor skill | `skill: switch HTML magazine to opt-in` |
 | `chore` | 雜項（gitignore、整理檔案等） | `chore: ignore .DS_Store` |
 
-LLM（含 Coach Max）寫入後 **不要自動 commit**——在回覆結尾建議一個 commit 訊息，由 Cian 親手執行 `git commit`。
-若一次回應同時動到多個 scope，分多筆 commit。
+LLM（含 Coach Max）寫入後 **直接幫 Cian 跑 `git commit`**（依本檔的 scope 慣例）。
+若一次回應同時動到多個 scope，**分多筆 commit**，一筆一個 scope。
+不要 push、不要 amend、不要 force——只是把已經寫好的內容 commit 起來而已。

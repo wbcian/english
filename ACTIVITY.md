@@ -9,6 +9,12 @@
 - 📚 抽考 5 字（2/5 ✅）：incorrigible ✅、theatrical ✅（用字對、文法待修）；brought up ❌（誤答 set up）、excruciating ❌（忘記）、go all out ❌（誤選 pour into）
 - 📚 升級 ★2→★3：incorrigible、theatrical
 - ✏️ Cian 造句修正（theatrical）：踩到 PROFILE 既有弱點（動詞 -s、be 動詞遺漏、介系詞 for/about）
+- 🎧 Lesson: RealLife English × Monsters, Inc. — business English & connected speech → [lesson](lessons/2026-04-30-monsters-inc-business-english.md)
+- 📚 新增 6 個單字／片語：in a pinch, count on, go through a rough patch, get through, going under, stink
+- 📚 後續補充 3 個單字／片語：humorous twist, terrified, pinch（含三態）
+- 📝 lesson 補上電力公司宣導短片完整 transcript（Intro Clip A/B/C）+ 關鍵句拆解
+- 🛠️ 規則更新：BRAIN.md / SKILL.md — LLM 寫入後直接幫 Cian 跑 git commit（不再只建議）
+- 📝 學到 connected speech 的核心規則：T 夾在母音中變軟 D（What a day → wuh-duh-day）
 
 ---
 
