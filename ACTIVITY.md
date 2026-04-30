@@ -5,6 +5,13 @@
 
 ---
 
+## 2026-04-30
+- 📚 抽考 5 字（2/5 ✅）：incorrigible ✅、theatrical ✅（用字對、文法待修）；brought up ❌（誤答 set up）、excruciating ❌（忘記）、go all out ❌（誤選 pour into）
+- 📚 升級 ★2→★3：incorrigible、theatrical
+- ✏️ Cian 造句修正（theatrical）：踩到 PROFILE 既有弱點（動詞 -s、be 動詞遺漏、介系詞 for/about）
+
+---
+
 ## 2026-04-29
 - 📚 新增 4 個單字（第二批）：incorrigible, headed to, excruciating, cram
 - 📚 新增 11 個單字／idiom（第一批）：keen, eager, put heart and soul, haunt, framed, pour into, sketches, gallery, brought up, pause, habitually

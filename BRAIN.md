@@ -10,9 +10,10 @@
 
 ## 快照（隨更新同步）
 - 已收錄單字：33
-- 5★ 精熟：0　 3–4★ 學習中：10　 1–2★ 新／脆弱：23
-- 最近活動日期：2026-04-29（vocab batch: 累計 15 字 — incorrigible / headed-to / excruciating / cram + 第一批 11 字）
+- 5★ 精熟：0　 3–4★ 學習中：12　 1–2★ 新／脆弱：21
+- 最近活動日期：2026-04-30（抽考 5 字：2 ✅ / 3 ❌；incorrigible & theatrical 升 ★3）
 - 最近寫作：[2026-04-28 vocab-translation-drill](writing/2026-04-28-vocab-translation-drill.md)（6/6 完成，set up 與 pitch 滿分）
+- 待加強清單：brought up（vs set up 易混淆）、excruciating（記不住）、go all out（vs pour into 易混淆）
 
 ## 資料夾導覽
 - [`vocab/_index.md`](vocab/_index.md) — 單字快表（80% 問題從這裡找答案）
