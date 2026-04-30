@@ -5,6 +5,16 @@
 
 ---
 
+## 2026-04-30
+- 🎧 Lesson: RealLife English × Monsters, Inc. — business English & connected speech → [lesson](lessons/2026-04-30-monsters-inc-business-english.md)
+- 📚 新增 6 個單字／片語：in a pinch, count on, go through a rough patch, get through, going under, stink
+- 📚 後續補充 3 個單字／片語：humorous twist, terrified, pinch（含三態）
+- 📝 lesson 補上電力公司宣導短片完整 transcript（Intro Clip A/B/C）+ 關鍵句拆解
+- 🛠️ 規則更新：BRAIN.md / SKILL.md — LLM 寫入後直接幫 Cian 跑 git commit（不再只建議）
+- 📝 學到 connected speech 的核心規則：T 夾在母音中變軟 D（What a day → wuh-duh-day）
+
+---
+
 ## 2026-04-29
 - 📚 新增 4 個單字（第二批）：incorrigible, headed to, excruciating, cram
 - 📚 新增 11 個單字／idiom（第一批）：keen, eager, put heart and soul, haunt, framed, pour into, sketches, gallery, brought up, pause, habitually
