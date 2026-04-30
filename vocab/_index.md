@@ -6,6 +6,15 @@
 
 | 單字 | 詞性 | 中文 | ★ | 上次複習 | tags |
 |---|---|---|---|---|---|
+| [humorous twist](humorous-twist.md) | n.phr. | 幽默的轉折；反差萌 | 1 | 2026-04-30 | phrase, narrative, storytelling |
+| [terrified](terrified.md) | adj. | 嚇壞的；非常害怕的 | 1 | 2026-04-30 | adjective, emotion, fear |
+| [pinch](pinch.md) | v./n. | 捏；掐；偷；一小撮；困境（含三態） | 1 | 2026-04-30 | verb, multi-meaning, regular-verb |
+| [in a pinch](in-a-pinch.md) | idiom | 處境困難；緊要關頭；急用時 | 2 | 2026-04-30 | idiom, situation, business |
+| [count on](count-on.md) | phr.v. | 信賴；指望；依靠 | 2 | 2026-04-30 | phrasal-verb, trust, daily |
+| [go through a rough patch](go-through-a-rough-patch.md) | idiom | 經歷一段難熬期；過得不順 | 2 | 2026-04-30 | idiom, hardship, daily |
+| [get through](get-through.md) | phr.v. | 撐過；熬過；（電話）打通 | 2 | 2026-04-30 | phrasal-verb, multi-meaning, hardship |
+| [going under](going-under.md) | v.phr. | 倒掉；沉沒；麻醉 | 2 | 2026-04-30 | phrasal-verb, business, idiom |
+| [stink](stink.md) | v./n. | 發臭；爛透了 | 2 | 2026-04-30 | verb, multi-meaning, opinion |
 | [incorrigible](incorrigible.md) | adj. | 無可救藥的；屢勸不改 | 2 | 2026-04-29 | adjective, personality |
 | [headed to](headed-to.md) | phr. | 前往；朝...而去 | 2 | 2026-04-29 | phrasal-verb, daily |
 | [excruciating](excruciating.md) | adj. | 極度痛苦的；難熬到極點的 | 2 | 2026-04-29 | adjective, intensity |
