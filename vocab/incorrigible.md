@@ -3,10 +3,10 @@ word: incorrigible
 phonetic: /ɪnˈkɔːrɪdʒəbl/
 pos: adj
 zh: 無可救藥的；屢勸不改的；改不了的
-proficiency: 2
+proficiency: 3
 first_seen: 2026-04-29
-last_reviewed: 2026-04-29
-review_count: 1
+last_reviewed: 2026-04-30
+review_count: 2
 tags: [adjective, personality, behavior]
 source: "user-asked"
 ---
@@ -49,3 +49,4 @@ hopeless, irredeemable, beyond redemption, impossible (口語), unreformable
 
 ## Encounters
 - 2026-04-29 — first learned (user asked)
+- 2026-04-30 — quiz hit ✅: 答「無可救藥」精準到位 → 升 ★2→★3

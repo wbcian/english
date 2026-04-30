@@ -5,8 +5,8 @@ pos: adj
 zh: 極度痛苦的；難熬到極點的；詳細到令人受不了的
 proficiency: 2
 first_seen: 2026-04-29
-last_reviewed: 2026-04-29
-review_count: 1
+last_reviewed: 2026-04-30
+review_count: 2
 tags: [adjective, intensity, pain, emotion]
 source: "user-asked"
 ---
@@ -63,3 +63,4 @@ agonizing, unbearable, torturous, harrowing, intolerable
 
 ## Encounters
 - 2026-04-29 — first learned (user asked)
+- 2026-04-30 — quiz miss: 完全想不起來這字。記憶法待強化 → "ex-cruci-ating"（crucify 釘十字架的痛）。仍 ★2
