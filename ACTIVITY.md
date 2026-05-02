@@ -5,6 +5,14 @@
 
 ---
 
+## 2026-05-02
+- 📚 抽考 5 字（1/5 ✅）：excruciating ✅；brought up ❌（誤答 pitch to）、go all out ❌（誤答 go all in）、humorous twist ❌（忘）、in a pinch ❌（忘）
+- 📚 升級 ★2→★3：excruciating（連續從 miss 翻盤，crucify 字根記憶法奏效）
+- 📚 降級 ★3→★2：go all out（連續第二次 miss，與 go all in / pour into 持續混淆）
+- 🎯 觀察弱點：phrasal verb 的「動詞語意+介系詞」組合容易混（pitch to vs bring up；go all in vs go all out）— 待整理一份對比表
+
+---
+
 ## 2026-04-30
 - 📚 抽考 5 字（2/5 ✅）：incorrigible ✅、theatrical ✅（用字對、文法待修）；brought up ❌（誤答 set up）、excruciating ❌（忘記）、go all out ❌（誤選 pour into）
 - 📚 升級 ★2→★3：incorrigible、theatrical
