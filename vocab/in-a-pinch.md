@@ -5,8 +5,8 @@ pos: idiom
 zh: 處境困難；緊要關頭；急用時
 proficiency: 2
 first_seen: 2026-04-30
-last_reviewed: 2026-04-30
-review_count: 1
+last_reviewed: 2026-05-02
+review_count: 2
 tags: [idiom, situation, business]
 source: "RealLife English — Monsters, Inc."
 ---
@@ -34,3 +34,4 @@ in a tight spot, in a bind, in hot water（程度最重）, when push comes to s
 ## Encounters
 
 - 2026-04-30 — RealLife English Monsters, Inc. lesson（Ethan 解釋公司 "in a pinch"）
+- 2026-05-02 — quiz miss ❌：完全忘記。pinch 字面「捏」與 idiom「急用時」連結未建立。記法：捏到痛 = 急到要命。仍 ★2

@@ -6,9 +6,9 @@
 
 | 單字 | 詞性 | 中文 | ★ | 上次複習 | tags |
 |---|---|---|---|---|---|
-| [humorous twist](humorous-twist.md) | n.phr. | 幽默的轉折；反差萌 | 1 | 2026-04-30 | phrase, narrative, storytelling |
 | [terrified](terrified.md) | adj. | 嚇壞的；非常害怕的 | 1 | 2026-04-30 | adjective, emotion, fear |
 | [pinch](pinch.md) | v./n. | 捏；掐；偷；一小撮；困境（含三態） | 1 | 2026-04-30 | verb, multi-meaning, regular-verb |
+| [humorous twist](humorous-twist.md) | n.phr. | 幽默的轉折；反差萌 | 1 | 2026-05-02 | phrase, narrative, storytelling, ⚠️quiz-miss |
 | [viral](viral.md) | adj. | 病毒式傳播的；爆紅 | 2 | 2026-04-27 | internet, media |
 | [choreography](choreography.md) | n. | 編舞 | 2 | 2026-04-27 | performance, dance |
 | [with a bang](come-out-with-a-bang.md) | idiom | 轟動地（come out / go out / kick off…） | 2 | 2026-04-27 | idiom, performance |
@@ -28,14 +28,14 @@
 | [gallery](gallery.md) | n. | 畫廊；藝廊；觀眾席 | 2 | 2026-04-29 | noun, art, place |
 | [pause](pause.md) | v./n. | 停頓；暫停 | 2 | 2026-04-29 | verb, conversation, daily |
 | [habitually](habitually.md) | adv. | 習慣性地 | 2 | 2026-04-29 | adverb, behavior |
-| [brought up](brought-up.md) | phr.v. | 提起；撫養；嘔吐 | 2 | 2026-04-30 | phrasal-verb, multi-meaning, ⚠️quiz-miss |
-| [excruciating](excruciating.md) | adj. | 極度痛苦的；難熬到極點的 | 2 | 2026-04-30 | adjective, intensity, ⚠️quiz-miss |
-| [in a pinch](in-a-pinch.md) | idiom | 處境困難；緊要關頭；急用時 | 2 | 2026-04-30 | idiom, situation, business |
 | [count on](count-on.md) | phr.v. | 信賴；指望；依靠 | 2 | 2026-04-30 | phrasal-verb, trust, daily |
 | [go through a rough patch](go-through-a-rough-patch.md) | idiom | 經歷一段難熬期；過得不順 | 2 | 2026-04-30 | idiom, hardship, daily |
 | [get through](get-through.md) | phr.v. | 撐過；熬過；（電話）打通 | 2 | 2026-04-30 | phrasal-verb, multi-meaning, hardship |
 | [going under](going-under.md) | v.phr. | 倒掉；沉沒；麻醉 | 2 | 2026-04-30 | phrasal-verb, business, idiom |
 | [stink](stink.md) | v./n. | 發臭；爛透了 | 2 | 2026-04-30 | verb, multi-meaning, opinion |
+| [brought up](brought-up.md) | phr.v. | 提起；撫養；嘔吐 | 2 | 2026-05-02 | phrasal-verb, multi-meaning, ⚠️quiz-miss×2 |
+| [in a pinch](in-a-pinch.md) | idiom | 處境困難；緊要關頭；急用時 | 2 | 2026-05-02 | idiom, situation, business, ⚠️quiz-miss |
+| [go all out](go-all-out.md) | phr.v. | 卯足全力 | 2 | 2026-05-02 | idiom, effort, ⚠️quiz-miss×2, ↓★3→2 |
 | [wig](wig.md) | n. | 假髮 | 3 | 2026-04-27 | fashion, costume |
 | [contestant](contestant.md) | n. | 參賽者 | 3 | 2026-04-27 | people, competition |
 | [costume](costume.md) | n. | 戲服；演出服 | 3 | 2026-04-27 | fashion, performance |
@@ -43,8 +43,8 @@
 | [combat](combat.md) | n./v. | 戰鬥；對抗 | 3 | 2026-04-27 | military, formal |
 | [easy breezy](easy-breezy.md) | idiom | 輕鬆寫意 | 3 | 2026-04-28 | idiom, informal |
 | [lit up](lit-up.md) | phr.v./adj. | 點亮；臉/眼為之一亮；嗨翻 | 3 | 2026-04-28 | phrasal-verb, slang |
-| [go all out](go-all-out.md) | phr.v. | 卯足全力 | 3 | 2026-04-30 | idiom, effort, ⚠️quiz-miss |
 | [incorrigible](incorrigible.md) | adj. | 無可救藥的；屢勸不改 | 3 | 2026-04-30 | adjective, personality, ✅quiz-hit |
 | [theatrical](theatrical.md) | adj. | 戲劇性的；誇張的 | 3 | 2026-04-30 | adjective, performance, ✅quiz-hit |
+| [excruciating](excruciating.md) | adj. | 極度痛苦的；難熬到極點的 | 3 | 2026-05-02 | adjective, intensity, ✅quiz-hit, ↑★2→3 |
 | [pitch](pitch.md) | v./n. | 推銷點子；提案 | 4 | 2026-04-28 | business, communication |
 | [set up](set-up.md) | phr.v. | 為…鋪路；安排；介紹；陷害 | 4 | 2026-04-28 | phrasal-verb |

@@ -3,10 +3,10 @@ word: excruciating
 phonetic: /ɪkˈskruːʃieɪtɪŋ/
 pos: adj
 zh: 極度痛苦的；難熬到極點的；詳細到令人受不了的
-proficiency: 2
+proficiency: 3
 first_seen: 2026-04-29
-last_reviewed: 2026-04-30
-review_count: 2
+last_reviewed: 2026-05-02
+review_count: 3
 tags: [adjective, intensity, pain, emotion]
 source: "user-asked"
 ---
@@ -64,3 +64,4 @@ agonizing, unbearable, torturous, harrowing, intolerable
 ## Encounters
 - 2026-04-29 — first learned (user asked)
 - 2026-04-30 — quiz miss: 完全想不起來這字。記憶法待強化 → "ex-cruci-ating"（crucify 釘十字架的痛）。仍 ★2
+- 2026-05-02 — quiz hit ✅：直接答對。crucify 字根記憶法奏效。**升 ★2 → ★3**

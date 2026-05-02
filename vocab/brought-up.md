@@ -5,8 +5,8 @@ pos: phr.v (past of "bring up")
 zh: 提起（話題）；撫養長大；嘔吐（委婉）
 proficiency: 2
 first_seen: 2026-04-29
-last_reviewed: 2026-04-30
-review_count: 2
+last_reviewed: 2026-05-02
+review_count: 3
 tags: [phrasal-verb, multi-meaning, conversation]
 source: "user-asked"
 ---
@@ -63,3 +63,4 @@ source: "user-asked"
 ## Encounters
 - 2026-04-29 — first learned (user asked, with own example sentence)
 - 2026-04-30 — quiz miss: 在「我媽把我養大」情境答 "set up"，混淆了 "brought up" vs "set up"。需要再強化「撫養」這個語意 → 仍 ★2
+- 2026-05-02 — quiz miss ❌：在「會議中提起加班費」情境答 "pitch to"，這次混的是「提起話題」語意。釐清：pitch (an idea) to sb = 主動推銷／說服；bring up (a topic) = 中性提起話題。仍 ★2
