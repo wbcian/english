@@ -5,6 +5,14 @@
 
 ---
 
+## 2026-05-04
+- 🎧 Lesson: RealLife English × Peaky Blinders: The Immortal Man — Tommy Returns to The Garrison → [lesson](lessons/2026-05-04-peaky-blinders-immortal-man.md)
+- 📚 新增 10 個單字／片語：patron, flabbergasted, pub, home turf, escape one's notice, -shy (suffix), sweetheart, number (music), brought the house down, faze
+- 📝 lesson 重點：Brummie dialect（me = my）、`-shy` 字尾家族（war-shy / camera-shy / work-shy / commitment-shy）、sweetheart 雙面刃用法（真誠 vs 諷刺）、faze ≠ phase 拼字陷阱
+- 📝 文化背景：The Garrison = Shelby 家 home turf；Fred Astaire & Ginger Rogers = 30s/40s 影史經典舞蹈雙人組
+
+---
+
 ## 2026-05-02
 - 📚 抽考 5 字（1/5 ✅）：excruciating ✅；brought up ❌（誤答 pitch to）、go all out ❌（誤答 go all in）、humorous twist ❌（忘）、in a pinch ❌（忘）
 - 📚 升級 ★2→★3：excruciating（連續從 miss 翻盤，crucify 字根記憶法奏效）

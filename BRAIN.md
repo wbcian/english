@@ -9,11 +9,12 @@
 - 詳細 Profile → [PROFILE.md](PROFILE.md)
 
 ## 快照（隨更新同步）
-- 已收錄單字：42
-- 5★ 精熟：0　 3–4★ 學習中：12　 1–2★ 新／脆弱：30
-- 最近活動日期：2026-05-02（抽考 5 字 1 ✅ / 4 ❌ → excruciating 升 ★3；go all out 降 ★2）
+- 已收錄單字：52
+- 5★ 精熟：0　 3–4★ 學習中：12　 1–2★ 新／脆弱：40
+- 最近活動日期：2026-05-04（Peaky Blinders × The Immortal Man lesson；新增 10 字）
+- 最近 lesson：[2026-05-04 peaky-blinders-immortal-man](lessons/2026-05-04-peaky-blinders-immortal-man.md)（Brummie dialect + `-shy` 字尾家族）
 - 最近寫作：[2026-04-28 vocab-translation-drill](writing/2026-04-28-vocab-translation-drill.md)（6/6 完成，set up 與 pitch 滿分）
-- 待加強清單：brought up（vs pitch to / set up）、go all out（vs go all in / pour into）、humorous twist（兩天就忘）、in a pinch（idiom 連結未建立）
+- 待加強清單：brought up（vs pitch to / set up）、go all out（vs go all in / pour into）、humorous twist（兩天就忘）、in a pinch（idiom 連結未建立）、faze ≠ phase 拼字
 
 ## 資料夾導覽
 - [`vocab/_index.md`](vocab/_index.md) — 單字快表（80% 問題從這裡找答案）
