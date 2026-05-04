@@ -9,6 +9,14 @@
 | [terrified](terrified.md) | adj. | 嚇壞的；非常害怕的 | 1 | 2026-04-30 | adjective, emotion, fear |
 | [pinch](pinch.md) | v./n. | 捏；掐；偷；一小撮；困境（含三態） | 1 | 2026-04-30 | verb, multi-meaning, regular-verb |
 | [humorous twist](humorous-twist.md) | n.phr. | 幽默的轉折；反差萌 | 1 | 2026-05-02 | phrase, narrative, storytelling, ⚠️quiz-miss |
+| [patron](patron.md) | n. | 顧客（尤指常客）；贊助者 | 1 | 2026-05-04 | noun, business, formal, customer |
+| [flabbergasted](flabbergasted.md) | adj. | 目瞪口呆的；嚇傻的 | 1 | 2026-05-04 | adjective, emotion, surprise, expressive |
+| [home turf](home-turf.md) | n.phr. | 主場；自家地盤 | 1 | 2026-05-04 | noun-phrase, idiom, territory, sports |
+| [escape one's notice](escape-ones-notice.md) | idiom | 沒被注意到；漏看 | 1 | 2026-05-04 | idiom, sarcasm, formal, attention |
+| [-shy (suffix)](shy-suffix.md) | suffix | 避開／怕…的（構成複合形容詞） | 1 | 2026-05-04 | suffix, compound-adjective, productive |
+| [number (music)](number-music.md) | n. | （表演用）一首歌；一段曲目 | 1 | 2026-05-04 | noun, performance, theater, music |
+| [brought the house down](brought-the-house-down.md) | idiom | 演出轟動全場；掌聲雷動 | 1 | 2026-05-04 | idiom, performance, success, positive |
+| [faze](faze.md) | v. | 使動搖；使困擾；嚇到 | 1 | 2026-05-04 | verb, emotion, spelling-trap |
 | [viral](viral.md) | adj. | 病毒式傳播的；爆紅 | 2 | 2026-04-27 | internet, media |
 | [choreography](choreography.md) | n. | 編舞 | 2 | 2026-04-27 | performance, dance |
 | [with a bang](come-out-with-a-bang.md) | idiom | 轟動地（come out / go out / kick off…） | 2 | 2026-04-27 | idiom, performance |
@@ -36,6 +44,8 @@
 | [brought up](brought-up.md) | phr.v. | 提起；撫養；嘔吐 | 2 | 2026-05-02 | phrasal-verb, multi-meaning, ⚠️quiz-miss×2 |
 | [in a pinch](in-a-pinch.md) | idiom | 處境困難；緊要關頭；急用時 | 2 | 2026-05-02 | idiom, situation, business, ⚠️quiz-miss |
 | [go all out](go-all-out.md) | phr.v. | 卯足全力 | 2 | 2026-05-02 | idiom, effort, ⚠️quiz-miss×2, ↓★3→2 |
+| [pub](pub.md) | n. | 英式酒吧 | 2 | 2026-05-04 | noun, british, culture, place |
+| [sweetheart](sweetheart.md) | n. | 親愛的；甜心；雙面刃用法 | 2 | 2026-05-04 | noun, term-of-endearment, double-edged |
 | [wig](wig.md) | n. | 假髮 | 3 | 2026-04-27 | fashion, costume |
 | [contestant](contestant.md) | n. | 參賽者 | 3 | 2026-04-27 | people, competition |
 | [costume](costume.md) | n. | 戲服；演出服 | 3 | 2026-04-27 | fashion, performance |
