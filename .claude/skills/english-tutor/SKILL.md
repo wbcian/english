@@ -39,6 +39,22 @@ Synonyms: scornfully, derisively, tauntingly
 3. **Explain** changes (in English, keep it conversational)
 4. **Translate** revised version to Traditional Chinese
 
+### When user sends a PODCAST LINK (Apple Podcasts / SoundOn / RSS):
+
+The user wants the episode transcribed and turned into a lesson. Run the local pipeline, then treat the result like any other transcript (see the next section).
+
+1. Run the transcriber (downloads + local Whisper, no API/key needed):
+   ```bash
+   ./tools/podcast2lesson.sh "<the-url>" <study-date YYYY-MM-DD>
+   ```
+   - It prints the path to `transcripts/<date>-<slug>.txt` on success.
+   - If it reports `status=ambiguous` (couldn't uniquely match the episode), it lists candidates — **ask Cian which episode**, then re-run with a direct feed URL or pass a `slug-override` 3rd arg.
+   - If download fails with HTTP 401/403, the episode is subscription-only — tell Cian; don't retry blindly.
+   - First-time setup (if `whisper-cli`/`ffmpeg`/model missing) is in `tools/README.md`.
+2. Read the produced `transcripts/<date>-<slug>.txt`.
+3. Continue with the **SUBTITLES / podcast transcript** rules below to produce `lessons/<date>-<slug>.md`.
+4. The raw transcript (`transcripts/*.txt` + `.srt`) is kept and committed; the `.mp3` stays in the gitignored cache. Commit the transcript under scope `lesson:`.
+
 ### When user sends SUBTITLES / a long passage / podcast transcript:
 
 **Default = Markdown.** Do NOT auto-generate the HTML magazine — it is expensive in time and tokens. Only produce HTML when the user explicitly asks (keywords: "magazine", "雜誌風格", "HTML 版", "magazine 風格", or similar). Otherwise:
