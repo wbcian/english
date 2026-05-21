@@ -23,3 +23,9 @@ node_modules/
 # Editors
 .vscode/
 .idea/
+
+# Podcast pipeline: large/binary artifacts (transcripts/*.txt are committed)
+transcripts/.cache/
+tools/models/
+*.mp3
+*.wav
