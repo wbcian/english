@@ -5,6 +5,12 @@
 
 ---
 
+## 2026-05-21
+- 🎧 Lesson: English Digest 實用空中美語 — Unit 15 Grasse: The Fragrance Heart of France → [lesson](lessons/2026-05-21-grasse-the-fragrance-heart-of-france.md)
+- 🛠️ 建立 podcast pipeline：貼連結 → `tools/podcast2lesson.sh` → 本地 Whisper 轉錄 → lesson（逐字稿存 `transcripts/`）
+- 📝 lesson 重點：Grasse 從臭皮革城變香水之都；scent vs odor、hide/skin/pelt 同義字、stink→stank→stunk、Anna 的篇章結構（五選四）解題技巧（看時態/連接詞反推段落）
+- 📚 候選新字（待 Cian 挑選入 SRS）：nestled, charming, scent, odor, hide, pelt, tannery, craftsman, soak, fragrant, fertile, abundant, mild, ingredient, luxurious, antique, perfumer
+
 ## 2026-05-04
 - 🎧 Lesson: RealLife English × Peaky Blinders: The Immortal Man — Tommy Returns to The Garrison → [lesson](lessons/2026-05-04-peaky-blinders-immortal-man.md)
 - 📚 新增 10 個單字／片語：patron, flabbergasted, pub, home turf, escape one's notice, -shy (suffix), sweetheart, number (music), brought the house down, faze
