@@ -17,6 +17,12 @@
 | [number (music)](number-music.md) | n. | （表演用）一首歌；一段曲目 | 1 | 2026-05-04 | noun, performance, theater, music |
 | [brought the house down](brought-the-house-down.md) | idiom | 演出轟動全場；掌聲雷動 | 1 | 2026-05-04 | idiom, performance, success, positive |
 | [faze](faze.md) | v. | 使動搖；使困擾；嚇到 | 1 | 2026-05-04 | verb, emotion, spelling-trap |
+| [hankering](hankering.md) | n. | 強烈的渴望；嘴饞 | 1 | 2026-05-21 | noun, desire, food, informal |
+| [cup of Joe](cup-of-joe.md) | n.phr. | 一杯咖啡（俚語） | 1 | 2026-05-21 | noun-phrase, slang, american, coffee |
+| [I guess so](i-guess-so.md) | phr. | 大概吧；應該吧（冷淡／不確定） | 1 | 2026-05-21 | phrase, conversation, hedging |
+| [switch something up](switch-something-up.md) | phr.v. | 換個方式；求新求變 | 1 | 2026-05-21 | phrasal-verb, change, informal |
+| [play on words](play-on-words.md) | n.phr. | 雙關語；玩文字遊戲 | 1 | 2026-05-21 | noun-phrase, language, humor |
+| [manifest](manifest.md) | v. | 顯化；顯現；（adj.）明顯的 | 1 | 2026-05-21 | verb, multi-meaning, modern-slang |
 | [viral](viral.md) | adj. | 病毒式傳播的；爆紅 | 2 | 2026-04-27 | internet, media |
 | [choreography](choreography.md) | n. | 編舞 | 2 | 2026-04-27 | performance, dance |
 | [with a bang](come-out-with-a-bang.md) | idiom | 轟動地（come out / go out / kick off…） | 2 | 2026-04-27 | idiom, performance |
