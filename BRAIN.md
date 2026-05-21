@@ -11,8 +11,8 @@
 ## 快照（隨更新同步）
 - 已收錄單字：52
 - 5★ 精熟：0　 3–4★ 學習中：12　 1–2★ 新／脆弱：40
-- 最近活動日期：2026-05-21（建立 podcast pipeline；Grasse 香水之都 lesson）
-- 最近 lesson：[2026-05-21 grasse-the-fragrance-heart-of-france](lessons/2026-05-21-grasse-the-fragrance-heart-of-france.md)（English Digest；scent vs odor、篇章結構解題）
+- 最近活動日期：2026-05-21（Sabrina《Espresso》連音 lesson；建立 podcast pipeline；Grasse 香水之都 lesson）
+- 最近 lesson：[2026-05-21 sabrina-espresso-connected-speech](lessons/2026-05-21-sabrina-espresso-connected-speech.md)（《Espresso》；I guess so / switch it up、connected speech TS→S、glottal T）
 - 最近寫作：[2026-04-28 vocab-translation-drill](writing/2026-04-28-vocab-translation-drill.md)（6/6 完成，set up 與 pitch 滿分）
 - 待加強清單：brought up（vs pitch to / set up）、go all out（vs go all in / pour into）、humorous twist（兩天就忘）、in a pinch（idiom 連結未建立）、faze ≠ phase 拼字
 
