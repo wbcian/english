@@ -8,7 +8,7 @@
 ## 2026-05-21
 - 🎧 Lesson: Sabrina Carpenter《Espresso》進階表達 + 連音（host: Ethan）→ [lesson](lessons/2026-05-21-sabrina-espresso-connected-speech.md)
 - 📝 lesson 重點：`I guess so`（冷淡語氣）、`switch it up`（雙關 Nintendo Switch）、connected speech TS→S（that's that → [thass-tha']、glottal T 像 "uh-oh"）
-- 📚 候選新字（待 Cian 挑選入 SRS）：hankering, cup of Joe, I guess so, switch it up, play on words, manifest, connected speech, glottal T
+- 📚 候選新字（待 Cian 挑選入 SRS）：hankering, cup of Joe, I guess so, switch something up, play on words, manifest（connected speech / glottal T 為發音術語，非單字）
 - 🎧 Lesson: English Digest 實用空中美語 — Unit 15 Grasse: The Fragrance Heart of France → [lesson](lessons/2026-05-21-grasse-the-fragrance-heart-of-france.md)
 - 🛠️ 建立 podcast pipeline：貼連結 → `tools/podcast2lesson.sh` → 本地 Whisper 轉錄 → lesson（逐字稿存 `transcripts/`）
 - 📝 lesson 重點：Grasse 從臭皮革城變香水之都；scent vs odor、hide/skin/pelt 同義字、stink→stank→stunk、Anna 的篇章結構（五選四）解題技巧（看時態/連接詞反推段落）

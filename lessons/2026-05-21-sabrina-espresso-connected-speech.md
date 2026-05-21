@@ -53,16 +53,25 @@ type: lesson
 
 ## Key Vocabulary
 
+### 官方單字卡（截圖藍框 highlight）
+
 | word | pos | zh | note |
 |---|---|---|---|
 | hankering | n. | 強烈的渴望、嘴饞 | `have a hankering for ~`；尤其指突然很想吃喝某樣東西 |
 | cup of Joe | n.phr. | 一杯咖啡（俚語） | Joe = coffee；超日常的美式說法，比 "a cup of coffee" 更口語 |
 | I guess so | phr. | 大概吧、應該吧（不太確定／興趣缺缺） | = probably / I suppose；語氣偏冷淡保留 |
-| switch it up | phr.v. | 換個方式、求新求變 | `switch something up`；歌裡雙關 Nintendo **Switch** |
+| switch something up | phr.v. | 換個方式、求新求變 | 歌裡雙關 Nintendo **Switch**；`switch it up` |
+
+### 延伸學習（Coach Max 補充，你可能還沒碰過）
+
+| word | pos | zh | note |
+|---|---|---|---|
 | play on words | n.phr. | 雙關語、玩文字遊戲 | = pun；switch it up ↔ Switch 主機就是 a play on words |
 | manifest | v. | 顯化、把願望「招」來 | 新世代用法：許願讓某事成真（"manifest a billion dollars"） |
-| connected speech | n.phr. | 連音（母語者把字連著說） | cut / reduce / link words together 的統稱 |
-| glottal T | n.phr. | 喉塞音 T | T 在喉嚨後方卡掉、不發出來，像 "uh-oh" 中間那個停頓 |
+
+> ⚠️ 下面兩個是**發音術語**，不是要背的單字——是用來理解這集發音現象的概念：
+> - **connected speech** 連音：母語者把字 cut / reduce / link 連著說的統稱。
+> - **glottal T** 喉塞音 T：字尾 T 在喉嚨後方卡掉、不真的發出來，像 "uh-oh" 中間那個停頓。
 
 ## Useful Phrases & Patterns
 
