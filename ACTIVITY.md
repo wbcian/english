@@ -6,16 +6,20 @@
 ---
 
 ## 2026-05-23
-- 🎧 Lesson: Sabrina《Espresso》訪談 walkthrough（host: Ethan，Part 2 of 5/21）→ [lesson](lessons/2026-05-23-sabrina-espresso-interview-walkthrough.md)
-- 📝 lesson 重點：`like` 三種用法（filler / comparison / quotative，Z 世代必殺）、`literally` 從字面變 intensifier、`every single` 強調零例外、英式 `brilliant` vs 美式 drop-H `[ɝbəl] tea`、tap T 規則延伸（nothing-duh-do、con-see-did）、`that's on you` 推鍋／認錯萬用句
-- 📚 新增 10 個單字／片語（全 ★1）：has nothing to do with, like (discourse marker), literally, every single, barista, herbal tea, brilliant, running through one's head, that's on you, conceited
-- 📚 manifest 第 2 次相遇（同源 lesson 接續），encounter log + 1
-- 🎯 連音三大規則齊備：TS→S（5/21）、glottal T（5/21）、tap T（5/23）— 完整聽力地基
+- 🎧 Lesson Part 2: Sabrina《Espresso》系列 — 訪談前半｜Z 世代口語密度（04:02–07:39）→ [lesson](lessons/2026-05-23-sabrina-espresso-part-2-discourse.md)
+- 📝 lesson 重點：`like` 三種用法（filler / comparison / quotative，Z 世代必殺）、`literally` 從字面變 intensifier、`every single` 強調零例外、tap T 規則登場（nothing-duh-do）
+- 📚 新增 5 個單字／片語（全 ★1）：like (discourse marker), has nothing to do with, monster (playful), literally, every single
+- 🎧 Lesson Part 3: Sabrina《Espresso》系列 — 訪談後半｜咖啡店場景 + 自我反思（08:06–12:40）→ [lesson](lessons/2026-05-23-sabrina-espresso-part-3-cafe.md)
+- 📝 lesson 重點：question 起疑用法、barista（義大利借字）、英美 H-drop 差（herbal）、`brilliant` 英式俚語、`that's on you` 推鍋萬用句、tap T 再應用（con-see-did）、三條 T 連音規則總整理
+- 📚 新增 5 個單字／片語（全 ★1）：barista, herbal tea, brilliant, running through one's head, that's on you, conceited（共 6 字；question 已於 5/21 Part 1 提及）
+- 📚 manifest 第 2 次相遇（系列內），encounter log + 1
+- 🏗️ 結構重整：把 5/21 + 5/23 的 Espresso lesson 重組為「Sabrina's《Espresso》系列 Part 1/2/3」，每份聚焦單一主題、25 分鐘內可吸收
+- 🎯 連音三大規則齊備：TS→S（Part 1）、glottal T（Part 1）、tap T（Part 2/3）— 完整聽力地基
 
 ---
 
 ## 2026-05-21
-- 🎧 Lesson: Sabrina Carpenter《Espresso》進階表達 + 連音（host: Ethan）→ [lesson](lessons/2026-05-21-sabrina-espresso-connected-speech.md)
+- 🎧 Lesson Part 1: Sabrina《Espresso》系列 — 歌曲 + 連音入門（host: Ethan，00:24–03:48）→ [lesson](lessons/2026-05-21-sabrina-espresso-part-1-song.md)
 - 📝 lesson 重點：`I guess so`（冷淡語氣）、`switch it up`（雙關 Nintendo Switch）、connected speech TS→S（that's that → [thass-tha']、glottal T 像 "uh-oh"）
 - 📚 新增 6 個單字（Cian 全不熟，★1）：hankering, cup of Joe, I guess so, switch something up, play on words, manifest（connected speech / glottal T 為發音術語，未建卡）
 - 🎧 Lesson: English Digest 實用空中美語 — Unit 15 Grasse: The Fragrance Heart of France → [lesson](lessons/2026-05-21-grasse-the-fragrance-heart-of-france.md)
