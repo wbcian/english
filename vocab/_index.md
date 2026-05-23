@@ -22,7 +22,17 @@
 | [I guess so](i-guess-so.md) | phr. | 大概吧；應該吧（冷淡／不確定） | 1 | 2026-05-21 | phrase, conversation, hedging |
 | [switch something up](switch-something-up.md) | phr.v. | 換個方式；求新求變 | 1 | 2026-05-21 | phrasal-verb, change, informal |
 | [play on words](play-on-words.md) | n.phr. | 雙關語；玩文字遊戲 | 1 | 2026-05-21 | noun-phrase, language, humor |
-| [manifest](manifest.md) | v. | 顯化；顯現；（adj.）明顯的 | 1 | 2026-05-21 | verb, multi-meaning, modern-slang |
+| [has nothing to do with](has-nothing-to-do-with.md) | phr. | 跟…一點關係都沒有 | 1 | 2026-05-23 | phrase, conversation, clarification, daily |
+| [like (discourse marker)](like-discourse-marker.md) | discourse marker | 就是…／像是…／我就：（三種用法） | 1 | 2026-05-23 | discourse-marker, gen-z, ⚠️register-trap |
+| [literally](literally.md) | adv. | 真的；簡直；超…（口語強調） | 1 | 2026-05-23 | adverb, intensifier, gen-z, multi-meaning |
+| [every single](every-single.md) | det.phr. | 每一個（零例外、加強版） | 1 | 2026-05-23 | determiner, intensifier, emphasis |
+| [barista](barista.md) | n. | 咖啡師 | 1 | 2026-05-23 | noun, occupation, italian-loanword |
+| [herbal tea](herbal-tea.md) | n.phr. | 花草茶（美音 drop H） | 1 | 2026-05-23 | noun-phrase, drink, british-vs-american |
+| [brilliant](brilliant.md) | adj. | 超讚的（英式俚語）；才華洋溢的 | 1 | 2026-05-23 | adjective, british-slang, multi-meaning |
+| [running through one's head](running-through-ones-head.md) | idiom | 想法／旋律一直在腦中循環 | 1 | 2026-05-23 | idiom, thought, music, daily |
+| [that's on you](thats-on-you.md) | phr. | 那是你的責任；你自找的 | 1 | 2026-05-23 | phrase, responsibility, casual |
+| [conceited](conceited.md) | adj. | 自負的；自視甚高 | 1 | 2026-05-23 | adjective, personality, tap-t |
+| [manifest](manifest.md) | v. | 顯化；顯現；（adj.）明顯的 | 1 | 2026-05-23 | verb, multi-meaning, modern-slang |
 | [viral](viral.md) | adj. | 病毒式傳播的；爆紅 | 2 | 2026-04-27 | internet, media |
 | [choreography](choreography.md) | n. | 編舞 | 2 | 2026-04-27 | performance, dance |
 | [with a bang](come-out-with-a-bang.md) | idiom | 轟動地（come out / go out / kick off…） | 2 | 2026-04-27 | idiom, performance |

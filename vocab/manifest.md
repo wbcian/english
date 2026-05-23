@@ -5,8 +5,8 @@ pos: v
 zh: 顯化（把願望招來）；顯現；（adj.）明顯的
 proficiency: 1
 first_seen: 2026-05-21
-last_reviewed: 2026-05-21
-review_count: 1
+last_reviewed: 2026-05-23
+review_count: 2
 tags: [verb, multi-meaning, manifestation, modern-slang]
 source: "lesson: Sabrina Espresso (host Ethan)"
 ---
@@ -27,3 +27,4 @@ source: "lesson: Sabrina Espresso (host Ethan)"
 
 ## Encounters
 - 2026-05-21 — first learned (lesson: Sabrina Espresso, Scene A)
+- 2026-05-23 — revisited in same source, Ethan's deep-dive on Oprah-style manifestation (lesson: Sabrina Espresso interview walkthrough)
