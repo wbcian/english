@@ -5,6 +5,15 @@
 
 ---
 
+## 2026-05-23
+- 🎧 Lesson: Sabrina《Espresso》訪談 walkthrough（host: Ethan，Part 2 of 5/21）→ [lesson](lessons/2026-05-23-sabrina-espresso-interview-walkthrough.md)
+- 📝 lesson 重點：`like` 三種用法（filler / comparison / quotative，Z 世代必殺）、`literally` 從字面變 intensifier、`every single` 強調零例外、英式 `brilliant` vs 美式 drop-H `[ɝbəl] tea`、tap T 規則延伸（nothing-duh-do、con-see-did）、`that's on you` 推鍋／認錯萬用句
+- 📚 新增 10 個單字／片語（全 ★1）：has nothing to do with, like (discourse marker), literally, every single, barista, herbal tea, brilliant, running through one's head, that's on you, conceited
+- 📚 manifest 第 2 次相遇（同源 lesson 接續），encounter log + 1
+- 🎯 連音三大規則齊備：TS→S（5/21）、glottal T（5/21）、tap T（5/23）— 完整聽力地基
+
+---
+
 ## 2026-05-21
 - 🎧 Lesson: Sabrina Carpenter《Espresso》進階表達 + 連音（host: Ethan）→ [lesson](lessons/2026-05-21-sabrina-espresso-connected-speech.md)
 - 📝 lesson 重點：`I guess so`（冷淡語氣）、`switch it up`（雙關 Nintendo Switch）、connected speech TS→S（that's that → [thass-tha']、glottal T 像 "uh-oh"）
