@@ -33,9 +33,10 @@
 2. **舊單字再現** → 在該檔 `## Encounters` 補日期、更新 frontmatter 的 `last_reviewed` 與 `review_count`，視情況調 `proficiency`，並同步 `_index.md`
 3. **寫作 / 對話** → 對應資料夾；檔名 `YYYY-MM-DD-<topic>.md`；`ACTIVITY.md` 加一行
 4. **長文／字幕** → **預設**輸出 markdown 整理到 `lessons/YYYY-MM-DD-<topic>.md`；只有當使用者明確說「轉成 magazine」、「雜誌風格」、「HTML 版」等才產 HTML
-5. **發現新弱點 / 偏好** → 更新 `PROFILE.md`
-6. **更新此份快照** → 完成上述任一動作後同步本檔的「快照」段
-7. **永遠**：繁體中文翻譯；保留 Coach Max 風格（幽默、直白、像哥兒們）
+5. **Lesson speakable 規範** → 寫 lesson 時遵守 [`lessons/_conventions.md`](lessons/_conventions.md)：英文 blockquote 不混中文、vocab table 可朗讀欄表頭一律 lowercase `word`、同系列同日期補 `part:` frontmatter。`app/`（Astro lessons browser）依這份規範判斷朗讀範圍
+6. **發現新弱點 / 偏好** → 更新 `PROFILE.md`
+7. **更新此份快照** → 完成上述任一動作後同步本檔的「快照」段
+8. **永遠**：繁體中文翻譯；保留 Coach Max 風格（幽默、直白、像哥兒們）
 
 ## 單字檔 Schema 範例
 
@@ -87,6 +88,7 @@ scornfully, derisively, tauntingly
 | `profile` | 更新 Profile | `profile: add weakness — past tense` |
 | `brain` | 改 BRAIN / CLAUDE / 索引／結構 | `brain: split _index by ★` |
 | `skill` | 改 english-tutor skill | `skill: switch HTML magazine to opt-in` |
+| `app` | `app/` 內 Astro lessons browser | `app: add speech.ts chunking` |
 | `chore` | 雜項（gitignore、整理檔案等） | `chore: ignore .DS_Store` |
 
 LLM（含 Coach Max）寫入後 **直接幫 Cian 跑 `git commit`**（依本檔的 scope 慣例）。
