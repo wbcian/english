@@ -5,6 +5,13 @@
 
 ---
 
+## 2026-05-25
+- 🎧 Lesson: Cat Wu（Anthropic Claude Code 產品負責人）訪談 — PM Skills & Taste（lines 669–1075） → [lesson](lessons/2026-05-25-cat-wu-pm-skills-and-taste.md)
+- 📝 lesson 重點：`product taste` 在 code 變便宜的時代為什麼變最值錢、`wear many hats` + `swap them` + `low ego` 三件套、`first-principles thinking` + `which means that...` 邏輯接力、`lean into the chaos` 跟 P0→P000 自嘲、Pirates of the Caribbean 比喻
+- 📚 新增 6 個單字／片語（全 ★1）：product taste, first principles, amorphous, wear many hats, low ego, lean into
+- 📁 transcripts 入庫：`transcripts/2026-05-25-cat-wu-anthropic-product-team.txt`（Lenny's Podcast 訪談原檔）
+- 🎯 lessons 庫補上「商業／科技 PM 英文」缺口（過往全是 pop/film/fragrance）
+
 ## 2026-05-23
 - 🎧 Lesson Part 2: Sabrina《Espresso》系列 — 訪談前半｜Z 世代口語密度（04:02–07:39）→ [lesson](lessons/2026-05-23-sabrina-espresso-part-2-discourse.md)
 - 📝 lesson 重點：`like` 三種用法（filler / comparison / quotative，Z 世代必殺）、`literally` 從字面變 intensifier、`every single` 強調零例外、tap T 規則登場（nothing-duh-do）

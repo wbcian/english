@@ -9,10 +9,10 @@
 - 詳細 Profile → [PROFILE.md](PROFILE.md)
 
 ## 快照（隨更新同步）
-- 已收錄單字：68
-- 5★ 精熟：0　 3–4★ 學習中：12　 1–2★ 新／脆弱：56
-- 最近活動日期：2026-05-23（Sabrina《Espresso》訪談 walkthrough — Part 2，連音三規則完整）
-- 最近 lesson：[2026-05-23 Part 3 — cafe & reflection](lessons/2026-05-23-sabrina-espresso-part-3-cafe.md)（**Sabrina《Espresso》系列** 共 3 part：[Part 1 歌曲+連音入門](lessons/2026-05-21-sabrina-espresso-part-1-song.md) / [Part 2 訪談 Z 世代口語](lessons/2026-05-23-sabrina-espresso-part-2-discourse.md) / Part 3 咖啡店+反思；本 part 焦點：咖啡店場景 + 自我反思 + tap T 應用）
+- 已收錄單字：74
+- 5★ 精熟：0　 3–4★ 學習中：12　 1–2★ 新／脆弱：62
+- 最近活動日期：2026-05-25（Cat Wu 訪談 — PM Skills & Taste，補上商業／科技英文缺口）
+- 最近 lesson：[2026-05-25 Cat Wu — PM skills & taste](lessons/2026-05-25-cat-wu-pm-skills-and-taste.md)（Lenny's Podcast 訪 Anthropic Claude Code 產品負責人；切片 lines 669–1075；焦點：product taste、wear many hats、low ego、first-principles thinking、lean into the chaos；本次只做訪談中段試水溫，視回饋決定是否擴成系列）
 - 最近寫作：[2026-04-28 vocab-translation-drill](writing/2026-04-28-vocab-translation-drill.md)（6/6 完成，set up 與 pitch 滿分）
 - 待加強清單：brought up（vs pitch to / set up）、go all out（vs go all in / pour into）、humorous twist（兩天就忘）、in a pinch（idiom 連結未建立）、faze ≠ phase 拼字
 
