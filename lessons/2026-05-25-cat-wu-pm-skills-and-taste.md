@@ -58,7 +58,7 @@ type: lesson
 
 ## Key Vocabulary
 
-| word / phrase | pos | zh | note |
+| word | pos | zh | note |
 |---|---|---|---|
 | product taste | n. phr. | 產品品味；對產品好壞的直覺 | code 變便宜後，**選做什麼**比**怎麼做**更值錢 |
 | first-principles thinking | n. phr. | 第一性原理思考；回到本質推理 | Cat 點名最重要的 PM 技能；可獨立用 `from first principles` |

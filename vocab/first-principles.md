@@ -13,9 +13,11 @@ source: "lesson: Cat Wu interview Part 2 — PM skills & taste"
 
 ## Examples
 > "The most important thing is to have this first-principles thinking."
+
 > 最重要的就是要有第一性原理思考。
 
 > "Let's reason about this from first principles instead of copying what competitors do."
+
 > 我們從本質推理，不要照抄競爭對手做法。
 
 ## Usage tip

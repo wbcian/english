@@ -13,9 +13,11 @@ source: "lesson: Cat Wu interview Part 2 — PM skills & taste"
 
 ## Examples
 > "The work is becoming more amorphous, which means a great PM needs to figure out where the gaps are."
+
 > 工作變得越來越模糊，這意味著好 PM 要看出哪裡有缺口。
 
 > "Her role at the startup was amorphous — part PM, part engineer, part designer."
+
 > 她在 startup 的角色很模糊——部分 PM、部分工程師、部分設計師。
 
 ## Usage tip

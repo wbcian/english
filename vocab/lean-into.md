@@ -13,12 +13,15 @@ source: "lesson: Cat Wu interview Part 2 — PM skills & taste"
 
 ## Examples
 > "Our team is full of people who lean into the chaos."
+
 > 我們團隊全是擁抱混亂的人。
 
 > "Lean into these tools — handle off the work you don't enjoy, figure out how AI can accelerate you."
+
 > 把這些工具用到底——把你不想做的事交出去，讓 AI 幫你加速。
 
 > "She decided to lean into her strengths instead of trying to fix every weakness."
+
 > 她決定把長處發揮到極限，不再試著補每個短處。
 
 ## Usage tip

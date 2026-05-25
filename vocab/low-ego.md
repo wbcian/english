@@ -13,9 +13,11 @@ source: "lesson: Cat Wu interview Part 2 — PM skills & taste"
 
 ## Examples
 > "She's very low ego about what work she does to help the team move faster."
+
 > 她對自己要做什麼工作完全不擺架子，只想幫團隊跑更快。
 
 > "People really like that Claude is low ego — if you say it did something wrong, it's truly sorry and just fixes it."
+
 > 大家很喜歡 Claude 不擺架子——你說它哪裡做錯，它真的會道歉然後直接修好。
 
 ## Usage tip

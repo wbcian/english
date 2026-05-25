@@ -13,6 +13,7 @@ source: "lesson: Cat Wu interview Part 2 — PM skills & taste"
 
 ## Examples
 > "We're pretty focused on hiring engineers with great product taste."
+
 > 我們很專注在找有產品品味的工程師。
 
 > "As code becomes cheaper to write, the thing that becomes more valuable is product taste — deciding what to write."

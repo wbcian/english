@@ -13,9 +13,11 @@ source: "lesson: Cat Wu interview Part 2 — PM skills & taste"
 
 ## Examples
 > "The current environment values people who can wear a lot of hats and swap them quickly."
+
 > 現在的環境看重那些身兼數職、還能快速切換角色的人。
 
 > "At a 10-person startup, everyone wears many hats — engineers do support, designers write copy."
+
 > 10 人 startup 裡每個人都身兼數職——工程師做客服、設計師寫文案。
 
 ## Usage tip
