@@ -1,0 +1,229 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+const all = await getCollection('vocab');
+if (all.length === 0) {
+  throw new Error("Empty 'vocab' collection — check glob base path in src/content.config.ts");
+}
+
+// Same sort as vocab/_index.md:
+//   1) proficiency asc (lowest first = needs the most review)
+//   2) last_reviewed asc within same proficiency
+const entries = all.slice().sort((a, b) => {
+  const pa = a.data.proficiency ?? 0;
+  const pb = b.data.proficiency ?? 0;
+  if (pa !== pb) return pa - pb;
+  const da = a.data.last_reviewed?.getTime() ?? 0;
+  const db = b.data.last_reviewed?.getTime() ?? 0;
+  return da - db;
+});
+
+const searchIndex = entries.map((e) => ({
+  id: e.id,
+  word: e.data.word,
+  zh: e.data.zh,
+  pos: e.data.pos ?? '',
+  tags: (e.data.tags ?? []).join(' '),
+}));
+---
+
+<Layout title="Vocabulary">
+  <h1>Vocabulary</h1>
+  <p class="intro">
+    {entries.length} entries · 由 ★ 低到高（最該複習在最上）
+  </p>
+  <input
+    type="search"
+    id="vocab-search"
+    placeholder="搜尋單字 / 中文 / tags…"
+    autocomplete="off"
+    aria-label="Search vocabulary"
+  />
+  <p class="empty" id="search-empty" hidden>沒有單字符合「<span id="empty-query"></span>」。</p>
+  <script type="application/json" id="search-data" set:html={JSON.stringify(searchIndex)} is:inline />
+  <ul class="vocab-list" id="vocab-list">
+    {entries.map((entry) => {
+      const { word, phonetic, pos, zh, proficiency, last_reviewed } = entry.data;
+      const stars = typeof proficiency === 'number'
+        ? '★'.repeat(Math.min(5, proficiency)) + '☆'.repeat(Math.max(0, 5 - proficiency))
+        : '☆☆☆☆☆';
+      const href = `${import.meta.env.BASE_URL}vocab/${entry.id}/`.replace(/\/+/g, '/');
+      const dateStr = last_reviewed?.toISOString().slice(0, 10);
+      return (
+        <li class="vocab-row" data-id={entry.id}>
+          <a href={href}>
+            <div class="row-main">
+              <span class="word">{word}</span>
+              {phonetic && <span class="phonetic">{phonetic}</span>}
+              {pos && <span class="pos">{pos}</span>}
+              <span class="stars">{stars}</span>
+            </div>
+            <div class="row-sub">
+              <span class="zh">{zh}</span>
+              {dateStr && <span class="date">{dateStr}</span>}
+            </div>
+          </a>
+        </li>
+      );
+    })}
+  </ul>
+</Layout>
+
+<script>
+  import Fuse from 'fuse.js';
+
+  const dataEl = document.getElementById('search-data');
+  const input = document.getElementById('vocab-search') as HTMLInputElement | null;
+  const emptyEl = document.getElementById('search-empty');
+  const emptyQueryEl = document.getElementById('empty-query');
+  if (dataEl && input) {
+    type Item = { id: string; word: string; zh: string; pos: string; tags: string };
+    const data: Item[] = JSON.parse(dataEl.textContent ?? '[]');
+    const fuse = new Fuse(data, {
+      keys: [
+        { name: 'word', weight: 3 },
+        { name: 'zh', weight: 2 },
+        { name: 'tags', weight: 1 },
+        { name: 'pos', weight: 0.5 },
+      ],
+      threshold: 0.35,
+      ignoreLocation: true,
+    });
+    const rows = Array.from(document.querySelectorAll<HTMLElement>('.vocab-row'));
+
+    const applyFilter = () => {
+      const q = input.value.trim();
+      if (!q) {
+        rows.forEach((r) => (r.style.display = ''));
+        if (emptyEl) emptyEl.hidden = true;
+        return;
+      }
+      const hits = new Set(fuse.search(q).map((r) => r.item.id));
+      rows.forEach((r) => {
+        r.style.display = hits.has(r.dataset.id ?? '') ? '' : 'none';
+      });
+      if (emptyEl && emptyQueryEl) {
+        if (hits.size === 0) {
+          emptyQueryEl.textContent = q;
+          emptyEl.hidden = false;
+        } else {
+          emptyEl.hidden = true;
+        }
+      }
+    };
+
+    input.addEventListener('input', applyFilter);
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        input.value = '';
+        applyFilter();
+        input.blur();
+      }
+    });
+  }
+</script>
+
+<style>
+  .intro {
+    color: var(--fg-muted);
+    font-size: 0.95em;
+    margin: 0 0 1em;
+  }
+  #vocab-search {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    background: var(--card-bg);
+    color: var(--fg);
+    font-size: 1rem;
+    font-family: inherit;
+    margin-bottom: 1em;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  #vocab-search:focus {
+    border-color: var(--accent);
+  }
+  .empty {
+    color: var(--fg-muted);
+    font-size: 0.95em;
+    margin: 0.5em 0 1em;
+  }
+  .vocab-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .vocab-row {
+    border-bottom: 1px solid var(--card-border);
+  }
+  .vocab-row:last-child { border-bottom: 0; }
+  .vocab-row a {
+    display: block;
+    padding: 10px 4px;
+    text-decoration: none;
+    color: var(--fg);
+    transition: background-color 0.12s;
+  }
+  .vocab-row a:hover {
+    background-color: var(--card-bg);
+    text-decoration: none;
+  }
+  .row-main {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    flex-wrap: wrap;
+    line-height: 1.4;
+  }
+  .word {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--fg);
+  }
+  .phonetic {
+    color: var(--fg-muted);
+    font-family: ui-monospace, SFMono-Regular, monospace;
+    font-size: 0.88em;
+  }
+  .pos {
+    background: var(--card-border);
+    color: var(--fg-muted);
+    padding: 0 6px;
+    border-radius: 4px;
+    font-size: 0.75em;
+    letter-spacing: 0.04em;
+    text-transform: lowercase;
+  }
+  .stars {
+    margin-left: auto;
+    color: var(--accent);
+    font-size: 0.85em;
+    letter-spacing: 0.05em;
+  }
+  .row-sub {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 2px;
+    color: var(--fg-muted);
+    font-size: 0.92em;
+  }
+  .zh {
+    color: var(--fg);
+    flex: 1;
+    min-width: 0;
+  }
+  .date {
+    color: var(--fg-muted);
+    font-size: 0.85em;
+    font-variant-numeric: tabular-nums;
+  }
+  @media (max-width: 640px) {
+    .row-main { gap: 6px; }
+    .stars { width: 100%; margin-left: 0; margin-top: 2px; }
+  }
+</style>

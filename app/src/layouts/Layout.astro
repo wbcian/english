@@ -15,7 +15,10 @@ const { title } = Astro.props;
   </head>
   <body>
     <header>
-      <a href={import.meta.env.BASE_URL} class="home-link">← English Lessons</a>
+      <nav class="top-nav">
+        <a href={import.meta.env.BASE_URL} class="nav-link">Lessons</a>
+        <a href={`${import.meta.env.BASE_URL}vocab/`} class="nav-link">Vocabulary</a>
+      </nav>
     </header>
     <main>
       <slot />
@@ -62,12 +65,18 @@ const { title } = Astro.props;
     margin: 0 auto;
     padding: 20px 24px 8px;
   }
-  .home-link {
-    color: var(--fg-muted);
-    text-decoration: none;
+  .top-nav {
+    display: flex;
+    gap: 16px;
     font-size: 14px;
   }
-  .home-link:hover { color: var(--accent); }
+  .nav-link {
+    color: var(--fg-muted);
+    text-decoration: none;
+    padding: 4px 0;
+    border-bottom: 2px solid transparent;
+  }
+  .nav-link:hover { color: var(--accent); text-decoration: none; }
   main {
     max-width: 760px;
     margin: 0 auto;
