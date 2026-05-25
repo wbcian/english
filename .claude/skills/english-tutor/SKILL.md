@@ -66,16 +66,19 @@ The user wants the episode transcribed and turned into a lesson. Run the local p
    - Key vocabulary table (word | pos | zh | note)
    - Useful phrases & patterns (en + zh)
    - Study tips / takeaways
-3. Save to `lessons/YYYY-MM-DD-<short-topic>.md` with frontmatter:
+3. **Follow `lessons/_conventions.md`** for speakable structure: never mix English and Chinese in the same blockquote (separate them with a markdown blank line into distinct blockquotes); the vocab/phrase table column meant for TTS uses header `word` (lowercase only — not `字`, `Word`, `字 / 片語`, `原句`, etc.); for multi-part series sharing the same date, add `series: <slug>` and `part: N` to frontmatter
+4. Save to `lessons/YYYY-MM-DD-<short-topic>.md` with frontmatter:
    ```
    ---
    date: YYYY-MM-DD
    topic: <short-topic>
    source: <where the transcript came from>
    type: lesson
+   series: <series-slug>     # optional, when part of a multi-part series
+   part: <N>                 # optional, when series is set
    ---
    ```
-4. Add an entry to `ACTIVITY.md` and (if any new vocab is worth keeping long-term) follow the Memory Maintenance rules below.
+5. Add an entry to `ACTIVITY.md` and (if any new vocab is worth keeping long-term) follow the Memory Maintenance rules below.
 
 **Only when user explicitly requests HTML magazine:**
 Convert into a structured HTML learning magazine using `assets/magazine-template.html`.
