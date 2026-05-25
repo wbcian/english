@@ -1,0 +1,115 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import LessonCard from './LessonCard.astro';
+
+interface Props {
+  entries: CollectionEntry<'lessons'>[];
+}
+const { entries } = Astro.props;
+
+const searchIndex = entries.map((e) => ({
+  id: e.id,
+  title: e.data.topic,
+  source: e.data.source,
+  date: e.data.date.toISOString().slice(0, 10),
+  series: e.data.series ?? '',
+}));
+---
+
+<div class="lessons-list-root">
+  <input
+    type="search"
+    class="lessons-search-input"
+    placeholder="搜尋 topic / 來源 / 系列…"
+    autocomplete="off"
+    aria-label="Search lessons"
+  />
+  <p class="empty lessons-empty" hidden>沒有 lesson 符合「<span class="lessons-empty-query"></span>」。</p>
+  <script type="application/json" class="lessons-search-data" set:html={JSON.stringify(searchIndex)} is:inline />
+  <div class="lessons-list">
+    {entries.map((entry) => <LessonCard entry={entry} />)}
+  </div>
+</div>
+
+<script>
+  import Fuse from 'fuse.js';
+
+  function init(root: Element) {
+    const dataEl = root.querySelector('.lessons-search-data');
+    const input = root.querySelector('.lessons-search-input') as HTMLInputElement | null;
+    const emptyEl = root.querySelector<HTMLElement>('.lessons-empty');
+    const emptyQueryEl = root.querySelector('.lessons-empty-query');
+    if (!dataEl || !input) return;
+
+    type Item = { id: string; title: string; source: string; date: string; series: string };
+    const data: Item[] = JSON.parse(dataEl.textContent ?? '[]');
+    const fuse = new Fuse(data, {
+      keys: [
+        { name: 'title', weight: 2 },
+        { name: 'series', weight: 2 },
+        { name: 'source', weight: 1 },
+        { name: 'date', weight: 0.5 },
+      ],
+      threshold: 0.4,
+      ignoreLocation: true,
+    });
+    const cards = Array.from(root.querySelectorAll<HTMLElement>('.lesson-card'));
+
+    const applyFilter = () => {
+      const q = input.value.trim();
+      if (!q) {
+        cards.forEach((c) => (c.style.display = ''));
+        if (emptyEl) emptyEl.hidden = true;
+        return;
+      }
+      const hits = new Set(fuse.search(q).map((r) => r.item.id));
+      cards.forEach((c) => {
+        c.style.display = hits.has(c.dataset.id ?? '') ? '' : 'none';
+      });
+      if (emptyEl && emptyQueryEl) {
+        if (hits.size === 0) {
+          (emptyQueryEl as HTMLElement).textContent = q;
+          emptyEl.hidden = false;
+        } else {
+          emptyEl.hidden = true;
+        }
+      }
+    };
+
+    input.addEventListener('input', applyFilter);
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        input.value = '';
+        applyFilter();
+        input.blur();
+      }
+    });
+  }
+
+  document.querySelectorAll('.lessons-list-root').forEach(init);
+</script>
+
+<style>
+  .lessons-search-input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    background: var(--card-bg);
+    color: var(--fg);
+    font-size: 1rem;
+    font-family: inherit;
+    margin-bottom: 1em;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  .lessons-search-input:focus {
+    border-color: var(--accent);
+  }
+  .lessons-empty {
+    color: var(--fg-muted);
+    font-size: 0.95em;
+    margin: 0.5em 0 1em;
+  }
+  .lessons-list { margin-top: 0; }
+</style>

@@ -1,0 +1,211 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  entries: CollectionEntry<'vocab'>[];
+}
+const { entries } = Astro.props;
+
+const searchIndex = entries.map((e) => ({
+  id: e.id,
+  word: e.data.word,
+  zh: e.data.zh,
+  pos: e.data.pos ?? '',
+  tags: (e.data.tags ?? []).join(' '),
+}));
+---
+
+<div class="vocab-list-root">
+  <input
+    type="search"
+    class="vocab-search-input"
+    placeholder="搜尋單字 / 中文 / tags…"
+    autocomplete="off"
+    aria-label="Search vocabulary"
+  />
+  <p class="empty vocab-empty" hidden>沒有單字符合「<span class="vocab-empty-query"></span>」。</p>
+  <script type="application/json" class="vocab-search-data" set:html={JSON.stringify(searchIndex)} is:inline />
+  <ul class="vocab-list">
+    {entries.map((entry) => {
+      const { word, phonetic, pos, zh, proficiency, last_reviewed } = entry.data;
+      const stars = typeof proficiency === 'number'
+        ? '★'.repeat(Math.min(5, proficiency)) + '☆'.repeat(Math.max(0, 5 - proficiency))
+        : '☆☆☆☆☆';
+      const href = `${import.meta.env.BASE_URL}vocab/${entry.id}/`.replace(/\/+/g, '/');
+      const dateStr = last_reviewed?.toISOString().slice(0, 10);
+      return (
+        <li class="vocab-row" data-id={entry.id}>
+          <a href={href}>
+            <div class="row-main">
+              <span class="word">{word}</span>
+              {phonetic && <span class="phonetic">{phonetic}</span>}
+              {pos && <span class="pos">{pos}</span>}
+              <span class="stars">{stars}</span>
+            </div>
+            <div class="row-sub">
+              <span class="zh">{zh}</span>
+              {dateStr && <span class="date">{dateStr}</span>}
+            </div>
+          </a>
+        </li>
+      );
+    })}
+  </ul>
+</div>
+
+<script>
+  import Fuse from 'fuse.js';
+
+  function init(root: Element) {
+    const dataEl = root.querySelector('.vocab-search-data');
+    const input = root.querySelector('.vocab-search-input') as HTMLInputElement | null;
+    const emptyEl = root.querySelector<HTMLElement>('.vocab-empty');
+    const emptyQueryEl = root.querySelector('.vocab-empty-query');
+    if (!dataEl || !input) return;
+
+    type Item = { id: string; word: string; zh: string; pos: string; tags: string };
+    const data: Item[] = JSON.parse(dataEl.textContent ?? '[]');
+    const fuse = new Fuse(data, {
+      keys: [
+        { name: 'word', weight: 3 },
+        { name: 'zh', weight: 2 },
+        { name: 'tags', weight: 1 },
+        { name: 'pos', weight: 0.5 },
+      ],
+      threshold: 0.35,
+      ignoreLocation: true,
+    });
+    const rows = Array.from(root.querySelectorAll<HTMLElement>('.vocab-row'));
+
+    const applyFilter = () => {
+      const q = input.value.trim();
+      if (!q) {
+        rows.forEach((r) => (r.style.display = ''));
+        if (emptyEl) emptyEl.hidden = true;
+        return;
+      }
+      const hits = new Set(fuse.search(q).map((r) => r.item.id));
+      rows.forEach((r) => {
+        r.style.display = hits.has(r.dataset.id ?? '') ? '' : 'none';
+      });
+      if (emptyEl && emptyQueryEl) {
+        if (hits.size === 0) {
+          (emptyQueryEl as HTMLElement).textContent = q;
+          emptyEl.hidden = false;
+        } else {
+          emptyEl.hidden = true;
+        }
+      }
+    };
+
+    input.addEventListener('input', applyFilter);
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        input.value = '';
+        applyFilter();
+        input.blur();
+      }
+    });
+  }
+
+  document.querySelectorAll('.vocab-list-root').forEach(init);
+</script>
+
+<style>
+  .vocab-search-input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    background: var(--card-bg);
+    color: var(--fg);
+    font-size: 1rem;
+    font-family: inherit;
+    margin-bottom: 1em;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  .vocab-search-input:focus {
+    border-color: var(--accent);
+  }
+  .vocab-empty {
+    color: var(--fg-muted);
+    font-size: 0.95em;
+    margin: 0.5em 0 1em;
+  }
+  .vocab-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .vocab-row {
+    border-bottom: 1px solid var(--card-border);
+  }
+  .vocab-row:last-child { border-bottom: 0; }
+  .vocab-row a {
+    display: block;
+    padding: 10px 4px;
+    text-decoration: none;
+    color: var(--fg);
+    transition: background-color 0.12s;
+  }
+  .vocab-row a:hover {
+    background-color: var(--card-bg);
+    text-decoration: none;
+  }
+  .row-main {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    flex-wrap: wrap;
+    line-height: 1.4;
+  }
+  .word {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--fg);
+  }
+  .phonetic {
+    color: var(--fg-muted);
+    font-family: ui-monospace, SFMono-Regular, monospace;
+    font-size: 0.88em;
+  }
+  .pos {
+    background: var(--card-border);
+    color: var(--fg-muted);
+    padding: 0 6px;
+    border-radius: 4px;
+    font-size: 0.75em;
+    letter-spacing: 0.04em;
+    text-transform: lowercase;
+  }
+  .stars {
+    margin-left: auto;
+    color: var(--accent);
+    font-size: 0.85em;
+    letter-spacing: 0.05em;
+  }
+  .row-sub {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 2px;
+    color: var(--fg-muted);
+    font-size: 0.92em;
+  }
+  .zh {
+    color: var(--fg);
+    flex: 1;
+    min-width: 0;
+  }
+  .date {
+    color: var(--fg-muted);
+    font-size: 0.85em;
+    font-variant-numeric: tabular-nums;
+  }
+  @media (max-width: 640px) {
+    .row-main { gap: 6px; }
+    .stars { width: 100%; margin-left: 0; margin-top: 2px; }
+  }
+</style>
