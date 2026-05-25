@@ -33,6 +33,12 @@
 | [that's on you](thats-on-you.md) | phr. | 那是你的責任；你自找的 | 1 | 2026-05-23 | phrase, responsibility, casual |
 | [conceited](conceited.md) | adj. | 自負的；自視甚高 | 1 | 2026-05-23 | adjective, personality, tap-t |
 | [manifest](manifest.md) | v. | 顯化；顯現；（adj.）明顯的 | 1 | 2026-05-23 | verb, multi-meaning, modern-slang |
+| [product taste](product-taste.md) | n.phr. | 產品品味；對產品好壞的直覺判斷力 | 1 | 2026-05-25 | product, startup, idiom-modern, work |
+| [first principles](first-principles.md) | n.phr. | 第一性原理（回到本質推理） | 1 | 2026-05-25 | thinking, startup, work, decision-making |
+| [amorphous](amorphous.md) | adj. | 無定形的；模糊的；邊界不清的 | 1 | 2026-05-25 | adjective, abstract, work, vocab-upgrade |
+| [wear many hats](wear-many-hats.md) | idiom | 身兼數職；什麼都做 | 1 | 2026-05-25 | idiom, work, startup, multi-role |
+| [low ego](low-ego.md) | adj.phr. | 自我意識低；不擺架子 | 1 | 2026-05-25 | adjective, startup, work, modern-idiom |
+| [lean into](lean-into.md) | phr.v. | 擁抱（挑戰／趨勢）；傾身投入 | 1 | 2026-05-25 | phrasal-verb, modern-idiom, work, attitude |
 | [viral](viral.md) | adj. | 病毒式傳播的；爆紅 | 2 | 2026-04-27 | internet, media |
 | [choreography](choreography.md) | n. | 編舞 | 2 | 2026-04-27 | performance, dance |
 | [with a bang](come-out-with-a-bang.md) | idiom | 轟動地（come out / go out / kick off…） | 2 | 2026-04-27 | idiom, performance |
