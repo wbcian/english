@@ -1,0 +1,170 @@
+---
+date: 2026-05-25
+topic: cat-wu-pm-skills-and-taste
+source: "Lenny's Podcast — interview with Cat Wu (Head of Product, Claude Code @ Anthropic). Slice covers PM skills, product taste, wearing many hats, leaning into chaos. Source file: transcripts/2026-05-25-cat-wu-anthropic-product-team.txt (lines 669–1075)."
+type: lesson
+---
+
+# Cat Wu 訪談 — Part 2：PM 該長什麼樣 — Taste、Many Hats、Lean Into Chaos
+
+## Topic & Summary
+
+這集 Lenny 問 Anthropic Claude Code 產品負責人 Cat Wu：在 AI 時代，PM 到底要怎麼存活？Cat 沒給你「五大技能清單」那種教科書答案，反而拋出一串現代 startup 必備詞——`product taste`、`wear a lot of hats`、`low ego`、`first-principles thinking`、`lean into the chaos`。這些不是 buzzword，是她每天用來決定誰要不要 hire、誰能在 Anthropic 活下來的標準。本回挑出 8 段對話，把這些術語的意思 + 你可以怎麼用，一口氣交給你。
+
+> Lenny grills Cat Wu (Head of Product, Claude Code @ Anthropic) on what PMs actually need to be good at in the AI era. Cat skips the textbook checklist and drops the real working vocabulary: `product taste`, `wear a lot of hats`, `low ego`, `first-principles thinking`, `lean into the chaos`. These aren't buzzwords — they're how she decides who gets hired and who survives at Anthropic. This lesson extracts 8 dialogue chunks and unpacks each term so you can actually use them.
+
+## Source
+
+- **格式**：podcast 訪談（Lenny's Podcast，主持人 Lenny Rachitsky）
+- **來賓**：Cat Wu，Anthropic Claude Code & Cowork 產品負責人
+- **本回切片**：訪談中段——PM 角色融合 / Product Taste / 處理混亂的心態（transcript 第 669–1075 行）
+- **本回重點**：6 個職場核心詞、`X is becoming more Y, which means…` 句式、`lean into N` 用法
+
+---
+
+## The Transcript（精選 — 跟讀用）
+
+> **Scene 1 — Lenny (line 657)**
+> There's always the sense that we need fewer PMs in the future. What do we need PMs? Engineers can just ship. His [Amul's] take is that because engineers are moving so fast, PMs and designers are squeezed... So his take is he needs more PMs because it's hard to keep up. What's your take there?
+
+> **Cat (669)**
+> I think **all of the roles are emerging**. PMs are doing some engineering work. Engineers are doing PM work. Designers are PMing and also landing code. You can either hire a lot more engineers who have great **product taste**, or you can keep your engineering hiring the same and hire a lot more PMs to help guide some of their work.
+
+> **Cat (685)**
+> On our team, we're pretty focused on hiring engineers with great product taste. This way, we can reduce the amount of overhead for shipping any product. There are many engineers on our team who are fully able to end to end go from see user feedback on Twitter through to ship a product at the end of the week with almost no product involvement.
+
+> **Cat (763)**
+> I still think it comes back to **product taste**. As code becomes much cheaper to write, the thing that becomes more valuable is **deciding what to write**. What is the right UX for this feature? What is the most delightful way that a user can experience it?
+
+> **Cat (845)**
+> I think the most important thing is to be able to have this **first-principles thinking** where you can figure out how the tech landscape is changing, what the team really needs from you, and to jump in and fix that hole. Because I think the work is becoming more **amorphous**, which means that a great PM is able to understand what all the gaps are, to figure out what the highest priority ones are…
+
+> **Cat (869)**
+> So I think the current environment values people who are able to **wear a lot of hats**, are able to **swap them**, and are very **low ego** about what work they do to help the team move faster.
+
+> **Scene 2 — Lenny (937)**
+> How do you just deal as a human going through so much constant change, just being **on the inside of the tornado**? Maybe it's calm there. But just how do you stay on top of what's going on?
+
+> **Cat (951)**
+> I think our team is full of people who **lean into the chaos**. So we try to **face every challenge with a smile**, because there's always so much going on. There's always so many risks and tricky situations that if you get too stressed about anything, you'll **burn out**.
+
+> **Cat (985)**
+> I feel like there are a lot of weeks where maybe Sunday night there's some **P0**. And then by Monday, there's a **P00**. And by Monday afternoon, there's a **P000**. And you're like, wow, I can't believe I was so worried about that P0 from Sunday. But I think you just have to acknowledge that there's only so much that you can do… and just **brutally prioritize** where you spend your time…
+
+> **Lenny (1035)** — *the Pirates of the Caribbean image*
+> What I'm imagining is there's that gif… from Pirates of the Caribbean, where it's this guy walking down a pair of stairs on a ship, and the whole ship is just being demolished around him, and he's so chill, just **strolling down the staircase** as everything's falling apart.
+
+---
+
+## Key Vocabulary
+
+| word / phrase | pos | zh | note |
+|---|---|---|---|
+| product taste | n. phr. | 產品品味；對產品好壞的直覺 | code 變便宜後，**選做什麼**比**怎麼做**更值錢 |
+| first-principles thinking | n. phr. | 第一性原理思考；回到本質推理 | Cat 點名最重要的 PM 技能；可獨立用 `from first principles` |
+| amorphous | adj. | 沒有固定形狀的；模糊的 | 形容工作邊界變模糊；近義 ill-defined / fluid |
+| wear a lot of hats | idiom | 身兼數職；什麼都做 | startup 必備詞；Cat 補了 **swap them**（角色快速切換）的延伸用法 |
+| low ego | adj. phr. | 自我意識低；不擺架子 | 現代 startup 描述好同事的標配；Claude 自己的 character 也用這個形容 |
+| lean into ~ | phr. v. | 擁抱／傾身投入（不是逃避）某件難搞的事 | `lean into the chaos`、`lean into AI tools`——遇到挑戰時的正面態度 |
+
+---
+
+## 核心主題 ①：Product Taste — Code 變便宜之後唯一還貴的東西
+
+Cat 的論點骨架很乾脆：
+
+> **As code becomes much cheaper to write, the thing that becomes more valuable is deciding what to write.**
+> （程式碼變便宜，「決定要寫什麼」就變貴。）
+
+| 過去（code 貴） | 現在（code 便宜） |
+|---|---|
+| 寫得出來 = 競爭優勢 | 選對要寫的 = 競爭優勢 |
+| PM 主要協調 6–12 個月 roadmap | PM 主要在 **看一個月後的市場** + 即時調整 |
+| Spec 寫得完整最重要 | Taste 跟 first-principles 最重要 |
+
+> 💡 **Coach Max 提醒**：`product taste` 這個詞在中文沒有完全對應——硬翻「產品品味」聽起來像在賣酒。**它的內核是「直覺判斷力」**——看到一個 feature 提案，三秒內知道「這個會 work / 這個會死」。Cian 你在做工程工作時，下次討論到 spec 卡關，可以丟出「I think this comes down to product taste — let me see the UX first」。對方馬上知道你是看過幾百個 feature 的人。
+
+---
+
+## 核心主題 ②：Wear Many Hats + Low Ego — 兩個一起出現才有用
+
+Cat 講這段時把兩個 idiom 連著丟：
+
+> **The current environment values people who are able to wear a lot of hats, are able to swap them, and are very low ego about what work they do to help the team move faster.**
+
+注意她加的兩個動作：
+
+| Idiom | 字面 | 真正在說 |
+|---|---|---|
+| wear a lot of hats | 戴很多頂帽子 | 一個人做多個角色的工作 |
+| **swap them** | 換帽子 | **快速** 在角色之間切換（不是慢慢轉） |
+| low ego | 低自尊 ❌ | **不在意 title / scope**——「這事該做我就做」 |
+
+> 💡 **Coach Max 提醒**：`low ego` ≠ 沒自信。它是個讚美——指這人**不會因為「這不是我的工作」就推掉**。中文職場常見的「分工要清楚」在矽谷 startup 語境裡反而是負評。Cian 你之後跟同事用英文聊事情，描述某人時可以說 `She's super low ego, just jumps in to help` ——直接拉好感度。
+
+---
+
+## 核心主題 ③：Lean Into the Chaos — 「擁抱混亂」是動詞
+
+`lean into` 是這集出現頻率最高的詞之一，記下來這輩子受用：
+
+| 句子 | 翻譯 | 用法 |
+|---|---|---|
+| **lean into the chaos** | 擁抱混亂 / 主動進場應對 | 面對亂局時的態度詞 |
+| **lean into these tools** | 把工具用到底 | 學新工具時的承諾 |
+| **lean into AI** | 全力 all in AI | trend 跟風時 |
+| **lean into your strengths** | 把長處發揮到極限 | 個人 career 建議 |
+
+> 💡 **Coach Max 提醒**：`lean into ~` 字面是「往~傾身」——畫面感是把身體往**對方/問題**的方向倒過去，不是躲。對應的反義詞是 `shy away from ~`（迴避）。所以「我們團隊就是擁抱混亂的人」直接 `Our team leans into the chaos.`，比 `Our team embraces the chaos` 更口語 + 更現代。
+
+### Bonus：Cat 的 P0 → P00 → P000 自嘲
+
+> Sunday night there's some P0. By Monday, there's a P00. By Monday afternoon, there's a P000.
+
+這是科技圈幽默——P0 是「最高優先級 bug/事件」，多加一個 0 = 等級又跳一階。**用法**：講某天工作大爆炸時，「Today went full P000」——對方馬上聽懂。
+
+---
+
+## Useful Phrases & Patterns
+
+### 1. `X is becoming more Y, which means that…`（抽象 → 具體的邏輯接力）
+> The work is becoming more **amorphous**, **which means that** a great PM is able to understand what all the gaps are…
+> 工作變得越來越模糊，這意味著一個好 PM 能看出哪裡有縫隙……
+
+> 💡 **Cian 你的隱形殺手**：你 PROFILE 弱點 #3「中翻英直譯」常卡在這——中文用「所以」、「因此」串句子，英文用 `which means` 更自然。**模板套用：`<觀察>, which means that <推論>.`**
+
+### 2. `I think the most important thing is to be able to V`（軟性主張）
+> I think the most important thing is to be able to have this first-principles thinking…
+
+訪談、開會、寫 doc 都好用。比「最重要的是 X」更不武斷，留討論空間。
+
+### 3. `brutally prioritize`（搭配詞學起來）
+- brutally + prioritize / honest / efficient = **強調強度**
+- 中文「狠狠地排優先級」就是這個味道
+- ❌ 不要用 brutally + 正面詞（e.g. "brutally happy" 是錯的）
+
+### 4. `face X with a smile`（態度詞組）
+> we try to face every challenge **with a smile**
+
+字面：帶著笑面對。實際語感：保持正能量但不是裝開心，是接受 + 行動。
+
+---
+
+## Study Tips / Takeaways
+
+- **Product taste 不是 buzzword**：下次你看 PR、看 design mock，問自己「3 秒鐘內我覺得這個會不會 work？」——這就是在練 taste。
+- **Lean into 是萬用替換詞**：你以前可能會說 `embrace / adopt / fully use`——這集學會後直接全換成 `lean into`，口語度+50%。
+- **Low ego 是描述同事的金句**：英文職場推薦人時用 `She's super low ego` 比 `She's humble` 更現代、更精準。
+- **「Which means that」是接話神器**：寫英文 doc 從一個事實推到一個結論時，這個比 `So...` / `Therefore...` 自然太多。
+- **聽 Cat 怎麼用 "I think"**：她整段訪談 80% 句子開頭是 `I think`——這是英文母語者**降低武斷感**的標配 hedge。Cian 你下次跟外國同事討論可以模仿這個——`I think the issue is…` 比 `The issue is…` 受用太多。
+
+---
+
+## 後續閱讀（如果這集你喜歡，下面兩段也值得切）
+
+本訪談還有另外兩段同樣高密度的素材，本 lesson 沒收進來：
+
+- **Part 1（暫定）**：Anthropic 怎麼出貨那麼快——`research preview`、`remove every single barrier`、`ship in a week`、`mind meld`（Star Trek idiom）的口語化用法
+- **Part 3（暫定）**：Cat 親自示範用 Cowork 做 slide deck 的 prompt 工作流——直接拿來模仿你自己的 workflow
+
+→ 看完這集如果還想要，跟 Coach Max 講一聲，我把另兩集也切出來。
