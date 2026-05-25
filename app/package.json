@@ -9,13 +9,22 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "predev": "node scripts/generate-audio.mjs",
+    "prebuild": "node scripts/generate-audio.mjs",
+    "audio:gen": "node scripts/generate-audio.mjs"
   },
   "dependencies": {
-    "astro": "^6.3.7"
+    "astro": "^6.3.7",
+    "fuse.js": "^7.3.0"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
-    "typescript": "^6.0.3"
+    "gray-matter": "^4.0.3",
+    "msedge-tts": "^2.0.5",
+    "remark-gfm": "^4.0.1",
+    "remark-parse": "^11.0.0",
+    "typescript": "^6.0.3",
+    "unified": "^11.0.5"
   }
 }

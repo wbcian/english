@@ -151,4 +151,53 @@ const { title } = Astro.props;
     max-width: 400px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   }
+
+  /* Mobile: collapse vocab tables to stacked cards (one card per row).
+     Rehype plugin adds data-label="<th>" on every <td>. */
+  @media (max-width: 640px) {
+    table, thead, tbody, tr, td { display: block; }
+    table {
+      border: 0;
+      width: 100%;
+    }
+    thead { display: none; }
+    tbody { display: block; }
+    tr {
+      display: block;
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin-bottom: 8px;
+      background: var(--card-bg);
+    }
+    td {
+      display: block;
+      border: 0;
+      padding: 3px 0;
+      font-size: 0.95em;
+      line-height: 1.55;
+    }
+    td::before {
+      content: attr(data-label) " · ";
+      font-weight: 600;
+      color: var(--fg-muted);
+      margin-right: 4px;
+      text-transform: uppercase;
+      font-size: 0.78em;
+      letter-spacing: 0.04em;
+    }
+    /* The word cell is the headline of the card — bigger, no label prefix. */
+    td.speakable-word {
+      font-size: 1.05em;
+      font-weight: 600;
+      padding-bottom: 6px;
+      margin-bottom: 4px;
+      border-bottom: 1px dashed var(--card-border);
+      text-decoration: underline dotted var(--speak-accent);
+      text-underline-offset: 3px;
+    }
+    td.speakable-word::before { content: ""; }
+    /* Hide empty cells to avoid showing just "NOTE · " with nothing after. */
+    td:empty { display: none; }
+  }
 </style>

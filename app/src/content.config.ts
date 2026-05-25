@@ -13,4 +13,20 @@ const lessons = defineCollection({
   }),
 });
 
-export const collections = { lessons };
+const vocab = defineCollection({
+  loader: glob({ pattern: '[!_]*.md', base: '../vocab' }),
+  schema: z.object({
+    word: z.string(),
+    phonetic: z.string().optional(),
+    pos: z.string().optional(),
+    zh: z.string(),
+    proficiency: z.number().optional(),
+    first_seen: z.coerce.date().optional(),
+    last_reviewed: z.coerce.date().optional(),
+    review_count: z.number().optional(),
+    tags: z.array(z.string()).optional(),
+    source: z.string().optional(),
+  }),
+});
+
+export const collections = { lessons, vocab };

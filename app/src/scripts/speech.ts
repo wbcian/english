@@ -1,14 +1,26 @@
-// Click-to-speak using the browser's Web Speech API.
+// Click-to-speak. Dispatches to one of two backends:
+//   1) Pre-generated MP3 (Edge TTS, en-US-AriaNeural) if the text hash is in
+//      the build-time manifest — high-quality neural voice, consistent across
+//      devices.
+//   2) Browser Web Speech API (Samantha / Google US English / etc.) as
+//      fallback when the hash is missing — covers brand-new lessons before
+//      regeneration, offline, or Edge TTS service failures.
+//
 // Wired up to:
 //   - <p> elements inside <blockquote> whose text is mostly English (≤10% CJK)
 //   - <td> cells in the column whose <th> header is exactly "word" (lowercase)
 // Guards: skips clicks on links, skips when user has a text selection.
 
+import audioManifest from '../data/audio-manifest.json';
+
+// ---- singletons ----
+
 const synth = window.speechSynthesis;
 let currentEl: HTMLElement | null = null;
+let currentAudio: HTMLAudioElement | null = null;
 
-// Voice loading is async on iOS Safari (and sometimes Chrome).
-// Wait for voiceschanged event or 1s fallback before first speak.
+// ---- Web Speech setup (unchanged from v1) ----
+
 const voicesReady: Promise<void> = new Promise(resolve => {
   if (synth.getVoices().length > 0) { resolve(); return; }
   const onChange = () => { synth.removeEventListener('voiceschanged', onChange); resolve(); };
@@ -16,8 +28,6 @@ const voicesReady: Promise<void> = new Promise(resolve => {
   setTimeout(resolve, 1000);
 });
 
-// macOS ships ~25 "novelty" voices (Albert, Bad News, Bells…) that show up first
-// in getVoices() and sound terrible for learning. Skip them.
 const NOVELTY_VOICES = new Set([
   'Albert', 'Bad News', 'Bahh', 'Bells', 'Boing', 'Bubbles', 'Cellos',
   'Deranged', 'Good News', 'Hysterical', 'Jester', 'Junior', 'Kathy',
@@ -25,17 +35,16 @@ const NOVELTY_VOICES = new Set([
   'Wobble', 'Zarvox',
 ]);
 
-// High-quality English voices, ordered by preference.
 const PREFERRED_VOICES = [
-  'Samantha',        // macOS default, US female
-  'Alex',            // macOS, US male, high quality
+  'Samantha',
+  'Alex',
   'Ava (Premium)', 'Ava (Enhanced)', 'Ava',
   'Allison (Premium)', 'Allison (Enhanced)', 'Allison',
   'Google US English',
   'Microsoft Aria Online (Natural) - English (United States)',
   'Microsoft Aria',
-  'Karen',           // macOS, Australian
-  'Daniel',          // macOS, British
+  'Karen',
+  'Daniel',
 ];
 
 function pickEnglishVoice(): SpeechSynthesisVoice | null {
@@ -51,20 +60,19 @@ function pickEnglishVoice(): SpeechSynthesisVoice | null {
       ?? null;
 }
 
+// ---- text utilities ----
+
 function cjkRatio(text: string): number {
   const match = text.match(/[一-鿿]/g);
   const cjk = match ? match.length : 0;
   return text.length ? cjk / text.length : 0;
 }
 
-/**
- * Get speakable text from a <p>. If the <p> starts with a <strong> (speaker label
- * like "**Ethan (04:18)**" or "**Scene A — Sabrina (04:08)**"), skip that <strong>.
- */
 function getSpeakableText(p: HTMLElement): string {
   const first = p.firstChild;
-  let parts: string[] = [];
-  let skipFirstStrong = first && first.nodeType === Node.ELEMENT_NODE && (first as Element).tagName === 'STRONG';
+  const parts: string[] = [];
+  const skipFirstStrong =
+    first && first.nodeType === Node.ELEMENT_NODE && (first as Element).tagName === 'STRONG';
   for (const node of Array.from(p.childNodes)) {
     if (skipFirstStrong && node === first) continue;
     parts.push(node.textContent ?? '');
@@ -72,10 +80,6 @@ function getSpeakableText(p: HTMLElement): string {
   return parts.join('').replace(/\s+/g, ' ').trim();
 }
 
-/**
- * Split long text into <=150-char chunks at sentence boundaries.
- * Chrome silently truncates utterances over ~200 chars.
- */
 function chunkBySentence(text: string, max = 150): string[] {
   const matches = text.match(/[^.!?]+[.!?]+\s*|\S[^.!?]*$/g);
   const sentences = matches && matches.length > 0 ? matches : [text];
@@ -93,6 +97,30 @@ function chunkBySentence(text: string, max = 150): string[] {
   return out;
 }
 
+// ---- hashing (mirror generate-audio.mjs: SHA-256 hex, first 12 chars) ----
+// Astro's smartypants converts ' → ', " → ", -- → —, ... → …, so the rendered
+// DOM text differs from the markdown source. Normalize both sides before hashing.
+function normalizeForHash(text: string): string {
+  return text
+    .replace(/[‘’ʼ]/g, "'")
+    .replace(/[“”]/g, '"')
+    .replace(/…/g, '...')
+    .replace(/[–—]/g, '-')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+async function sha256Short(text: string): Promise<string> {
+  const encoder = new TextEncoder();
+  const data = encoder.encode(normalizeForHash(text));
+  const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  const hex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+  return hex.slice(0, 12);
+}
+
+// ---- no-voice banner ----
+
 let noVoiceShown = false;
 function showNoVoiceBanner() {
   if (noVoiceShown) return;
@@ -104,19 +132,62 @@ function showNoVoiceBanner() {
   setTimeout(() => b.remove(), 8000);
 }
 
-async function speak(text: string, el: HTMLElement): Promise<void> {
+// ---- audio file playback path (preferred) ----
+
+function clearCurrent(): void {
+  if (currentAudio) {
+    currentAudio.pause();
+    currentAudio.src = '';
+    currentAudio = null;
+  }
+  if (synth.speaking || synth.pending) synth.cancel();
+  currentEl?.classList.remove('speaking');
+  currentEl = null;
+}
+
+function playAudioFile(src: string, el: HTMLElement): void {
+  clearCurrent();
+  const audio = new Audio(src);
+  audio.preload = 'auto';
+  el.classList.add('speaking');
+  currentEl = el;
+  currentAudio = audio;
+
+  const cleanup = () => {
+    if (currentEl === el) el.classList.remove('speaking');
+    if (currentAudio === audio) {
+      currentAudio = null;
+      if (currentEl === el) currentEl = null;
+    }
+  };
+  audio.addEventListener('ended', cleanup);
+  audio.addEventListener('error', () => {
+    cleanup();
+    // If the audio file is broken, fall back to Web Speech for this click.
+    void speakViaWebSpeech(getElText(el), el);
+  });
+
+  void audio.play().catch(() => cleanup());
+}
+
+function getElText(el: HTMLElement): string {
+  // For <td.speakable-word> the textContent is what we want; for <p.speakable>
+  // we need to strip a leading speaker label.
+  if (el.tagName === 'P') return getSpeakableText(el);
+  return el.textContent?.trim() ?? '';
+}
+
+// ---- Web Speech fallback ----
+
+async function speakViaWebSpeech(text: string, el: HTMLElement): Promise<void> {
   await voicesReady;
 
-  // Toggle off if clicking the same element again
   if (currentEl === el) {
-    synth.cancel();
-    el.classList.remove('speaking');
-    currentEl = null;
+    clearCurrent();
     return;
   }
 
-  synth.cancel();
-  currentEl?.classList.remove('speaking');
+  clearCurrent();
   el.classList.add('speaking');
   currentEl = el;
 
@@ -130,7 +201,7 @@ async function speak(text: string, el: HTMLElement): Promise<void> {
 
   const chunks = chunkBySentence(text);
 
-  // iOS Safari has a known race between cancel() and immediate speak() — small delay avoids it.
+  // iOS Safari has a known race between cancel() and immediate speak()
   setTimeout(() => {
     chunks.forEach((chunk, i) => {
       const u = new SpeechSynthesisUtterance(chunk);
@@ -152,6 +223,28 @@ async function speak(text: string, el: HTMLElement): Promise<void> {
   }, 50);
 }
 
+// ---- entry point ----
+
+const manifest = audioManifest as Record<string, true>;
+
+async function speakText(text: string, el: HTMLElement): Promise<void> {
+  // Toggle-off: re-click the currently speaking element → stop
+  if (currentEl === el) {
+    clearCurrent();
+    return;
+  }
+
+  const hash = await sha256Short(text);
+  if (manifest[hash]) {
+    const src = `${import.meta.env.BASE_URL}audio/${hash}.mp3`;
+    playAudioFile(src, el);
+    return;
+  }
+  return speakViaWebSpeech(text, el);
+}
+
+// ---- click wiring ----
+
 function shouldIgnoreClick(e: MouseEvent): boolean {
   if ((e.target as HTMLElement | null)?.closest('a')) return true;
   const sel = window.getSelection();
@@ -160,7 +253,7 @@ function shouldIgnoreClick(e: MouseEvent): boolean {
 }
 
 function wireSpeakable(): void {
-  // 1. Blockquote paragraphs — only mostly-English ones
+  // Blockquote paragraphs — only mostly-English ones
   document.querySelectorAll<HTMLElement>('blockquote > p').forEach(p => {
     const text = getSpeakableText(p);
     if (text.length < 4) return;
@@ -168,11 +261,11 @@ function wireSpeakable(): void {
     p.classList.add('speakable');
     p.addEventListener('click', (e) => {
       if (shouldIgnoreClick(e)) return;
-      void speak(text, p);
+      void speakText(text, p);
     });
   });
 
-  // 2. Vocab tables — any column whose <th> is exactly "word" (lowercase)
+  // Vocab tables — any column whose <th> is exactly "word"
   document.querySelectorAll<HTMLTableElement>('table').forEach(table => {
     const headers = Array.from(table.querySelectorAll<HTMLTableCellElement>('thead th'));
     const wordIdx = headers.findIndex(h => h.textContent?.trim().toLowerCase() === 'word');
@@ -185,18 +278,16 @@ function wireSpeakable(): void {
       cell.classList.add('speakable-word');
       cell.addEventListener('click', (e) => {
         if (shouldIgnoreClick(e as MouseEvent)) return;
-        void speak(text, cell);
+        void speakText(text, cell);
       });
     });
   });
 }
 
-// Global Esc to stop playback
+// Esc cancels both audio file playback and Web Speech
 document.addEventListener('keydown', e => {
-  if (e.key === 'Escape' && (synth.speaking || synth.pending)) {
-    synth.cancel();
-    currentEl?.classList.remove('speaking');
-    currentEl = null;
+  if (e.key === 'Escape' && (currentAudio || synth.speaking || synth.pending)) {
+    clearCurrent();
   }
 });
 

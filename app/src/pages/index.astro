@@ -12,21 +12,114 @@ const entries = all.sort((a, b) => {
   if (dt !== 0) return dt;
   return (a.data.part ?? 0) - (b.data.part ?? 0);
 });
+
+const searchIndex = entries.map((e) => ({
+  id: e.id,
+  title: e.data.topic,
+  source: e.data.source,
+  date: e.data.date.toISOString().slice(0, 10),
+  series: e.data.series ?? '',
+}));
 ---
 
 <Layout title="English Lessons">
   <h1>English Lessons</h1>
   <p class="intro">{entries.length} lesson{entries.length === 1 ? '' : 's'} · 點段落或單字朗讀</p>
-  <div class="list">
-    {entries.map(entry => <LessonCard entry={entry} />)}
+  <input
+    type="search"
+    id="lesson-search"
+    placeholder="搜尋 topic / 來源 / 系列…"
+    autocomplete="off"
+    aria-label="Search lessons"
+  />
+  <p class="empty" id="search-empty" hidden>沒有 lesson 符合「<span id="empty-query"></span>」。</p>
+  <script type="application/json" id="search-data" set:html={JSON.stringify(searchIndex)} is:inline />
+  <div class="list" id="lesson-list">
+    {entries.map((entry) => <LessonCard entry={entry} />)}
   </div>
 </Layout>
+
+<script>
+  import Fuse from 'fuse.js';
+
+  const dataEl = document.getElementById('search-data');
+  const input = document.getElementById('lesson-search') as HTMLInputElement | null;
+  const emptyEl = document.getElementById('search-empty');
+  const emptyQueryEl = document.getElementById('empty-query');
+  if (dataEl && input) {
+    type Item = { id: string; title: string; source: string; date: string; series: string };
+    const data: Item[] = JSON.parse(dataEl.textContent ?? '[]');
+    const fuse = new Fuse(data, {
+      keys: [
+        { name: 'title', weight: 2 },
+        { name: 'series', weight: 2 },
+        { name: 'source', weight: 1 },
+        { name: 'date', weight: 0.5 },
+      ],
+      threshold: 0.4,
+      ignoreLocation: true,
+    });
+    const cards = Array.from(document.querySelectorAll<HTMLElement>('.lesson-card'));
+
+    const applyFilter = () => {
+      const q = input.value.trim();
+      if (!q) {
+        cards.forEach((c) => (c.style.display = ''));
+        if (emptyEl) emptyEl.hidden = true;
+        return;
+      }
+      const hits = new Set(fuse.search(q).map((r) => r.item.id));
+      cards.forEach((c) => {
+        c.style.display = hits.has(c.dataset.id ?? '') ? '' : 'none';
+      });
+      if (emptyEl && emptyQueryEl) {
+        if (hits.size === 0) {
+          emptyQueryEl.textContent = q;
+          emptyEl.hidden = false;
+        } else {
+          emptyEl.hidden = true;
+        }
+      }
+    };
+
+    input.addEventListener('input', applyFilter);
+    // Esc clears the search
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        input.value = '';
+        applyFilter();
+        input.blur();
+      }
+    });
+  }
+</script>
 
 <style>
   .intro {
     color: var(--fg-muted);
     font-size: 0.95em;
-    margin: 0 0 1.5em;
+    margin: 0 0 1em;
   }
-  .list { margin-top: 1em; }
+  #lesson-search {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    background: var(--card-bg);
+    color: var(--fg);
+    font-size: 1rem;
+    font-family: inherit;
+    margin-bottom: 1em;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  #lesson-search:focus {
+    border-color: var(--accent);
+  }
+  .empty {
+    color: var(--fg-muted);
+    font-size: 0.95em;
+    margin: 0.5em 0 1em;
+  }
+  .list { margin-top: 0; }
 </style>
