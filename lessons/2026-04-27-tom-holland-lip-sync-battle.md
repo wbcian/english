@@ -23,7 +23,7 @@ Tom Holland 在 Gordon Ramsay 的烹飪訪談中，回憶 2017 年 *Lip Sync Bat
 
 ## Key Vocabulary
 
-| 字 / 片語 | 詞性 | 中文 | 備註 |
+| word | 詞性 | 中文 | 備註 |
 |---|---|---|---|
 | viral / go viral | adj./v.phr. | 爆紅；病毒式傳播 | massively viral, viral moment |
 | go all out | v.phr. | 卯足全力 | go all out for / on sth |

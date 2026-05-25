@@ -41,7 +41,7 @@ Ethan 用 *Monsters, Inc.* 開場那場 Sulley 進老闆 Waternoose 辦公室的
 
 ### 短片關鍵句拆解
 
-| 原句 | 教學重點 |
+| word | 教學重點 |
 |---|---|
 | There's nothing more **toxic or deadly** than a human child. | toxic（有毒）+ deadly（致命）並列疊加 — 寫作放大強度的招式 |
 | A single touch could **KILL YOU**. | 單音節重擊；模態 *could* 表「可能性」而非真的會 |
@@ -86,7 +86,7 @@ Ethan 用 *Monsters, Inc.* 開場那場 Sulley 進老闆 Waternoose 辦公室的
 
 ## Key Vocabulary
 
-| 字 / 片語 | 詞性 | 中文 | 備註 |
+| word | 詞性 | 中文 | 備註 |
 |---|---|---|---|
 | Incorporated (Inc.) | adj./abbr. | 註冊有限公司（合法登記企業） | 美式 Inc.；英式常用 Ltd. |
 | in a pinch | idiom | 處境困難；緊要關頭 | a pinch of salt 的 pinch 是「一小撮」 |
@@ -120,7 +120,7 @@ Ethan 用 *Monsters, Inc.* 開場那場 Sulley 進老闆 Waternoose 辦公室的
 > Rule: **T between two vowel sounds → soft D (a "flap" sound, IPA [ɾ])**
 
 實例：
-| 原句 | native 唸法 |
+| word | native 唸法 |
 |---|---|
 | What a day | [wuh-duh-day] |
 | Get us | [geh-dus] |

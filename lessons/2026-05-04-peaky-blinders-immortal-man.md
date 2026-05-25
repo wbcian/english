@@ -1,7 +1,7 @@
 ---
 date: 2026-05-04
 topic: peaky-blinders-immortal-man
-source: RealLife English — Learn English with Peaky Blinders: The Immortal Man (Ch. 1 "Tommy Returns to The Garrison")
+source: 'RealLife English — Learn English with Peaky Blinders: The Immortal Man (Ch. 1 "Tommy Returns to The Garrison")'
 type: lesson
 ---
 
@@ -69,7 +69,7 @@ Tommy 一進門講六個字（"I'd like to speak to the owner"），整個酒吧
 ### 3. `-shy` 字尾家族（**lesson 核心**）
 `X-shy` = 「會避開 X / 怕 X」的 compound adjective。這個字尾**極度好用**，可以隨手造詞：
 
-| 字 | 意思 |
+| word | 意思 |
 |---|---|
 | war-shy | 避戰；本質是膽小（coward） |
 | camera-shy | 怕鏡頭；不愛被拍 |
@@ -111,7 +111,7 @@ Ksenia 結語：兩個傳奇舞者（Fred Astaire & Ginger Rogers）的名號夠
 
 ## Key Vocabulary（10 字 / 全部進 vocab/）
 
-| Word | POS | zh | Note |
+| word | POS | zh | Note |
 |---|---|---|---|
 | [patron](../vocab/patron.md) | n. | 顧客（尤指酒吧、餐廳常客） | 比 customer 正式；店家 vs 老主顧的味道 |
 | [flabbergasted](../vocab/flabbergasted.md) | adj. | 目瞪口呆的；嚇傻的 | 比 surprised / shocked 更強烈、更口語誇張 |
@@ -128,7 +128,7 @@ Ksenia 結語：兩個傳奇舞者（Fred Astaire & Ginger Rogers）的名號夠
 
 ## Useful Phrases & Patterns
 
-| 句型 / 片語 | 用法說明 |
+| word | 用法說明 |
 |---|---|
 | It may have escaped your notice, but… | 諷刺對方沒注意；後接打臉內容 |
 | In case it had escaped your notice/attention | 同上的過去完成版 |

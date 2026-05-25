@@ -107,7 +107,7 @@ type: lesson
 
 當 T **夾在母音之間**（或字尾 T 接母音時），美式英語會把 T 軟化成「tap D」——像日文ら行那種短促的彈舌。
 
-| 原句 | 唸出來 | 規則 |
+| word | 唸出來 | 規則 |
 |---|---|---|
 | nothing to do | [nothing-duh-do] | "to" 弱化成 [tuh]，T 再軟化成 tap-D |
 | butter | [bu-der] | 母音間 T → tap D（最經典例） |

@@ -98,7 +98,7 @@ type: lesson
 
 ## 核心主題 ①：咖啡店語彙地圖
 
-| 場景元素 | 字 | 重點 |
+| 場景元素 | word | 重點 |
 |---|---|---|
 | **點餐人員** | **barista** | 義大利文借字；男女通用；複數 baristas；別跟 *barrister*（英式律師）搞混 |
 | **無咖啡因選項** | **herbal tea** | 用 flowers / leaves / herbs 浸泡而成；種類：chamomile / peppermint / ginger / hibiscus |
