@@ -1,0 +1,32 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import LessonCard from '../components/LessonCard.astro';
+
+const all = await getCollection('lessons');
+if (all.length === 0) {
+  throw new Error("Empty 'lessons' collection — check glob base path in src/content.config.ts");
+}
+const entries = all.sort((a, b) => {
+  const dt = b.data.date.getTime() - a.data.date.getTime();
+  if (dt !== 0) return dt;
+  return (a.data.part ?? 0) - (b.data.part ?? 0);
+});
+---
+
+<Layout title="English Lessons">
+  <h1>English Lessons</h1>
+  <p class="intro">{entries.length} lesson{entries.length === 1 ? '' : 's'} · 點段落或單字朗讀</p>
+  <div class="list">
+    {entries.map(entry => <LessonCard entry={entry} />)}
+  </div>
+</Layout>
+
+<style>
+  .intro {
+    color: var(--fg-muted);
+    font-size: 0.95em;
+    margin: 0 0 1.5em;
+  }
+  .list { margin-top: 1em; }
+</style>

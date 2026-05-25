@@ -1,0 +1,52 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  const lessons = await getCollection('lessons');
+  return lessons.map(entry => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+type Props = { entry: CollectionEntry<'lessons'> };
+const { entry } = Astro.props as Props;
+const { Content } = await render(entry);
+const { date, topic, series, part } = entry.data;
+const dateStr = date.toISOString().slice(0, 10);
+---
+
+<Layout title={`${topic} · English Lessons`}>
+  <article>
+    <div class="lesson-meta">
+      <time>{dateStr}</time>
+      {series && part != null && <span class="badge">{series} · Part {part}</span>}
+    </div>
+    <Content />
+  </article>
+</Layout>
+
+<script>
+  import '../../scripts/speech';
+</script>
+
+<style>
+  .lesson-meta {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 0.88em;
+    color: var(--fg-muted);
+    margin-bottom: 8px;
+  }
+  .badge {
+    background: var(--speak-highlight);
+    color: var(--fg);
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 0.9em;
+  }
+  @media (prefers-color-scheme: dark) {
+    .badge { color: var(--accent); }
+  }
+  article { padding-bottom: 4em; }
+</style>
