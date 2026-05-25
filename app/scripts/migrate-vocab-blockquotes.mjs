@@ -37,6 +37,7 @@ function transform(source) {
   const out = [];
   let inBq = false;
   let splitDone = false;
+  let sawEnglishInBq = false;
 
   for (const line of lines) {
     const isQuote = line.startsWith('>');
@@ -44,20 +45,27 @@ function transform(source) {
       out.push(line);
       inBq = false;
       splitDone = false;
+      sawEnglishInBq = false;
       continue;
     }
     if (!inBq) {
       inBq = true;
       splitDone = false;
+      sawEnglishInBq = false;
     }
     const content = line.replace(/^>\s?/, '');
-    if (!splitDone && isMostlyChinese(content)) {
+    const lineIsMostlyChinese = isMostlyChinese(content);
+    // Insert split only when the blockquote already had English content
+    // before this Chinese line — otherwise the previous blank line already
+    // separated them (script must be idempotent).
+    if (!splitDone && sawEnglishInBq && lineIsMostlyChinese) {
       out.push('');
       out.push(line);
       splitDone = true;
     } else {
       out.push(line);
     }
+    if (!lineIsMostlyChinese && content.trim()) sawEnglishInBq = true;
   }
   return out.join('\n');
 }
