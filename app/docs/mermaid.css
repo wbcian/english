@@ -1,0 +1,12 @@
+.label foreignObject i {
+  color: #6b7280 !important;
+  font-style: italic;
+  font-size: 0.82em !important;
+  font-weight: 400;
+}
+.label foreignObject b {
+  font-size: 1.05em;
+}
+.label foreignObject {
+  line-height: 1.45;
+}

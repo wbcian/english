@@ -1,0 +1,64 @@
+%%{init: {'theme':'default','flowchart':{'curve':'basis','htmlLabels':true}}}%%
+flowchart TB
+  subgraph Content["CONTENT — author writes .md"]
+    direction LR
+    L["<b>lessons/*.md</b><br/>8 files<br/><i style='color:#666;font-size:0.85em'>course notes (英文 transcript + vocab tables)</i>"]
+    V["<b>vocab/*.md</b><br/>74 files<br/><i style='color:#666;font-size:0.85em'>單字詳細卡 (Examples / Encounters)</i>"]
+    C["<b>_conventions.md</b><br/>speakable rules<br/><i style='color:#666;font-size:0.85em'>規範契約 (人 + Coach Max 都照寫)</i>"]
+  end
+
+  subgraph Build["BUILD — npm run dev / build"]
+    direction LR
+    G["<b>generate-audio.mjs</b><br/>predev / prebuild hook<br/><i style='color:#666;font-size:0.85em'>parse MD → 抽 speakable → SHA-256 hash → 呼叫 Edge TTS</i>"]
+    E["<b>Edge TTS</b><br/>en-US-AriaNeural<br/><i style='color:#666;font-size:0.85em'>Microsoft 免費 neural voice (無 API key、WebSocket)</i>"]
+    M["<b>audio/*.mp3 + manifest.json</b><br/>434 hashes<br/><i style='color:#666;font-size:0.85em'>content-addressable cache (commit 進 git)</i>"]
+    A["<b>Astro build</b><br/>content collections<br/><i style='color:#666;font-size:0.85em'>zod schema 驗證 frontmatter → type-safe entries</i>"]
+    P["<b>remark + rehype plugins</b><br/><i style='color:#666;font-size:0.85em'>remark: 重寫 .md 連結為路由<br/>rehype: 給 td 注 data-label (手機 stacked card)</i>"]
+    H["<b>dist/</b><br/>84 HTML + mp3 + JS<br/><i style='color:#666;font-size:0.85em'>純靜態 deploy bundle</i>"]
+    G --> E
+    E --> M
+    A --> P
+    A --> H
+    P --> H
+  end
+
+  subgraph Deploy["DEPLOY — git push main"]
+    direction LR
+    GHA["<b>GitHub Actions</b><br/>withastro/action@v6<br/><i style='color:#666;font-size:0.85em'>app/lessons/vocab 任一變更觸發 build + deploy</i>"]
+    Pages["<b>GitHub Pages</b><br/>wbcian.github.io/english/<br/><i style='color:#666;font-size:0.85em'>免費 CDN 託管</i>"]
+    GHA --> Pages
+  end
+
+  subgraph Browser["BROWSER — runtime (使用者點擊)"]
+    direction LR
+    Click["click word /<br/>paragraph"]
+    S["<b>speech.ts</b><br/>sha256[:12]<br/><i style='color:#666;font-size:0.85em'>正規化文字 + hash → 查 manifest</i>"]
+    Q{"hash in<br/>manifest?"}
+    Aria["<b>&lt;audio&gt; Aria mp3</b><br/><i style='color:#666;font-size:0.85em'>高品質 neural voice</i>"]
+    WS["<b>Web Speech</b><br/>Samantha fallback<br/><i style='color:#666;font-size:0.85em'>瀏覽器內建 (機械音、但永遠可用)</i>"]
+    Click --> S
+    S --> Q
+    Q -->|hit| Aria
+    Q -->|miss| WS
+  end
+
+  L --> G
+  V --> G
+  L --> A
+  V --> A
+  H --> GHA
+  Pages -. "CDN serves<br/>HTML + mp3" .-> Click
+
+  classDef src fill:#a5d8ff,stroke:#4a9eed,color:#1e3a5f
+  classDef build fill:#d0bfff,stroke:#8b5cf6,color:#2d1b69
+  classDef out fill:#b2f2bb,stroke:#22c55e,color:#15803d
+  classDef ext fill:#ffd8a8,stroke:#f59e0b,color:#5c3d1a
+  classDef warn fill:#fff3bf,stroke:#f59e0b,color:#5c3d1a
+  classDef err fill:#ffc9c9,stroke:#ef4444,color:#5c1a1a
+
+  class L,V src
+  class C warn
+  class G,A,P,S build
+  class E,GHA ext
+  class M,H,Pages,Aria out
+  class WS err

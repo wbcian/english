@@ -1,0 +1,64 @@
+%%{init: {'theme':'default','flowchart':{'curve':'basis','htmlLabels':true}}}%%
+flowchart LR
+  subgraph Content["CONTENT — author writes .md"]
+    direction TB
+    L["lessons/*.md<br/>8 files"]
+    V["vocab/*.md<br/>74 files"]
+    C["_conventions.md<br/>speakable rules"]
+  end
+
+  subgraph Build["BUILD — npm run dev / build"]
+    direction TB
+    G["generate-audio.mjs<br/>predev / prebuild hook"]
+    E["Edge TTS<br/>en-US-AriaNeural"]
+    M["audio/*.mp3 + manifest.json<br/>434 hashes"]
+    A["Astro build<br/>content collections"]
+    P["remark + rehype<br/>plugins"]
+    H["dist/<br/>84 HTML + mp3 + JS"]
+    G --> E
+    E --> M
+    A --> P
+    A --> H
+    P --> H
+  end
+
+  subgraph Deploy["DEPLOY — git push main"]
+    direction TB
+    GHA["GitHub Actions<br/>withastro/action@v6"]
+    Pages["GitHub Pages<br/>wbcian.github.io/english/"]
+    GHA --> Pages
+  end
+
+  subgraph Browser["BROWSER — runtime"]
+    direction LR
+    Click["click word /<br/>paragraph"]
+    S["speech.ts<br/>sha256[:12]"]
+    Q{"hash in<br/>manifest?"}
+    Aria["audio Aria mp3"]
+    WS["Web Speech<br/>(Samantha fallback)"]
+    Click --> S
+    S --> Q
+    Q -->|hit| Aria
+    Q -->|miss| WS
+  end
+
+  L --> G
+  V --> G
+  L --> A
+  V --> A
+  H --> GHA
+  Pages -. "CDN serves<br/>HTML + mp3" .-> Click
+
+  classDef src fill:#a5d8ff,stroke:#4a9eed,color:#1e3a5f
+  classDef build fill:#d0bfff,stroke:#8b5cf6,color:#2d1b69
+  classDef out fill:#b2f2bb,stroke:#22c55e,color:#15803d
+  classDef ext fill:#ffd8a8,stroke:#f59e0b,color:#5c3d1a
+  classDef warn fill:#fff3bf,stroke:#f59e0b,color:#5c3d1a
+  classDef err fill:#ffc9c9,stroke:#ef4444,color:#5c1a1a
+
+  class L,V src
+  class C warn
+  class G,A,P,S build
+  class E,GHA ext
+  class M,H,Pages,Aria out
+  class WS err
