@@ -13,12 +13,15 @@ source: "user-asked"
 
 ## Examples
 > "He habitually checks his phone the moment he wakes up."
+
 > 他習慣性地一起床就看手機。
 
 > "She habitually arrives 10 minutes early."
+
 > 她習慣性地提早 10 分鐘到。
 
 > "He habitually lies about his age."
+
 > 他習慣性地說謊隱瞞年齡。
 
 ## Usage tip

@@ -13,9 +13,11 @@ source: "RealLife App: Tom Holland × Gordon Ramsay"
 
 ## Examples
 > "I want a wig and a quick change and stuff."
+
 > 我想要假髮、快速換裝這些東西。
 
 > "Backstage, the actor did a 30-second quick change."
+
 > 在後台，演員 30 秒內完成換裝。
 
 ## Usage tip

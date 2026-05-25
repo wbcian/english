@@ -13,9 +13,11 @@ source: "lesson: Sabrina Espresso interview walkthrough (host Ethan)"
 
 ## Examples
 > "An 'Espresso' sign at a cafe has nothing to do with me."
+
 > 咖啡廳的 espresso 招牌跟我一點關係都沒有。
 
 > "It has nothing to do with you personally — I find you extraordinarily professional."
+
 > 這完全不是針對你個人——我覺得你超專業的。
 
 ## Usage tip

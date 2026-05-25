@@ -15,16 +15,20 @@ source: "user-asked"
 
 ### 名詞
 > "He died in combat."
+
 > 他陣亡於戰場。
 
 > "The soldiers were trained in hand-to-hand combat."
+
 > 士兵接受了徒手格鬥訓練。
 
 ### 動詞
 > "We need stronger laws to combat climate change."
+
 > 我們需要更強的法律來對抗氣候變遷。
 
 > "The hospital is doing everything to combat the spread of the virus."
+
 > 醫院盡全力對抗病毒擴散。
 
 ## Usage tip

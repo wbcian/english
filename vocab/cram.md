@@ -15,22 +15,28 @@ source: "user-asked"
 
 ### A. 塞滿、擠進
 > "I crammed all my clothes into the suitcase."
+
 > 我把所有衣服塞進行李箱。
 
 > "The room was crammed with people."
+
 > 房間塞滿了人。
 
 > "He crammed the last cookie in his mouth."
+
 > 他把最後一塊餅乾塞進嘴裡。
 
 ### B. 臨時抱佛腳（K 書）⭐ 學生專用
 > "I stayed up all night cramming for the exam."
+
 > 我熬夜 K 書準備考試。
 
 > "There's no point cramming the night before."
+
 > 考前一晚臨時抱佛腳沒用。
 
 > "She crammed three years of material into one week."
+
 > 她把三年的內容硬塞進一週念完。
 
 ## Usage tip
@@ -54,6 +60,7 @@ source: "user-asked"
 台灣的「補習班」英文就是 **cram school** — 這個字正是源自「cram = 拼命塞知識進腦袋」的概念！
 
 > "I went to cram school three times a week in high school."
+
 > 我高中時一週去補習班三次。
 
 ## Synonyms

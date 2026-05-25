@@ -14,12 +14,15 @@ source: "RealLife English — Monsters, Inc."
 ## Examples
 
 > "Our city is counting on you to collect those screams."
+
 > 全城都在指望你去收集那些尖叫聲。
 
 > "I knew I could count on you."
+
 > 我就知道可以靠你。
 
 > "The entire world is counting on us."
+
 > 整個世界都在指望我們。
 
 ## Usage tip

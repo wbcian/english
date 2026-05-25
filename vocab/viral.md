@@ -13,6 +13,7 @@ source: "RealLife App: Tom Holland × Gordon Ramsay"
 
 ## Examples
 > "The video went viral overnight."
+
 > 那部影片一夜之間爆紅。
 
 > "Tom Holland's Lip Sync Battle performance was massively viral, with nearly 200 million views."

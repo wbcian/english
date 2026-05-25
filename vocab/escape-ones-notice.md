@@ -14,12 +14,15 @@ source: "RealLife English — Peaky Blinders: The Immortal Man"
 ## Examples
 
 > "It may have escaped your notice, you war-shy fucker, but we were dancing to that music."
+
 > 可能你沒注意到啦，你這怕死的傢伙，我們可是在跳舞欸。
 
 > "In case it had escaped your notice, blacksmith, I am quite capable of looking after myself."
+
 > 怕你沒看到，鐵匠先生，我自己照顧自己沒問題。
 
 > "Well, it may have escaped your attention, Sykes, but I'm currently somewhat being forcibly detained."
+
 > 嗯，可能你沒注意到，Sykes，我現在正被人強行拘留中。
 
 ## Usage tip

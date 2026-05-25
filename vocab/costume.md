@@ -13,9 +13,11 @@ source: "RealLife App: Tom Holland × Gordon Ramsay"
 
 ## Examples
 > "Her Halloween costume was a giant taco."
+
 > 她的萬聖節服裝是一個大塔可餅。
 
 > "Tom is talking about different costume items he decided to wear."
+
 > Tom 在講他決定穿的不同戲服配件。
 
 ## Usage tip

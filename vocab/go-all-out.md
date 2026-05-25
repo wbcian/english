@@ -13,9 +13,11 @@ source: "RealLife App: Tom Holland × Gordon Ramsay"
 
 ## Examples
 > "Tom surprised everyone by going all out with fishnets, a wig, and incredible choreography."
+
 > Tom 卯足全力穿漁網襪、戴假髮、配上瘋狂編舞，讓所有人嚇一跳。
 
 > "We went all out for her birthday party."
+
 > 我們為她的生日派對火力全開。
 
 ## Usage tip

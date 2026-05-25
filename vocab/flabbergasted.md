@@ -14,12 +14,15 @@ source: "RealLife English — Peaky Blinders: The Immortal Man"
 ## Examples
 
 > "Just his first six words leave the whole room flabbergasted."
+
 > 光是他開口前六個字，就讓整個酒吧鴉雀無聲、目瞪口呆。
 
 > "I was flabbergasted when I saw the bill."
+
 > 我看到帳單時整個傻眼。
 
 > "She stood there, flabbergasted, unable to say a word."
+
 > 她杵在那邊，傻到一句話都講不出來。
 
 ## Usage tip

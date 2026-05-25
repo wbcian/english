@@ -13,12 +13,15 @@ source: "lesson: Sabrina Espresso interview walkthrough (host Ethan)"
 
 ## Examples
 > "I don't want people to think I'm conceited."
+
 > 我不想讓人覺得我自視甚高。
 
 > "Someone who's conceited has an inflated opinion of themselves."
+
 > 自負的人對自己有過度膨脹的看法。
 
 > "He's not confident — he's just conceited."
+
 > 他不是有自信，是自負。
 
 ## Usage tip

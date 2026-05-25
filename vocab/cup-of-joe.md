@@ -13,9 +13,11 @@ source: "lesson: Sabrina Espresso (host Ethan)"
 
 ## Examples
 > "I suddenly want a strong cup of Joe."
+
 > 我突然好想來杯濃咖啡。
 
 > "I can't function without my morning cup of Joe."
+
 > 沒喝早上那杯咖啡我整個無法運作。
 
 ## Usage tip

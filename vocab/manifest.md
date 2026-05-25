@@ -13,9 +13,11 @@ source: "lesson: Sabrina Espresso (host Ethan)"
 
 ## Examples
 > "Why don't I write songs like 'A Billion Dollars'? Like, manifest that?"
+
 > 我幹嘛不寫一首叫〈十億美元〉的歌？用心念把它「顯化」出來？
 
 > "She swears she manifested her dream job by visualizing it daily."
+
 > 她發誓是靠每天想像把夢想工作「顯化」出來的。
 
 ## Usage tip

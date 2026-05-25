@@ -15,17 +15,21 @@ source: "lesson: Sabrina Espresso interview walkthrough (host Ethan)"
 
 **英式俚語：超讚**
 > "Oh, brilliant! I love it."
+
 > 喔，超讚的！我超愛。
 
 > "Bloody brilliant!" — Ron Weasley
+
 > 真他媽棒！（《哈利波特》榮恩經典台詞）
 
 **字面義：才華洋溢 / 聰明絕頂**
 > "She's a brilliant physicist."
+
 > 她是個才華洋溢的物理學家。
 
 **字面義：閃耀的（光線、顏色）**
 > "The diamond gave off a brilliant flash."
+
 > 那顆鑽石閃出耀眼的光芒。
 
 ## Usage tip

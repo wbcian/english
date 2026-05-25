@@ -13,12 +13,15 @@ source: "lesson: Sabrina Espresso interview walkthrough (host Ethan)"
 
 ## Examples
 > "That was just not running through my head when I made *Espresso*."
+
 > 寫《Espresso》的時候我腦子裡根本沒有那回事。
 
 > "Espresso is probably running through your head right now."
+
 > 你現在腦中應該正在循環《Espresso》吧。
 
 > "That song's been running through my head all day."
+
 > 那首歌在我腦中循環了一整天。
 
 ## Usage tip

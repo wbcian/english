@@ -15,19 +15,24 @@ source: "user-asked"
 
 ### 字面：身體 / 心理上極度痛苦
 > "I have an excruciating headache."
+
 > 我頭痛到爆炸。
 
 > "The wait was excruciating."
+
 > 那等待簡直是煎熬。
 
 > "She felt excruciating pain after the surgery."
+
 > 手術後她感到極度的痛。
 
 ### 比喻：詳細到令人受不了
 > "She described the surgery in excruciating detail."
+
 > 她鉅細靡遺地描述手術過程。
 
 > "He explained the rules in excruciating detail."
+
 > 他鉅細靡遺地解釋規則（聽得人快瘋）。
 
 ## Usage tip

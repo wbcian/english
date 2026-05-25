@@ -13,12 +13,14 @@ source: "RealLife App: Tom Holland × Gordon Ramsay"
 
 ## Examples
 > "I came out with a bang."
+
 > 我一出手就一鳴驚人。
 
 > "The new iPhone came out with a bang."
 > 新款 iPhone 一推出就轟動。
 
 > "The party went off with a bang."
+
 > 派對辦得超成功。
 
 ## Usage tip

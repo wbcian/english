@@ -15,17 +15,21 @@ source: "user-asked"
 
 ### 素描、草圖（最常見）
 > "The artist showed me his early sketches for the painting."
+
 > 那位藝術家給我看他這幅畫的初期素描。
 
 > "She made a few rough sketches before starting the final piece."
+
 > 在開始正式作品前，她畫了幾張粗略的草稿。
 
 ### 文字小品、速寫（短文）
 > "a sketch of village life"
+
 > 一篇關於鄉村生活的速寫。
 
 ### 喜劇短劇 ⭐ 文化點
 > "a comedy sketch on SNL (Saturday Night Live)"
+
 > SNL 上的喜劇短劇。
 
 ## Usage tip
@@ -34,9 +38,11 @@ source: "user-asked"
 
 **動詞 sketch** = 速寫；概略描述
 > "Let me sketch out the plan."
+
 > 我大概描述一下這個計畫。
 
 > "He sketched the mountains in his notebook."
+
 > 他在筆記本上畫了那些山。
 
 ## 常見搭配

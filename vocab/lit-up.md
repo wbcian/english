@@ -15,16 +15,20 @@ source: "user-asked"
 
 ### 字面：被點亮
 > "The Christmas tree lit up the whole room."
+
 > 聖誕樹把整個房間都點亮了。
 
 > "The city lit up at sunset."
+
 > 城市在日落時亮了起來。
 
 ### 比喻：（臉 / 眼睛）為之一亮 ⭐ 最常用
 > "Her face lit up when she saw the gift."
+
 > 她看到禮物時臉龐瞬間綻放笑容。
 
 > "His eyes lit up at the mention of pizza."
+
 > 一聽到披薩，他眼睛一亮。
 
 ### Slang：嗨翻、微醺
@@ -32,6 +36,7 @@ source: "user-asked"
 > Beyoncé 上台時觀眾整個嗨翻。
 
 > "He was lit up after three beers."
+
 > 他喝了三瓶啤酒後微醺了。
 
 ## Usage tip
@@ -56,6 +61,7 @@ source: "user-asked"
 ### 🔥 延伸 slang：lit (adj.)
 這幾年從饒舌圈外溢主流。**lit** = awesome / 超嗨 / 太屌了。
 > "That party was lit!"
+
 > 那場派對超狂！
 
 ⚠️ **lit** 偏年輕／非正式，工作場合別亂用。

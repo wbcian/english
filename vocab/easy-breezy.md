@@ -13,9 +13,11 @@ source: "RealLife App: Tom Holland × Gordon Ramsay"
 
 ## Examples
 > "We're just gonna keep it nice and easy breezy."
+
 > 我們就保持輕鬆愉快就好。
 
 > "Don't worry about the test, it'll be easy breezy."
+
 > 別擔心考試，會很輕鬆的。
 
 ## Usage tip

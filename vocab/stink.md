@@ -14,15 +14,19 @@ source: "RealLife English — Monsters, Inc."
 ## Examples
 
 > "They stink." (= They're really bad at scaring.)
+
 > 他們爛透了。
 
 > "I stink at math."
+
 > 我數學爛到不行。
 
 > "This movie stinks."
+
 > 這片爛片。
 
 > "The fridge stinks — something's gone bad in there."
+
 > 冰箱發臭，裡面有東西壞掉了。
 
 ## Usage tip

@@ -14,12 +14,15 @@ source: "RealLife English — Peaky Blinders: The Immortal Man"
 ## Examples
 
 > "The patron becomes furious that he's stopped the music."
+
 > 那位顧客因為他把音樂停了而暴怒。
 
 > "The restaurant's loyal patrons returned every Friday night."
+
 > 那間餐廳的忠實常客每週五晚都會回來。
 
 > "She's a major patron of the arts."
+
 > 她是藝術界的重要贊助人。
 
 ## Usage tip

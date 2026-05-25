@@ -13,9 +13,11 @@ source: "lesson: Sabrina Espresso (host Ethan)"
 
 ## Examples
 > "Move it up, down, left, right — switch it up like Nintendo."
+
 > 上下左右移一移——像 Nintendo 一樣換個玩法。
 
 > "Let's switch up our routine this week."
+
 > 這禮拜我們換個方式做吧。
 
 ## Usage tip

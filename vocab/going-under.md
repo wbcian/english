@@ -14,12 +14,15 @@ source: "RealLife English — Monsters, Inc."
 ## Examples
 
 > "I would do anything to keep it from going under."
+
 > 我會不擇手段不讓它倒掉。
 
 > "That restaurant went under after just six months."
+
 > 那家餐廳開不到半年就倒了。
 
 > "Three local startups went under last quarter."
+
 > 上一季有三家在地新創倒了。
 
 ## Usage tip

@@ -15,20 +15,25 @@ source: "user-asked"
 
 ### 比喻：記憶/罪惡感糾纏 ⭐ 最常用
 > "The memory of the accident still haunts him."
+
 > 那場意外的記憶仍纏繞著他。
 
 > "Her words haunted me for years."
+
 > 她的話糾纏了我好多年。
 
 ### 字面：（鬼魂）出沒
 > "A ghost haunts the old castle."
+
 > 一隻鬼出沒在那座古堡。
 
 ### 名詞：常去的地方
 > "This café is one of my favorite haunts."
+
 > 這家咖啡廳是我最常去的地方之一。
 
 > "We went back to all our old haunts in college."
+
 > 我們回到了所有大學時期常去的地方。
 
 ## Usage tip

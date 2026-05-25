@@ -15,13 +15,16 @@ source: "RealLife English — Peaky Blinders: The Immortal Man"
 
 **真誠用法（warm）**
 > "Sweetheart, will you pass the salt?"
+
 > 親愛的，可以幫我遞一下鹽嗎？
 
 > "Sweetheart, Mommy and Daddy will be back in two minutes."
+
 > 寶貝，媽咪跟爹地兩分鐘後就回來。
 
 **諷刺用法（sarcastic / belittling）**
 > "Right, sweetheart. Here's what's gonna happen, all right?"
+
 > 好喔，親愛的。等下會這樣演，OK？
 > （Tommy 對 patron 講，故意把對方矮化成小妹妹）
 

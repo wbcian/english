@@ -16,6 +16,7 @@ source: "RealLife App: Tom Holland × Gordon Ramsay"
 > Lady Gaga 以她不落俗套的假髮聞名。
 
 > "She has an unconventional approach to design."
+
 > 她有一套不落俗套的設計方法。
 
 ## Usage tip

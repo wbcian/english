@@ -13,12 +13,15 @@ source: "user-asked"
 
 ## Examples
 > "He's an incorrigible romantic — always falling head over heels."
+
 > 他是個無可救藥的浪漫主義者，老是栽進愛情。
 
 > "My dog is incorrigible — no matter how I train him, he still eats my socks."
+
 > 我的狗根本沒救，不管我怎麼訓練他都還是吃我的襪子。
 
 > "She's an incorrigible flirt."
+
 > 她是個沒救的調情仔。
 
 ## Usage tip

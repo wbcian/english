@@ -15,16 +15,20 @@ source: "user-asked: 'He poured his blood, sweat, and tears into writing his fir
 
 ### 字面：傾倒（液體）
 > "She poured the milk into the glass."
+
 > 她把牛奶倒進杯子。
 
 ### 引申：傾注（精力、情感、努力） ⭐ idiom 用法
 > "He poured his blood, sweat, and tears into writing his first novel."
+
 > 他傾注了所有心血、汗水與淚水寫下他的第一本小說。
 
 > "She poured her energy into her startup."
+
 > 她把全部的精力傾注於她的新創公司。
 
 > "He poured his grief into his music."
+
 > 他將悲傷傾注於音樂創作。
 
 ## Usage tip

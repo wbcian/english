@@ -13,9 +13,11 @@ source: "lesson: Sabrina Espresso interview walkthrough (host Ethan)"
 
 ## Examples
 > "The barista's just like, waiting for me to say it."
+
 > 那個咖啡師就在那等我說出「espresso」。
 
 > "Ask the barista if they have oat milk."
+
 > 問咖啡師有沒有燕麥奶。
 
 ## Usage tip

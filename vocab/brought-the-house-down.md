@@ -14,12 +14,15 @@ source: "RealLife English — Peaky Blinders: The Immortal Man"
 ## Examples
 
 > "That opening number brought the house down."
+
 > 開場曲炸翻全場。
 
 > "Her stand-up routine brought the house down."
+
 > 她的單口喜劇把全場逗到嗨翻。
 
 > "The encore absolutely brought the house down."
+
 > 安可那首完全引爆全場。
 
 ## Usage tip

@@ -13,9 +13,11 @@ source: "RealLife App: Tom Holland × Gordon Ramsay"
 
 ## Examples
 > "Fishnets are often associated with sexy or theatrical fashion."
+
 > 漁網襪常常和性感或戲劇舞台風格的時尚扯上關係。
 
 > "His theatrical reaction made everyone laugh."
+
 > 他誇張戲劇化的反應讓大家笑翻。
 
 ## Usage tip

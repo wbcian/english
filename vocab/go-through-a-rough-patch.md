@@ -14,15 +14,19 @@ source: "RealLife English — Monsters, Inc."
 ## Examples
 
 > "We're just going through a rough time, sir."
+
 > 老大，我們只是正在過難關。
 
 > "My dad's going through a rough time right now."
+
 > 我爸最近過得不太順。
 
 > "Many small businesses went through a rough patch during COVID."
+
 > COVID 期間很多小生意都很慘。
 
 > "Everyone goes through rough patches, but we can't give up."
+
 > 大家都有過低潮，但不能放棄。
 
 ## Usage tip

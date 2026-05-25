@@ -13,9 +13,11 @@ source: "lesson: Sabrina Espresso (host Ethan)"
 
 ## Examples
 > "Was the movie good?" — "I guess so."
+
 > 「電影好看嗎？」「大概吧。」
 
 > "So I guess this means we're over." — "Yeah, I guess so."
+
 > 「所以我們算是結束了？」「嗯，大概吧。」
 
 ## Usage tip

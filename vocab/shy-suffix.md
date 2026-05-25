@@ -36,6 +36,7 @@ source: "RealLife English — Peaky Blinders: The Immortal Man"
 | media-shy | 不愛接受媒體採訪 |
 | risk-shy | 不愛冒險（vs risk-averse 比較正式） |
 
+
 > 規則：選一個你想避開的事物 X，加 `-shy`，就成立。
 
 ## Usage tip

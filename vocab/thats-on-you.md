@@ -16,9 +16,11 @@ source: "lesson: Sabrina Espresso interview walkthrough (host Ethan)"
 > 這你自找的，現在去哪買 espresso 都會有人對你唱「That's that me espresso」。
 
 > "What if somebody had died tonight? Different story, right? 'Cause that's on you."
+
 > 萬一今晚有人死了呢？那就是另一回事了，因為那就是你的責任。
 
 > "You picked the restaurant — if it sucks, that's on you."
+
 > 餐廳你挑的，難吃算你帳上。
 
 ## Usage tip

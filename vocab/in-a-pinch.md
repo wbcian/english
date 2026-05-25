@@ -14,9 +14,11 @@ source: "RealLife English — Monsters, Inc."
 ## Examples
 
 > "The company's in a pinch — they can't generate enough electricity."
+
 > 公司現在卡關，發電量不夠。
 
 > "If you're ever in a pinch, give me a call."
+
 > 你哪天有難，打給我。
 
 ## Usage tip

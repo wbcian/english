@@ -13,9 +13,11 @@ source: "lesson: Sabrina Espresso interview walkthrough (host Ethan)"
 
 ## Examples
 > "Can I see your herbal tea menu, please?"
+
 > 我可以看一下你們的花草茶單嗎？
 
 > "Chamomile is my favorite herbal tea before bed."
+
 > 洋甘菊是我睡前最愛的花草茶。
 
 ## Usage tip

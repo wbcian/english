@@ -15,10 +15,12 @@ source: "lesson: Sabrina Espresso interview walkthrough (host Ethan)"
 
 **1. Filler（填空 / 想下一句的時間）**
 > "It's, like, kind of crazy."
+
 > 這…就是…有點扯。
 
 **2. Comparison（比喻 / 模糊化）**
 > "I feel like an idiot every time I see a cafe."
+
 > 我每次看到咖啡廳都覺得自己像個白癡。
 
 **3. Quotative（引述語：取代 said / thought）**

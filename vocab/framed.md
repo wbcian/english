@@ -15,22 +15,27 @@ source: "user-asked"
 
 ### 陷害（冤枉成罪犯） ⭐ 口語超常見
 > "I didn't steal it — I was framed!"
+
 > 我沒偷——我被陷害了！
 
 > "The detective realized the suspect had been framed."
+
 > 偵探意識到嫌犯是被陷害的。
 
 ### 裝框（畫、照片）
 > "She had the photo framed and hung it on the wall."
+
 > 她把照片裱框後掛在牆上。
 
 > "a framed painting" 一幅裱框的畫
 
 ### 構思 / 設定（問題、議題的角度）
 > "How you frame the question matters."
+
 > 你怎麼問這個問題很重要。
 
 > "The issue was framed as a moral choice."
+
 > 這個議題被設定為道德抉擇。
 
 ## Usage tip

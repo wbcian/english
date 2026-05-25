@@ -13,12 +13,15 @@ source: "RealLife App: Tom Holland × Gordon Ramsay"
 
 ## Examples
 > "They pitched this umbrella thing."
+
 > 他們提出了雨傘這個 idea。
 
 > "She pitched her startup idea to investors."
+
 > 她向投資人推銷她的新創點子。
 
 > "Let me pitch you my concept."
+
 > 讓我跟你介紹我的概念。
 
 ## Usage tip

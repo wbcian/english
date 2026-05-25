@@ -14,12 +14,15 @@ source: "RealLife English — Peaky Blinders: The Immortal Man"
 ## Examples
 
 > "I'd like to speak to the owner of this pub."
+
 > 我想找這家酒吧的老闆。
 
 > "After work, we usually grab a pint at the pub down the street."
+
 > 下班後我們通常去街尾那家 pub 喝一杯。
 
 > "The pub is a cultural institution in Britain — like a community living room."
+
 > Pub 是英國的文化機構，像社區的客廳一樣。
 
 ## Usage tip

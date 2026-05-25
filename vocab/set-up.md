@@ -13,9 +13,11 @@ source: "RealLife App: Tom Holland × Gordon Ramsay"
 
 ## Examples
 > "Did you ever think it would help set up for one of the biggest viral moments of your career?"
+
 > 你曾想過這會為你職涯上最爆紅的瞬間鋪路嗎？
 
 > "Taking on leadership roles in college set me up to advance quickly in my career."
+
 > 大學擔任領導角色為我之後快速升遷鋪了路。
 
 ## Usage tip

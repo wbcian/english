@@ -15,16 +15,20 @@ source: "lesson: Sabrina Espresso interview walkthrough (host Ethan)"
 
 **字面義（formal）**
 > "She literally walked 10 miles to school every day."
+
 > 她真的每天走 10 英里上學（不是誇飾）。
 
 **強調用（口語，常見於年輕人）**
 > "I literally have 20 minutes, so it'll have to be quick."
+
 > 我真的只有 20 分鐘，要快一點。
 
 > "You're literally walking around every single cafe."
+
 > 你簡直是每間咖啡廳都在繞。
 
 > "I literally died."
+
 > 我簡直要笑死了。（沒人真的死）
 
 ## Usage tip

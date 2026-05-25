@@ -13,12 +13,15 @@ source: "lesson: Sabrina Espresso interview walkthrough (host Ethan)"
 
 ## Examples
 > "You're walking around every single cafe."
+
 > 你每一間咖啡廳都繞遍了。
 
 > "I've watched every single episode of Seinfeld at least three times."
+
 > 《歡樂單身派對》每一集我都至少看過三次。
 
 > "She meditates every single day."
+
 > 她每一天都打坐冥想，一天都沒漏。
 
 ## Usage tip

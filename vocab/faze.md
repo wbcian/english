@@ -14,15 +14,19 @@ source: "RealLife English — Peaky Blinders: The Immortal Man"
 ## Examples
 
 > "Pretty intimidating, but none of it fazes Tommy."
+
 > 看起來蠻唬人的，但沒一樣動搖得了 Tommy。
 
 > "Nothing fazes him."
+
 > 他什麼都不怕。
 
 > "The criticism didn't faze her at all."
+
 > 那些批評根本沒讓她動搖。
 
 > "I was a bit fazed by his reaction."
+
 > 他的反應讓我有點愣住。
 
 ## Usage tip

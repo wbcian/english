@@ -16,6 +16,7 @@ source: "RealLife App: Tom Holland × Gordon Ramsay"
 > Tom 和 Zendaya 講好都不要太拼。
 
 > "Take it easy, man — you've been working all night."
+
 > 兄弟，放輕鬆啦，你已經熬一整晚了。
 
 > "Alright bro, take it easy."

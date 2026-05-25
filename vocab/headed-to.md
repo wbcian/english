@@ -16,12 +16,15 @@ source: "user-asked"
 > 你要去哪？（超口語問法，比 "Where are you going?" 更道地）
 
 > "We're headed to the airport."
+
 > 我們正往機場去。
 
 > "The economy is headed for trouble."
+
 > 經濟正朝著麻煩走（=要出大事了）。
 
 > "I'm heading out — see you later!"
+
 > 我要出發了，待會見！
 
 ## Usage tip

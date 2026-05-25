@@ -14,9 +14,11 @@ source: "RealLife English — Monsters, Inc."
 ## Examples
 
 > "The humorous twist is that they believe children are toxic and deadly, so they're actually terrified of them."
+
 > 幽默的轉折在於：他們相信小孩有毒、會致命，所以其實怕得要死。
 
 > "There's a humorous twist at the end — the villain turns out to be the dog."
+
 > 結尾有個幽默轉折——反派居然是那隻狗。
 
 ## Usage tip

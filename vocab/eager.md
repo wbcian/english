@@ -13,12 +13,15 @@ source: "user-asked"
 
 ## Examples
 > "The kids were eager to open their presents."
+
 > 孩子們急著要拆禮物。
 
 > "She gave an eager smile when she saw him."
+
 > 看到他時她迫不及待地露出笑容。
 
 > "Investors are eager for results."
+
 > 投資人渴望看到成果。
 
 ## Usage tip

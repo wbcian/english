@@ -14,12 +14,15 @@ source: "RealLife English — Peaky Blinders: The Immortal Man"
 ## Examples
 
 > "You're gonna pick a slow number, all right?"
+
 > 你給我選一首慢歌，懂嗎？
 
 > "Let's do one more number before we wrap up."
+
 > 收場前再來一首吧。
 
 > "That opening number brought the house down."
+
 > 開場那首炸翻全場。
 
 > "We are not doing a Beyoncé song for the opening number."

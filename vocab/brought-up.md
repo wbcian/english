@@ -15,20 +15,25 @@ source: "user-asked"
 
 ### 提起（話題） ⭐ Cian 用的這個
 > "At dinner, Maria brought up her plans to move to another city, and it made everyone pause."
+
 > 晚餐時，Maria 提起她要搬到另一個城市的計畫，讓大家都頓了一下。
 
 > "She brought up the topic of marriage at the worst possible moment."
+
 > 她在最糟的時機點提起婚姻話題。
 
 ### 撫養長大
 > "I was brought up in Taiwan by my grandparents."
+
 > 我在台灣由祖父母撫養長大。
 
 > "He was brought up to be polite."
+
 > 他從小被教導要有禮貌。
 
 ### 嘔吐（委婉說法）
 > "The baby brought up his milk."
+
 > 寶寶把牛奶吐出來。
 
 ## Usage tip

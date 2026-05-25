@@ -13,12 +13,15 @@ source: "user-asked"
 
 ## Examples
 > "She's keen on learning Spanish before her trip to Madrid."
+
 > 她在去馬德里之前很熱衷於學西班牙文。
 
 > "He has a keen eye for detail."
+
 > 他對細節觀察敏銳。
 
 > "I'm keen to hear what you think."
+
 > 我很想知道你怎麼看。
 
 ## Usage tip

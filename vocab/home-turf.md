@@ -17,9 +17,11 @@ source: "RealLife English — Peaky Blinders: The Immortal Man"
 > The Garrison 是 Shelby 家族的地盤。
 
 > "Negotiating on his home turf gave him a big advantage."
+
 > 在自己的主場談判讓他佔了大便宜。
 
 > "Stay off my home turf."
+
 > 滾出我的地盤。
 
 ## Usage tip

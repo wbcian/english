@@ -16,6 +16,7 @@ source: "RealLife App: Tom Holland × Gordon Ramsay"
 > Lady Gaga 以她不落俗套的假髮聞名。
 
 > "I want a wig and a quick change."
+
 > 我想要一頂假髮和一次快速換裝。
 
 ## Usage tip

@@ -14,15 +14,19 @@ source: "RealLife English — Monsters, Inc."
 ## Examples
 
 > "Everyone knows you're going to get us through it."
+
 > 大家都知道你會帶我們撐過去。
 
 > "We'll get through it, sweetie. Breathe. Deep breath."
+
 > 我們會撐過去的，深呼吸。
 
 > "I couldn't get through to him on the phone."
+
 > 我電話打不通給他。
 
 > "The message finally got through."
+
 > 訊息終於傳達到了。
 
 ## Usage tip

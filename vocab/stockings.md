@@ -14,6 +14,7 @@ related: [fishnets, pantyhose, tights, hosiery]
 
 ## Examples
 > "She wore black silk stockings to the gala."
+
 > 她穿黑色絲襪參加晚宴。
 
 > "Hang the stockings by the chimney with care."

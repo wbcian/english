@@ -13,12 +13,15 @@ source: "user-asked"
 
 ## Examples
 > "She put her heart and soul into the project."
+
 > 她全心全意投入這個專案。
 
 > "He put his heart and soul into raising his kids."
+
 > 他全心全意地養育他的孩子。
 
 > "If you put your heart and soul into it, you'll succeed."
+
 > 只要你全心投入，就會成功。
 
 ## Usage tip

@@ -14,15 +14,18 @@ source: "RealLife English — Monsters, Inc."
 ## Examples
 
 > "They're actually terrified of them."
+
 > 他們其實怕死了。
 
 > "Waternoose is terrified of the company going under."
 > Waternoose 害怕公司會倒掉。
 
 > "I'm terrified of spiders."
+
 > 我超怕蜘蛛。
 
 > "She was terrified to walk home alone at night."
+
 > 她不敢一個人走夜路回家。
 
 ## Usage tip

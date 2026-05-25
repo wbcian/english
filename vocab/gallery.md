@@ -13,12 +13,15 @@ source: "user-asked"
 
 ## Examples
 > "We spent the afternoon at the art gallery."
+
 > 我們在藝廊度過下午。
 
 > "His paintings are now displayed in galleries around the world."
+
 > 他的畫作如今在世界各地的藝廊展出。
 
 > "Check out my photo gallery on my phone."
+
 > 看一下我手機裡的照片集。
 
 ## Usage tip

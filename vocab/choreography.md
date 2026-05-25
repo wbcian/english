@@ -13,6 +13,7 @@ source: "RealLife App: Tom Holland × Gordon Ramsay"
 
 ## Examples
 > "The choreography in this music video is insane."
+
 > 這支 MV 的編舞超狂。
 
 > "Tom's Lip Sync Battle performance featured incredible choreography."

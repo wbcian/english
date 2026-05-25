@@ -13,9 +13,11 @@ source: "RealLife App: Tom Holland × Gordon Ramsay"
 
 ## Examples
 > "It means to relax, not work too hard, or not do anything too intensive."
+
 > 意思是放輕鬆，不要太拼，不要做太密集／太重的事情。
 
 > "I'm taking an intensive English course this summer."
+
 > 我這個夏天要上密集英文課。
 
 ## Usage tip
