@@ -140,13 +140,25 @@ const { title } = Astro.props;
   blockquote > p.speakable.speaking {
     background-color: var(--speak-highlight);
   }
-  td.speakable-word {
+  .speakable-word {
     cursor: pointer;
     text-decoration: underline dotted var(--speak-accent);
     text-underline-offset: 3px;
+    transition: background-color 0.25s;
   }
-  td.speakable-word.speaking {
+  .speakable-word:hover {
+    text-decoration-color: var(--accent);
+  }
+  .speakable-word.speaking {
     background-color: var(--speak-highlight);
+  }
+  /* Vocab detail headline — bigger affordance: shows 🔊 on hover */
+  h1.speakable-word { position: relative; }
+  h1.speakable-word:hover::after {
+    content: " 🔊";
+    font-size: 0.55em;
+    opacity: 0.7;
+    vertical-align: 0.3em;
   }
   .no-voice-banner {
     position: fixed;

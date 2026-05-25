@@ -20,9 +20,13 @@ const entries = all.slice().sort((a, b) => {
 
 <Layout title="Vocabulary">
   <h1>Vocabulary</h1>
-  <p class="intro">{entries.length} entries · 由 ★ 低到高（最該複習在最上）</p>
+  <p class="intro">{entries.length} entries · 由 ★ 低到高（最該複習在最上）· 點單字直接朗讀</p>
   <VocabList entries={entries} />
 </Layout>
+
+<script>
+  import '../../scripts/speech';
+</script>
 
 <style>
   .intro {

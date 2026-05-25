@@ -252,6 +252,30 @@ function shouldIgnoreClick(e: MouseEvent): boolean {
   return false;
 }
 
+function wireOneSpeakableWord(el: HTMLElement): void {
+  if (el.dataset.speakWired === '1') return;
+  el.dataset.speakWired = '1';
+  const text = el.textContent?.trim() ?? '';
+  if (!text) return;
+  const insideLink = !!el.closest('a');
+  el.addEventListener('click', (e) => {
+    // NB: don't use shouldIgnoreClick here — it short-circuits on any click
+    // whose target is inside <a>, which is exactly the case we want to
+    // intercept (vocab list rows wrap their .speakable-word in an <a>).
+    // Only skip on user text selection.
+    const sel = window.getSelection();
+    if (sel && !sel.isCollapsed) return;
+    if (insideLink) {
+      // Cancel link navigation so a tap on the word means "speak", not
+      // "open detail page".
+      e.preventDefault();
+      e.stopPropagation();
+      e.stopImmediatePropagation();
+    }
+    void speakText(text, el);
+  });
+}
+
 function wireSpeakable(): void {
   // Blockquote paragraphs — only mostly-English ones
   document.querySelectorAll<HTMLElement>('blockquote > p').forEach(p => {
@@ -265,7 +289,8 @@ function wireSpeakable(): void {
     });
   });
 
-  // Vocab tables — any column whose <th> is exactly "word"
+  // Lesson vocab tables — find the column whose <th> is exactly "word",
+  // then mark its cells as .speakable-word so the unified wiring picks them up.
   document.querySelectorAll<HTMLTableElement>('table').forEach(table => {
     const headers = Array.from(table.querySelectorAll<HTMLTableCellElement>('thead th'));
     const wordIdx = headers.findIndex(h => h.textContent?.trim().toLowerCase() === 'word');
@@ -273,15 +298,15 @@ function wireSpeakable(): void {
     table.querySelectorAll<HTMLTableRowElement>('tbody tr').forEach(tr => {
       const cell = tr.cells[wordIdx];
       if (!cell) return;
-      const text = cell.textContent?.trim() ?? '';
-      if (!text) return;
       cell.classList.add('speakable-word');
-      cell.addEventListener('click', (e) => {
-        if (shouldIgnoreClick(e as MouseEvent)) return;
-        void speakText(text, cell);
-      });
     });
   });
+
+  // Wire every .speakable-word element uniformly. This covers:
+  //   - vocab table cells (lesson pages, classed above)
+  //   - vocab detail <h1 class="word speakable-word">
+  //   - vocab list <span class="word speakable-word"> inside an <a> row
+  document.querySelectorAll<HTMLElement>('.speakable-word').forEach(wireOneSpeakableWord);
 }
 
 // Esc cancels both audio file playback and Web Speech

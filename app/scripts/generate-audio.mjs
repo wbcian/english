@@ -172,9 +172,14 @@ async function main() {
   for (const { dir, name } of sources) {
     const path = join(dir, name);
     const raw = await readFile(path, 'utf-8');
-    const { content } = matter(raw);
+    const { data: frontmatter, content } = matter(raw);
     const ast = processor.parse(content);
     const units = collectSpeakable(ast);
+    // For vocab files, also generate audio for the headword itself so the
+    // vocab detail page's <h1> and every vocab-list row can speak it.
+    if (dir === VOCAB_DIR && typeof frontmatter.word === 'string' && frontmatter.word.trim()) {
+      units.push({ kind: 'word', text: frontmatter.word.trim() });
+    }
     for (const u of units) {
       const h = hash(u.text);
       if (!allUnits.has(h)) {

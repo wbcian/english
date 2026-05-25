@@ -46,11 +46,15 @@ const sortedVocab = vocab.slice().sort((a, b) => {
     </section>
 
     <section class="tab-panel panel-vocab" id="panel-vocab">
-      <p class="intro">由 ★ 低到高（最該複習在最上）</p>
+      <p class="intro">由 ★ 低到高（最該複習在最上）· 點單字直接朗讀</p>
       <VocabList entries={sortedVocab} />
     </section>
   </div>
 </Layout>
+
+<script>
+  import '../scripts/speech';
+</script>
 
 <script>
   // Sync tab state with URL hash so #lessons / #vocab can deep-link.
