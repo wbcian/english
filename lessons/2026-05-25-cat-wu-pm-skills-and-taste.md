@@ -176,11 +176,12 @@ Cat 講這段時把兩個 idiom 連著丟：
 
 ---
 
-## 後續閱讀（如果這集你喜歡，下面兩段也值得切）
+## 🎬 Series Map — Cat Wu 訪談三部曲（2026-05-26 完成）
 
-本訪談還有另外兩段同樣高密度的素材，本 lesson 沒收進來：
+訪談另外兩段同樣高密度，已切完上線：
 
-- **Part 1（暫定）**：Anthropic 怎麼出貨那麼快——`research preview`、`remove every single barrier`、`ship in a week`、`mind meld`（Star Trek idiom）的口語化用法
-- **Part 3（暫定）**：Cat 親自示範用 Cowork 做 slide deck 的 prompt 工作流——直接拿來模仿你自己的 workflow
+- **[Part 1：Anthropic 怎麼出貨那麼快](2026-05-26-cat-wu-part-1-shipping-speed.md)** — `mind meld`（Star Trek idiom）、`-pilled` 後綴、`research preview` branding 策略、`dogfood` 動詞、`mission > product line` 句式（lines 51–441 + 1273–1415）
+- **Part 2（你正在這）** — `product taste` / `wear many hats` / `low ego` / `first-principles thinking` / `lean into the chaos`（lines 669–1075）
+- **[Part 3：Cowork in practice — 親自示範做 slide deck](2026-05-26-cat-wu-part-3-cowork-workflow.md)** — 4 產品決策樹、Cat 的 slide deck prompt 拆解（兩反例技巧）、`kick off / on the go / touching grass` 工作 idiom 三件套（lines 1417–1715 + 1881–1989）
 
-→ 看完這集如果還想要，跟 Coach Max 講一聲，我把另兩集也切出來。
+→ 三集相輔相成：Part 1 給你「公司怎麼跑」、Part 2 給你「人該怎麼長」、Part 3 給你「工具怎麼用」。
