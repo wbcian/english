@@ -32,6 +32,25 @@ _（目前沒有正在做的）_
   - 這項是 P2 highlight 的天然 prereq — 有了明確 trigger 元素，P2 要 highlight 哪段就一清二楚
   - 視覺位置會影響 layout（icon 在行首 vs 段落上方），需要看排版適應
 
+### P1.5 — Lesson list 改顯示中英雙語標題（取代 slug 檔名）📑　**Effort: S**
+
+- **動機**：目前 lesson 卡片標題直接吃 frontmatter 的 `topic`（kebab slug，例如 `cat-wu-pm-skills-and-taste`），閱讀體驗很差——一眼掃過去看不出在講什麼，要點進去才知道。但每份 lesson 內其實**已經寫好**漂亮的中文 H1 + 英文 summary blockquote，浪費了。
+- **期望行為**：
+  - 卡片大標切成「**中文主標** + 英文副標」兩行（或主標中文、hover/小字英文）
+    - 例：`Cat Wu 訪談 — Part 2：PM 該長什麼樣` ＋ `Cat Wu on what PMs actually need to be good at in the AI era`
+  - slug（`topic`）退居 metadata（debug 用），不再當顯示標題
+  - 搜尋 index 要同時吃中英標題（fuse.js 的 keys 加上去），方便用任一語言搜
+- **實作切點**：
+  - **資料層**：在 lesson frontmatter schema（[app/src/content.config.ts](app/src/content.config.ts)）加 `title_zh: string` 與 `title_en: string`（先設 optional 過渡，全部 backfill 完再改 required）
+  - **backfill**：逐一補 11 份既有 lesson 的 frontmatter；中文取自當前 `# H1`、英文可從 summary blockquote 第一句提煉（或請 Coach Max 統一風格寫一輪）
+  - **渲染**：改 [app/src/components/LessonCard.astro](app/src/components/LessonCard.astro) — `<h2>` 吃 `title_zh`、底下加 `<p class="title-en">` 吃 `title_en`；fallback 到 `topic` 維持向後相容
+  - **搜尋**：[LessonsList.astro](app/src/components/LessonsList.astro) 的 `searchIndex` 加 `title_zh` / `title_en` 兩個 key（slug 保留也行，反正權重低）
+  - 同步更新 [lessons/_conventions.md](lessons/_conventions.md)：說明新 lesson 必填 `title_zh` / `title_en` frontmatter
+- **依賴 / 風險**：
+  - 需要回頭 backfill 既有 11 份 lesson；可以一次 commit 一份 series（cat-wu / sabrina-espresso 各一筆）
+  - schema 改 required 之前要先確認所有檔案都補完，否則 build 會壞
+  - 中英標題長度差距大時，卡片排版要留意換行（手機螢幕窄）
+
 ### P2 — 播放音訊時 highlight 當前段落／單字 🎧🔦　**Effort: S**
 
 - **動機**：長段落 audio 播到一半，讀者不知道對應到逐字稿哪一句。跟讀（shadowing）時尤其卡。
