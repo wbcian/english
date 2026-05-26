@@ -17,15 +17,10 @@ DATE="${2:-$(date +%F)}"
 SLUG_OVERRIDE="${3:-}"
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-MODEL="$ROOT/tools/models/ggml-large-v3-turbo.bin"
-CACHE="$ROOT/transcripts/.cache"
-OUTDIR="$ROOT/transcripts"
-mkdir -p "$CACHE" "$OUTDIR"
-
-for bin in whisper-cli ffmpeg python3 curl; do
-  command -v "$bin" >/dev/null 2>&1 || { echo "ERROR: missing '$bin'. See tools/README.md setup." >&2; exit 69; }
-done
-[ -f "$MODEL" ] || { echo "ERROR: model not found: $MODEL (download per tools/README.md)" >&2; exit 69; }
+# shellcheck source=tools/_transcribe_common.sh
+source "$ROOT/tools/_transcribe_common.sh"
+init_paths
+check_deps
 
 echo "[1/4] resolving episode..." >&2
 set +e
@@ -56,10 +51,10 @@ if [ "$HTTP" != "200" ]; then
 fi
 
 echo "[3/4] converting to 16kHz mono wav..." >&2
-ffmpeg -y -loglevel error -i "$CACHE/$SLUG.mp3" -ar 16000 -ac 1 -c:a pcm_s16le "$CACHE/$SLUG.wav"
+mp3_to_wav "$CACHE/$SLUG.mp3" "$CACHE/$SLUG.wav"
 
 echo "[4/4] transcribing with whisper-cli (large-v3-turbo)..." >&2
-whisper-cli -m "$MODEL" -f "$CACHE/$SLUG.wav" -otxt -osrt -of "$BASE" >&2
+transcribe "$CACHE/$SLUG.wav" "$BASE"
 rm -f "$CACHE/$SLUG.wav"
 
 echo "" >&2
