@@ -13,7 +13,26 @@ _（目前沒有正在做的）_
 
 ## 📋 Backlog
 
-### P1 — 播放音訊時 highlight 當前段落／單字 🎧🔦
+> **Effort 速記**：XS <30 min ／ S 30 min–2 hr ／ M 半天–1 天 ／ L 1–3 天 ／ XL >3 天
+> 未讀 source code 前的估算僅供排程，動手前 ±1 級正常。
+
+### P1 — 段落／句子改用專屬播放 icon 觸發（避免誤觸）🎯　**Effort: S**
+
+- **動機**：目前點長段落任一位置都會觸發播放，常常我只是想點某個單字看意思就誤播了。
+- **期望行為**：
+  - 每段 `<blockquote><p>` 左側（或行首 inline）放一個 ▶ icon，**只有點 icon 才播放**
+  - 段落本體點擊行為改回「啥都不做」（或留給未來的「點字查 vocab」）
+  - vocab table 內 word cell 維持原本點擊播放（單字短，沒誤觸問題）
+  - 播放中 icon 切成 ⏸，可暫停
+- **實作切點**：
+  - 找音訊觸發的 event handler（推測掛在 `<p>` 或 `<blockquote>`）
+  - 改成「掛在 icon 元素上」；icon 用純 CSS / SVG 即可，不引新 lib
+  - 段落 hover 時 icon 可以微微顯眼（讓你知道哪段可播）
+- **依賴 / 風險**：
+  - 這項是 P2 highlight 的天然 prereq — 有了明確 trigger 元素，P2 要 highlight 哪段就一清二楚
+  - 視覺位置會影響 layout（icon 在行首 vs 段落上方），需要看排版適應
+
+### P2 — 播放音訊時 highlight 當前段落／單字 🎧🔦　**Effort: S**
 
 - **動機**：長段落 audio 播到一半，讀者不知道對應到逐字稿哪一句。跟讀（shadowing）時尤其卡。
 - **期望行為**：
@@ -25,10 +44,11 @@ _（目前沒有正在做的）_
   - 綁 `audio` 元素的 `play` / `pause` / `ended` 事件 → 在對應 DOM node 上 toggle `.is-playing` class
   - CSS 在全域樣式表加 `.is-playing` 規則
 - **依賴 / 風險**：
+  - **強烈建議 P1 先做**：P1 引入明確的 trigger icon，這裡 highlight 哪段才有明確錨點
   - 需確認目前 audio ↔ DOM node 的關聯方式（hash-based manifest？data-attribute？）
   - 同頁多段同時播的競態 — 一次只 highlight 一個
 
-### P2 — Vocab 卡片支援 filter（熟悉度 / 類別） 🔍
+### P3 — Vocab 卡片支援 filter（熟悉度 / 類別） 🔍　**Effort: M**
 
 - **動機**：vocab 已 70+，要快速複習特定族群（★1 新字 / phrasal verb / idiom），目前只能整頁滾。
 - **期望行為**：
@@ -45,14 +65,14 @@ _（目前沒有正在做的）_
   - 需要所有 vocab 檔都符合 BRAIN.md 的 schema（`proficiency`、`tags` 必填）— 跑前先掃一遍 lint
   - tags 拼字不一致會產生「同義不同 key」假分類（建議跟 lint 一起做：列出所有 tag、人工 normalize）
 
-### P3 — Flash card 複習模式（SRS lite） 🃏
+### P4 — Flash card 複習模式（SRS lite） 🃏　**Effort: L**
 
 - **動機**：被動讀 vocab page 記不牢；active recall（看到 prompt 自己回想）才是長期記憶的關鍵。
 - **期望行為**：
   - 新頁面 `/flashcards/`
   - 從 vocab pool 抽 N 張，**正面**：英文字 + 音訊播放按鈕；**背面**：中文 + 1 個例句
   - 自評三按鈕：**認識** / **模糊** / **忘了**
-  - 跟 P2 整合：能「只抽 ★1」「只抽 phrasal-verb」「只抽 30 天沒複習的」
+  - 跟 P3 整合：能「只抽 ★1」「只抽 phrasal-verb」「只抽 30 天沒複習的」
 
 - **資料層決策（重要）**：
   - ❌ **不需要 DB**：單一使用者、source of truth 已經是 `vocab/*.md` frontmatter、靜態 hosting，DB 進來只會跟 markdown 打架
@@ -79,7 +99,7 @@ _（目前沒有正在做的）_
   - 結束面板：一個 `<details>` + `<pre>` 區塊，按一鍵 copy 帶走
 
 - **依賴 / 風險**：
-  - **強烈建議先做 P2**，filter UI 共用
+  - **強烈建議先做 P3**，filter UI 共用
   - SRS 演算法不要過度設計，初版「隨機 + 三按鈕 + localStorage」就有 80% 價值
   - **觀察指標**：v1 上線後 N 週內 Cian 主動點開幾次？沒人用就別投資 v2 的演算法升級
 
