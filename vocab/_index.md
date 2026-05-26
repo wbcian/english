@@ -46,6 +46,26 @@
 | [stroll](stroll.md) | v./n. | 悠閒地走、漫步 | 1 | 2026-05-26 | verb, motion, casual, contrast-with-walk |
 | [tornado](tornado.md) | n. | 龍捲風（含 idiom on the inside of the ~） | 1 | 2026-05-26 | noun, weather, metaphor, idiom |
 | [demolish](demolish.md) | v. | 摧毀、拆除、徹底擊垮 | 1 | 2026-05-26 | verb, destruction, regular-verb, multi-meaning |
+| [mind meld](mind-meld.md) | n./v.(idiom) | 心智融合；默契超強到不需要解釋 | 1 | 2026-05-26 | idiom, work, nerd-culture, star-trek |
+| [AGI-pilled](agi-pilled.md) | adj.(slang) | 信 AGI 願景信到底的；對 AGI 全 in 的 | 1 | 2026-05-26 | adjective, slang, internet, suffix-pilled |
+| [research preview](research-preview.md) | n.phr. | 研究預覽版（產品早期 branding 策略） | 1 | 2026-05-26 | noun-phrase, product, startup, branding |
+| [dogfood](dogfood.md) | v. | 內部試吃；公司內部先用自家產品 | 1 | 2026-05-26 | verb, tech-industry, jargon, product-development |
+| [lower the friction](lower-the-friction.md) | v.phr. | 降低摩擦力（降低做某事的阻力） | 1 | 2026-05-26 | verb-phrase, startup, ux, process-design |
+| [rowing the same direction](rowing-the-same-direction.md) | idiom | 往同一方向划船；團隊步調一致 | 1 | 2026-05-26 | idiom, work, alignment, sports-metaphor |
+| [thought partner](thought-partner.md) | n.phr. | 思考夥伴；對等 brainstorm 的人 | 1 | 2026-05-26 | noun-phrase, work, collaboration, modern-idiom |
+| [bought in](bought-in.md) | adj.(idiom) | 買單了；被說服、認同並承諾投入 | 1 | 2026-05-26 | adjective, idiom, work, alignment |
+| [time horizon](time-horizon.md) | n.phr. | 時間視野；規劃／決策考慮的時間長度 | 1 | 2026-05-26 | noun-phrase, business, planning, formal |
+| [cut across](cut-across.md) | phr.v. | 橫跨（組織／類別／邊界）；不受限於某個區隔 | 1 | 2026-05-26 | phrasal-verb, business, organization, formal |
+| [kick off](kick-off.md) | phr.v. | 啟動（任務、專案、會議）；開球 | 1 | 2026-05-26 | phrasal-verb, work, sports, high-frequency |
+| [one-off](one-off.md) | adj./n. | 一次性的（非循環、非常態） | 1 | 2026-05-26 | adjective, work, frequency, british-origin |
+| [on the go](on-the-go.md) | idiom | 移動中；在路上；忙碌奔波中 | 1 | 2026-05-26 | idiom, daily, mobility, modern-lifestyle |
+| [touching grass](touching-grass.md) | idiom | 出去走走；離開電腦；接觸現實 | 1 | 2026-05-26 | idiom, slang, internet, modern, ⚠️register-trap |
+| [at-a-glance](at-a-glance.md) | adj./adv.phr. | 一眼可看的；瀏覽式的；快速概觀 | 1 | 2026-05-26 | adjective, compound, ui, dashboard |
+| [synthesize](synthesize.md) | v. | 綜合；統整（多個來源 → 一個輸出） | 1 | 2026-05-26 | verb, business, research, ai, formal |
+| [tailored](tailored.md) | adj. | 量身打造的；客製化的；剪裁合身的 | 1 | 2026-05-26 | adjective, business, customization, sales |
+| [inbox zero](inbox-zero.md) | n.phr. | 收件夾清零；郵件全部處理完的狀態 | 1 | 2026-05-26 | noun-phrase, productivity, modern-jargon |
+| [dossier](dossier.md) | n. | 情報檔；資料夾；某主題的完整檔案 | 1 | 2026-05-26 | noun, formal, business, french-loanword |
+| [top of mind](top-of-mind.md) | idiom | 心中最在意的；正在想的；首要 priority | 1 | 2026-05-26 | idiom, business, work, priority |
 | [viral](viral.md) | adj. | 病毒式傳播的；爆紅 | 2 | 2026-04-27 | internet, media |
 | [choreography](choreography.md) | n. | 編舞 | 2 | 2026-04-27 | performance, dance |
 | [with a bang](come-out-with-a-bang.md) | idiom | 轟動地（come out / go out / kick off…） | 2 | 2026-04-27 | idiom, performance |
