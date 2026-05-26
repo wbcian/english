@@ -9,11 +9,11 @@
 - 詳細 Profile → [PROFILE.md](PROFILE.md)
 
 ## 快照（隨更新同步）
-- 已收錄單字：81
-- 5★ 精熟：0　 3–4★ 學習中：12　 1–2★ 新／脆弱：69
-- 最近活動日期：2026-05-26（🎯 設定 TOEIC 750+ 主目標；📚 新增 7 字（grill/emerging/acknowledge/brutally/stroll/tornado/demolish）；💡 app roadmap 加 P2.5 transcript inline vocab popup）
+- 已收錄單字：101
+- 5★ 精熟：0　 3–4★ 學習中：12　 1–2★ 新／脆弱：89
+- 最近活動日期：2026-05-26（🎧 Cat Wu 訪談 Part 1 + Part 3 上線，**完成三部曲**；📚 新增 20 字（10 + 10）；🎯 主目標 TOEIC 750+）
 - 主目標：**TOEIC 750+ 證書**（詳見 [PROFILE.md](PROFILE.md#目標)）
-- 最近 lesson：[2026-05-25 Cat Wu — PM skills & taste](lessons/2026-05-25-cat-wu-pm-skills-and-taste.md)（Lenny's Podcast 訪 Anthropic Claude Code 產品負責人；切片 lines 669–1075；焦點：product taste、wear many hats、low ego、first-principles thinking、lean into the chaos；2026-05-26 補加「📚 延伸字詞」區放課後 7 個追問字）
+- 最近 lesson：**Cat Wu 訪談三部曲完成** — [Part 1：Anthropic 怎麼出貨那麼快](lessons/2026-05-26-cat-wu-part-1-shipping-speed.md)（mind meld / AGI-pilled / research preview / dogfood / mission > product）+ [Part 2：PM Skills & Taste](lessons/2026-05-25-cat-wu-pm-skills-and-taste.md)（product taste / wear many hats / low ego / lean into chaos）+ [Part 3：Cowork in Practice](lessons/2026-05-26-cat-wu-part-3-cowork-workflow.md)（kick off / on the go / touching grass / synthesize / Cat 的 slide deck prompt 拆解）
 - 最近寫作：[2026-04-28 vocab-translation-drill](writing/2026-04-28-vocab-translation-drill.md)（6/6 完成，set up 與 pitch 滿分）
 - 待加強清單：brought up（vs pitch to / set up）、go all out（vs go all in / pour into）、humorous twist（兩天就忘）、in a pinch（idiom 連結未建立）、faze ≠ phase 拼字
 

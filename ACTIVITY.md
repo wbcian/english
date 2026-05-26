@@ -6,6 +6,13 @@
 ---
 
 ## 2026-05-26
+- 🎧 **Cat Wu 訪談三部曲完成**：[Part 1：Anthropic 怎麼出貨那麼快](lessons/2026-05-26-cat-wu-part-1-shipping-speed.md)（lines 51–441 + 1273–1415）+ [Part 3：Cowork in practice — 親自示範做 slide deck](lessons/2026-05-26-cat-wu-part-3-cowork-workflow.md)（lines 1417–1715 + 1881–1989）；Part 2 已於 2026-05-25 完成
+- 📝 Part 1 重點：`mind meld`（Star Trek idiom + 量化默契 `80% mind meld`）、`-pilled` 後綴解剖、`research preview` 是降低期待 branding 招式、`dogfood` 動詞、`rowing the same direction` 划船比喻、`mission > product line` 句式
+- 📝 Part 3 重點：4 產品決策樹（CLI / Desktop / Web&Mobile / Cowork 看 output 類型）、Cat 實際打的 slide deck prompt 拆解（含「兩反例技巧」）、`access to context` 是 Cowork 解鎖鑰匙、sales 同事手刻內部 app case study
+- 📚 新增 20 個單字／片語（Part 1 × 10、Part 3 × 10，全 ★1）：
+  - **Part 1（10）**：[mind meld](vocab/mind-meld.md) / [AGI-pilled](vocab/agi-pilled.md) / [research preview](vocab/research-preview.md) / [dogfood](vocab/dogfood.md) / [lower the friction](vocab/lower-the-friction.md) / [rowing the same direction](vocab/rowing-the-same-direction.md) / [thought partner](vocab/thought-partner.md) / [bought in](vocab/bought-in.md) / [time horizon](vocab/time-horizon.md) / [cut across](vocab/cut-across.md)
+  - **Part 3（10）**：[kick off](vocab/kick-off.md) / [one-off](vocab/one-off.md) / [on the go](vocab/on-the-go.md) / [touching grass](vocab/touching-grass.md) / [at-a-glance](vocab/at-a-glance.md) / [synthesize](vocab/synthesize.md) / [tailored](vocab/tailored.md) / [inbox zero](vocab/inbox-zero.md) / [dossier](vocab/dossier.md) / [top of mind](vocab/top-of-mind.md)
+- 🎯 lessons 庫商業／科技英文版圖補完：3 part 共 33 個 Cat Wu 訪談相關新字、20 篇詞表覆蓋 PM 工作流全段
 - 📚 新增 7 個單字（lesson Cat Wu Part 2 課後追問）：[grill](vocab/grill.md) / [emerging](vocab/emerging.md) / [acknowledge](vocab/acknowledge.md) / [brutally](vocab/brutally.md) / [stroll](vocab/stroll.md) / [tornado](vocab/tornado.md) / [demolish](vocab/demolish.md)
 - 🎧 延伸閱讀 lesson [2026-05-25 Cat Wu — PM skills & taste](lessons/2026-05-25-cat-wu-pm-skills-and-taste.md)；加「📚 延伸字詞（2026-05-26 課後追問）」區放上述 7 個新字連結
 - 💡 App roadmap 新增 P2.5：transcript 段落 inline vocab popup（讀 lesson 時 hover 生字直接彈出定義）
