@@ -69,6 +69,22 @@ type: lesson
 
 ---
 
+## 📚 延伸字詞（2026-05-26 課後追問）
+
+讀 lesson 時卡住、不在上面主題詞架構內、但同樣值得學起來的字——獨立列在這裡，方便回頭複習：
+
+| word | pos | zh | 出現位置 |
+|---|---|---|---|
+| [grill](../vocab/grill.md) | v. | 嚴厲質問；連珠炮地問 | lesson 開頭 "Lenny grills Cat Wu" |
+| [emerging](../vocab/emerging.md) | adj. | 正在浮現的；新興的（⚠️ Cat 本意應為 merging） | Cat (669) |
+| [acknowledge](../vocab/acknowledge.md) | v. | 承認（事實）；確認 | Cat (985) "you just have to acknowledge" |
+| [brutally](../vocab/brutally.md) | adv. | 殘酷地、毫不留情地 | Cat (985) "brutally prioritize" |
+| [stroll](../vocab/stroll.md) | v./n. | 悠閒地走、漫步 | Lenny (1035) "strolling down the staircase" |
+| [tornado](../vocab/tornado.md) | n. | 龍捲風（含 idiom `on the inside of the tornado`） | Lenny (937) |
+| [demolish](../vocab/demolish.md) | v. | 摧毀、拆碎、徹底擊垮 | Lenny (1035) "being demolished around him" |
+
+---
+
 ## 核心主題 ①：Product Taste — Code 變便宜之後唯一還貴的東西
 
 Cat 的論點骨架很乾脆：
