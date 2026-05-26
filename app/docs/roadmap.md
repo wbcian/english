@@ -52,18 +52,36 @@ _（目前沒有正在做的）_
   - 新頁面 `/flashcards/`
   - 從 vocab pool 抽 N 張，**正面**：英文字 + 音訊播放按鈕；**背面**：中文 + 1 個例句
   - 自評三按鈕：**認識** / **模糊** / **忘了**
-  - 結果寫回 `last_reviewed` / `review_count` / `proficiency`
-    - 初版：純 `localStorage`，不動 markdown
-    - v2：產生 patch 檔讓 Coach Max 套用回 markdown（避免前端寫檔的權限麻煩）
-  - 跟 P2 整合：可以「只抽 ★1」「只抽 phrasal-verb」「只抽 30 天沒複習的」
+  - 跟 P2 整合：能「只抽 ★1」「只抽 phrasal-verb」「只抽 30 天沒複習的」
+
+- **資料層決策（重要）**：
+  - ❌ **不需要 DB**：單一使用者、source of truth 已經是 `vocab/*.md` frontmatter、靜態 hosting，DB 進來只會跟 markdown 打架
+  - ✅ **v1 用 localStorage**：0 infra、0 auth，先觀察 Cian 會不會真的用
+  - ✅ **回流機制 — 不做通用 JSON export，改做「session 摘要 → 貼給 Coach Max → 套回 markdown」**
+    - 按「結束練習」→ 顯示一個可複製的 markdown panel
+    - Cian 貼回對話 → Coach Max 按既有 schema 更新各 `vocab/<word>.md`（`last_reviewed` / `review_count` / `proficiency` + 在 `## Encounters` 補一行）並 commit
+    - 好處：v2 之前不用寫任何 sync 工具，借用既有對話流程；markdown 仍是 SoT
+  - **摘要格式（建議統一，方便 agent parse）**：
+    ```
+    # Flashcard session — YYYY-MM-DD
+    - <word>: <認識|模糊|忘了> → ★X→★Y   (or "no change")
+    - <word>: ...
+    ```
+
+- **localStorage 注意事項**：
+  - **存活風險**：手動清 cache / Safari 7 天 ITP 政策 / 換瀏覽器或裝置都會清空。v1 不追求永久 — 真正持久的還是 markdown（透過上面的回流機制定期 flush）
+  - **Key prefix**：所有 key 都用 `englishApp:flashcard:` 開頭，避免未來在 `wbcian.github.io` 同 host 起別的 Pages app 撞 key
+
 - **實作切點**：
   - 新頁 `app/src/pages/flashcards/index.astro`（或同層）
   - 抽卡邏輯：先做隨機，之後換 SM-2 lite（依 `proficiency` + `last_reviewed` 加權）
   - 共用 P2 的 filter 元件
+  - 結束面板：一個 `<details>` + `<pre>` 區塊，按一鍵 copy 帶走
+
 - **依賴 / 風險**：
   - **強烈建議先做 P2**，filter UI 共用
   - SRS 演算法不要過度設計，初版「隨機 + 三按鈕 + localStorage」就有 80% 價值
-  - 寫回 markdown 的工程量遠大於前端 — 留到 v2 再決定要不要做
+  - **觀察指標**：v1 上線後 N 週內 Cian 主動點開幾次？沒人用就別投資 v2 的演算法升級
 
 ---
 
