@@ -39,6 +39,13 @@
 | [wear many hats](wear-many-hats.md) | idiom | 身兼數職；什麼都做 | 1 | 2026-05-25 | idiom, work, startup, multi-role |
 | [low ego](low-ego.md) | adj.phr. | 自我意識低；不擺架子 | 1 | 2026-05-25 | adjective, startup, work, modern-idiom |
 | [lean into](lean-into.md) | phr.v. | 擁抱（挑戰／趨勢）；傾身投入 | 1 | 2026-05-25 | phrasal-verb, modern-idiom, work, attitude |
+| [grill](grill.md) | v. | 嚴厲質問；連珠炮地問（口語） | 1 | 2026-05-26 | verb, journalism, interview, idiomatic-extension |
+| [emerging](emerging.md) | adj. | 正在浮現的；新興的 | 1 | 2026-05-26 | adjective, business, trend, ⚠️easy-to-confuse |
+| [acknowledge](acknowledge.md) | v. | 承認（事實）；認可；確認收到 | 1 | 2026-05-26 | verb, business, communication, formal |
+| [brutally](brutally.md) | adv. | 殘酷地、毫不留情地（強化詞） | 1 | 2026-05-26 | adverb, intensifier, work, ⚠️collocation-restricted |
+| [stroll](stroll.md) | v./n. | 悠閒地走、漫步 | 1 | 2026-05-26 | verb, motion, casual, contrast-with-walk |
+| [tornado](tornado.md) | n. | 龍捲風（含 idiom on the inside of the ~） | 1 | 2026-05-26 | noun, weather, metaphor, idiom |
+| [demolish](demolish.md) | v. | 摧毀、拆除、徹底擊垮 | 1 | 2026-05-26 | verb, destruction, regular-verb, multi-meaning |
 | [viral](viral.md) | adj. | 病毒式傳播的；爆紅 | 2 | 2026-04-27 | internet, media |
 | [choreography](choreography.md) | n. | 編舞 | 2 | 2026-04-27 | performance, dance |
 | [with a bang](come-out-with-a-bang.md) | idiom | 轟動地（come out / go out / kick off…） | 2 | 2026-04-27 | idiom, performance |
