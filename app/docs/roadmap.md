@@ -48,6 +48,26 @@ _（目前沒有正在做的）_
   - 需確認目前 audio ↔ DOM node 的關聯方式（hash-based manifest？data-attribute？）
   - 同頁多段同時播的競態 — 一次只 highlight 一個
 
+### P2.5 — Transcript 段落 inline vocab popup 📖💬　**Effort: M**
+
+- **動機**：讀 lesson 時看到 transcript 段落出現生字，要回滾到下方 `Key Vocabulary` 表才能查意思——閱讀流被打斷。如果能 hover/click 該字直接彈出定義，閱讀體驗大幅提升；也順便把 `vocab/` 目錄的單字資產**在 lesson 內被動曝光**。
+- **期望行為**：
+  - lesson page 渲染 transcript 段落時，掃過每段文字，**把出現在該 lesson 的 `Key Vocabulary` table 或 `vocab/` 目錄的字加 underline + hover/click 觸發 popup**
+  - Popup 內容：該字 frontmatter 的 `zh` + `phonetic`，+ 第一個 example sentence
+  - Popup 右上角附「📖 完整檔」連結 → 跳該字 vocab page
+  - 進階：popup 內可「⭐ 加入今天複習」按鈕（v2 接 P4 的 flashcard 系統）
+- **實作切點**：
+  - 預處理：build time 掃 `vocab/*.md` frontmatter，產出 `word → {zh, phonetic, first_example, link}` 對應表（靜態 JSON，build artifact）
+  - 渲染：lesson `<blockquote>` 段落文字 tokenize 後比對對應表，命中就包 `<span class="vocab-link" data-word="...">`
+  - 客戶端：純 CSS hover popup（純文字版）或 small Astro island（加圖示與按鈕版）
+  - 詞形：v1 先做 exact match（grill ≠ grills ≠ grilled），驗證體驗 OK 再加 stemming
+- **依賴 / 風險**：
+  - **建議 P1 先做**：P1 把段落點擊行為改成「啥都不做」後，這裡 click vocab span 才不會跟播放 trigger 打架
+  - 詞形變化（grill/grills/grilled）會增加複雜度——v1 可只支援 exact match，先驗證使用體驗
+  - 一段話可能命中多個字，popup 不要彼此疊到（限制同時最多顯示 1 個）
+  - vocab 字數成長後，比對表會變大——build 時生成靜態 JSON 即可，不要 runtime 每次掃 markdown
+  - lesson 內若兩處出現同字（transcript + Key Vocab table），cell 內已是連結就不要再包 span（避免巢狀 a 標籤）
+
 ### P3 — Vocab 卡片支援 filter（熟悉度 / 類別） 🔍　**Effort: M**
 
 - **動機**：vocab 已 70+，要快速複習特定族群（★1 新字 / phrasal verb / idiom），目前只能整頁滾。
