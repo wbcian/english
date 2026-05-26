@@ -11,7 +11,8 @@
 ## 快照（隨更新同步）
 - 已收錄單字：74
 - 5★ 精熟：0　 3–4★ 學習中：12　 1–2★ 新／脆弱：62
-- 最近活動日期：2026-05-25（Cat Wu 訪談 — PM Skills & Taste，補上商業／科技英文缺口）
+- 最近活動日期：2026-05-26（🎯 設定主目標：TOEIC 750+ 證書，本週末排第一次模擬考抓 baseline）
+- 主目標：**TOEIC 750+ 證書**（詳見 [PROFILE.md](PROFILE.md#目標)）
 - 最近 lesson：[2026-05-25 Cat Wu — PM skills & taste](lessons/2026-05-25-cat-wu-pm-skills-and-taste.md)（Lenny's Podcast 訪 Anthropic Claude Code 產品負責人；切片 lines 669–1075；焦點：product taste、wear many hats、low ego、first-principles thinking、lean into the chaos；本次只做訪談中段試水溫，視回饋決定是否擴成系列）
 - 最近寫作：[2026-04-28 vocab-translation-drill](writing/2026-04-28-vocab-translation-drill.md)（6/6 完成，set up 與 pitch 滿分）
 - 待加強清單：brought up（vs pitch to / set up）、go all out（vs go all in / pour into）、humorous twist（兩天就忘）、in a pinch（idiom 連結未建立）、faze ≠ phase 拼字

@@ -5,6 +5,13 @@
 
 ---
 
+## 2026-05-26
+- 🎯 設定主目標：**考到 TOEIC 750+ 證書** → 寫進 [PROFILE.md](PROFILE.md) 目標區
+- 📅 排程本週末（5/30 or 5/31）做一回完整模擬考抓 baseline，工具首選 ETS 官方全真試題指南紙本
+- 📝 SOP 訂好：2 小時計時、不暫停、LC 用喇叭、不查字典；回報 LC/RC 各部分對題數後訂衝刺路線圖
+
+---
+
 ## 2026-05-25
 - 🎧 Lesson: Cat Wu（Anthropic Claude Code 產品負責人）訪談 — PM Skills & Taste（lines 669–1075） → [lesson](lessons/2026-05-25-cat-wu-pm-skills-and-taste.md)
 - 📝 lesson 重點：`product taste` 在 code 變便宜的時代為什麼變最值錢、`wear many hats` + `swap them` + `low ego` 三件套、`first-principles thinking` + `which means that...` 邏輯接力、`lean into the chaos` 跟 P0→P000 自嘲、Pirates of the Caribbean 比喻
