@@ -6,6 +6,9 @@
 ---
 
 ## 2026-05-26
+- 📚 新增 7 個單字（lesson Cat Wu Part 2 課後追問）：[grill](vocab/grill.md) / [emerging](vocab/emerging.md) / [acknowledge](vocab/acknowledge.md) / [brutally](vocab/brutally.md) / [stroll](vocab/stroll.md) / [tornado](vocab/tornado.md) / [demolish](vocab/demolish.md)
+- 🎧 延伸閱讀 lesson [2026-05-25 Cat Wu — PM skills & taste](lessons/2026-05-25-cat-wu-pm-skills-and-taste.md)；加「📚 延伸字詞（2026-05-26 課後追問）」區放上述 7 個新字連結
+- 💡 App roadmap 新增 P2.5：transcript 段落 inline vocab popup（讀 lesson 時 hover 生字直接彈出定義）
 - 🎯 設定主目標：**考到 TOEIC 750+ 證書** → 寫進 [PROFILE.md](PROFILE.md) 目標區
 - 📅 排程本週末（5/30 or 5/31）做一回完整模擬考抓 baseline，工具首選 ETS 官方全真試題指南紙本
 - 📝 SOP 訂好：2 小時計時、不暫停、LC 用喇叭、不查字典；回報 LC/RC 各部分對題數後訂衝刺路線圖
