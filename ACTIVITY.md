@@ -5,6 +5,17 @@
 
 ---
 
+## 2026-05-28
+- 🛠️ **新增 reading lesson 格式**（reading lesson vs podcast lesson 分流）：派 3 隻 agents 從 content design / system architecture / learner ergonomics 討論後合併；正式規範入 [`lessons/_conventions.md` §6](lessons/_conventions.md)
+- 🛠️ app schema 升級：`app/src/content.config.ts` 加 4 個 optional 欄位（`format` / `url` / `word_count` / `reading_time_min`）以容納 reading lesson；既有 7 篇 podcast lesson 完全相容
+- 🎧 **首份 reading lesson 落地**：[Charles Cook — How I Actually Get Good Advice](lessons/2026-05-28-charles-cook-getting-good-advice.md)（PostHog newsletter，2026-01-12，1,350 字 / 6 min）
+- 📝 reading lesson 結構：Article Map（TOEIC Part 7 略讀訓練）→ Close Reading 3 段（**僅此段可朗讀**）→ Reading Comprehension 5 題（TOEIC 題型，5/30 baseline 暖身）→ Sentence Anatomy 2 句結構拆解 → Vocab（**唯二可朗讀**，加 TOEIC ✓ 欄）→ Templates（cold message + one-pager 範本可填）→ Steal These 3 Moves
+- 📚 新增 5 個單字／片語（全 ★1，TOEIC 商業向）：[cast a wide net](vocab/cast-a-wide-net.md) / [pick someone's brain](vocab/pick-someones-brain.md) / [legwork](vocab/legwork.md) / [one pager](vocab/one-pager.md) / [stint](vocab/stint.md)
+- 🔍 派 agents 調查 PostHog newsletter 適不適合當英文素材 → 結論：值得放進素材池但純文字無 audio，定位「閱讀補充」而非主菜；建議一週 1 篇 🟢 通用觀念文
+- 🎯 product engineer 主題候選清單入庫（7 篇 PostHog 文章）；下一篇建議讀 [What is Product for Engineers?](https://newsletter.posthog.com/p/what-is-product-for-engineers) 或 [Product management is broken. Engineers can fix it](https://newsletter.posthog.com/p/product-management-is-broken-engineers)
+
+---
+
 ## 2026-05-26
 - 🎧 **Cat Wu 訪談三部曲完成**：[Part 1：Anthropic 怎麼出貨那麼快](lessons/2026-05-26-cat-wu-part-1-shipping-speed.md)（lines 51–441 + 1273–1415）+ [Part 3：Cowork in practice — 親自示範做 slide deck](lessons/2026-05-26-cat-wu-part-3-cowork-workflow.md)（lines 1417–1715 + 1881–1989）；Part 2 已於 2026-05-25 完成
 - 📝 Part 1 重點：`mind meld`（Star Trek idiom + 量化默契 `80% mind meld`）、`-pilled` 後綴解剖、`research preview` 是降低期待 branding 招式、`dogfood` 動詞、`rowing the same direction` 划船比喻、`mission > product line` 句式
