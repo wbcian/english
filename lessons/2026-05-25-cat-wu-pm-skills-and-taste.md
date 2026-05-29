@@ -1,6 +1,8 @@
 ---
 date: 2026-05-25
 topic: cat-wu-pm-skills-and-taste
+series: cat-wu-anthropic-product-team
+part: 2
 source: "🎧 Lenny's Podcast · Cat Wu（Anthropic, Claude Code 產品負責人）· 訪談切片 Part 2"
 type: lesson
 track: dialogue
