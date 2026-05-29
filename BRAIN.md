@@ -103,4 +103,4 @@ scornfully, derisively, tauntingly
 
 LLM（含 Coach Max）寫入後 **直接幫 Cian 跑 `git commit`**（依本檔的 scope 慣例）。
 若一次回應同時動到多個 scope，**分多筆 commit**，一筆一個 scope。
-不要 push、不要 amend、不要 force——只是把已經寫好的內容 commit 起來而已。
+commit 後**直接 push**；不要 amend、不要 force。
