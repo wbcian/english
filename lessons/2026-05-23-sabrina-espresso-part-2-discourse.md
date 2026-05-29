@@ -35,40 +35,66 @@ audio: true
 > **Scene A — Sabrina (04:08)**
 > It's what's so crazy, **like**, this is the part of me that feels **like** an idiot every time I see, **like**, a cafe, there's just a sign that says, "Espresso," and I'm **like**, "Yes!"… Oh my God. Nothing to do with me.
 
+> Scene A — Sabrina（04:08）：最扯的就是，like，每次我看到，like，一間咖啡廳，門口擺著一塊寫著「Espresso」的招牌，我整個人就，like，「耶！」……天啊。其實跟我一點關係都沒有。
+
 > **Ethan (04:18)**
 > Wow! Did you notice how many times Sabrina used the word "like"? **"Like" has three jobs here.** First, it works as a **filler word** — a sound people use when thinking, the same way you might go "um" or "uh." Justin Bieber is famous for overusing it:
+
+> Ethan（04:18）：哇！你注意到 Sabrina 用了幾次 "like" 嗎？這裡的 "like" 有三種功能。第一，它是 filler word（填充詞）——人們思考時發出的聲音，就像你會說「呃」或「嗯」一樣。Justin Bieber 就以濫用它出名：
 
 > **Example — Bieber clip (04:45)**
 > Well, it's, yeah, it's kind of **like** my story and kind of **like**, **like**, **like** proves that **like**, but **like** here and **like**, 'cause **like** when **like**, **like**, **like**, **like**, **like**, **like**, 'cause **like**… Mm-hmm. And **like**, plus it's **like** this.
 
+> Example — Bieber clip（04:45）：嗯，就是，對，這算是 like 我的故事，也 like、like、like 證明了 like，但 like 這裡，還有 like，因為 like 當 like、like、like、like、like、like，因為 like……嗯哼。而且 like，再加上它 like 就是這樣。
+
 > **Ethan (05:00)**
 > Second, it's used for **comparison**. "I feel **like** an idiot." Third, it works as a way to **introduce what someone said or thought**. That's why she says, "I'm **like**, 'Yes!'" instead of "I thought, 'Yes!'" It's more casual and expressive.
+
+> Ethan（05:00）：第二，它用來做比較：「I feel like an idiot（我覺得自己像個白痴）」。第三，它可以用來**引述某人說了或想了什麼**。所以她說「I'm like, "Yes!"」而不是「I thought, "Yes!"」——更口語、更生動。
 
 > **Ethan (05:26)**
 > Sabrina says an "Espresso" sign outside a cafe **has nothing to do with** her. When someone says something *has nothing to do with* someone, it means there's no connection between that thing and that person. It's just a coincidence.
 
+> Ethan（05:26）：Sabrina 說咖啡廳外的「Espresso」招牌 has nothing to do with（跟她一點關係都沒有）。當有人說某件事 has nothing to do with 某人，意思是那件事跟那個人之間毫無關聯，純屬巧合。
+
 > **Example (05:41)**
 > This is a letter of resignation. Yep. Um, it **has nothing to do with** you and Ethan. It **has nothing to do with** you personally. I find you extraordinarily professional…
+
+> Example（05:41）：這是一封辭職信。對。呃，這 has nothing to do with 你和 Ethan，也 has nothing to do with 你個人。我覺得你非常專業……
 
 > **Scene A (06:22)** — Nothing to do with me. Nothing to do with me.
 > **Ethan (06:06)**
 > The "to" reduces, [tuh], but also the T morphs to a **tap T**, which sounds like a soft D — like in *butter* → [bu-der]. So it becomes **[nothing-duh-do with me]**.
 
+> Scene A（06:22）：跟我沒關係。跟我沒關係。
+> Ethan（06:06）：這裡的 "to" 會弱化成 [tuh]，而且 T 會變成 **tap T**，聽起來像軟軟的 D——就像 *butter* → [bu-der]。所以整句變成 **[nothing-duh-do with me]**。
+
 > **Scene A — Zane (06:33)**
 > You're a **monster**. I know. I'm a monster. You're **literally** walking around **every single** cafe now just like, "That's that me espresso."
+
+> Scene A — Zane（06:33）：你是個 monster（怪物）。我知道，我是個怪物。你現在 literally（簡直）逛遍 every single（每一間）咖啡廳，嘴裡都還哼著那句「That's that me espresso」。
 
 > **Ethan (06:39)**
 > Sounds harsh, right? But he's just teasing her that she's showing off her song at every cafe. Think about how people talk about Lionel Messi: "He's a **monster** on the field." It's not an insult — it's a huge compliment.
 
+> Ethan（06:39）：聽起來很兇對吧？但他只是在虧她到處在咖啡廳炫耀自己的歌。想想大家怎麼形容 Lionel Messi：「He's a monster on the field（他在場上是個怪物）」。這不是侮辱——是超級稱讚。
+
 > **Ethan (07:02)**
 > First: **literally**. In formal English, *literally* means something actually happened, not figuratively. But in everyday speech — especially among younger speakers — it's used as an **intensifier**, adding drama or emphasis.
+
+> Ethan（07:02）：先講 literally。在正式英文裡，literally 表示某件事「真的」發生了，不是比喻。但在日常口語——尤其年輕世代——它被當成 intensifier（強調詞），用來加戲、加重語氣。
 
 > **Example (07:20)**
 > I **literally** have 20 minutes, so it'll have to be quick. Come on, let's go.
 > Okay, this is bizarre because we **literally** did that exact same thing.
 
+> Example（07:20）：我 literally 只有 20 分鐘，所以得快一點。走啦，我們走。
+> 好，這也太詭異了，因為我們 literally 做了一模一樣的事。
+
 > **Ethan (07:39)**
 > Adding "single" after "every" stresses that there are **zero exceptions**. *Every* cafe, not one left out. I could say, "I've watched **every single** episode of Seinfeld at least three times." Or "She meditates **every single** day" — she never misses.
+
+> Ethan（07:39）：在 every 後面加 single，是在強調「零例外」。Every cafe，一間都不漏。我可以說：「I've watched every single episode of Seinfeld at least three times（我每一集 Seinfeld 都至少看過三遍）」。或「She meditates every single day（她每一天都冥想）」——從不間斷。
 
 </div>
 
