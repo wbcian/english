@@ -9,11 +9,12 @@
 - 詳細 Profile → [PROFILE.md](PROFILE.md)
 
 ## 快照（隨更新同步）
-- 已收錄單字：101
-- 5★ 精熟：0　 3–4★ 學習中：12　 1–2★ 新／脆弱：89
-- 最近活動日期：2026-05-26（🎧 Cat Wu 訪談 Part 1 + Part 3 上線，**完成三部曲**；📚 新增 20 字（10 + 10）；🎯 主目標 TOEIC 750+）
+- 已收錄單字：106
+- 5★ 精熟：0　 3–4★ 學習中：12　 1–2★ 新／脆弱：94
+- 最近活動日期：2026-05-28（🛠️ 新增 reading lesson 格式分流 + app schema 升級；🎧 首份 reading lesson 上線：PostHog Charles Cook；📚 新增 5 字 TOEIC 商業向）
 - 主目標：**TOEIC 750+ 證書**（詳見 [PROFILE.md](PROFILE.md#目標)）
-- 最近 lesson：**Cat Wu 訪談三部曲完成** — [Part 1：Anthropic 怎麼出貨那麼快](lessons/2026-05-26-cat-wu-part-1-shipping-speed.md)（mind meld / AGI-pilled / research preview / dogfood / mission > product）+ [Part 2：PM Skills & Taste](lessons/2026-05-25-cat-wu-pm-skills-and-taste.md)（product taste / wear many hats / low ego / lean into chaos）+ [Part 3：Cowork in Practice](lessons/2026-05-26-cat-wu-part-3-cowork-workflow.md)（kick off / on the go / touching grass / synthesize / Cat 的 slide deck prompt 拆解）
+- 最近 lesson：**[Charles Cook — How I Actually Get Good Advice](lessons/2026-05-28-charles-cook-getting-good-advice.md)**（首份 reading lesson；6 步驟 advice SOP + 商業冷訊息範本；含 Article Map / Reading Comprehension / Sentence Anatomy / Steal These 3 Moves；僅 Close Reading + Vocab 可朗讀）
+- 上一份 lesson：**Cat Wu 訪談三部曲** — [Part 1](lessons/2026-05-26-cat-wu-part-1-shipping-speed.md) + [Part 2](lessons/2026-05-25-cat-wu-pm-skills-and-taste.md) + [Part 3](lessons/2026-05-26-cat-wu-part-3-cowork-workflow.md)
 - 最近寫作：[2026-04-28 vocab-translation-drill](writing/2026-04-28-vocab-translation-drill.md)（6/6 完成，set up 與 pitch 滿分）
 - 待加強清單：brought up（vs pitch to / set up）、go all out（vs go all in / pour into）、humorous twist（兩天就忘）、in a pinch（idiom 連結未建立）、faze ≠ phase 拼字
 
@@ -33,8 +34,11 @@
 1. **新單字** → 建立 `vocab/<word>.md`、在 `vocab/_index.md` 加一列、`ACTIVITY.md` 頂端加一行
 2. **舊單字再現** → 在該檔 `## Encounters` 補日期、更新 frontmatter 的 `last_reviewed` 與 `review_count`，視情況調 `proficiency`，並同步 `_index.md`
 3. **寫作 / 對話** → 對應資料夾；檔名 `YYYY-MM-DD-<topic>.md`；`ACTIVITY.md` 加一行
-4. **長文／字幕** → **預設**輸出 markdown 整理到 `lessons/YYYY-MM-DD-<topic>.md`；只有當使用者明確說「轉成 magazine」、「雜誌風格」、「HTML 版」等才產 HTML
-5. **Lesson speakable 規範** → 寫 lesson 時遵守 [`lessons/_conventions.md`](lessons/_conventions.md)：英文 blockquote 不混中文、vocab table 可朗讀欄表頭一律 lowercase `word`、同系列同日期補 `part:` frontmatter。`app/`（Astro lessons browser）依這份規範判斷朗讀範圍
+4. **長文／字幕／文章** → 整理到 `lessons/YYYY-MM-DD-<topic>.md`，兩種來源並列：
+   - **Podcast / 字幕** → 套既有 podcast lesson 結構（含 transcript 切片、Series Map）
+   - **純文字 essay / newsletter**（無 audio）→ 套 reading lesson 結構（見 [`lessons/_conventions.md` §6](lessons/_conventions.md)），frontmatter 加 `format: article` + `url:` + `word_count` + `reading_time_min`
+   - 只有當使用者明確說「轉成 magazine」、「雜誌風格」、「HTML 版」等才產 HTML
+5. **Lesson speakable 規範** → 寫 lesson 時遵守 [`lessons/_conventions.md`](lessons/_conventions.md)：英文 blockquote 不混中文、vocab table 可朗讀欄表頭一律 lowercase `word`、同系列同日期補 `part:` frontmatter。**Reading lesson 只在 `## Close Reading` 與 `## Key Vocabulary` 兩段觸發朗讀**——其他段落英文用 italic／bold 段落，不用 blockquote。`app/`（Astro lessons browser）依這份規範判斷朗讀範圍
 6. **發現新弱點 / 偏好** → 更新 `PROFILE.md`
 7. **更新此份快照** → 完成上述任一動作後同步本檔的「快照」段
 8. **永遠**：繁體中文翻譯；保留 Coach Max 風格（幽默、直白、像哥兒們）

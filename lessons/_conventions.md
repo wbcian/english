@@ -105,7 +105,69 @@ type: lesson
 - 朗讀時段落底色變淺黃；同段再點停止、按 Esc 停止
 - 長段（> ~150 字）會自動切句朗讀，避免 Chrome silent truncate
 
+## §6 Reading lesson（純文字文章型 lesson）
+
+當 source 是純文字 essay / newsletter（無 audio／無 transcript），用這套結構，frontmatter 標 `format: article`。
+
+### Frontmatter（reading lesson 必填欄位）
+
+```yaml
+---
+date: YYYY-MM-DD
+topic: <short-topic>
+source: "<出處說明>"
+type: lesson
+format: article              # reading lesson 必填，讓 LLM / 規範引擎知道套這套
+url: https://...             # 原文 URL（必填）
+word_count: 1350             # 原文字數
+reading_time_min: 6          # 預估閱讀分鐘
+---
+```
+
+### Section 結構（順序固定）
+
+1. `## Topic & Summary` — 中英雙語摘要（**不用 blockquote**，見下面朗讀規則）
+2. `## Source` — 作者 / 日期 / 字數 / URL
+3. `## Article Map` — 6-step 表格，全文骨架一眼看完（TOEIC Part 7 略讀訓練）
+4. `## Close Reading` — 精選 3-5 段原文 + 「Why this paragraph」一行點評
+5. `## Reading Comprehension` — 3-5 題 TOEIC 題型，答案用 `<details>` 折疊
+6. `## Sentence Anatomy` — 拆 2-3 個漂亮長句的結構
+7. `## Key Vocabulary` — 表格（含 `TOEIC` 欄打勾）
+8. `## Templates & Artifacts` — 原文嵌入的範本（如 cold message）+ placeholder 替換練習
+9. `## Steal These 3 Moves` — 取代 podcast 版的「Coach Max Takeaways」，導向產出
+10. `## Related Articles` — 同主題延伸閱讀
+
+### 朗讀規則（reading lesson 專屬）
+
+**只有兩個地方可朗讀**：
+
+| 段落 | 朗讀觸發 |
+|---|---|
+| `## Close Reading` | 英文 blockquote → app 自動 TTS（speech.ts 既有規則） |
+| `## Key Vocabulary` | `word` 欄 cell → app 自動 TTS（speech.ts 既有規則） |
+
+**其他段落英文一律不用 blockquote**——避免 `speech.ts` 誤判朗讀。具體規則：
+
+- **Topic & Summary** 英文版：用 *italic* 段落或 `**bold**` 段落，**不要** blockquote
+- **Sentence Anatomy** 的例句：用 `**bold**` 段落 + bold 標粗體強調點，**不要** blockquote
+- **Reading Comprehension** 題目／選項：平常段落或 list，**不要** blockquote
+- **Article Map** 表格：表頭不要用 `word`（避免被當朗讀欄）
+- **Templates** 範本：用 ```` ``` ```` code block
+
+### 與 podcast lesson 的差異速查
+
+| 處理 | podcast lesson | reading lesson |
+|---|---|---|
+| Transcript 段 | 大量 blockquote 精選 + 時間戳 / 講者標籤 | 砍掉，改 `Close Reading` 精選 3-5 段 |
+| Series Map | 多 part 系列導覽 | 砍掉（essay 單篇） |
+| 全段可朗讀範圍 | 所有英文 blockquote + 所有 `word` 欄 | **僅 Close Reading blockquote + Vocab `word` 欄** |
+| Coach Max Takeaways | 5 點混風格 + 收藏 | 改名 `Steal These 3 Moves`，3 點導向產出 |
+| Reading Comprehension | — | 必有（TOEIC 暖身） |
+| Sentence Anatomy | — | 必有（補「中翻英直譯」弱點） |
+
+---
+
 ## 修改本檔的人
 
-- 改規範前先想清楚：對 `app/src/scripts/speech.ts` 的影響、對 7 份既有 lesson 是否要 retrofit
+- 改規範前先想清楚：對 `app/src/scripts/speech.ts` 的影響、對既有 lesson 是否要 retrofit
 - 任何規範變動同步 update：本檔、`BRAIN.md`、`.claude/skills/english-tutor/SKILL.md`
