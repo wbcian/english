@@ -10,10 +10,25 @@ if (lessons.length === 0) {
   throw new Error("Empty 'lessons' collection — check glob base path");
 }
 
+// Series-aware ordering: keep every part of a series contiguous (Part 1→2→3),
+// and float each series block to its most-recent member's date so recent series
+// still sort near the top. Standalone lessons sort by their own date.
+type LessonEntry = (typeof lessons)[number];
+const seriesMaxDate = new Map<string, number>();
+for (const l of lessons) {
+  if (!l.data.series) continue;
+  const t = l.data.date.getTime();
+  seriesMaxDate.set(l.data.series, Math.max(seriesMaxDate.get(l.data.series) ?? 0, t));
+}
+const groupDate = (l: LessonEntry) =>
+  l.data.series ? seriesMaxDate.get(l.data.series)! : l.data.date.getTime();
+const groupKey = (l: LessonEntry) => l.data.series ?? l.id;
+
 const sortedLessons = lessons.sort((a, b) => {
-  const dt = b.data.date.getTime() - a.data.date.getTime();
+  const dt = groupDate(b) - groupDate(a); // group date desc
   if (dt !== 0) return dt;
-  return (a.data.part ?? 0) - (b.data.part ?? 0);
+  if (groupKey(a) !== groupKey(b)) return groupKey(a) < groupKey(b) ? -1 : 1; // keep series together
+  return (a.data.part ?? 0) - (b.data.part ?? 0); // within series: part asc
 });
 
 const sortedVocab = vocab.slice().sort((a, b) => {
