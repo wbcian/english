@@ -40,7 +40,7 @@ reading_time_min: 2
 >
 > The real change came when a Grasse glove maker presented a pair of scented gloves to Catherine de' Medici, the Queen of France. She loved them, and perfumed gloves soon became a fashion trend among European royalty. As high taxes made leather less profitable, skilled workers switched from making gloves to creating fragrances. By the 17th century, Grasse had become a center of Europe's perfume trade.
 
-> 中文 → 坐落在法國南部山丘間的 Grasse，以「世界香水之都」聞名。但你知道這座迷人小鎮以前臭得要命嗎？16 世紀的 Grasse 以皮革業聞名，而不是香氣。空氣裡滿是動物皮革和製革廠化學藥劑的味道。為了讓手套好聞一點，當地工匠開始把手套泡進花香精油裡。這個聰明的點子不只改善了氣味，也開啟了 Grasse 通往香水世界的旅程。
+> 坐落在法國南部山丘間的 Grasse，以「世界香水之都」聞名。但你知道這座迷人小鎮以前臭得要命嗎？16 世紀的 Grasse 以皮革業聞名，而不是香氣。空氣裡滿是動物皮革和製革廠化學藥劑的味道。為了讓手套好聞一點，當地工匠開始把手套泡進花香精油裡。這個聰明的點子不只改善了氣味，也開啟了 Grasse 通往香水世界的旅程。
 > 真正的轉變發生在一位 Grasse 手套商把一雙香氛手套獻給法國王后 Catherine de' Medici——她超愛，香氛手套很快成為歐洲皇室的流行。隨著高稅讓皮革業無利可圖，技術工匠便從做手套轉而製作香水。到了 17 世紀，Grasse 已成為歐洲香水貿易的中心。
 
 > **Part 2**
@@ -48,7 +48,7 @@ reading_time_min: 2
 >
 > Visiting Grasse is like stepping into a fragrant dream. You can tour historic perfume factories where guides explain how flowers are turned into luxurious scents. The International Perfume Museum tells the history of perfume through antique bottles and interactive exhibits. For a hands-on experience, visitors can join DIY perfume workshops and create their own unique scents. Grasse's influence extends far beyond France — many famous perfumes were born here, and its perfumers remain highly respected today.
 
-> 中文 → Grasse 的成功也歸功於它的自然環境。溫和的地中海型氣候、肥沃的土壤、充沛的雨量，創造了種植玫瑰、茉莉、薰衣草這些香水關鍵原料的理想條件。即使今天，繽紛花田仍環繞著小鎮，農民持續採收花朵提煉珍貴的精油。
+> Grasse 的成功也歸功於它的自然環境。溫和的地中海型氣候、肥沃的土壤、充沛的雨量，創造了種植玫瑰、茉莉、薰衣草這些香水關鍵原料的理想條件。即使今天，繽紛花田仍環繞著小鎮，農民持續採收花朵提煉珍貴的精油。
 > 造訪 Grasse 就像走進一場芬芳的夢。你可以參觀歷史悠久的香水工廠，導覽員會解說花朵如何變成奢華香氣；國際香水博物館用古董香水瓶和互動展覽訴說香水歷史；想動手玩的話，遊客還能參加 DIY 調香工作坊，調出自己獨一無二的香味。Grasse 的影響力遠超法國——許多名香誕生於此，這裡的調香師至今備受敬重。
 
 </div>
