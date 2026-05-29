@@ -66,6 +66,11 @@
 | [inbox zero](inbox-zero.md) | n.phr. | 收件夾清零；郵件全部處理完的狀態 | 1 | 2026-05-26 | noun-phrase, productivity, modern-jargon |
 | [dossier](dossier.md) | n. | 情報檔；資料夾；某主題的完整檔案 | 1 | 2026-05-26 | noun, formal, business, french-loanword |
 | [top of mind](top-of-mind.md) | idiom | 心中最在意的；正在想的；首要 priority | 1 | 2026-05-26 | idiom, business, work, priority |
+| [cast a wide net](cast-a-wide-net.md) | idiom | 廣撒網；廣泛尋找資源／人選 | 1 | 2026-05-28 | idiom, business, networking, fishing-metaphor |
+| [pick someone's brain](pick-someones-brain.md) | idiom | 向某人請益；汲取知識（被作者反對泛用） | 1 | 2026-05-28 | idiom, business, networking, ⚠️overused |
+| [legwork](legwork.md) | n. | 跑腿；事前準備功夫 | 1 | 2026-05-28 | noun, business, work, toeic, uncountable |
+| [one pager](one-pager.md) | n. | 一頁摘要文件 | 1 | 2026-05-28 | noun, business, document, startup |
+| [stint](stint.md) | n./v. | （任職／工作的）一段期間；任期 | 1 | 2026-05-28 | noun, career, business, toeic, time-duration |
 | [viral](viral.md) | adj. | 病毒式傳播的；爆紅 | 2 | 2026-04-27 | internet, media |
 | [choreography](choreography.md) | n. | 編舞 | 2 | 2026-04-27 | performance, dance |
 | [with a bang](come-out-with-a-bang.md) | idiom | 轟動地（come out / go out / kick off…） | 2 | 2026-04-27 | idiom, performance |
