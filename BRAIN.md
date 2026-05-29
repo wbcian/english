@@ -9,8 +9,8 @@
 - 詳細 Profile → [PROFILE.md](PROFILE.md)
 
 ## 快照（隨更新同步）
-- 已收錄單字：110
-- 5★ 精熟：0　 3–4★ 學習中：12　 1–2★ 新／脆弱：98
+- 已收錄單字：99
+- 5★ 精熟：0　 3–4★ 學習中：8　 1–2★ 新／脆弱：91
 - 最近活動日期：2026-05-29（🎧 第 2 篇 reading lesson：PostHog 3-article pack；📚 新增 4 字 TOEIC 商業向）
 - 主目標：**TOEIC 750+ 證書**（詳見 [PROFILE.md](PROFILE.md#目標)）
 - **Lesson 格式（2026-05-29 換軸）**：`track`(reading/dialogue/talk) + `audio` 取代舊 `format`；Source→標題下 subtitle、正文雙語滾動框、Key Vocab 緊接正文後 — 規範見 [`lessons/_conventions.md`](lessons/_conventions.md)

@@ -75,13 +75,6 @@
 | [autonomy](autonomy.md) | n. | 自主性；自主權 | 1 | 2026-05-29 | noun, work, business, toeic, startup, formal |
 | [in demand](in-demand.md) | adj.phr. | 搶手的；有需求的 | 1 | 2026-05-29 | adjective-phrase, business, toeic, market, hiring |
 | [filter out](filter-out.md) | phr.v. | 過濾掉；篩除 | 1 | 2026-05-29 | phrasal-verb, business, toeic, process, hiring |
-| [viral](viral.md) | adj. | 病毒式傳播的；爆紅 | 2 | 2026-04-27 | internet, media |
-| [choreography](choreography.md) | n. | 編舞 | 2 | 2026-04-27 | performance, dance |
-| [with a bang](come-out-with-a-bang.md) | idiom | 轟動地（come out / go out / kick off…） | 2 | 2026-04-27 | idiom, performance |
-| [intensive](intensive.md) | adj. | 密集的 | 2 | 2026-04-27 | adjective, easily-confused |
-| [unconventional](unconventional.md) | adj. | 非傳統的 | 2 | 2026-04-27 | adjective, style |
-| [quick change](quick-change.md) | n. | 快速換裝 | 2 | 2026-04-27 | performance, theater |
-| [stockings](stockings.md) | n. | 絲襪（含 family：tights / pantyhose / fishnets…）| 2 | 2026-04-27 | fashion, clothing |
 | [headed to](headed-to.md) | phr. | 前往；朝...而去 | 2 | 2026-04-29 | phrasal-verb, daily |
 | [cram](cram.md) | v. | 塞滿；臨時抱佛腳 | 2 | 2026-04-29 | verb, study, multi-meaning |
 | [keen](keen.md) | adj. | 熱衷的；敏銳的 | 2 | 2026-04-29 | adjective, emotion |
@@ -104,10 +97,6 @@
 | [go all out](go-all-out.md) | phr.v. | 卯足全力 | 2 | 2026-05-02 | idiom, effort, ⚠️quiz-miss×2, ↓★3→2 |
 | [pub](pub.md) | n. | 英式酒吧 | 2 | 2026-05-04 | noun, british, culture, place |
 | [sweetheart](sweetheart.md) | n. | 親愛的；甜心；雙面刃用法 | 2 | 2026-05-04 | noun, term-of-endearment, double-edged |
-| [wig](wig.md) | n. | 假髮 | 3 | 2026-04-27 | fashion, costume |
-| [contestant](contestant.md) | n. | 參賽者 | 3 | 2026-04-27 | people, competition |
-| [costume](costume.md) | n. | 戲服；演出服 | 3 | 2026-04-27 | fashion, performance |
-| [take it easy](take-it-easy.md) | idiom | 放輕鬆；保重 | 3 | 2026-04-27 | idiom, daily-conversation |
 | [combat](combat.md) | n./v. | 戰鬥；對抗 | 3 | 2026-04-27 | military, formal |
 | [easy breezy](easy-breezy.md) | idiom | 輕鬆寫意 | 3 | 2026-04-28 | idiom, informal |
 | [lit up](lit-up.md) | phr.v./adj. | 點亮；臉/眼為之一亮；嗨翻 | 3 | 2026-04-28 | phrasal-verb, slang |

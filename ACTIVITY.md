@@ -120,6 +120,6 @@
 - 📚 新增單字：combat
 - 📚 複習 + 擴充：set up（深入「set someone up」五種型式）
 - 📚 新增單字：take it easy
-- 🎧 Lesson: Tom Holland × Gordon Ramsay — Lip Sync Battle 故事 ([lesson](lessons/2026-04-27-tom-holland-lip-sync-battle.md))
-- 📚 新增 14 個單字／片語：viral, go all out, choreography, come out with a bang, easy breezy, pitch, set up, wig, contestant, intensive, quick change, costume, theatrical, unconventional
+- 🎧 Lesson: Tom Holland × Gordon Ramsay — Lip Sync Battle 故事（2026-05-29 移除：無原始逐字稿、缺正文可跟讀）
+- 📚 當日新增 14 字；其中 11 字（viral, choreography, come out with a bang, wig, contestant, intensive, quick change, costume, unconventional, stockings, take it easy）隨 lesson 移除，僅保留有後續寫作/quiz 練習史的 5 字：go all out, easy breezy, pitch, set up, theatrical
 - 🎯 英文學習記憶大腦資料夾建立完成
