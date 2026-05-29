@@ -10,8 +10,10 @@ const lessons = defineCollection({
     type: z.literal('lesson'),
     series: z.string().optional(),
     part: z.number().optional(),
-    // Reading-lesson 專用 optional 欄位（podcast lesson 不填即可）
-    format: z.enum(['podcast', 'article']).optional(),
+    // 學習意圖主軸（語流判準）：reading=純閱讀/解題 · dialogue=多人對話 · talk=單人連續輸出
+    track: z.enum(['reading', 'dialogue', 'talk']).optional(),
+    // 原始素材是否有真人聲音（純元資料，不影響 app 朗讀——朗讀由 DOM 決定）
+    audio: z.boolean().optional(),
     url: z.string().url().optional(),
     word_count: z.number().optional(),
     reading_time_min: z.number().optional(),

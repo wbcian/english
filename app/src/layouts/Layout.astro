@@ -122,6 +122,30 @@ const { title } = Astro.props;
   blockquote > p { margin: 0.5em 0; }
   hr { border: 0; border-top: 1px solid var(--card-border); margin: 2em 0; }
 
+  /* Source 一行小字 subtitle — 緊接 H1 下方（作者手寫 <p class="lesson-subtitle">） */
+  .lesson-subtitle {
+    margin: -0.2em 0 1.4em;
+    font-size: 0.82em;
+    color: var(--fg-muted);
+    font-style: italic;
+    line-height: 1.5;
+  }
+
+  /* 正文（逐字稿 / Close Reading）固定高度可滾動視窗，避免畫面過長。
+     內部 blockquote 維持既有 .speakable 朗讀（全域 blockquote > p selector 照常生效）。 */
+  .lesson-body-scroll {
+    max-height: 62vh;
+    overflow-y: auto;
+    margin: 1.2em 0;
+    padding: 0.6em 1.1em 0.6em 1.4em;
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+    background: var(--card-bg);
+    overscroll-behavior: contain;
+  }
+  .lesson-body-scroll > :first-child { margin-top: 0; }
+  .lesson-body-scroll > :last-child { margin-bottom: 0; }
+
   /* Speakable affordance — always visible, not hover-only */
   blockquote > p.speakable {
     cursor: pointer;
