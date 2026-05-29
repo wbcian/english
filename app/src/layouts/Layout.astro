@@ -93,7 +93,9 @@ const { title } = Astro.props;
   p { margin: 0.8em 0; }
   a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
   a:hover { text-decoration: none; }
-  code {
+  /* inline code only — must not bleed into fenced code blocks (pre > code),
+     which Shiki styles with its own dark background/colors. */
+  :not(pre) > code {
     background: var(--card-border);
     padding: 1px 5px;
     border-radius: 3px;
