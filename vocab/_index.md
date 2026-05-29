@@ -9,7 +9,6 @@
 | [terrified](terrified.md) | adj. | 嚇壞的；非常害怕的 | 1 | 2026-04-30 | adjective, emotion, fear |
 | [pinch](pinch.md) | v./n. | 捏；掐；偷；一小撮；困境（含三態） | 1 | 2026-04-30 | verb, multi-meaning, regular-verb |
 | [humorous twist](humorous-twist.md) | n.phr. | 幽默的轉折；反差萌 | 1 | 2026-05-02 | phrase, narrative, storytelling, ⚠️quiz-miss |
-| [faze](faze.md) | v. | 使動搖；使困擾；嚇到 | 1 | 2026-05-04 | verb, emotion, spelling-trap |
 | [hankering](hankering.md) | n. | 強烈的渴望；嘴饞 | 1 | 2026-05-21 | noun, desire, food, informal |
 | [cup of Joe](cup-of-joe.md) | n.phr. | 一杯咖啡（俚語） | 1 | 2026-05-21 | noun-phrase, slang, american, coffee |
 | [I guess so](i-guess-so.md) | phr. | 大概吧；應該吧（冷淡／不確定） | 1 | 2026-05-21 | phrase, conversation, hedging |
