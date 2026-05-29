@@ -13,6 +13,7 @@
 - 5★ 精熟：0　 3–4★ 學習中：12　 1–2★ 新／脆弱：98
 - 最近活動日期：2026-05-29（🎧 第 2 篇 reading lesson：PostHog 3-article pack；📚 新增 4 字 TOEIC 商業向）
 - 主目標：**TOEIC 750+ 證書**（詳見 [PROFILE.md](PROFILE.md#目標)）
+- **Lesson 格式（2026-05-29 換軸）**：`track`(reading/dialogue/talk) + `audio` 取代舊 `format`；Source→標題下 subtitle、正文雙語滾動框、Key Vocab 緊接正文後 — 規範見 [`lessons/_conventions.md`](lessons/_conventions.md)
 - 最近 lesson：**[PostHog — Product for Engineers Pack](lessons/2026-05-29-posthog-product-for-engineers-pack.md)**（3-article pack: 主文 framing + hiring 11 min + sell-features 6 min；總 19 min；含 SuperDay 面試模型、`stack up against` 句型、引號嘲諷 vague language）
 - 上一份 lesson：[Charles Cook — How I Actually Get Good Advice](lessons/2026-05-28-charles-cook-getting-good-advice.md)（首份 reading lesson + reading 格式分流上路）
 - 上一份 lesson：**Cat Wu 訪談三部曲** — [Part 1](lessons/2026-05-26-cat-wu-part-1-shipping-speed.md) + [Part 2](lessons/2026-05-25-cat-wu-pm-skills-and-taste.md) + [Part 3](lessons/2026-05-26-cat-wu-part-3-cowork-workflow.md)
@@ -35,11 +36,14 @@
 1. **新單字** → 建立 `vocab/<word>.md`、在 `vocab/_index.md` 加一列、`ACTIVITY.md` 頂端加一行
 2. **舊單字再現** → 在該檔 `## Encounters` 補日期、更新 frontmatter 的 `last_reviewed` 與 `review_count`，視情況調 `proficiency`，並同步 `_index.md`
 3. **寫作 / 對話** → 對應資料夾；檔名 `YYYY-MM-DD-<topic>.md`；`ACTIVITY.md` 加一行
-4. **長文／字幕／文章** → 整理到 `lessons/YYYY-MM-DD-<topic>.md`，兩種來源並列：
-   - **Podcast / 字幕** → 套既有 podcast lesson 結構（含 transcript 切片、Series Map）
-   - **純文字 essay / newsletter**（無 audio）→ 套 reading lesson 結構（見 [`lessons/_conventions.md` §6](lessons/_conventions.md)），frontmatter 加 `format: article` + `url:` + `word_count` + `reading_time_min`
+4. **長文／字幕／文章／podcast** → 整理到 `lessons/YYYY-MM-DD-<topic>.md`，依**語流結構**標 `track`（規範與模組 MUST/MAY 表見 [`lessons/_conventions.md`](lessons/_conventions.md)，那是唯一事實來源）：
+   - 多人輪流對話（訪談、影劇/電影對白）→ `track: dialogue`
+   - 單人連續輸出（個人 podcast、旁白、演講、歌曲）→ `track: talk`
+   - 以閱讀／解題為意圖的文字（essay、newsletter、雜誌短文，含朗讀型如 grasse）→ `track: reading`
+   - 另標 `audio: true/false`（原始素材有無真人聲音；**純元資料、不影響朗讀**）
+   - 版面：Source 降為標題下一行 `<p class="lesson-subtitle">` 小字、正文雙語包 `<div class="lesson-body-scroll">` 可滾動視窗、Key Vocab 緊接正文後（細節見規範）
    - 只有當使用者明確說「轉成 magazine」、「雜誌風格」、「HTML 版」等才產 HTML
-5. **Lesson speakable 規範** → 寫 lesson 時遵守 [`lessons/_conventions.md`](lessons/_conventions.md)：英文 blockquote 不混中文、vocab table 可朗讀欄表頭一律 lowercase `word`、同系列同日期補 `part:` frontmatter。**Reading lesson 只在 `## Close Reading` 與 `## Key Vocabulary` 兩段觸發朗讀**——其他段落英文用 italic／bold 段落，不用 blockquote。`app/`（Astro lessons browser）依這份規範判斷朗讀範圍
+5. **Lesson speakable 規範** → 寫 lesson 時遵守 [`lessons/_conventions.md`](lessons/_conventions.md)：英文 blockquote 不混中文、vocab 可朗讀欄表頭一律 lowercase `word`、講者標籤放 blockquote 開頭粗體、`<div class="lesson-body-scroll">`／`<details>` 內 blockquote 前後留 markdown 空行、同系列同日期補 `part:`。`app/` 依 markdown DOM 結構（blockquote + `word` 欄）判斷朗讀，**與 frontmatter 無關**
 6. **發現新弱點 / 偏好** → 更新 `PROFILE.md`
 7. **更新此份快照** → 完成上述任一動作後同步本檔的「快照」段
 8. **永遠**：繁體中文翻譯；保留 Coach Max 風格（幽默、直白、像哥兒們）
@@ -92,7 +96,7 @@ scornfully, derisively, tauntingly
 | `conv` | 新增對話 log | `conv: 2026-04-27 ordering-coffee` |
 | `lesson` | 新增 podcast / 影片整理 | `lesson: ELI5 lead-uranium` |
 | `profile` | 更新 Profile | `profile: add weakness — past tense` |
-| `brain` | 改 BRAIN / CLAUDE / 索引／結構 | `brain: split _index by ★` |
+| `brain` | 改 BRAIN / CLAUDE / 索引／結構 / `lessons/_conventions.md` | `brain: split _index by ★` |
 | `skill` | 改 english-tutor skill | `skill: switch HTML magazine to opt-in` |
 | `app` | `app/` 內 Astro lessons browser | `app: add speech.ts chunking` |
 | `chore` | 雜項（gitignore、整理檔案等） | `chore: ignore .DS_Store` |
