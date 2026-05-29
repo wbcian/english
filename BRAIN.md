@@ -9,11 +9,12 @@
 - 詳細 Profile → [PROFILE.md](PROFILE.md)
 
 ## 快照（隨更新同步）
-- 已收錄單字：106
-- 5★ 精熟：0　 3–4★ 學習中：12　 1–2★ 新／脆弱：94
-- 最近活動日期：2026-05-28（🛠️ 新增 reading lesson 格式分流 + app schema 升級；🎧 首份 reading lesson 上線：PostHog Charles Cook；📚 新增 5 字 TOEIC 商業向）
+- 已收錄單字：110
+- 5★ 精熟：0　 3–4★ 學習中：12　 1–2★ 新／脆弱：98
+- 最近活動日期：2026-05-29（🎧 第 2 篇 reading lesson：PostHog 3-article pack；📚 新增 4 字 TOEIC 商業向）
 - 主目標：**TOEIC 750+ 證書**（詳見 [PROFILE.md](PROFILE.md#目標)）
-- 最近 lesson：**[Charles Cook — How I Actually Get Good Advice](lessons/2026-05-28-charles-cook-getting-good-advice.md)**（首份 reading lesson；6 步驟 advice SOP + 商業冷訊息範本；含 Article Map / Reading Comprehension / Sentence Anatomy / Steal These 3 Moves；僅 Close Reading + Vocab 可朗讀）
+- 最近 lesson：**[PostHog — Product for Engineers Pack](lessons/2026-05-29-posthog-product-for-engineers-pack.md)**（3-article pack: 主文 framing + hiring 11 min + sell-features 6 min；總 19 min；含 SuperDay 面試模型、`stack up against` 句型、引號嘲諷 vague language）
+- 上一份 lesson：[Charles Cook — How I Actually Get Good Advice](lessons/2026-05-28-charles-cook-getting-good-advice.md)（首份 reading lesson + reading 格式分流上路）
 - 上一份 lesson：**Cat Wu 訪談三部曲** — [Part 1](lessons/2026-05-26-cat-wu-part-1-shipping-speed.md) + [Part 2](lessons/2026-05-25-cat-wu-pm-skills-and-taste.md) + [Part 3](lessons/2026-05-26-cat-wu-part-3-cowork-workflow.md)
 - 最近寫作：[2026-04-28 vocab-translation-drill](writing/2026-04-28-vocab-translation-drill.md)（6/6 完成，set up 與 pitch 滿分）
 - 待加強清單：brought up（vs pitch to / set up）、go all out（vs go all in / pour into）、humorous twist（兩天就忘）、in a pinch（idiom 連結未建立）、faze ≠ phase 拼字

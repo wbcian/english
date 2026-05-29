@@ -5,6 +5,14 @@
 
 ---
 
+## 2026-05-29
+- 🎧 **第 2 篇 reading lesson — 3-article pack**：[PostHog — What is Product for Engineers? + Hiring + Sell features not benefits](lessons/2026-05-29-posthog-product-for-engineers-pack.md)（總 3,590 字 / 19 min，< 30 min 故包成單篇）
+- 📝 lesson 重點：3 篇互補論述（**Main**：product engineer mindset 定義 + 三段並列動詞句型；**Article A**：hiring 10 條原則含 SuperDay 真實任務面試法、`soft yes is no`；**Article B**：賣 features 不賣 benefits、`stack up against` 比較句型、引號嘲諷 vague language）
+- 📚 新增 4 個單字／片語（全 ★1，多 TOEIC ✓）：[opinionated](vocab/opinionated.md)（⚠️ connotation trap）/ [autonomy](vocab/autonomy.md) / [in demand](vocab/in-demand.md) / [filter out](vocab/filter-out.md)
+- 🎯 串聯主題：與 5/28 Charles Cook lesson 形成「PostHog 商業英文宇宙」初步素材庫——`single most important` 強調句型在 PostHog 多位作者文章重複出現
+
+---
+
 ## 2026-05-28
 - 🛠️ **新增 reading lesson 格式**（reading lesson vs podcast lesson 分流）：派 3 隻 agents 從 content design / system architecture / learner ergonomics 討論後合併；正式規範入 [`lessons/_conventions.md` §6](lessons/_conventions.md)
 - 🛠️ app schema 升級：`app/src/content.config.ts` 加 4 個 optional 欄位（`format` / `url` / `word_count` / `reading_time_min`）以容納 reading lesson；既有 7 篇 podcast lesson 完全相容
