@@ -56,27 +56,29 @@ The user wants the episode transcribed and turned into a lesson. Run the local p
 3. Continue with the **SUBTITLES / podcast transcript** rules below to produce `lessons/<date>-<slug>.md`.
 4. The raw transcript (`transcripts/*.txt` + `.srt`) is kept and committed; the `.mp3` stays in the gitignored cache. Commit the transcript under scope `lesson:`.
 
-### When user sends SUBTITLES / a long passage / podcast transcript:
+### When user sends SUBTITLES / a long passage / podcast transcript / article:
 
-**Default = Markdown.** Do NOT auto-generate the HTML magazine — it is expensive in time and tokens. Only produce HTML when the user explicitly asks (keywords: "magazine", "雜誌風格", "HTML 版", "magazine 風格", or similar). Otherwise:
+**Default = Markdown.** Do NOT auto-generate the HTML magazine — it is expensive in time and tokens. Only produce HTML when the user explicitly asks (keywords: "magazine", "雜誌風格", "HTML 版", or similar). Otherwise:
 
-1. Identify main topic / story
-2. Output a structured **markdown** lesson note containing:
-   - Topic & 1-2 sentence summary (with zh-TW translation)
-   - Section breakdown of the content
-   - Key vocabulary table (word | pos | zh | note)
-   - Useful phrases & patterns (en + zh)
-   - Study tips / takeaways
-3. **Follow `lessons/_conventions.md`** for speakable structure: never mix English and Chinese in the same blockquote (separate them with a markdown blank line into distinct blockquotes); the vocab/phrase table column meant for TTS uses header `word` (lowercase only — not `字`, `Word`, `字 / 片語`, `原句`, etc.); for multi-part series sharing the same date, add `series: <slug>` and `part: N` to frontmatter
+1. Identify main topic / story.
+2. **Pick the `track` by 語流結構**（規範、模組 MUST/MAY 表、版面順序、speakable 規則**全在 [`lessons/_conventions.md`](../../../lessons/_conventions.md)，那是唯一事實來源——照它做，別在這裡重抄一份**）：
+   - 多人輪流對話（訪談、影劇/電影對白）→ `track: dialogue`
+   - 單人連續輸出（個人 podcast、旁白、演講、歌曲）→ `track: talk`
+   - 以閱讀／解題為意圖的文字（essay、newsletter、雜誌短文，含朗讀型）→ `track: reading`
+   - 也標 `audio: true/false`（原始素材有無真人聲音；純元資料、不影響朗讀）
+3. 依 `_conventions.md` 產出結構：版面順序（Source → 標題下 `<p class="lesson-subtitle">` 小字、正文雙語包 `<div class="lesson-body-scroll">` 可滾動、Key Vocab 緊接正文後）、該 track 的模組 MUST/MAY、speakable 規則（英中分開 blockquote、`word` 欄 lowercase、講者標籤粗體、容器/`<details>` 內 blockquote 前後留空行）。
 4. Save to `lessons/YYYY-MM-DD-<short-topic>.md` with frontmatter:
    ```
    ---
    date: YYYY-MM-DD
    topic: <short-topic>
-   source: <where the transcript came from>
+   source: <一行短描述：platform · 出處/作者 · 長度>
    type: lesson
-   series: <series-slug>     # optional, when part of a multi-part series
+   track: reading | dialogue | talk
+   audio: true | false
+   series: <series-slug>     # optional, multi-part series
    part: <N>                 # optional, when series is set
+   # url / word_count / reading_time_min  # optional, reading 用
    ---
    ```
 5. Add an entry to `ACTIVITY.md` and (if any new vocab is worth keeping long-term) follow the Memory Maintenance rules below.
