@@ -1,9 +1,10 @@
 ---
 date: 2026-05-28
 topic: charles-cook-getting-good-advice
-source: "PostHog newsletter (Product for Engineers) — How I Actually Get Good Advice by Charles Cook, 2026-01-12"
+source: "📖 PostHog newsletter · Charles Cook《How I Actually Get Good Advice》· essay"
 type: lesson
-format: article
+track: reading
+audio: false
 url: https://newsletter.posthog.com/p/how-i-actually-get-good-advice
 word_count: 1350
 reading_time_min: 6
@@ -11,21 +12,13 @@ reading_time_min: 6
 
 # How I Actually Get Good Advice — Charles Cook
 
+<p class="lesson-subtitle">📖 PostHog newsletter（Product for Engineers）· Charles Cook · essay · ~1350 words · 6 min</p>
+
 ## Topic & Summary
 
 PostHog 商業負責人 Charles Cook 拆解「**每半年花兩週密集向頂尖前輩請益**」的 SOP。文章不是空話勵志，而是一套 6 步驟的可複製流程：怎麼挑人、怎麼冷訊息、怎麼準備 one pager、怎麼篩出真正有料的人、怎麼從**問題診斷**而非答案上取經、最後怎麼判斷對方的成功是實力還是運氣。對工程師最好的教材點——他用很乾淨的商業英文寫一個你以後做 product 一定會用到的技能：**主動向強者請教**。
 
 *Charles Cook, who runs PostHog's commercial team, breaks down the six-step SOP he uses every six months to gather advice from people more experienced than him. It's not motivational fluff — it's a repeatable playbook covering who to talk to, how to cold-message them, how to prep a one pager, how to mine diagnoses over solutions, and how to tell whether someone's success was skill or luck. The best part for engineers: he uses really clean business English to describe a skill you'll absolutely need as you grow into product roles — proactively asking strong people for help.*
-
-## Source
-
-- **格式**：純文字 newsletter（Substack），無 audio
-- **作者**：Charles Cook（PostHog 商業團隊負責人，first non-eng hire）
-- **發表日**：2026-01-12
-- **字數**：約 1,350 字 · **閱讀時間**：6 分鐘
-- **URL**：[newsletter.posthog.com/p/how-i-actually-get-good-advice](https://newsletter.posthog.com/p/how-i-actually-get-good-advice)
-
----
 
 ## Article Map · 6 步驟一眼看完
 
@@ -44,6 +37,8 @@ TOEIC Part 7 略讀題的視覺化訓練——先抓骨架再讀細節。
 ---
 
 ## Close Reading · 精選 3 段（可朗讀 🔊）
+
+<div class="lesson-body-scroll">
 
 > Cold messaging works because people are nice, but you need to a) have mutuals, and b) ask a specific question. Don't say "I'd love to pick your brain" – a specific question from you lessens the mental load for them so they can be helpful.
 
@@ -67,7 +62,25 @@ TOEIC Part 7 略讀題的視覺化訓練——先抓骨架再讀細節。
 
 **Why this paragraph?** `however` 倒裝放後面（非句首）是 native 寫法；`exponentially more` 量化對比；整段是漂亮的 contrast 結構，**TOEIC Part 7 inference 題常考**。
 
----
+</div>
+
+## Key Vocabulary（可朗讀 🔊）
+
+| word | pos | zh | TOEIC | note |
+|---|---|---|---|---|
+| [cast a wide net](../vocab/cast-a-wide-net.md) | idiom | 廣撒網 | — | 漁網比喻；商業／求職常用 |
+| [pick someone's brain](../vocab/pick-someones-brain.md) | idiom | 向某人請益 | — | Cook **反對泛用** → 要丟具體問題 |
+| mental load | n.phr. | 心理負擔 | — | `lessen the mental load` |
+| mutuals | n. | 共同認識的人 | — | LinkedIn 時代詞 |
+| [legwork](../vocab/legwork.md) | n. | 跑腿；事前準備 | ✓ | `do the legwork` |
+| [one pager](../vocab/one-pager.md) | n. | 一頁摘要文件 | — | 商業簡報基本格式 |
+| [stint](../vocab/stint.md) | n./v. | 一段任職期間 | ✓ | `a 5-year stint at Google` |
+| get found out | phr.v. | 被識破；露餡 | — | `not good people get found out` |
+| nail the problem | v.phr. | 精準點出問題 | — | `nail the solution` 也常用 |
+| attribute X to Y | v.phr. | 把 X 歸因於 Y | ✓ | TOEIC 寫作高頻 |
+| outlier | n. | 異常值；極端個案 | ✓ | `the biggest outliers in history` |
+| gut feel | n.phr. | 直覺 | — | `go with your gut feel` |
+| vibes | n. (slang) | 直覺；氛圍判斷 | — | `they were vibes that turned out to be right` |
 
 ## Reading Comprehension · 模擬 TOEIC Part 7
 
@@ -150,26 +163,6 @@ TOEIC Part 7 略讀題的視覺化訓練——先抓骨架再讀細節。
 - 破折號 `–` 在 native 寫作 = 隨意版的 `because` / `that is`，比正式版輕快
 - `turned out to be right` = 結果證明是對的（後驗式判斷常用句型）
 - `that's the way the wind was blowing` = 「風向剛好對」的成語化表達，比 `by luck` 文學
-
----
-
-## Key Vocabulary（可朗讀 🔊）
-
-| word | pos | zh | TOEIC | note |
-|---|---|---|---|---|
-| [cast a wide net](../vocab/cast-a-wide-net.md) | idiom | 廣撒網 | — | 漁網比喻；商業／求職常用 |
-| [pick someone's brain](../vocab/pick-someones-brain.md) | idiom | 向某人請益 | — | Cook **反對泛用** → 要丟具體問題 |
-| mental load | n.phr. | 心理負擔 | — | `lessen the mental load` |
-| mutuals | n. | 共同認識的人 | — | LinkedIn 時代詞 |
-| [legwork](../vocab/legwork.md) | n. | 跑腿；事前準備 | ✓ | `do the legwork` |
-| [one pager](../vocab/one-pager.md) | n. | 一頁摘要文件 | — | 商業簡報基本格式 |
-| [stint](../vocab/stint.md) | n./v. | 一段任職期間 | ✓ | `a 5-year stint at Google` |
-| get found out | phr.v. | 被識破；露餡 | — | `not good people get found out` |
-| nail the problem | v.phr. | 精準點出問題 | — | `nail the solution` 也常用 |
-| attribute X to Y | v.phr. | 把 X 歸因於 Y | ✓ | TOEIC 寫作高頻 |
-| outlier | n. | 異常值；極端個案 | ✓ | `the biggest outliers in history` |
-| gut feel | n.phr. | 直覺 | — | `go with your gut feel` |
-| vibes | n. (slang) | 直覺；氛圍判斷 | — | `they were vibes that turned out to be right` |
 
 ---
 

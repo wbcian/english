@@ -1,9 +1,10 @@
 ---
 date: 2026-05-29
 topic: posthog-product-for-engineers-pack
-source: "PostHog newsletter (Product for Engineers) — 3-article pack: What is Product for Engineers? + Everything we've learned about hiring + Why we sell features, not benefits"
+source: "📖 PostHog newsletter · Product for Engineers · 3-article intro pack"
 type: lesson
-format: article
+track: reading
+audio: false
 url: https://newsletter.posthog.com/p/what-is-product-for-engineers
 word_count: 3590
 reading_time_min: 19
@@ -11,23 +12,13 @@ reading_time_min: 19
 
 # Product for Engineers — 3-Article Intro Pack
 
+<p class="lesson-subtitle">📖 PostHog newsletter（Product for Engineers）· 3-article intro pack · ~3590 words · 19 min</p>
+
 ## Topic & Summary
 
 PostHog 把他們 newsletter 的「自我介紹」短文（[What is Product for Engineers?](https://newsletter.posthog.com/p/what-is-product-for-engineers)）打包它內嵌的兩篇代表作做成一個 intro pack。**論述軸是「product engineer mindset」**——一個工程師除了寫 code，還主動跟 user 對話、自主決定該做什麼、對產品有意見的心態。3 篇連起來告訴你：(1) 這群人是什麼樣的人（**framing**）、(2) 怎麼招到他們（[**hiring 10 條原則**](https://newsletter.posthog.com/p/everything-weve-learned-about-hiring)，含 *SuperDay* 真實任務面試法）、(3) 跟這群人賣產品時為什麼要倒過來「[**賣 features 不賣 benefits**](https://newsletter.posthog.com/p/why-we-sell-features-not-benefits)」（因為 developer 對模糊的 marketing 語言過敏）。
 
 *PostHog packages their newsletter's "about" page together with the two articles it links to as a 3-piece intro pack. The thesis: **product engineer mindset** — engineers who, beyond shipping code, talk directly to users, decide autonomously what to work on, and have strong opinions about the product. The three pieces tell you (1) who these people are, (2) how to hire them (10 lessons, including the "SuperDay" paid trial day), and (3) why marketing to them inverts the usual playbook — sell features, not benefits — because developers are allergic to vague benefit-speak.*
-
-## Source
-
-| # | 文章 | 作者 | 字數 | 閱讀 |
-|---|---|---|---|---|
-| Main | [What is Product for Engineers?](https://newsletter.posthog.com/p/what-is-product-for-engineers) | PostHog team | ~290 | 1.5 min |
-| A | [Everything we've learned about hiring for startups (so far)](https://newsletter.posthog.com/p/everything-weve-learned-about-hiring) | Andy Vandervell (2023-09-07) | ~2,200 | 11 min |
-| B | [Why we sell features, not benefits](https://newsletter.posthog.com/p/why-we-sell-features-not-benefits) | James Hawkins (2023-08-03) | ~1,100 | 6 min |
-
-**格式**：純文字 newsletter（Substack），無 audio · **總閱讀時間**：約 19 分鐘 · **平台**：newsletter.posthog.com
-
----
 
 ## Article Map · 3 篇 + 整體論述串
 
@@ -70,6 +61,8 @@ PostHog 把他們 newsletter 的「自我介紹」短文（[What is Product for 
 
 ## Close Reading · 精選 4 段（可朗讀 🔊）
 
+<div class="lesson-body-scroll">
+
 ### §A — Framing（來自 Main）
 
 > Product engineers do all the things software engineers do, but they talk directly to users, work autonomously, and are opinionated about what to work on.
@@ -108,7 +101,27 @@ PostHog 把他們 newsletter 的「自我介紹」短文（[What is Product for 
 
 **Why this paragraph?** `stack up` 是 TOEIC 商業句型（比較高低）；用引號嘲諷 vague benefit-speak（`"make smarter decisions, faster"`）是 native 寫作的高階修辭——夾雜對方原話來反襯自己論點。
 
----
+</div>
+
+## Key Vocabulary（可朗讀 🔊）
+
+| word | pos | zh | TOEIC | source | note |
+|---|---|---|---|---|---|
+| [opinionated](../vocab/opinionated.md) | adj. | 有強烈意見的；有定見的 | ✓ | Main | 中性偏正面（商業情境）；vs 中文「固執」隱含負面 |
+| [autonomy](../vocab/autonomy.md) / autonomous | n. / adj. | 自主性；自主的 | ✓ | Main | `work autonomously` = 不用人盯著做 |
+| mindset | n. | 心態；思維模式 | ✓ | Main | `growth mindset` / `engineer mindset` |
+| soft yes | n.phr. | 「軟通過」——勉強同意但沒熱忱 | — | A | PostHog 招募術語；含義 = no |
+| SuperDay | proper n. | 付費試做日（招募方法） | — | A | PostHog 自創；可借用概念 |
+| [in demand](../vocab/in-demand.md) | adj.phr. | 搶手的；有需求的 | ✓ | A | `good people are always in demand` |
+| surefire | adj. | 必然的；十拿九穩的 | — | A | `surefire way to fail` |
+| [filter out](../vocab/filter-out.md) | phr.v. | 過濾掉；篩除 | ✓ | A | `filter out people who only interview well` |
+| bias for | v.phr. | 偏好；傾向於 | ✓ | A | `bias for action` / `bias for autonomy` 是 startup 標準語 |
+| weirdly transparent | adj.phr. | 透明到尷尬程度 | — | A | `weirdly + adj` 是 modern 強化用法 |
+| stack up (against) | phr.v. | 比較；較量 | ✓ | B | `how X stacks up against Y` |
+| sensitive to | adj.phr. | 對…敏感 | ✓ | B | `developers are sensitive to vague language` |
+| vague | adj. | 模糊的；含糊的 | ✓ | B | TOEIC 高頻；反義 `specific` |
+| evaluate | v. | 評估 | ✓ | B | `evaluate for yourself` |
+| Golden Rule | n.phr. | 黃金法則 | — | B | 用大寫強調這是首要原則 |
 
 ## Reading Comprehension · 模擬 TOEIC Part 7
 
@@ -193,28 +206,6 @@ PostHog 把他們 newsletter 的「自我介紹」短文（[What is Product for 
 - `near impossible` = `nearly impossible` 的口語版（省 ly 在 native 寫作很常見）
 - 比 `Although finding PMF is hard, doing it with a bad team is almost impossible.` 有力 5 倍——**isolated 短句 = 強調**
 - **可套句**：`Shipping fast is a challenge. Shipping fast without breaking things is brutal.`
-
----
-
-## Key Vocabulary（可朗讀 🔊）
-
-| word | pos | zh | TOEIC | source | note |
-|---|---|---|---|---|---|
-| [opinionated](../vocab/opinionated.md) | adj. | 有強烈意見的；有定見的 | ✓ | Main | 中性偏正面（商業情境）；vs 中文「固執」隱含負面 |
-| [autonomy](../vocab/autonomy.md) / autonomous | n. / adj. | 自主性；自主的 | ✓ | Main | `work autonomously` = 不用人盯著做 |
-| mindset | n. | 心態；思維模式 | ✓ | Main | `growth mindset` / `engineer mindset` |
-| soft yes | n.phr. | 「軟通過」——勉強同意但沒熱忱 | — | A | PostHog 招募術語；含義 = no |
-| SuperDay | proper n. | 付費試做日（招募方法） | — | A | PostHog 自創；可借用概念 |
-| [in demand](../vocab/in-demand.md) | adj.phr. | 搶手的；有需求的 | ✓ | A | `good people are always in demand` |
-| surefire | adj. | 必然的；十拿九穩的 | — | A | `surefire way to fail` |
-| [filter out](../vocab/filter-out.md) | phr.v. | 過濾掉；篩除 | ✓ | A | `filter out people who only interview well` |
-| bias for | v.phr. | 偏好；傾向於 | ✓ | A | `bias for action` / `bias for autonomy` 是 startup 標準語 |
-| weirdly transparent | adj.phr. | 透明到尷尬程度 | — | A | `weirdly + adj` 是 modern 強化用法 |
-| stack up (against) | phr.v. | 比較；較量 | ✓ | B | `how X stacks up against Y` |
-| sensitive to | adj.phr. | 對…敏感 | ✓ | B | `developers are sensitive to vague language` |
-| vague | adj. | 模糊的；含糊的 | ✓ | B | TOEIC 高頻；反義 `specific` |
-| evaluate | v. | 評估 | ✓ | B | `evaluate for yourself` |
-| Golden Rule | n.phr. | 黃金法則 | — | B | 用大寫強調這是首要原則 |
 
 ---
 

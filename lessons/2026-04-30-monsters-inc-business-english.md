@@ -1,11 +1,15 @@
 ---
 date: 2026-04-30
 topic: monsters-inc-business-english
-source: RealLife English — Learn English with Monsters, Inc. (Sulley meets Waternoose)
+source: "🎬 RealLife English · Monsters, Inc.（Sulley meets Waternoose）· 電影教學"
 type: lesson
+track: dialogue
+audio: true
 ---
 
 # Monsters, Inc. — Business English & Connected Speech
+
+<p class="lesson-subtitle">🎬 RealLife English · Monsters, Inc.（Sulley meets Waternoose）· 電影教學</p>
 
 ## Topic & Summary
 
@@ -16,6 +20,8 @@ Ethan 用 *Monsters, Inc.* 開場那場 Sulley 進老闆 Waternoose 辦公室的
 ## Power Company Training Film — Full Transcript
 
 > 影片中 Monsters, Inc. 給新進 scarer 看的「電力公司宣導短片」+「訓練員 PSA」段落。Ethan 把它切成三段播放，這裡按播放順序合併。
+
+<div class="lesson-body-scroll">
 
 **🎬 [00:55 — Intro Clip A]** Trainer / Voice-over
 
@@ -38,6 +44,8 @@ Ethan 用 *Monsters, Inc.* 開場那場 Sulley 進老闆 Waternoose 辦公室的
 > "You're going in there because we need this! Our city is counting on you to collect those children's screams. Without scream, we have no power."
 
 中文 → 你必須進去，因為我們需要這個！整個城市都指望你去收集那些小孩的尖叫聲。沒有尖叫，我們就沒有電。
+
+</div>
 
 ### 短片關鍵句拆解
 

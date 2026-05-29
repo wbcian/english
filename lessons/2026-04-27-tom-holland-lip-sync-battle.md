@@ -1,11 +1,15 @@
 ---
 date: 2026-04-27
 topic: tom-holland-lip-sync-battle
-source: RealLife App — Tom Holland × Gordon Ramsay cooking interview
+source: "🎬 RealLife App · Tom Holland × Gordon Ramsay · 烹飪訪談"
 type: lesson
+track: dialogue
+audio: true
 ---
 
 # Tom Holland's Iconic Lip Sync Battle Story
+
+<p class="lesson-subtitle">🎬 RealLife App · Tom Holland × Gordon Ramsay · 烹飪訪談</p>
 
 ## Topic & Summary
 

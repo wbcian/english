@@ -3,24 +3,21 @@ date: 2026-05-23
 topic: sabrina-espresso-part-2-discourse
 series: sabrina-espresso
 part: 2
-source: "English learning lesson (host: Ethan) on Sabrina Carpenter's 'Espresso' — Part 2 of 3: interview front-half — discourse markers, intensifiers, tap T (04:02–07:39). Transcript reconstructed from user's screenshots."
+source: "🎧 英語學習課程（主持人 Ethan）· Sabrina Carpenter 訪談 · Part 2 訪談前半"
 type: lesson
+track: dialogue
+audio: true
 ---
 
 # Sabrina's《Espresso》系列 — Part 2：訪談前半 — Z 世代口語密度
+
+<p class="lesson-subtitle">🎧 英語學習課程（主持人 Ethan）· Sabrina Carpenter 訪談 · Part 2 訪談前半（04:02–07:39）</p>
 
 ## Topic & Summary
 
 承接 [Part 1](2026-05-21-sabrina-espresso-part-1-song.md) 的歌詞 + 連音入門，這集 Ethan 開始拆訪談——重點不是 Sabrina 講「什麼」，而是她**怎麼講**。一段話塞了 5 個 `like`、`literally walking around every single cafe`、`has nothing to do with me`——這就是 Z 世代美式口語的密度。順便引入第三條連音規則 **tap T**（"nothing to do" → [nothing-duh-do]）。
 
 > Picking up from [Part 1](2026-05-21-sabrina-espresso-part-1-song.md)'s lyrics + connected-speech intro, Ethan starts unpacking the interview — focus shifts from *what* Sabrina says to *how* she says it. One sentence packs 5 uses of `like`, `literally walking around every single cafe`, `has nothing to do with me` — this is Gen-Z American density. Bonus: the third connected-speech rule, **tap T** (e.g. "nothing to do" → [nothing-duh-do]).
-
-## Source
-
-- **格式**：英語學習課程，主持人 Ethan（藍字 highlight 重點表達）
-- **教材**：Sabrina Carpenter 訪談片段（Zane Lowe interview 等）
-- **逐字稿**：使用者提供的截圖（04:02–07:39）
-- **本回重點**：discourse markers（`like` 三用法）、intensifiers（`literally` / `every single`）、tap T 規則
 
 ## 🎬 Series Map
 
@@ -31,7 +28,9 @@ type: lesson
 
 ---
 
-## The Transcript（精選 — 跟讀用）
+## 正文 · 跟讀用（訪談精選）
+
+<div class="lesson-body-scroll">
 
 > **Scene A — Sabrina (04:08)**
 > It's what's so crazy, **like**, this is the part of me that feels **like** an idiot every time I see, **like**, a cafe, there's just a sign that says, "Espresso," and I'm **like**, "Yes!"… Oh my God. Nothing to do with me.
@@ -70,6 +69,8 @@ type: lesson
 
 > **Ethan (07:39)**
 > Adding "single" after "every" stresses that there are **zero exceptions**. *Every* cafe, not one left out. I could say, "I've watched **every single** episode of Seinfeld at least three times." Or "She meditates **every single** day" — she never misses.
+
+</div>
 
 ---
 

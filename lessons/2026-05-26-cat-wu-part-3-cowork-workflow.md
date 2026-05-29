@@ -3,26 +3,21 @@ date: 2026-05-26
 topic: cat-wu-part-3-cowork-workflow
 series: cat-wu-anthropic-product-team
 part: 3
-source: "Lenny's Podcast — interview with Cat Wu (Head of Product, Claude Code @ Anthropic). Slice covers the four-product split (CLI / Desktop / Web&Mobile / Cowork), Cowork data-source setup, a live slide-deck workflow with Cat's actual prompt, and internal custom-app examples. Source file: transcripts/2026-05-25-cat-wu-anthropic-product-team.txt (lines 1417–1715 + 1881–1989)."
+source: "🎧 Lenny's Podcast · Cat Wu（Anthropic, Claude Code 產品負責人）· 訪談切片 Part 3"
 type: lesson
+track: dialogue
+audio: true
 ---
 
 # Cat Wu 訪談 — Part 3：Cowork in Practice — 親自示範做 slide deck
+
+<p class="lesson-subtitle">🎧 Lenny's Podcast · Cat Wu（Anthropic, Claude Code 產品負責人）· 訪談切片 Part 3（lines 1417–1715 + 1881–1989）</p>
 
 ## Topic & Summary
 
 承接 [Part 1](2026-05-26-cat-wu-part-1-shipping-speed.md) 的速度哲學跟 [Part 2](2026-05-25-cat-wu-pm-skills-and-taste.md) 的 PM 技能盤點，這集進到**怎麼實際用**。Cat 拆四個產品（CLI / Desktop / Web&Mobile / Cowork）的使用情境、示範一個跨夜跑的 slide deck workflow——連她**實際打的 prompt 都唸出來**。三大可帶走的東西：(1) `kick off / on the go / touching grass` 三個生活感超強的工作詞；(2) 「連接資料源」是 Cowork 第一步的工程化思維；(3) 業務同事手刻內部 app 的 case study，看 AI 怎麼把「重複手動工作」變成「一鍵 tailored 輸出」。
 
 > Picking up from [Part 1](2026-05-26-cat-wu-part-1-shipping-speed.md)'s speed philosophy and [Part 2](2026-05-25-cat-wu-pm-skills-and-taste.md)'s PM skill audit, this part shifts to **how it's actually used**. Cat breaks down when to reach for each of the four products (CLI / Desktop / Web&Mobile / Cowork) and walks through an overnight slide-deck workflow — reading out her actual prompt. Three takeaways: (1) `kick off / on the go / touching grass` — three idioms that make work-talk feel human; (2) "connect data sources first" as the engineering-style mindset for Cowork; (3) a sales-team custom-app case study showing how AI converts repetitive manual work into one-click tailored output.
-
-## Source
-
-- **格式**：podcast 訪談（Lenny's Podcast，主持人 Lenny Rachitsky）
-- **來賓**：Cat Wu，Anthropic Claude Code & Cowork 產品負責人
-- **本回切片**：訪談中後段——四產品定位 / Cowork 工作流 / 自製內部 app（lines 1417–1715 + 1881–1989）
-- **本回重點**：8 個產品實作詞、Cat 的 slide-deck prompt 拆解、`as soon as I woke up to it` 句式
-
----
 
 ## 🎬 Series Map
 
@@ -33,7 +28,9 @@ type: lesson
 
 ---
 
-## The Transcript（精選 — 跟讀用）
+## 正文 · 跟讀用（訪談精選）
+
+<div class="lesson-body-scroll">
 
 > **Scene 1 — Cat (line 1429)** — *什麼時候用 CLI*
 > So I tend to use Cloud Code in the terminal when I'm just **kicking off** like a **one-off** coding task, and I want all of the latest features. The CLI is our initial product surface, and it's also the one where our features often **land first**.
@@ -64,6 +61,8 @@ type: lesson
 
 > **Cat (1921)** — *銷售團隊自製 app*
 > One of the sales folks on Cloud Code... he realized he was making these like **repetitive decks** over and over. And so he actually has this web app that he built with the examples of the core Cloud Code decks that we know work well... And then he has a way to **input specific customer context** that pulls from Salesforce, that pulls from Gong, that pulls from other notes so that we can customize the decks for specific customers.
+
+</div>
 
 ---
 

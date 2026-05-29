@@ -3,26 +3,21 @@ date: 2026-05-26
 topic: cat-wu-part-1-shipping-speed
 series: cat-wu-anthropic-product-team
 part: 1
-source: "Lenny's Podcast — interview with Cat Wu (Head of Product, Claude Code @ Anthropic). Slice covers Cat-Boris working relationship, AI-era shipping speed, research preview branding, mission > product. Source file: transcripts/2026-05-25-cat-wu-anthropic-product-team.txt (lines 51–441 + 1273–1415; ads / source-code leak / OpenCloud politics 已跳過)."
+source: "🎧 Lenny's Podcast · Cat Wu（Anthropic, Claude Code 產品負責人）· 訪談切片"
 type: lesson
+track: dialogue
+audio: true
 ---
 
 # Cat Wu 訪談 — Part 1：Anthropic 怎麼出貨那麼快
+
+<p class="lesson-subtitle">🎧 Lenny's Podcast · Cat Wu（Anthropic, Claude Code 產品負責人）· 訪談切片 lines 51–441 + 1273–1415</p>
 
 ## Topic & Summary
 
 承接 [Part 2](2026-05-25-cat-wu-pm-skills-and-taste.md) 的 PM 技能盤點，回頭看整集的開頭——Lenny 一上來就問：你跟 Boris 怎麼分工？為什麼 Anthropic 每天都在出新東西？Cat Wu 拋出三組關鍵句：「**we kind of like mind meld**」（Star Trek idiom，講默契）、「**ship in research preview**」（產品早期 branding 策略）、「**we're very low on process, remove every single barrier**」（反流程哲學）。再加上她點名 Anthropic 的最強護城河——**unifying mission > 任何單一 product line**，這集把矽谷頂級 AI 公司的內部運轉邏輯解剖給你看。
 
 > Picking up from [Part 2](2026-05-25-cat-wu-pm-skills-and-taste.md)'s skill audit, this part rewinds to the interview opener: Lenny asks how Cat and Boris split responsibilities, and why Anthropic ships something new every day. Cat lands three key phrases — `mind meld` (Star Trek idiom for chemistry), `ship in research preview` (early-product branding strategy), `we're very low on process` (anti-process philosophy). Add to that Anthropic's deepest moat — putting `unifying mission` ahead of any single product line — and you get a dissection of how a top AI company actually runs internally.
-
-## Source
-
-- **格式**：podcast 訪談（Lenny's Podcast，主持人 Lenny Rachitsky）
-- **來賓**：Cat Wu，Anthropic Claude Code & Cowork 產品負責人
-- **本回切片**：訪談開頭——Cat 角色、AI 時代速度、research preview、Anthropic mission（transcript lines 51–441 + 1273–1415）
-- **本回重點**：6 個職場核心詞、`from N to M` 對比時間軸、`X above Y` 優先級宣示句式
-
----
 
 ## 🎬 Series Map
 
@@ -33,7 +28,9 @@ type: lesson
 
 ---
 
-## The Transcript（精選 — 跟讀用）
+## 正文 · 跟讀用（訪談精選）
+
+<div class="lesson-body-scroll">
 
 > **Scene 1 — Lenny (line 67)**
 > I think people don't give you enough credit for the success that Cloud Code has had... Help us understand your role on the team, how you work with Boris...
@@ -64,6 +61,8 @@ type: lesson
 
 > **Cat (1379)** — *極端 mission-first 的例子*
 > So like an extreme example is if Cloud Code failed, but Anthropic succeeded, **I would be extremely happy**. And like the whole team is very willing to make decisions that follow that chain of thought.
+
+</div>
 
 ---
 

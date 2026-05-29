@@ -1,11 +1,15 @@
 ---
 date: 2026-05-25
 topic: cat-wu-pm-skills-and-taste
-source: "Lenny's Podcast — interview with Cat Wu (Head of Product, Claude Code @ Anthropic). Slice covers PM skills, product taste, wearing many hats, leaning into chaos. Source file: transcripts/2026-05-25-cat-wu-anthropic-product-team.txt (lines 669–1075)."
+source: "🎧 Lenny's Podcast · Cat Wu（Anthropic, Claude Code 產品負責人）· 訪談切片 Part 2"
 type: lesson
+track: dialogue
+audio: true
 ---
 
 # Cat Wu 訪談 — Part 2：PM 該長什麼樣 — Taste、Many Hats、Lean Into Chaos
+
+<p class="lesson-subtitle">🎧 Lenny's Podcast · Cat Wu（Anthropic, Claude Code 產品負責人）· 訪談切片 Part 2（lines 669–1075）</p>
 
 ## Topic & Summary
 
@@ -13,16 +17,9 @@ type: lesson
 
 > Lenny grills Cat Wu (Head of Product, Claude Code @ Anthropic) on what PMs actually need to be good at in the AI era. Cat skips the textbook checklist and drops the real working vocabulary: `product taste`, `wear a lot of hats`, `low ego`, `first-principles thinking`, `lean into the chaos`. These aren't buzzwords — they're how she decides who gets hired and who survives at Anthropic. This lesson extracts 8 dialogue chunks and unpacks each term so you can actually use them.
 
-## Source
+## 正文 · 跟讀用（訪談精選）
 
-- **格式**：podcast 訪談（Lenny's Podcast，主持人 Lenny Rachitsky）
-- **來賓**：Cat Wu，Anthropic Claude Code & Cowork 產品負責人
-- **本回切片**：訪談中段——PM 角色融合 / Product Taste / 處理混亂的心態（transcript 第 669–1075 行）
-- **本回重點**：6 個職場核心詞、`X is becoming more Y, which means…` 句式、`lean into N` 用法
-
----
-
-## The Transcript（精選 — 跟讀用）
+<div class="lesson-body-scroll">
 
 > **Scene 1 — Lenny (line 657)**
 > There's always the sense that we need fewer PMs in the future. What do we need PMs? Engineers can just ship. His [Amul's] take is that because engineers are moving so fast, PMs and designers are squeezed... So his take is he needs more PMs because it's hard to keep up. What's your take there?
@@ -53,6 +50,8 @@ type: lesson
 
 > **Lenny (1035)** — *the Pirates of the Caribbean image*
 > What I'm imagining is there's that gif… from Pirates of the Caribbean, where it's this guy walking down a pair of stairs on a ship, and the whole ship is just being demolished around him, and he's so chill, just **strolling down the staircase** as everything's falling apart.
+
+</div>
 
 ---
 

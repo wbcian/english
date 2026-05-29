@@ -3,24 +3,21 @@ date: 2026-05-23
 topic: sabrina-espresso-part-3-cafe
 series: sabrina-espresso
 part: 3
-source: "English learning lesson (host: Ethan) on Sabrina Carpenter's 'Espresso' — Part 3 of 3: interview back-half — cafe scene + reflection (08:06–12:40). Transcript reconstructed from user's screenshots."
+source: "🎧 英語學習課程（主持人 Ethan）· Sabrina Carpenter 訪談 · Part 3 訪談後半"
 type: lesson
+track: dialogue
+audio: true
 ---
 
 # Sabrina's《Espresso》系列 — Part 3：訪談後半 — 咖啡店場景 + 自我反思
+
+<p class="lesson-subtitle">🎧 英語學習課程（主持人 Ethan）· Sabrina Carpenter 訪談 · Part 3 訪談後半（08:06–12:40）</p>
 
 ## Topic & Summary
 
 訪談轉場到咖啡店現場：Sabrina 開始 **question**（懷疑）點 espresso 會不會被認出來、**barista**（咖啡師）等她講出招牌字，結果她點了一杯 **herbal tea**（順便學美音為什麼 drop H）、Zane 用英式俚語 `brilliant` 附和，最後 Sabrina 反省會不會被認為 **conceited**（自負）。本 part 是訪談的「反思戲」，咖啡店場景語彙超實用。最後用一張表把整個系列的三條連音規則收尾。
 
 > The interview shifts to the coffee-shop scene: Sabrina starts **questioning** whether she should order espresso anymore, **baristas** are waiting for her to say it, she ends up with **herbal tea** (cue the American H-drop lesson), Zane drops the British `brilliant`, and Sabrina worries about coming off as **conceited**. The reflection chapter of the interview, packed with café-scene vocabulary. The whole series wraps with a 3-rule connected-speech summary.
-
-## Source
-
-- **格式**：英語學習課程，主持人 Ethan（藍字 highlight 重點表達）
-- **教材**：Sabrina Carpenter 訪談片段（Zane Lowe interview 等）
-- **逐字稿**：使用者提供的截圖（08:06–12:40）
-- **本回重點**：咖啡店語彙、英美發音對比（H-drop）、tap T 再應用、`that's on you` 推鍋萬用句
 
 ## 🎬 Series Map
 
@@ -31,7 +28,9 @@ type: lesson
 
 ---
 
-## The Transcript（精選 — 跟讀用）
+## 正文 · 跟讀用（訪談精選）
+
+<div class="lesson-body-scroll">
 
 > **Scene A — Sabrina (08:06)**
 > No, I don't do that. But I do have to **question** ordering it a lot now.
@@ -70,6 +69,8 @@ type: lesson
 
 > **Ethan (12:02)**
 > Someone who's **conceited** has an **inflated opinion of themselves**. Sabrina's worried that if she orders an espresso, people will think she's showing off. And by the way, we say this with that **tap T**: [con-see-did], [con-see-did] — not "con-see-ted."
+
+</div>
 
 ---
 
