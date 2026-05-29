@@ -10,6 +10,11 @@ const lessons = defineCollection({
     type: z.literal('lesson'),
     series: z.string().optional(),
     part: z.number().optional(),
+    // Reading-lesson 專用 optional 欄位（podcast lesson 不填即可）
+    format: z.enum(['podcast', 'article']).optional(),
+    url: z.string().url().optional(),
+    word_count: z.number().optional(),
+    reading_time_min: z.number().optional(),
   }),
 });
 
