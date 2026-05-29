@@ -71,8 +71,8 @@
 - 📚 候選新字（待 Cian 挑選入 SRS）：nestled, charming, scent, odor, hide, pelt, tannery, craftsman, soak, fragrant, fertile, abundant, mild, ingredient, luxurious, antique, perfumer
 
 ## 2026-05-04
-- 🎧 Lesson: RealLife English × Peaky Blinders: The Immortal Man — Tommy Returns to The Garrison → [lesson](lessons/2026-05-04-peaky-blinders-immortal-man.md)
-- 📚 新增 10 個單字／片語：patron, flabbergasted, pub, home turf, escape one's notice, -shy (suffix), sweetheart, number (music), brought the house down, faze
+- 🎧 Lesson: RealLife English × Peaky Blinders: The Immortal Man — Tommy Returns to The Garrison（2026-05-29 移除）
+- 📚 當日新增 10 字；其中 9 字（patron, flabbergasted, pub, home turf, escape one's notice, -shy (suffix), sweetheart, number (music), brought the house down）隨 lesson 移除，保留 faze（仍在弱點清單：faze ≠ phase 拼字）
 - 📝 lesson 重點：Brummie dialect（me = my）、`-shy` 字尾家族（war-shy / camera-shy / work-shy / commitment-shy）、sweetheart 雙面刃用法（真誠 vs 諷刺）、faze ≠ phase 拼字陷阱
 - 📝 文化背景：The Garrison = Shelby 家 home turf；Fred Astaire & Ginger Rogers = 30s/40s 影史經典舞蹈雙人組
 
