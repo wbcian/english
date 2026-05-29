@@ -35,32 +35,52 @@ audio: true
 > **Scene 1 — Cat (line 1429)** — *什麼時候用 CLI*
 > So I tend to use Cloud Code in the terminal when I'm just **kicking off** like a **one-off** coding task, and I want all of the latest features. The CLI is our initial product surface, and it's also the one where our features often **land first**.
 
+> Scene 1 — Cat（line 1429）：我通常會在 terminal 裡用 Cloud Code，特別是當我只是要 kick off（啟動）一個 one-off（一次性）的 coding task、又想用到所有最新功能的時候。CLI 是我們最初的產品介面，新功能往往也都是先在這裡 land（上線）。
+
 > **Cat (1451)** — *Desktop 適合 front-end*
 > I think desktop really **shines** when you're doing something that requires front-end work. And so one thing that I love to do is to use our preview feature. So if I'm building a web app, I'll often use Cloud Code and Desktop. I'll have the **preview pane** open on the right-hand side so that I can actually see the web app that I'm making in real time as I'm chatting with Cloud.
+
+> Cat（1451）：我覺得 Desktop 在你做需要前端的工作時最能發揮優勢。我超愛用的一個功能就是 preview（預覽）。所以如果我在做一個 web app，我常常會同時用 Cloud Code 跟 Desktop，把 preview pane（預覽窗格）開在右邊，這樣我一邊跟 Cloud 對話，就能即時看到我正在做的網頁長什麼樣子。
 
 > **Cat (1487)** — *Desktop 當 control plane*
 > Desktop is also great for getting an **at-a-glance** view of everything that's happening. So you can see your CLI terminal sessions in desktop... It's a **one-stop control plane** where you can see all of your tasks.
 
+> Cat（1487）：Desktop 也很適合用來 at-a-glance（一眼）掌握所有正在進行的事。你可以在 Desktop 裡看到你的 CLI terminal sessions……它就是一個 one-stop control plane（一站式控制台），所有的 task 都看得到。
+
 > **Cat (1503)** — *Web & Mobile 的 niche*
 > I think the benefit of web and mobile is that it's really great for **kicking things off on the go**... You're like **touching grass**, you're going on a walk, and you don't have your laptop open.
+
+> Cat（1503）：我覺得 web 跟 mobile 的好處是，它真的很適合讓你 on the go（在路上、移動中）就把事情 kick off（啟動）起來……就是你正在 touching grass（出去走走、離開電腦）、在散步，手邊沒開筆電的那種時候。
 
 > **Cat (1545)** — *Cowork 的定位*
 > The role that this fills is there's a lot of work that everyone does **where the output isn't code**. So whether that's like getting to Slack zero or **inbox zero**, or whether that's creating a slide deck for some customer meeting... So the way that I split the products in my mind is **if the output is code, I'll use Cloud Code... if the output is anything that's not code, I'll use Cowork for it**.
 
+> Cat（1545）：它要補的這個角色是——大家其實有很多工作，輸出的東西並不是 code。不管是把 Slack 清空、達到 inbox zero（收件夾清空），還是替某個客戶會議做一份 slide deck（投影片）……所以我腦中區分這幾個產品的方式就是：如果輸出是 code，我就用 Cloud Code……如果輸出是任何不是 code 的東西，我就用 Cowork 來做。
+
 > **Cat (1597)** — *Cowork 第一步：連接資料源*
 > If you're getting started on Cowork, the first thing that you really need to do is **connect all the data sources** that are relevant to your role. Because Cowork can only do a great job if it has **access to all the context** that it needs to be able to **curate** the output for you... I connected to my Google Calendar, I connected to my Slack, to my Gmail, to my Google Drive.
+
+> Cat（1597）：如果你剛開始用 Cowork，你真正要做的第一件事，就是把所有跟你角色相關的 data source（資料源）都連接起來。因為 Cowork 只有在能 access to all the context（讀到它需要的所有脈絡）時，才有辦法替你 curate（精選整理）出好的輸出……我連了我的 Google Calendar、連了我的 Slack、Gmail，還有 Google Drive。
 
 > **Cat (1625)** — *Slide deck workflow 開場*
 > Last night, I was working where we have this Code with Cloud conference coming up and there's a few talks that I'm giving there... I have my Google Drive connected, I have Slack connected. Alex, who's our product marketer, put together like a **draft** of what the points that he thinks we should cover are. And so I just like **fed this all into Cowork**.
 
+> Cat（1625）：昨天晚上我在忙，因為我們有一場 Code with Cloud 研討會快到了，我要在上面講幾場 talk……我的 Google Drive 連好了、Slack 也連好了。Alex，我們的產品行銷，他整理了一份 draft（草稿），列出他覺得我們應該涵蓋的重點。所以我就直接把這一整包 fed into Cowork（餵給 Cowork）。
+
 > **Cat (1665)** — *Cowork 跑了一整夜*
 > And it actually just **worked for an hour**. It walked through Twitter to see what we launched. It looked through our Evergreen Launch Room... And it **synthesized** all this together to this 20 page deck that I woke up to this morning. And I read through it and it was like pretty good. There were a few tweaks.
+
+> Cat（1665）：然後它就真的整整跑了一個小時。它去翻了 Twitter 看我們發布了什麼，也看過我們的 Evergreen Launch Room……再把這些全部 synthesize（統整）成一份 20 頁的 deck，我今天早上一醒來就看到了。我從頭讀過一遍，覺得還滿不錯的，只需要改幾個小地方。
 
 > **Cat (1747)** — *Cat 實際打的 prompt（直接拿來用）*
 > So I just wrote: "**Make me a slide deck** for the Code with Cloud conference. **This is what our PMM suggested it should cover.** **This is the current draft that I made that I don't like.** **This is one that I made manually that I don't like and I linked it. Can you start by creating a proposed outline with details? Also make sure it doesn't overlap too much with a keynote talk, which is more important.**"
 
+> Cat（1747）：所以我就打了：「幫我做一份 Code with Cloud 研討會用的 slide deck。這是我們 PMM 建議應該涵蓋的內容。這是我自己做的、我不喜歡的現有草稿。這是另一份我手動做的、我也不喜歡的，我把連結附上了。你可以先幫我做一份附細節的提案大綱嗎？另外要確保它不要跟一場 keynote talk 重疊太多，那場比較重要。」
+
 > **Cat (1921)** — *銷售團隊自製 app*
 > One of the sales folks on Cloud Code... he realized he was making these like **repetitive decks** over and over. And so he actually has this web app that he built with the examples of the core Cloud Code decks that we know work well... And then he has a way to **input specific customer context** that pulls from Salesforce, that pulls from Gong, that pulls from other notes so that we can customize the decks for specific customers.
+
+> Cat（1921）：Cloud Code 團隊裡有一位做業務的同事……他發現自己一直在重複做這些 repetitive decks（一再重複的投影片）。所以他乾脆做了一個 web app，裡面放了那些我們知道效果很好的核心 Cloud Code deck 範例……然後他還做了一個地方可以 input specific customer context（輸入特定客戶的脈絡），會去拉 Salesforce、拉 Gong、拉其他筆記的資料，這樣我們就能針對特定客戶客製化這些 deck。
 
 </div>
 
@@ -68,7 +88,7 @@ audio: true
 
 ## Key Vocabulary
 
-| word / phrase | pos | zh | note |
+| word | pos | zh | note |
 |---|---|---|---|
 | kick off | phr. v. | 啟動（任務 / 專案）；開球 | 工作 / 運動雙用；可接 a task / a meeting / a project |
 | one-off | adj. / n. | 一次性的（非循環） | 形容詞用法多；對比 recurring / repetitive |

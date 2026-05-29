@@ -26,32 +26,52 @@ audio: true
 > **Scene 1 — Lenny (line 657)**
 > There's always the sense that we need fewer PMs in the future. What do we need PMs? Engineers can just ship. His [Amul's] take is that because engineers are moving so fast, PMs and designers are squeezed... So his take is he needs more PMs because it's hard to keep up. What's your take there?
 
+> Scene 1 — Lenny（line 657）：總有種聲音說我們未來需要更少的 PM。我們到底為什麼需要 PM？工程師自己就能出貨啊。他（Amul）的看法是，因為工程師動得太快了，PM 跟設計師反而被擠壓……所以他的看法是他需要更多 PM，因為實在很難跟上。你怎麼看？
+
 > **Cat (669)**
 > I think **all of the roles are emerging**. PMs are doing some engineering work. Engineers are doing PM work. Designers are PMing and also landing code. You can either hire a lot more engineers who have great **product taste**, or you can keep your engineering hiring the same and hire a lot more PMs to help guide some of their work.
+
+> Cat（669）：我覺得所有的角色都在融合。PM 在做一些工程的工作，工程師在做 PM 的工作，設計師既在做 PM 的事、也在實際寫 code 出貨。你要嘛多請一堆有很好 product taste（產品品味）的工程師，要嘛工程師招募維持原樣、改多請一堆 PM 來引導他們的部分工作。
 
 > **Cat (685)**
 > On our team, we're pretty focused on hiring engineers with great product taste. This way, we can reduce the amount of overhead for shipping any product. There are many engineers on our team who are fully able to end to end go from see user feedback on Twitter through to ship a product at the end of the week with almost no product involvement.
 
+> Cat（685）：在我們團隊，我們很專注於招募有很好 product taste 的工程師。這樣一來，我們就能減少出貨任何產品所需的 overhead（額外協調成本）。我們團隊有很多工程師完全有能力從頭到尾包辦——從在 Twitter 上看到使用者回饋，一路到週末就把產品出貨，過程幾乎不需要任何產品端的介入。
+
 > **Cat (763)**
 > I still think it comes back to **product taste**. As code becomes much cheaper to write, the thing that becomes more valuable is **deciding what to write**. What is the right UX for this feature? What is the most delightful way that a user can experience it?
+
+> Cat（763）：我還是覺得這回到 product taste。當程式碼變得便宜很多，變得更有價值的就是「決定要寫什麼」。這個功能正確的 UX 是什麼？讓使用者體驗它最令人愉悅的方式又是什麼？
 
 > **Cat (845)**
 > I think the most important thing is to be able to have this **first-principles thinking** where you can figure out how the tech landscape is changing, what the team really needs from you, and to jump in and fix that hole. Because I think the work is becoming more **amorphous**, which means that a great PM is able to understand what all the gaps are, to figure out what the highest priority ones are…
 
+> Cat（845）：我覺得最重要的是要有這種 first-principles thinking（第一性原理思考）——你能搞清楚科技版圖正在怎麼變、團隊真正需要你做什麼，然後跳進去把那個缺口補上。因為我覺得工作正變得越來越 amorphous（模糊、沒有固定形狀），這意味著一個好的 PM 能看懂所有的缺口在哪，再判斷出哪些是最高優先的……
+
 > **Cat (869)**
 > So I think the current environment values people who are able to **wear a lot of hats**, are able to **swap them**, and are very **low ego** about what work they do to help the team move faster.
+
+> Cat（869）：所以我覺得現在這個環境，看重的是那種能 wear a lot of hats（身兼數職）、能 swap them（在角色之間快速切換）、而且對於自己做什麼工作來幫團隊加速這件事非常 low ego（不擺架子）的人。
 
 > **Scene 2 — Lenny (937)**
 > How do you just deal as a human going through so much constant change, just being **on the inside of the tornado**? Maybe it's calm there. But just how do you stay on top of what's going on?
 
+> Scene 2 — Lenny（937）：身為一個人，要怎麼撐過這麼多持續不斷的變動，一直待在 on the inside of the tornado（龍捲風的正中心）？也許那裡其實很平靜啦。但你到底是怎麼掌握住一切狀況的？
+
 > **Cat (951)**
 > I think our team is full of people who **lean into the chaos**. So we try to **face every challenge with a smile**, because there's always so much going on. There's always so many risks and tricky situations that if you get too stressed about anything, you'll **burn out**.
+
+> Cat（951）：我覺得我們團隊滿滿都是會 lean into the chaos（擁抱混亂、主動進場應對）的人。所以我們試著 face every challenge with a smile（帶著笑面對每個挑戰），因為永遠有那麼多事情在發生。永遠有那麼多風險和棘手狀況，要是你對任何一件事太緊張，你就會 burn out（燒壞、過勞）。
 
 > **Cat (985)**
 > I feel like there are a lot of weeks where maybe Sunday night there's some **P0**. And then by Monday, there's a **P00**. And by Monday afternoon, there's a **P000**. And you're like, wow, I can't believe I was so worried about that P0 from Sunday. But I think you just have to acknowledge that there's only so much that you can do… and just **brutally prioritize** where you spend your time…
 
+> Cat（985）：我覺得有很多週是這樣的——大概週日晚上會冒出某個 P0（最高優先級的事件），到了週一變成 P00，週一下午又變成 P000。然後你會想，哇，真不敢相信我週日竟然為那個 P0 那麼擔心。但我覺得你就是得 acknowledge（承認）——你能做的就只有這麼多……然後 brutally prioritize（狠狠地排優先級）你要把時間花在哪……
+
 > **Lenny (1035)** — *the Pirates of the Caribbean image*
 > What I'm imagining is there's that gif… from Pirates of the Caribbean, where it's this guy walking down a pair of stairs on a ship, and the whole ship is just being demolished around him, and he's so chill, just **strolling down the staircase** as everything's falling apart.
+
+> Lenny（1035）：我腦中浮現的是那個 gif……來自《神鬼奇航》，畫面是一個男人走下船上的一段樓梯，整艘船在他身邊被炸得稀爛，而他超級淡定，就這樣 strolling down the staircase（悠閒地踱步走下樓梯），任由一切在身旁分崩離析。
 
 </div>
 
