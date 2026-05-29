@@ -27,7 +27,7 @@ Ethan 用 *Monsters, Inc.* 開場那場 Sulley 進老闆 Waternoose 辦公室的
 
 > "There's nothing more toxic or deadly than a human child. A single touch could **KILL YOU**! Leave a door open, and a child could walk right into this factory! Right into the monster world! I won't go in a kid's room! You can't make me! You're going in there because we need this! Our city is **counting on you** to collect those children's screams. Without scream, we have no power."
 
-中文 → 沒有什麼比人類小孩更毒、更致命的了。一個觸碰就能**害死你**！只要有人沒關門，小孩就會直接闖進這座工廠！直接闖進怪獸世界！我才不要進小孩的房間！你不能逼我！你必須進去，因為我們**需要**這個！整個城市都**指望你**去收集那些小孩的尖叫聲。沒有尖叫，我們就沒有電。
+> 沒有什麼比人類小孩更毒、更致命的了。一個觸碰就能**害死你**！只要有人沒關門，小孩就會直接闖進這座工廠！直接闖進怪獸世界！我才不要進小孩的房間！你不能逼我！你必須進去，因為我們**需要**這個！整個城市都**指望你**去收集那些小孩的尖叫聲。沒有尖叫，我們就沒有電。
 
 ---
 
@@ -35,7 +35,7 @@ Ethan 用 *Monsters, Inc.* 開場那場 Sulley 進老闆 Waternoose 辦公室的
 
 > "Leave a door open and a child could walk right into this factory!"
 
-中文 → 只要有人沒關門，小孩就會直接闖進這座工廠！
+> 只要有人沒關門，小孩就會直接闖進這座工廠！
 
 ---
 
@@ -43,7 +43,7 @@ Ethan 用 *Monsters, Inc.* 開場那場 Sulley 進老闆 Waternoose 辦公室的
 
 > "You're going in there because we need this! Our city is counting on you to collect those children's screams. Without scream, we have no power."
 
-中文 → 你必須進去，因為我們需要這個！整個城市都指望你去收集那些小孩的尖叫聲。沒有尖叫，我們就沒有電。
+> 你必須進去，因為我們需要這個！整個城市都指望你去收集那些小孩的尖叫聲。沒有尖叫，我們就沒有電。
 
 </div>
 
