@@ -67,6 +67,16 @@
 | [autonomy](autonomy.md) | n. | 自主性；自主權 | 1 | 2026-05-29 | noun, work, business, toeic, startup, formal |
 | [in demand](in-demand.md) | adj.phr. | 搶手的；有需求的 | 1 | 2026-05-29 | adjective-phrase, business, toeic, market, hiring |
 | [filter out](filter-out.md) | phr.v. | 過濾掉；篩除 | 1 | 2026-05-29 | phrasal-verb, business, toeic, process, hiring |
+| [complimentary](complimentary.md) | adj. | 免費招待的（飯店常用） | 1 | 2026-05-31 | adjective, travel, hotel, toeic |
+| [amenities](amenities.md) | n.(pl.) | 備品；設施 | 1 | 2026-05-31 | noun, plural, travel, hotel, toeic |
+| [accommodation tax](accommodation-tax.md) | n.phr. | 住宿税（日：宿泊税） | 1 | 2026-05-31 | noun-phrase, travel, japan, toeic |
+| [pre-authorization](pre-authorization.md) | n. | 預先授權；暫扣 | 1 | 2026-05-31 | noun, travel, hotel, payment |
+| [security deposit](security-deposit.md) | n.phr. | 保證金；押金 | 1 | 2026-05-31 | noun-phrase, travel, hotel, payment |
+| [itemized bill](itemized-bill.md) | n.phr. | 逐項明細帳單 | 1 | 2026-05-31 | noun-phrase, travel, business, toeic |
+| [settle the bill](settle-the-bill.md) | v.phr. | 結清帳款；付清 | 1 | 2026-05-31 | verb-phrase, travel, business, toeic |
+| [late check-out](late-check-out.md) | n.phr. | 延後退房 | 1 | 2026-05-31 | noun-phrase, travel, hotel, toeic |
+| [luggage forwarding](luggage-forwarding.md) | n.phr. | 行李宅配（takkyubin） | 1 | 2026-05-31 | noun-phrase, travel, japan |
+| [wake-up call](wake-up-call.md) | n.phr. | 叫醒服務；警鐘 | 1 | 2026-05-31 | noun-phrase, travel, hotel, idiom |
 | [headed to](headed-to.md) | phr. | 前往；朝...而去 | 2 | 2026-04-29 | phrasal-verb, daily |
 | [cram](cram.md) | v. | 塞滿；臨時抱佛腳 | 2 | 2026-04-29 | verb, study, multi-meaning |
 | [keen](keen.md) | adj. | 熱衷的；敏銳的 | 2 | 2026-04-29 | adjective, emotion |
