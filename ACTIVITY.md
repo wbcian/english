@@ -5,6 +5,16 @@
 
 ---
 
+## 2026-05-31
+- 🎧 **主題課程：日本住宿 Hotel Check-in 對話三部曲**（dialogue track）：[Part 1 報到・證件・房型](lessons/2026-05-31-japan-hotel-checkin-part-1-arrival.md) + [Part 2 付款・宿泊税・設施服務](lessons/2026-05-31-japan-hotel-checkin-part-2-amenities.md) + [Part 3 客訴・退房・行李宅配](lessons/2026-05-31-japan-hotel-checkin-part-3-checkout.md)
+- 📝 取向：Coach Max 原創多場景情境對話（住客＝Cian 視角 ↔ 日本飯店櫃檯），涵蓋報到→護照影印→房型→付款 pre-auth→宿泊税→大浴場/早餐→客訴換房→退房→行李宅配 takkyubin 全動線；句型 grounded in 驗證過的真實飯店常用語
+- 🌏 在地加值（Cultural Notes，已交叉查證）：外國旅客護照影印是日本《旅館業法》規定、宿泊税（東京/大阪/京都，約 ¥100–500/人/晚，2026 起外加結算）、温泉大浴場禮儀、takkyubin 行李宅配、和室/玄關脫鞋
+- 🔬 每 part 一段 Sentence Anatomy 對準弱點 ③（動作名詞化／不定詞，禮貌請求句 `Would it be possible to + V`）＋ ②（冠詞／介系詞）
+- 📚 新增 10 個單字／片語（全 ★1，旅遊／TOEIC 向）：[complimentary](vocab/complimentary.md) / [amenities](vocab/amenities.md) / [accommodation tax](vocab/accommodation-tax.md) / [pre-authorization](vocab/pre-authorization.md) / [security deposit](vocab/security-deposit.md) / [itemized bill](vocab/itemized-bill.md) / [settle the bill](vocab/settle-the-bill.md) / [late check-out](vocab/late-check-out.md) / [luggage forwarding](vocab/luggage-forwarding.md) / [wake-up call](vocab/wake-up-call.md)（⚠️ morning call 是和製英語）
+- 🛠️ 流程：Workflow 編排（3 author agent 並行 ＋ 對抗式 speakable lint）；app build + preview 驗證瀏覽／格式／朗讀 wiring 全通過（Series Map 改一般清單，避免中文標題被誤朗讀）
+
+---
+
 ## 2026-05-29
 - 🎧 **第 2 篇 reading lesson — 3-article pack**：[PostHog — What is Product for Engineers? + Hiring + Sell features not benefits](lessons/2026-05-29-posthog-product-for-engineers-pack.md)（總 3,590 字 / 19 min，< 30 min 故包成單篇）
 - 📝 lesson 重點：3 篇互補論述（**Main**：product engineer mindset 定義 + 三段並列動詞句型；**Article A**：hiring 10 條原則含 SuperDay 真實任務面試法、`soft yes is no`；**Article B**：賣 features 不賣 benefits、`stack up against` 比較句型、引號嘲諷 vague language）
