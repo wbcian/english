@@ -12,6 +12,9 @@
 - 🔬 每 part 一段 Sentence Anatomy 對準弱點 ③（動作名詞化／不定詞，禮貌請求句 `Would it be possible to + V`）＋ ②（冠詞／介系詞）
 - 📚 新增 10 個單字／片語（全 ★1，旅遊／TOEIC 向）：[complimentary](vocab/complimentary.md) / [amenities](vocab/amenities.md) / [accommodation tax](vocab/accommodation-tax.md) / [pre-authorization](vocab/pre-authorization.md) / [security deposit](vocab/security-deposit.md) / [itemized bill](vocab/itemized-bill.md) / [settle the bill](vocab/settle-the-bill.md) / [late check-out](vocab/late-check-out.md) / [luggage forwarding](vocab/luggage-forwarding.md) / [wake-up call](vocab/wake-up-call.md)（⚠️ morning call 是和製英語）
 - 🛠️ 流程：Workflow 編排（3 author agent 並行 ＋ 對抗式 speakable lint）；app build + preview 驗證瀏覽／格式／朗讀 wiring 全通過（Series Map 改一般清單，避免中文標題被誤朗讀）
+- 🎧 **通用版 dialogue lesson — 旅館 check-in 櫃檯入住實戰**（codex 平行產出，與三部曲並存）：[Hotel Check-In：國外旅館櫃檯入住實戰](lessons/2026-05-31-hotel-check-in.md)
+- 📝 通用版重點：`I have a reservation under Wu`、`Would it be possible to...?`、`incidentals` / `temporary hold` / `security deposit`、早餐 / Wi-Fi / 退房 / 行李寄放全流程；含 Role-Play Drill 與 Connected Speech
+- 🎯 旅行英語主題入庫：以原創對話作主教材，外部來源（ELLLO / EnglishClub / Randall's ESL）只做聽力補充與情境驗證，避免重製受版權限制的 transcript
 
 ---
 
