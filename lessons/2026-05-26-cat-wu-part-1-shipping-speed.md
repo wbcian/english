@@ -21,10 +21,11 @@ audio: true
 
 ## 🎬 Series Map
 
-> **Cat Wu Anthropic 訪談系列**（共 3 part）：
-> - **Part 1：Anthropic 怎麼出貨那麼快** → 你正在這（lines 51–441）
-> - **Part 2：PM Skills & Taste** → [lesson](2026-05-25-cat-wu-pm-skills-and-taste.md)（lines 669–1075）
-> - **Part 3：Cowork in practice — 親自示範做 slide deck** → [lesson](2026-05-26-cat-wu-part-3-cowork-workflow.md)（lines 1417–1715）
+**Cat Wu Anthropic 訪談系列**（共 3 part）：
+
+- **Part 1：Anthropic 怎麼出貨那麼快** → 你正在這（lines 51–441）
+- **Part 2：PM Skills & Taste** → [lesson](2026-05-25-cat-wu-pm-skills-and-taste.md)（lines 669–1075）
+- **Part 3：Cowork in practice — 親自示範做 slide deck** → [lesson](2026-05-26-cat-wu-part-3-cowork-workflow.md)（lines 1417–1715）
 
 ---
 

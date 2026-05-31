@@ -21,10 +21,11 @@ audio: true
 
 ## 🎬 Series Map
 
-> **Sabrina's《Espresso》系列**（共 3 part，建議依序學）：
-> - **Part 1：歌曲 + 連音入門** → [lesson](2026-05-21-sabrina-espresso-part-1-song.md)（00:24–03:48）
-> - **Part 2：訪談前半 — Z 世代口語密度** → 你正在這（04:02–07:39）
-> - **Part 3：訪談後半 — 咖啡店場景 + 自我反思** → [lesson](2026-05-23-sabrina-espresso-part-3-cafe.md)（08:06–12:40）
+**Sabrina's《Espresso》系列**（共 3 part，建議依序學）：
+
+- **Part 1：歌曲 + 連音入門** → [lesson](2026-05-21-sabrina-espresso-part-1-song.md)（00:24–03:48）
+- **Part 2：訪談前半 — Z 世代口語密度** → 你正在這（04:02–07:39）
+- **Part 3：訪談後半 — 咖啡店場景 + 自我反思** → [lesson](2026-05-23-sabrina-espresso-part-3-cafe.md)（08:06–12:40）
 
 ---
 
