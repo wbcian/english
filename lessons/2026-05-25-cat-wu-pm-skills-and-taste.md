@@ -68,7 +68,7 @@ audio: true
 
 > Cat（985）：我覺得有很多週是這樣的——大概週日晚上會冒出某個 P0（最高優先級的事件），到了週一變成 P00，週一下午又變成 P000。然後你會想，哇，真不敢相信我週日竟然為那個 P0 那麼擔心。但我覺得你就是得 acknowledge（承認）——你能做的就只有這麼多……然後 brutally prioritize（狠狠地排優先級）你要把時間花在哪……
 
-> **Lenny (1035)** — *the Pirates of the Caribbean image*
+> **Lenny (1035) — the Pirates of the Caribbean image**
 > What I'm imagining is there's that gif… from Pirates of the Caribbean, where it's this guy walking down a pair of stairs on a ship, and the whole ship is just being demolished around him, and he's so chill, just **strolling down the staircase** as everything's falling apart.
 
 > Lenny（1035）：我腦中浮現的是那個 gif……來自《神鬼奇航》，畫面是一個男人走下船上的一段樓梯，整艘船在他身邊被炸得稀爛，而他超級淡定，就這樣 strolling down the staircase（悠閒地踱步走下樓梯），任由一切在身旁分崩離析。

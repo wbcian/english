@@ -53,32 +53,32 @@ audio: true
 
 > Cat（101）：我覺得在很多面向上之所以順利，是因為我們算是有 mind meld（心智同步、默契超強），但這條分工線其實模糊到不行。像我覺得我們大概有 80% 是 mind meld，然後剩下這 20% 的事情……可能我會在意得多很多……那些我就會自己 drive（主導、推進）。
 
-> **Scene 2 — Cat (161)** — *AI 怎麼壓縮時間軸*
+> **Scene 2 — Cat (161) — AI 怎麼壓縮時間軸**
 > I think before AI, technology shifts were a lot slower. So you could plan on these **six to 12 month time horizons**... With AI and with how much that has accelerated engineering... the timelines for a lot of our product features have **gone down from six months to one month and sometimes to one week or even one day**.
 
 > Scene 2 — Cat（161）：我覺得在 AI 出現之前，技術變遷慢很多，所以你可以用 six to 12 month time horizons（六到十二個月的時間視野）來規劃……有了 AI、加上它把工程效率加速到這種程度……我們很多產品功能的時程，已經 gone down from six months to one month（從六個月縮短到一個月），有時甚至縮到一週、甚至一天。
 
-> **Cat (251)** — *Research Preview 的妙用*
+> **Cat (251) — Research Preview 的妙用**
 > So for Cloud Code, what we do is we actually ship almost all of our features in **research preview**. We clearly brand this when we ship something so that users know that this is an early product, this is just an idea, this is just something that we're trying to get feedback on and iterating on, and that this might not be supported forever. And what this does is it **reduces our commitment** for shipping something.
 
 > Cat（251）：所以以 Cloud Code 來說，我們的做法是幾乎所有功能都用 research preview（研究預覽版）的形式出貨。我們在出貨時會清楚標示這一點，讓用戶知道這是早期產品、只是一個想法、只是我們想拿來收 feedback 並持續迭代的東西，而且它不見得會永遠被支援。這麼做的效果，就是 reduces our commitment（降低我們對某項出貨的承諾壓力）。
 
-> **Cat (281)** — *Evergreen Launch Room 的低摩擦流程*
+> **Cat (281) — Evergreen Launch Room 的低摩擦流程**
 > So we have a really tight process between engineering, marketing, and docs. So when engineers have a feature that they feel is ready and that we've **dog-fooded** internally, they post it in our Evergreen Launch Room... And because we have this really tight process, it **lowers the friction** for any engineer to ship something.
 
 > Cat（281）：所以我們在工程、行銷跟文件之間有一套非常緊密的流程。當工程師覺得某個功能 ready 了、而且我們內部已經 dog-fooded（自己先試吃過自家狗糧）了，他們就會把它貼到我們的 Evergreen Launch Room（常設上線頻道）……正因為有這套很緊密的流程，它 lowers the friction（降低了摩擦力），讓任何一位工程師都更容易把東西出貨。
 
-> **Cat (431)** — *反流程哲學*
+> **Cat (431) — 反流程哲學**
 > We've been moving pretty fast for several quarters now... I think a lot of it is the process and the expectation on the team. So we're **very low on process**. We want to **remove every single barrier** to shipping things. We want to make sure every single person on the team feels **empowered** to take their idea from just an idea to out in the world in less than a week, sometimes even in a day.
 
 > Cat（431）：我們已經連續好幾季跑得很快了……我覺得很大一部分來自團隊的流程與期待。所以我們是 very low on process（流程超級精簡、幾乎沒什麼流程）。我們想要 remove every single barrier（移除每一個障礙），讓出貨更順暢。我們想確保團隊裡每一個人都覺得自己被 empowered（被賦權、有信心），能把一個想法從單純的點子，在不到一週、有時甚至一天之內就推到全世界面前。
 
-> **Cat (1281)** — *Mission > Product Line*
+> **Cat (1281) — Mission > Product Line**
 > The two most important things are one, this **unifying mission**. It's hard to state how important this is. We hire people who care most about bringing safe AGI to all of humanity... And because we put this **mission above any individual product line**, we're able to make very fast decisions that cut across the entire org and execute on them in a **unified way**.
 
 > Cat（1281）：兩個最重要的東西，第一個就是這個 unifying mission（統合性使命）。它有多重要實在很難形容。我們招進來的人，最在乎的就是把安全的 AGI 帶給全人類……正因為我們把這個 mission above any individual product line（使命放在任何單一產品線之上），我們才能做出橫跨整個組織的快速決策，並用一種 unified way（統合一致的方式）去執行。
 
-> **Cat (1379)** — *極端 mission-first 的例子*
+> **Cat (1379) — 極端 mission-first 的例子**
 > So like an extreme example is if Cloud Code failed, but Anthropic succeeded, **I would be extremely happy**. And like the whole team is very willing to make decisions that follow that chain of thought.
 
 > Cat（1379）：舉個極端的例子，假如 Cloud Code 失敗了、但 Anthropic 成功了，I would be extremely happy（我會超級開心）。而且整個團隊都非常願意照著這條 chain of thought（思路）去做決策。
