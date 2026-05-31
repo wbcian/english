@@ -17,7 +17,7 @@
 // build — missing files just fall back to Web Speech at runtime.
 
 import process from 'node:process';
-import { readdir, readFile, writeFile, mkdir, stat } from 'node:fs/promises';
+import { readdir, readFile, writeFile, mkdir, stat, unlink } from 'node:fs/promises';
 import { createWriteStream, existsSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { dirname, join, resolve } from 'node:path';
@@ -140,9 +140,20 @@ async function getTtsClient() {
   return c;
 }
 
+// msedge-tts feeds the text into an SSML document without escaping, so any
+// raw &, <, > makes the SSML malformed and Edge returns an empty audio stream
+// (a silent 0-byte file). Escape XML specials before synthesizing. This is
+// transparent to hashing/lookup — the hash is computed on the unescaped text.
+function escapeForSsml(text) {
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+
 async function synthesizeToFile(text, outPath) {
   const tts = await getTtsClient();
-  const { audioStream } = tts.toStream(text);
+  const { audioStream } = tts.toStream(escapeForSsml(text));
   const out = createWriteStream(outPath);
   await new Promise((resolve, reject) => {
     audioStream.on('error', reject);
@@ -150,6 +161,13 @@ async function synthesizeToFile(text, outPath) {
     out.on('finish', resolve);
     audioStream.pipe(out);
   });
+  // Guard against silent empty output: an unreachable/rejecting TTS can finish
+  // the stream with 0 bytes. Don't cache or count that as success.
+  const { size } = await stat(outPath);
+  if (size === 0) {
+    await unlink(outPath);
+    throw new Error('TTS returned an empty (0-byte) audio stream');
+  }
 }
 
 // ---- main ----
