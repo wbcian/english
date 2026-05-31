@@ -11,11 +11,11 @@
 ## 快照（隨更新同步）
 - 已收錄單字：89
 - 5★ 精熟：0　 3–4★ 學習中：8　 1–2★ 新／脆弱：81
-- 最近活動日期：2026-05-29（🎧 第 2 篇 reading lesson：PostHog 3-article pack；📚 新增 4 字 TOEIC 商業向）
+- 最近活動日期：2026-05-31（🎧 dialogue lesson：Hotel Check-In 國外旅館櫃檯入住實戰）
 - 主目標：**TOEIC 750+ 證書**（詳見 [PROFILE.md](PROFILE.md#目標)）
 - **Lesson 格式（2026-05-29 換軸）**：`track`(reading/dialogue/talk) + `audio` 取代舊 `format`；Source→標題下 subtitle、正文雙語滾動框、Key Vocab 緊接正文後 — 規範見 [`lessons/_conventions.md`](lessons/_conventions.md)
-- 最近 lesson：**[PostHog — Product for Engineers Pack](lessons/2026-05-29-posthog-product-for-engineers-pack.md)**（3-article pack: 主文 framing + hiring 11 min + sell-features 6 min；總 19 min；含 SuperDay 面試模型、`stack up against` 句型、引號嘲諷 vague language）
-- 上一份 lesson：[Charles Cook — How I Actually Get Good Advice](lessons/2026-05-28-charles-cook-getting-good-advice.md)（首份 reading lesson + reading 格式分流上路）
+- 最近 lesson：**[Hotel Check-In：國外旅館櫃檯入住實戰](lessons/2026-05-31-hotel-check-in.md)**（原創 dialogue lesson；涵蓋訂房姓名、護照/信用卡、房型更換、早餐/Wi-Fi/退房時間、行李寄放、`incidentals` / `temporary hold`）
+- 上一份 lesson：**[PostHog — Product for Engineers Pack](lessons/2026-05-29-posthog-product-for-engineers-pack.md)**（3-article pack: 主文 framing + hiring 11 min + sell-features 6 min；總 19 min；含 SuperDay 面試模型、`stack up against` 句型、引號嘲諷 vague language）
 - 上一份 lesson：**Cat Wu 訪談三部曲** — [Part 1](lessons/2026-05-26-cat-wu-part-1-shipping-speed.md) + [Part 2](lessons/2026-05-25-cat-wu-pm-skills-and-taste.md) + [Part 3](lessons/2026-05-26-cat-wu-part-3-cowork-workflow.md)
 - 最近寫作：[2026-04-28 vocab-translation-drill](writing/2026-04-28-vocab-translation-drill.md)（6/6 完成，set up 與 pitch 滿分）
 - 待加強清單：brought up（vs pitch to / set up）、go all out（vs go all in / pour into）、humorous twist（兩天就忘）、in a pinch（idiom 連結未建立）

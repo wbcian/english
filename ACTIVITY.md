@@ -5,6 +5,11 @@
 
 ---
 
+## 2026-05-31
+- 🎧 **dialogue lesson — 旅館 check-in 櫃檯入住實戰**：[Hotel Check-In：國外旅館櫃檯入住實戰](lessons/2026-05-31-hotel-check-in.md)
+- 📝 lesson 重點：`I have a reservation under Wu`、`Would it be possible to...?`、`incidentals` / `temporary hold` / `security deposit`、早餐 / Wi-Fi / 退房 / 行李寄放全流程
+- 🎯 旅行英語主題入庫：以原創對話作主教材，外部來源只做聽力補充與情境驗證，避免重製受版權限制的 transcript
+
 ## 2026-05-29
 - 🎧 **第 2 篇 reading lesson — 3-article pack**：[PostHog — What is Product for Engineers? + Hiring + Sell features not benefits](lessons/2026-05-29-posthog-product-for-engineers-pack.md)（總 3,590 字 / 19 min，< 30 min 故包成單篇）
 - 📝 lesson 重點：3 篇互補論述（**Main**：product engineer mindset 定義 + 三段並列動詞句型；**Article A**：hiring 10 條原則含 SuperDay 真實任務面試法、`soft yes is no`；**Article B**：賣 features 不賣 benefits、`stack up against` 比較句型、引號嘲諷 vague language）
