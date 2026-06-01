@@ -6,6 +6,7 @@
 ---
 
 ## 2026-06-01
+- 📚 單字片語練習：新增 [sarcastic](vocab/sarcastic.md)（★1 adj. · 諷刺／酸）— 講反話、tone-dependent；名詞 sarcasm、副詞 sarcastically；搭配 dripping with sarcasm。實用性判定＝top-tier keeper
 - 📚 單字片語練習：新增 [smart aleck](vocab/smart-aleck.md)（★1 n. · 自作聰明的人）— adj. smart-alecky；實用性判定＝**略過時 / passive keeper**（聽得懂但偏父母輩用語），現代口語改用 wise guy／smart-ass⚠vulgar／know-it-all
 - 📚 單字片語練習：新增 [assemble](vocab/assemble.md)（★1 v. · 組裝／集合）— 兩義：build parts ＋ gather people（後者偏正式，口語用 get together）；名詞 assembly／TOEIC 高頻 assembly line · assembly instructions。實用性判定＝strong keeper（especially TOEIC）
 - 📚 單字片語練習：新增 [on point](vocab/on-point.md)（★1 idiom/slang · 完美無瑕／精準到位）— 現代口語=excellent/flawless；register 偏 casual（正式場合改用 spot-on／precise）；辨析 vs "to the point"（簡潔切題）。實用性判定＝keeper but mind register
