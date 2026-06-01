@@ -6,6 +6,7 @@
 ---
 
 ## 2026-06-01
+- 📚 單字片語練習：新增 [fusion](vocab/fusion.md)（★1 n. · 融合）— fusion cuisine／music／a fusion of X and Y；科學 nuclear fusion 對比 fission；動詞 fuse。實用性判定＝solid keeper（mildly topic-bound）
 - 📚 單字片語練習：新增 [sarcastic](vocab/sarcastic.md)（★1 adj. · 諷刺／酸）— 講反話、tone-dependent；名詞 sarcasm、副詞 sarcastically；搭配 dripping with sarcasm。實用性判定＝top-tier keeper
 - 📚 單字片語練習：新增 [smart aleck](vocab/smart-aleck.md)（★1 n. · 自作聰明的人）— adj. smart-alecky；實用性判定＝**略過時 / passive keeper**（聽得懂但偏父母輩用語），現代口語改用 wise guy／smart-ass⚠vulgar／know-it-all
 - 📚 單字片語練習：新增 [assemble](vocab/assemble.md)（★1 v. · 組裝／集合）— 兩義：build parts ＋ gather people（後者偏正式，口語用 get together）；名詞 assembly／TOEIC 高頻 assembly line · assembly instructions。實用性判定＝strong keeper（especially TOEIC）

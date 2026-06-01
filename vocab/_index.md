@@ -6,6 +6,7 @@
 
 | 單字 | 詞性 | 中文 | ★ | 上次複習 | tags |
 |---|---|---|---|---|---|
+| [fusion](fusion.md) | n. | 融合；結合；（物理）核融合 | 1 | 2026-06-01 | noun, food, music, science |
 | [sarcastic](sarcastic.md) | adj. | 諷刺的；挖苦的；酸言酸語的 | 1 | 2026-06-01 | adjective, tone, humor, daily |
 | [smart aleck](smart-aleck.md) | n. | 自作聰明的人；耍嘴皮子的傢伙（略過時） | 1 | 2026-06-01 | noun, informal, personality, dated |
 | [assemble](assemble.md) | v. | 組裝、拼裝；集合、聚集 | 1 | 2026-06-01 | verb, multi-meaning, toeic, work |

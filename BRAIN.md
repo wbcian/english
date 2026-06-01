@@ -9,9 +9,9 @@
 - 詳細 Profile → [PROFILE.md](PROFILE.md)
 
 ## 快照（隨更新同步）
-- 已收錄單字：107
-- 5★ 精熟：0　 3–4★ 學習中：8　 1–2★ 新／脆弱：99
-- 最近活動日期：2026-06-01（📚 新增 sarcastic · smart aleck · assemble · on point · test the waters · quirk · prosthetic · track down；複習 cram）
+- 已收錄單字：108
+- 5★ 精熟：0　 3–4★ 學習中：8　 1–2★ 新／脆弱：100
+- 最近活動日期：2026-06-01（📚 新增 fusion · sarcastic · smart aleck · assemble · on point · test the waters · quirk · prosthetic · track down；複習 cram）
 - 主目標：**TOEIC 750+ 證書**（詳見 [PROFILE.md](PROFILE.md#目標)）
 - **Lesson 格式（2026-05-29 換軸）**：`track`(reading/dialogue/talk) + `audio` 取代舊 `format`；Source→標題下 subtitle、正文雙語滾動框、Key Vocab 緊接正文後 — 規範見 [`lessons/_conventions.md`](lessons/_conventions.md)
 - 最近 lesson：**日本住宿 Hotel Check-in 對話三部曲**（dialogue · 旅遊實戰）：[Part 1 報到・證件・房型](lessons/2026-05-31-japan-hotel-checkin-part-1-arrival.md) + [Part 2 付款・宿泊税・設施](lessons/2026-05-31-japan-hotel-checkin-part-2-amenities.md) + [Part 3 客訴・退房・宅配](lessons/2026-05-31-japan-hotel-checkin-part-3-checkout.md)（Coach Max 原創情境；Cultural Notes 含護照影印法規／宿泊税／takkyubin；Series Map 用一般清單避免中文被誤朗讀）
