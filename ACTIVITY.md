@@ -6,6 +6,7 @@
 ---
 
 ## 2026-06-01
+- 📚 單字片語練習：新增 [on point](vocab/on-point.md)（★1 idiom/slang · 完美無瑕／精準到位）— 現代口語=excellent/flawless；register 偏 casual（正式場合改用 spot-on／precise）；辨析 vs "to the point"（簡潔切題）。實用性判定＝keeper but mind register
 - 📚 單字片語練習：新增 [test the waters](vocab/test-the-waters.md)（★1 idiom · 試水溫）— 全力投入前的小規模試探；idiom 用複數 waters；商業/職涯高頻，搭配 "by V-ing"／"before committing"。實用性判定＝excellent keeper
 - 📚 單字片語練習：新增 [quirk](vocab/quirk.md)（★1 n. · 怪癖／古怪小特點）— 重點在 adj. **quirky**（古怪又有趣，帶褒義）＋ 固定搭配 quirk of fate；辨析 quirk vs flaw vs weird。實用性判定＝strong keeper（especially quirky）
 - 📚 單字複習：[cram](vocab/cram.md)（★2 · review_count 1→2）— refresher 兩義（塞滿／臨時抱佛腳）＋ cram school／crammed 形容詞；實用性判定＝top-tier keeper；出了一題中翻英 mini-check 待 Cian 作答
