@@ -6,6 +6,7 @@
 ---
 
 ## 2026-06-01
+- 📚 單字片語練習：新增 [prosthetic](vocab/prosthetic.md)（★1 adj./n. · 義肢的）— 兩大語境：醫療（prosthetic leg）＋影視特效化妝（prosthetic makeup）；裝置本身＝prosthesis；發音重音 pros-THE-tic。實用性判定＝Keeper but situational（topic-bound）
 - 📚 單字片語練習：新增 [track down](vocab/track-down.md)（★1 phrasal verb · 可分離 · 追查到／找出）— 重點在 separable 規則（代名詞必須拆：track it down）與「刻意費力尋找」相對於 plain find 的語感差異；TOEIC 常見搭配 "track down the cause"
 
 ---
