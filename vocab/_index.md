@@ -6,6 +6,7 @@
 
 | 單字 | 詞性 | 中文 | ★ | 上次複習 | tags |
 |---|---|---|---|---|---|
+| [test the waters](test-the-waters.md) | idiom | 試水溫；先探探情況再投入 | 1 | 2026-06-01 | idiom, business, career, toeic |
 | [quirk](quirk.md) | n. | 怪癖；古怪的小特點（adj. quirky） | 1 | 2026-06-01 | noun, personality, daily |
 | [prosthetic](prosthetic.md) | adj./n. | 義肢的；（n.）義肢、人工裝置 | 1 | 2026-06-01 | adjective, noun, medical, film-sfx |
 | [track down](track-down.md) | phr.v. | 追查到；找出（費力尋找後找到） | 1 | 2026-06-01 | phrasal-verb, separable, search, toeic |
