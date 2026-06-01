@@ -5,8 +5,8 @@ pos: v
 zh: 塞滿；擠入；臨時抱佛腳
 proficiency: 2
 first_seen: 2026-04-29
-last_reviewed: 2026-04-29
-review_count: 1
+last_reviewed: 2026-06-01
+review_count: 2
 tags: [verb, multi-meaning, study, daily]
 source: "user-asked"
 ---
@@ -69,3 +69,4 @@ source: "user-asked"
 
 ## Encounters
 - 2026-04-29 — first learned (user asked)
+- 2026-06-01 — reviewed (單字片語練習 refresher; practicality verdict = top-tier keeper)
