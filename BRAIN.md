@@ -9,12 +9,13 @@
 - 詳細 Profile → [PROFILE.md](PROFILE.md)
 
 ## 快照（隨更新同步）
-- 已收錄單字：112
-- 5★ 精熟：0　 3–4★ 學習中：8　 1–2★ 新／脆弱：104
-- 最近活動日期：2026-06-01（📚 single-session 連續新增 13 字：hands-on · debunk · conspiracy · exhibit · fusion · sarcastic · smart aleck · assemble · on point · test the waters · quirk · prosthetic · track down；複習 cram）
+- 已收錄單字：114
+- 5★ 精熟：0　 3–4★ 學習中：8　 1–2★ 新／脆弱：106
+- 最近活動日期：2026-06-01（🎧 微課 learning-styles-connected-speech；📚 single-session 連續新增 13 字：hands-on · debunk · conspiracy · exhibit · fusion · sarcastic · smart aleck · assemble · on point · test the waters · quirk · prosthetic · track down＋lesson 帶出 look something over · engage with；複習 cram）
 - 主目標：**TOEIC 750+ 證書**（詳見 [PROFILE.md](PROFILE.md#目標)）
 - **Lesson 格式（2026-05-29 換軸）**：`track`(reading/dialogue/talk) + `audio` 取代舊 `format`；Source→標題下 subtitle、正文雙語滾動框、Key Vocab 緊接正文後 — 規範見 [`lessons/_conventions.md`](lessons/_conventions.md)
-- 最近 lesson：**日本住宿 Hotel Check-in 對話三部曲**（dialogue · 旅遊實戰）：[Part 1 報到・證件・房型](lessons/2026-05-31-japan-hotel-checkin-part-1-arrival.md) + [Part 2 付款・宿泊税・設施](lessons/2026-05-31-japan-hotel-checkin-part-2-amenities.md) + [Part 3 客訴・退房・宅配](lessons/2026-05-31-japan-hotel-checkin-part-3-checkout.md)（Coach Max 原創情境；Cultural Notes 含護照影印法規／宿泊税／takkyubin；Series Map 用一般清單避免中文被誤朗讀）
+- 最近 lesson：**[Learning Styles 是迷思 — 順便偷學連音](lessons/2026-06-01-learning-styles-connected-speech.md)**（dialogue · Izzy's English 用 Veritasium 影片做的 ~2.5 min 微課）— 首份**以發音／連音為主菜**的 lesson：縮音表（nt→n 脫 T／au=/ɔː/／s→/ʒ/）＋連音表（look it over→"loo-ki-tover"）；vocab 交叉連結 hands-on/debunk，新加 look something over · engage with
+- 上一份 lesson：**日本住宿 Hotel Check-in 對話三部曲**（dialogue · 旅遊實戰）：[Part 1 報到・證件・房型](lessons/2026-05-31-japan-hotel-checkin-part-1-arrival.md) + [Part 2 付款・宿泊税・設施](lessons/2026-05-31-japan-hotel-checkin-part-2-amenities.md) + [Part 3 客訴・退房・宅配](lessons/2026-05-31-japan-hotel-checkin-part-3-checkout.md)（Coach Max 原創情境；Cultural Notes 含護照影印法規／宿泊税／takkyubin；Series Map 用一般清單避免中文被誤朗讀）
 - 同日 lesson：**[Hotel Check-In：國外旅館櫃檯入住實戰](lessons/2026-05-31-hotel-check-in.md)**（codex 平行產出，通用國際飯店單篇 dialogue；含 Role-Play Drill ＋ Connected Speech；`incidentals` / `temporary hold`）
 - 上一份 lesson：**[PostHog — Product for Engineers Pack](lessons/2026-05-29-posthog-product-for-engineers-pack.md)**（3-article pack；總 19 min；含 SuperDay 面試模型、`stack up against` 句型）
 - 上一份 lesson：[Charles Cook — How I Actually Get Good Advice](lessons/2026-05-28-charles-cook-getting-good-advice.md)（首份 reading lesson + reading 格式分流上路）

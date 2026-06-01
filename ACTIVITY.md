@@ -6,6 +6,7 @@
 ---
 
 ## 2026-06-01
+- 🎧 **微課：Learning Styles 是迷思 — 順便偷學連音**（dialogue track）：[lesson](lessons/2026-06-01-learning-styles-connected-speech.md)。素材＝Izzy's English 用 Veritasium《learning styles》影片做的 ~2.5 min 微課（刻意剪短，疑似從長課切出），Izzy + Ksenia 拆解。**主菜是發音／連音**：縮音表（interacting 的 nt→n 脫 T／auditory 的 au=/ɔː/ 無 U／visual 的 s→/ʒ/）＋連音表（look it over→"loo-ki-tover"、kind of→kinda、I'd like to）。Key Vocab 交叉連結今天已收的 [hands-on](vocab/hands-on.md) / [debunk](vocab/debunk.md)，新加 keeper 片語 [look something over](vocab/look-over.md)（separable·連音雷）+ [engage with](vocab/engage-with.md)。Study Tips 收錄 Izzy 的「用影片學英文」SOP（選愛看的內容→配 transcript→找失蹤字母→shadowing）
 - 📚 單字片語練習：一次新增 3 字 [hands-on](vocab/hands-on.md) / [debunk](vocab/debunk.md) / [conspiracy](vocab/conspiracy.md)：hands-on＝親自動手／實作（名詞前加連字號，反義 hands-off；top-tier）；debunk＝用證據戳破迷思/謠言（搭配 myth/claim/rumor；strong keeper）；conspiracy＝陰謀，多用 conspiracy theory，⚠️重音 con-SPIR-uh-see、動詞 conspire（strong keeper）。三字皆 keeper
 - 📚 單字片語練習：新增 [exhibit](vocab/exhibit.md)（★1 v./n. · 展示／展現／展品）— ⚠️ silent h（eg-ZIB-it，但 exhibition 反而發 h）；三義 display art／show a quality（formal）／exhibit 展品·Exhibit A 證物；TOEIC trade exhibition。實用性判定＝strong keeper esp. TOEIC
 - 📚 單字片語練習：新增 [fusion](vocab/fusion.md)（★1 n. · 融合）— fusion cuisine／music／a fusion of X and Y；科學 nuclear fusion 對比 fission；動詞 fuse。實用性判定＝solid keeper（mildly topic-bound）
