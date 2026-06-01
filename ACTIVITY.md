@@ -5,6 +5,11 @@
 
 ---
 
+## 2026-06-01
+- 📚 單字片語練習：新增 [track down](vocab/track-down.md)（★1 phrasal verb · 可分離 · 追查到／找出）— 重點在 separable 規則（代名詞必須拆：track it down）與「刻意費力尋找」相對於 plain find 的語感差異；TOEIC 常見搭配 "track down the cause"
+
+---
+
 ## 2026-05-31
 - 🎧 **主題課程：日本住宿 Hotel Check-in 對話三部曲**（dialogue track）：[Part 1 報到・證件・房型](lessons/2026-05-31-japan-hotel-checkin-part-1-arrival.md) + [Part 2 付款・宿泊税・設施服務](lessons/2026-05-31-japan-hotel-checkin-part-2-amenities.md) + [Part 3 客訴・退房・行李宅配](lessons/2026-05-31-japan-hotel-checkin-part-3-checkout.md)
 - 📝 取向：Coach Max 原創多場景情境對話（住客＝Cian 視角 ↔ 日本飯店櫃檯），涵蓋報到→護照影印→房型→付款 pre-auth→宿泊税→大浴場/早餐→客訴換房→退房→行李宅配 takkyubin 全動線；句型 grounded in 驗證過的真實飯店常用語

@@ -6,6 +6,7 @@
 
 | 單字 | 詞性 | 中文 | ★ | 上次複習 | tags |
 |---|---|---|---|---|---|
+| [track down](track-down.md) | phr.v. | 追查到；找出（費力尋找後找到） | 1 | 2026-06-01 | phrasal-verb, separable, search, toeic |
 | [terrified](terrified.md) | adj. | 嚇壞的；非常害怕的 | 1 | 2026-04-30 | adjective, emotion, fear |
 | [pinch](pinch.md) | v./n. | 捏；掐；偷；一小撮；困境（含三態） | 1 | 2026-04-30 | verb, multi-meaning, regular-verb |
 | [humorous twist](humorous-twist.md) | n.phr. | 幽默的轉折；反差萌 | 1 | 2026-05-02 | phrase, narrative, storytelling, ⚠️quiz-miss |
