@@ -6,6 +6,9 @@
 
 | 單字 | 詞性 | 中文 | ★ | 上次複習 | tags |
 |---|---|---|---|---|---|
+| [hands-on](hands-on.md) | adj./adv. | 親自動手的；實作的；實務型的 | 1 | 2026-06-01 | adjective, work, learning, toeic |
+| [debunk](debunk.md) | v. | 揭穿、戳破（不實說法／迷思） | 1 | 2026-06-01 | verb, news, science, modern |
+| [conspiracy](conspiracy.md) | n. | 陰謀；共謀（多用 conspiracy theory ⚠️stress） | 1 | 2026-06-01 | noun, news, stress-trap |
 | [exhibit](exhibit.md) | v./n. | 展示；展現（特質）；展品、證物（⚠️silent h） | 1 | 2026-06-01 | verb, noun, toeic, pronunciation-trap |
 | [fusion](fusion.md) | n. | 融合；結合；（物理）核融合 | 1 | 2026-06-01 | noun, food, music, science |
 | [sarcastic](sarcastic.md) | adj. | 諷刺的；挖苦的；酸言酸語的 | 1 | 2026-06-01 | adjective, tone, humor, daily |
