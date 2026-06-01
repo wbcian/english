@@ -6,6 +6,7 @@
 
 | 單字 | 詞性 | 中文 | ★ | 上次複習 | tags |
 |---|---|---|---|---|---|
+| [smart aleck](smart-aleck.md) | n. | 自作聰明的人；耍嘴皮子的傢伙（略過時） | 1 | 2026-06-01 | noun, informal, personality, dated |
 | [assemble](assemble.md) | v. | 組裝、拼裝；集合、聚集 | 1 | 2026-06-01 | verb, multi-meaning, toeic, work |
 | [on point](on-point.md) | idiom | 完美無瑕；精準到位（口語） | 1 | 2026-06-01 | idiom, slang, modern, register-trap |
 | [test the waters](test-the-waters.md) | idiom | 試水溫；先探探情況再投入 | 1 | 2026-06-01 | idiom, business, career, toeic |
