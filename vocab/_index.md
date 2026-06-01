@@ -6,6 +6,7 @@
 
 | 單字 | 詞性 | 中文 | ★ | 上次複習 | tags |
 |---|---|---|---|---|---|
+| [quirk](quirk.md) | n. | 怪癖；古怪的小特點（adj. quirky） | 1 | 2026-06-01 | noun, personality, daily |
 | [prosthetic](prosthetic.md) | adj./n. | 義肢的；（n.）義肢、人工裝置 | 1 | 2026-06-01 | adjective, noun, medical, film-sfx |
 | [track down](track-down.md) | phr.v. | 追查到；找出（費力尋找後找到） | 1 | 2026-06-01 | phrasal-verb, separable, search, toeic |
 | [terrified](terrified.md) | adj. | 嚇壞的；非常害怕的 | 1 | 2026-04-30 | adjective, emotion, fear |
