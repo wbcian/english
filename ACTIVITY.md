@@ -6,6 +6,7 @@
 ---
 
 ## 2026-06-01
+- 📚 單字片語練習：新增 [exhibit](vocab/exhibit.md)（★1 v./n. · 展示／展現／展品）— ⚠️ silent h（eg-ZIB-it，但 exhibition 反而發 h）；三義 display art／show a quality（formal）／exhibit 展品·Exhibit A 證物；TOEIC trade exhibition。實用性判定＝strong keeper esp. TOEIC
 - 📚 單字片語練習：新增 [fusion](vocab/fusion.md)（★1 n. · 融合）— fusion cuisine／music／a fusion of X and Y；科學 nuclear fusion 對比 fission；動詞 fuse。實用性判定＝solid keeper（mildly topic-bound）
 - 📚 單字片語練習：新增 [sarcastic](vocab/sarcastic.md)（★1 adj. · 諷刺／酸）— 講反話、tone-dependent；名詞 sarcasm、副詞 sarcastically；搭配 dripping with sarcasm。實用性判定＝top-tier keeper
 - 📚 單字片語練習：新增 [smart aleck](vocab/smart-aleck.md)（★1 n. · 自作聰明的人）— adj. smart-alecky；實用性判定＝**略過時 / passive keeper**（聽得懂但偏父母輩用語），現代口語改用 wise guy／smart-ass⚠vulgar／know-it-all
