@@ -1,0 +1,147 @@
+---
+title: Lesson CEFR 分級評估 SOP（標準流程）
+type: reference
+version: 1
+created: 2026-06-03
+---
+
+# Lesson CEFR 分級評估 SOP
+
+> 目的：給每篇 lesson 標一個一致、可重複、可辯護的 `level`（單一 CEFR 級）。
+> 這是**判斷型**流程（assessment），不是外部事實查詢——一致性靠**鎖定錨點 + 固定判準**達成，不是靠官方分數。
+> 等級 ↔ TOEIC/IELTS… 的對照數字在 [`cefr-toeic-levels.md`](cefr-toeic-levels.md)；本檔只管「怎麼評」。
+
+---
+
+## 0. 三條鐵則（最重要）
+
+1. **只評英文素材本身**：學習者要吸收的英文（dialogue 台詞 / talk 正文 / reading 文章）。**忽略**所有中文解說、雙語對照的中文半、vocab 中文欄、Cultural Notes、Study Tips。
+2. **評「重心」，不評「最難一句」**：看整篇英文的密度落在哪，不被個別難句綁架。
+3. **永遠對齊錨點**（§3）：新篇一律和已鎖定的錨點 lesson 比較，不憑空給級。**錨點是跨時間一致的唯一保證。**
+
+---
+
+## 1. 評什麼（依 track）
+
+| track | 評估對象（英文部分）|
+|---|---|
+| dialogue | 英文對話台詞（blockquote 內，去掉粗體講者標籤）|
+| talk | 英文獨白 / 歌詞 / 旁白正文 |
+| reading | 英文文章 / essay 正文（含 Close Reading 段）|
+
+## 2. 四個判準維度
+
+評文本**內在難度**，看四項：
+
+1. **句構複雜度** — 簡單句？並列？多層子句？
+2. **字彙廣度與抽象度** — 高頻具體 vs 低頻抽象 / 專業 domain 詞。
+3. **慣用語 / 俚語 / 連音密度** — idiom、slang、Gen-Z 口語、reduced speech。
+4. **語篇複雜度** — 交易性 vs 論述/論證、明說 vs 隱含。
+
+**idiom 加成規則**：文法簡單但 idiom/slang/連音極重（歌詞、母語快速口語）可**往上推一級**——但最多一級，不可超過字彙/語篇本身能撐到的級。
+
+---
+
+## 3. 鎖定錨點（calibration anchors）
+
+> 評新篇時，把它和下面的錨點並排比較。**錨點等級不隨意改**；要改需在 §7 留紀錄。
+
+### 已鎖定（取自真實 lesson）
+
+**B1 錨點** — `lessons/2026-05-31-japan-hotel-checkin-part-1-arrival.md`
+> *"I'd like to check in, please. I have a reservation under Benson Wu."* / *"Could I get a non-smoking room?"*
+> 特徵：固定禮貌句型、具體名詞、現在式、少量子句、交易性語篇。
+
+**B2 錨點（書面）** — `lessons/2026-05-29-posthog-product-for-engineers-pack.md`
+> *"Product engineers do all the things software engineers do, but they talk directly to users, work autonomously, and are opinionated about what to work on."*
+> 特徵：乾淨但抽象的商業寫作、並列結構、domain 詞、意思明說。
+
+**B2 錨點（口語）** — `lessons/2026-05-25-cat-wu-pm-skills-and-taste.md`
+> *"all of the roles are emerging… a great PM is able to understand what all the gaps are, to figure out what the highest priority ones are."*
+> 特徵：自發口語、抽象概念 + startup idiom（lean into the chaos / wear a lot of hats）、巢狀不定詞，但每句讀得懂。
+
+### 暫定（尚無真實 lesson，待出現後鎖定）
+
+- **A2** — 比 B1 錨點更基礎：短固定片語、最高頻具體詞。例：*"Where is the station?" "I want a coffee, please."*
+- **C1** — 比 B2 錨點更難：**持續的密集論證 + 隱含意義 + 高階慣用/連義**。例：*"The irony, of course, is that the very autonomy we prize quietly erodes the cohesion it depends on."*
+- **C2** — 近母語：細膩 register 操控、文學/修辭手法。標 C2 前先質疑是不是 C1。
+
+---
+
+## 4. 判級決策規則（tie-break）
+
+### B1 vs B2
+- 交易性 / 旅遊 / 基本工作對話、具體詞、句子短 → **B1**。
+- 一旦出現**抽象/專業論述、idiom 堆疊、低頻詞、表達意見/論證** → **B2**。
+
+### B2 vs C1（最常踩的邊界）
+標 **C1 必須同時**滿足：
+1. **持續**的密集論證 / 抽象（不是偶一為之的一句難句），**且**
+2. 意思常需**讀between the lines**（反諷、連義、言外之意），**且**
+3. 用到**超出 domain jargon 的高階慣用/低頻詞**。
+
+→ 若「難」主要來自**專業術語**、但句子文法好讀、意思是**明說**的 → **封頂 B2**。
+（這就是 Cat Wu / PostHog / Charles Cook 是 B2 不是 C1 的原因。）
+
+### 其他固定規則
+- **單一級，不用區間**：frontmatter 只放一個 CEFR 級。真的兩級之間拿不定 → **取低的**（保守），並在 PR/commit 訊息註記。
+- **聽 vs 讀**：`level` 反映**文本內在難度（當作「讀」）**。`audio: true` 的母語語速素材「用聽的」會更難一級，但**不為此調高 `level`**——這是已知限制，不是 bug。
+- **系列一致性**：同 series 的各 part 若 register 相同，給同級；除非某 part 明顯更難/更簡單。
+
+---
+
+## 5. 執行流程（pipeline）
+
+**A. 少量（1–2 篇）** → 自己讀英文，直接對齊 §3 錨點判級。
+
+**B. 批次（3 篇以上 / migration）** → 用**單一** assessor agent 在**同一 context** 一次讀完全部（確保互相校準），回傳：`檔名 | 等級 | 一句證據（引代表句）| 是否邊界`。然後**人工覆核所有「邊界」與所有「C1 以上」**（親自讀原文用 §4 判定）。
+
+> 為何單一 agent 讀全部：同一把尺才一致。多個 agent 各評各的會飄。
+
+### 可重用的 assessor prompt 範本
+
+```
+你是 CEFR 分級專家。對下列 lesson 的「英文內容」各給一個 CEFR 重心級（A1–C2）。
+規則：只評英文（忽略中文解說/對照/vocab 中文/Cultural Notes）；評重心非最難句；
+四維度＝句構/字彙抽象度/idiom密度/語篇複雜度；idiom 重可+1 級。
+錨點（照這個校準，別改）：
+  B1 = "I'd like to check in, please. I have a reservation under [name]."（固定禮貌句、具體詞）
+  B2 = "Product engineers do all the things software engineers do, but they talk directly to users,
+        work autonomously, and are opinionated about what to work on."（抽象商業寫作、明說）
+B2 vs C1：難在 domain jargon 但句子好讀、意思明說 → 封頂 B2；
+  C1 需「持續密集論證 + 隱含意義 + 高階慣用」三者皆備。
+檔案：<貼絕對路徑清單>
+輸出：表格 檔名|等級|次選(僅真邊界)|一句證據；最後列出邊界篇與你偏向哪邊。
+```
+
+### 寫入與驗證
+1. 把級寫進每篇 frontmatter `level:`（單一 CEFR 值）。
+2. TOEIC 對應由 app 的 `app/src/data/cefr.ts` 自動推算，**不要**手寫進 lesson。
+3. 開 dev server（`english-app-dev`）→ content sync 會驗 enum；list 卡片應出現對應 badge；無 console error。
+4. commit：scope `lesson`（級標記）；若動到 app/SOP 另開 `app`/`brain`。
+
+---
+
+## 6. 信心等級（這東西有多硬）
+
+| | 數字對照表 | 各篇 `level` |
+|---|---|---|
+| 性質 | 外部事實 | **主觀判斷** |
+| 驗證 | 兩輪獨立查官方來源 | 單一 assessor + 人工覆核 |
+| 可信度 | 高 | 中（邊界主觀，故可被質疑、可改）|
+
+**本 SOP 未做**：詞彙頻率剖析（English Vocabulary Profile / CEFR-J 詞表）、可讀性公式（Flesch-Kincaid）。
+**升級路徑**（若要更硬）：詞彙 CEFR 剖析工具 + 2 位以上獨立評分者 → reconcile。目前用途（list 掃一眼知難度）用本 SOP 即可。
+
+---
+
+## 7. 維護紀錄 / 變更原則
+
+- **何時重評**：lesson 英文內容大改、或錨點被重新定義時。
+- **新增錨點**：當收到第一篇真實 A2 / C1 / C2 lesson，把 §3 暫定項換成真實引句並標「已鎖定」。
+- **改錨點等級**：屬重大變更——需在此留「改了什麼 / 為何 / 是否要回頭重評既有 lesson」。
+
+### v1（2026-06-03）建立
+- 首次把流程固定成 SOP。鎖定 B1（japan check-in P1）、B2 書面（PostHog）、B2 口語（Cat Wu P2）三錨點。
+- 首批 15 篇據此分級：4×B1（旅遊實戰對話）、11×B2（真實母語素材）。
+- 評估時 assessor 初判 4 篇 C1（Cat Wu×2 / Charles Cook / PostHog），人工覆核依 §4 全數下修 B2（難在 jargon 非隱含意義）。

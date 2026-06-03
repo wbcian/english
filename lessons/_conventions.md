@@ -32,6 +32,7 @@ source: <一行短描述>          # subtitle 用；platform · 出處/作者 ·
 type: lesson
 track: reading | dialogue | talk
 audio: true | false           # 原始素材有無真人聲音；純元資料，不影響 app 朗讀
+level: A1|A2|B1|B2|C1|C2      # optional，CEFR 難度（單一級）；評法見 ../reference/cefr-leveling-process.md
 series: <series-slug>         # optional，多 part 系列才填
 part: <N>                     # optional，series 有填時才填
 url: https://...              # optional（reading 建議填原文 URL）

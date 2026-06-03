@@ -33,6 +33,7 @@
 - [`ACTIVITY.md`](ACTIVITY.md) — 時間軸（最新在上）
 - [`PROFILE.md`](PROFILE.md) — 目標 / 弱點 / 偏好
 - [`reference/cefr-toeic-levels.md`](reference/cefr-toeic-levels.md) — 英文分級制度對照表（CEFR ↔ TOEIC / IELTS / TOEFL / Cambridge / GEPT）；lesson `level` 欄與 app badge 的依據
+- [`reference/cefr-leveling-process.md`](reference/cefr-leveling-process.md) — **lesson 分級評估 SOP**（怎麼給 `level`：錨點、判準、B2/C1 決策、assessor prompt 範本）；新 lesson 標 level 一律照這套
 
 ## 給 LLM 的維護規則
 
