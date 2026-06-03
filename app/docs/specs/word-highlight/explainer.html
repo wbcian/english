@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>逐字 highlight — 實踐方式與建議</title>
+<style>
+  :root{
+    --bg:#fbf9f4; --fg:#222; --muted:#6b6256; --card:#fff; --line:#e6e0d4;
+    --accent:#f59e0b; --hl:#fff2c6; --hl-strong:#ffe08a;
+    --good:#1f9d55; --warn:#d9480f; --bad:#c92a2a; --code:#2d2a26;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#1b1813; --fg:#ece6db; --muted:#a89e8d; --card:#262019; --line:#3a3226;
+           --hl:#4a4022; --hl-strong:#6b5a23; --code:#0f0d0a; }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang TC","Noto Sans TC",Helvetica,Arial,sans-serif;}
+  .wrap{max-width:920px;margin:0 auto;padding:32px 20px 80px}
+  h1{font-size:1.9rem;line-height:1.25;margin:.2em 0 .1em}
+  h2{font-size:1.32rem;margin:2.2em 0 .6em;padding-bottom:.25em;border-bottom:2px solid var(--line)}
+  h3{font-size:1.05rem;margin:1.4em 0 .4em}
+  p{margin:.6em 0}
+  .sub{color:var(--muted);font-size:1.02rem;margin-top:0}
+  code{font-family:"SF Mono",ui-monospace,Menlo,Consolas,monospace;font-size:.86em;
+    background:rgba(127,127,127,.14);padding:.1em .38em;border-radius:5px}
+  pre{background:var(--code);color:#f3efe6;padding:14px 16px;border-radius:10px;overflow:auto;
+    font-family:"SF Mono",ui-monospace,Menlo,Consolas,monospace;font-size:.82rem;line-height:1.55}
+  pre .c{color:#9c9384}
+  .lead{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);
+    border-radius:10px;padding:14px 18px;margin:1.2em 0}
+  .lead b{color:var(--accent)}
+  table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1em 0;background:var(--card);
+    border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  th,td{padding:9px 11px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  th{background:rgba(245,158,11,.12);font-weight:700}
+  tr:last-child td{border-bottom:none}
+  .v-pri{color:var(--good);font-weight:700}
+  .v-fb{color:var(--warn);font-weight:700}
+  .v-no{color:var(--bad);font-weight:700}
+  .term{border-bottom:1.5px dotted var(--accent);cursor:help;position:relative;text-decoration:none;color:inherit}
+  .term:hover::after{content:attr(data-tip);position:absolute;left:0;top:1.6em;z-index:9;
+    width:min(320px,80vw);background:var(--code);color:#f3efe6;padding:9px 12px;border-radius:8px;
+    font-size:.8rem;line-height:1.5;box-shadow:0 6px 24px rgba(0,0,0,.25);white-space:normal}
+  .pill{display:inline-block;font-size:.72rem;font-weight:700;padding:.12em .55em;border-radius:999px;
+    background:var(--hl-strong);color:#5a4500;margin-left:.3em}
+
+  /* ---- demo ---- */
+  .demo{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;margin:1.2em 0}
+  .demo h3{margin-top:0}
+  .track{margin:14px 0}
+  .track .label{font-size:.8rem;font-weight:700;color:var(--muted);margin-bottom:6px;display:flex;
+    align-items:center;gap:8px;flex-wrap:wrap}
+  .sent{font-size:1.45rem;line-height:1.9;letter-spacing:.2px}
+  .sent .w{padding:.04em .12em;border-radius:6px;transition:background .08s linear,color .08s linear}
+  .sent .w.on{background:var(--hl-strong);color:#3a2c00;box-shadow:0 0 0 1px rgba(245,158,11,.45)}
+  .controls{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:6px 0 4px}
+  button.play{background:var(--accent);color:#fff;border:none;border-radius:9px;padding:9px 18px;
+    font-size:.95rem;font-weight:700;cursor:pointer}
+  button.ghost{background:transparent;border:1px solid var(--line);color:var(--fg);border-radius:9px;
+    padding:8px 14px;cursor:pointer;font-size:.88rem}
+  .clock{font-family:"SF Mono",ui-monospace,Menlo,monospace;font-size:.85rem;color:var(--muted)}
+  input[type=range]{flex:1;min-width:160px;accent-color:var(--accent)}
+  .sync{font-size:.82rem;font-weight:700;padding:.2em .7em;border-radius:999px}
+  .sync.ok{background:rgba(31,157,85,.15);color:var(--good)}
+  .sync.bad{background:rgba(201,42,42,.15);color:var(--bad)}
+  .legend{font-size:.78rem;color:var(--muted);margin-top:10px}
+  .note{font-size:.82rem;color:var(--muted);font-style:italic}
+
+  /* ---- flow diagram ---- */
+  .flow{display:flex;flex-direction:column;gap:10px;margin:1.2em 0}
+  .flow .row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+  .box{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 14px;
+    font-size:.86rem;text-align:center;flex:1;min-width:200px}
+  .box.prod{border-color:var(--accent)}
+  .box.iface{background:var(--hl);border:2px solid var(--accent);font-weight:700}
+  .box.run{border-style:dashed}
+  .box small{display:block;color:var(--muted);font-size:.74rem;margin-top:3px}
+  .arrow{text-align:center;color:var(--accent);font-size:1.1rem;line-height:1}
+  dl.gloss{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:6px 18px}
+  dl.gloss dt{font-weight:700;margin-top:14px;color:var(--accent)}
+  dl.gloss dd{margin:.2em 0 .2em 0}
+  .foot{margin-top:50px;color:var(--muted);font-size:.82rem;border-top:1px solid var(--line);padding-top:16px}
+  .tag{display:inline-block;background:var(--hl);color:#5a4500;border-radius:6px;padding:.05em .5em;
+    font-size:.74rem;font-weight:700}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>播放音檔時「逐字 highlight」</h1>
+  <p class="sub">有哪些實踐方式 · 現有架構好不好做 · 建議怎麼做 — 配套技術 spec：<code>spec.md</code></p>
+
+  <div class="lead">
+    <b>一句話結論：</b>這是<b>加法（additive），不是重構</b>。現有的 hash + manifest +
+    <span class="term" data-tip="new Audio(src) — 瀏覽器原生音檔播放物件，本案播 MP3 用的就是它。">new Audio()</span>
+    主幹原封不動。關鍵設計是把「逐詞時間來源」藏在一個穩定介面
+    （<span class="term" data-tip="一份逐詞 start/end 秒數的小 JSON，跟 MP3 共用同一個內容 hash 當檔名。runtime 只認它，誰產的都行。"><code>&lt;hash&gt;.words.json</code> sidecar</span>）
+    後面，這樣未來把語音換成 GPT-4o（不吐時間）也不會把逐字 highlight 弄壞。
+  </div>
+
+  <!-- ============ DEMO ============ -->
+  <h2>① 先看效果：精準 vs. 會漂移</h2>
+  <p>同一句、同一個播放時鐘，上排用<b>真實逐詞時間</b>（Edge <span class="term" data-tip="TTS 引擎一邊念一邊回報「現在念到哪個詞、從第幾毫秒到第幾毫秒」。本案 Producer A 的免費時間來源。">WordBoundary</span>），
+  下排用<b>均分估算</b>（總長 ÷ 詞數，每個詞給一樣的時間）。按播放，看下排怎麼在短詞（<code>on</code>、<code>a</code>）一帶開始<b>對不上</b>聲音——那個落差就是「漂移」。</p>
+
+  <div class="demo">
+    <div class="controls">
+      <button class="play" id="play">▶ 播放</button>
+      <button class="ghost" id="reset">⟲ 重來</button>
+      <span class="clock" id="clock">0.00s / 4.30s</span>
+      <span class="sync ok" id="sync">同步 ✓</span>
+    </div>
+    <input type="range" id="scrub" min="0" max="4.30" step="0.01" value="0">
+
+    <div class="track">
+      <div class="label"><span class="v-pri">✅ WordBoundary（精準）</span> — 引擎實際念到的位置（= 聲音真相）</div>
+      <div class="sent" id="rowA"></div>
+    </div>
+    <div class="track">
+      <div class="label"><span class="v-fb">⚠️ 均分估算（會漂移）</span> — 每個詞硬切一樣長</div>
+      <div class="sent" id="rowB"></div>
+    </div>
+    <div class="legend">＊本 demo 用計時器模擬播放時鐘，不需真音檔——重點是展示「有逐詞時間」與「沒有、用猜的」差在哪。真實情境裡上排的時間來自 <code>&lt;hash&gt;.words.json</code>。</div>
+  </div>
+
+  <!-- ============ PROBLEM ============ -->
+  <h2>② 為什麼不能直接做</h2>
+  <p>逐字 highlight 需要兩樣東西，現況<b>兩樣都缺</b>：</p>
+  <table>
+    <tr><th>缺的東西</th><th>為什麼現在沒有</th><th>怎麼補</th></tr>
+    <tr><td><b>可被上色的目標</b></td><td>段落現在是「一坨文字節點」，沒有逐詞的 DOM 元素可單獨上色</td><td>一層 <b>word-<code>&lt;span&gt;</code> 切詞</b>（build 時做）</td></tr>
+    <tr><td><b>逐詞時間軸</b></td><td>不透明的 MP3 不知道每個詞何時被念到</td><td>一個 <b>per-word 時間來源</b>（見下方矩陣）</td></tr>
+  </table>
+  <p class="note">第 2 點正是換 GPT-4o 會踩雷的地方：不同引擎給不給時間、格式都不同。所以重點不是「選哪個時間來源」，而是「換來源也不會壞 runtime」。</p>
+
+  <!-- ============ MATRIX ============ -->
+  <h2>③ 五種實踐方式比較</h2>
+  <table>
+    <tr><th>方式</th><th>精準度</th><th>成本</th><th>支援</th><th>Effort</th><th>裁決</th></tr>
+    <tr>
+      <td><b>A.</b> Edge <span class="term" data-tip="開 wordBoundaryEnabled，把引擎本來就吐、現在被丟掉的逐詞時間接起來，build 時寫成 <hash>.words.json。">WordBoundary → sidecar</span></td>
+      <td>同次合成算出，<b>sub-100ms</b></td><td>每 clip 一個小 JSON，<b>無額外 TTS 呼叫</b></td>
+      <td>producer 限 Node；runtime 全平台含 iOS</td><td>M</td><td class="v-pri">主 producer</td>
+    </tr>
+    <tr>
+      <td><b>B.</b> <span class="term" data-tip="已知正確文字＋音檔，把每個字對齊到時間軸（不是猜字，是對時間）。工具如 WhisperX / MFA。">Forced alignment</span>（Whisper/WhisperX）</td>
+      <td>真對齊 20–80ms</td><td>offline batch；whisper-1 幾分錢</td>
+      <td><b>100% 引擎無關</b>（Edge / GPT-4o / 真人都行）</td><td>L / M</td><td class="v-fb">未來 producer</td>
+    </tr>
+    <tr>
+      <td><b>C.</b> Web Speech <span class="term" data-tip="瀏覽器內建 TTS 念到詞邊界時發的事件，附 charIndex（念到原文第幾字元）。手機上不可靠。"><code>onboundary</code></span></td>
+      <td>有觸發時不錯</td><td>0</td>
+      <td><b>只蓋 fallback</b>，碰不到 813 個 MP3；手機不可靠</td><td>M</td><td class="v-fb">薄漸進增強</td>
+    </tr>
+    <tr>
+      <td><b>D.</b> 均分估算（demo 下排）</td>
+      <td>差，隨句長漂移（130 詞可差 1–2.8s）</td><td>0</td>
+      <td>全平台；只靠 <code>duration</code>，換引擎也活</td><td>S</td><td class="v-fb">保底地板</td>
+    </tr>
+    <tr>
+      <td><b>E.</b> WebAudio 能量/靜音偵測</td>
+      <td>差，連音沒有逐詞靜音</td><td>逐幀 RMS</td>
+      <td>iOS 行為怪；調參無底洞</td><td>L</td><td class="v-no">避免</td>
+    </tr>
+  </table>
+  <p class="note">橫向共識：每個逐字方案都要<b>同一層切詞</b>。先把切詞做對，後面換時間來源都受惠。</p>
+
+  <!-- ============ ARCHITECTURE ============ -->
+  <h2>④ 建議架構：sidecar 當「解耦介面」</h2>
+  <p>解耦的縫，是一份<b>穩定、內容定址的逐詞時間檔</b>：runtime 只認它，多個 producer 都能寫它。</p>
+
+  <div class="flow">
+    <div class="row">
+      <div class="box prod"><b>Producer A</b><small>Edge WordBoundary<br>現在 · 免費 · 同次合成</small></div>
+      <div class="box prod"><b>Producer B</b><small>Whisper/WhisperX 對齊<br>換 GPT-4o / 真人原音時</small></div>
+    </div>
+    <div class="arrow">▼ 寫出（兩者吐一模一樣的形狀）</div>
+    <div class="row">
+      <div class="box iface">app/public/audio/&lt;hash&gt;.words.json　=　[{ text, start, end }]
+        <small>key = 跟 &lt;hash&gt;.mp3 一樣的 sha256 前 12 碼 · 進版控</small></div>
+    </div>
+    <div class="arrow">▼ 被消費</div>
+    <div class="row">
+      <div class="box run"><b>Runtime（speech.ts）</b><small>播 MP3 後 fetch sidecar；<span class="term" data-tip="requestAnimationFrame：每一幀(~16ms)的播放中回呼，比 timeupdate(~250ms)順。">rAF</span> 讀 audio.currentTime → 對 word &lt;span&gt; toggle <code>.is-current-word</code>。沒 sidecar → 退回今天的整段反白。</small></div>
+    </div>
+  </div>
+
+  <p><b>為什麼這個介面對：</b></p>
+  <ul>
+    <li><b>白搭現有設計</b>：<span class="term" data-tip="用內容的 SHA-256 當檔名/key，相同內容必得相同 hash——像用指紋當門牌。">內容定址 hash</span> 本來就把 text→MP3，sidecar 共用同一個 hash，快取/idempotency 全免費。</li>
+    <li><b>runtime 只靠 baseline API</b>：<code>currentTime</code> + <code>rAF</code> + <code>classList</code>，全平台含 iOS 都穩，<b>完全不碰</b> Web Speech boundary（手機不可靠）。</li>
+    <li><b>進版控</b>：sidecar 跟 813 個 MP3 一起 commit。Edge 這逆向 API 哪天壞了，壞的是 build，不是線上。</li>
+  </ul>
+
+  <h3>Producer A 其實只是「把丟掉的東西撿回來」</h3>
+  <pre><span class="c">// app/scripts/generate-audio.mjs</span>
+<span class="c">// :138 — 開啟逐詞邊界（預設是關的，所以 metadataStream 一直是 null）</span>
+await c.setMetadata(VOICE, FORMAT, { wordBoundaryEnabled: true });
+
+<span class="c">// :156 — 別再只解構 audioStream，把 metadataStream 也接住</span>
+const { audioStream, metadataStream } = tts.toStream(escapeForSsml(text));
+<span class="c">// 一邊 pipe audio 到磁碟，一邊累積 WordBoundary 項；兩條 stream 都 close 後：</span>
+<span class="c">//   start = Offset / 1e7 ,  end = (Offset + Duration) / 1e7   (100ns tick → 秒)</span>
+writeFile(`public/audio/${hash}.words.json`, JSON.stringify(words));</pre>
+
+  <!-- ============ FEASIBILITY ============ -->
+  <h2>⑤ 觸點：改哪些檔（additive）</h2>
+  <table>
+    <tr><th>檔案</th><th>改動</th><th>規模</th></tr>
+    <tr><td><code>scripts/generate-audio.mjs</code></td><td>開 flag、接 metadata、寫 sidecar、缺檔回填 813 clip</td><td>XS–S</td></tr>
+    <tr><td><b>新</b> <code>src/rehype/inject-word-spans.mjs</code></td><td>build 時把每個詞包 <code>&lt;span&gt;</code>；<b>必須逐 byte 保留 textContent</b>（否則 hash 對不上、每個 MP3 都查不到）</td><td class="v-fb">M（真正的重量）</td></tr>
+    <tr><td><code>src/scripts/speech.ts</code></td><td><code>playAudioFile</code> 加選配 sidecar fetch + rAF highlighter</td><td>S–M</td></tr>
+    <tr><td><code>src/layouts/Layout.astro</code></td><td>加 <code>.w.is-current-word</code>，複用 <code>--speak-highlight</code></td><td>XS</td></tr>
+    <tr><td><code>lessons/_conventions.md</code> §5</td><td>把 sidecar + 切詞記成第三個要同步的面</td><td>XS</td></tr>
+  </table>
+
+  <h3>分階段</h3>
+  <table>
+    <tr><th>Phase</th><th>內容</th><th>Effort</th></tr>
+    <tr><td><b>0</b></td><td>共享切詞層（先 no-op，讓 span 無害上線；驗收：textContent 不變、813 MP3 全命中）</td><td>S</td></tr>
+    <tr><td><b>1</b></td><td>MP3-only 逐字（Producer A）：開 flag、寫 sidecar、回填、rAF highlighter（<b>序列 index 對齊</b>，非 char offset）</td><td>M</td></tr>
+    <tr><td><b>2</b></td><td>（選配）Web Speech <code>onboundary</code> 桌面限定漸進增強——永不當主路徑</td><td>S</td></tr>
+    <tr><td><b>3</b></td><td>（延到換 GPT-4o）立 Producer B forced alignment offline batch，runtime 不動 + 均分地板</td><td>L</td></tr>
+  </table>
+
+  <!-- ============ RISKS ============ -->
+  <h2>⑥ 兩個會「靜默壞掉」的雷（怎麼來、怎麼避免）</h2>
+
+  <div class="lead">
+    <b>先懂背景：</b>app 不是「一段文字配寫死的檔名」，而是<b>內容定址</b>——
+    <code>段落文字 → 正規化 → SHA-256 前 12 碼 → 那個 hash 就是 MP3 檔名</code>。
+    <b>build 時</b>算一次 hash 命名 MP3，<b>runtime</b> 再從畫面那段文字<b>重算一次</b>去查表。
+    兩次必須算出<b>完全一樣</b>的 hash 才找得到音檔。懂這個，兩個雷就清楚了。
+  </div>
+
+  <h3>🔴 雷 1 — Hash drift（hash 對不上 · 最高嚴重度）</h3>
+  <table>
+    <tr><th style="width:18%">面向</th><th>說明</th></tr>
+    <tr><td><b>是什麼</b></td><td>包詞成 <code>&lt;span&gt;</code> 時若<b>改到了那段文字</b>，runtime 重算的 hash 跟 MP3 檔名對不上 → 查表 miss → <b>每段都靜默退回瀏覽器機器人語音</b>。不報錯，整站發音悄悄變爛。</td></tr>
+    <tr><td><b>為什麼會中</b></td><td><code>&lt;span&gt;foo&lt;/span&gt;</code> 的 textContent 本來等於 <code>foo</code>，雷在細節：切詞時<b>多塞/吃掉空白</b>（<code>fresh␣␣coffee</code> 兩格被收一格）、把要剝除的<b>講者 <code>&lt;strong&gt;</code> 標籤</b>也算進去、或彎引號 <code>'</code>↔直引號 <code>'</code> 沒對齊。</td></tr>
+    <tr><td><b class="v-pri">怎麼避免</b></td><td>① 切詞器只「切段＋包 span」，<b>逐字元含空白原封不動</b>。② <b>build 時加斷言</b>：包前 textContent <code>===</code> 包後串回（或包完重算 hash、確認仍在 manifest）→ <b>漂移就讓 build 失敗</b>。③ 講者標籤剝除跟 <code>speech.ts</code> 用<b>同一份程式碼</b>、不另寫。</td></tr>
+  </table>
+  <p class="note">精髓：把「runtime 才會發現的靜默失敗」提前變成「build 時的大聲報錯」——漂移上不了線。<b>便宜、可完全消除。</b></p>
+
+  <h3>🟠 雷 2 — <span class="term" data-tip="TTS 引擎切的詞 vs DOM 空白切的詞對不齊。Edge 還會把 100→one hundred、USD→United States Dollars，連「詞數」都可能不同。">Tokenization drift</span>（兩邊的「詞」對不齊 · 已查證）</h3>
+  <table>
+    <tr><th style="width:18%">面向</th><th>說明</th></tr>
+    <tr><td><b>是什麼</b></td><td>有兩份「詞清單」：畫面 DOM span（按空白切）與 Edge WordBoundary（每詞帶時間）。兩份<b>有時對不起來</b>。</td></tr>
+    <tr><td><b>為什麼會中</b></td><td>Edge <b>念之前改寫 token</b>：<code>100</code>→<code>one hundred</code>（一變二）、<code>USD</code>→<code>United States Dollars</code>（一變三），且<b>只給「念的詞＋時間」、不給輸入字元位置</b>。天真假設「第 i 詞=第 i 詞」，一碰到 <code>100</code> 就<b>從此往後錯一格、錯到段尾</b>，同樣靜默、只是亮錯字。</td></tr>
+    <tr><td><b class="v-pri">怎麼避免</b></td><td>① <b>不假設 1:1</b>，用<b>序列對齊</b>（雙指標 / Needleman-Wunsch）；一個 DOM 詞對到多個時間詞就<b>合併時間</b>（start 取第一、end 取最後）指回該 span。② 兩邊先過同一套正規化。③ <b>保命網</b>：對不齊的 clip <b>退整段</b>，絕不錯標。④ v1 只對「詞數乾淨對上」的 clip 開逐字，含數字/縮寫的先退整段。</td></tr>
+  </table>
+
+  <h3>一眼版</h3>
+  <table>
+    <tr><th>雷</th><th>後果</th><th>怎麼避免</th><th>對不齊時退路</th><th>成本</th></tr>
+    <tr><td><b>Hash drift</b></td><td>全站靜默退機器人語音</td><td>build 斷言 textContent/hash 不變 → 失敗就擋</td><td>不該發生（發生＝build 紅燈）</td><td class="v-pri">低 · 可完全消除</td></tr>
+    <tr><td><b>Tokenization drift</b></td><td>段落內逐詞錯標到結尾</td><td>序列對齊＋合併多對一；先正規化</td><td>該 clip <b>退整段</b>，不錯標</td><td class="v-fb">中 · 要寫對齊器</td></tr>
+  </table>
+  <p class="note"><b>共同原則：build 時抓、大聲報錯；runtime 退整段、永不錯標。</b>這也是 Phase 0 驗收寫「textContent 不變 → 813 MP3 全命中」的理由——那關專守雷 1。其他小雷：<code>&amp;&lt;&gt;</code> escape 後 Azure WordBoundary desync（受影響 clip 退整段）；scroll-into-view 用 <code>block:'nearest'</code> 防抖；長段預建 onset 陣列、每幀二分查找；切詞變第三個鏡像面，集中成共享模組防漂移。</p>
+
+  <!-- ============ VERIFICATION ============ -->
+  <h2>⑦ 對抗驗證修正了兩個直覺</h2>
+  <table>
+    <tr><th>原本以為</th><th>查證後</th></tr>
+    <tr><td>「Web Speech boundary 在 Safari/iOS 爛、Chrome 穩」</td>
+      <td><b>方向部分相反</b>：MDN 把 <b>Chrome/Android</b> 標 partial（"does not fire as expected"），真正全壞的是 Android；Safari 會觸發但缺 <code>charLength</code>。<b>淨結論不變</b>：別把功能蓋在 boundary 上。</td></tr>
+    <tr><td>「msedge-tts 可靠地吐 WordBoundary」</td>
+      <td><b>機制與單位 CONFIRMED，但「可靠」被高估</b>：README 範例一個 WordBoundary 都沒有、是逆向 API。→ <b>build 時擷取並 commit sidecar</b>，未來壞掉只壞 build。</td></tr>
+    <tr><td>「GPT-4o 換引擎時轉錄能補時間」</td>
+      <td><b>CONFIRMED：GPT-4o TTS 不吐 word timestamp</b>，<code>gpt-4o-transcribe</code> 也給不了 word 級——只有 <code>whisper-1</code> 能。正是要解耦的理由。</td></tr>
+  </table>
+
+  <!-- ============ GLOSSARY ============ -->
+  <h2>⑧ 技術名詞解釋</h2>
+  <dl class="gloss">
+    <dt>TTS / STT</dt><dd>TTS＝文字→語音（我們現在做的）；STT/轉錄＝反方向語音→文字。類比：TTS 是念稿、STT 是聽寫。本案發音用 TTS，只有反推時間（Producer B）才用 STT/對齊。</dd>
+    <dt>WordBoundary metadata</dt><dd>TTS 引擎一邊念一邊回報「念到哪個詞、第幾毫秒到第幾毫秒」。類比：播音員旁邊有人即時按每個字的碼錶。本案＝Producer A 的免費時間來源。</dd>
+    <dt>timing manifest（<code>&lt;hash&gt;.words.json</code> / sidecar）</dt><dd>一份逐詞 start/end 秒數的小清單。類比：卡拉 OK 字幕時間軌。本案＝解耦的穩定介面。</dd>
+    <dt>forced alignment（強制對齊）</dt><dd>已有正確文字＋音檔，把每個字對齊到時間軸（不是猜字，是對時間）。類比：拿劇本標出每句台詞落在影片第幾秒。本案＝Producer B（WhisperX/MFA/aeneas）。</dd>
+    <dt>content-addressable hash（內容定址）</dt><dd>用內容的 SHA-256 當檔名/key，相同內容必得相同 hash。類比：用指紋當門牌。本案＝text→MP3→sidecar 全共用。</dd>
+    <dt>Web Speech API · <code>boundary</code> 事件 · <code>charIndex</code></dt><dd>瀏覽器內建 TTS；念到詞邊界發 <code>boundary</code>，附「念到原文第幾字元」。本案＝fallback；手機不可靠，故只當桌面漸進增強。</dd>
+    <dt>rehype plugin / AST</dt><dd>Astro build 時把 Markdown/HTML 變成樹（AST）再改寫。類比：送印前自動在每個字外套標記。本案＝新 <code>inject-word-spans.mjs</code> 在 build 時把詞包 <code>&lt;span&gt;</code>。</dd>
+    <dt>tokenization / 斷詞漂移</dt><dd>把字串切成詞；漂移＝引擎切的詞 vs DOM 空白切的詞對不齊（數字、縮寫、連字號、彎引號）。本案最大實作風險，要序列對齊。</dd>
+    <dt>100-nanosecond units</dt><dd>Edge metadata 的時間單位，1 秒 = 1e7 tick。本案換算 <code>秒 = Offset / 1e7</code>。</dd>
+    <dt>SSML</dt><dd>給 TTS 的 XML 標記；<code>&amp;&lt;&gt;</code> 要 escape。本案 <code>escapeForSsml</code> 已處理，但 escape 後有 WordBoundary desync bug。</dd>
+    <dt><code>timeupdate</code> / <code>requestAnimationFrame</code>（rAF）</dt><dd>兩種播放中定時回呼。<code>timeupdate</code> 約 250ms 一次（太疏）；rAF 每幀 ~16ms（順）。本案 runtime 用 rAF。</dd>
+    <dt>解耦（decoupling）/ 穩定介面</dt><dd>把會變的東西藏在固定介面後，換實作不影響使用方。類比：插座規格不變、電器隨便換。本案＝sidecar 是插座，Edge/Whisper/GPT 是電器，runtime 不用動。</dd>
+  </dl>
+
+  <div class="foot">
+    本頁由一輪多代理 survey + 對抗驗證產出（11 agent）。完整設計與 file:line 觸點見同目錄 <code>spec.md</code>。
+    <span class="tag">範圍：合成 TTS 為主</span> <span class="tag">真人 podcast：未來延伸</span>
+  </div>
+
+</div>
+
+<script>
+(function(){
+  // Sample sentence with REALISTIC per-word durations (seconds) = the "WordBoundary / ground truth" track.
+  var WORDS = [
+    {t:"There's", d:0.40},{t:"nothing", d:0.42},{t:"quite", d:0.30},{t:"like", d:0.28},
+    {t:"fresh", d:0.40},{t:"coffee", d:0.55},{t:"on", d:0.18},{t:"a", d:0.12},
+    {t:"cold", d:0.40},{t:"winter", d:0.50},{t:"morning", d:0.75}
+  ];
+  // Build precise [start,end) from durations.
+  var prec=[], acc=0;
+  WORDS.forEach(function(w){ prec.push({s:acc, e:acc+w.d}); acc+=w.d; });
+  var TOTAL = acc;                       // 4.30s
+  var even = TOTAL / WORDS.length;       // uniform slot
+
+  var rowA=document.getElementById('rowA'), rowB=document.getElementById('rowB');
+  var spansA=[], spansB=[];
+  WORDS.forEach(function(w,i){
+    var a=document.createElement('span'); a.className='w'; a.textContent=w.t; rowA.appendChild(a);
+    rowA.appendChild(document.createTextNode(' ')); spansA.push(a);
+    var b=document.createElement('span'); b.className='w'; b.textContent=w.t; rowB.appendChild(b);
+    rowB.appendChild(document.createTextNode(' ')); spansB.push(b);
+  });
+
+  var clockEl=document.getElementById('clock'), syncEl=document.getElementById('sync'),
+      scrub=document.getElementById('scrub'), playBtn=document.getElementById('play'),
+      resetBtn=document.getElementById('reset');
+
+  function idxPrecise(t){
+    for(var i=0;i<prec.length;i++){ if(t>=prec[i].s && t<prec[i].e) return i; }
+    return t>=TOTAL ? WORDS.length-1 : -1;
+  }
+  function idxEven(t){
+    if(t>=TOTAL) return WORDS.length-1;
+    var i=Math.floor(t/even); return i<0?-1:Math.min(i,WORDS.length-1);
+  }
+  function paint(arr,on){ for(var i=0;i<arr.length;i++) arr[i].classList.toggle('on', i===on); }
+
+  function render(t){
+    if(t>TOTAL)t=TOTAL; if(t<0)t=0;
+    var ia=idxPrecise(t), ib=idxEven(t);
+    paint(spansA, ia); paint(spansB, ib);
+    clockEl.textContent = t.toFixed(2)+'s / '+TOTAL.toFixed(2)+'s';
+    scrub.value = t;
+    if(t<=0 || t>=TOTAL){ syncEl.className='sync ok'; syncEl.textContent='同步 ✓'; }
+    else if(ia===ib){ syncEl.className='sync ok'; syncEl.textContent='同步 ✓（兩排同一個詞）'; }
+    else { syncEl.className='sync bad'; syncEl.textContent='漂移 ✗（均分排亮錯詞，差 '+Math.abs(ia-ib)+' 個）'; }
+  }
+
+  // The demo clock is driven by setInterval (a simulation). Real runtime uses
+  // requestAnimationFrame against audio.currentTime — see §④. We use a timer +
+  // performance.now() deltas so the clock stays accurate even if a tick is delayed.
+  var timer=null, startWall=0, playing=false, baseT=0;
+  function stop(){ if(timer){clearInterval(timer);timer=null;} playing=false; playBtn.textContent='▶ 播放'; }
+  function tick(){
+    var t = baseT + (performance.now()-startWall)/1000;
+    if(t>=TOTAL){ render(TOTAL); stop(); playBtn.textContent='▶ 重播'; return; }
+    render(t);
+  }
+  function play(){
+    if(playing){ stop(); return; }
+    if(parseFloat(scrub.value)>=TOTAL) baseT=0; else baseT=parseFloat(scrub.value);
+    playing=true; playBtn.textContent='⏸ 暫停';
+    startWall=performance.now(); timer=setInterval(tick, 30);
+  }
+  playBtn.addEventListener('click', play);
+  resetBtn.addEventListener('click', function(){ stop(); render(0); playBtn.textContent='▶ 播放'; });
+  scrub.addEventListener('input', function(){ stop(); render(parseFloat(scrub.value)); });
+
+  render(0);
+})();
+</script>
+</body>
+</html>
