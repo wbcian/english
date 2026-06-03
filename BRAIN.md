@@ -11,7 +11,8 @@
 ## 快照（隨更新同步）
 - 已收錄單字：114
 - 5★ 精熟：0　 3–4★ 學習中：8　 1–2★ 新／脆弱：106
-- 最近活動日期：2026-06-01（🎧 微課 learning-styles-connected-speech；📚 single-session 連續新增 13 字：hands-on · debunk · conspiracy · exhibit · fusion · sarcastic · smart aleck · assemble · on point · test the waters · quirk · prosthetic · track down＋lesson 帶出 look something over · engage with；複習 cram）
+- 最近活動日期：2026-06-03（🎧 擴充日本 hotel check-in 系列：Part 1 加「🔀 變化題」6 題[OTA訂房/加床/double-twin/人數/registration card/early check-in]、Part 2 加「開口要備品」4 句型＋vocab toiletries · be out of；由 Cian 跟讀 Part 1 提問驅動，不動三段正文骨架）
+- 上一活動日期：2026-06-01（🎧 微課 learning-styles-connected-speech；📚 single-session 連續新增 13 字＋複習 cram）
 - 主目標：**TOEIC 750+ 證書**（詳見 [PROFILE.md](PROFILE.md#目標)）
 - **Lesson 格式（2026-05-29 換軸）**：`track`(reading/dialogue/talk) + `audio` 取代舊 `format`；Source→標題下 subtitle、正文雙語滾動框、Key Vocab 緊接正文後 — 規範見 [`lessons/_conventions.md`](lessons/_conventions.md)
 - 最近 lesson：**[Learning Styles 是迷思 — 順便偷學連音](lessons/2026-06-01-learning-styles-connected-speech.md)**（dialogue · Izzy's English 用 Veritasium 影片做的 ~2.5 min 微課）— 首份**以發音／連音為主菜**的 lesson：縮音表（nt→n 脫 T／au=/ɔː/／s→/ʒ/）＋連音表（look it over→"loo-ki-tover"）；vocab 交叉連結 hands-on/debunk，新加 look something over · engage with
