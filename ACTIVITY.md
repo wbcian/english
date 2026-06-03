@@ -5,6 +5,12 @@
 
 ---
 
+## 2026-06-03
+- 🎧 **擴充：日本住宿 Check-in 系列**（由 Cian 跟讀 Part 1 時的提問驅動）。維持 3-part 階段式骨架不動正文，改用「補充區塊」收納變化題：
+  - [Part 1](lessons/2026-05-31-japan-hotel-checkin-part-1-arrival.md) 新增 `🔀 變化題 · 你問我答`（報到階段 6 題）：OTA 平台訂房怎麼報（`through` 不是 `at`）／雙人房加床 extra bed／double vs twin 白話講法（with two bed**s**）／入住人數變更要先講（按人頭計價＋《旅館業法》逐人登記）／registration card 填本國資料即可（無需日本地址）／提早入住 `Could I check in early?`＋寄放行李
+  - [Part 2](lessons/2026-05-31-japan-hotel-checkin-part-2-amenities.md) Useful Phrases 新增第 5 招「開口要備品（主動索取）」四句型（`Do you provide`／`Could I get an extra`／`We're out of`+`bring up`／`Where can I find`）＋ amenity bar 在地 tip ＋「毛巾用 get 不用 borrow」雷區；Key Vocab 補 [toiletries] · be out of (sth)
+- 📝 備品語感澄清：`amenities`（總稱·備品/設施）vs `toiletries`（專指盥洗）；`borrow` 只用於會歸還的東西（吹風機/轉接頭）
+
 ## 2026-06-01
 - 🎧 **微課：Learning Styles 是迷思 — 順便偷學連音**（dialogue track）：[lesson](lessons/2026-06-01-learning-styles-connected-speech.md)。素材＝Izzy's English 用 Veritasium《learning styles》影片做的 ~2.5 min 微課（刻意剪短，疑似從長課切出），Izzy + Ksenia 拆解。**主菜是發音／連音**：縮音表（interacting 的 nt→n 脫 T／auditory 的 au=/ɔː/ 無 U／visual 的 s→/ʒ/）＋連音表（look it over→"loo-ki-tover"、kind of→kinda、I'd like to）。Key Vocab 交叉連結今天已收的 [hands-on](vocab/hands-on.md) / [debunk](vocab/debunk.md)，新加 keeper 片語 [look something over](vocab/look-over.md)（separable·連音雷）+ [engage with](vocab/engage-with.md)。Study Tips 收錄 Izzy 的「用影片學英文」SOP（選愛看的內容→配 transcript→找失蹤字母→shadowing）
 - 📚 單字片語練習：一次新增 3 字 [hands-on](vocab/hands-on.md) / [debunk](vocab/debunk.md) / [conspiracy](vocab/conspiracy.md)：hands-on＝親自動手／實作（名詞前加連字號，反義 hands-off；top-tier）；debunk＝用證據戳破迷思/謠言（搭配 myth/claim/rumor；strong keeper）；conspiracy＝陰謀，多用 conspiracy theory，⚠️重音 con-SPIR-uh-see、動詞 conspire（strong keeper）。三字皆 keeper

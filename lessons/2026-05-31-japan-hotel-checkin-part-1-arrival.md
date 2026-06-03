@@ -170,6 +170,65 @@ part: 1
 
 ---
 
+## 🔀 變化題 · 你問我答（報到階段的真實情況）
+
+正文走的是「最標準」的一次 check-in，但現實總有變化球。下面六題是你真的會遇到的情況，句子一樣短、一樣固定，挑你會用到的背。
+
+### 1. 用 Booking / 易遊網等平台訂的，怎麼報？
+
+平台不影響——飯店靠**名字**找訂房，開場跟正文一模一樣：
+
+> Hi, I have a reservation under Benson Wu.
+
+找不到時再補平台（用 `through` / `with`，**不是** `at`）：
+
+> I booked it **through** Booking.com, under the name Benson Wu.
+
+💡 Coach Max 提醒：手機帶著訂房確認信或 QR code，找不到名字時直接給櫃檯看最快。`reservation`（美式常用）跟 `booking`（英式偏好）都通；但別把 "I've a booking" 縮起來唸，講 `I have a booking` 才順。
+
+### 2. 雙人房想加床
+
+> We'd like a **double room with an extra bed**, please.
+
+到現場才想加：
+
+> Would it be possible to **add an extra bed**?
+
+💡 Coach Max 提醒：加的那張床叫 `extra bed` 或 `roll-away bed`（折疊滾輪床）。日本房間偏小，有時會說空間不夠加不了，別意外。
+
+### 3. double 還是 twin？不會專有名詞也能講
+
+`double` = 一張大床；`twin` = 兩張單人床。忘了專有名詞，直接白話講，櫃檯一定懂：
+
+> Do you have a room **with one big bed**, or **with two separate beds**?
+
+💡 Coach Max 提醒：「兩張床」記得加 s——`two bed`**`s`**，漏了 s 會聽起來怪怪的。
+
+### 4. 入住人數有變，一定要先講
+
+日本飯店常**按人頭計價**，加上消防法規與《旅館業法》逐人登記，人數很敏感，千萬別偷渡多帶一個人：
+
+> Actually, there will be **three** of us, not two. Is that okay?
+
+### 5. registration card 怎麼填？我沒有日本地址
+
+填**你自己國家的真實資料**就好——姓名、護照號碼、台灣住址（寫英文／羅馬拼音）、手機（含 +886）。**不需要**日本地址或電話，沒有就空著或填這家飯店。不確定就問：
+
+> Should I write my **home address in Taiwan** here?
+
+### 6. 想提早入住（early check-in）
+
+`check in` 是同一個動作，「提早」就是在標準入住時間（通常下午 3 點）之前辦。你原本的句子完全正確：
+
+> Could I **check in early**?
+> Would it be possible to check in **before 3 p.m.**?
+
+房間還沒好時，先寄放行李：
+
+> If my room isn't ready, could I **leave my luggage** here for now?
+
+---
+
 ## 🗾 Cultural Notes — 日本 check-in 的在地差異
 
 **① 借護照影印是法律，不是針對你。**
