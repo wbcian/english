@@ -18,6 +18,12 @@ import audioManifest from '../data/audio-manifest.json';
 const synth = window.speechSynthesis;
 let currentEl: HTMLElement | null = null;
 let currentAudio: HTMLAudioElement | null = null;
+// Word-by-word (karaoke) highlight state — only used on the MP3 path.
+let currentRaf: number | null = null;
+let currentWordSpan: HTMLElement | null = null;
+// Audios we deliberately tore down (clearCurrent sets src='' which fires a
+// spurious 'error'); used to suppress the Web Speech fallback for those.
+const teardownAudios = new WeakSet<HTMLAudioElement>();
 
 // ---- Web Speech setup (unchanged from v1) ----
 
@@ -134,8 +140,21 @@ function showNoVoiceBanner() {
 
 // ---- audio file playback path (preferred) ----
 
+function stopWordHighlight(): void {
+  if (currentRaf !== null) {
+    cancelAnimationFrame(currentRaf);
+    currentRaf = null;
+  }
+  if (currentWordSpan) {
+    currentWordSpan.classList.remove('is-current-word');
+    currentWordSpan = null;
+  }
+}
+
 function clearCurrent(): void {
+  stopWordHighlight();
   if (currentAudio) {
+    teardownAudios.add(currentAudio); // mark as intentional before src='' fires 'error'
     currentAudio.pause();
     currentAudio.src = '';
     currentAudio = null;
@@ -145,7 +164,7 @@ function clearCurrent(): void {
   currentEl = null;
 }
 
-function playAudioFile(src: string, el: HTMLElement): void {
+function playAudioFile(src: string, el: HTMLElement, hash: string): void {
   clearCurrent();
   const audio = new Audio(src);
   audio.preload = 'auto';
@@ -154,6 +173,7 @@ function playAudioFile(src: string, el: HTMLElement): void {
   currentAudio = audio;
 
   const cleanup = () => {
+    if (currentAudio === audio) stopWordHighlight();
     if (currentEl === el) el.classList.remove('speaking');
     if (currentAudio === audio) {
       currentAudio = null;
@@ -162,12 +182,82 @@ function playAudioFile(src: string, el: HTMLElement): void {
   };
   audio.addEventListener('ended', cleanup);
   audio.addEventListener('error', () => {
+    // Only fall back to Web Speech on a GENUINE load/decode failure — not when
+    // clearCurrent() deliberately tore this clip down (it sets src='', which
+    // itself fires 'error'). We mark intentional teardowns in teardownAudios
+    // rather than infer from currentAudio identity, because the 'error' event
+    // and the play() rejection fire in browser-dependent order (so a guard like
+    // `currentAudio === audio` is unreliable across Safari/iOS/Chrome).
+    const intentional = teardownAudios.has(audio);
+    teardownAudios.delete(audio);
     cleanup();
-    // If the audio file is broken, fall back to Web Speech for this click.
-    void speakViaWebSpeech(getElText(el), el);
+    if (!intentional) void speakViaWebSpeech(getElText(el), el);
   });
 
   void audio.play().catch(() => cleanup());
+
+  // Optional karaoke: if a per-word timing sidecar exists for this clip, advance
+  // .is-current-word word by word. No sidecar → whole-paragraph .speaking only.
+  startWordHighlight(audio, el, hash);
+}
+
+interface WordSidecar {
+  v: number;
+  n: number;
+  t: ([number, number] | null)[];
+}
+
+function startWordHighlight(audio: HTMLAudioElement, el: HTMLElement, hash: string): void {
+  const url = `${import.meta.env.BASE_URL}audio/${hash}.words.json`;
+  fetch(url)
+    .then(r => (r.ok ? (r.json() as Promise<WordSidecar>) : null))
+    .then(sc => {
+      // Bail if missing/superseded/stopped while fetching.
+      if (!sc || currentAudio !== audio) return;
+      const spans = Array.from(el.querySelectorAll<HTMLElement>('.w'));
+      // Guard against a tokenizer/sidecar version mismatch — degrade rather than
+      // mis-highlight if the span count doesn't match what the sidecar expects.
+      if (spans.length !== sc.n) return;
+
+      // Only the words that actually got a timing, in ascending start order.
+      // (Punctuation-only spans carry null and never light up; skipping them
+      // keeps the onset array monotonic for binary search.)
+      const timed: { start: number; span: HTMLElement }[] = [];
+      sc.t.forEach((p, k) => {
+        if (p) timed.push({ start: p[0], span: spans[k] });
+      });
+      if (timed.length === 0) return;
+      const onsets = timed.map(x => x.start);
+
+      const tick = () => {
+        if (currentAudio !== audio) return; // stopped/superseded → self-cancel
+        const now = audio.currentTime;
+        // Last index whose onset <= now (O(log n) binary search).
+        let lo = 0;
+        let hi = onsets.length - 1;
+        let idx = -1;
+        while (lo <= hi) {
+          const mid = (lo + hi) >> 1;
+          if (onsets[mid] <= now) {
+            idx = mid;
+            lo = mid + 1;
+          } else {
+            hi = mid - 1;
+          }
+        }
+        const span = idx >= 0 ? timed[idx].span : null;
+        if (span !== currentWordSpan) {
+          currentWordSpan?.classList.remove('is-current-word');
+          span?.classList.add('is-current-word');
+          currentWordSpan = span;
+        }
+        currentRaf = requestAnimationFrame(tick);
+      };
+      currentRaf = requestAnimationFrame(tick);
+    })
+    .catch(() => {
+      /* no sidecar / parse error → whole-paragraph highlight only */
+    });
 }
 
 function getElText(el: HTMLElement): string {
@@ -237,7 +327,7 @@ async function speakText(text: string, el: HTMLElement): Promise<void> {
   const hash = await sha256Short(text);
   if (manifest[hash]) {
     const src = `${import.meta.env.BASE_URL}audio/${hash}.mp3`;
-    playAudioFile(src, el);
+    playAudioFile(src, el, hash);
     return;
   }
   return speakViaWebSpeech(text, el);

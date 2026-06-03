@@ -166,6 +166,16 @@ const { title } = Astro.props;
   blockquote > p.speakable.speaking {
     background-color: var(--speak-highlight);
   }
+  /* Word-by-word (karaoke) highlight. .w spans are invisible until lit, so
+     paragraphs without a timing sidecar look exactly like before. */
+  blockquote > p .w {
+    border-radius: 3px;
+    transition: background-color 0.12s, color 0.12s;
+  }
+  blockquote > p.speaking .w.is-current-word {
+    background-color: var(--speak-accent);
+    color: #1a1a1a; /* readable on amber in both light and dark themes */
+  }
   .speakable-word {
     cursor: pointer;
     text-decoration: underline dotted var(--speak-accent);

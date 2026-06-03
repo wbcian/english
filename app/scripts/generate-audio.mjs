@@ -19,7 +19,6 @@
 import process from 'node:process';
 import { readdir, readFile, writeFile, mkdir, stat, unlink } from 'node:fs/promises';
 import { createWriteStream, existsSync } from 'node:fs';
-import { createHash } from 'node:crypto';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -28,6 +27,9 @@ import remarkParse from 'remark-parse';
 import remarkGfm from 'remark-gfm';
 import matter from 'gray-matter';
 import { MsEdgeTTS, OUTPUT_FORMAT } from 'msedge-tts';
+
+// Shared tokenization (single source of truth, also used by the rehype plugin).
+import { normalizeForHash, hash, cjkRatio, tokenizeWords } from '../src/lib/word-tokens.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const APP_DIR = resolve(__dirname, '..');                   // english/app/
@@ -38,7 +40,6 @@ const MANIFEST_PATH = resolve(APP_DIR, 'src', 'data', 'audio-manifest.json');
 
 const VOICE = 'en-US-AriaNeural';
 const FORMAT = OUTPUT_FORMAT.AUDIO_24KHZ_48KBITRATE_MONO_MP3;
-const CJK_RE = /[一-鿿]/g;
 
 // ---- markdown text extraction (mirrors speech.ts) ----
 
@@ -62,10 +63,30 @@ function paragraphSpeakableText(paragraph) {
   return parts.join('').replace(/\s+/g, ' ').trim();
 }
 
-function cjkRatio(text) {
-  const m = text.match(CJK_RE);
-  const cjk = m ? m.length : 0;
-  return text.length ? cjk / text.length : 0;
+// Every spoken word of a paragraph, in order, tagged `isSpan`:
+//   isSpan=true  → a top-level text-node word the rehype plugin wraps as a
+//                  <span class="w"> (these define data-wi order; their count === n).
+//   isSpan=false → a word inside an inline element (em/strong/link/code). The TTS
+//                  engine SPEAKS these, but they get no span. We still feed them
+//                  to the aligner so Edge's token stream lines up, then drop them
+//                  from the output — otherwise a repeated word after the element
+//                  could bind to the element's earlier timing (mis-highlight).
+// Mirrors inject-word-spans.mjs: skip a leading <strong> (speaker label), wrap
+// only top-level text nodes; here we additionally keep the inline words for
+// alignment context.
+function paragraphAlignTokens(paragraph) {
+  const children = paragraph.children ?? [];
+  const skipFirst = children[0]?.type === 'strong';
+  const toks = [];
+  children.forEach((child, i) => {
+    if (skipFirst && i === 0) return;
+    const isSpan = child.type === 'text';
+    const text = isSpan ? child.value : extractText(child);
+    for (const seg of tokenizeWords(text)) {
+      if (seg.t === 'w') toks.push({ word: seg.value, isSpan });
+    }
+  });
+  return toks;
 }
 
 function collectSpeakable(mdAst) {
@@ -78,7 +99,7 @@ function collectSpeakable(mdAst) {
         if (child.type === 'paragraph') {
           const text = paragraphSpeakableText(child);
           if (text.length >= 4 && cjkRatio(text) < 0.10) {
-            units.push({ kind: 'paragraph', text });
+            units.push({ kind: 'paragraph', text, tokens: paragraphAlignTokens(child) });
           }
         }
       }
@@ -112,32 +133,33 @@ function collectSpeakable(mdAst) {
   return units;
 }
 
-// Normalize text for hashing so the markdown source and the rendered DOM
-// (which goes through Astro's smartypants — curly quotes, em-dash, …) produce
-// the same hash. The text fed to TTS keeps its original form.
-function normalizeForHash(text) {
-  return text
-    .replace(/[‘’ʼ]/g, "'")   // ' ' ʼ → '
-    .replace(/[“”]/g, '"')          // " " → "
-    .replace(/…/g, '...')                 // … → ...
-    .replace(/[–—]/g, '-')           // – — → -
-    .replace(/\s+/g, ' ')
-    .trim();
-}
-
-function hash(text) {
-  return createHash('sha256').update(normalizeForHash(text)).digest('hex').slice(0, 12);
-}
+// normalizeForHash / hash now come from ../src/lib/word-tokens.mjs (shared with
+// the rehype word-span plugin) so the build, the runtime, and the tokenizer all
+// agree on what string a clip hashes to.
 
 // ---- TTS ----
 
-let ttsClient = null;
-async function getTtsClient() {
-  if (ttsClient) return ttsClient;
-  const c = new MsEdgeTTS();
-  await c.setMetadata(VOICE, FORMAT);
-  ttsClient = c;
-  return c;
+// Two memoized clients. The "words" client enables WordBoundary metadata, which
+// is needed for the timing sidecars. It's a per-client flag and, once on, EVERY
+// toStream() returns a live metadataStream that must be drained — so we keep a
+// separate plain client for the 99% of clips that don't need word timing.
+let plainClient = null;
+let wordsClient = null;
+async function getTtsClient(withWords) {
+  if (withWords) {
+    if (!wordsClient) {
+      const c = new MsEdgeTTS();
+      await c.setMetadata(VOICE, FORMAT, { wordBoundaryEnabled: true });
+      wordsClient = c;
+    }
+    return wordsClient;
+  }
+  if (!plainClient) {
+    const c = new MsEdgeTTS();
+    await c.setMetadata(VOICE, FORMAT);
+    plainClient = c;
+  }
+  return plainClient;
 }
 
 // msedge-tts feeds the text into an SSML document without escaping, so any
@@ -151,23 +173,178 @@ function escapeForSsml(text) {
     .replace(/>/g, '&gt;');
 }
 
-async function synthesizeToFile(text, outPath) {
-  const tts = await getTtsClient();
-  const { audioStream } = tts.toStream(escapeForSsml(text));
-  const out = createWriteStream(outPath);
-  await new Promise((resolve, reject) => {
-    audioStream.on('error', reject);
-    out.on('error', reject);
-    out.on('finish', resolve);
-    audioStream.pipe(out);
-  });
-  // Guard against silent empty output: an unreachable/rejecting TTS can finish
-  // the stream with 0 bytes. Don't cache or count that as success.
-  const { size } = await stat(outPath);
-  if (size === 0) {
-    await unlink(outPath);
-    throw new Error('TTS returned an empty (0-byte) audio stream');
+// Synthesize `text`. Writes the MP3 to `outPath` ONLY if a valid one doesn't
+// already exist (so backfilling a sidecar never rewrites a committed binary —
+// the freshly-synthesized audio is drained to nowhere). When `wantWords`, also
+// drains the WordBoundary metadata stream and returns the raw boundary `Data`
+// objects ([{ Offset, Duration, text:{ Text } }, ...], 100ns ticks). Otherwise
+// returns [].
+async function synthesizeToFile(text, outPath, { wantWords = false } = {}) {
+  const tts = await getTtsClient(wantWords);
+  const { audioStream, metadataStream } = tts.toStream(escapeForSsml(text));
+
+  // Keep the freshly-synthesized audio only if there's no valid MP3 yet.
+  let keepAudio = true;
+  if (existsSync(outPath)) {
+    const s = await stat(outPath);
+    if (s.size > 0) keepAudio = false;
   }
+  const out = keepAudio ? createWriteStream(outPath) : null;
+
+  const boundaries = [];
+  const audioDone = new Promise((resolve, reject) => {
+    audioStream.on('error', reject);
+    if (out) {
+      out.on('error', reject);
+      out.on('finish', resolve);
+      audioStream.pipe(out);
+    } else {
+      // No file to write — still must drain the socket or it backpressures.
+      audioStream.on('end', resolve);
+      audioStream.resume();
+    }
+  });
+
+  // metadataStream is non-null only on the words client; for the plain client
+  // this resolves immediately.
+  const metaDone = !metadataStream
+    ? Promise.resolve()
+    : new Promise((resolve, reject) => {
+        metadataStream.on('data', (chunk) => {
+          try {
+            const { Metadata } = JSON.parse(chunk.toString());
+            for (const m of Metadata ?? []) {
+              if (m.Type === 'WordBoundary') boundaries.push(m.Data);
+            }
+          } catch {
+            /* ignore non-JSON keepalive frames */
+          }
+        });
+        metadataStream.once('close', resolve);
+        metadataStream.once('error', reject);
+      });
+
+  await Promise.all([audioDone, metaDone]);
+
+  if (keepAudio) {
+    // Guard against silent empty output: an unreachable/rejecting TTS can finish
+    // the stream with 0 bytes. Don't cache or count that as success.
+    const { size } = await stat(outPath);
+    if (size === 0) {
+      await unlink(outPath);
+      throw new Error('TTS returned an empty (0-byte) audio stream');
+    }
+  }
+  return boundaries;
+}
+
+// ---- per-word timing sidecar (build-time alignment) ----
+
+// Strip everything that doesn't affect word identity (keep letters, digits,
+// apostrophes), lowercase, so our DOM tokens and Edge's spoken tokens can be
+// compared despite smartypants, punctuation, and case.
+function alignKey(s) {
+  return normalizeForHash(s).toLowerCase().replace(/[^\p{L}\p{N}']+/gu, '');
+}
+
+// Map Edge's WordBoundary tokens onto our word-spans and return
+// { v, n, t:[[start,end]|null,...] } (t indexed by data-wi) — or null to DEGRADE
+// (caller writes no sidecar, runtime keeps whole-paragraph highlight). Never
+// mis-highlights: anything that doesn't align cleanly degrades.
+//
+// `tokens` is the FULL spoken word sequence from paragraphAlignTokens, including
+// inline-element words (isSpan=false). We align Edge tokens against ALL of them
+// so the streams stay in lock-step, then project timings onto the isSpan words
+// only — that prevents a repeated word after an inline element binding to the
+// element's earlier timing.
+function buildSidecar(tokens, boundaries) {
+  const allWords = tokens.map((t) => t.word);
+  const N = allWords.length;
+  if (N === 0) return null;
+  if (!tokens.some((t) => t.isSpan)) return null;
+
+  const edge = boundaries
+    .map((b) => ({
+      key: alignKey(b.text?.Text ?? ''),
+      start: b.Offset / 1e7,
+      end: (b.Offset + b.Duration) / 1e7,
+    }))
+    .filter((e) => e.key.length > 0);
+  if (edge.length === 0) return null;
+
+  // Align ALL spoken words (greedy two-pointer with merge + resync).
+  const tFull = new Array(N).fill(null);
+  let i = 0;
+  let j = 0;
+  while (i < N && j < edge.length) {
+    const want = alignKey(allWords[i]);
+    if (want.length === 0) {
+      i++; // punctuation-only token (e.g. a standalone "—"): no timing, skip it
+      continue;
+    }
+    if (edge[j].key === want) {
+      tFull[i] = [edge[j].start, edge[j].end];
+      i++; j++;
+      continue;
+    }
+    // many Edge tokens -> one of our words (e.g. "100" -> "one"+"hundred",
+    // "micro-lesson" -> "micro"+"lesson"): merge their timings.
+    {
+      let acc = edge[j].key;
+      let k = j;
+      let start = edge[j].start;
+      let end = edge[j].end;
+      while (acc.length < want.length && k + 1 < edge.length) {
+        k++; acc += edge[k].key; end = edge[k].end;
+      }
+      if (acc === want) {
+        tFull[i] = [start, end];
+        i++; j = k + 1;
+        continue;
+      }
+    }
+    // one Edge token -> several of our words (e.g. "hands-on" tokenized as one
+    // word but spoken "hands"+"on" landing under one boundary): share the timing.
+    {
+      let acc = want;
+      let m = i;
+      while (acc.length < edge[j].key.length && m + 1 < N) {
+        m++; acc += alignKey(allWords[m]);
+      }
+      if (acc === edge[j].key) {
+        for (let q = i; q <= m; q++) tFull[q] = [edge[j].start, edge[j].end];
+        i = m + 1; j++;
+        continue;
+      }
+    }
+    // Couldn't reconcile here — skip the unexpected Edge token and try to resync.
+    j++;
+  }
+
+  // Project onto the isSpan words (data-wi order) = the sidecar's t[].
+  const t = [];
+  let keyed = 0;
+  let covered = 0;
+  for (let k = 0; k < N; k++) {
+    if (!tokens[k].isSpan) continue;
+    const timing = tFull[k];
+    t.push(timing);
+    if (alignKey(allWords[k]).length > 0) {
+      keyed++;
+      if (timing) covered++;
+    }
+  }
+  const n = t.length; // === DOM .w span count
+  if (keyed === 0 || covered / keyed < 0.85) return null;
+  // Monotonicity sanity: matched starts must be non-decreasing.
+  let prev = -Infinity;
+  for (const span of t) {
+    if (span) {
+      if (span[0] < prev - 0.05) return null;
+      prev = Math.max(prev, span[0]);
+    }
+  }
+  return { v: 1, n, t };
 }
 
 // ---- main ----
@@ -184,7 +361,15 @@ async function main() {
     .map((f) => ({ dir: VOCAB_DIR, name: f }));
   const sources = [...lessonFiles, ...vocabFiles];
 
-  const allUnits = new Map(); // hash -> { text, kind, sources }
+  // Optional: emit per-word timing sidecars (<hash>.words.json) for lessons whose
+  // filename contains the --words=<substr> value. Only paragraph units get them.
+  // Without the flag, behaviour is unchanged (no sidecars, plain client only).
+  //   node scripts/generate-audio.mjs --words=2026-06-01-learning-styles-connected-speech
+  const wordsArg = process.argv.find((a) => a.startsWith('--words='))?.slice('--words='.length);
+  const wantsWordsFor = (name) => !!wordsArg && name.includes(wordsArg);
+  if (wordsArg) console.log(`[generate-audio] word-timing sidecars for files matching "${wordsArg}"`);
+
+  const allUnits = new Map(); // hash -> { text, kind, sources, wantWords }
   const processor = unified().use(remarkParse).use(remarkGfm);
 
   for (const { dir, name } of sources) {
@@ -200,10 +385,13 @@ async function main() {
     }
     for (const u of units) {
       const h = hash(u.text);
+      const wantWords = u.kind === 'paragraph' && wantsWordsFor(name);
       if (!allUnits.has(h)) {
-        allUnits.set(h, { ...u, sources: [name] });
+        allUnits.set(h, { ...u, sources: [name], wantWords });
       } else {
-        allUnits.get(h).sources.push(name);
+        const existing = allUnits.get(h);
+        existing.sources.push(name);
+        if (wantWords) existing.wantWords = true;
       }
     }
   }
@@ -213,28 +401,61 @@ async function main() {
   let generated = 0;
   let skipped = 0;
   let failed = 0;
+  let wordsWritten = 0;
+  let degraded = 0;
 
   const entries = Array.from(allUnits.entries());
   for (const [h, unit] of entries) {
     const outPath = join(AUDIO_DIR, `${h}.mp3`);
+    const sidecarPath = join(AUDIO_DIR, `${h}.words.json`);
+
+    let mp3Ok = false;
     if (existsSync(outPath)) {
-      const s = await stat(outPath);
-      if (s.size > 0) {
+      mp3Ok = (await stat(outPath)).size > 0;
+    }
+
+    if (!unit.wantWords) {
+      // Unchanged path: skip when the MP3 already exists.
+      if (mp3Ok) {
         skipped++;
         continue;
       }
+      try {
+        await synthesizeToFile(unit.text, outPath);
+        generated++;
+        process.stdout.write(`  [${generated}] ${h} ${unit.kind} ${unit.text.slice(0, 50).replace(/\s+/g, ' ')}\n`);
+      } catch (err) {
+        failed++;
+        console.warn(`[generate-audio] FAILED ${h} (${unit.kind}): ${err.message}`);
+      }
+      continue;
+    }
+
+    // Words path: a clip needs BOTH a valid MP3 and a sidecar. Synthesize
+    // (without overwriting a valid MP3) whenever the sidecar is missing.
+    if (mp3Ok && existsSync(sidecarPath)) {
+      skipped++;
+      continue;
     }
     try {
-      await synthesizeToFile(unit.text, outPath);
-      generated++;
-      process.stdout.write(`  [${generated}/${entries.length - skipped}] ${h} ${unit.kind} ${unit.text.slice(0, 50).replace(/\s+/g, ' ')}\n`);
+      const boundaries = await synthesizeToFile(unit.text, outPath, { wantWords: true });
+      if (!mp3Ok) generated++;
+      const sidecar = buildSidecar(unit.tokens ?? [], boundaries);
+      if (sidecar) {
+        await writeFile(sidecarPath, JSON.stringify(sidecar) + '\n');
+        wordsWritten++;
+        process.stdout.write(`  [words] ${h} ${sidecar.t.filter(Boolean).length}/${sidecar.n} aligned · ${unit.text.slice(0, 40).replace(/\s+/g, ' ')}\n`);
+      } else {
+        degraded++;
+        console.warn(`[words] DEGRADE ${h}: alignment failed -> no sidecar (${unit.text.slice(0, 44).replace(/\s+/g, ' ')})`);
+      }
     } catch (err) {
       failed++;
       console.warn(`[generate-audio] FAILED ${h} (${unit.kind}): ${err.message}`);
     }
   }
 
-  console.log(`[generate-audio] generated=${generated} skipped=${skipped} failed=${failed}`);
+  console.log(`[generate-audio] generated=${generated} skipped=${skipped} failed=${failed} words=${wordsWritten} degraded=${degraded}`);
 
   // Manifest: just the set of hashes that have a file on disk.
   const manifest = {};

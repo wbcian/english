@@ -262,5 +262,11 @@ App 依日期 desc 排序，同日期內以 `part` asc 為 secondary sort。
 
 ## 修改本檔的人
 
-- 改規範前先想清楚：對 `app/src/scripts/speech.ts` 與 `app/scripts/generate-audio.mjs`（兩份鏡像朗讀邏輯）的影響、對既有 lesson 是否要 retrofit。
+- 改規範前先想清楚：對**三份鏡像朗讀邏輯**的影響、對既有 lesson 是否要 retrofit：
+  1. `app/scripts/generate-audio.mjs`（build：產 MP3 + 逐字 `<hash>.words.json` 時間 sidecar）
+  2. `app/src/rehype/inject-word-spans.mjs`（build：把可朗讀段落的每個詞包成 `<span class="w" data-wi>`，逐字 highlight 用）
+  3. `app/src/scripts/speech.ts`（runtime：朗讀 + 逐字 highlight）
+  - speakable 判定（`blockquote > p`、`word` 欄、開頭 `<strong>` 講者標籤剝除）、`normalizeForHash`、`tokenizeWords` 集中在 `app/src/lib/word-tokens.mjs`，前兩份 build 鏡像都 import 它。`speech.ts` 是瀏覽器 TS、無法 import 該 .mjs，所以 `normalizeForHash`/`getSpeakableText` 在它裡面是**手動受控重複**。
+  - ⚠️ `inject-word-spans.mjs` 的 build-time hash 斷言只保證「**rehype 包 span 後 textContent / hash 不變**」（守住「包 span 把字弄壞」這個雷）。它**不會**幫你檢查「`speech.ts` 的 `normalizeForHash` 有沒有跟 lib 同步」——若改了 lib 的正規化卻忘了同步 `speech.ts`，build 仍會綠燈，但 runtime 全站 hash 對不上 → 靜默退機器人語音。**改 `word-tokens.mjs` 的 `normalizeForHash`/`getSpeakableText` 時，務必手動同步 `speech.ts`。**
+  - 逐字 highlight 詳見 [`app/docs/specs/word-highlight/spec.md`](../app/docs/specs/word-highlight/spec.md)。目前只為有 sidecar 的 clip 開卡拉 OK，其餘 clip 自動退回整段 highlight。
 - 本檔是唯一事實來源。改動後同步檢查 `BRAIN.md` 第 4 條與 `SKILL.md` 的**決策樹與連結**是否仍正確（這兩處不複製表，所以通常只需確認連結）。
