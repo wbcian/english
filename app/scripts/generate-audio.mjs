@@ -29,7 +29,13 @@ import matter from 'gray-matter';
 import { MsEdgeTTS, OUTPUT_FORMAT } from 'msedge-tts';
 
 // Shared tokenization (single source of truth, also used by the rehype plugin).
-import { normalizeForHash, hash, cjkRatio, tokenizeWords } from '../src/lib/word-tokens.mjs';
+import {
+  normalizeForHash,
+  hash,
+  cjkRatio,
+  tokenizeWords,
+  isSpeakableParagraphText,
+} from '../src/lib/word-tokens.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const APP_DIR = resolve(__dirname, '..');                   // english/app/
@@ -81,8 +87,8 @@ function paragraphAlignTokens(paragraph) {
   children.forEach((child, i) => {
     if (skipFirst && i === 0) return;
     const isSpan = child.type === 'text';
-    const text = isSpan ? child.value : extractText(child);
-    for (const seg of tokenizeWords(text)) {
+    // extractText returns a text node's own value, so it covers both cases.
+    for (const seg of tokenizeWords(extractText(child))) {
       if (seg.t === 'w') toks.push({ word: seg.value, isSpan });
     }
   });
@@ -98,7 +104,7 @@ function collectSpeakable(mdAst) {
       for (const child of node.children ?? []) {
         if (child.type === 'paragraph') {
           const text = paragraphSpeakableText(child);
-          if (text.length >= 4 && cjkRatio(text) < 0.10) {
+          if (isSpeakableParagraphText(text)) {
             units.push({ kind: 'paragraph', text, tokens: paragraphAlignTokens(child) });
           }
         }
@@ -259,6 +265,7 @@ function alignKey(s) {
 // element's earlier timing.
 function buildSidecar(tokens, boundaries) {
   const allWords = tokens.map((t) => t.word);
+  const keys = allWords.map(alignKey); // normalized match keys, computed once
   const N = allWords.length;
   if (N === 0) return null;
   if (!tokens.some((t) => t.isSpan)) return null;
@@ -277,7 +284,7 @@ function buildSidecar(tokens, boundaries) {
   let i = 0;
   let j = 0;
   while (i < N && j < edge.length) {
-    const want = alignKey(allWords[i]);
+    const want = keys[i];
     if (want.length === 0) {
       i++; // punctuation-only token (e.g. a standalone "—"): no timing, skip it
       continue;
@@ -309,7 +316,7 @@ function buildSidecar(tokens, boundaries) {
       let acc = want;
       let m = i;
       while (acc.length < edge[j].key.length && m + 1 < N) {
-        m++; acc += alignKey(allWords[m]);
+        m++; acc += keys[m];
       }
       if (acc === edge[j].key) {
         for (let q = i; q <= m; q++) tFull[q] = [edge[j].start, edge[j].end];
@@ -329,7 +336,7 @@ function buildSidecar(tokens, boundaries) {
     if (!tokens[k].isSpan) continue;
     const timing = tFull[k];
     t.push(timing);
-    if (alignKey(allWords[k]).length > 0) {
+    if (keys[k].length > 0) {
       keyed++;
       if (timing) covered++;
     }
