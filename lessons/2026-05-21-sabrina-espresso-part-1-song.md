@@ -7,6 +7,7 @@ source: "英語教學頻道（host: Ethan）· Sabrina Carpenter《Espresso》·
 type: lesson
 track: talk
 audio: true
+level: B2
 ---
 
 # Sabrina's《Espresso》系列 — Part 1：歌曲 + 連音入門

@@ -5,6 +5,7 @@ source: "🎬 RealLife English · Monsters, Inc.（Sulley meets Waternoose）· 
 type: lesson
 track: dialogue
 audio: true
+level: B2
 ---
 
 # Monsters, Inc. — Business English & Connected Speech

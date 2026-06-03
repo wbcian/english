@@ -5,6 +5,7 @@ source: "📖 PostHog newsletter · Charles Cook《How I Actually Get Good Advic
 type: lesson
 track: reading
 audio: false
+level: B2
 url: https://newsletter.posthog.com/p/how-i-actually-get-good-advice
 word_count: 1350
 reading_time_min: 6

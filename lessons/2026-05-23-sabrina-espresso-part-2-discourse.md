@@ -7,6 +7,7 @@ source: "🎧 英語學習課程（主持人 Ethan）· Sabrina Carpenter 訪談
 type: lesson
 track: dialogue
 audio: true
+level: B2
 ---
 
 # Sabrina's《Espresso》系列 — Part 2：訪談前半 — Z 世代口語密度

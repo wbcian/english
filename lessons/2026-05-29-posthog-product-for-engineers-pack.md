@@ -5,6 +5,7 @@ source: "📖 PostHog newsletter · Product for Engineers · 3-article intro pac
 type: lesson
 track: reading
 audio: false
+level: B2
 url: https://newsletter.posthog.com/p/what-is-product-for-engineers
 word_count: 3590
 reading_time_min: 19

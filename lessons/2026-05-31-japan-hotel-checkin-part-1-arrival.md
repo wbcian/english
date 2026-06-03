@@ -5,6 +5,7 @@ source: "🏨 Coach Max 原創情境 · 日本住宿 check-in · 對話教學"
 type: lesson
 track: dialogue
 audio: false
+level: B1
 series: japan-hotel-checkin
 part: 1
 ---

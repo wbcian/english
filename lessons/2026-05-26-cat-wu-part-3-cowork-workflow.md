@@ -7,6 +7,7 @@ source: "🎧 Lenny's Podcast · Cat Wu（Anthropic, Claude Code 產品負責人
 type: lesson
 track: dialogue
 audio: true
+level: B2
 ---
 
 # Cat Wu 訪談 — Part 3：Cowork in Practice — 親自示範做 slide deck
