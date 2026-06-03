@@ -32,6 +32,7 @@
 - `tools/` — 自動化腳本（`podcast2lesson.sh`：貼連結→下載→本地 Whisper 轉錄；setup 見 `tools/README.md`）
 - [`ACTIVITY.md`](ACTIVITY.md) — 時間軸（最新在上）
 - [`PROFILE.md`](PROFILE.md) — 目標 / 弱點 / 偏好
+- [`reference/cefr-toeic-levels.md`](reference/cefr-toeic-levels.md) — 英文分級制度對照表（CEFR ↔ TOEIC / IELTS / TOEFL / Cambridge / GEPT）；lesson `level` 欄與 app badge 的依據
 
 ## 給 LLM 的維護規則
 
