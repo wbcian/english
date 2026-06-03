@@ -1,0 +1,53 @@
+---
+import { CEFR_INFO, type CefrLevel } from '../data/cefr';
+
+interface Props {
+  level: CefrLevel;
+  /** 是否一併顯示 TOEIC 對應區間（文章頁用 true，卡片用 false） */
+  showToeic?: boolean;
+}
+const { level, showToeic = false } = Astro.props;
+const info = CEFR_INFO[level];
+---
+
+<span
+  class="level-badge"
+  data-level={level}
+  title={`CEFR ${level} · ${info.zh} · TOEIC ~${info.toeic}`}
+>
+  <span class="level-code">{level}</span>
+  {showToeic && <span class="level-toeic">TOEIC ~{info.toeic}</span>}
+</span>
+
+<style>
+  .level-badge {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 6px;
+    padding: 2px 9px;
+    border-radius: 999px;
+    font-size: 0.85em;
+    font-weight: 600;
+    line-height: 1.5;
+    white-space: nowrap;
+  }
+  .level-code { letter-spacing: 0.02em; }
+  .level-toeic { font-weight: 500; font-size: 0.9em; opacity: 0.85; }
+
+  /* 難度色階：易=綠 → 中=琥珀/橘 → 難=紅/紫，方便在 list 快速掃描 */
+  .level-badge[data-level='A1'] { background: #dcfce7; color: #166534; }
+  .level-badge[data-level='A2'] { background: #d1fae5; color: #065f46; }
+  .level-badge[data-level='B1'] { background: #fef3c7; color: #92400e; }
+  .level-badge[data-level='B2'] { background: #ffedd5; color: #9a3412; }
+  .level-badge[data-level='C1'] { background: #fee2e2; color: #991b1b; }
+  .level-badge[data-level='C2'] { background: #ede9fe; color: #5b21b6; }
+
+  @media (prefers-color-scheme: dark) {
+    .level-badge[data-level='A1'] { background: #14331f; color: #86efac; }
+    .level-badge[data-level='A2'] { background: #0f2e26; color: #6ee7b7; }
+    .level-badge[data-level='B1'] { background: #3a3320; color: #fcd34d; }
+    .level-badge[data-level='B2'] { background: #3a2a18; color: #fdba74; }
+    .level-badge[data-level='C1'] { background: #3a1e1e; color: #fca5a5; }
+    .level-badge[data-level='C2'] { background: #281f3a; color: #c4b5fd; }
+  }
+</style>

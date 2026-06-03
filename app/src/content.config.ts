@@ -14,6 +14,8 @@ const lessons = defineCollection({
     track: z.enum(['reading', 'dialogue', 'talk']).optional(),
     // 原始素材是否有真人聲音（純元資料，不影響 app 朗讀——朗讀由 DOM 決定）
     audio: z.boolean().optional(),
+    // CEFR 難度分級（顯示用；對照表見 reference/cefr-toeic-levels.md）
+    level: z.enum(['A1', 'A2', 'B1', 'B2', 'C1', 'C2']).optional(),
     url: z.string().url().optional(),
     word_count: z.number().optional(),
     reading_time_min: z.number().optional(),
