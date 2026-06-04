@@ -10,9 +10,10 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "predev": "node scripts/generate-audio.mjs",
-    "prebuild": "node scripts/generate-audio.mjs",
-    "audio:gen": "node scripts/generate-audio.mjs"
+    "predev": "node scripts/check-audio-hash-sync.mjs && node scripts/generate-audio.mjs",
+    "prebuild": "node scripts/check-audio-hash-sync.mjs && node scripts/generate-audio.mjs",
+    "audio:gen": "node scripts/generate-audio.mjs",
+    "check:hash-sync": "node scripts/check-audio-hash-sync.mjs"
   },
   "dependencies": {
     "astro": "^6.3.7",
@@ -20,7 +21,9 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
+    "@astrojs/markdown-remark": "^7.1.2",
     "gray-matter": "^4.0.3",
+    "hast-util-from-html": "^2.0.3",
     "msedge-tts": "^2.0.5",
     "remark-gfm": "^4.0.1",
     "remark-parse": "^11.0.0",

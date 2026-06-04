@@ -20,7 +20,7 @@ import process from 'node:process';
 import { readdir, readFile, writeFile, mkdir, stat, unlink } from 'node:fs/promises';
 import { createWriteStream, existsSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 
 import { unified } from 'unified';
 import remarkParse from 'remark-parse';
@@ -51,6 +51,12 @@ const FORMAT = OUTPUT_FORMAT.AUDIO_24KHZ_48KBITRATE_MONO_MP3;
 
 function extractText(node) {
   if (!node) return '';
+  // A hard line break (line ending in `\` or two trailing spaces) is an mdast
+  // `break` node with no value/children. The rendered DOM is `<br>\n`, i.e. one
+  // whitespace that collapses to a single space. Emit a space here too — else the
+  // words on either side glue ("how" + "" + "this" = "howthis") and the build hash
+  // diverges from the runtime DOM hash → silent MP3 miss.
+  if (node.type === 'break' || node.type === 'thematicBreak') return ' ';
   if (typeof node.value === 'string') return node.value;
   if (Array.isArray(node.children)) {
     return node.children.map(extractText).join('');
@@ -95,7 +101,7 @@ function paragraphAlignTokens(paragraph) {
   return toks;
 }
 
-function collectSpeakable(mdAst) {
+export function collectSpeakable(mdAst) {
   const units = [];
 
   function walk(node) {
@@ -477,8 +483,15 @@ async function main() {
   console.log(`[generate-audio] manifest: ${Object.keys(manifest).length} hashes -> ${MANIFEST_PATH}`);
 }
 
-main().catch((err) => {
-  // Soft-fail: don't break the build if Edge TTS is unreachable.
-  console.warn(`[generate-audio] non-fatal error: ${err.message}`);
-  process.exit(0);
-});
+// Run main() only when invoked as the entry script (node scripts/generate-audio.mjs).
+// When imported (e.g. by scripts/check-audio-hash-sync.mjs to reuse the extraction
+// helpers) this stays inert so importing never triggers a TTS run.
+const invokedDirectly =
+  process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href;
+if (invokedDirectly) {
+  main().catch((err) => {
+    // Soft-fail: don't break the build if Edge TTS is unreachable.
+    console.warn(`[generate-audio] non-fatal error: ${err.message}`);
+    process.exit(0);
+  });
+}

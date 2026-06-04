@@ -267,6 +267,10 @@ App 依日期 desc 排序，同日期內以 `part` asc 為 secondary sort。
   2. `app/src/rehype/inject-word-spans.mjs`（build：把可朗讀段落的每個詞包成 `<span class="w" data-wi>`，逐字 highlight 用）
   3. `app/src/scripts/speech.ts`（runtime：朗讀 + 逐字 highlight）
   - speakable 判定（`blockquote > p`、`word` 欄、開頭 `<strong>` 講者標籤剝除）、`normalizeForHash`、`tokenizeWords` 集中在 `app/src/lib/word-tokens.mjs`，前兩份 build 鏡像都 import 它。`speech.ts` 是瀏覽器 TS、無法 import 該 .mjs，所以 `normalizeForHash`/`getSpeakableText` 在它裡面是**手動受控重複**。
-  - ⚠️ `inject-word-spans.mjs` 的 build-time hash 斷言只保證「**rehype 包 span 後 textContent / hash 不變**」（守住「包 span 把字弄壞」這個雷）。它**不會**幫你檢查「`speech.ts` 的 `normalizeForHash` 有沒有跟 lib 同步」——若改了 lib 的正規化卻忘了同步 `speech.ts`，build 仍會綠燈，但 runtime 全站 hash 對不上 → 靜默退機器人語音。**改 `word-tokens.mjs` 的 `normalizeForHash`/`getSpeakableText` 時，務必手動同步 `speech.ts`。**
+  - ⚠️ build hash 對齊靠**兩道**斷言，缺一不可：
+    1. `inject-word-spans.mjs` 的 build-time hash 斷言：只保證「rehype 包 span 後 textContent / hash 不變」，且只巡 `blockquote > p`（不含 `word` 表格欄 / vocab 詞頭）。
+    2. `app/scripts/check-audio-hash-sync.mjs`（`prebuild` 會跑，drift 直接 fail build）：A 段把一批含 `--`／硬換行／`word` 欄的 fixture 同時跑「build 端（generate-audio 讀 raw markdown）」與「runtime 端（用 Astro 自家 markdown processor 渲出真 DOM）」，斷言兩邊 hash 一致；B 段抽出 `speech.ts` 的 `normalizeForHash` 跑 fixture，斷言與 lib 逐字一致——**這就是擋「改了 lib 卻忘了同步 `speech.ts`」靜默退機器人語音的那道網**。
+  - 改 `word-tokens.mjs` 的 `normalizeForHash`／`getSpeakableText` 時，仍要**手動同步 `speech.ts`**；忘了同步 → `check-audio-hash-sync.mjs` 會 fail build，並要記得 `npm run audio:gen` 重生受影響音檔。
+  - 既知陷阱（都已被上面 check 涵蓋）：build 讀 raw markdown，runtime 讀 smartypants 後的 DOM——`--`→em dash、硬換行 `\` / 行尾兩空格 → `<br>`。`normalizeForHash` 折疊多 hyphen（`-{2,}`→`-`）、`generate-audio.mjs` 的 `extractText` 對 `break` 吐一個空格，兩邊才對得上。
   - 逐字 highlight 詳見 [`app/docs/specs/word-highlight/spec.md`](../app/docs/specs/word-highlight/spec.md)。目前只為有 sidecar 的 clip 開卡拉 OK，其餘 clip 自動退回整段 highlight。
 - 本檔是唯一事實來源。改動後同步檢查 `BRAIN.md` 第 4 條與 `SKILL.md` 的**決策樹與連結**是否仍正確（這兩處不複製表，所以通常只需確認連結）。

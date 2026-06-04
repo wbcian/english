@@ -23,6 +23,9 @@ export function normalizeForHash(text) {
     .replace(/[“”]/g, '"')       // “ ” → "
     .replace(/…/g, '...')             // … → ...
     .replace(/[–—]/g, '-')       // – — → -
+    .replace(/-{2,}/g, '-')      // raw -- / --- → - : the build hashes RAW markdown, but
+                                 // smartypants renders -- as an em dash (folded above) in
+                                 // the DOM. Collapse multi-hyphen runs so both sides agree.
     .replace(/\s+/g, ' ')
     .trim();
 }

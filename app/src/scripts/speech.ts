@@ -112,6 +112,7 @@ function normalizeForHash(text: string): string {
     .replace(/[“”]/g, '"')
     .replace(/…/g, '...')
     .replace(/[–—]/g, '-')
+    .replace(/-{2,}/g, '-') // raw -- / --- → - (mirror src/lib/word-tokens.mjs)
     .replace(/\s+/g, ' ')
     .trim();
 }
