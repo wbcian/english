@@ -9,13 +9,14 @@
 - 詳細 Profile → [PROFILE.md](PROFILE.md)
 
 ## 快照（隨更新同步）
-- 已收錄單字：114
-- 5★ 精熟：0　 3–4★ 學習中：8　 1–2★ 新／脆弱：106
-- 最近活動日期：2026-06-03（🎧 擴充日本 hotel check-in 系列：Part 1 加「🔀 變化題」6 題[OTA訂房/加床/double-twin/人數/registration card/early check-in]、Part 2 加「開口要備品」4 句型＋vocab toiletries · be out of；由 Cian 跟讀 Part 1 提問驅動，不動三段正文骨架）
-- 上一活動日期：2026-06-01（🎧 微課 learning-styles-connected-speech；📚 single-session 連續新增 13 字＋複習 cram）
+- 已收錄單字：121
+- 5★ 精熟：0　 3–4★ 學習中：8　 1–2★ 新／脆弱：113
+- 最近活動日期：2026-06-09（🎧 新 lesson Anne With An E（dialogue·B2）：用 Netflix 影集派對場景教 7 字；📚 新增 speak one's mind / gossip / rumor / nasty / devastated / ill-bred / consent；Sentence Anatomy 對準 `shouldn't have + p.p.` 與 `How dare you + V`）
+- 上一活動日期：2026-06-03（🎧 擴充日本 hotel check-in 系列：Part 1 加「🔀 變化題」6 題[OTA訂房/加床/double-twin/人數/registration card/early check-in]、Part 2 加「開口要備品」4 句型＋vocab toiletries · be out of；由 Cian 跟讀 Part 1 提問驅動，不動三段正文骨架）
 - 主目標：**TOEIC 750+ 證書**（詳見 [PROFILE.md](PROFILE.md#目標)）
 - **Lesson 格式（2026-05-29 換軸）**：`track`(reading/dialogue/talk) + `audio` 取代舊 `format`；Source→標題下 subtitle、正文雙語滾動框、Key Vocab 緊接正文後 — 規範見 [`lessons/_conventions.md`](lessons/_conventions.md)
-- 最近 lesson：**[Learning Styles 是迷思 — 順便偷學連音](lessons/2026-06-01-learning-styles-connected-speech.md)**（dialogue · Izzy's English 用 Veritasium 影片做的 ~2.5 min 微課）— 首份**以發音／連音為主菜**的 lesson：縮音表（nt→n 脫 T／au=/ɔː/／s→/ʒ/）＋連音表（look it over→"loo-ki-tover"）；vocab 交叉連結 hands-on/debunk，新加 look something over · engage with
+- 最近 lesson：**[Anne With An E — 直言不諱、對質 Billy](lessons/2026-06-09-anne-with-an-e-speak-your-mind.md)**（dialogue · B2 · 影片英文教學 Ksenia 用 Netflix 影集派對場景教 7 字）— 主題「為人挺身而出／吵架理直氣壯」＋現代高價值字 consent；7 新字 speak one's mind / gossip / rumor / nasty / devastated / ill-bred / consent；Sentence Anatomy 對準弱點 `shouldn't have + p.p.`（批評過去）與 `How dare you + V`；Cultural Notes 講 double standard 與 register（聽得懂 vs 會用）
+- 上一份 lesson：**[Learning Styles 是迷思 — 順便偷學連音](lessons/2026-06-01-learning-styles-connected-speech.md)**（dialogue · Izzy's English 用 Veritasium 影片做的 ~2.5 min 微課）— 首份**以發音／連音為主菜**的 lesson：縮音表（nt→n 脫 T／au=/ɔː/／s→/ʒ/）＋連音表（look it over→"loo-ki-tover"）；vocab 交叉連結 hands-on/debunk，新加 look something over · engage with
 - 上一份 lesson：**日本住宿 Hotel Check-in 對話三部曲**（dialogue · 旅遊實戰）：[Part 1 報到・證件・房型](lessons/2026-05-31-japan-hotel-checkin-part-1-arrival.md) + [Part 2 付款・宿泊税・設施](lessons/2026-05-31-japan-hotel-checkin-part-2-amenities.md) + [Part 3 客訴・退房・宅配](lessons/2026-05-31-japan-hotel-checkin-part-3-checkout.md)（Coach Max 原創情境；Cultural Notes 含護照影印法規／宿泊税／takkyubin；Series Map 用一般清單避免中文被誤朗讀）
 - 同日 lesson：**[Hotel Check-In：國外旅館櫃檯入住實戰](lessons/2026-05-31-hotel-check-in.md)**（codex 平行產出，通用國際飯店單篇 dialogue；含 Role-Play Drill ＋ Connected Speech；`incidentals` / `temporary hold`）
 - 上一份 lesson：**[PostHog — Product for Engineers Pack](lessons/2026-05-29-posthog-product-for-engineers-pack.md)**（3-article pack；總 19 min；含 SuperDay 面試模型、`stack up against` 句型）

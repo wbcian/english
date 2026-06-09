@@ -5,6 +5,12 @@
 
 ---
 
+## 2026-06-09
+- 🎧 **新 lesson：Anne With An E — 直言不諱、對質 Billy**（dialogue track · B2）：[lesson](lessons/2026-06-09-anne-with-an-e-speak-your-mind.md)。素材＝影片英文教學（講師 Ksenia）用 Netflix《Anne With An E》學校派對場景拆 7 個單字（字幕截圖來源）。劇情：Billy 對 Josie 強行其事後散播謠言毀其名聲，八卦傳開大家評斷女生不質疑男生；Anne 拒絕沉默、當面對質。主題對準「為人挺身而出／吵架理直氣壯」的英文＋現代高價值字 consent
+- 📚 一次新增 7 個單字（全 ★1）：[speak one's mind](vocab/speak-ones-mind.md)（直言不諱·Anne 人設）／[gossip](vocab/gossip.md)（八卦·不可數·vs rumor）／[rumor](vocab/rumor.md)（謠言·英式 rumour·spread/start a rumor）／[nasty](vocab/nasty.md)（一字多義，語氣由名詞決定：comment/weather/person）／[devastated](vocab/devastated.md)（≠ 只是 sad，份量很重）／[ill-bred](vocab/ill-bred.md)（沒家教·⚠️register-trap 聽得懂即可慎用·拆字 ill+bred）／[consent](vocab/consent.md)（同意·informed/age of consent·Ksenia 標核心字）
+- 🔬 Sentence Anatomy 對準弱點：① `shouldn't have + p.p.`（批評過去行為，口語 "shouldn't-a"，⚠️別寫 should**of**）② `How dare you + 原形 V!`（dare 不加 to）
+- 🌏 Cultural Notes：1890s 加拿大設定刻意談現代 consent；double standard（女生被罵 ill-bred／loose morals，男生沒人質疑）；`back in the day` 慣用語；register 分流「聽得懂 vs 會用」
+
 ## 2026-06-03
 - 🎧 **擴充：日本住宿 Check-in 系列**（由 Cian 跟讀 Part 1 時的提問驅動）。維持 3-part 階段式骨架不動正文，改用「補充區塊」收納變化題：
   - [Part 1](lessons/2026-05-31-japan-hotel-checkin-part-1-arrival.md) 新增 `🔀 變化題 · 你問我答`（報到階段 6 題）：OTA 平台訂房怎麼報（`through` 不是 `at`）／雙人房加床 extra bed／double vs twin 白話講法（with two bed**s**）／入住人數變更要先講（按人頭計價＋《旅館業法》逐人登記）／registration card 填本國資料即可（無需日本地址）／提早入住 `Could I check in early?`＋寄放行李
