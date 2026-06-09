@@ -6,6 +6,13 @@
 
 | 單字 | 詞性 | 中文 | ★ | 上次複習 | tags |
 |---|---|---|---|---|---|
+| [speak one's mind](speak-ones-mind.md) | idiom | 直言不諱；說出真心話 | 1 | 2026-06-09 | idiom, personality, communication, daily |
+| [gossip](gossip.md) | n./v. | 八卦；說閒話 | 1 | 2026-06-09 | noun, verb, social, daily, uncountable |
+| [rumor](rumor.md) | n./v. | 謠言；謠傳（英式 rumour） | 1 | 2026-06-09 | noun, verb, social, news, british-vs-american |
+| [nasty](nasty.md) | adj. | 惡毒的；難聽的；糟糕的 | 1 | 2026-06-09 | adjective, emotion, multi-meaning, daily, toeic |
+| [devastated](devastated.md) | adj. | 心碎的；徹底崩潰的 | 1 | 2026-06-09 | adjective, emotion, intensity, daily |
+| [ill-bred](ill-bred.md) | adj. | 沒家教的；沒教養的（侮辱、老派） | 1 | 2026-06-09 | adjective, insult, dated, ⚠️register-trap |
+| [consent](consent.md) | n./v. | 同意；許可 | 1 | 2026-06-09 | noun, verb, formal, legal, modern, toeic |
 | [hands-on](hands-on.md) | adj./adv. | 親自動手的；實作的；實務型的 | 1 | 2026-06-01 | adjective, work, learning, toeic |
 | [look something over](look-over.md) | phr.v | 仔細看過；端詳；檢視（separable） | 1 | 2026-06-01 | phrasal-verb, separable, review, connected-speech |
 | [engage with](engage-with.md) | phr.v | 投入、認真接觸（內容／教材／人） | 1 | 2026-06-01 | phrasal-verb, learning, work, formal |
