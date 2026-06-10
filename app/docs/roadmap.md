@@ -22,10 +22,11 @@ _（目前沒有正在做的）_
 |---|---|---|---|---|
 | 1 | [P1 — 段落改用 ▶ icon 觸發播放](#p1--段落句子改用專屬播放-icon-觸發避免誤觸----effort-s) | S | — | 解掉長段誤觸；同時當 P2／P2.5 的錨點 |
 | 2 | [P1.5 — Lesson list 中英雙語標題](#p15--lesson-list-改顯示中英雙語標題取代-slug-檔名--effort-s) | S | — | 卡片列表一眼看懂在講什麼，獨立可動工 |
-| 3 | [P2 — 播放時 highlight 當前段落](#p2--播放音訊時-highlight-當前段落單字----effort-s) | S | P1 | shadowing 跟讀時知道讀到哪 |
+| 3 | [P2 — 播放時 highlight 當前段落（含卡拉 OK 升級）](#p2--播放音訊時-highlight-當前段落單字----effort-s) | S | P1 | shadowing 跟讀時知道讀到哪；可升級為逐字蔓延 |
 | 4 | [P2.5 — Transcript inline vocab popup](#p25--transcript-段落-inline-vocab-popup---effort-m) | M | P1 | 閱讀流不中斷地查單字（最大閱讀體驗升級） |
 | 5 | [P3 — Vocab filter（熟悉度 / 類別）](#p3--vocab-卡片支援-filter熟悉度--類別---effort-m) | M | — | 快速鎖定要複習的 vocab subset |
 | 6 | [P4 — Flashcard SRS lite](#p4--flash-card-複習模式srs-lite---effort-l) | L | P3 | active recall；填齊 vocab → 複習迴圈 |
+| 7 | [P5 — 依講者切換 TTS 聲音](#p5--依講者切換-tts-聲音--effort-m) | M | — | dialogue lesson 不同角色用不同聲音，聽感更真實 |
 
 **排序理由**：
 - **P1 先做**：S effort，又是 P2／P2.5 的共同 prereq——做完一次解鎖兩個下游
@@ -44,6 +45,8 @@ _（目前沒有正在做的）_
   - 段落本體點擊行為改回「啥都不做」（或留給未來的「點字查 vocab」）
   - vocab table 內 word cell 維持原本點擊播放（單字短，沒誤觸問題）
   - 播放中 icon 切成 ⏸，可暫停
+  - 暫停後可**接續播放**（resume，從暫停位置繼續，不是從頭）
+  - 另提供**重新播放**（replay from start）讓使用者想重播整段時一鍵觸發
 - **實作切點**：
   - 找音訊觸發的 event handler（推測掛在 `<p>` 或 `<blockquote>`）
   - 改成「掛在 icon 元素上」；icon 用純 CSS / SVG 即可，不引新 lib
@@ -78,6 +81,7 @@ _（目前沒有正在做的）_
   - 播 `<blockquote><p>` 整段時，該 `<p>` 加 active 樣式（背景色或左 border 強調），播完／暫停／切換段落自動清掉
   - 播 vocab table 內某 cell 時，該 `<tr>` 或 `<td>` 同步 highlight
   - 視覺要明顯但別搶戲（建議：左側 4px accent border + 淡淡背景）
+  - **[2026-06-10 Cian 回饋]** 目標升級為**漸進式已讀蔓延 highlight**（卡拉 OK 式）：已播放的部分與未播放部分有明確視覺區分，highlight 隨播放逐字慢慢向前蔓延，而非整段一次亮起
 - **實作切點**：
   - 找音訊播放的入口（推測在 `app/src/scripts/` 或元件級 inline script）
   - 綁 `audio` 元素的 `play` / `pause` / `ended` 事件 → 在對應 DOM node 上 toggle `.is-playing` class
@@ -86,6 +90,7 @@ _（目前沒有正在做的）_
   - **強烈建議 P1 先做**：P1 引入明確的 trigger icon，這裡 highlight 哪段才有明確錨點
   - 需確認目前 audio ↔ DOM node 的關聯方式（hash-based manifest？data-attribute？）
   - 同頁多段同時播的競態 — 一次只 highlight 一個
+  - **卡拉 OK 式漸進 highlight**：Web Speech API 的 `boundary` event 可拿到 word-level timing，但瀏覽器支援度（尤其 Safari / Firefox）需查證；預生成 MP3 路徑則需依賴 `*.words.json` sidecar（已有產生流程）再配合 `currentTime` 進度計算
 
 ### P2.5 — Transcript 段落 inline vocab popup 📖💬　**Effort: M**
 
@@ -161,6 +166,22 @@ _（目前沒有正在做的）_
   - **強烈建議先做 P3**，filter UI 共用
   - SRS 演算法不要過度設計，初版「隨機 + 三按鈕 + localStorage」就有 80% 價值
   - **觀察指標**：v1 上線後 N 週內 Cian 主動點開幾次？沒人用就別投資 v2 的演算法升級
+
+### P5 — 依講者切換 TTS 聲音 🎙️　**Effort: M**
+
+- **動機**：[2026-06-10 Cian 回饋] dialogue lesson 中不同角色（如 Ksenia vs Scene）用同一個聲音播放，聽感單調，角色辨識度低。若能依講者自動切換 TTS 聲音，跟讀體驗更接近真實對話，也更容易追蹤誰在說話。
+- **期望行為**：
+  - 依 blockquote 開頭的粗體講者標籤（`**Ksenia (00:00)**`、`**Scene (01:10)**` 等）自動選用對應聲音
+  - 不同講者對應不同 TTS voice（如一個用女聲 A，另一個用女聲 B 或男聲）
+  - 聲音對應表可在 lesson frontmatter 或全域設定中維護
+- **實作切點**：
+  - Repo 已有 msedge-tts 產音訊的流程（見 git log `chore: generate audio ... msedge-tts`），可在產音訊時依講者標籤切換 voice 參數
+  - `generate-audio.mjs` 讀到 blockquote 開頭 `**<speaker>**` 時，查對應表取 voice name，再呼叫 msedge-tts
+  - 預生成 MP3 路徑不變，只是不同 clip 用了不同聲音 — 不影響 runtime 播放邏輯
+- **依賴 / 風險**：
+  - 聲音對應表需人工維護（每個 speaker slug → voice）；新 lesson 若出現新講者需補登
+  - msedge-tts 可用 voice 清單需確認哪些支援中英切換，或哪些聲音適合英文教學場景
+  - 預生成 MP3 才能享受此功能；Web Speech API path 的 voice 切換可視進度另做
 
 ---
 
