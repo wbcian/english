@@ -9,6 +9,8 @@ level: B2
 url: https://newsletter.posthog.com/p/how-i-actually-get-good-advice
 word_count: 1350
 reading_time_min: 6
+title_zh: 怎麼真正獲得好建議 — Charles Cook
+title_en: "Cold-message strangers with a specific question — why vague 'pick your brain' requests fail"
 ---
 
 # How I Actually Get Good Advice — Charles Cook

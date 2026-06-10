@@ -8,6 +8,8 @@ type: lesson
 track: dialogue
 audio: true
 level: B2
+title_zh: Cat Wu 訪談 — Part 1：Anthropic 怎麼出貨那麼快
+title_en: "Mind meld, research preview, very low on process — how Anthropic ships something new every day"
 ---
 
 # Cat Wu 訪談 — Part 1：Anthropic 怎麼出貨那麼快

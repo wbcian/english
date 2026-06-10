@@ -6,6 +6,8 @@ type: lesson
 track: dialogue
 audio: true
 level: B2
+title_zh: Anne With An E — 直言不諱、對質 Billy
+title_en: "7 words for standing up for someone — reputation, confront, consent — through a school-party confrontation scene"
 ---
 
 # Anne With An E — 直言不諱、對質 Billy：7 個單字

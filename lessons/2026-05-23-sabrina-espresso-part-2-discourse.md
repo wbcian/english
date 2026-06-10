@@ -8,6 +8,8 @@ type: lesson
 track: dialogue
 audio: true
 level: B2
+title_zh: "Sabrina《Espresso》系列 — Part 2：訪談前半 — Z 世代口語密度"
+title_en: "Gen-Z spoken density — five 'like's in one sentence, tap-T connected speech, and what's real vs. performed"
 ---
 
 # Sabrina's《Espresso》系列 — Part 2：訪談前半 — Z 世代口語密度

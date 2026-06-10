@@ -8,6 +8,8 @@ type: lesson
 track: dialogue
 audio: true
 level: B2
+title_zh: "Sabrina《Espresso》系列 — Part 3：咖啡店場景 + 自我反思"
+title_en: "Café vocab, H-drop, British 'brilliant', and a 3-rule connected-speech series wrap-up"
 ---
 
 # Sabrina's《Espresso》系列 — Part 3：訪談後半 — 咖啡店場景 + 自我反思

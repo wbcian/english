@@ -8,6 +8,8 @@ type: lesson
 track: talk
 audio: true
 level: B2
+title_zh: "Sabrina《Espresso》系列 — Part 1：歌詞 + 連音入門"
+title_en: "Song lyrics, advanced expressions, and how natives sing connected speech — the glottal stop edition"
 ---
 
 # Sabrina's《Espresso》系列 — Part 1：歌曲 + 連音入門

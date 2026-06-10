@@ -9,6 +9,8 @@ level: B2
 url: https://newsletter.posthog.com/p/what-is-product-for-engineers
 word_count: 3590
 reading_time_min: 19
+title_zh: Product for Engineers — 3 篇入門導讀
+title_en: "What sets product engineers apart — talking to users, owning decisions, and being opinionated about priorities"
 ---
 
 # Product for Engineers — 3-Article Intro Pack

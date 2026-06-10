@@ -8,6 +8,8 @@ type: lesson
 track: dialogue
 audio: true
 level: B2
+title_zh: Cat Wu 訪談 — Part 3：Cowork 實戰 — 親自示範做 slide deck
+title_en: "When to use each Claude product, an overnight slide-deck workflow, and idioms that make work-talk feel human"
 ---
 
 # Cat Wu 訪談 — Part 3：Cowork in Practice — 親自示範做 slide deck

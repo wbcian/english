@@ -8,6 +8,8 @@ audio: false
 level: B1
 series: japan-hotel-checkin
 part: 3
+title_zh: 日本住宿 Check-in — Part 3：客訴、退房與行李宅配
+title_en: "Polite complaint when AC fails, itemized bill, late check-out, and Japan's luggage-forwarding cheat code"
 ---
 
 # 日本住宿 Check-in — Part 3：客訴、退房與行李宅配

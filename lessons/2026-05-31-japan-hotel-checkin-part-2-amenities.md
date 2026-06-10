@@ -8,6 +8,8 @@ audio: false
 level: B1
 series: japan-hotel-checkin
 part: 2
+title_zh: 日本住宿 Check-in — Part 2：付款、宿泊税與設施
+title_en: "Card pre-auth, accommodation tax, breakfast, public bath, wifi, and luggage storage — the part that costs money"
 ---
 
 # 日本住宿 Check-in — Part 2：付款、宿泊税與設施服務

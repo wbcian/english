@@ -8,6 +8,8 @@ audio: false
 level: B1
 series: japan-hotel-checkin
 part: 1
+title_zh: 日本住宿 Check-in — Part 1：報到、證件與房型
+title_en: "How to open, give your name, handle the passport copy, and state room preferences at a Tokyo hotel"
 ---
 
 # 日本住宿 Check-in — Part 1：報到、證件與房型

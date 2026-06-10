@@ -8,6 +8,8 @@ audio: true
 level: B2
 word_count: 305
 reading_time_min: 2
+title_zh: Grasse — 法國香水之都的皮革起源
+title_en: "How a stinky leather town accidentally invented the perfume trade — plus a GSAT passage-cloze walkthrough"
 ---
 
 # Grasse — The Fragrance Heart of France

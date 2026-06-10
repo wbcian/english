@@ -6,6 +6,8 @@ type: lesson
 track: dialogue
 audio: true
 level: B2
+title_zh: Monsters, Inc. — 商業英語 & 連音
+title_en: "Business vocab, phrasal verbs, and the soft-D flap — taught through Sulley's meeting with his boss"
 ---
 
 # Monsters, Inc. — Business English & Connected Speech

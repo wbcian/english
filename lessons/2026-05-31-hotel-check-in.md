@@ -6,6 +6,8 @@ type: lesson
 track: dialogue
 audio: false
 level: B1
+title_zh: "Hotel Check-In：國外旅館入住實戰"
+title_en: "Reservation name, room type, breakfast, Wi-Fi — the lines you need when the front desk speaks at normal speed"
 ---
 
 # Hotel Check-In：國外旅館櫃檯入住實戰

@@ -8,6 +8,8 @@ type: lesson
 track: dialogue
 audio: true
 level: B2
+title_zh: Cat Wu 訪談 — Part 2：PM 該長什麼樣
+title_en: "What Anthropic actually looks for in PMs — taste, low ego, first-principles thinking, leaning into chaos"
 ---
 
 # Cat Wu 訪談 — Part 2：PM 該長什麼樣 — Taste、Many Hats、Lean Into Chaos

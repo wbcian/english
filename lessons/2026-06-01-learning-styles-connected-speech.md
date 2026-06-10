@@ -6,6 +6,8 @@ type: lesson
 track: dialogue
 audio: true
 level: B2
+title_zh: Learning Styles 是迷思 — 順便偷學連音
+title_en: "Veritasium debunks learning-styles theory — use it as a connected-speech listening workout"
 ---
 
 # Learning Styles 是迷思 — 順便偷學連音
