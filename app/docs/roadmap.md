@@ -20,40 +20,20 @@ _（目前沒有正在做的）_
 
 | 順序 | Item | Effort | Depends on | 一句話 |
 |---|---|---|---|---|
-| 1 | [P1.5 — Lesson list 中英雙語標題](#p15--lesson-list-改顯示中英雙語標題取代-slug-檔名--effort-s) | S | — | 卡片列表一眼看懂在講什麼，獨立可動工 |
-| 2 | [P2 — 播放時 highlight 當前段落（含卡拉 OK 升級）](#p2--播放音訊時-highlight-當前段落單字----effort-s) | S | P1 ✅ | shadowing 跟讀時知道讀到哪；可升級為逐字蔓延 |
-| 3 | [P2.5 — Transcript inline vocab popup](#p25--transcript-段落-inline-vocab-popup---effort-m) | M | P1 ✅ | 閱讀流不中斷地查單字（最大閱讀體驗升級） |
-| 4 | [P3 — Vocab filter（熟悉度 / 類別）](#p3--vocab-卡片支援-filter熟悉度--類別---effort-m) | M | — | 快速鎖定要複習的 vocab subset |
-| 5 | [P4 — Flashcard SRS lite](#p4--flash-card-複習模式srs-lite---effort-l) | L | P3 | active recall；填齊 vocab → 複習迴圈 |
-| 6 | [P5 — 依講者切換 TTS 聲音](#p5--依講者切換-tts-聲音--effort-m) | M | — | dialogue lesson 不同角色用不同聲音，聽感更真實 |
+| 1 | [P2 — 播放時 highlight 當前段落（含卡拉 OK 升級）](#p2--播放音訊時-highlight-當前段落單字----effort-s) | S | P1 ✅ | shadowing 跟讀時知道讀到哪；可升級為逐字蔓延 |
+| 2 | [P2.5 — Transcript inline vocab popup](#p25--transcript-段落-inline-vocab-popup---effort-m) | M | P1 ✅ | 閱讀流不中斷地查單字（最大閱讀體驗升級） |
+| 3 | [P3 — Vocab filter（熟悉度 / 類別）](#p3--vocab-卡片支援-filter熟悉度--類別---effort-m) | M | — | 快速鎖定要複習的 vocab subset |
+| 4 | [P4 — Flashcard SRS lite](#p4--flash-card-複習模式srs-lite---effort-l) | L | P3 | active recall；填齊 vocab → 複習迴圈 |
+| 5 | [P5 — 依講者切換 TTS 聲音](#p5--依講者切換-tts-聲音--effort-m) | M | — | dialogue lesson 不同角色用不同聲音，聽感更真實 |
 
 **排序理由**：
 - ~~**P1 先做**~~ ✅ 2026-06-10 完成（見 Done）
-- **P1.5 緊跟（或並行）**：S effort、零依賴、純資料＋渲染層改動，跟 P1 不衝突，可以當「換換腦」穿插做
+- ~~**P1.5 緊跟（或並行）**~~ ✅ 2026-06-10 完成（見 Done）
 - **P2 → P2.5**：都靠 P1，先把 S 的吃掉、再啃 M 的 popup（popup 是閱讀體驗最大躍升，但成本也最高）
 - **P3 → P4 放最後**：vocab 子系統獨立於 lesson 閱讀流；先把 lesson 閱讀體驗閉環，再開 flashcard 戰場
 - **不建議**：跳過 P1 直接做 P2／P2.5（trigger 不明確 → click 行為混亂 → 還是要回頭重構）
 
 ---
-
-### P1.5 — Lesson list 改顯示中英雙語標題（取代 slug 檔名）📑　**Effort: S**
-
-- **動機**：目前 lesson 卡片標題直接吃 frontmatter 的 `topic`（kebab slug，例如 `cat-wu-pm-skills-and-taste`），閱讀體驗很差——一眼掃過去看不出在講什麼，要點進去才知道。但每份 lesson 內其實**已經寫好**漂亮的中文 H1 + 英文 summary blockquote，浪費了。
-- **期望行為**：
-  - 卡片大標切成「**中文主標** + 英文副標」兩行（或主標中文、hover/小字英文）
-    - 例：`Cat Wu 訪談 — Part 2：PM 該長什麼樣` ＋ `Cat Wu on what PMs actually need to be good at in the AI era`
-  - slug（`topic`）退居 metadata（debug 用），不再當顯示標題
-  - 搜尋 index 要同時吃中英標題（fuse.js 的 keys 加上去），方便用任一語言搜
-- **實作切點**：
-  - **資料層**：在 lesson frontmatter schema（[app/src/content.config.ts](app/src/content.config.ts)）加 `title_zh: string` 與 `title_en: string`（先設 optional 過渡，全部 backfill 完再改 required）
-  - **backfill**：逐一補 11 份既有 lesson 的 frontmatter；中文取自當前 `# H1`、英文可從 summary blockquote 第一句提煉（或請 Coach Max 統一風格寫一輪）
-  - **渲染**：改 [app/src/components/LessonCard.astro](app/src/components/LessonCard.astro) — `<h2>` 吃 `title_zh`、底下加 `<p class="title-en">` 吃 `title_en`；fallback 到 `topic` 維持向後相容
-  - **搜尋**：[LessonsList.astro](app/src/components/LessonsList.astro) 的 `searchIndex` 加 `title_zh` / `title_en` 兩個 key（slug 保留也行，反正權重低）
-  - 同步更新 [lessons/_conventions.md](lessons/_conventions.md)：說明新 lesson 必填 `title_zh` / `title_en` frontmatter
-- **依賴 / 風險**：
-  - 需要回頭 backfill 既有 11 份 lesson；可以一次 commit 一份 series（cat-wu / sabrina-espresso 各一筆）
-  - schema 改 required 之前要先確認所有檔案都補完，否則 build 會壞
-  - 中英標題長度差距大時，卡片排版要留意換行（手機螢幕窄）
 
 ### P2 — 播放音訊時 highlight 當前段落／單字 🎧🔦　**Effort: S**
 
@@ -173,6 +153,13 @@ _（隨時補）_
 ---
 
 ## ✅ Done
+
+### P1.5 — Lesson list 改顯示中英雙語標題（取代 slug 檔名）📑　**完成：2026-06-10**
+
+- **落地行為**：卡片主標改中文 `title_zh`（fallback `topic` slug 向後相容）、下方英文小字副標 `title_en`（兩者皆有才顯示，CSS 兩行截斷防手機爆版）；搜尋同時吃中英標題（Fuse weight 2），slug 降權 0.5 保留。
+- **資料**：16 份 lesson frontmatter 全數 backfill `title_zh`（取自 H1）/ `title_en`（從 summary blockquote 提煉，≤110 字元）；schema 維持 optional（顯示層有 fallback，新檔忘加不會 build 爆）。
+- **規範**：[lessons/_conventions.md](../../lessons/_conventions.md) 已加 title_zh/title_en 填寫說明。
+- **驗證**：sonnet 實作 → 獨立驗收 PASS（確認 16 份內文零誤碰、音檔 hash 零變動 generated=0）→ preview 實測（16/16 卡片雙語、中/英/slug 搜尋、375px 手機版）。
 
 ### P1 — 段落／句子改用專屬播放 icon 觸發（避免誤觸）🎯　**完成：2026-06-10**
 

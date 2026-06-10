@@ -10,6 +10,8 @@ const { entries } = Astro.props;
 const searchIndex = entries.map((e) => ({
   id: e.id,
   title: e.data.topic,
+  title_zh: e.data.title_zh ?? '',
+  title_en: e.data.title_en ?? '',
   source: e.data.source,
   date: e.data.date.toISOString().slice(0, 10),
   series: e.data.series ?? '',
@@ -20,7 +22,7 @@ const searchIndex = entries.map((e) => ({
   <input
     type="search"
     class="lessons-search-input"
-    placeholder="搜尋 topic / 來源 / 系列…"
+    placeholder="搜尋標題 / 來源 / 系列…"
     autocomplete="off"
     aria-label="Search lessons"
   />
@@ -41,12 +43,14 @@ const searchIndex = entries.map((e) => ({
     const emptyQueryEl = root.querySelector('.lessons-empty-query');
     if (!dataEl || !input) return;
 
-    type Item = { id: string; title: string; source: string; date: string; series: string };
+    type Item = { id: string; title: string; title_zh: string; title_en: string; source: string; date: string; series: string };
     const data: Item[] = JSON.parse(dataEl.textContent ?? '[]');
     const fuse = new Fuse(data, {
       keys: [
-        { name: 'title', weight: 2 },
+        { name: 'title_zh', weight: 2 },
+        { name: 'title_en', weight: 2 },
         { name: 'series', weight: 2 },
+        { name: 'title', weight: 0.5 },
         { name: 'source', weight: 1 },
         { name: 'date', weight: 0.5 },
       ],

@@ -19,6 +19,9 @@ const lessons = defineCollection({
     url: z.string().url().optional(),
     word_count: z.number().optional(),
     reading_time_min: z.number().optional(),
+    // 雙語卡片標題：title_zh = 中文主標（對應 H1），title_en = 英文副標一行（~80 字元）
+    title_zh: z.string().optional(),
+    title_en: z.string().optional(),
   }),
 });
 
