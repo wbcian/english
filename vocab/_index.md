@@ -6,6 +6,11 @@
 
 | 單字 | 詞性 | 中文 | ★ | 上次複習 | tags |
 |---|---|---|---|---|---|
+| [reputation](reputation.md) | n. | 名聲；聲譽 | 1 | 2026-06-10 | noun, social |
+| [practically](practically.md) | adv. | 幾乎；實際上 | 1 | 2026-06-10 | adverb, intensifier |
+| [confront](confront.md) | v. | 當面對質；正面面對 | 1 | 2026-06-10 | verb, conflict |
+| [back in the day](back-in-the-day.md) | idiom | 以前那個年代；當年 | 1 | 2026-06-10 | idiom, time |
+| [moral](moral.md) | adj./n. | 道德的；（複數）道德觀 | 1 | 2026-06-10 | adjective, noun, values |
 | [speak one's mind](speak-ones-mind.md) | idiom | 直言不諱；說出真心話 | 1 | 2026-06-09 | idiom, personality, communication, daily |
 | [gossip](gossip.md) | n./v. | 八卦；說閒話 | 1 | 2026-06-09 | noun, verb, social, daily, uncountable |
 | [rumor](rumor.md) | n./v. | 謠言；謠傳（英式 rumour） | 1 | 2026-06-09 | noun, verb, social, news, british-vs-american |
