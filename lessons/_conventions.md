@@ -38,8 +38,12 @@ part: <N>                     # optional，series 有填時才填
 url: https://...              # optional（reading 建議填原文 URL）
 word_count: 1350              # optional（reading 用）
 reading_time_min: 6           # optional（reading 用）
+title_zh: <中文主標>           # 建議填；對應內文 H1（可微調得更像卡片標題，去掉冗詞）；系列檔保留 Part 資訊
+title_en: <英文副標一行>       # 建議填；從 Topic & Summary 的英文 blockquote 提煉，資訊量高，≤110 字元（卡片最多顯示兩行，超出截斷）
 ---
 ```
+
+> `title_zh` / `title_en` 為 optional（schema 允許省略以免未來新檔忘了加就 build 爆）；但**強烈建議填寫**。顯示邏輯：Lesson 卡片以 `title_zh`（若有）取代 slug 當主標；`title_zh` 與 `title_en` 同時存在時，卡片 h2 下方另起一行英文小字副標。搜尋引擎也會對這兩欄加較高權重。
 
 > ⚠️ `audio` 是**純元資料**：app 的朗讀由 markdown DOM 結構決定（見 §5），**與 `audio` / `track` 任何 frontmatter 無關**。`audio: false` **不會**關掉朗讀。
 
