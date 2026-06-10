@@ -148,23 +148,80 @@ const { title } = Astro.props;
   .lesson-body-scroll > :first-child { margin-top: 0; }
   .lesson-body-scroll > :last-child { margin-bottom: 0; }
 
-  /* Speakable affordance — always visible, not hover-only */
+  /* Speakable paragraphs — left border shows playability; cursor is default
+     because only the injected button triggers playback (not the text body). */
   blockquote > p.speakable {
-    cursor: pointer;
+    cursor: default;
     margin-left: -1em;
     padding-left: 1em;
     border-left: 3px solid var(--speak-accent);
     transition: background-color 0.25s;
     position: relative;
   }
-  blockquote > p.speakable:hover::after {
-    content: "🔊";
-    margin-left: 8px;
-    opacity: 0.65;
-    font-size: 0.8em;
-  }
+  /* Old hover 🔊 pseudo-element removed — the injected .speak-btn replaces it. */
   blockquote > p.speakable.speaking {
     background-color: var(--speak-highlight);
+  }
+
+  /* Play / pause / replay buttons injected at the start of each speakable <p>.
+     Absolutely positioned in the ~1em left gutter that .speakable's negative
+     margin-left / padding-left creates, so the text flow never shifts. */
+  .speak-btn {
+    all: unset; /* reset browser button chrome */
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0.25em;
+    /* Width must fit the ~1em gutter minus the 3px border so the button never
+       overlaps the first character of the text. */
+    width: 1.05em;
+    height: 1.4em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.72em;
+    line-height: 1;
+    /* Idle: muted so it's not distracting while reading */
+    color: var(--speak-accent);
+    opacity: 0.45;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: opacity 0.15s, background-color 0.15s;
+    user-select: none; /* prevent text-select on double-click */
+    -webkit-user-select: none;
+  }
+  /* Our explicit display beats the UA's [hidden] { display: none } (author
+     styles win over UA styles), so restore it — the replay button is toggled
+     via the hidden attribute. */
+  .speak-btn[hidden] { display: none; }
+  /* On mobile (no hover) keep slightly more visible so discoverability holds */
+  @media (hover: none) {
+    .speak-btn { opacity: 0.6; }
+  }
+  /* Hover: make it clearly clickable */
+  blockquote > p.speakable:hover .speak-btn {
+    opacity: 0.85;
+  }
+  .speak-btn:hover {
+    opacity: 1 !important;
+    background-color: color-mix(in srgb, var(--speak-accent) 15%, transparent);
+  }
+  .speak-btn:focus-visible {
+    outline: 2px solid var(--speak-accent);
+    outline-offset: 1px;
+    opacity: 1;
+  }
+  /* When playing or paused keep the button fully visible */
+  blockquote > p.speakable.speaking .speak-btn,
+  blockquote > p.speakable .speak-btn[data-state="paused"] {
+    opacity: 0.9;
+  }
+  /* Replay button stacks BELOW the play button in the same left gutter —
+     side by side would exceed the ~1em gutter and overlap the first character
+     of the text. (em values are in the button's own 0.72em font size; the
+     play button spans 0.25em–1.65em, so 1.9em clears it with a small gap.) */
+  .speak-btn--replay {
+    top: 1.9em;
   }
   /* Word-by-word (karaoke) highlight. .w spans are invisible until lit, so
      paragraphs without a timing sidecar look exactly like before. */

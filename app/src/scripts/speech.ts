@@ -7,8 +7,11 @@
 //      regeneration, offline, or Edge TTS service failures.
 //
 // Wired up to:
-//   - <p> elements inside <blockquote> whose text is mostly English (≤10% CJK)
+//   - Play buttons injected at the start of <p> elements inside <blockquote>
+//     whose text is mostly English (≤10% CJK). Only button clicks play;
+//     clicking the paragraph body does nothing (avoids accidental playback).
 //   - <td> cells in the column whose <th> header is exactly "word" (lowercase)
+//     — unchanged: clicking the whole cell plays/stops.
 // Guards: skips clicks on links, skips when user has a text selection.
 
 import audioManifest from '../data/audio-manifest.json';
@@ -24,6 +27,23 @@ let currentWordSpan: HTMLElement | null = null;
 // Audios we deliberately tore down (clearCurrent sets src='' which fires a
 // spurious 'error'); used to suppress the Web Speech fallback for those.
 const teardownAudios = new WeakSet<HTMLAudioElement>();
+
+// Playback states for the per-paragraph play button.
+// 'idle'   → showing ▶, nothing playing for this element
+// 'playing'→ showing ⏸, audio/speech in progress
+// 'paused' → showing ▶ + ↻ replay button, audio/speech paused
+type PlayState = 'idle' | 'playing' | 'paused';
+
+// Per-paragraph state keyed by the wired <p>: speakable text (also used for
+// pause/resume + replay), pre-computed hash, and the injected buttons.
+interface ParagraphPlayCtx {
+  text: string;
+  // The pre-computed hash — null until first play (hash is async).
+  hash: string | null;
+  play: HTMLButtonElement;
+  replay: HTMLButtonElement;
+}
+const pCtx = new WeakMap<HTMLElement, ParagraphPlayCtx>();
 
 // ---- Web Speech setup (unchanged from v1) ----
 
@@ -75,12 +95,29 @@ function cjkRatio(text: string): number {
 }
 
 function getSpeakableText(p: HTMLElement): string {
-  const first = p.firstChild;
+  // firstChild may now be the injected play <button> — we must skip it.
+  // We also skip the original leading <STRONG> speaker label.
+  // Strategy: collect text from childNodes, skipping:
+  //   (a) any <button> (our injected controls), and
+  //   (b) the first non-button element if it's a <STRONG> (speaker label).
   const parts: string[] = [];
-  const skipFirstStrong =
-    first && first.nodeType === Node.ELEMENT_NODE && (first as Element).tagName === 'STRONG';
+  let foundFirstMeaningfulEl = false;
+
   for (const node of Array.from(p.childNodes)) {
-    if (skipFirstStrong && node === first) continue;
+    if (node.nodeType === Node.ELEMENT_NODE) {
+      const el = node as Element;
+      // Always skip injected speak-btn / replay-btn buttons.
+      if (el.tagName === 'BUTTON') continue;
+      // The first non-button element: if it's STRONG, it's the speaker label.
+      if (!foundFirstMeaningfulEl) {
+        foundFirstMeaningfulEl = true;
+        if (el.tagName === 'STRONG') continue;
+      }
+    } else if (node.nodeType === Node.TEXT_NODE && !foundFirstMeaningfulEl) {
+      // A non-whitespace text node before any element means the paragraph
+      // doesn't start with a speaker label — stop looking for one.
+      if ((node.textContent ?? '').trim()) foundFirstMeaningfulEl = true;
+    }
     parts.push(node.textContent ?? '');
   }
   return parts.join('').replace(/\s+/g, ' ').trim();
@@ -139,13 +176,45 @@ function showNoVoiceBanner() {
   setTimeout(() => b.remove(), 8000);
 }
 
+// ---- play button UI state ----
+
+function setBtnState(p: HTMLElement, state: PlayState): void {
+  const ctx = pCtx.get(p);
+  if (!ctx) return;
+  const { play, replay } = ctx;
+
+  if (state === 'idle') {
+    play.textContent = '▶';
+    play.setAttribute('aria-label', 'Play');
+    play.dataset.state = 'idle';
+    replay.hidden = true;
+  } else if (state === 'playing') {
+    play.textContent = '⏸';
+    play.setAttribute('aria-label', 'Pause');
+    play.dataset.state = 'playing';
+    replay.hidden = true;
+  } else {
+    // paused
+    play.textContent = '▶';
+    play.setAttribute('aria-label', 'Resume');
+    play.dataset.state = 'paused';
+    replay.hidden = false;
+  }
+}
+
 // ---- audio file playback path (preferred) ----
 
-function stopWordHighlight(): void {
+// Cancel the karaoke RAF loop WITHOUT touching currentWordSpan — pause freezes
+// the highlight at the current word; stopWordHighlight clears it too.
+function cancelKaraokeTick(): void {
   if (currentRaf !== null) {
     cancelAnimationFrame(currentRaf);
     currentRaf = null;
   }
+}
+
+function stopWordHighlight(): void {
+  cancelKaraokeTick();
   if (currentWordSpan) {
     currentWordSpan.classList.remove('is-current-word');
     currentWordSpan = null;
@@ -153,6 +222,8 @@ function stopWordHighlight(): void {
 }
 
 function clearCurrent(): void {
+  // Only the active element's button can be non-idle; the rest already are.
+  if (currentEl) setBtnState(currentEl, 'idle');
   stopWordHighlight();
   if (currentAudio) {
     teardownAudios.add(currentAudio); // mark as intentional before src='' fires 'error'
@@ -160,7 +231,10 @@ function clearCurrent(): void {
     currentAudio.src = '';
     currentAudio = null;
   }
-  if (synth.speaking || synth.pending) synth.cancel();
+  // Include synth.paused: a paused utterance keeps the queue alive without
+  // speaking/pending being reliably true. Without it, pausing Web Speech A
+  // then playing B leaves A stuck in the paused queue and B never starts.
+  if (synth.speaking || synth.pending || synth.paused) synth.cancel();
   currentEl?.classList.remove('speaking');
   currentEl = null;
 }
@@ -170,16 +244,22 @@ function playAudioFile(src: string, el: HTMLElement, hash: string): void {
   const audio = new Audio(src);
   audio.preload = 'auto';
   el.classList.add('speaking');
+  setBtnState(el, 'playing');
   currentEl = el;
   currentAudio = audio;
 
   const cleanup = () => {
-    if (currentAudio === audio) stopWordHighlight();
+    // Only the live clip may touch UI state. A stale teardown 'error' (firing
+    // after a replay or another paragraph already started a new clip) must not
+    // clobber the new clip's button state — nor its .speaking class: on replay
+    // of the SAME paragraph, currentEl === el for the stale clip too, so a
+    // currentEl-only guard would strip the class while the new clip plays.
+    if (currentAudio !== audio) return;
+    stopWordHighlight();
+    setBtnState(el, 'idle');
     if (currentEl === el) el.classList.remove('speaking');
-    if (currentAudio === audio) {
-      currentAudio = null;
-      if (currentEl === el) currentEl = null;
-    }
+    currentAudio = null;
+    if (currentEl === el) currentEl = null;
   };
   audio.addEventListener('ended', cleanup);
   audio.addEventListener('error', () => {
@@ -263,8 +343,9 @@ function startWordHighlight(audio: HTMLAudioElement, el: HTMLElement, hash: stri
 
 function getElText(el: HTMLElement): string {
   // For <td.speakable-word> the textContent is what we want; for <p.speakable>
-  // we need to strip a leading speaker label.
-  if (el.tagName === 'P') return getSpeakableText(el);
+  // the stripped text (no speaker label / injected buttons) is already stored
+  // in pCtx at wire time — prefer it over re-walking child nodes.
+  if (el.tagName === 'P') return pCtx.get(el)?.text ?? getSpeakableText(el);
   return el.textContent?.trim() ?? '';
 }
 
@@ -273,19 +354,16 @@ function getElText(el: HTMLElement): string {
 async function speakViaWebSpeech(text: string, el: HTMLElement): Promise<void> {
   await voicesReady;
 
-  if (currentEl === el) {
-    clearCurrent();
-    return;
-  }
-
   clearCurrent();
   el.classList.add('speaking');
+  setBtnState(el, 'playing');
   currentEl = el;
 
   const voice = pickEnglishVoice();
   if (!voice) {
     showNoVoiceBanner();
     el.classList.remove('speaking');
+    setBtnState(el, 'idle');
     currentEl = null;
     return;
   }
@@ -303,6 +381,7 @@ async function speakViaWebSpeech(text: string, el: HTMLElement): Promise<void> {
         const cleanup = () => {
           if (currentEl === el) {
             el.classList.remove('speaking');
+            setBtnState(el, 'idle');
             currentEl = null;
           }
         };
@@ -314,17 +393,11 @@ async function speakViaWebSpeech(text: string, el: HTMLElement): Promise<void> {
   }, 50);
 }
 
-// ---- entry point ----
+// ---- entry point: speak from scratch ----
 
 const manifest = audioManifest as Record<string, true>;
 
 async function speakText(text: string, el: HTMLElement): Promise<void> {
-  // Toggle-off: re-click the currently speaking element → stop
-  if (currentEl === el) {
-    clearCurrent();
-    return;
-  }
-
   const hash = await sha256Short(text);
   if (manifest[hash]) {
     const src = `${import.meta.env.BASE_URL}audio/${hash}.mp3`;
@@ -334,14 +407,63 @@ async function speakText(text: string, el: HTMLElement): Promise<void> {
   return speakViaWebSpeech(text, el);
 }
 
-// ---- click wiring ----
+// ---- play button click handler (paragraph path) ----
 
-function shouldIgnoreClick(e: MouseEvent): boolean {
-  if ((e.target as HTMLElement | null)?.closest('a')) return true;
-  const sel = window.getSelection();
-  if (sel && !sel.isCollapsed) return true;
-  return false;
+async function handlePlayBtnClick(p: HTMLElement): Promise<void> {
+  const ctx = pCtx.get(p);
+  if (!ctx) return;
+
+  const btnState = ctx.play.dataset.state ?? 'idle';
+
+  if (btnState === 'playing') {
+    // Pause in-progress playback — do NOT tear down; just suspend.
+    if (currentAudio) {
+      currentAudio.pause();
+      // Stop karaoke tick loop; highlight stays frozen at current word.
+      cancelKaraokeTick();
+    } else if (synth.speaking) {
+      synth.pause();
+    }
+    setBtnState(p, 'paused');
+    return;
+  }
+
+  if (btnState === 'paused') {
+    // Resume from pause position.
+    if (currentAudio) {
+      // A rejected resume (e.g. media element invalidated while paused) would
+      // otherwise leave the button stuck on ⏸ with nothing playing.
+      currentAudio.play().catch(() => clearCurrent());
+      if (ctx.hash) {
+        // Restart the karaoke tick from the live audio.currentTime — it picks
+        // its position from binary search, so resuming mid-clip just works.
+        // Re-running startWordHighlight re-fetches the sidecar, which is fine:
+        // it's browser-cached and bails gracefully if missing.
+        cancelKaraokeTick();
+        startWordHighlight(currentAudio, p, ctx.hash);
+      }
+    } else if (synth.paused) {
+      synth.resume();
+    }
+    setBtnState(p, 'playing');
+    return;
+  }
+
+  // idle → tear down whatever was active (no-op when nothing is playing).
+  clearCurrent();
+  void speakText(ctx.text, p);
 }
+
+async function handleReplayBtnClick(p: HTMLElement): Promise<void> {
+  const ctx = pCtx.get(p);
+  if (!ctx) return;
+
+  // Full teardown of current state (even if it's this same paragraph paused).
+  clearCurrent();
+  void speakText(ctx.text, p);
+}
+
+// ---- click wiring ----
 
 function wireOneSpeakableWord(el: HTMLElement): void {
   if (el.dataset.speakWired === '1') return;
@@ -350,10 +472,9 @@ function wireOneSpeakableWord(el: HTMLElement): void {
   if (!text) return;
   const insideLink = !!el.closest('a');
   el.addEventListener('click', (e) => {
-    // NB: don't use shouldIgnoreClick here — it short-circuits on any click
-    // whose target is inside <a>, which is exactly the case we want to
-    // intercept (vocab list rows wrap their .speakable-word in an <a>).
-    // Only skip on user text selection.
+    // NB: clicks inside <a> are deliberately NOT ignored here — vocab list
+    // rows wrap their .speakable-word in an <a>, and a tap on the word should
+    // speak rather than navigate. Only skip on user text selection.
     const sel = window.getSelection();
     if (sel && !sel.isCollapsed) return;
     if (insideLink) {
@@ -363,21 +484,67 @@ function wireOneSpeakableWord(el: HTMLElement): void {
       e.stopPropagation();
       e.stopImmediatePropagation();
     }
+    // Toggle-off: re-click the currently speaking element → stop
+    if (currentEl === el) {
+      clearCurrent();
+      return;
+    }
     void speakText(text, el);
   });
 }
 
 function wireSpeakable(): void {
-  // Blockquote paragraphs — only mostly-English ones
+  // Blockquote paragraphs — only mostly-English ones.
+  // Instead of attaching click to the whole paragraph, inject a play button and
+  // wire only the button (and a replay button for the paused state).
   document.querySelectorAll<HTMLElement>('blockquote > p').forEach(p => {
+    // Buttons aren't inserted yet, and getSpeakableText skips <button>
+    // elements anyway, so this read is safe either way.
     const text = getSpeakableText(p);
     if (text.length < 4) return;
     if (cjkRatio(text) >= 0.10) return;
+
     p.classList.add('speakable');
-    p.addEventListener('click', (e) => {
-      if (shouldIgnoreClick(e)) return;
-      void speakText(text, p);
+
+    // Play/pause button (▶ / ⏸) — state-dependent attributes (icon,
+    // aria-label, data-state, replay visibility) come from setBtnState below.
+    const playBtn = document.createElement('button');
+    playBtn.className = 'speak-btn';
+    playBtn.setAttribute('type', 'button');
+
+    // Replay button (↻) — only visible in 'paused' state.
+    const replayBtn = document.createElement('button');
+    replayBtn.className = 'speak-btn speak-btn--replay';
+    replayBtn.setAttribute('aria-label', 'Replay from start');
+    replayBtn.setAttribute('type', 'button');
+    replayBtn.textContent = '↻';
+
+    const ctx: ParagraphPlayCtx = { text, hash: null, play: playBtn, replay: replayBtn };
+    pCtx.set(p, ctx);
+    setBtnState(p, 'idle');
+
+    // Pre-compute hash in the background so first play is instant.
+    void sha256Short(text).then(h => { ctx.hash = h; });
+
+    // Insert buttons at the very start of the paragraph, before any children
+    // (including the leading <strong> speaker label if present).
+    p.insertBefore(replayBtn, p.firstChild);
+    p.insertBefore(playBtn, p.firstChild);
+
+    playBtn.addEventListener('click', (e) => {
+      e.stopPropagation(); // don't bubble to paragraph
+      void handlePlayBtnClick(p);
     });
+
+    replayBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      void handleReplayBtnClick(p);
+    });
+
+    // Paragraph body click: do nothing (explicit no-op to satisfy spec §2).
+    // Text selection and link clicks are unaffected because we don't prevent
+    // any defaults on them — only stopPropagation would matter if there were
+    // outer handlers, and there aren't.
   });
 
   // Lesson vocab tables — find the column whose <th> is exactly "word",
@@ -400,9 +567,9 @@ function wireSpeakable(): void {
   document.querySelectorAll<HTMLElement>('.speakable-word').forEach(wireOneSpeakableWord);
 }
 
-// Esc cancels both audio file playback and Web Speech
+// Esc cancels both audio file playback and Web Speech, and resets all button UIs
 document.addEventListener('keydown', e => {
-  if (e.key === 'Escape' && (currentAudio || synth.speaking || synth.pending)) {
+  if (e.key === 'Escape' && (currentAudio || synth.speaking || synth.pending || synth.paused)) {
     clearCurrent();
   }
 });

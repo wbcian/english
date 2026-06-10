@@ -20,40 +20,21 @@ _（目前沒有正在做的）_
 
 | 順序 | Item | Effort | Depends on | 一句話 |
 |---|---|---|---|---|
-| 1 | [P1 — 段落改用 ▶ icon 觸發播放](#p1--段落句子改用專屬播放-icon-觸發避免誤觸----effort-s) | S | — | 解掉長段誤觸；同時當 P2／P2.5 的錨點 |
-| 2 | [P1.5 — Lesson list 中英雙語標題](#p15--lesson-list-改顯示中英雙語標題取代-slug-檔名--effort-s) | S | — | 卡片列表一眼看懂在講什麼，獨立可動工 |
-| 3 | [P2 — 播放時 highlight 當前段落（含卡拉 OK 升級）](#p2--播放音訊時-highlight-當前段落單字----effort-s) | S | P1 | shadowing 跟讀時知道讀到哪；可升級為逐字蔓延 |
-| 4 | [P2.5 — Transcript inline vocab popup](#p25--transcript-段落-inline-vocab-popup---effort-m) | M | P1 | 閱讀流不中斷地查單字（最大閱讀體驗升級） |
-| 5 | [P3 — Vocab filter（熟悉度 / 類別）](#p3--vocab-卡片支援-filter熟悉度--類別---effort-m) | M | — | 快速鎖定要複習的 vocab subset |
-| 6 | [P4 — Flashcard SRS lite](#p4--flash-card-複習模式srs-lite---effort-l) | L | P3 | active recall；填齊 vocab → 複習迴圈 |
-| 7 | [P5 — 依講者切換 TTS 聲音](#p5--依講者切換-tts-聲音--effort-m) | M | — | dialogue lesson 不同角色用不同聲音，聽感更真實 |
+| 1 | [P1.5 — Lesson list 中英雙語標題](#p15--lesson-list-改顯示中英雙語標題取代-slug-檔名--effort-s) | S | — | 卡片列表一眼看懂在講什麼，獨立可動工 |
+| 2 | [P2 — 播放時 highlight 當前段落（含卡拉 OK 升級）](#p2--播放音訊時-highlight-當前段落單字----effort-s) | S | P1 ✅ | shadowing 跟讀時知道讀到哪；可升級為逐字蔓延 |
+| 3 | [P2.5 — Transcript inline vocab popup](#p25--transcript-段落-inline-vocab-popup---effort-m) | M | P1 ✅ | 閱讀流不中斷地查單字（最大閱讀體驗升級） |
+| 4 | [P3 — Vocab filter（熟悉度 / 類別）](#p3--vocab-卡片支援-filter熟悉度--類別---effort-m) | M | — | 快速鎖定要複習的 vocab subset |
+| 5 | [P4 — Flashcard SRS lite](#p4--flash-card-複習模式srs-lite---effort-l) | L | P3 | active recall；填齊 vocab → 複習迴圈 |
+| 6 | [P5 — 依講者切換 TTS 聲音](#p5--依講者切換-tts-聲音--effort-m) | M | — | dialogue lesson 不同角色用不同聲音，聽感更真實 |
 
 **排序理由**：
-- **P1 先做**：S effort，又是 P2／P2.5 的共同 prereq——做完一次解鎖兩個下游
+- ~~**P1 先做**~~ ✅ 2026-06-10 完成（見 Done）
 - **P1.5 緊跟（或並行）**：S effort、零依賴、純資料＋渲染層改動，跟 P1 不衝突，可以當「換換腦」穿插做
 - **P2 → P2.5**：都靠 P1，先把 S 的吃掉、再啃 M 的 popup（popup 是閱讀體驗最大躍升，但成本也最高）
 - **P3 → P4 放最後**：vocab 子系統獨立於 lesson 閱讀流；先把 lesson 閱讀體驗閉環，再開 flashcard 戰場
 - **不建議**：跳過 P1 直接做 P2／P2.5（trigger 不明確 → click 行為混亂 → 還是要回頭重構）
 
 ---
-
-### P1 — 段落／句子改用專屬播放 icon 觸發（避免誤觸）🎯　**Effort: S**
-
-- **動機**：目前點長段落任一位置都會觸發播放，常常我只是想點某個單字看意思就誤播了。
-- **期望行為**：
-  - 每段 `<blockquote><p>` 左側（或行首 inline）放一個 ▶ icon，**只有點 icon 才播放**
-  - 段落本體點擊行為改回「啥都不做」（或留給未來的「點字查 vocab」）
-  - vocab table 內 word cell 維持原本點擊播放（單字短，沒誤觸問題）
-  - 播放中 icon 切成 ⏸，可暫停
-  - 暫停後可**接續播放**（resume，從暫停位置繼續，不是從頭）
-  - 另提供**重新播放**（replay from start）讓使用者想重播整段時一鍵觸發
-- **實作切點**：
-  - 找音訊觸發的 event handler（推測掛在 `<p>` 或 `<blockquote>`）
-  - 改成「掛在 icon 元素上」；icon 用純 CSS / SVG 即可，不引新 lib
-  - 段落 hover 時 icon 可以微微顯眼（讓你知道哪段可播）
-- **依賴 / 風險**：
-  - 這項是 P2 highlight 的天然 prereq — 有了明確 trigger 元素，P2 要 highlight 哪段就一清二楚
-  - 視覺位置會影響 layout（icon 在行首 vs 段落上方），需要看排版適應
 
 ### P1.5 — Lesson list 改顯示中英雙語標題（取代 slug 檔名）📑　**Effort: S**
 
@@ -193,4 +174,9 @@ _（隨時補）_
 
 ## ✅ Done
 
-_（搬過來的歷史，附完成日期）_
+### P1 — 段落／句子改用專屬播放 icon 觸發（避免誤觸）🎯　**完成：2026-06-10**
+
+- **落地行為**：每個 speakable `<blockquote><p>` 行首 gutter 注入 ▶ button（唯一播放 trigger，段落本體點擊不再播放）；播放中切 ⏸ 可暫停；暫停顯示 ▶（resume 續播）＋ ↻（replay 從頭）；換段自動停舊段；Esc 全停。vocab table word cell 行為不變。
+- **實作**：`app/src/scripts/speech.ts`（per-paragraph 狀態機 `pCtx` WeakMap、`setBtnState` 單一狀態出口）＋ `Layout.astro`（`.speak-btn` gutter 定位、`[hidden]` display 修正）。文字在 button 注入前取得，audio hash 與 manifest 完全相容。
+- **驗證**：sonnet 實作 → 獨立驗收（抓到 Web Speech paused queue major bug）→ 修正 → live preview 全狀態機實測（play/pause/resume/replay/換段/Esc/卡拉 OK sidecar/vocab cell）→ /simplify 9 條清理。
+- **留給 P2 的前置筆記**：播放狀態機可統一成 module-level 變數（目前 DOM `data-state` 為 read source）；sidecar 建議拆 `fetchSidecar(hash)` cache + `startTickLoop()` 讓 resume 不重 fetch、也方便卡拉 OK 升級。
