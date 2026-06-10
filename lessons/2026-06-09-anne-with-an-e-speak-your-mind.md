@@ -93,6 +93,10 @@ level: B2
 | loose morals | n.phr. | 生活作風隨便（貶／老派） | 帶評判意味，反映舊時對女性的偏見 |
 | regardless | adv. | 無論如何；不管怎樣 | 句末單用很自然；regardless of sth |
 | confront | v. | 當面對質；正面面對 | confront sb (about sth)；不一定是肢體衝突 |
+| reputation | n. | 名聲；聲譽 | damage / ruin sb's reputation；a reputation for being… |
+| practically | adv. | 幾乎；實際上 | =almost：They're practically engaged. |
+| back in the day | idiom | 以前那個年代 | back in the day and still today（過去如此、現在依然） |
+| moral | adj./n. | 道德的；（複）道德觀 | strong morals；the moral of the story 寓意 |
 
 ## Useful Phrases & Patterns
 
@@ -135,6 +139,63 @@ level: B2
 | How dare you + V! | How dare you spread rumors about her! |
 | How dare you + V! | How dare you talk to me like that! |
 | How dare you + V! | How dare you lie to my face! |
+
+### 3. "Were." — 一個字的時態更正
+
+場景：有人說 "Is it really so bad? They're practically engaged."，Anne 只回一個字："Were."
+
+這是 **single-word tense correction**：不廢話、不解釋，直接用過去式單字回嗆，意思是「你說『現在式』，但我告訴你是『過去式』——也就是說那已經是過去的事了」。這裡 "Were." 的言下之意就是「曾經快訂婚，現在不是了」。
+
+| 有人說 | 你回 | 言下之意 |
+|---|---|---|
+| "He's my best friend." | "Was." | 你們已經不是了 |
+| "She lives here." | "Lived." | 她已經不住這了 |
+| "They're together." | "Were." | 他們已經分了 |
+
+這不是文化特例，是標準英文語法修辭：省去一整句解釋，直接用時態讓對方自己回過神，乾脆又有力。
+
+## 延伸 Q&A（2026-06-10）
+
+### 1. back in the day and still today
+
+**back in the day** 是慣用語，意思是「以前那個年代、當年」。課文把它與 **and still today** 拼接，強調「過去如此、現在依然沒消失」，是一個點出歷史延續性的有力句型。
+
+> "Back in the day, people didn't have smartphones."
+
+> 以前那個年代，人們沒有智慧型手機。
+
+### 2. reputation /ˌrɛpjʊˈteɪʃən/ (n.) 名聲；聲譽
+
+常用搭配：**have a good/bad reputation**、**damage / ruin sb's reputation**、**a reputation for being…**
+
+辨析：**rumor** 是傳出去的「故事」（真假未定）；**reputation** 是長期累積的「印象」。Billy 散播的是 rumor，毀的是 reputation。
+
+> "She has a reputation for being brutally honest."
+
+> 她以非常直接著稱。
+
+### 3. "I have eyes, and I can see…" — 修辭句型
+
+這不是固定片語，是修辭模式：「我親眼看見，不用你告訴我」，口語中用來抵擋話術／gaslighting 的有力句型。擴展版：
+
+> "I'm not blind. I can see exactly what's going on."
+
+> 我又不是瞎的，發生什麼事我看得很清楚。
+
+### 4. moral / morals
+
+- **(adj.)** 道德的：a **moral** question、a **moral** choice
+- **(n. 常複數) morals** = 道德觀、品行：She has strong **morals**.
+- **loose morals**：舊時代評判女性的貶義標籤，認得就好，別拿來用。
+- **the moral of the story**：故事的寓意（ = 這件事告訴我們……）
+
+### 5. practically /ˈpræktɪkli/ (adv.) — 兩個意思
+
+① **幾乎、差不多**（= almost）→ 課文 "They're practically engaged." 即此義，帶一點「雖然還差那麼一點但已經很接近了」的語氣。
+
+② **實際上**（Practically speaking, …）= 從實際操作的角度來說。
+
+同類強調詞：**basically**（口語最常用）。
 
 ## Connected Speech / Pronunciation
 
