@@ -25,6 +25,7 @@ _（目前沒有正在做的）_
 | 3 | [P3 — Vocab filter（熟悉度 / 類別）](#p3--vocab-卡片支援-filter熟悉度--類別---effort-m) | M | — | 快速鎖定要複習的 vocab subset |
 | 4 | [P4 — Flashcard SRS lite](#p4--flash-card-複習模式srs-lite---effort-l) | L | P3 | active recall；填齊 vocab → 複習迴圈 |
 | 5 | [P5 — 依講者切換 TTS 聲音](#p5--依講者切換-tts-聲音--effort-m) | M | — | dialogue lesson 不同角色用不同聲音，聽感更真實 |
+| 6 | [P6 — UI 改版研究：整體閱讀體驗](#p6--ui-改版研究整體閱讀體驗--effort-m) | M | — | 先研究再動手：typography／版面／密度怎麼調更好讀 |
 
 **排序理由**：
 - ~~**P1 先做**~~ ✅ 2026-06-10 完成（見 Done）
@@ -143,6 +144,20 @@ _（目前沒有正在做的）_
   - 聲音對應表需人工維護（每個 speaker slug → voice）；新 lesson 若出現新講者需補登
   - msedge-tts 可用 voice 清單需確認哪些支援中英切換，或哪些聲音適合英文教學場景
   - 預生成 MP3 才能享受此功能；Web Speech API path 的 voice 切換可視進度另做
+
+### P6 — UI 改版研究：整體閱讀體驗 🎨　**Effort: M**
+
+- **動機**：[2026-06-10 Cian 回饋] 想研究 UI 改版，看怎麼樣能讓整體**更好閱讀**。app 功能逐步到位（P1 播放鈕、P1.5 雙語標題），但視覺層從初版以來沒有整體檢視過——typography、行距、版面密度、配色對長時間閱讀的友善度都值得一輪系統性研究。
+- **期望行為**：
+  - **先研究、後動手**：產出一份改版提案（可附 mockup 或 A/B 截圖比較），列出「現狀問題 → 建議 → 預期效果」，由 Cian 裁決後才實作
+  - 研究面向（不限於）：中英混排的字體與行高、`lesson-body-scroll` 視窗高度與密度、卡片版面的資訊層級、暗色模式對比度、手機窄版的留白
+  - **播放按鈕視覺順帶優化**（次要）：目前 ▶/⏸/↻ 沒跑版、功能 OK，但視覺設計可以更精緻（icon 風格、gutter 內的對齊與大小、hover/playing 狀態的視覺語言）——歸入此次研究一起看，不單獨開工
+- **實作切點**：
+  - 研究階段零程式風險：截圖現狀（桌面/手機、亮/暗）→ 對照可讀性慣例（長文閱讀的 measure、line-height、對比度）→ 提案
+  - 實作階段視提案範圍另估 effort；CSS 集中在 `app/src/layouts/Layout.astro` 全域樣式與各元件 scoped style
+- **依賴 / 風險**：
+  - 與 P2（卡拉 OK highlight）有視覺語言交集——若 P2 先做，highlight 樣式要納入此次研究的範圍一起定調
+  - 「更好閱讀」偏主觀，提案要附截圖比較讓 Cian 能具體選，避免空談原則
 
 ---
 
