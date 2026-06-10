@@ -5,6 +5,9 @@
 
 ---
 
+## 2026-06-10
+- 📚 **Anne With An E 延伸 Q&A**：5 新字 [reputation](vocab/reputation.md)（名聲·搭配 damage/ruin·vs rumor）／[practically](vocab/practically.md)（幾乎；實際上·兩義）／[confront](vocab/confront.md)（當面對質·confront sb about sth）／[back in the day](vocab/back-in-the-day.md)（以前那個年代·常搭 and still today）／[moral](vocab/moral.md)（道德的；複數道德觀·the moral of the story）；lesson 補「Were.」single-word tense correction 解析（Sentence Anatomy §3）＋延伸 Q&A 段（back in the day / reputation / I have eyes… / moral / practically 五點）；app roadmap 收 4 點播放體驗回饋（resume/replay、卡拉 OK 漸進 highlight、P5 依講者切 TTS 聲音）
+
 ## 2026-06-09
 - 🎧 **新 lesson：Anne With An E — 直言不諱、對質 Billy**（dialogue track · B2）：[lesson](lessons/2026-06-09-anne-with-an-e-speak-your-mind.md)。素材＝影片英文教學（講師 Ksenia）用 Netflix《Anne With An E》學校派對場景拆 7 個單字（字幕截圖來源）。劇情：Billy 對 Josie 強行其事後散播謠言毀其名聲，八卦傳開大家評斷女生不質疑男生；Anne 拒絕沉默、當面對質。主題對準「為人挺身而出／吵架理直氣壯」的英文＋現代高價值字 consent
 - 📚 一次新增 7 個單字（全 ★1）：[speak one's mind](vocab/speak-ones-mind.md)（直言不諱·Anne 人設）／[gossip](vocab/gossip.md)（八卦·不可數·vs rumor）／[rumor](vocab/rumor.md)（謠言·英式 rumour·spread/start a rumor）／[nasty](vocab/nasty.md)（一字多義，語氣由名詞決定：comment/weather/person）／[devastated](vocab/devastated.md)（≠ 只是 sad，份量很重）／[ill-bred](vocab/ill-bred.md)（沒家教·⚠️register-trap 聽得懂即可慎用·拆字 ill+bred）／[consent](vocab/consent.md)（同意·informed/age of consent·Ksenia 標核心字）
