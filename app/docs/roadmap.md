@@ -26,6 +26,7 @@ _（目前沒有正在做的）_
 | 4 | [P4 — Flashcard SRS lite](#p4--flash-card-複習模式srs-lite---effort-l) | L | P3 | active recall；填齊 vocab → 複習迴圈 |
 | 5 | [P5 — 依講者切換 TTS 聲音](#p5--依講者切換-tts-聲音--effort-m) | M | — | dialogue lesson 不同角色用不同聲音，聽感更真實 |
 | 6 | [P6 — UI 改版研究：整體閱讀體驗](#p6--ui-改版研究整體閱讀體驗--effort-m) | M | — | 先研究再動手：typography／版面／密度怎麼調更好讀 |
+| 7 | [P7 — 播放語速調整（實驗）](#p7--播放語速調整實驗--effort-xs) | XS | — | 目前 0.95x 偏慢；試試接近自然語速／1x，實測後定 |
 
 **排序理由**：
 - ~~**P1 先做**~~ ✅ 2026-06-10 完成（見 Done）
@@ -158,6 +159,20 @@ _（目前沒有正在做的）_
 - **依賴 / 風險**：
   - 與 P2（卡拉 OK highlight）有視覺語言交集——若 P2 先做，highlight 樣式要納入此次研究的範圍一起定調
   - 「更好閱讀」偏主觀，提案要附截圖比較讓 Cian 能具體選，避免空談原則
+
+### P7 — 播放語速調整（實驗） 🐢⚡　**Effort: XS**
+
+- **動機**：[2026-06-11 Cian 回饋] 目前跟讀播放語速偏慢，覺得**接近自然語速或 1x 就好**；但確切值想實測幾種速度後再決定，先記下來不馬上做。
+- **期望行為**：
+  - 把播放速度調到更接近自然語速（候選：1.0x，或介於 0.95–1.1x 之間）
+  - 進階（非必要）：lesson 頁加一個語速切換 UI（如 0.75x / 1.0x / 1.25x 小按鈕），讓使用者自選；state 存 localStorage
+- **實作切點**：
+  - Web Speech path：`app/src/scripts/speech.ts` 的 `speakViaWebSpeech` 內 `u.rate = 0.95`（目前值）
+  - 預生成 MP3 path：`new Audio()` 的 `playbackRate`（目前未設，等於 1.0）——若要全域一致，兩條路徑都要對齊
+  - ⚠️ 兩條路徑語速來源不同：Web Speech 用 utterance.rate，MP3 用 audio.playbackRate；改的時候別只改一邊
+- **依賴 / 風險**：
+  - 卡拉 OK highlight（P2）若已上線，改 MP3 `playbackRate` 不影響 `*.words.json` 的相對 timing（`currentTime` 會自動隨速度推進），但要實測確認 highlight 不跑掉
+  - 純調數值零風險；加 UI 切換才需估額外 effort
 
 ---
 
