@@ -6,6 +6,16 @@
 
 | 單字 | 詞性 | 中文 | ★ | 上次複習 | tags |
 |---|---|---|---|---|---|
+| [deposit](deposit.md) | n./v. | 押金；保證金；存款 | 1 | 2026-06-11 | noun, verb, travel, hotel, finance, payment |
+| [scam](scam.md) | n./v. | 詐騙；騙局 | 1 | 2026-06-11 | noun, verb, daily, crime, informal |
+| [lodging](lodging.md) | n. | 住宿；臨時住所（書面） | 1 | 2026-06-11 | noun, travel, formal |
+| [rapid-fire](rapid-fire.md) | adj. | 連珠炮式的；快速接連的 | 1 | 2026-06-11 | adjective, journalism, interview, compound |
+| [nail it](nail-it.md) | phr.v. | 完美搞定；做到位 | 1 | 2026-06-11 | phrasal-verb, informal, encouragement, daily |
+| [rinse off](rinse-off.md) | phr.v. | 沖洗乾淨；用水沖掉 | 1 | 2026-06-11 | phrasal-verb, daily, hygiene, travel, japan |
+| [just so you know](just-so-you-know.md) | phr. | 先跟你說一下（預防性 FYI） | 1 | 2026-06-11 | phrase, conversation, fyi, daily |
+| [steam room](steam-room.md) | n. | 蒸氣室 | 1 | 2026-06-11 | noun, travel, hotel, spa |
+| [sauna](sauna.md) | n. | 三溫暖；烤箱（乾熱） | 1 | 2026-06-11 | noun, travel, hotel, spa, finland |
+| [lotion](lotion.md) | n. | 乳液；護膚液 | 1 | 2026-06-11 | noun, daily, skincare, hotel, amenities |
 | [reputation](reputation.md) | n. | 名聲；聲譽 | 1 | 2026-06-10 | noun, social |
 | [practically](practically.md) | adv. | 幾乎；實際上 | 1 | 2026-06-10 | adverb, intensifier |
 | [confront](confront.md) | v. | 當面對質；正面面對 | 1 | 2026-06-10 | verb, conflict |
@@ -95,7 +105,7 @@
 | [in demand](in-demand.md) | adj.phr. | 搶手的；有需求的 | 1 | 2026-05-29 | adjective-phrase, business, toeic, market, hiring |
 | [filter out](filter-out.md) | phr.v. | 過濾掉；篩除 | 1 | 2026-05-29 | phrasal-verb, business, toeic, process, hiring |
 | [complimentary](complimentary.md) | adj. | 免費招待的（飯店常用） | 1 | 2026-05-31 | adjective, travel, hotel, toeic |
-| [amenities](amenities.md) | n.(pl.) | 備品；設施 | 1 | 2026-05-31 | noun, plural, travel, hotel, toeic |
+| [amenities](amenities.md) | n.(pl.) | 備品；設施 | 1 | 2026-06-11 | noun, plural, travel, hotel, toeic |
 | [accommodation tax](accommodation-tax.md) | n.phr. | 住宿税（日：宿泊税） | 1 | 2026-05-31 | noun-phrase, travel, japan, toeic |
 | [pre-authorization](pre-authorization.md) | n. | 預先授權；暫扣 | 1 | 2026-05-31 | noun, travel, hotel, payment |
 | [security deposit](security-deposit.md) | n.phr. | 保證金；押金 | 1 | 2026-05-31 | noun-phrase, travel, hotel, payment |

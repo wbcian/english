@@ -5,8 +5,8 @@ pos: n. (pl.)
 zh: 備品；設施
 proficiency: 1
 first_seen: 2026-05-31
-last_reviewed: 2026-05-31
-review_count: 1
+last_reviewed: 2026-06-11
+review_count: 2
 tags: [noun, plural, travel, hotel, toeic]
 source: "lesson: japan-hotel-checkin Part 2"
 ---
@@ -25,3 +25,4 @@ facilities, conveniences, perks
 
 ## Encounters
 - 2026-05-31 — first learned (lesson: japan-hotel-checkin Part 2)
+- 2026-06-11 — reviewed; noted amenity bar (バイキング) phrasing + toiletries distinction
