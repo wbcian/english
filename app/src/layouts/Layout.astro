@@ -154,6 +154,7 @@ const { title } = Astro.props;
     cursor: default;
     margin-left: -1em;
     padding-left: 1em;
+    padding-right: 1.4em;
     border-left: 3px solid var(--speak-accent);
     transition: background-color 0.25s;
     position: relative;
@@ -163,24 +164,22 @@ const { title } = Astro.props;
     background-color: var(--speak-highlight);
   }
 
-  /* Play / pause / replay buttons injected at the start of each speakable <p>.
-     Absolutely positioned in the ~1em left gutter that .speakable's negative
-     margin-left / padding-left creates, so the text flow never shifts. */
+  /* Play / pause / replay buttons absolutely positioned at the right edge of
+     each speakable <p>; padding-right creates the gutter so text never shifts. */
   .speak-btn {
     all: unset; /* reset browser button chrome */
     box-sizing: border-box;
     position: absolute;
-    left: 0;
-    top: 0.25em;
-    /* Width must fit the ~1em gutter minus the 3px border so the button never
-       overlaps the first character of the text. */
-    width: 1.05em;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    --speak-btn-w: 1.15em;
+    width: var(--speak-btn-w);
     height: 1.4em;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.72em;
-    line-height: 1;
+    font-size: 0.85em;
     /* Idle: muted so it's not distracting while reading */
     color: var(--speak-accent);
     opacity: 0.45;
@@ -216,12 +215,9 @@ const { title } = Astro.props;
   blockquote > p.speakable .speak-btn[data-state="paused"] {
     opacity: 0.9;
   }
-  /* Replay button stacks BELOW the play button in the same left gutter —
-     side by side would exceed the ~1em gutter and overlap the first character
-     of the text. (em values are in the button's own 0.72em font size; the
-     play button spans 0.25em–1.65em, so 1.9em clears it with a small gap.) */
+  /* Replay button sits to the left of the play button at the same height. */
   .speak-btn--replay {
-    top: 1.9em;
+    right: calc(var(--speak-btn-w) + 0.15em);
   }
   /* Word-by-word (karaoke) highlight. .w spans are invisible until lit, so
      paragraphs without a timing sidecar look exactly like before. */
