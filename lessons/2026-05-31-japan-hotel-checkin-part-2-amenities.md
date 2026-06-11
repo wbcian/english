@@ -255,6 +255,105 @@ be    主詞      p.p.(被動)    介系詞片語
 
 ---
 
+## 延伸 Q&A（2026-06-11）
+
+> 這批是 Cian 課後追問的延伸——把這段 check-in 對話往外擴：實際住宿會用到的字、兩個容易忽略的句法（`just so you know` 的 so、為什麼用 `place`），以及日本在地文化的三個好奇。
+
+### 1. 字詞延伸：deposit / scam / lodging
+
+**deposit** /dɪˈpɒzɪt/ (n./v.) 押金；保證金；存款。脈絡決定意思——飯店/租房是「可退的押金」，銀行是「存款」(`make a deposit`)，買房是「訂金」(`put down a deposit`)。注意跟正文的 `pre-authorization` 不同：deposit 多半是真扣、退房退還；pre-auth 只暫扣額度、不真扣。
+
+**scam** /skæm/ (n./v.) 詐騙；騙局。超口語，正式文件才用 `fraud`。
+
+> "I almost thought the accommodation tax was a scam, but it's totally legit."
+
+> 我差點以為宿泊税是詐騙，但它完全合法。
+
+**lodging** /ˈlɒdʒɪŋ/ (n.) 住宿（書面語）。比 `accommodation` 更偏美式、正式，常見於稅務／法律文件；日常說話更常用 `a place to stay`。
+
+### 2. 連珠炮提問：rapid-fire · a round of questions
+
+正文 summary 的 `a rapid-fire round of questions` 兩個都值得拆：
+
+- **rapid-fire** /ˈræpɪd faɪər/ (adj.) 連珠炮式的。原是「快射機槍」，現在最常形容快到讓人喘不過氣的提問或發言：`rapid-fire questions / interview / jokes`。
+- **a round of...** 一輪、一回合的份量。`round` 不是「圓形」，是「一個完整循環」：`a round of questions`（一輪問題）、`a round of applause`（一陣掌聲）、`another round`（再來一輪，請客喝酒也用這個）。
+
+### 3. nail it / nail this — 完美搞定
+
+> "We've practiced enough — go out there and nail it."
+
+> 我們練夠了，出去把它徹底搞定。
+
+「把釘子精準打進去」→ 精準到位 → 完美完成。考試、面試、表演前都聽得到。過去式 `nailed it` 也是 meme 用語。反義 `bomb it`（搞砸）；更強 `crush it`（壓倒性搞定）。
+
+### 4. rinse off vs wash off — 沖洗的細節
+
+正文大浴場禮儀那句 `rinse off at the shower stations` 的 **rinse off** = 用大量水沖乾淨（不一定用肥皂）。對照：
+
+- `wash off` = 用皂水洗掉（有用肥皂的感覺）
+- `rinse off` = 直接用水沖乾淨（澡堂禮儀用這個）
+- `rinse out` = 沖洗容器內部
+
+### 5. vending machine — 自動販賣機
+
+正文 `a vending machine next to the elevator` 的 **vending machine** /ˈvendɪŋ məʃiːn/。`vend` = 販售（商業動詞），所以就是「販賣用的機器」。日文「自販機」、英文沒捷徑，上下文清楚時可簡稱 `a machine`。
+
+### 6. "Just so you know" — so 是什麼用法？
+
+正文櫃檯說 `Just so you know, we'll place a small pre-authorization...`。這裡的 **so** 是**目的子句**的 so——完整是 `just so that you know`（`that` 口語省略），意思「只是為了讓你知道」。
+
+辨析其他 FYI 說法：
+
+| 說法 | 語氣 |
+|---|---|
+| Just so you know | 親切、預防性提醒，中性 |
+| I'll let you know | 「我之後再通知你」（未來式） |
+| For your information / FYI | 稍正式；FYI 多用於文字 |
+| Heads up | 「提前警示一下」，比 JSYK 更有注意感 |
+
+⚠️ `as your information` 不是道地說法；`let you know` 需要主詞＋時態（`I'll let you know`），別跟 `just so you know` 混用。
+
+### 7. "place a pre-authorization" — 為什麼動詞用 place？
+
+`place` 在商業／金融語境是「正式執行某動作」的高頻動詞，概念是「把某動作放進去、啟動」：
+
+- **place** an order（下訂單）
+- **place** a bet（下注）
+- **place** a hold（做凍結／暫扣）
+- **place** a call（打一通電話，較正式）
+
+換成 `put a hold on your card` 也通，但 `place` 是更正式的銀行／飯店用語。
+
+### 8. 中文對應補充：蒸氣室 / 烤箱 / 乳液 / 吹風機
+
+| 中文 | 英文 | 備註 |
+|---|---|---|
+| 蒸氣室 | steam room (steam bath) | 濕熱蒸汽，約 40–55°C |
+| 烤箱（浴場那種乾的） | sauna /ˈsɔːnə/ | ⚠️ 不是 oven！乾熱、源自芬蘭，70–100°C |
+| 乳液 | lotion / moisturizer | lotion 質地薄、流動；moisturizer 泛指保濕品 |
+| 吹風機 | hair dryer | ⚠️ 不要說 `hair blower`（不自然） |
+
+> "The public bath area has both a sauna and a steam room."
+
+> 大浴場區域有烤箱和蒸氣室兩種。
+
+### 9. 🗾 文化追問三連
+
+**① 大浴場兩種浴巾怎麼用？**
+小毛巾（face towel）帶進浴場擦臉擦汗，折好放頭頂（招牌動作，防頭暈），**絕不下池水**；大浴巾（bath towel）留在更衣室，出浴後擦乾全身。
+
+**② 為什麼日本對刺青有疑慮？**
+幫派歷史＋公衆衛生的文化包袱。江戶時代刺青是罪犯記號，後在日本黑道（ヤクザ）保留成身份象徵，長期跟「危險人物」連結。現在都市飯店與私湯多半放寬（如正文這間 OK），但傳統温泉旅館仍嚴格。正文教的問法很到位：`Is there anything I should know about tattoos?`——禮貌、不指責。
+
+**③ 為什麼有些飯店不主動提供備品？**
+近年環保趨勢（減塑＋降成本＋ESG）。兩種做法：**amenity bar（バイキング）**公共區自取（日本商務飯店常見）、**on request only**（跟櫃檯要才給，歐洲精品旅館常見）。想要可說：
+
+> "Could I get a toothbrush and some shampoo from the front desk?"
+
+> 我可以跟櫃檯拿牙刷和洗髮精嗎？
+
+---
+
 ## Takeaways
 
 - **付款一條龍背起來**：`How would you like to pay?` → `I'll pay by credit card.` → 聽到 `pre-authorization / hold` 知道是暫扣不是真扣，`released at checkout` 就放心。
