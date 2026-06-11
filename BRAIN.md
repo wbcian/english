@@ -9,10 +9,10 @@
 - 詳細 Profile → [PROFILE.md](PROFILE.md)
 
 ## 快照（隨更新同步）
-- 已收錄單字：126
-- 5★ 精熟：0　 3–4★ 學習中：8　 1–2★ 新／脆弱：118
-- 最近活動日期：2026-06-10（📚 Anne With An E 延伸 Q&A：5 新字 reputation / practically / confront / back in the day / moral；lesson 補「Were.」Sentence Anatomy §3 + 延伸 Q&A 段；app roadmap 收 4 點播放體驗回饋）
-- 上一活動日期：2026-06-09（🎧 新 lesson Anne With An E（dialogue·B2）：用 Netflix 影集派對場景教 7 字；📚 新增 speak one's mind / gossip / rumor / nasty / devastated / ill-bred / consent；Sentence Anatomy 對準 `shouldn't have + p.p.` 與 `How dare you + V`）
+- 已收錄單字：136
+- 5★ 精熟：0　 3–4★ 學習中：8　 1–2★ 新／脆弱：128
+- 最近活動日期：2026-06-11（📚 Japan Hotel Check-in Part 2 延伸 Q&A：10 新字 deposit / scam / lodging / rapid-fire / nail it / rinse off / just so you know / steam room / sauna / lotion；文法解析 "just so you know" 的 so（目的子句）+ "place" 作為交易動詞；amenities 複習；app 播放按鈕移右側 + 置中 + 放大）
+- 上一活動日期：2026-06-10（📚 Anne With An E 延伸 Q&A：5 新字 reputation / practically / confront / back in the day / moral；lesson 補「Were.」Sentence Anatomy §3 + 延伸 Q&A 段；app roadmap 收 4 點播放體驗回饋）
 - 主目標：**TOEIC 750+ 證書**（詳見 [PROFILE.md](PROFILE.md#目標)）
 - **Lesson 格式（2026-05-29 換軸）**：`track`(reading/dialogue/talk) + `audio` 取代舊 `format`；Source→標題下 subtitle、正文雙語滾動框、Key Vocab 緊接正文後 — 規範見 [`lessons/_conventions.md`](lessons/_conventions.md)
 - 最近 lesson：**[Anne With An E — 直言不諱、對質 Billy](lessons/2026-06-09-anne-with-an-e-speak-your-mind.md)**（dialogue · B2 · 影片英文教學 Ksenia 用 Netflix 影集派對場景教 7 字）— 主題「為人挺身而出／吵架理直氣壯」＋現代高價值字 consent；7 新字 speak one's mind / gossip / rumor / nasty / devastated / ill-bred / consent；Sentence Anatomy 對準弱點 `shouldn't have + p.p.`（批評過去）與 `How dare you + V`；Cultural Notes 講 double standard 與 register（聽得懂 vs 會用）

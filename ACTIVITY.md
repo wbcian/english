@@ -5,6 +5,12 @@
 
 ---
 
+## 2026-06-11
+
+📚 Japan Hotel Check-in Part 2 延伸 Q&A：10 新字 deposit / scam / lodging / rapid-fire / nail it / rinse off / just so you know / steam room / sauna / lotion；文法解析 "just so you know" 中 so 的目的子句用法＋"place" 作為交易動詞；文化：刺青禁令由來、浴巾使用禮儀、飯店不提供備品趨勢；amenities 複習。app: 播放按鈕移至右側、上下置中、font-size 0.72→0.85em，--speak-btn-w CSS 變數化
+
+---
+
 ## 2026-06-10
 - 📚 **Anne With An E 延伸 Q&A**：5 新字 [reputation](vocab/reputation.md)（名聲·搭配 damage/ruin·vs rumor）／[practically](vocab/practically.md)（幾乎；實際上·兩義）／[confront](vocab/confront.md)（當面對質·confront sb about sth）／[back in the day](vocab/back-in-the-day.md)（以前那個年代·常搭 and still today）／[moral](vocab/moral.md)（道德的；複數道德觀·the moral of the story）；lesson 補「Were.」single-word tense correction 解析（Sentence Anatomy §3）＋延伸 Q&A 段（back in the day / reputation / I have eyes… / moral / practically 五點）；app roadmap 收 4 點播放體驗回饋（resume/replay、卡拉 OK 漸進 highlight、P5 依講者切 TTS 聲音）
 
