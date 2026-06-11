@@ -7,7 +7,7 @@
 
 ## 2026-06-11
 
-📚 Japan Hotel Check-in Part 2 延伸 Q&A：10 新字 deposit / scam / lodging / rapid-fire / nail it / rinse off / just so you know / steam room / sauna / lotion；文法解析 "just so you know" 中 so 的目的子句用法＋"place" 作為交易動詞；文化：刺青禁令由來、浴巾使用禮儀、飯店不提供備品趨勢；amenities 複習。app: 播放按鈕移至右側、上下置中、font-size 0.72→0.85em，--speak-btn-w CSS 變數化
+📚 Japan Hotel Check-in Part 2 延伸 Q&A：10 新字 deposit / scam / lodging / rapid-fire / nail it / rinse off / just so you know / steam room / sauna / lotion；文法解析 "just so you know" 中 so 的目的子句用法＋"place" 作為交易動詞；文化：刺青禁令由來、浴巾使用禮儀、飯店不提供備品趨勢；amenities 複習。整段 Q&A 已 backfill 進 lesson（9 子段）。app: 播放按鈕移至右側、上下置中、font-size 0.72→0.85em，--speak-btn-w CSS 變數化；roadmap 收 P7（播放語速調整，實驗，不馬上做）
 
 ---
 

@@ -11,7 +11,7 @@
 ## 快照（隨更新同步）
 - 已收錄單字：136
 - 5★ 精熟：0　 3–4★ 學習中：8　 1–2★ 新／脆弱：128
-- 最近活動日期：2026-06-11（📚 Japan Hotel Check-in Part 2 延伸 Q&A：10 新字 deposit / scam / lodging / rapid-fire / nail it / rinse off / just so you know / steam room / sauna / lotion；文法解析 "just so you know" 的 so（目的子句）+ "place" 作為交易動詞；amenities 複習；app 播放按鈕移右側 + 置中 + 放大）
+- 最近活動日期：2026-06-11（📚 Japan Hotel Check-in Part 2 延伸 Q&A：10 新字 deposit / scam / lodging / rapid-fire / nail it / rinse off / just so you know / steam room / sauna / lotion；文法解析 "just so you know" 的 so（目的子句）+ "place" 作為交易動詞；amenities 複習；Q&A 已 backfill 進 lesson 9 子段；app 播放按鈕移右側 + 置中 + 放大、roadmap +P7 語速調整）
 - 上一活動日期：2026-06-10（📚 Anne With An E 延伸 Q&A：5 新字 reputation / practically / confront / back in the day / moral；lesson 補「Were.」Sentence Anatomy §3 + 延伸 Q&A 段；app roadmap 收 4 點播放體驗回饋）
 - 主目標：**TOEIC 750+ 證書**（詳見 [PROFILE.md](PROFILE.md#目標)）
 - **Lesson 格式（2026-05-29 換軸）**：`track`(reading/dialogue/talk) + `audio` 取代舊 `format`；Source→標題下 subtitle、正文雙語滾動框、Key Vocab 緊接正文後 — 規範見 [`lessons/_conventions.md`](lessons/_conventions.md)
