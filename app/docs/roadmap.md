@@ -45,7 +45,17 @@ _（目前沒有正在做的）_
 
 ---
 
-### P2 — 播放音訊時 highlight 當前段落／單字 🎧🔦　**Effort: S**
+### P2 — 播放音訊時 highlight 當前段落／單字 🎧🔦　**Effort: S → 其實大半已完成**
+
+> **🔎 2026-06-14 現狀更新（P7 探索時發現，下個 session 從這裡接手）**
+> **卡拉 OK 引擎與 CSS 其實已隨 P1 上線，不用從頭做。** 段落級 `.speaking` 底色（[Layout.astro](../src/layouts/Layout.astro) `blockquote > p.speakable.speaking`）＋ 逐字 `.is-current-word` 蔓延（[speech.ts](../src/scripts/speech.ts) `startWordHighlight` fetch sidecar → binary-search onset → RAF tick，resume 也接好了）都已運作。
+> **真正剩下的是「資料覆蓋率」**：915 個 mp3 但只有 **11 個 `.words.json`，且全屬同一篇** `2026-06-01-learning-styles-connected-speech`。要讓其他 lesson 也有逐字 highlight，就對想練的 lesson 跑：
+> ```
+> cd app && node scripts/generate-audio.mjs --words=<lesson 檔名片段>
+> ```
+> （需網路／Edge TTS；只新增 `.words.json`，不覆寫既有 mp3，generated 應為 0）。對齊失敗會優雅降級成整段 highlight（不會誤亮）。
+> **次要待辦（程式面）**：原「期望行為」裡的 **vocab table cell（`<td>`）同步 highlight 尚未做**——目前逐字只在段落 `<blockquote><p>`。要不要補、值不值得，下個 session 評估。
+> ⚠️ 排序提醒：P2 視覺（`.is-current-word` 配色）之後 **P6 會一起納入 UI 研究定調**；且 **P5 之後**重生 dialogue mp3 時，那些 lesson 的 `.words.json` 要連帶重生（見本輪順序說明）。
 
 - **動機**：長段落 audio 播到一半，讀者不知道對應到逐字稿哪一句。跟讀（shadowing）時尤其卡。
 - **期望行為**：
