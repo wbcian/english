@@ -18,6 +18,14 @@ _（目前沒有正在做的）_
 
 #### 總覽（建議處理順序）
 
+> **🎯 本輪選定施作順序（2026-06-14 定）：P7 → P2 → P6 → P5**
+> 經 2 個獨立 agent（依賴／重工 vs 價值／節奏視角）交叉討論後定案。要點：
+> - ~~**P7 先**~~ → ✅ **2026-06-14 完成**（語速切換鈕，見 Done）
+> - **P2 次**（卡拉 OK 引擎與 CSS 其實已就緒，只缺 `.words.json` 覆蓋率→跑腳本即可，最高跟讀價值）
+> - **P6**（研究先行不阻塞，排在 P2 highlight 視覺定案後，把配色一起納入 UI 研究）
+> - **P5 壓軸**（成本最高／價值最低；⚠️ 重生 dialogue mp3 時**務必連同 `.words.json` 一起刪除重生**，否則卡拉 OK timing 會靜默對不上）
+> - 未納入本輪：P2.5、P3、P4（仍在 backlog）
+
 | 順序 | Item | Effort | Depends on | 一句話 |
 |---|---|---|---|---|
 | 1 | [P2 — 播放時 highlight 當前段落（含卡拉 OK 升級）](#p2--播放音訊時-highlight-當前段落單字----effort-s) | S | P1 ✅ | shadowing 跟讀時知道讀到哪；可升級為逐字蔓延 |
@@ -26,11 +34,11 @@ _（目前沒有正在做的）_
 | 4 | [P4 — Flashcard SRS lite](#p4--flash-card-複習模式srs-lite---effort-l) | L | P3 | active recall；填齊 vocab → 複習迴圈 |
 | 5 | [P5 — 依講者切換 TTS 聲音](#p5--依講者切換-tts-聲音--effort-m) | M | — | dialogue lesson 不同角色用不同聲音，聽感更真實 |
 | 6 | [P6 — UI 改版研究：整體閱讀體驗](#p6--ui-改版研究整體閱讀體驗--effort-m) | M | — | 先研究再動手：typography／版面／密度怎麼調更好讀 |
-| 7 | [P7 — 播放語速調整（實驗）](#p7--播放語速調整實驗--effort-xs) | XS | — | 目前 0.95x 偏慢；試試接近自然語速／1x，實測後定 |
 
 **排序理由**：
 - ~~**P1 先做**~~ ✅ 2026-06-10 完成（見 Done）
 - ~~**P1.5 緊跟（或並行）**~~ ✅ 2026-06-10 完成（見 Done）
+- ~~**P7（本輪暖身速贏）**~~ ✅ 2026-06-14 完成（見 Done）
 - **P2 → P2.5**：都靠 P1，先把 S 的吃掉、再啃 M 的 popup（popup 是閱讀體驗最大躍升，但成本也最高）
 - **P3 → P4 放最後**：vocab 子系統獨立於 lesson 閱讀流；先把 lesson 閱讀體驗閉環，再開 flashcard 戰場
 - **不建議**：跳過 P1 直接做 P2／P2.5（trigger 不明確 → click 行為混亂 → 還是要回頭重構）
@@ -160,20 +168,6 @@ _（目前沒有正在做的）_
   - 與 P2（卡拉 OK highlight）有視覺語言交集——若 P2 先做，highlight 樣式要納入此次研究的範圍一起定調
   - 「更好閱讀」偏主觀，提案要附截圖比較讓 Cian 能具體選，避免空談原則
 
-### P7 — 播放語速調整（實驗） 🐢⚡　**Effort: XS**
-
-- **動機**：[2026-06-11 Cian 回饋] 目前跟讀播放語速偏慢，覺得**接近自然語速或 1x 就好**；但確切值想實測幾種速度後再決定，先記下來不馬上做。
-- **期望行為**：
-  - 把播放速度調到更接近自然語速（候選：1.0x，或介於 0.95–1.1x 之間）
-  - 進階（非必要）：lesson 頁加一個語速切換 UI（如 0.75x / 1.0x / 1.25x 小按鈕），讓使用者自選；state 存 localStorage
-- **實作切點**：
-  - Web Speech path：`app/src/scripts/speech.ts` 的 `speakViaWebSpeech` 內 `u.rate = 0.95`（目前值）
-  - 預生成 MP3 path：`new Audio()` 的 `playbackRate`（目前未設，等於 1.0）——若要全域一致，兩條路徑都要對齊
-  - ⚠️ 兩條路徑語速來源不同：Web Speech 用 utterance.rate，MP3 用 audio.playbackRate；改的時候別只改一邊
-- **依賴 / 風險**：
-  - 卡拉 OK highlight（P2）若已上線，改 MP3 `playbackRate` 不影響 `*.words.json` 的相對 timing（`currentTime` 會自動隨速度推進），但要實測確認 highlight 不跑掉
-  - 純調數值零風險；加 UI 切換才需估額外 effort
-
 ---
 
 ## 💡 Ideas（還沒排優先序）
@@ -183,6 +177,13 @@ _（隨時補）_
 ---
 
 ## ✅ Done
+
+### P7 — 播放語速切換 UI（實驗）🐢⚡　**完成：2026-06-14**
+
+- **落地行為**：header nav 右側注入語速切換鈕（0.8× / 1× / 1.1× / 1.25×，4 顆全保留），選擇即時生效並存 localStorage（`englishApp:playbackRate`，預設 1.0×）；MP3 路徑套 `audio.playbackRate`（含播放中即時變速）、Web Speech 套 `u.rate`（取代舊死值 0.95，下一次播放生效）。卡拉 OK sidecar **維持單一份**——onset 與 `audio.currentTime` 同屬媒體時間軸，`playbackRate` 只改 wall-clock，兩者一起縮放，任何速度都對得上。
+- **實作**：`app/src/scripts/speech.ts`（rate 單一狀態 + `setPlaybackRate` + `wireSpeedControl` 注入）＋ `app/src/layouts/Layout.astro`（`.speed-control`/`.speed-btn` CSS，沿用 amber 視覺語言）。sidecar / manifest / 產音腳本未動。
+- **驗證**：preview 實測（4 鈕渲染桌面/手機 375px/暗色、rate→MP3 plumbing、選值持久化 reload 還原）＋ 真實 sidecar 數值驗證卡拉 OK 速度無關（各位置 onset ≤ currentTime < 次字 onset、逐字遞增）＋ `astro build` 154 頁綠燈 ＋ /simplify（去死 fallback CSS、去 `as const` 雙轉型、`{btn,rate}` pair 免 round-trip）＋ 對抗式正確性 review。
+- **備註**：自動化 preview 的 Chrome 擋 `play()`（gesture 在 `await` 後失效＋背景分頁省電），故未在 preview 內實際出聲；真人點擊不受影響（播放本就在用）。最終值維持預設 1.0×（Cian 實聽 OK、4 速度鈕全保留）。
 
 ### P1.5 — Lesson list 改顯示中英雙語標題（取代 slug 檔名）📑　**完成：2026-06-10**
 
