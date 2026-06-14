@@ -22,8 +22,21 @@ const synth = window.speechSynthesis;
 let currentEl: HTMLElement | null = null;
 let currentAudio: HTMLAudioElement | null = null;
 // Word-by-word (karaoke) highlight state — only used on the MP3 path.
+// Progressive read-trail: spoken words stay lit (.is-played-word), the current
+// word gets the strongest tier (.is-current-word), unspoken words stay plain.
 let currentRaf: number | null = null;
-let currentWordSpan: HTMLElement | null = null;
+// The full ordered .w span list of the clip currently highlighting (DOM order).
+// Lets stopWordHighlight clear the WHOLE trail and lets the tick paint played
+// spans by DOM-index range (so untimed punctuation spans fill in too).
+let trailSpans: HTMLElement[] = [];
+// DOM index (into trailSpans) of the word currently lit as .is-current-word.
+// -1 = nothing lit yet (fresh start / after teardown / after resume re-init).
+let litIndex = -1;
+// Bumped on every startWordHighlight call. A pending sidecar fetch or a running
+// tick captures its generation and bails once superseded — so a resume (which
+// re-runs startWordHighlight) or rapid replay can't leave a second tick loop
+// running against the shared trail state when an earlier fetch resolves late.
+let highlightGen = 0;
 // Audios we deliberately tore down (clearCurrent sets src='' which fires a
 // spurious 'error'); used to suppress the Web Speech fallback for those.
 const teardownAudios = new WeakSet<HTMLAudioElement>();
@@ -279,8 +292,8 @@ function wireSpeedControl(): void {
 
 // ---- audio file playback path (preferred) ----
 
-// Cancel the karaoke RAF loop WITHOUT touching currentWordSpan — pause freezes
-// the highlight at the current word; stopWordHighlight clears it too.
+// Cancel the karaoke RAF loop WITHOUT touching the trail classes — pause freezes
+// the read-trail where it is; stopWordHighlight clears the whole trail too.
 function cancelKaraokeTick(): void {
   if (currentRaf !== null) {
     cancelAnimationFrame(currentRaf);
@@ -288,12 +301,23 @@ function cancelKaraokeTick(): void {
   }
 }
 
+// Set a word span to one tier of the read-trail (or null = plain). Idempotent —
+// classList.toggle with an explicit force flag is a no-op when already in the
+// target state, so re-setting the same tier never restarts the CSS transition
+// (this is what keeps the resume repaint flicker-free).
+function setWordTier(span: HTMLElement, tier: 'current' | 'played' | null): void {
+  span.classList.toggle('is-current-word', tier === 'current');
+  span.classList.toggle('is-played-word', tier === 'played');
+}
+
 function stopWordHighlight(): void {
   cancelKaraokeTick();
-  if (currentWordSpan) {
-    currentWordSpan.classList.remove('is-current-word');
-    currentWordSpan = null;
-  }
+  // Clear the entire trail, not just the current word. Cheap: ≤~130 spans, and
+  // only on stop/teardown (not per-frame). Empty trailSpans → no-op, so a
+  // paragraph that never had a sidecar is untouched.
+  for (const span of trailSpans) setWordTier(span, null);
+  trailSpans = [];
+  litIndex = -1;
 }
 
 function clearCurrent(): void {
@@ -365,31 +389,41 @@ interface WordSidecar {
 }
 
 function startWordHighlight(audio: HTMLAudioElement, el: HTMLElement, hash: string): void {
+  // Capture this invocation's generation; a later startWordHighlight (resume,
+  // replay, paragraph switch) bumps it so this fetch/tick supersedes itself.
+  const gen = ++highlightGen;
   const url = `${import.meta.env.BASE_URL}audio/${hash}.words.json`;
   fetch(url)
     .then(r => (r.ok ? (r.json() as Promise<WordSidecar>) : null))
     .then(sc => {
-      // Bail if missing/superseded/stopped while fetching.
-      if (!sc || currentAudio !== audio) return;
+      // Bail if missing/superseded (newer call / stopped while fetching).
+      if (!sc || gen !== highlightGen || currentAudio !== audio) return;
       const spans = Array.from(el.querySelectorAll<HTMLElement>('.w'));
       // Guard against a tokenizer/sidecar version mismatch — degrade rather than
       // mis-highlight if the span count doesn't match what the sidecar expects.
       if (spans.length !== sc.n) return;
 
-      // Only the words that actually got a timing, in ascending start order.
-      // (Punctuation-only spans carry null and never light up; skipping them
-      // keeps the onset array monotonic for binary search.)
-      const timed: { start: number; span: HTMLElement }[] = [];
+      // Timed words only, in ascending start order, each carrying its DOM index
+      // k among `spans`. Punctuation-only spans carry null timing and stay out
+      // of `timed` (keeps onsets monotonic for binary search) — but they still
+      // get painted "played" by DOM-index range below, for a contiguous trail.
+      const timed: { start: number; k: number }[] = [];
       sc.t.forEach((p, k) => {
-        if (p) timed.push({ start: p[0], span: spans[k] });
+        if (p) timed.push({ start: p[0], k });
       });
       if (timed.length === 0) return;
       const onsets = timed.map(x => x.start);
 
+      // Adopt this clip's spans as the active trail and reset the lit cursor.
+      // litIndex=-1 forces the first tick (incl. after a resume) to paint the
+      // whole [0..k) prefix as played and k as current.
+      trailSpans = spans;
+      litIndex = -1;
+
       const tick = () => {
-        if (currentAudio !== audio) return; // stopped/superseded → self-cancel
+        if (gen !== highlightGen || currentAudio !== audio) return; // superseded/stopped → self-cancel
         const now = audio.currentTime;
-        // Last index whose onset <= now (O(log n) binary search).
+        // Last timed index whose onset <= now (O(log n) binary search).
         let lo = 0;
         let hi = onsets.length - 1;
         let idx = -1;
@@ -402,11 +436,25 @@ function startWordHighlight(audio: HTMLAudioElement, el: HTMLElement, hash: stri
             hi = mid - 1;
           }
         }
-        const span = idx >= 0 ? timed[idx].span : null;
-        if (span !== currentWordSpan) {
-          currentWordSpan?.classList.remove('is-current-word');
-          span?.classList.add('is-current-word');
-          currentWordSpan = span;
+        // Target DOM index of the current word (-1 before the first onset).
+        const k = idx >= 0 ? timed[idx].k : -1;
+
+        if (k !== litIndex) {
+          // Demote the previously-current word (if any) to played.
+          if (litIndex >= 0) setWordTier(trailSpans[litIndex], 'played');
+          if (k >= 0) {
+            // Paint every span between the old lit index and k as played: this
+            // covers forward skips (>1 word/frame) AND untimed punctuation spans
+            // interleaved with words, giving a contiguous trail. setWordTier is
+            // idempotent → already-played spans don't restart the CSS transition
+            // (so a resume repaint doesn't flicker).
+            for (let i = litIndex >= 0 ? litIndex + 1 : 0; i < k; i++) {
+              setWordTier(trailSpans[i], 'played');
+            }
+            // Promote the new current word (strongest tier).
+            setWordTier(trailSpans[k], 'current');
+          }
+          litIndex = k;
         }
         currentRaf = requestAnimationFrame(tick);
       };

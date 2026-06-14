@@ -260,11 +260,23 @@ const { title } = Astro.props;
     right: calc(var(--speak-btn-w) + 0.15em);
   }
   /* Word-by-word (karaoke) highlight. .w spans are invisible until lit, so
-     paragraphs without a timing sidecar look exactly like before. */
+     paragraphs without a timing sidecar look exactly like before. Three tiers:
+     unplayed = plain · played = subtle amber wash (read-trail) · current = solid
+     amber. The transition lets the trail spread smoothly word by word. */
   blockquote > p .w {
     border-radius: 3px;
     transition: background-color 0.12s, color 0.12s;
   }
+  /* Played ("已讀") — low-key amber wash so the already-read trail is clearly
+     distinct from unplayed text without competing with the solid current word.
+     Provisional palette; final colors land with the P6 UI study. color-mix over
+     `transparent` composites over whatever sits below (incl. the paragraph-level
+     .speaking wash) and tracks both light/dark via --speak-accent. */
+  blockquote > p.speaking .w.is-played-word {
+    background-color: color-mix(in srgb, var(--speak-accent) 22%, transparent);
+  }
+  /* Current word — strongest tier; listed last so it wins (equal specificity)
+     even if a span momentarily carries both classes. */
   blockquote > p.speaking .w.is-current-word {
     background-color: var(--speak-accent);
     color: #1a1a1a; /* readable on amber in both light and dark themes */
