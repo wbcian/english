@@ -1,7 +1,8 @@
 # Spec — 播放音檔時「逐字 highlight」
 
-> 狀態：**Design / 待實作**　·　範圍：合成 TTS 音檔為主　·　最後更新：2026-06-03
+> 狀態：**Phase 0–1 已實作（2026-06-14，P2）**　·　範圍：合成 TTS 音檔為主　·　最後更新：2026-06-14
 > 本 spec 由一輪多代理 survey + 對抗驗證產出（驗證軌跡見 §12）。配套解說頁：[explainer.html](explainer.html)。
+> **實作更新（2026-06-14）**：runtime 已不只亮單一 `.is-current-word`，而是**進度 trail**——`speech.ts` 以 `trailSpans` + `litIndex` 依 DOM-index range 把已念字標 `.is-played-word`、當前字標 `.is-current-word`（三段式，配色暫定留 P6）。Phase 0（span 層）+ Phase 1（Edge sidecar、`2026-06-01-learning-styles-connected-speech` 全覆蓋）已上線；其餘 lesson 的 `.words.json` 覆蓋率為後續資料工作。
 
 ---
 
@@ -75,8 +76,9 @@
                                          │  被消費
                                          ▼
   RUNTIME（speech.ts）：manifest 命中、播 MP3 後 → fetch sidecar；
-                        rAF 迴圈讀 audio.currentTime → 對 word <span>
-                        toggle .is-current-word。沒 sidecar → 維持今天的整段 .speaking。
+                        rAF 迴圈讀 audio.currentTime → 二分查 onset →
+                        依 DOM-index range 把已念字標 .is-played-word、當前字
+                        標 .is-current-word（進度 trail）。沒 sidecar → 維持整段 .speaking。
 ```
 
 **為什麼 sidecar 是對的介面**

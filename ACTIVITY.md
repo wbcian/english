@@ -5,6 +5,12 @@
 
 ---
 
+## 2026-06-14
+- 🛠️ **App P2：卡拉 OK「已讀蔓延」逐字 highlight**（roadmap P2 → Done）。MP3 播放時逐字 highlight 從「只亮當前一個字」升級為**三段式進度 trail**：已念字低調 amber 底（`.is-played-word`）/ 當前字實心 amber（`.is-current-word`）/ 未念純底，邊界隨 `audio.currentTime` 逐字向前蔓延（落實 06-10 回饋）；pause 凍結、resume 從凍結處續進、ended/Esc/replay/換段全清、無 sidecar 降級整段。實作：`app/src/scripts/speech.ts`（`trailSpans`+`litIndex` 依 DOM-range delta 上色、`setWordTier` helper、`highlightGen` token 修掉 resume 疊 RAF tick）＋ `app/src/layouts/Layout.astro`（`.is-played-word` 低調 wash，`color-mix(... 22%, transparent)`）。sidecar/manifest/產音腳本未動、零 hash drift；配色暫定留 P6。經 /simplify + 對抗式正確性 review（修 1 條 stacked-tick）+ live preview 真播實測（trail 不變式全綠）+ `astro build` 154 頁綠燈。範例篇＝`2026-06-01-learning-styles-connected-speech`（唯一全 sidecar 覆蓋）。下一棒 P6。
+- 🛠️ **App P7：播放語速切換 UI**（roadmap P7 → Done）。header nav 注入 0.8×/1×/1.1×/1.25× 切換鈕，即時生效＋存 localStorage（`englishApp:playbackRate`，預設 1.0×）；MP3 套 `audio.playbackRate`、Web Speech 套 `u.rate`；卡拉 OK sidecar 維持單一份不受速度影響。
+
+---
+
 ## 2026-06-11
 
 📚 Japan Hotel Check-in Part 2 延伸 Q&A：10 新字 deposit / scam / lodging / rapid-fire / nail it / rinse off / just so you know / steam room / sauna / lotion；文法解析 "just so you know" 中 so 的目的子句用法＋"place" 作為交易動詞；文化：刺青禁令由來、浴巾使用禮儀、飯店不提供備品趨勢；amenities 複習。整段 Q&A 已 backfill 進 lesson（9 子段）。app: 播放按鈕移至右側、上下置中、font-size 0.72→0.85em，--speak-btn-w CSS 變數化；roadmap 收 P7（播放語速調整，實驗，不馬上做）

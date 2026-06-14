@@ -11,8 +11,8 @@
 ## 快照（隨更新同步）
 - 已收錄單字：136
 - 5★ 精熟：0　 3–4★ 學習中：8　 1–2★ 新／脆弱：128
-- 最近活動日期：2026-06-14（🛠️ App roadmap **P7 播放語速切換 UI 上線**：header nav 注入 0.8×/1×/1.1×/1.25× 切換鈕，即時生效＋存 localStorage（`englishApp:playbackRate`），MP3 `playbackRate` 與 Web Speech `u.rate` 共用單一 rate（取代舊死值 0.95），卡拉 OK sidecar 維持單一份不受速度影響；預設 1.0×、4 鈕全保留。經 /simplify + 對抗式正確性 review + `astro build` 綠燈。**本輪 app 優化順序定為 P7→P2→P6→P5**，P7 已完成，下一棒 P2）
-- 上一活動日期：2026-06-11（📚 Japan Hotel Check-in Part 2 延伸 Q&A：10 新字 deposit / scam / lodging / rapid-fire / nail it / rinse off / just so you know / steam room / sauna / lotion；amenities 複習；Q&A backfill 進 lesson 9；app 播放按鈕移右側＋置中＋放大、roadmap +P7）
+- 最近活動日期：2026-06-14（🛠️ App roadmap **P2 卡拉 OK「已讀蔓延」逐字 highlight 上線**：MP3 路徑播放時，逐字 highlight 從「只亮當前字」升級為三段式進度 trail——已念字低調 amber 底（`.is-played-word`）/ 當前字實心 amber（`.is-current-word`）/ 未念純底，邊界隨 `currentTime` 逐字蔓延（落實 06-10 回饋）；pause 凍結、resume 續進、ended/Esc/replay 全清、無 sidecar 降級整段。`speech.ts` 改 `trailSpans`+`litIndex` 依 DOM-range delta 上色、新增 `setWordTier` 與 `highlightGen`（修 resume 疊 tick），`Layout.astro` 加 `.is-played-word` wash；sidecar/manifest/產音腳本未動、零 hash drift。經 /simplify + 對抗式正確性 review（修 1 條 stacked-tick）+ live preview 真播實測 + `astro build` 154 頁綠燈。**配色暫定留 P6**。**本輪順序 P7→P2→P6→P5，P2 已完成，下一棒 P6**）
+- 上一活動日期：2026-06-14（🛠️ App roadmap **P7 播放語速切換 UI 上線**：header nav 注入 0.8×/1×/1.1×/1.25× 切換鈕，即時生效＋存 localStorage（`englishApp:playbackRate`），MP3 `playbackRate` 與 Web Speech `u.rate` 共用單一 rate；預設 1.0×、4 鈕全保留。經 /simplify + 對抗式正確性 review + `astro build` 綠燈）
 - 主目標：**TOEIC 750+ 證書**（詳見 [PROFILE.md](PROFILE.md#目標)）
 - **Lesson 格式（2026-05-29 換軸）**：`track`(reading/dialogue/talk) + `audio` 取代舊 `format`；Source→標題下 subtitle、正文雙語滾動框、Key Vocab 緊接正文後 — 規範見 [`lessons/_conventions.md`](lessons/_conventions.md)
 - 最近 lesson：**[Anne With An E — 直言不諱、對質 Billy](lessons/2026-06-09-anne-with-an-e-speak-your-mind.md)**（dialogue · B2 · 影片英文教學 Ksenia 用 Netflix 影集派對場景教 7 字）— 主題「為人挺身而出／吵架理直氣壯」＋現代高價值字 consent；7 新字 speak one's mind / gossip / rumor / nasty / devastated / ill-bred / consent；Sentence Anatomy 對準弱點 `shouldn't have + p.p.`（批評過去）與 `How dare you + V`；Cultural Notes 講 double standard 與 register（聽得懂 vs 會用）

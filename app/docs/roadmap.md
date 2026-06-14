@@ -21,14 +21,14 @@ _（目前沒有正在做的）_
 > **🎯 本輪選定施作順序（2026-06-14 定）：P7 → P2 → P6 → P5**
 > 經 2 個獨立 agent（依賴／重工 vs 價值／節奏視角）交叉討論後定案。要點：
 > - ~~**P7 先**~~ → ✅ **2026-06-14 完成**（語速切換鈕，見 Done）
-> - **P2 次**（卡拉 OK 引擎與 CSS 其實已就緒，只缺 `.words.json` 覆蓋率→跑腳本即可，最高跟讀價值）
+> - ~~**P2 次**~~ → ✅ **2026-06-14 完成**（卡拉 OK 已讀蔓延 trail，配色暫定留 P6，見 Done）
 > - **P6**（研究先行不阻塞，排在 P2 highlight 視覺定案後，把配色一起納入 UI 研究）
 > - **P5 壓軸**（成本最高／價值最低；⚠️ 重生 dialogue mp3 時**務必連同 `.words.json` 一起刪除重生**，否則卡拉 OK timing 會靜默對不上）
 > - 未納入本輪：P2.5、P3、P4（仍在 backlog）
 
 | 順序 | Item | Effort | Depends on | 一句話 |
 |---|---|---|---|---|
-| 1 | [P2 — 播放時 highlight 當前段落（含卡拉 OK 升級）](#p2--播放音訊時-highlight-當前段落單字----effort-s) | S | P1 ✅ | shadowing 跟讀時知道讀到哪；可升級為逐字蔓延 |
+| ~~1~~ ✅ | ~~P2 — 播放時 highlight（含卡拉 OK 升級）~~ | S | P1 ✅ | **2026-06-14 完成**：已讀蔓延 trail（見 Done） |
 | 2 | [P2.5 — Transcript inline vocab popup](#p25--transcript-段落-inline-vocab-popup---effort-m) | M | P1 ✅ | 閱讀流不中斷地查單字（最大閱讀體驗升級） |
 | 3 | [P3 — Vocab filter（熟悉度 / 類別）](#p3--vocab-卡片支援-filter熟悉度--類別---effort-m) | M | — | 快速鎖定要複習的 vocab subset |
 | 4 | [P4 — Flashcard SRS lite](#p4--flash-card-複習模式srs-lite---effort-l) | L | P3 | active recall；填齊 vocab → 複習迴圈 |
@@ -39,39 +39,12 @@ _（目前沒有正在做的）_
 - ~~**P1 先做**~~ ✅ 2026-06-10 完成（見 Done）
 - ~~**P1.5 緊跟（或並行）**~~ ✅ 2026-06-10 完成（見 Done）
 - ~~**P7（本輪暖身速贏）**~~ ✅ 2026-06-14 完成（見 Done）
-- **P2 → P2.5**：都靠 P1，先把 S 的吃掉、再啃 M 的 popup（popup 是閱讀體驗最大躍升，但成本也最高）
+- ~~**P2（卡拉 OK 已讀蔓延）**~~ ✅ 2026-06-14 完成（見 Done）；下一棒 **P6**
+- **P2.5**：靠 P1，M 的 popup（閱讀體驗最大躍升，但成本也最高）
 - **P3 → P4 放最後**：vocab 子系統獨立於 lesson 閱讀流；先把 lesson 閱讀體驗閉環，再開 flashcard 戰場
 - **不建議**：跳過 P1 直接做 P2／P2.5（trigger 不明確 → click 行為混亂 → 還是要回頭重構）
 
 ---
-
-### P2 — 播放音訊時 highlight 當前段落／單字 🎧🔦　**Effort: S → 其實大半已完成**
-
-> **🔎 2026-06-14 現狀更新（P7 探索時發現，下個 session 從這裡接手）**
-> **卡拉 OK 引擎與 CSS 其實已隨 P1 上線，不用從頭做。** 段落級 `.speaking` 底色（[Layout.astro](../src/layouts/Layout.astro) `blockquote > p.speakable.speaking`）＋ 逐字 `.is-current-word` 蔓延（[speech.ts](../src/scripts/speech.ts) `startWordHighlight` fetch sidecar → binary-search onset → RAF tick，resume 也接好了）都已運作。
-> **真正剩下的是「資料覆蓋率」**：915 個 mp3 但只有 **11 個 `.words.json`，且全屬同一篇** `2026-06-01-learning-styles-connected-speech`。要讓其他 lesson 也有逐字 highlight，就對想練的 lesson 跑：
-> ```
-> cd app && node scripts/generate-audio.mjs --words=<lesson 檔名片段>
-> ```
-> （需網路／Edge TTS；只新增 `.words.json`，不覆寫既有 mp3，generated 應為 0）。對齊失敗會優雅降級成整段 highlight（不會誤亮）。
-> **次要待辦（程式面）**：原「期望行為」裡的 **vocab table cell（`<td>`）同步 highlight 尚未做**——目前逐字只在段落 `<blockquote><p>`。要不要補、值不值得，下個 session 評估。
-> ⚠️ 排序提醒：P2 視覺（`.is-current-word` 配色）之後 **P6 會一起納入 UI 研究定調**；且 **P5 之後**重生 dialogue mp3 時，那些 lesson 的 `.words.json` 要連帶重生（見本輪順序說明）。
-
-- **動機**：長段落 audio 播到一半，讀者不知道對應到逐字稿哪一句。跟讀（shadowing）時尤其卡。
-- **期望行為**：
-  - 播 `<blockquote><p>` 整段時，該 `<p>` 加 active 樣式（背景色或左 border 強調），播完／暫停／切換段落自動清掉
-  - 播 vocab table 內某 cell 時，該 `<tr>` 或 `<td>` 同步 highlight
-  - 視覺要明顯但別搶戲（建議：左側 4px accent border + 淡淡背景）
-  - **[2026-06-10 Cian 回饋]** 目標升級為**漸進式已讀蔓延 highlight**（卡拉 OK 式）：已播放的部分與未播放部分有明確視覺區分，highlight 隨播放逐字慢慢向前蔓延，而非整段一次亮起
-- **實作切點**：
-  - 找音訊播放的入口（推測在 `app/src/scripts/` 或元件級 inline script）
-  - 綁 `audio` 元素的 `play` / `pause` / `ended` 事件 → 在對應 DOM node 上 toggle `.is-playing` class
-  - CSS 在全域樣式表加 `.is-playing` 規則
-- **依賴 / 風險**：
-  - **強烈建議 P1 先做**：P1 引入明確的 trigger icon，這裡 highlight 哪段才有明確錨點
-  - 需確認目前 audio ↔ DOM node 的關聯方式（hash-based manifest？data-attribute？）
-  - 同頁多段同時播的競態 — 一次只 highlight 一個
-  - **卡拉 OK 式漸進 highlight**：Web Speech API 的 `boundary` event 可拿到 word-level timing，但瀏覽器支援度（尤其 Safari / Firefox）需查證；預生成 MP3 路徑則需依賴 `*.words.json` sidecar（已有產生流程）再配合 `currentTime` 進度計算
 
 ### P2.5 — Transcript 段落 inline vocab popup 📖💬　**Effort: M**
 
@@ -187,6 +160,13 @@ _（隨時補）_
 ---
 
 ## ✅ Done
+
+### P2 — 播放音訊時逐字 highlight（卡拉 OK 已讀蔓延）🎧🔦　**完成：2026-06-14**
+
+- **落地行為**：MP3 路徑播放時，逐字 highlight 從「只亮當前一個字」升級為**三段式已讀蔓延 trail**——已念過的字保持低調 amber 底（`.is-played-word`）、當前字實心 amber（`.is-current-word`）、未念的字純底，邊界隨 `audio.currentTime` 逐字向前蔓延（落實 2026-06-10 Cian 回饋）。pause 凍結整條 trail、resume 從凍結處續進、ended／Esc／replay／換段全清。無 sidecar 的 clip 優雅降級成整段 `.speaking`（不誤亮）。
+- **實作**：`app/src/scripts/speech.ts`——以 `trailSpans`（clip 的 `.w` DOM 陣列）+ `litIndex`（current 字 DOM index）取代舊單一 `currentWordSpan`；`tick` 改用 binary-search 求 index 後**依 DOM range delta 上色**（補前進跳格與未對齊標點 span，trail 連續）；新增 `setWordTier` helper（`classList.toggle` 冪等、不重觸 transition）；新增 `highlightGen` generation token，讓 resume／rapid replay 的舊 fetch／tick 被新呼叫取代後自我作廢（修掉「pending fetch 期間 resume 會疊出第二條 RAF tick」的孤兒迴圈，對抗式 review 抓到、屬 P1 早先預留待辦）。`app/src/layouts/Layout.astro`——加 `.is-played-word` 低調 wash（`color-mix(in srgb, var(--speak-accent) 22%, transparent)`，沿 amber 視覺語言、跟亮/暗主題；current 規則列後者勝出）。**sidecar / manifest / 產音腳本未動**，DOM textContent 不變 → 零 hash drift。
+- **驗證**：`astro build` 154 頁綠燈（含 `inject-word-spans` hash 斷言 + `check-audio-hash-sync` parity）＋ live preview 真實點擊播放（此環境未擋 `play()`）實測：trail 多輪取樣「恰一個 current／已亮 span 為連續前綴／current 在邊界／進度單調」全綠；pause 凍結、resume 從暫停點 7→39→45 續進不重置、rapid pause/resume churn 後狀態仍有效、ended/Esc/replay 全清、無 sidecar lesson 降級無 console error；亮/暗/375px 三段式視覺截圖確認可辨且不搶戲。經 `/simplify`（抽 `setWordTier`）＋ 對抗式正確性 review（6 面向，修掉 1 條 stacked-tick）。
+- **備註**：三段式**配色暫定**，最終與播放鈕視覺一起在 **P6 UI 研究**定調（22% 暗色若嫌淡，調至 ~28% 即可）。**次要待辦未做**：vocab table cell（`<td>`）逐字同步 highlight（cell 多為單字／短語，逐字意義小，留待評估）。⚠️ **P5 之後**重生 dialogue mp3 時，對應 lesson 的 `.words.json` 要連帶刪除重生，否則卡拉 OK timing 會靜默對不上。
 
 ### P7 — 播放語速切換 UI（實驗）🐢⚡　**完成：2026-06-14**
 
