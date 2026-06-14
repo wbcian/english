@@ -21,7 +21,7 @@ _（目前沒有正在做的）_
 > **🎯 本輪選定施作順序（2026-06-14 定）：P7 → P2 → P6 → P5**
 > 經 2 個獨立 agent（依賴／重工 vs 價值／節奏視角）交叉討論後定案。要點：
 > - ~~**P7 先**~~ → ✅ **2026-06-14 完成**（語速切換鈕，見 Done）
-> - ~~**P2 次**~~ → ✅ **2026-06-14 完成**（卡拉 OK 已讀蔓延 trail，配色暫定留 P6，見 Done）
+> - ~~**P2 次**~~ → ✅ **2026-06-14 完成**（卡拉 OK 已讀蔓延 trail；視覺定案 2 階 font-color 無背景，見 Done）
 > - **P6**（研究先行不阻塞，排在 P2 highlight 視覺定案後，把配色一起納入 UI 研究）
 > - **P5 壓軸**（成本最高／價值最低；⚠️ 重生 dialogue mp3 時**務必連同 `.words.json` 一起刪除重生**，否則卡拉 OK timing 會靜默對不上）
 > - 未納入本輪：P2.5、P3、P4（仍在 backlog）
@@ -163,10 +163,11 @@ _（隨時補）_
 
 ### P2 — 播放音訊時逐字 highlight（卡拉 OK 已讀蔓延）🎧🔦　**完成：2026-06-14**
 
-- **落地行為**：MP3 路徑播放時，逐字 highlight 從「只亮當前一個字」升級為**三段式已讀蔓延 trail**——已念過的字保持低調 amber 底（`.is-played-word`）、當前字實心 amber（`.is-current-word`）、未念的字純底，邊界隨 `audio.currentTime` 逐字向前蔓延（落實 2026-06-10 Cian 回饋）。pause 凍結整條 trail、resume 從凍結處續進、ended／Esc／replay／換段全清。無 sidecar 的 clip 優雅降級成整段 `.speaking`（不誤亮）。
-- **實作**：`app/src/scripts/speech.ts`——以 `trailSpans`（clip 的 `.w` DOM 陣列）+ `litIndex`（current 字 DOM index）取代舊單一 `currentWordSpan`；`tick` 改用 binary-search 求 index 後**依 DOM range delta 上色**（補前進跳格與未對齊標點 span，trail 連續）；新增 `setWordTier` helper（`classList.toggle` 冪等、不重觸 transition）；新增 `highlightGen` generation token，讓 resume／rapid replay 的舊 fetch／tick 被新呼叫取代後自我作廢（修掉「pending fetch 期間 resume 會疊出第二條 RAF tick」的孤兒迴圈，對抗式 review 抓到、屬 P1 早先預留待辦）。`app/src/layouts/Layout.astro`——加 `.is-played-word` 低調 wash（`color-mix(in srgb, var(--speak-accent) 22%, transparent)`，沿 amber 視覺語言、跟亮/暗主題；current 規則列後者勝出）。**sidecar / manifest / 產音腳本未動**，DOM textContent 不變 → 零 hash drift。
-- **驗證**：`astro build` 154 頁綠燈（含 `inject-word-spans` hash 斷言 + `check-audio-hash-sync` parity）＋ live preview 真實點擊播放（此環境未擋 `play()`）實測：trail 多輪取樣「恰一個 current／已亮 span 為連續前綴／current 在邊界／進度單調」全綠；pause 凍結、resume 從暫停點 7→39→45 續進不重置、rapid pause/resume churn 後狀態仍有效、ended/Esc/replay 全清、無 sidecar lesson 降級無 console error；亮/暗/375px 三段式視覺截圖確認可辨且不搶戲。經 `/simplify`（抽 `setWordTier`）＋ 對抗式正確性 review（6 面向，修掉 1 條 stacked-tick）。
-- **備註**：三段式**配色暫定**，最終與播放鈕視覺一起在 **P6 UI 研究**定調（22% 暗色若嫌淡，調至 ~28% 即可）。**次要待辦未做**：vocab table cell（`<td>`）逐字同步 highlight（cell 多為單字／短語，逐字意義小，留待評估）。⚠️ **P5 之後**重生 dialogue mp3 時，對應 lesson 的 `.words.json` 要連帶刪除重生，否則卡拉 OK timing 會靜默對不上。
+- **落地行為**：MP3 路徑播放時，逐字 highlight 從「只亮當前一個字」升級為**已讀蔓延 trail**，邊界隨 `audio.currentTime` 逐字向前蔓延（落實 2026-06-10 Cian 回饋）。pause 凍結整條 trail、resume 從凍結處續進、ended／Esc／replay／換段全清。無 sidecar 的 clip 優雅降級（不誤亮）。
+  - **視覺定案（同日，2 designer 討論後）**：由初版「三段式＋背景色」改為 **2 階・純 font color・無背景**（Cian 回饋「3 階太雜、背景拿掉」）。已讀字＝ amber 文字（`--speak-read` 亮 `#9a5b06`／暗 `#fbbf24`）、未讀字＝一般 `--fg`；當前字併入已讀（用顏色邊界當播放位置，不再有單獨當前字高亮）。段落 `.speaking` 背景 wash 移除，改用**左側 amber 邊條**：可朗讀段落預設 dim（40%）、播放中變亮變粗（4px 實心 `--speak-accent`）——同時是無 sidecar 段落唯一的「正在播」提示。
+- **實作**：`app/src/scripts/speech.ts`——以 `trailSpans`（clip 的 `.w` DOM 陣列）+ `litIndex`（current 字 DOM index）取代舊單一 `currentWordSpan`；`tick` 改用 binary-search 求 index 後**依 DOM range delta 上色**（補前進跳格與未對齊標點 span，trail 連續）；新增 `setWordTier` helper（`classList.toggle` 冪等、不重觸 transition）；新增 `highlightGen` generation token，讓 resume／rapid replay 的舊 fetch／tick 被新呼叫取代後自我作廢（修掉「pending fetch 期間 resume 會疊出第二條 RAF tick」的孤兒迴圈，對抗式 review 抓到、屬 P1 早先預留待辦）。`app/src/layouts/Layout.astro`——2 階 font-color：`.is-played-word`／`.is-current-word` 同列 → `color: var(--speak-read)`（新增 `--speak-read` 變數）；`.w` 只 transition `color`；段落 `.speakable` 邊條改 dim 預設 + `.speaking` 變 4px 實心。speech.ts 的 `setWordTier` 仍區分 current/played，但兩 class 渲染同色 → 3 階折成 2 階零 runtime 改動。**sidecar / manifest / 產音腳本未動**，DOM textContent 不變 → 零 hash drift。
+- **驗證**：`astro build` 154 頁綠燈（含 `inject-word-spans` hash 斷言 + `check-audio-hash-sync` parity）＋ live preview 真實點擊播放（此環境未擋 `play()`）實測：trail 多輪取樣「恰一個 current／已亮 span 為連續前綴／current 在邊界／進度單調」全綠；pause 凍結、resume 從暫停點 7→39→45 續進不重置、rapid pause/resume churn 後狀態仍有效、ended/Esc/replay 全清、無 sidecar lesson 降級無 console error；視覺截圖確認可辨且不搶戲。經 `/simplify`（抽 `setWordTier`）＋ 對抗式正確性 review（6 面向，修掉 1 條 stacked-tick）。2 階配色改版另以亮/暗截圖驗證（已讀 amber / 未讀一般、無背景、邊條 dim↔亮）。
+- **備註**：配色已定為 2 階 font-color（見上）；**P6 UI 研究**再評估是否微調 amber 深淺與播放鈕視覺。**次要待辦未做**：vocab table cell（`<td>`）逐字同步 highlight（cell 多為單字／短語，逐字意義小，留待評估）。⚠️ **P5 之後**重生 dialogue mp3 時，對應 lesson 的 `.words.json` 要連帶刪除重生，否則卡拉 OK timing 會靜默對不上。
 
 ### P7 — 播放語速切換 UI（實驗）🐢⚡　**完成：2026-06-14**
 

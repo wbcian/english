@@ -6,7 +6,8 @@
 ---
 
 ## 2026-06-14
-- 🛠️ **App P2：卡拉 OK「已讀蔓延」逐字 highlight**（roadmap P2 → Done）。MP3 播放時逐字 highlight 從「只亮當前一個字」升級為**三段式進度 trail**：已念字低調 amber 底（`.is-played-word`）/ 當前字實心 amber（`.is-current-word`）/ 未念純底，邊界隨 `audio.currentTime` 逐字向前蔓延（落實 06-10 回饋）；pause 凍結、resume 從凍結處續進、ended/Esc/replay/換段全清、無 sidecar 降級整段。實作：`app/src/scripts/speech.ts`（`trailSpans`+`litIndex` 依 DOM-range delta 上色、`setWordTier` helper、`highlightGen` token 修掉 resume 疊 RAF tick）＋ `app/src/layouts/Layout.astro`（`.is-played-word` 低調 wash，`color-mix(... 22%, transparent)`）。sidecar/manifest/產音腳本未動、零 hash drift；配色暫定留 P6。經 /simplify + 對抗式正確性 review（修 1 條 stacked-tick）+ live preview 真播實測（trail 不變式全綠）+ `astro build` 154 頁綠燈。範例篇＝`2026-06-01-learning-styles-connected-speech`（唯一全 sidecar 覆蓋）。下一棒 P6。
+- 🛠️ **App P2：卡拉 OK「已讀蔓延」逐字 highlight**（roadmap P2 → Done）。MP3 播放時逐字 highlight 從「只亮當前一個字」升級為**進度 trail**，邊界隨 `audio.currentTime` 逐字向前蔓延（落實 06-10 回饋）；pause 凍結、resume 從凍結處續進、ended/Esc/replay/換段全清、無 sidecar 降級。實作：`app/src/scripts/speech.ts`（`trailSpans`+`litIndex` 依 DOM-range delta 上色、`setWordTier` helper、`highlightGen` token 修掉 resume 疊 RAF tick）。sidecar/manifest/產音腳本未動、零 hash drift。經 /simplify + 對抗式正確性 review（修 1 條 stacked-tick）+ live preview 真播實測（trail 不變式全綠）+ `astro build` 154 頁綠燈。範例篇＝`2026-06-01-learning-styles-connected-speech`（唯一全 sidecar 覆蓋）。
+- 🎨 **App P2 視覺定案（同日，2 designer 討論）**：Cian 回饋「3 階太雜、整段背景拿掉、改用 font color」→ 由初版「三段式＋背景」改為 **2 階・純 font color・無背景**。已讀字＝amber 文字（新增 `--speak-read`：亮 `#9a5b06` AA 可讀／暗 `#fbbf24`）、未讀＝一般 `--fg`，當前字併入已讀（顏色邊界＝播放位置）。段落 `.speaking` 背景 wash 移除，改左側 amber 邊條：可朗讀預設 dim(40%)、播放中變亮變粗(4px 實心)——兼作無 sidecar 段落的「正在播」提示。`Layout.astro` 把 `.is-played-word`/`.is-current-word` 同列上色 → 零 runtime 改動。亮/暗截圖驗證。P6 再評估 amber 深淺。下一棒 P6。
 - 🛠️ **App P7：播放語速切換 UI**（roadmap P7 → Done）。header nav 注入 0.8×/1×/1.1×/1.25× 切換鈕，即時生效＋存 localStorage（`englishApp:playbackRate`，預設 1.0×）；MP3 套 `audio.playbackRate`、Web Speech 套 `u.rate`；卡拉 OK sidecar 維持單一份不受速度影響。
 
 ---
