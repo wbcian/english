@@ -34,6 +34,7 @@ const { title } = Astro.props;
     --accent: #b45309;
     --speak-accent: #f59e0b;
     --speak-highlight: #fff7d6;
+    --speak-read: #9a5b06; /* AA-readable deep amber for read-trail TEXT (≈4.9:1 on --bg) */
     --card-bg: #fff;
     --card-border: #e5e5e0;
   }
@@ -45,6 +46,7 @@ const { title } = Astro.props;
       --accent: #fbbf24;
       --speak-accent: #fbbf24;
       --speak-highlight: #3a3320;
+      --speak-read: #fbbf24; /* bright amber reads cleanly as text on the dark bg */
       --card-bg: #242421;
       --card-border: #3a3a35;
     }
@@ -188,20 +190,25 @@ const { title } = Astro.props;
   .lesson-body-scroll > :first-child { margin-top: 0; }
   .lesson-body-scroll > :last-child { margin-bottom: 0; }
 
-  /* Speakable paragraphs — left border shows playability; cursor is default
-     because only the injected button triggers playback (not the text body). */
+  /* Speakable paragraphs — a left rail in the gutter marks playability (dim) and
+     the active/playing paragraph (bright + 1px thicker). No background wash: the
+     active state lives entirely in the border, so it works for no-sidecar
+     paragraphs too (no word trail) and never reflows the text — the border grows
+     into the negative margin, not the text column. cursor is default because only
+     the injected button triggers playback (not the text body). */
   blockquote > p.speakable {
     cursor: default;
     margin-left: -1em;
     padding-left: 1em;
     padding-right: 1.4em;
-    border-left: 3px solid var(--speak-accent);
-    transition: background-color 0.25s;
+    border-left: 3px solid color-mix(in srgb, var(--speak-accent) 40%, transparent);
+    transition: border-color 0.2s, border-width 0.2s;
     position: relative;
   }
   /* Old hover 🔊 pseudo-element removed — the injected .speak-btn replaces it. */
   blockquote > p.speakable.speaking {
-    background-color: var(--speak-highlight);
+    border-left-width: 4px;
+    border-left-color: var(--speak-accent);
   }
 
   /* Play / pause / replay buttons absolutely positioned at the right edge of
@@ -259,27 +266,21 @@ const { title } = Astro.props;
   .speak-btn--replay {
     right: calc(var(--speak-btn-w) + 0.15em);
   }
-  /* Word-by-word (karaoke) highlight. .w spans are invisible until lit, so
-     paragraphs without a timing sidecar look exactly like before. Three tiers:
-     unplayed = plain · played = subtle amber wash (read-trail) · current = solid
-     amber. The transition lets the trail spread smoothly word by word. */
+  /* Word-by-word (karaoke) highlight — TWO tiers, font-color only, no background.
+     .w spans start at the normal body color, so paragraphs without a timing
+     sidecar look exactly like plain text. As audio plays, each read word flips to
+     the amber read-trail color and STAYS, forming a spreading trail whose leading
+     edge marks where the audio is now. There is no distinct "current word": the
+     boundary between amber (read) and default (unread) text is the position cue —
+     both runtime tiers (.is-played-word for the wake, .is-current-word for the
+     edge) render identically, collapsing 3 tiers → 2 with no runtime change.
+     Transition `color` so each word eases in and the edge advances smoothly. */
   blockquote > p .w {
-    border-radius: 3px;
-    transition: background-color 0.12s, color 0.12s;
+    transition: color 0.12s;
   }
-  /* Played ("已讀") — low-key amber wash so the already-read trail is clearly
-     distinct from unplayed text without competing with the solid current word.
-     Provisional palette; final colors land with the P6 UI study. color-mix over
-     `transparent` composites over whatever sits below (incl. the paragraph-level
-     .speaking wash) and tracks both light/dark via --speak-accent. */
-  blockquote > p.speaking .w.is-played-word {
-    background-color: color-mix(in srgb, var(--speak-accent) 22%, transparent);
-  }
-  /* Current word — strongest tier; listed last so it wins (equal specificity)
-     even if a span momentarily carries both classes. */
+  blockquote > p.speaking .w.is-played-word,
   blockquote > p.speaking .w.is-current-word {
-    background-color: var(--speak-accent);
-    color: #1a1a1a; /* readable on amber in both light and dark themes */
+    color: var(--speak-read);
   }
   .speakable-word {
     cursor: pointer;
