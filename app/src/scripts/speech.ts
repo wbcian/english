@@ -45,6 +45,36 @@ interface ParagraphPlayCtx {
 }
 const pCtx = new WeakMap<HTMLElement, ParagraphPlayCtx>();
 
+// ---- playback speed (single source of truth for BOTH backends; persisted) ----
+// MP3 path applies it via audio.playbackRate; Web Speech via utterance.rate.
+// The karaoke sidecars are speed-agnostic: their onsets and audio.currentTime
+// share the media timeline, so playbackRate scales both together.
+
+const RATE_KEY = 'englishApp:playbackRate';
+const RATE_OPTIONS = [0.8, 1.0, 1.1, 1.25];
+const DEFAULT_RATE = 1.0;
+
+function readStoredRate(): number {
+  try {
+    const v = parseFloat(localStorage.getItem(RATE_KEY) ?? '');
+    return RATE_OPTIONS.includes(v) ? v : DEFAULT_RATE;
+  } catch {
+    return DEFAULT_RATE;
+  }
+}
+
+let playbackRate = readStoredRate();
+
+function setPlaybackRate(r: number): void {
+  playbackRate = r;
+  try { localStorage.setItem(RATE_KEY, String(r)); } catch { /* private mode / quota */ }
+  // Live-apply to the MP3 that's playing now. Web Speech rate is fixed once an
+  // utterance is created, so it only takes effect on the next play (MP3 is the
+  // primary path, so this is acceptable).
+  if (currentAudio) currentAudio.playbackRate = r;
+  updateRateUI();
+}
+
 // ---- Web Speech setup (unchanged from v1) ----
 
 const voicesReady: Promise<void> = new Promise(resolve => {
@@ -202,6 +232,51 @@ function setBtnState(p: HTMLElement, state: PlayState): void {
   }
 }
 
+// ---- playback speed control UI ----
+
+let speedBtns: { btn: HTMLButtonElement; rate: number }[] = [];
+
+function updateRateUI(): void {
+  for (const { btn, rate } of speedBtns) {
+    const active = rate === playbackRate;
+    btn.classList.toggle('is-active', active);
+    btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+  }
+}
+
+// Inject a small speed selector into the header nav. Idempotent — safe to call
+// once per page load.
+function wireSpeedControl(): void {
+  if (document.querySelector('.speed-control')) return;
+
+  const wrap = document.createElement('div');
+  wrap.className = 'speed-control';
+
+  const label = document.createElement('span');
+  label.className = 'speed-control__label';
+  label.textContent = '速度';
+  wrap.appendChild(label);
+
+  speedBtns = RATE_OPTIONS.map(r => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'speed-btn';
+    b.dataset.rate = String(r);
+    b.textContent = `${r}×`;
+    b.setAttribute('aria-label', `Playback speed ${r}×`);
+    b.addEventListener('click', () => setPlaybackRate(r));
+    wrap.appendChild(b);
+    return { btn: b, rate: r };
+  });
+
+  // Every page that loads this script renders Layout's <header><nav.top-nav>;
+  // the optional chain just no-ops if a future page omits it (playback still
+  // works, only the control is absent).
+  document.querySelector('header .top-nav')?.appendChild(wrap);
+
+  updateRateUI();
+}
+
 // ---- audio file playback path (preferred) ----
 
 // Cancel the karaoke RAF loop WITHOUT touching currentWordSpan — pause freezes
@@ -243,6 +318,7 @@ function playAudioFile(src: string, el: HTMLElement, hash: string): void {
   clearCurrent();
   const audio = new Audio(src);
   audio.preload = 'auto';
+  audio.playbackRate = playbackRate;
   el.classList.add('speaking');
   setBtnState(el, 'playing');
   currentEl = el;
@@ -376,7 +452,7 @@ async function speakViaWebSpeech(text: string, el: HTMLElement): Promise<void> {
       const u = new SpeechSynthesisUtterance(chunk);
       u.lang = 'en-US';
       u.voice = voice;
-      u.rate = 0.95;
+      u.rate = playbackRate;
       if (i === chunks.length - 1) {
         const cleanup = () => {
           if (currentEl === el) {
@@ -574,8 +650,13 @@ document.addEventListener('keydown', e => {
   }
 });
 
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', wireSpeakable);
-} else {
+function init(): void {
   wireSpeakable();
+  wireSpeedControl();
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
 }

@@ -77,6 +77,46 @@ const { title } = Astro.props;
     border-bottom: 2px solid transparent;
   }
   .nav-link:hover { color: var(--accent); text-decoration: none; }
+
+  /* Playback speed control — injected by speech.ts into the header nav, pushed
+     to the right edge. Active button mirrors the amber .is-current-word look. */
+  .speed-control {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: auto;
+  }
+  .speed-control__label {
+    color: var(--fg-muted);
+    font-size: 0.78em;
+    margin-right: 2px;
+  }
+  .speed-btn {
+    all: unset;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 0.78em;
+    line-height: 1;
+    padding: 3px 6px;
+    border-radius: 5px;
+    color: var(--fg-muted);
+    border: 1px solid var(--card-border);
+    transition: color 0.15s, background-color 0.15s, border-color 0.15s;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  .speed-btn:hover { color: var(--accent); border-color: var(--speak-accent); }
+  .speed-btn:focus-visible { outline: 2px solid var(--speak-accent); outline-offset: 1px; }
+  .speed-btn.is-active {
+    background: var(--speak-accent);
+    border-color: var(--speak-accent);
+    color: #1a1a1a; /* readable on amber in both themes */
+    font-weight: 600;
+  }
+  @media (max-width: 640px) {
+    .speed-control__label { display: none; } /* save header room on narrow screens */
+    .speed-btn { padding: 3px 5px; }
+  }
   main {
     max-width: 760px;
     margin: 0 auto;
