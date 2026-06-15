@@ -34,7 +34,6 @@ title_en: "Mind meld, research preview, very low on process — how Anthropic sh
 
 ## 正文 · 跟讀用（訪談精選）
 
-<div class="lesson-body-scroll">
 
 > **Scene 1 — Lenny (line 67)**
 > I think people don't give you enough credit for the success that Cloud Code has had... Help us understand your role on the team, how you work with Boris...
@@ -86,7 +85,6 @@ title_en: "Mind meld, research preview, very low on process — how Anthropic sh
 
 > Cat（1379）：舉個極端的例子，假如 Cloud Code 失敗了、但 Anthropic 成功了，I would be extremely happy（我會超級開心）。而且整個團隊都非常願意照著這條 chain of thought（思路）去做決策。
 
-</div>
 
 ---
 

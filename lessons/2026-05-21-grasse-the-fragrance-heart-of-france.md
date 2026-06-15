@@ -36,7 +36,6 @@ title_en: "How a stinky leather town accidentally invented the perfume trade —
 
 ## Close Reading（全文 · 可朗讀 🔊）
 
-<div class="lesson-body-scroll">
 
 > **Part 1**
 > Nestled in the hills of southern France, Grasse is famous as the world's perfume capital. But did you know this charming town once smelled terrible? In the 16th century, Grasse was known for its leather industry, not its sweet scents. The air was filled with the smell of animal hides and chemicals used in tanneries. To make their gloves more pleasant, local craftsmen began soaking them in flower-scented oils. This clever idea not only improved the smell, but also started Grasse's journey into the world of perfume.
@@ -54,7 +53,6 @@ title_en: "How a stinky leather town accidentally invented the perfume trade —
 > Grasse 的成功也歸功於它的自然環境。溫和的地中海型氣候、肥沃的土壤、充沛的雨量，創造了種植玫瑰、茉莉、薰衣草這些香水關鍵原料的理想條件。即使今天，繽紛花田仍環繞著小鎮，農民持續採收花朵提煉珍貴的精油。
 > 造訪 Grasse 就像走進一場芬芳的夢。你可以參觀歷史悠久的香水工廠，導覽員會解說花朵如何變成奢華香氣；國際香水博物館用古董香水瓶和互動展覽訴說香水歷史；想動手玩的話，遊客還能參加 DIY 調香工作坊，調出自己獨一無二的香味。Grasse 的影響力遠超法國——許多名香誕生於此，這裡的調香師至今備受敬重。
 
-</div>
 
 ---
 

@@ -22,7 +22,6 @@ title_en: "Veritasium debunks learning-styles theory — use it as a connected-s
 
 ## 正文 · 跟讀用（含時間戳，可回原片對照）
 
-<div class="lesson-body-scroll">
 
 > **Izzy (00:00)**
 > Let me demonstrate it here with a YouTube clip. I love this channel — it's called Veritasium. It's a science channel for people who are not scientists, for non-scientists, and they explain really complex stuff in an easy way. For this kind of activity, you want to find something that you like. This is important, because you want to be able to just watch this as if it weren't for learning purposes — but it is. So let's check it out.
@@ -74,7 +73,6 @@ title_en: "Veritasium debunks learning-styles theory — use it as a connected-s
 
 > Izzy（02:12）：看到他把那些字全部黏在一起的方式了嗎？只要注意聽，你會在「玩」的同時學到很多。就像你用這堂課可以做的——我們這裡用了大量連音。我們把字用「本來該有的方式」念出來。只要你注意聽，而且真的搭配逐字稿看，你就能看見他們那句話講得多漂亮。
 
-</div>
 
 ## Key Vocabulary
 

@@ -34,7 +34,6 @@ title_en: "How to open, give your name, handle the passport copy, and state room
 
 ## 正文 · 跟讀用（飯店櫃檯報到）
 
-<div class="lesson-body-scroll">
 
 > **Front desk**
 > Good evening, and welcome. How can I help you tonight?
@@ -126,7 +125,6 @@ title_en: "How to open, give your name, handle the passport copy, and state room
 
 > 住客：非常感謝您。祝您有個美好的夜晚！
 
-</div>
 
 ---
 

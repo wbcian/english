@@ -34,7 +34,6 @@ title_en: "Gen-Z spoken density — five 'like's in one sentence, tap-T connecte
 
 ## 正文 · 跟讀用（訪談精選）
 
-<div class="lesson-body-scroll">
 
 > **Scene A — Sabrina (04:08)**
 > It's what's so crazy, **like**, this is the part of me that feels **like** an idiot every time I see, **like**, a cafe, there's just a sign that says, "Espresso," and I'm **like**, "Yes!"… Oh my God. Nothing to do with me.
@@ -100,7 +99,6 @@ title_en: "Gen-Z spoken density — five 'like's in one sentence, tap-T connecte
 
 > Ethan（07:39）：在 every 後面加 single，是在強調「零例外」。Every cafe，一間都不漏。我可以說：「I've watched every single episode of Seinfeld at least three times（我每一集 Seinfeld 都至少看過三遍）」。或「She meditates every single day（她每一天都冥想）」——從不間斷。
 
-</div>
 
 ---
 

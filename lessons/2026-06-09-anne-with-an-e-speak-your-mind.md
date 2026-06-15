@@ -22,7 +22,6 @@ title_en: "7 words for standing up for someone — reputation, confront, consent
 
 ## 正文 · 跟讀用（派對對質場景）
 
-<div class="lesson-body-scroll">
 
 > **Ksenia (00:00)**
 > Today we're back with a new lesson with the amazing Netflix show *Anne With An E*. If you've never seen the series, it follows Anne Shirley, an intelligent, imaginative girl who isn't afraid to speak her mind — that is, to express her thoughts honestly, even if it gets her into trouble. In the scene we'll learn with, we're at a fun school party where music, dancing, and young romance fill the air. Things start to go wrong when a romantic encounter between two students, Josie and Billy, becomes more serious. Josie doesn't want to keep going, but Billy ignores her and forces the situation. Then later, he spreads rumors telling a different version of what happened, which damages her reputation. As gossip spreads, people are quick to judge her rather than question him — something that actually reflects the way women were often treated back in the day, and still today. So when Anne realizes what really happened, she refuses to stay silent and decides to confront Billy, defending what she knows is right.
@@ -79,7 +78,6 @@ title_en: "7 words for standing up for someone — reputation, confront, consent
 
 > 例句（03:55）：Nancy，我現在邀請你，在上帝與祂的教會面前，宣告你同意成為 George 的妻子。
 
-</div>
 
 ## Key Vocabulary
 

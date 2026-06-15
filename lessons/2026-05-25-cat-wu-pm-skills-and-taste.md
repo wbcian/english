@@ -24,7 +24,6 @@ title_en: "What Anthropic actually looks for in PMs — taste, low ego, first-pr
 
 ## 正文 · 跟讀用（訪談精選）
 
-<div class="lesson-body-scroll">
 
 > **Scene 1 — Lenny (line 657)**
 > There's always the sense that we need fewer PMs in the future. What do we need PMs? Engineers can just ship. His [Amul's] take is that because engineers are moving so fast, PMs and designers are squeezed... So his take is he needs more PMs because it's hard to keep up. What's your take there?
@@ -76,7 +75,6 @@ title_en: "What Anthropic actually looks for in PMs — taste, low ego, first-pr
 
 > Lenny（1035）：我腦中浮現的是那個 gif……來自《神鬼奇航》，畫面是一個男人走下船上的一段樓梯，整艘船在他身邊被炸得稀爛，而他超級淡定，就這樣 strolling down the staircase（悠閒地踱步走下樓梯），任由一切在身旁分崩離析。
 
-</div>
 
 ---
 

@@ -56,7 +56,7 @@ title_en: <英文副標一行>       # 建議填；從 Topic & Summary 的英文
 1. `# Title`
 2. **Source subtitle**（H1 正下方一行小字，見 §3）
 3. `## Topic & Summary`（中英雙語摘要，建語境）
-4. **正文 / 學習主體**（雙語 EN/zhTW、包在可滾動視窗，見 §4）
+4. **正文 / 學習主體**（雙語 EN/zhTW，blockquote 順流，見 §4）
    - `reading`：`## Close Reading`（精選原文；短文/已授權可全文）
    - `dialogue` / `talk`：`## 正文`（逐字稿／對白／歌詞，全保留可見）
 5. `## Key Vocabulary`（**緊接正文之後**；`word` 欄可朗讀）
@@ -75,7 +75,7 @@ MUST = 該 track 必有；MAY = 視內容加。**原則：每 track 至少含一
 |---|:--:|:--:|:--:|
 | Topic & Summary | MUST | MUST | MUST |
 | Article Map（全文骨架表） | MUST | — | MAY |
-| 正文（Close Reading / 逐字稿，可滾動） | MUST | MUST | MUST |
+| 正文（Close Reading / 逐字稿，順流） | MUST | MUST | MUST |
 | Key Vocabulary（後置、`word` 欄） | MUST | MUST | MUST |
 | Reading Comprehension（TOEIC Part 7） | MUST | — | MAY |
 | Sentence Anatomy（長句拆解） | MUST | MAY（商業訪談長句） | MAY（商業長句） |
@@ -109,14 +109,12 @@ MUST = 該 track 必有；MAY = 視內容加。**原則：每 track 至少含一
 
 ---
 
-## 4. 正文：雙語可滾動視窗
+## 4. 正文：雙語 blockquote 順流
 
-正文（逐字稿 / Close Reading）可能很長，包進固定高度可滾動容器，避免畫面爆長；跟讀時可邊捲邊念。
+正文（逐字稿 / Close Reading）直接用一連串雙語 blockquote 呈現，順著頁面捲動（**P6 起移除固定高度滾動框**——避免滾動中滾動、且卡拉 OK 已讀蔓延的亮字不會被切到框外）。
 
 ```markdown
 ## 正文（跟讀用）
-
-<div class="lesson-body-scroll">
 
 > **Cat (75)**
 > I feel very lucky to work with Boris. He's been an amazing thought partner.
@@ -127,13 +125,10 @@ MUST = 該 track 必有；MAY = 視內容加。**原則：每 track 至少含一
 > We're like 80% mind meld.
 
 > Cat (101)：我們大概有 80% 的心智同步。
-
-</div>
 ```
 
 **硬規則**（否則 CommonMark 會把整塊當 raw HTML、`>` 字面輸出、無法朗讀）：
-- `<div class="lesson-body-scroll">` 開標籤後、每個 blockquote 前後、`</div>` 閉標籤前，**都要留一個 markdown 空行**。
-- 英中**分開兩個 blockquote**（見 §5.1）；英文 blockquote 才會朗讀，中文不會。
+- 英中**分開兩個 blockquote**（見 §5.1）；英文 blockquote 才會朗讀，中文不會。**每兩個 blockquote 之間留一個 markdown 空行**（避免 parser 合併）。
 - dialogue/talk 的講者標籤用開頭 `**...**`（見 §5.2）。
 
 ---
@@ -219,7 +214,7 @@ App 依日期 desc 排序，同日期內以 `part` asc 為 secondary sort。
 - 桌機 + 手機點英文段落／單字 → 朗讀；中文 blockquote 不掛 handler、無 cursor pointer。
 - 朗讀時段落底色變淺黃；同段再點停止、按 Esc 停止。
 - 長段（> ~150 字）Web Speech path 自動切句；預生成 MP3 整段一次。
-- 正文 `.lesson-body-scroll` 內的 blockquote 朗讀照常（全域 selector 不受容器影響）。
+- 正文 blockquote 順流朗讀照常（全域 `blockquote > p` selector 不受版面影響）。
 
 ---
 
@@ -231,7 +226,7 @@ App 依日期 desc 排序，同日期內以 `part` asc 為 secondary sort。
 <p class="lesson-subtitle">…</p>
 ## Topic & Summary（雙語）
 ## Article Map（全文骨架表）
-## Close Reading（<div class="lesson-body-scroll"> 精選原文，可朗讀）
+## Close Reading（精選原文，可朗讀）
 ## Key Vocabulary（word 欄）
 ## Reading Comprehension（TOEIC Part 7，details 折疊答案）
 ## Sentence Anatomy（長句拆解）
@@ -244,7 +239,7 @@ App 依日期 desc 排序，同日期內以 `part` asc 為 secondary sort。
 <p class="lesson-subtitle">…</p>
 ## Topic & Summary（雙語）
 （系列才有 ## Series Map）
-## 正文（<div class="lesson-body-scroll"> 逐字稿/對白，雙語，可朗讀）
+## 正文（逐字稿/對白，雙語，可朗讀）
 ## Key Vocabulary（word 欄）
 ## Useful Phrases & Patterns
 （MAY：Connected Speech / Sentence Anatomy / Cultural Notes）
@@ -256,7 +251,7 @@ App 依日期 desc 排序，同日期內以 `part` asc 為 secondary sort。
 # Title
 <p class="lesson-subtitle">…</p>
 ## Topic & Summary（雙語）
-## 正文（<div class="lesson-body-scroll"> 逐字稿/歌詞，雙語，可朗讀）
+## 正文（逐字稿/歌詞，雙語，可朗讀）
 ## Key Vocabulary（word 欄）
 （MAY：Connected Speech（歌/發音）/ Sentence Anatomy（商業長句）/ Useful Phrases / Reading Comprehension）
 ## Study Tips / Takeaways

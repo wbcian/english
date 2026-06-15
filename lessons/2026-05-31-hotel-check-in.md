@@ -22,7 +22,6 @@ title_en: "Reservation name, room type, breakfast, Wi-Fi — the lines you need 
 
 ## 正文 · 跟讀用（櫃檯入住）
 
-<div class="lesson-body-scroll">
 
 > **Receptionist**
 > Good afternoon. Welcome to the Harbor View Hotel. How may I help you?
@@ -129,7 +128,6 @@ title_en: "Reservation name, room type, breakfast, Wi-Fi — the lines you need 
 
 > 櫃檯：不客氣。祝您住宿愉快，Wu 先生。
 
-</div>
 
 ## Key Vocabulary
 

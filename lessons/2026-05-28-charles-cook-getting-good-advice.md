@@ -41,7 +41,6 @@ TOEIC Part 7 略讀題的視覺化訓練——先抓骨架再讀細節。
 
 ## Close Reading · 精選 3 段（可朗讀 🔊）
 
-<div class="lesson-body-scroll">
 
 > Cold messaging works because people are nice, but you need to a) have mutuals, and b) ask a specific question. Don't say "I'd love to pick your brain" – a specific question from you lessens the mental load for them so they can be helpful.
 
@@ -65,7 +64,6 @@ TOEIC Part 7 略讀題的視覺化訓練——先抓骨架再讀細節。
 
 **Why this paragraph?** `however` 倒裝放後面（非句首）是 native 寫法；`exponentially more` 量化對比；整段是漂亮的 contrast 結構，**TOEIC Part 7 inference 題常考**。
 
-</div>
 
 ## Key Vocabulary（可朗讀 🔊）
 

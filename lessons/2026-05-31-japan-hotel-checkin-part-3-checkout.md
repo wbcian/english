@@ -34,7 +34,6 @@ title_en: "Polite complaint when AC fails, itemized bill, late check-out, and Ja
 
 ## 正文 · 跟讀用（飯店客訴 → 退房對話）
 
-<div class="lesson-body-scroll">
 
 > **Guest (Cian)**
 > Excuse me, sorry to bother you. The air conditioning in my room isn't working — it just blows warm air.
@@ -133,7 +132,6 @@ title_en: "Polite complaint when AC fails, itemized bill, late check-out, and Ja
 
 > 櫃檯：當然。您信用卡上的預授權已經解除了，幾個工作天內就會退回。感謝您的入住，祝您旅途平安！
 
-</div>
 
 ---
 

@@ -24,7 +24,6 @@ Ethan 用 *Monsters, Inc.* 開場那場 Sulley 進老闆 Waternoose 辦公室的
 
 > 影片中 Monsters, Inc. 給新進 scarer 看的「電力公司宣導短片」+「訓練員 PSA」段落。Ethan 把它切成三段播放，這裡按播放順序合併。
 
-<div class="lesson-body-scroll">
 
 **🎬 [00:55 — Intro Clip A]** Trainer / Voice-over
 
@@ -48,7 +47,6 @@ Ethan 用 *Monsters, Inc.* 開場那場 Sulley 進老闆 Waternoose 辦公室的
 
 > 你必須進去，因為我們需要這個！整個城市都指望你去收集那些小孩的尖叫聲。沒有尖叫，我們就沒有電。
 
-</div>
 
 ### 短片關鍵句拆解
 

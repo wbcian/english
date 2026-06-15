@@ -34,7 +34,6 @@ title_en: "Café vocab, H-drop, British 'brilliant', and a 3-rule connected-spee
 
 ## 正文 · 跟讀用（訪談精選）
 
-<div class="lesson-body-scroll">
 
 > **Scene A — Sabrina (08:06)**
 > No, I don't do that. But I do have to **question** ordering it a lot now.
@@ -101,7 +100,6 @@ title_en: "Café vocab, H-drop, British 'brilliant', and a 3-rule connected-spee
 
 > Ethan（12:02）：conceited 的人對自己有 inflated opinion（過度膨脹的自我評價）。Sabrina 擔心如果她點 espresso，別人會覺得她在炫耀。對了，這個字我們會用 tap T 來念：[con-see-did]、[con-see-did]——不是「con-see-ted」。
 
-</div>
 
 ---
 

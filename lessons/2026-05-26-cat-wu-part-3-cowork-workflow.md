@@ -34,7 +34,6 @@ title_en: "When to use each Claude product, an overnight slide-deck workflow, an
 
 ## 正文 · 跟讀用（訪談精選）
 
-<div class="lesson-body-scroll">
 
 > **Scene 1 — Cat (line 1429) — 什麼時候用 CLI**
 > So I tend to use Cloud Code in the terminal when I'm just **kicking off** like a **one-off** coding task, and I want all of the latest features. The CLI is our initial product surface, and it's also the one where our features often **land first**.
@@ -86,7 +85,6 @@ title_en: "When to use each Claude product, an overnight slide-deck workflow, an
 
 > Cat（1921）：Cloud Code 團隊裡有一位做業務的同事……他發現自己一直在重複做這些 repetitive decks（一再重複的投影片）。所以他乾脆做了一個 web app，裡面放了那些我們知道效果很好的核心 Cloud Code deck 範例……然後他還做了一個地方可以 input specific customer context（輸入特定客戶的脈絡），會去拉 Salesforce、拉 Gong、拉其他筆記的資料，這樣我們就能針對特定客戶客製化這些 deck。
 
-</div>
 
 ---
 

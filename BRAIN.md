@@ -14,7 +14,7 @@
 - 最近活動日期：2026-06-14（🛠️ App roadmap **P2 卡拉 OK「已讀蔓延」逐字 highlight 上線**：MP3 路徑播放時，逐字 highlight 從「只亮當前字」升級為進度 trail，邊界隨 `currentTime` 逐字蔓延（落實 06-10 回饋）；pause 凍結、resume 續進、ended/Esc/replay 全清、無 sidecar 降級。`speech.ts` 改 `trailSpans`+`litIndex` 依 DOM-range delta 上色、新增 `setWordTier` 與 `highlightGen`（修 resume 疊 tick）。**視覺定案（同日 2 designer 討論）：2 階・純 font color・無背景**——已讀字＝amber 文字（`--speak-read` 亮 `#9a5b06`/暗 `#fbbf24`）、未讀＝一般 `--fg`，當前字併入已讀；段落背景 wash 拿掉，改左側 amber 邊條 dim↔亮(4px) 標示播放段落。CSS 把兩 class 同列上色→零 runtime 改動；sidecar/manifest/產音腳本未動、零 hash drift。經 /simplify + 對抗式正確性 review + live preview 真播實測 + 亮/暗截圖 + `astro build` 154 頁綠燈。**本輪順序 P7→P2→P6→P5，P2 已完成，下一棒 P6**（P6 再評估 amber 深淺微調）)
 - 上一活動日期：2026-06-14（🛠️ App roadmap **P7 播放語速切換 UI 上線**：header nav 注入 0.8×/1×/1.1×/1.25× 切換鈕，即時生效＋存 localStorage（`englishApp:playbackRate`），MP3 `playbackRate` 與 Web Speech `u.rate` 共用單一 rate；預設 1.0×、4 鈕全保留。經 /simplify + 對抗式正確性 review + `astro build` 綠燈）
 - 主目標：**TOEIC 750+ 證書**（詳見 [PROFILE.md](PROFILE.md#目標)）
-- **Lesson 格式（2026-05-29 換軸）**：`track`(reading/dialogue/talk) + `audio` 取代舊 `format`；Source→標題下 subtitle、正文雙語滾動框、Key Vocab 緊接正文後 — 規範見 [`lessons/_conventions.md`](lessons/_conventions.md)
+- **Lesson 格式（2026-05-29 換軸）**：`track`(reading/dialogue/talk) + `audio` 取代舊 `format`；Source→標題下 subtitle、正文雙語 blockquote 順流（P6 移除滾動框）、Key Vocab 緊接正文後 — 規範見 [`lessons/_conventions.md`](lessons/_conventions.md)
 - 最近 lesson：**[Anne With An E — 直言不諱、對質 Billy](lessons/2026-06-09-anne-with-an-e-speak-your-mind.md)**（dialogue · B2 · 影片英文教學 Ksenia 用 Netflix 影集派對場景教 7 字）— 主題「為人挺身而出／吵架理直氣壯」＋現代高價值字 consent；7 新字 speak one's mind / gossip / rumor / nasty / devastated / ill-bred / consent；Sentence Anatomy 對準弱點 `shouldn't have + p.p.`（批評過去）與 `How dare you + V`；Cultural Notes 講 double standard 與 register（聽得懂 vs 會用）
 - 上一份 lesson：**[Learning Styles 是迷思 — 順便偷學連音](lessons/2026-06-01-learning-styles-connected-speech.md)**（dialogue · Izzy's English 用 Veritasium 影片做的 ~2.5 min 微課）— 首份**以發音／連音為主菜**的 lesson：縮音表（nt→n 脫 T／au=/ɔː/／s→/ʒ/）＋連音表（look it over→"loo-ki-tover"）；vocab 交叉連結 hands-on/debunk，新加 look something over · engage with
 - 上一份 lesson：**日本住宿 Hotel Check-in 對話三部曲**（dialogue · 旅遊實戰）：[Part 1 報到・證件・房型](lessons/2026-05-31-japan-hotel-checkin-part-1-arrival.md) + [Part 2 付款・宿泊税・設施](lessons/2026-05-31-japan-hotel-checkin-part-2-amenities.md) + [Part 3 客訴・退房・宅配](lessons/2026-05-31-japan-hotel-checkin-part-3-checkout.md)（Coach Max 原創情境；Cultural Notes 含護照影印法規／宿泊税／takkyubin；Series Map 用一般清單避免中文被誤朗讀）
@@ -47,9 +47,9 @@
    - 單人連續輸出（個人 podcast、旁白、演講、歌曲）→ `track: talk`
    - 以閱讀／解題為意圖的文字（essay、newsletter、雜誌短文，含朗讀型如 grasse）→ `track: reading`
    - 另標 `audio: true/false`（原始素材有無真人聲音；**純元資料、不影響朗讀**）
-   - 版面：Source 降為標題下一行 `<p class="lesson-subtitle">` 小字、正文雙語包 `<div class="lesson-body-scroll">` 可滾動視窗、Key Vocab 緊接正文後（細節見規範）
+   - 版面：Source 降為標題下一行 `<p class="lesson-subtitle">` 小字、正文雙語 blockquote 順流（P6 移除固定高度滾動框）、Key Vocab 緊接正文後（細節見規範）
    - 只有當使用者明確說「轉成 magazine」、「雜誌風格」、「HTML 版」等才產 HTML
-5. **Lesson speakable 規範** → 寫 lesson 時遵守 [`lessons/_conventions.md`](lessons/_conventions.md)：英文 blockquote 不混中文、vocab 可朗讀欄表頭一律 lowercase `word`、講者標籤放 blockquote 開頭粗體、`<div class="lesson-body-scroll">`／`<details>` 內 blockquote 前後留 markdown 空行、同系列同日期補 `part:`。`app/` 依 markdown DOM 結構（blockquote + `word` 欄）判斷朗讀，**與 frontmatter 無關**
+5. **Lesson speakable 規範** → 寫 lesson 時遵守 [`lessons/_conventions.md`](lessons/_conventions.md)：英文 blockquote 不混中文、vocab 可朗讀欄表頭一律 lowercase `word`、講者標籤放 blockquote 開頭粗體、`<details>` 內 blockquote 前後留 markdown 空行、同系列同日期補 `part:`。`app/` 依 markdown DOM 結構（blockquote + `word` 欄）判斷朗讀，**與 frontmatter 無關**
 6. **發現新弱點 / 偏好** → 更新 `PROFILE.md`
 7. **更新此份快照** → 完成上述任一動作後同步本檔的「快照」段
 8. **永遠**：繁體中文翻譯；保留 Coach Max 風格（幽默、直白、像哥兒們）

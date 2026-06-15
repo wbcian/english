@@ -64,7 +64,6 @@ PostHog 把他們 newsletter 的「自我介紹」短文（[What is Product for 
 
 ## Close Reading · 精選 4 段（可朗讀 🔊）
 
-<div class="lesson-body-scroll">
 
 ### §A — Framing（來自 Main）
 
@@ -104,7 +103,6 @@ PostHog 把他們 newsletter 的「自我介紹」短文（[What is Product for 
 
 **Why this paragraph?** `stack up` 是 TOEIC 商業句型（比較高低）；用引號嘲諷 vague benefit-speak（`"make smarter decisions, faster"`）是 native 寫作的高階修辭——夾雜對方原話來反襯自己論點。
 
-</div>
 
 ## Key Vocabulary（可朗讀 🔊）
 
