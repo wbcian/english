@@ -43,7 +43,11 @@ const LESSONS_DIR = resolve(APP_DIR, '..', 'lessons');      // english/lessons/
 const VOCAB_DIR = resolve(APP_DIR, '..', 'vocab');          // english/vocab/
 const AUDIO_DIR = resolve(APP_DIR, 'public', 'audio');
 const MANIFEST_PATH = resolve(APP_DIR, 'src', 'data', 'audio-manifest.json');
+const SPEAKER_VOICES_PATH = resolve(APP_DIR, 'src', 'data', 'speaker-voices.json');
 
+// Default / fallback narrator voice. Per-speaker voices live in speaker-voices.json
+// and are resolved at build time only (the hash stays text-only, so this never
+// reaches the runtime — see resolveVoice + lessons/_conventions.md §5.2).
 const VOICE = 'en-US-AriaNeural';
 const FORMAT = OUTPUT_FORMAT.AUDIO_24KHZ_48KBITRATE_MONO_MP3;
 
@@ -64,9 +68,17 @@ function extractText(node) {
   return '';
 }
 
+// The single definition of "a blockquote paragraph's leading <strong> is the
+// speaker label" — stripped from speakable text, and (P5) used to route the
+// per-speaker voice. Mirrored conceptually in speech.ts getSpeakableText.
+function leadingStrong(paragraph) {
+  const first = paragraph.children?.[0];
+  return first?.type === 'strong' ? first : null;
+}
+
 function paragraphSpeakableText(paragraph) {
   const children = paragraph.children ?? [];
-  const skipFirst = children[0]?.type === 'strong';
+  const skipFirst = !!leadingStrong(paragraph);
   const parts = [];
   for (let i = 0; i < children.length; i++) {
     if (skipFirst && i === 0) continue;
@@ -88,7 +100,7 @@ function paragraphSpeakableText(paragraph) {
 // alignment context.
 function paragraphAlignTokens(paragraph) {
   const children = paragraph.children ?? [];
-  const skipFirst = children[0]?.type === 'strong';
+  const skipFirst = !!leadingStrong(paragraph);
   const toks = [];
   children.forEach((child, i) => {
     if (skipFirst && i === 0) return;
@@ -101,6 +113,57 @@ function paragraphAlignTokens(paragraph) {
   return toks;
 }
 
+// ---- speaker → voice routing (build-only; the hash stays text-only) ----
+//
+// A blockquote may open with a bold label that is NOT a speaker: a grammar
+// pull-quote ("**Would it be possible to**"), a section header ("**Part 1**",
+// "**練法建議**"), or a quoted phrase. We need no explicit deny-list — such
+// labels simply match no cast slug below and fall through to the default
+// narrator voice, exactly how they sound today. Correctness rests on matching
+// the KNOWN cast (speaker-voices.json), so a parser miss is never worse than
+// Aria.
+
+// Split a raw bold label into candidate name segments, stripping per-segment
+// trailing markers. Handles "Ethan (04:18)", "Cat (75)", composites like
+// "Scene A — Sabrina (04:08)" / "Scene 1 — Lenny (line 67)" /
+// "Cat (1281) — Mission > Product Line", and keeps identity parens ("Guest
+// (Cian)") that distinguish two different people.
+export function speakerSegments(raw) {
+  return String(raw ?? '')
+    .split(/\s*[—–]\s*|\s+--+\s+/) // em/en dash, or " -- " composite separators
+    .map((seg) =>
+      // Strip a TRAILING (MM:SS) / (digits) / (line N) marker; KEEP alpha parens
+      // like "(Cian)" that carry identity.
+      seg
+        .replace(/\s*\((?:\d{1,2}:\d{2}|\d+|line\s+\d+)\)\s*$/i, '')
+        .trim()
+        .toLowerCase(),
+    )
+    .filter(Boolean);
+}
+
+// Resolve the TTS voice for a paragraph from its raw leading-<strong> label.
+// Tries each dash-separated segment, matching the cast map by full slug first
+// (so "front desk" and "guest (cian)" win as whole keys), then by first word
+// for short "Name + descriptor" segments ("sabrina interview preview" →
+// "sabrina"). Any miss → default narrator voice.
+export function resolveVoice(speakerRaw, perLessonMap, voiceTable) {
+  const speakers = voiceTable.speakers || {};
+  const lookup = (slug) => (perLessonMap && perLessonMap[slug]) || speakers[slug];
+  for (const seg of speakerSegments(speakerRaw)) {
+    const direct = lookup(seg);
+    if (direct) return direct;
+    // first-word fallback only for short "Name + descriptor" labels — never for
+    // sentence-like pull-quotes (avoid a bold quote that starts with a cast name).
+    const words = seg.split(/\s+/);
+    if (words.length > 1 && words.length <= 3 && !/[?.!,]/.test(seg)) {
+      const byFirst = lookup(words[0]);
+      if (byFirst) return byFirst;
+    }
+  }
+  return voiceTable.default || VOICE;
+}
+
 export function collectSpeakable(mdAst) {
   const units = [];
 
@@ -111,7 +174,9 @@ export function collectSpeakable(mdAst) {
         if (child.type === 'paragraph') {
           const text = paragraphSpeakableText(child);
           if (isSpeakableParagraphText(text)) {
-            units.push({ kind: 'paragraph', text, tokens: paragraphAlignTokens(child) });
+            const sl = leadingStrong(child);
+            const speakerRaw = sl ? extractText(sl) : null;
+            units.push({ kind: 'paragraph', text, tokens: paragraphAlignTokens(child), speakerRaw });
           }
         }
       }
@@ -151,27 +216,21 @@ export function collectSpeakable(mdAst) {
 
 // ---- TTS ----
 
-// Two memoized clients. The "words" client enables WordBoundary metadata, which
-// is needed for the timing sidecars. It's a per-client flag and, once on, EVERY
-// toStream() returns a live metadataStream that must be drained — so we keep a
-// separate plain client for the 99% of clips that don't need word timing.
-let plainClient = null;
-let wordsClient = null;
-async function getTtsClient(withWords) {
-  if (withWords) {
-    if (!wordsClient) {
-      const c = new MsEdgeTTS();
-      await c.setMetadata(VOICE, FORMAT, { wordBoundaryEnabled: true });
-      wordsClient = c;
-    }
-    return wordsClient;
+// Memoized clients keyed by `${voice}|${plain|words}`. The "words" variant
+// enables WordBoundary metadata, needed for the timing sidecars. It's a
+// per-client flag and, once on, EVERY toStream() returns a live metadataStream
+// that must be drained — so we keep plain and words clients separate, now also
+// per voice (P5 per-speaker voices; msedge-tts voice is a client-level setting).
+const ttsClients = new Map();
+async function getTtsClient(voice, withWords) {
+  const key = `${voice}|${withWords ? 'words' : 'plain'}`;
+  let c = ttsClients.get(key);
+  if (!c) {
+    c = new MsEdgeTTS();
+    await c.setMetadata(voice, FORMAT, withWords ? { wordBoundaryEnabled: true } : undefined);
+    ttsClients.set(key, c);
   }
-  if (!plainClient) {
-    const c = new MsEdgeTTS();
-    await c.setMetadata(VOICE, FORMAT);
-    plainClient = c;
-  }
-  return plainClient;
+  return c;
 }
 
 // msedge-tts feeds the text into an SSML document without escaping, so any
@@ -191,8 +250,8 @@ function escapeForSsml(text) {
 // drains the WordBoundary metadata stream and returns the raw boundary `Data`
 // objects ([{ Offset, Duration, text:{ Text } }, ...], 100ns ticks). Otherwise
 // returns [].
-async function synthesizeToFile(text, outPath, { wantWords = false } = {}) {
-  const tts = await getTtsClient(wantWords);
+async function synthesizeToFile(text, outPath, { wantWords = false, voice = VOICE } = {}) {
+  const tts = await getTtsClient(voice, wantWords);
   const { audioStream, metadataStream } = tts.toStream(escapeForSsml(text));
 
   // Keep the freshly-synthesized audio only if there's no valid MP3 yet.
@@ -382,7 +441,25 @@ async function main() {
   const wantsWordsFor = (name) => !!wordsArg && name.includes(wordsArg);
   if (wordsArg) console.log(`[generate-audio] word-timing sidecars for files matching "${wordsArg}"`);
 
-  const allUnits = new Map(); // hash -> { text, kind, sources, wantWords }
+  // --revoice: force-delete the mp3 (+ sidecar) of every clip whose resolved
+  // speaker voice differs from the default, so the synth loop below re-renders
+  // it in the new voice. Needed because synthesizeToFile SKIPS existing non-empty
+  // files — without this, a speaker-voices.json change never re-renders the audio.
+  const revoice = process.argv.includes('--revoice');
+
+  // Per-speaker voice table (build-only). Missing/broken → narrator-only fallback.
+  let voiceTable = { default: VOICE, speakers: {} };
+  try {
+    voiceTable = JSON.parse(await readFile(SPEAKER_VOICES_PATH, 'utf-8'));
+  } catch {
+    console.warn(`[generate-audio] no speaker-voices.json — using ${VOICE} for everyone`);
+  }
+  const lowerKeys = (obj) =>
+    obj && typeof obj === 'object'
+      ? Object.fromEntries(Object.entries(obj).map(([k, v]) => [k.toLowerCase(), v]))
+      : undefined;
+
+  const allUnits = new Map(); // hash -> { text, kind, sources, wantWords, voice }
   const processor = unified().use(remarkParse).use(remarkGfm);
 
   for (const { dir, name } of sources) {
@@ -396,17 +473,42 @@ async function main() {
     if (dir === VOCAB_DIR && typeof frontmatter.word === 'string' && frontmatter.word.trim()) {
       units.push({ kind: 'word', text: frontmatter.word.trim() });
     }
+    const perLessonMap = lowerKeys(frontmatter.speaker_voices);
     for (const u of units) {
       const h = hash(u.text);
       const wantWords = u.kind === 'paragraph' && wantsWordsFor(name);
+      const voice = resolveVoice(u.speakerRaw, perLessonMap, voiceTable);
       if (!allUnits.has(h)) {
-        allUnits.set(h, { ...u, sources: [name], wantWords });
+        allUnits.set(h, { ...u, sources: [name], wantWords, voice });
       } else {
         const existing = allUnits.get(h);
         existing.sources.push(name);
         if (wantWords) existing.wantWords = true;
+        // Accepted text-only-hash collision: identical normalized text resolving
+        // to two different voices shares one mp3. First wins; surface it (silent
+        // otherwise — the key carries no speaker). See _conventions.md §5.2.
+        if (existing.voice !== voice) {
+          console.warn(
+            `[generate-audio] voice collision on ${h}: "${existing.voice}" kept, "${voice}" (${name}) ignored for identical text — "${u.text.slice(0, 40).replace(/\s+/g, ' ')}"`,
+          );
+        }
       }
     }
+  }
+
+  if (revoice) {
+    const def = voiceTable.default || VOICE;
+    let removed = 0;
+    for (const [h, unit] of allUnits) {
+      if (unit.voice === def) continue;
+      for (const p of [join(AUDIO_DIR, `${h}.mp3`), join(AUDIO_DIR, `${h}.words.json`)]) {
+        if (existsSync(p)) {
+          await unlink(p);
+          removed++;
+        }
+      }
+    }
+    console.log(`[generate-audio] --revoice: deleted ${removed} file(s) for non-default-voice clips`);
   }
 
   console.log(`[generate-audio] ${allUnits.size} unique speakable units across ${lessonFiles.length} lessons + ${vocabFiles.length} vocab files`);
@@ -434,7 +536,7 @@ async function main() {
         continue;
       }
       try {
-        await synthesizeToFile(unit.text, outPath);
+        await synthesizeToFile(unit.text, outPath, { voice: unit.voice });
         generated++;
         process.stdout.write(`  [${generated}] ${h} ${unit.kind} ${unit.text.slice(0, 50).replace(/\s+/g, ' ')}\n`);
       } catch (err) {
@@ -451,7 +553,7 @@ async function main() {
       continue;
     }
     try {
-      const boundaries = await synthesizeToFile(unit.text, outPath, { wantWords: true });
+      const boundaries = await synthesizeToFile(unit.text, outPath, { wantWords: true, voice: unit.voice });
       if (!mp3Ok) generated++;
       const sidecar = buildSidecar(unit.tokens ?? [], boundaries);
       if (sidecar) {

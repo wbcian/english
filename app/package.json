@@ -13,7 +13,9 @@
     "predev": "node scripts/check-audio-hash-sync.mjs && node scripts/generate-audio.mjs",
     "prebuild": "node scripts/check-audio-hash-sync.mjs && node scripts/generate-audio.mjs",
     "audio:gen": "node scripts/generate-audio.mjs",
-    "check:hash-sync": "node scripts/check-audio-hash-sync.mjs"
+    "audio:revoice": "node scripts/generate-audio.mjs --revoice",
+    "check:hash-sync": "node scripts/check-audio-hash-sync.mjs",
+    "test:speaker": "node scripts/test-speaker-parser.mjs"
   },
   "dependencies": {
     "astro": "^6.3.7",

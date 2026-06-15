@@ -1,0 +1,16 @@
+{
+  "default": "en-US-AriaNeural",
+  "speakers": {
+    "ethan": "en-US-GuyNeural",
+    "lenny": "en-US-ChristopherNeural",
+    "zane": "en-US-EricNeural",
+    "cat": "en-GB-SoniaNeural",
+    "ksenia": "en-AU-NatashaNeural",
+    "izzy": "en-GB-LibbyNeural",
+    "sabrina": "en-US-JennyNeural",
+    "front desk": "en-GB-RyanNeural",
+    "receptionist": "en-US-MichelleNeural",
+    "guest": "en-US-RogerNeural",
+    "guest (cian)": "en-US-GuyNeural"
+  }
+}
