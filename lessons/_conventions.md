@@ -167,6 +167,13 @@ App 自動剝除開頭的 `**...**` 粗體標籤再朗讀。
 
 朗讀時跳過 "Ethan 04:18"，直接念 "Wow! Did you notice..."。
 
+**依講者切換 TTS 聲音（P5，build-only）**：產 MP3 時，`generate-audio.mjs` 會解析開頭粗體標籤取出講者，查 [`app/src/data/speaker-voices.json`](../app/src/data/speaker-voices.json) 指派的聲音來合成（預設 `en-US-AriaNeural` 旁白）。
+
+- **完全是 build 端的事**：音檔 hash 仍只吃文字、不含講者，所以 `speech.ts`／runtime／manifest 一律不變；換的只是 `audio/<hash>.mp3` 的聲音 bytes。
+- **解析規則**：去掉結尾 `(MM:SS)`／`(數字)`／`(line N)` 標記；複合 `Scene X — Name (…)` 取人名段；`Guest (Cian)` 的 `(Cian)` 保留（與 `Guest` 是**不同人**）。比對的是 `speaker-voices.json` 的**已知卡司**——非講者粗體（句型 pull-quote、`Part 1`、中文小標、clip/lyric/無名 Scene）一律落到旁白聲，毋需 deny-list。fixture：`app/scripts/test-speaker-parser.mjs`（`npm run test:speaker`）。
+- **新增/改名講者**：編 `speaker-voices.json`（slug 一律 lowercase；`front desk` 含空格照寫）。改完要 **force-delete 受影響音檔再重生**——`synthesizeToFile` 會跳過已存在的非空 mp3，所以用 `npm run audio:revoice`（刪掉所有非預設聲音 clip 的 mp3+sidecar 再重生）；要卡拉 OK 的篇另加 `-- --words=<檔名片段>` 連同重生 `.words.json`（onset 綁特定聲音，換聲音必須一起重生，否則逐字 timing 靜默對不上）。可用聲音請先 `getVoices()` 確認服務中，且**避開 Multilingual 四聲**（Ava/Andrew/Emma/Brian——變速下 WordBoundary 失準、破壞卡拉 OK）。
+- ⚠️ **已知限制（接受）**：hash 不含講者 → 兩個講者講出**逐字相同**的話會撞同一個 mp3、只能一個聲音（先到者勝）。目前語料 0 例；真撞到時 `generate-audio.mjs` 會印 `voice collision` 警告，但不會 fail build。要結構上保證不撞，需把 voice 折進 key（runtime 也要改，另案）。
+
 ### 5.3 Vocab table：可朗讀欄用 `word` 表頭
 
 任何 `<th>` 文字 lowercase 等於 `word` 的欄，整欄 cell 都可朗讀（不限第一欄）。
@@ -274,4 +281,5 @@ App 依日期 desc 排序，同日期內以 `part` asc 為 secondary sort。
   - 改 `word-tokens.mjs` 的 `normalizeForHash`／`getSpeakableText` 時，仍要**手動同步 `speech.ts`**；忘了同步 → `check-audio-hash-sync.mjs` 會 fail build，並要記得 `npm run audio:gen` 重生受影響音檔。
   - 既知陷阱（都已被上面 check 涵蓋）：build 讀 raw markdown，runtime 讀 smartypants 後的 DOM——`--`→em dash、硬換行 `\` / 行尾兩空格 → `<br>`。`normalizeForHash` 折疊多 hyphen（`-{2,}`→`-`）、`generate-audio.mjs` 的 `extractText` 對 `break` 吐一個空格，兩邊才對得上。
   - 逐字 highlight 詳見 [`app/docs/specs/word-highlight/spec.md`](../app/docs/specs/word-highlight/spec.md)。目前只為有 sidecar 的 clip 開卡拉 OK，其餘 clip 自動退回整段 highlight。
+  - 講者→聲音解析（§5.2）是 `generate-audio.mjs` **build 獨有**，**不是第四份鏡像**：hash 不含講者，runtime 不需要也不知道它，所以改它不必動 `speech.ts`。
 - 本檔是唯一事實來源。改動後同步檢查 `BRAIN.md` 第 4 條與 `SKILL.md` 的**決策樹與連結**是否仍正確（這兩處不複製表，所以通常只需確認連結）。

@@ -23,7 +23,7 @@ _（目前沒有正在做的）_
 > - ~~**P7 先**~~ → ✅ **2026-06-14 完成**（語速切換鈕，見 Done）
 > - ~~**P2 次**~~ → ✅ **2026-06-14 完成**（卡拉 OK 已讀蔓延 trail；視覺定案 2 階 font-color 無背景，見 Done）
 > - ~~**P6**~~ → ✅ **2026-06-15 完成**（編輯風改版：暖紙+rust/amber 拆色、serif 英文閱讀體、拿掉巢狀滾動框、EN/zh 雙聲部分流、reading spine；見 Done）
-> - **P5 壓軸**（下一棒；成本最高／價值最低；⚠️ 重生 dialogue mp3 時**務必連同 `.words.json` 一起刪除重生**，否則卡拉 OK timing 會靜默對不上）
+> - ~~**P5 壓軸**~~ → ✅ **2026-06-15 Step 1（A-minimal）完成**（依講者切換 TTS 聲音，build-only；見 Done）。Step 2（C-hybrid，結構保證不撞聲）視需要再做
 > - 未納入本輪：P2.5、P3、P4（仍在 backlog）
 
 | 順序 | Item | Effort | Depends on | 一句話 |
@@ -32,7 +32,7 @@ _（目前沒有正在做的）_
 | 2 | [P2.5 — Transcript inline vocab popup](#p25--transcript-段落-inline-vocab-popup---effort-m) | M | P1 ✅ | 閱讀流不中斷地查單字（最大閱讀體驗升級） |
 | 3 | [P3 — Vocab filter（熟悉度 / 類別）](#p3--vocab-卡片支援-filter熟悉度--類別---effort-m) | M | — | 快速鎖定要複習的 vocab subset |
 | 4 | [P4 — Flashcard SRS lite](#p4--flash-card-複習模式srs-lite---effort-l) | L | P3 | active recall；填齊 vocab → 複習迴圈 |
-| 5 | [P5 — 依講者切換 TTS 聲音](#p5--依講者切換-tts-聲音--effort-m) | M | — | dialogue lesson 不同角色用不同聲音，聽感更真實（下一棒） |
+| ~~5~~ ✅ | ~~P5 — 依講者切換 TTS 聲音~~ | M | — | **2026-06-15 Step 1 完成**：build-only 多聲音路由（見 Done） |
 | ~~6~~ ✅ | ~~P6 — UI 改版研究：整體閱讀體驗~~ | M | — | **2026-06-15 完成**：編輯風改版（見 Done） |
 
 **排序理由**：
@@ -40,7 +40,8 @@ _（目前沒有正在做的）_
 - ~~**P1.5 緊跟（或並行）**~~ ✅ 2026-06-10 完成（見 Done）
 - ~~**P7（本輪暖身速贏）**~~ ✅ 2026-06-14 完成（見 Done）
 - ~~**P2（卡拉 OK 已讀蔓延）**~~ ✅ 2026-06-14 完成（見 Done）
-- ~~**P6（編輯風 UI 改版）**~~ ✅ 2026-06-15 完成（見 Done）；下一棒 **P5**
+- ~~**P6（編輯風 UI 改版）**~~ ✅ 2026-06-15 完成（見 Done）
+- ~~**P5（依講者切換 TTS 聲音）**~~ ✅ 2026-06-15 Step 1 完成（見 Done）
 - **P2.5**：靠 P1，M 的 popup（閱讀體驗最大躍升，但成本也最高）
 - **P3 → P4 放最後**：vocab 子系統獨立於 lesson 閱讀流；先把 lesson 閱讀體驗閉環，再開 flashcard 戰場
 - **不建議**：跳過 P1 直接做 P2／P2.5（trigger 不明確 → click 行為混亂 → 還是要回頭重構）
@@ -122,22 +123,6 @@ _（目前沒有正在做的）_
   - SRS 演算法不要過度設計，初版「隨機 + 三按鈕 + localStorage」就有 80% 價值
   - **觀察指標**：v1 上線後 N 週內 Cian 主動點開幾次？沒人用就別投資 v2 的演算法升級
 
-### P5 — 依講者切換 TTS 聲音 🎙️　**Effort: M**
-
-- **動機**：[2026-06-10 Cian 回饋] dialogue lesson 中不同角色（如 Ksenia vs Scene）用同一個聲音播放，聽感單調，角色辨識度低。若能依講者自動切換 TTS 聲音，跟讀體驗更接近真實對話，也更容易追蹤誰在說話。
-- **期望行為**：
-  - 依 blockquote 開頭的粗體講者標籤（`**Ksenia (00:00)**`、`**Scene (01:10)**` 等）自動選用對應聲音
-  - 不同講者對應不同 TTS voice（如一個用女聲 A，另一個用女聲 B 或男聲）
-  - 聲音對應表可在 lesson frontmatter 或全域設定中維護
-- **實作切點**：
-  - Repo 已有 msedge-tts 產音訊的流程（見 git log `chore: generate audio ... msedge-tts`），可在產音訊時依講者標籤切換 voice 參數
-  - `generate-audio.mjs` 讀到 blockquote 開頭 `**<speaker>**` 時，查對應表取 voice name，再呼叫 msedge-tts
-  - 預生成 MP3 路徑不變，只是不同 clip 用了不同聲音 — 不影響 runtime 播放邏輯
-- **依賴 / 風險**：
-  - 聲音對應表需人工維護（每個 speaker slug → voice）；新 lesson 若出現新講者需補登
-  - msedge-tts 可用 voice 清單需確認哪些支援中英切換，或哪些聲音適合英文教學場景
-  - 預生成 MP3 才能享受此功能；Web Speech API path 的 voice 切換可視進度另做
-
 ---
 
 ## 💡 Ideas（還沒排優先序）
@@ -147,6 +132,14 @@ _（隨時補）_
 ---
 
 ## ✅ Done
+
+### P5 — 依講者切換 TTS 聲音 🎙️（Step 1：A-minimal）　**完成：2026-06-15**
+
+- **研究**：11-agent workflow（msedge 聲音 survey／替代引擎比較／架構驗證 × 外部事實雙輪交叉驗證 × 3 方案設計 × 對抗式查證）。揭露 roadmap 原樂觀假設的反例：**音檔 hash 只吃文字、講者被剝掉**，所以「不影響 runtime」只在「沒有兩講者共用逐字相同文字」時成立。Cian 裁決：**兩步走先做 A-minimal**（build-only、runtime 零改動、可逆）、引擎留 **msedge-tts**、**多口音配音表**、clip/非真人來源留 Aria 旁白。
+- **落地行為（build-only）**：`generate-audio.mjs` 解析 blockquote 開頭粗體講者標籤 → 查 `app/src/data/speaker-voices.json`（11 角色配音表，全 WordBoundary 安全的標準聲音）指派聲音合成。**hash 仍 text-only → `speech.ts`／manifest／rehype／drift guard 一律不動**，換的只是 `audio/<hash>.mp3` 的聲音 bytes。新增：`speakerSegments`/`resolveVoice`（漸進比對「已知卡司」，非講者粗體自然落到 Aria，毋需 deny-list）、per-voice client cache、`--revoice` flag（force-delete 非預設聲音 clip 再重生）、voice collision `console.warn`。配音：Aria 旁白基準＋ethan/lenny/zane 美男、cat/ksenia/izzy 跨英澳女、front desk/receptionist/guest/guest(cian) 各分配。
+- **已知限制（接受，Step 2 再解）**：兩講者逐字相同文字會撞同一 mp3、只能一個聲音（先到者勝，`console.warn`；今天語料 0 例）。一段含多講者的段落整段用第一講者聲音。結構保證不撞需把 voice 折進 key（runtime 也要改）＝ **Step 2 C-hybrid**，視需要再做。
+- **驗證**：parser fixture 42 個實際標籤＋override 全綠（`npm run test:speaker`）；`--revoice --words=learning-styles` 一鍵重生 **140 個 dialogue mp3（0 fail／0 degrade）＋ learning-styles 7 個卡拉 OK sidecar**；`check:hash-sync` 11+11 綠；`astro build` 154 頁、generated=0；manifest 915；learning-styles 卡拉 OK 以 live preview 數值法驗 4 個 sidecar（span 數吻合、onset 單調遞增、maxOnset < 新音檔時長＝timing 綁新聲音）；0 collision 警告；`/simplify` 4-agent（抽 `leadingStrong` helper、`resolveVoice` 去死 slug＋單次 lookup）。
+- **未做（out of scope）**：Step 2 C-hybrid（voice-aware key）、多講者段落拆段、孤兒 mp3 清理（既有 ~400，與本功能無關）、Azure F0 遷移（留作備援）。
 
 ### P6 — UI 改版：編輯風閱讀體驗 🎨　**完成：2026-06-15**
 
