@@ -14,6 +14,7 @@
     "prebuild": "node scripts/check-audio-hash-sync.mjs && node scripts/generate-audio.mjs",
     "audio:gen": "node scripts/generate-audio.mjs",
     "audio:revoice": "node scripts/generate-audio.mjs --revoice",
+    "audio:prune": "node scripts/prune-audio.mjs",
     "check:hash-sync": "node scripts/check-audio-hash-sync.mjs",
     "test:speaker": "node scripts/test-speaker-parser.mjs"
   },

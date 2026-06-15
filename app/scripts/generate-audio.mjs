@@ -15,6 +15,11 @@
 // Idempotent: content-addressable cache by sha256 of normalized text.
 // Already-generated files are skipped. Edge TTS failures don't fail the
 // build — missing files just fall back to Web Speech at runtime.
+//
+// The manifest is rebuilt from whatever .mp3 are on disk, so it never removes a
+// clip whose source text was edited or deleted. To delete those orphans, run
+// scripts/prune-audio.mjs — it reuses readSpeakableSources() (exported below) for
+// the live hash set, so it can never disagree with this script about what's live.
 
 import process from 'node:process';
 import { readdir, readFile, writeFile, mkdir, stat, unlink } from 'node:fs/promises';
@@ -41,7 +46,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const APP_DIR = resolve(__dirname, '..');                   // english/app/
 const LESSONS_DIR = resolve(APP_DIR, '..', 'lessons');      // english/lessons/
 const VOCAB_DIR = resolve(APP_DIR, '..', 'vocab');          // english/vocab/
-const AUDIO_DIR = resolve(APP_DIR, 'public', 'audio');
+export const AUDIO_DIR = resolve(APP_DIR, 'public', 'audio');
 const MANIFEST_PATH = resolve(APP_DIR, 'src', 'data', 'audio-manifest.json');
 const SPEAKER_VOICES_PATH = resolve(APP_DIR, 'src', 'data', 'speaker-voices.json');
 
@@ -419,19 +424,62 @@ function buildSidecar(tokens, boundaries) {
   return { v: 1, n, t };
 }
 
-// ---- main ----
+// ---- live corpus enumeration (shared SSOT) ----
 
-async function main() {
-  await mkdir(AUDIO_DIR, { recursive: true });
-  await mkdir(dirname(MANIFEST_PATH), { recursive: true });
-
+// Enumerate every LIVE speakable source — lessons/*.md + vocab/*.md, skipping
+// _*.md — parsed into { dir, name, frontmatter, units }. `units` is collectSpeakable
+// over the body plus, for vocab files, the headword itself. This is the single
+// source of truth for "what the corpus contains", shared by main() (what to
+// synthesize) and scripts/prune-audio.mjs (what to keep), so the two can never
+// disagree about which clips are live.
+export async function readSpeakableSources() {
   const lessonFiles = (await readdir(LESSONS_DIR))
     .filter((f) => f.endsWith('.md') && !f.startsWith('_'))
     .map((f) => ({ dir: LESSONS_DIR, name: f }));
   const vocabFiles = (await readdir(VOCAB_DIR))
     .filter((f) => f.endsWith('.md') && !f.startsWith('_'))
     .map((f) => ({ dir: VOCAB_DIR, name: f }));
-  const sources = [...lessonFiles, ...vocabFiles];
+
+  const processor = unified().use(remarkParse).use(remarkGfm);
+  const sources = [];
+  for (const { dir, name } of [...lessonFiles, ...vocabFiles]) {
+    const raw = await readFile(join(dir, name), 'utf-8');
+    const { data: frontmatter, content } = matter(raw);
+    const units = collectSpeakable(processor.parse(content));
+    // For vocab files, also speak the headword itself so the vocab detail page's
+    // <h1> and every vocab-list row can speak it.
+    if (dir === VOCAB_DIR && typeof frontmatter.word === 'string' && frontmatter.word.trim()) {
+      units.push({ kind: 'word', text: frontmatter.word.trim() });
+    }
+    sources.push({ dir, name, frontmatter, units });
+  }
+  return sources;
+}
+
+// Rebuild src/data/audio-manifest.json to reflect whatever non-empty .mp3 are on
+// disk. The manifest is purely a disk reflection — it never prunes (that's what
+// scripts/prune-audio.mjs is for). Exported so prune can refresh it after deleting
+// orphans without duplicating the format. Returns the number of hashes written.
+export async function writeManifest() {
+  const manifest = {};
+  for (const f of await readdir(AUDIO_DIR)) {
+    if (!f.endsWith('.mp3')) continue;
+    const s = await stat(join(AUDIO_DIR, f));
+    if (s.size > 0) manifest[f.replace(/\.mp3$/, '')] = true;
+  }
+  await writeFile(MANIFEST_PATH, JSON.stringify(manifest, null, 2) + '\n');
+  return Object.keys(manifest).length;
+}
+
+// ---- main ----
+
+async function main() {
+  await mkdir(AUDIO_DIR, { recursive: true });
+  await mkdir(dirname(MANIFEST_PATH), { recursive: true });
+
+  const sources = await readSpeakableSources();
+  const lessonCount = sources.filter((s) => s.dir === LESSONS_DIR).length;
+  const vocabCount = sources.length - lessonCount;
 
   // Optional: emit per-word timing sidecars (<hash>.words.json) for lessons whose
   // filename contains the --words=<substr> value. Only paragraph units get them.
@@ -460,19 +508,8 @@ async function main() {
       : undefined;
 
   const allUnits = new Map(); // hash -> { text, kind, sources, wantWords, voice }
-  const processor = unified().use(remarkParse).use(remarkGfm);
 
-  for (const { dir, name } of sources) {
-    const path = join(dir, name);
-    const raw = await readFile(path, 'utf-8');
-    const { data: frontmatter, content } = matter(raw);
-    const ast = processor.parse(content);
-    const units = collectSpeakable(ast);
-    // For vocab files, also generate audio for the headword itself so the
-    // vocab detail page's <h1> and every vocab-list row can speak it.
-    if (dir === VOCAB_DIR && typeof frontmatter.word === 'string' && frontmatter.word.trim()) {
-      units.push({ kind: 'word', text: frontmatter.word.trim() });
-    }
+  for (const { name, frontmatter, units } of sources) {
     const perLessonMap = lowerKeys(frontmatter.speaker_voices);
     for (const u of units) {
       const h = hash(u.text);
@@ -511,7 +548,7 @@ async function main() {
     console.log(`[generate-audio] --revoice: deleted ${removed} file(s) for non-default-voice clips`);
   }
 
-  console.log(`[generate-audio] ${allUnits.size} unique speakable units across ${lessonFiles.length} lessons + ${vocabFiles.length} vocab files`);
+  console.log(`[generate-audio] ${allUnits.size} unique speakable units across ${lessonCount} lessons + ${vocabCount} vocab files`);
 
   let generated = 0;
   let skipped = 0;
@@ -573,16 +610,8 @@ async function main() {
   console.log(`[generate-audio] generated=${generated} skipped=${skipped} failed=${failed} words=${wordsWritten} degraded=${degraded}`);
 
   // Manifest: just the set of hashes that have a file on disk.
-  const manifest = {};
-  const onDisk = await readdir(AUDIO_DIR);
-  for (const f of onDisk) {
-    if (f.endsWith('.mp3')) {
-      const s = await stat(join(AUDIO_DIR, f));
-      if (s.size > 0) manifest[f.replace(/\.mp3$/, '')] = true;
-    }
-  }
-  await writeFile(MANIFEST_PATH, JSON.stringify(manifest, null, 2) + '\n');
-  console.log(`[generate-audio] manifest: ${Object.keys(manifest).length} hashes -> ${MANIFEST_PATH}`);
+  const manifestCount = await writeManifest();
+  console.log(`[generate-audio] manifest: ${manifestCount} hashes -> ${MANIFEST_PATH}`);
 }
 
 // Run main() only when invoked as the entry script (node scripts/generate-audio.mjs).
