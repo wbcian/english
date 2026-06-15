@@ -22,8 +22,8 @@ _（目前沒有正在做的）_
 > 經 2 個獨立 agent（依賴／重工 vs 價值／節奏視角）交叉討論後定案。要點：
 > - ~~**P7 先**~~ → ✅ **2026-06-14 完成**（語速切換鈕，見 Done）
 > - ~~**P2 次**~~ → ✅ **2026-06-14 完成**（卡拉 OK 已讀蔓延 trail；視覺定案 2 階 font-color 無背景，見 Done）
-> - **P6**（研究先行不阻塞，排在 P2 highlight 視覺定案後，把配色一起納入 UI 研究）
-> - **P5 壓軸**（成本最高／價值最低；⚠️ 重生 dialogue mp3 時**務必連同 `.words.json` 一起刪除重生**，否則卡拉 OK timing 會靜默對不上）
+> - ~~**P6**~~ → ✅ **2026-06-15 完成**（編輯風改版：暖紙+rust/amber 拆色、serif 英文閱讀體、拿掉巢狀滾動框、EN/zh 雙聲部分流、reading spine；見 Done）
+> - **P5 壓軸**（下一棒；成本最高／價值最低；⚠️ 重生 dialogue mp3 時**務必連同 `.words.json` 一起刪除重生**，否則卡拉 OK timing 會靜默對不上）
 > - 未納入本輪：P2.5、P3、P4（仍在 backlog）
 
 | 順序 | Item | Effort | Depends on | 一句話 |
@@ -32,14 +32,15 @@ _（目前沒有正在做的）_
 | 2 | [P2.5 — Transcript inline vocab popup](#p25--transcript-段落-inline-vocab-popup---effort-m) | M | P1 ✅ | 閱讀流不中斷地查單字（最大閱讀體驗升級） |
 | 3 | [P3 — Vocab filter（熟悉度 / 類別）](#p3--vocab-卡片支援-filter熟悉度--類別---effort-m) | M | — | 快速鎖定要複習的 vocab subset |
 | 4 | [P4 — Flashcard SRS lite](#p4--flash-card-複習模式srs-lite---effort-l) | L | P3 | active recall；填齊 vocab → 複習迴圈 |
-| 5 | [P5 — 依講者切換 TTS 聲音](#p5--依講者切換-tts-聲音--effort-m) | M | — | dialogue lesson 不同角色用不同聲音，聽感更真實 |
-| 6 | [P6 — UI 改版研究：整體閱讀體驗](#p6--ui-改版研究整體閱讀體驗--effort-m) | M | — | 先研究再動手：typography／版面／密度怎麼調更好讀 |
+| 5 | [P5 — 依講者切換 TTS 聲音](#p5--依講者切換-tts-聲音--effort-m) | M | — | dialogue lesson 不同角色用不同聲音，聽感更真實（下一棒） |
+| ~~6~~ ✅ | ~~P6 — UI 改版研究：整體閱讀體驗~~ | M | — | **2026-06-15 完成**：編輯風改版（見 Done） |
 
 **排序理由**：
 - ~~**P1 先做**~~ ✅ 2026-06-10 完成（見 Done）
 - ~~**P1.5 緊跟（或並行）**~~ ✅ 2026-06-10 完成（見 Done）
 - ~~**P7（本輪暖身速贏）**~~ ✅ 2026-06-14 完成（見 Done）
-- ~~**P2（卡拉 OK 已讀蔓延）**~~ ✅ 2026-06-14 完成（見 Done）；下一棒 **P6**
+- ~~**P2（卡拉 OK 已讀蔓延）**~~ ✅ 2026-06-14 完成（見 Done）
+- ~~**P6（編輯風 UI 改版）**~~ ✅ 2026-06-15 完成（見 Done）；下一棒 **P5**
 - **P2.5**：靠 P1，M 的 popup（閱讀體驗最大躍升，但成本也最高）
 - **P3 → P4 放最後**：vocab 子系統獨立於 lesson 閱讀流；先把 lesson 閱讀體驗閉環，再開 flashcard 戰場
 - **不建議**：跳過 P1 直接做 P2／P2.5（trigger 不明確 → click 行為混亂 → 還是要回頭重構）
@@ -137,20 +138,6 @@ _（目前沒有正在做的）_
   - msedge-tts 可用 voice 清單需確認哪些支援中英切換，或哪些聲音適合英文教學場景
   - 預生成 MP3 才能享受此功能；Web Speech API path 的 voice 切換可視進度另做
 
-### P6 — UI 改版研究：整體閱讀體驗 🎨　**Effort: M**
-
-- **動機**：[2026-06-10 Cian 回饋] 想研究 UI 改版，看怎麼樣能讓整體**更好閱讀**。app 功能逐步到位（P1 播放鈕、P1.5 雙語標題），但視覺層從初版以來沒有整體檢視過——typography、行距、版面密度、配色對長時間閱讀的友善度都值得一輪系統性研究。
-- **期望行為**：
-  - **先研究、後動手**：產出一份改版提案（可附 mockup 或 A/B 截圖比較），列出「現狀問題 → 建議 → 預期效果」，由 Cian 裁決後才實作
-  - 研究面向（不限於）：中英混排的字體與行高、`lesson-body-scroll` 視窗高度與密度、卡片版面的資訊層級、暗色模式對比度、手機窄版的留白
-  - **播放按鈕視覺順帶優化**（次要）：目前 ▶/⏸/↻ 沒跑版、功能 OK，但視覺設計可以更精緻（icon 風格、gutter 內的對齊與大小、hover/playing 狀態的視覺語言）——歸入此次研究一起看，不單獨開工
-- **實作切點**：
-  - 研究階段零程式風險：截圖現狀（桌面/手機、亮/暗）→ 對照可讀性慣例（長文閱讀的 measure、line-height、對比度）→ 提案
-  - 實作階段視提案範圍另估 effort；CSS 集中在 `app/src/layouts/Layout.astro` 全域樣式與各元件 scoped style
-- **依賴 / 風險**：
-  - 與 P2（卡拉 OK highlight）有視覺語言交集——若 P2 先做，highlight 樣式要納入此次研究的範圍一起定調
-  - 「更好閱讀」偏主觀，提案要附截圖比較讓 Cian 能具體選，避免空談原則
-
 ---
 
 ## 💡 Ideas（還沒排優先序）
@@ -160,6 +147,16 @@ _（隨時補）_
 ---
 
 ## ✅ Done
+
+### P6 — UI 改版：編輯風閱讀體驗 🎨　**完成：2026-06-15**
+
+- **研究**：3 designer（編輯排版／資訊架構／低風險打磨）× senior frontend × architecture 交叉討論，產出 3 份可比較的 HTML mock + 可行性審查。Cian 裁決：方向 A（編輯雜誌風／暖紙）、拿掉巢狀滾動框、**系統字型**（不引 web font）、第二色用 **rust**（讓 amber 專屬音訊）。
+- **落地行為（分階段提交）**：
+  - **Phase 1（design tokens）**：暖紙配色（light `--bg #f7f3ea` / dark `#1b1916`）；**色彩語法**＝amber 音訊（播放鈕/trail/播放中左條）、rust `--accent` 導覽/品牌/連結/focus（light `#9a3b12` / dark terracotta `#e2875a`）、CEFR scale 難度（唯一多色例外）。`--speak-highlight` 拆出 `--pill-bg/--pill-fg`（badge/tab count/pos 品牌膠囊），amber wash 僅留 word-tap 播放。系統 serif 英文閱讀體（`--font-en` Charter/Iowan）、編輯型 type scale（serif H1、`article h2` 小字母 rust section label）、表格去密、`#1a1a1a`→`--on-speak` token。全站（index/vocab/lesson）一次到位。
+  - **Phase 2（結構）**：16 篇 lesson 移除 `<div class="lesson-body-scroll">`，正文 blockquote 順流（消滅滾動中滾動、卡拉 OK 亮字不再被切到框外）；新增 `inject-lang.mjs`（build 時對英文 blockquote 蓋 `lang="en"`）驅動 **EN/zh 雙聲部分流**（英文 serif 主聲部、中譯較淡較小 sans 副聲部）；lesson page 加頂部閱讀進度條 + 左側 scroll-spy reading spine（由 `h2[id]` 動態建、≥1200px 顯示、窄螢幕收成進度條）。
+- **karaoke 凍結契約零更動**：`blockquote>p`/`.w`/`data-wi`/`.speaking`/`.is-played-word`/`.speak-btn`/內容定址 hash 全未動；改版只動顏色/字型/版面/IA。`inject-lang` 只加 `lang` 屬性、不碰文字 ⇒ 零 hash drift。
+- **驗證**：每階段 `astro build` 154 頁綠燈、`check-audio-hash-sync` 11+11 parity OK、`generated=0`；亮/暗/手機 × 簡單與密集（9–11 模組）lesson 實機 preview（spine、EN/zh、trail CSS、卡片標題無 regression）；每筆 commit 前 `/simplify` 4-agent 全綠。
+- **明確未做（out of scope）**：web font（Cian 選系統字）、sticky 播放 mini-bar（需在 speech.ts 加 additive event，另開 slice）、整課連播 auto-advance。配色微調空間：rust/amber 在暗色下色相較近，日後可再評估。
 
 ### P2 — 播放音訊時逐字 highlight（卡拉 OK 已讀蔓延）🎧🔦　**完成：2026-06-14**
 

@@ -143,6 +143,8 @@ App 用 Web Speech / 預生成 MP3 朗讀英文。判斷**完全靠 markdown DOM
 **中文 blockquote** 整段只放中文。
 **禁止**在同一個 blockquote 內混排英中。兩個 blockquote 之間要有 markdown 空行（純 `\n\n`），避免 parser 合併。
 
+> ⚙️ **P6 字型分流的副作用**：app 用「speakable 判準」（`length ≥ 4` 且 `cjkRatio < 0.10`）在 build 時對英文 blockquote 蓋 `lang="en"`，英文才會套 serif 主聲部、中文套較淡 sans 副聲部。所以**極短的純英文 blockquote**（如 `> Go!`、`> OK.`）會落在判準外、被當中譯渲染成淡 sans。一般逐字稿都是完整句子不會踩到；若真要單獨一行短英文，補字成完整句即可。
+
 ```markdown
 <!-- ✅ 對 -->
 > Tom Holland recalls his legendary *Lip Sync Battle* episode where he secretly went all out.

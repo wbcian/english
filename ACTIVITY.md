@@ -5,6 +5,11 @@
 
 ---
 
+## 2026-06-15
+- 🎨 **App P6：編輯風 UI 改版**（roadmap P6 → Done）。先由 3 designer（編輯排版／資訊架構／低風險打磨）× senior frontend × architecture 交叉討論，產出 3 份可比較 HTML mock + 可行性審查；Cian 裁決＝方向 A（編輯雜誌風／暖紙）、拿掉巢狀滾動框、系統字型（不引 web font）、第二色 rust（amber 專屬音訊）。落地分階段：**Phase 1** 暖紙配色 + 色彩語法（amber=音訊／rust=導覽／CEFR=難度）+ 系統 serif 英文閱讀體 + 編輯型 type scale + 表格去密 + pill token 去重，全集中 `Layout.astro :root`，全站一致。**Phase 2** 16 篇 lesson 拿掉 `lesson-body-scroll` 正文順流 + 新 rehype `inject-lang.mjs` 驅動 EN/zh 雙聲部分流（英文 serif 主、 中譯淡 sans 副）+ lesson page 加閱讀進度條與左側 scroll-spy reading spine。karaoke 凍結契約零更動（只動顏色/字型/版面/IA，hash 全綠）。每階段 `astro build` 154 頁綠 + hash-sync parity OK + generated=0 + 亮/暗/手機實機 preview + `/simplify` 4-agent 全綠。明確未做：web font、sticky 播放 mini-bar、整課連播。下一棒 P5。
+
+---
+
 ## 2026-06-14
 - 🛠️ **App P2：卡拉 OK「已讀蔓延」逐字 highlight**（roadmap P2 → Done）。MP3 播放時逐字 highlight 從「只亮當前一個字」升級為**進度 trail**，邊界隨 `audio.currentTime` 逐字向前蔓延（落實 06-10 回饋）；pause 凍結、resume 從凍結處續進、ended/Esc/replay/換段全清、無 sidecar 降級。實作：`app/src/scripts/speech.ts`（`trailSpans`+`litIndex` 依 DOM-range delta 上色、`setWordTier` helper、`highlightGen` token 修掉 resume 疊 RAF tick）。sidecar/manifest/產音腳本未動、零 hash drift。經 /simplify + 對抗式正確性 review（修 1 條 stacked-tick）+ live preview 真播實測（trail 不變式全綠）+ `astro build` 154 頁綠燈。範例篇＝`2026-06-01-learning-styles-connected-speech`（唯一全 sidecar 覆蓋）。
 - 🎨 **App P2 視覺定案（同日，2 designer 討論）**：Cian 回饋「3 階太雜、整段背景拿掉、改用 font color」→ 由初版「三段式＋背景」改為 **2 階・純 font color・無背景**。已讀字＝amber 文字（新增 `--speak-read`：亮 `#9a5b06` AA 可讀／暗 `#fbbf24`）、未讀＝一般 `--fg`，當前字併入已讀（顏色邊界＝播放位置）。段落 `.speaking` 背景 wash 移除，改左側 amber 邊條：可朗讀預設 dim(40%)、播放中變亮變粗(4px 實心)——兼作無 sidecar 段落的「正在播」提示。`Layout.astro` 把 `.is-played-word`/`.is-current-word` 同列上色 → 零 runtime 改動。亮/暗截圖驗證。P6 再評估 amber 深淺。下一棒 P6。
