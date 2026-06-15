@@ -95,8 +95,8 @@ const firstSeen = first_seen?.toISOString().slice(0, 10);
     font-size: 1.1rem;
   }
   .pos {
-    background: var(--speak-highlight);
-    color: var(--fg);
+    background: var(--pill-bg);
+    color: var(--pill-fg);
     padding: 2px 8px;
     border-radius: 999px;
     font-size: 0.78em;
@@ -104,9 +104,6 @@ const firstSeen = first_seen?.toISOString().slice(0, 10);
     vertical-align: 0.25em;
     letter-spacing: 0.04em;
     text-transform: lowercase;
-  }
-  @media (prefers-color-scheme: dark) {
-    .pos { color: var(--accent); }
   }
   .zh {
     font-size: 1.15em;

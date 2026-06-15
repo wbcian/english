@@ -28,27 +28,40 @@ const { title } = Astro.props;
 
 <style is:global>
   :root {
-    --bg: #fafaf7;
-    --fg: #1a1a1a;
-    --fg-muted: #555;
-    --accent: #b45309;
-    --speak-accent: #f59e0b;
-    --speak-highlight: #fff7d6;
-    --speak-read: #9a5b06; /* AA-readable deep amber for read-trail TEXT (≈4.9:1 on --bg) */
-    --card-bg: #fff;
-    --card-border: #e5e5e0;
+    /* Warm-paper editorial palette (P6). Colour grammar:
+       amber (--speak-accent/--speak-read/--speak-highlight) = audio/playback,
+       rust (--accent) = navigation / brand / links / focus,
+       CEFR scale (LevelBadge) = difficulty — the sole multi-colour exception. */
+    --bg: #f7f3ea;
+    --fg: #211c15;
+    --fg-muted: #6b6354;
+    --accent: #9a3b12;            /* rust — links / nav / focus / brand */
+    --speak-accent: #f59e0b;      /* amber — play controls + active-paragraph rail */
+    --speak-read: #9a5b06;        /* amber read-trail TEXT (proven; AA on --bg) */
+    --speak-highlight: #fbe6cf;   /* amber wash — word-tap playback ONLY */
+    --card-bg: #fffdf8;
+    --card-border: #e4dcc9;
+    --pill-bg: #ece3d3;           /* warm-neutral brand pill (badge / tab count / pos) */
+    --pill-fg: #6b5333;           /* readable warm brown on --pill-bg */
+    --on-speak: #211c15;          /* readable dark text on the amber --speak-accent fill (both themes) */
+    /* Reading typefaces: serif EN reading face + sans UI chrome.
+       (--font-zh for the zh sub-voice arrives with the Phase 2 EN/zh lang split.) */
+    --font-en: "Charter", "Iowan Old Style", "Source Serif 4", Georgia, serif;
+    --font-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "PingFang TC", "Helvetica Neue", sans-serif;
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #1a1a1a;
-      --fg: #ededed;
-      --fg-muted: #999;
-      --accent: #fbbf24;
-      --speak-accent: #fbbf24;
+      --bg: #1b1916;
+      --fg: #ece5d6;
+      --fg-muted: #9a9180;
+      --accent: #e2875a;          /* rust → terracotta on dark (distinct from gold amber) */
+      --speak-accent: #fbbf24;    /* amber — audio */
+      --speak-read: #fbbf24;      /* bright amber reads cleanly as text on dark bg */
       --speak-highlight: #3a3320;
-      --speak-read: #fbbf24; /* bright amber reads cleanly as text on the dark bg */
-      --card-bg: #242421;
-      --card-border: #3a3a35;
+      --card-bg: #232019;
+      --card-border: #36312a;
+      --pill-bg: #332e24;
+      --pill-fg: #d9b88c;
     }
   }
   * { box-sizing: border-box; }
@@ -57,7 +70,7 @@ const { title } = Astro.props;
     padding: 0;
     background: var(--bg);
     color: var(--fg);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "PingFang TC", "Helvetica Neue", sans-serif;
+    font-family: var(--font-ui);
     font-size: 17px;
     line-height: 1.7;
   }
@@ -107,12 +120,12 @@ const { title } = Astro.props;
     user-select: none;
     -webkit-user-select: none;
   }
-  .speed-btn:hover { color: var(--accent); border-color: var(--speak-accent); }
+  .speed-btn:hover { color: var(--speak-accent); border-color: var(--speak-accent); }
   .speed-btn:focus-visible { outline: 2px solid var(--speak-accent); outline-offset: 1px; }
   .speed-btn.is-active {
     background: var(--speak-accent);
     border-color: var(--speak-accent);
-    color: #1a1a1a; /* readable on amber in both themes */
+    color: var(--on-speak); /* readable on amber in both themes */
     font-weight: 600;
   }
   @media (max-width: 640px) {
@@ -129,9 +142,25 @@ const { title } = Astro.props;
     header { padding: 16px 16px 8px; }
     html, body { font-size: 16px; }
   }
-  h1 { font-size: 1.8rem; line-height: 1.3; margin: 0.5em 0 0.3em; }
-  h2 { font-size: 1.35rem; margin: 1.6em 0 0.5em; border-bottom: 1px solid var(--card-border); padding-bottom: 0.3em; }
-  h3 { font-size: 1.1rem; margin: 1.4em 0 0.4em; }
+  /* Editorial type hierarchy: serif display H1, quiet small-caps section labels
+     (H2) with a hairline rule above instead of an equal-weight underline, so the
+     up-to-11-module lessons read as a sequence of sections, not a flat stack. */
+  h1 {
+    font-family: var(--font-en);
+    font-size: 2.2rem; font-weight: 600; line-height: 1.22;
+    letter-spacing: -0.01em; margin: 0.3em 0 0.4em;
+  }
+  /* Scoped to lesson/vocab CONTENT headings only — not site-wide — so the
+     small-caps label style never leaks into component headings like the
+     LessonCard title (which is an <h2 class="topic">). */
+  article h2 {
+    font-family: var(--font-ui);
+    font-size: 0.85rem; font-weight: 600; line-height: 1.4;
+    text-transform: uppercase; letter-spacing: 0.09em; color: var(--accent);
+    margin: 2.6em 0 0.8em; padding-top: 1.1em;
+    border-top: 1px solid var(--card-border);
+  }
+  article h3 { font-family: var(--font-ui); font-size: 1.05rem; font-weight: 600; margin: 1.7em 0 0.4em; }
   p { margin: 0.8em 0; }
   a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
   a:hover { text-decoration: none; }
@@ -146,16 +175,27 @@ const { title } = Astro.props;
   table {
     width: 100%;
     border-collapse: collapse;
-    margin: 1em 0;
-    font-size: 0.95em;
+    margin: 1.1em 0;
+    font-size: 0.92em;
+    font-family: var(--font-ui);
   }
+  /* De-densified reference tables: a warm header band + row separators only,
+     no full gridlines — they read as lists, not spreadsheets. */
   th, td {
-    border: 1px solid var(--card-border);
-    padding: 8px 10px;
+    border: 0;
+    border-bottom: 1px solid var(--card-border);
+    padding: 10px 12px;
     text-align: left;
     vertical-align: top;
   }
-  th { background: var(--card-border); }
+  th {
+    background: var(--pill-bg);
+    color: var(--pill-fg);
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
   blockquote {
     border-left: 3px solid var(--card-border);
     margin: 1em 0;
@@ -163,16 +203,19 @@ const { title } = Astro.props;
     color: var(--fg);
     background: transparent;
   }
-  blockquote > p { margin: 0.5em 0; }
+  /* Reading body: the English transcript/summary blockquotes are the protagonist
+     text, set in the serif reading face at a comfortable reading size. */
+  blockquote > p { margin: 0.5em 0; font-family: var(--font-en); font-size: 1.06rem; line-height: 1.72; }
   hr { border: 0; border-top: 1px solid var(--card-border); margin: 2em 0; }
 
   /* Source 一行小字 subtitle — 緊接 H1 下方（作者手寫 <p class="lesson-subtitle">） */
   .lesson-subtitle {
-    margin: -0.2em 0 1.4em;
-    font-size: 0.82em;
+    margin: 0.2em 0 1.7em;
+    font-size: 1.02rem;
     color: var(--fg-muted);
-    font-style: italic;
-    line-height: 1.5;
+    font-style: normal;
+    line-height: 1.55;
+    max-width: 620px;
   }
 
   /* 正文（逐字稿 / Close Reading）固定高度可滾動視窗，避免畫面過長。
@@ -289,7 +332,7 @@ const { title } = Astro.props;
     transition: background-color 0.25s;
   }
   .speakable-word:hover {
-    text-decoration-color: var(--accent);
+    text-decoration-color: var(--speak-accent);
   }
   .speakable-word.speaking {
     background-color: var(--speak-highlight);

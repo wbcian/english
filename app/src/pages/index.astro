@@ -142,12 +142,8 @@ const sortedVocab = vocab.slice().sort((a, b) => {
   }
   #tab-lessons:checked ~ .tab-bar #label-lessons .count,
   #tab-vocab:checked ~ .tab-bar #label-vocab .count {
-    background: var(--speak-highlight);
-    color: var(--fg);
-  }
-  @media (prefers-color-scheme: dark) {
-    #tab-lessons:checked ~ .tab-bar #label-lessons .count,
-    #tab-vocab:checked ~ .tab-bar #label-vocab .count { color: var(--accent); }
+    background: var(--pill-bg);
+    color: var(--pill-fg);
   }
 
   .tab-panel { display: none; }
