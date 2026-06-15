@@ -218,20 +218,9 @@ const { title } = Astro.props;
     max-width: 620px;
   }
 
-  /* 正文（逐字稿 / Close Reading）固定高度可滾動視窗，避免畫面過長。
-     內部 blockquote 維持既有 .speakable 朗讀（全域 blockquote > p selector 照常生效）。 */
-  .lesson-body-scroll {
-    max-height: 62vh;
-    overflow-y: auto;
-    margin: 1.2em 0;
-    padding: 0.6em 1.1em 0.6em 1.4em;
-    border: 1px solid var(--card-border);
-    border-radius: 10px;
-    background: var(--card-bg);
-    overscroll-behavior: contain;
-  }
-  .lesson-body-scroll > :first-child { margin-top: 0; }
-  .lesson-body-scroll > :last-child { margin-bottom: 0; }
+  /* P6: the nested fixed-height 正文 scroll box (.lesson-body-scroll) was removed —
+     the transcript now flows in the single page scroll (no scroll-within-scroll,
+     and the karaoke read-trail can never advance below an inner fold). */
 
   /* Speakable paragraphs — a left rail in the gutter marks playability (dim) and
      the active/playing paragraph (bright + 1px thicker). No background wash: the
