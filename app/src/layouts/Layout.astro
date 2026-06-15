@@ -44,9 +44,10 @@ const { title } = Astro.props;
     --pill-bg: #ece3d3;           /* warm-neutral brand pill (badge / tab count / pos) */
     --pill-fg: #6b5333;           /* readable warm brown on --pill-bg */
     --on-speak: #211c15;          /* readable dark text on the amber --speak-accent fill (both themes) */
-    /* Reading typefaces: serif EN reading face + sans UI chrome.
-       (--font-zh for the zh sub-voice arrives with the Phase 2 EN/zh lang split.) */
+    /* Reading typefaces: serif EN reading protagonist, sans zh sub-voice, sans UI.
+       (font stacks are theme-independent — defined once in the light :root.) */
     --font-en: "Charter", "Iowan Old Style", "Source Serif 4", Georgia, serif;
+    --font-zh: "PingFang TC", "Noto Sans TC", sans-serif;
     --font-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "PingFang TC", "Helvetica Neue", sans-serif;
   }
   @media (prefers-color-scheme: dark) {
@@ -159,6 +160,7 @@ const { title } = Astro.props;
     text-transform: uppercase; letter-spacing: 0.09em; color: var(--accent);
     margin: 2.6em 0 0.8em; padding-top: 1.1em;
     border-top: 1px solid var(--card-border);
+    scroll-margin-top: 1.5rem; /* spine anchor-jumps land below the viewport top */
   }
   article h3 { font-family: var(--font-ui); font-size: 1.05rem; font-weight: 600; margin: 1.7em 0 0.4em; }
   p { margin: 0.8em 0; }
@@ -203,9 +205,14 @@ const { title } = Astro.props;
     color: var(--fg);
     background: transparent;
   }
-  /* Reading body: the English transcript/summary blockquotes are the protagonist
-     text, set in the serif reading face at a comfortable reading size. */
-  blockquote > p { margin: 0.5em 0; font-family: var(--font-en); font-size: 1.06rem; line-height: 1.72; }
+  /* Reading body — EN/zh two-voice split. inject-lang.mjs stamps lang="en" on the
+     English (speakable) blockquotes at build time, so the English transcript/summary
+     reads as the serif protagonist while the Chinese translation blockquote drops to
+     a quieter, smaller sans sub-voice — the eye can tell the learned text from the
+     crutch at a glance. Build-time stamp ⇒ no font FOUC. */
+  blockquote > p { margin: 0.5em 0; line-height: 1.72; }
+  blockquote[lang="en"] > p { font-family: var(--font-en); font-size: 1.06rem; }
+  blockquote:not([lang="en"]) > p { font-family: var(--font-zh); font-size: 0.97rem; color: var(--fg-muted); }
   hr { border: 0; border-top: 1px solid var(--card-border); margin: 2em 0; }
 
   /* Source 一行小字 subtitle — 緊接 H1 下方（作者手寫 <p class="lesson-subtitle">） */

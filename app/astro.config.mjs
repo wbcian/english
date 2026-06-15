@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import rehypeInjectTableLabels from './src/rehype/inject-table-labels.mjs';
+import rehypeInjectLang from './src/rehype/inject-lang.mjs';
 import rehypeInjectWordSpans from './src/rehype/inject-word-spans.mjs';
 import remarkRewriteVocabLinks from './src/remark/rewrite-vocab-links.mjs';
 
@@ -13,6 +14,6 @@ export default defineConfig({
   trailingSlash: 'always',
   markdown: {
     remarkPlugins: [[remarkRewriteVocabLinks, { base: BASE }]],
-    rehypePlugins: [rehypeInjectTableLabels, rehypeInjectWordSpans],
+    rehypePlugins: [rehypeInjectTableLabels, rehypeInjectLang, rehypeInjectWordSpans],
   },
 });

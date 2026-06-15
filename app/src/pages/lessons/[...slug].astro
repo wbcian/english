@@ -16,6 +16,8 @@ const dateStr = date.toISOString().slice(0, 10);
 ---
 
 <Layout title={`${topic} · English Lessons`}>
+  <div class="reading-progress" aria-hidden="true"><span class="reading-progress__bar"></span></div>
+  <nav class="reading-spine" aria-label="本課章節"></nav>
   <article>
     <div class="lesson-meta">
       <time>{dateStr}</time>
@@ -28,6 +30,57 @@ const dateStr = date.toISOString().slice(0, 10);
 
 <script>
   import '../../scripts/speech';
+</script>
+
+<script>
+  // Reading wayfinding for the (now single-scroll, up-to-11-module) lesson page:
+  // a top progress bar (always) + a left scroll-spy spine built from the rendered
+  // h2[id] anchors (wide screens only — collapses to just the progress bar below).
+  // No invented IDs, no authored zones: purely derived from the content headings.
+  function initReadingSpine() {
+    const heads = Array.from(document.querySelectorAll<HTMLElement>('article h2[id]'));
+    const bar = document.querySelector<HTMLElement>('.reading-progress__bar');
+    const spine = document.querySelector<HTMLElement>('.reading-spine');
+    if (!heads.length) {
+      spine?.remove();
+      return;
+    }
+
+    const links: HTMLAnchorElement[] = [];
+    if (spine) {
+      for (const h of heads) {
+        const a = document.createElement('a');
+        a.href = `#${h.id}`;
+        a.textContent = h.textContent;
+        a.dataset.target = h.id;
+        spine.appendChild(a);
+        links.push(a);
+      }
+    }
+
+    let ticking = false;
+    const update = () => {
+      ticking = false;
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      if (bar) bar.style.width = `${max > 0 ? Math.min(100, (window.scrollY / max) * 100) : 0}%`;
+      let activeId = heads[0].id;
+      for (const h of heads) {
+        if (h.getBoundingClientRect().top - 120 <= 0) activeId = h.id;
+        else break;
+      }
+      for (const a of links) a.classList.toggle('is-active', a.dataset.target === activeId);
+    };
+    const onScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(update);
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    update();
+  }
+  initReadingSpine();
 </script>
 
 <style>
@@ -48,4 +101,58 @@ const dateStr = date.toISOString().slice(0, 10);
     font-size: 0.9em;
   }
   article { padding-bottom: 4em; }
+
+  /* Top reading-progress bar — always present; the primary wayfinding cue on
+     narrow screens where the spine is hidden. */
+  .reading-progress {
+    position: fixed;
+    inset: 0 0 auto 0;
+    height: 3px;
+    z-index: 50;
+    pointer-events: none;
+  }
+  .reading-progress__bar {
+    display: block;
+    height: 100%;
+    width: 0;
+    background: var(--accent);
+    transition: width 0.1s linear;
+  }
+
+  /* Left scroll-spy spine — sits in the margin beside the 760px reading column,
+     only when the viewport is wide enough to hold it without crowding the text. */
+  .reading-spine {
+    position: fixed;
+    top: 92px;
+    left: calc(50% - 560px);
+    width: 178px;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    font-family: var(--font-ui);
+    font-size: 0.8rem;
+    line-height: 1.4;
+    display: none;
+  }
+  @media (min-width: 1200px) {
+    .reading-spine { display: block; }
+  }
+  /* :global — the spine's <a> links are created at runtime by the script, so they
+     don't carry Astro's scoped-style attribute; scope only the container. */
+  .reading-spine :global(a) {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--fg-muted);
+    text-decoration: none;
+    padding: 6px 0 6px 12px;
+    border-left: 2px solid var(--card-border);
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .reading-spine :global(a:hover) { color: var(--fg); }
+  .reading-spine :global(a.is-active) {
+    color: var(--accent);
+    border-left-color: var(--accent);
+    font-weight: 600;
+  }
 </style>

@@ -16,6 +16,7 @@ import {
   isSpeakableParagraphText,
   hash,
 } from '../lib/word-tokens.mjs';
+import { paragraphSpeakableText } from './hast-speakable.mjs';
 
 // Load the audio manifest once so the assertion can confirm a wrapped paragraph
 // still resolves to its MP3. Read via fs (not a JSON import) to avoid import-
@@ -23,26 +24,6 @@ import {
 const manifest = JSON.parse(
   readFileSync(new URL('../data/audio-manifest.json', import.meta.url), 'utf-8'),
 );
-
-function hastText(node) {
-  if (!node) return '';
-  if (node.type === 'text') return node.value ?? '';
-  if (Array.isArray(node.children)) return node.children.map(hastText).join('');
-  return '';
-}
-
-// Speakable text = concat of all children EXCEPT a leading <strong>, then collapse
-// whitespace. Mirror of getSpeakableText (speech.ts) / paragraphSpeakableText
-// (generate-audio.mjs) but over the HAST tree.
-function paragraphSpeakableText(p) {
-  const kids = p.children ?? [];
-  const skip = kids[0]?.type === 'element' && kids[0].tagName === 'strong';
-  let s = '';
-  kids.forEach((c, i) => {
-    if (!(skip && i === 0)) s += hastText(c);
-  });
-  return s.replace(/\s+/g, ' ').trim();
-}
 
 export default function rehypeInjectWordSpans() {
   return (tree) => {
