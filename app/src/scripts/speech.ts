@@ -649,6 +649,10 @@ function setPlayAllToggle(state: 'playing' | 'paused'): void {
 function showPlayAllBar(): void {
   if (playAllEntryBtn) playAllEntryBtn.hidden = true;
   if (playAllBar) playAllBar.hidden = false;
+  // Hide the per-paragraph inline controls while a sequence plays — the bar is
+  // the sole control; "now playing" is shown by the amber rail + auto-scroll +
+  // karaoke (CSS hides .speak-btns under body.play-all-active).
+  document.body.classList.add('play-all-active');
   setPlayAllToggle('playing');
   // progress is rendered by the immediately-following playAllStep(0).
 }
@@ -660,6 +664,7 @@ function resetPlayAll(): void {
   playAllPaused = false;
   if (playAllBar) playAllBar.hidden = true;
   if (playAllEntryBtn) playAllEntryBtn.hidden = false;
+  document.body.classList.remove('play-all-active'); // restore inline controls
 }
 
 function playAllStep(i: number): void {
