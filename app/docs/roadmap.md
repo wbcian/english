@@ -140,6 +140,7 @@ _（隨時補）_
 - **驗證**：`astro check` 0 error、`astro build` 154 頁綠。live preview 全狀態機實測（stub Audio 驅動 + 真音檔）：起播→11 段逐段前進→最後一段自然收尾回 idle、停止鈕、Esc、中途點單段＝軟離開且改播該段、浮動列暫停/續播 morph；**真音檔 E2E**：第 1 段播放（currentTime 前進）→ seek 近結尾自然 `ended` → 自動進第 2 段新 clip（換 Izzy en-GB 聲音）。亮色截圖確認入口 amber pill 與底部浮動列。`/simplify` 4-agent（抽 pause/resume 共用 helper、去重複 progress 呼叫；其餘評估後維持）。
 - **v1.1 微調（同日）**：入口鈕改 **icon-only**（`▶` 圓鈕）且**常駐不隱藏**——原本播放時隱藏入口鈕會讓正文 reflow 晃動，改成只有 `position:fixed` 浮動列出現/消失、入口維持原位（播放中點它＝no-op，靠 `startPlayAll` guard）。浮動列加「**◎ 回到播放位置**」鈕：使用者來回捲動後一鍵把正在播的段落捲回畫面中央（與 auto-advance 共用 `scrollToCurrent`）。`/simplify` 4-agent 全 no findings。
 - **v1.2 微調（同日）**：入口鈕移到 `.lesson-meta`（日期·分級那列）尾端、縮成 23px 小圓鈕（`flex:none` 防壓縮）＝不再佔獨立一行；段落 inline 播放鈕略放大（`--speak-btn-w` 1.15→1.3em、字 0.85→0.95em）；**暫停時 reset（↻）改疊在 play（▶）正下方**（原本並排），用共用 `--speak-stack` 鏡像偏移 + transform transition 帶滑出動畫。`/simplify` 移除 dead `vertical-align`、把疊放偏移收斂成 `--speak-stack` 變數。live preview 數值＋截圖驗（meta 列 23×23、replay 在 play 下方同欄、inline 字 16px）。
+- **v1.3 微調（同日）**：段落 inline 控制多一顆 **stop（■）**——idle 只 ▶、playing ⏸＋■、paused ▶＋↻＋■，三鈕改用 `.speak-btns` **flex-column 容器**自動置中可見集（取代舊 magic-offset、順手退掉 `--speak-stack`，1/2/3 顆都不用 per-state CSS）。入口鈕改回**點擊後消失**、狀態交由浮動 bar（在 `.lesson-meta` 列尾端隱藏 → 實測 titleShift 0px、無 reflow）。`/simplify` 把 stop／Esc／bar／resume-reject 四處硬停統一成 `hardStop()`。實測：單段 stop→idle、Esc→idle、連播中點段 stop→離開序列＋停＋入口復原；3 鈕堆疊不重疊、同欄、貼右 gutter。
 - **未做（留待）**：完整 sticky mini-bar（整篇進度條/拖曳）、跨 lesson 連播、單段控制與浮動列並存的視覺去重。
 
 ### P5 — 依講者切換 TTS 聲音 🎙️（Step 1：A-minimal）　**完成：2026-06-15**
