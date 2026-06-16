@@ -481,13 +481,23 @@ async function main() {
   const lessonCount = sources.filter((s) => s.dir === LESSONS_DIR).length;
   const vocabCount = sources.length - lessonCount;
 
-  // Optional: emit per-word timing sidecars (<hash>.words.json) for lessons whose
-  // filename contains the --words=<substr> value. Only paragraph units get them.
-  // Without the flag, behaviour is unchanged (no sidecars, plain client only).
+  // Optional: emit per-word timing sidecars (<hash>.words.json) for any source
+  // file (lesson or vocab) whose filename contains the --words=<substr> value.
+  // Only paragraph units get them (vocab "## Examples" blockquotes count; word
+  // units do not — see the gate below). Without the flag, behaviour is unchanged
+  // (no sidecars, plain client only).
   //   node scripts/generate-audio.mjs --words=2026-06-01-learning-styles-connected-speech
   const wordsArg = process.argv.find((a) => a.startsWith('--words='))?.slice('--words='.length);
-  const wantsWordsFor = (name) => !!wordsArg && name.includes(wordsArg);
-  if (wordsArg) console.log(`[generate-audio] word-timing sidecars for files matching "${wordsArg}"`);
+  // --words-all: emit sidecars for EVERY speakable paragraph (current + future),
+  // across lessons AND vocab "## Examples" blockquotes, so karaoke never silently
+  // regresses on new content. Preferred over a brittle date/filename substring like
+  // --words=2026-. The `u.kind === 'paragraph'` half of the wantWords gate below
+  // still excludes only WORD units (vocab table rows + headwords), not example
+  // blockquotes.
+  const wordsAll = process.argv.includes('--words-all');
+  const wantsWordsFor = (name) => wordsAll || (!!wordsArg && name.includes(wordsArg));
+  if (wordsAll) console.log('[generate-audio] word-timing sidecars for ALL speakable paragraphs');
+  else if (wordsArg) console.log(`[generate-audio] word-timing sidecars for files matching "${wordsArg}"`);
 
   // --revoice: force-delete the mp3 (+ sidecar) of every clip whose resolved
   // speaker voice differs from the default, so the synth loop below re-renders
