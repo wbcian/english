@@ -133,6 +133,13 @@ _（隨時補）_
 
 ## ✅ Done
 
+### P8 — 播放整篇（lesson 連播 / play-all）▶️📚　**完成：2026-06-16**
+
+- **落地行為**：lesson 正文頂部一顆 `▶ 播放整篇`（idle 入口；vocab 頁不出現）。按下 → 依 DOM 順序連播所有 `blockquote > p.speakable`，每段自動 `scrollIntoView` 置中、`.speaking` 高亮＋卡拉 OK 自動沿用，多聲音由各段既有 mp3 自帶（dialogue 連播像一齣對白）。**控制 UI**：idle 頂部鈕；**播放中換成底部浮動控制**（`fixed`，沿用 no-voice toast 定位）——主鈕 morph `⏸`/`▶繼續` ＋ `■停止` ＋ `第 N / M 段` 進度，隨捲動恆可見；停止/播完收起回入口鈕（idle/active 互斥、狀態單一來源）。**中斷**：停止鈕 & Esc＝硬停（拆音回 idle）；手動點任一段/vocab 字＝軟離開連播（不碰音訊，交回該控制）；浮動列暫停＝凍結序列、再按從同段續播。
+- **實作**：`app/src/scripts/speech.ts`——`speakText/playAudioFile/speakViaWebSpeech` 穿 `onDone?`（只在自然播完觸發：MP3 `ended`、WS 末段 `onend`、WS 無語音 early-return 跳過；error→WS fallback 帶下去；teardown 走 `error`/`teardownAudios` 故不誤觸）。module-level 編排器（`playAll*` 狀態 + `start/step/advance` + 共用 `resetPlayAll`；硬停＝reset+clearCurrent、軟離開＝`exitPlayAll`、Esc＝clearCurrent+exitPlayAll）。`handlePlayBtnClick/handleReplayBtnClick/wireOneSpeakableWord` 開頭軟離開。`/simplify` 抽出共用 `pauseCurrent`/`resumeCurrent`（單段與連播暫停/續播同一份，含 karaoke restart）。`app/src/layouts/Layout.astro`——`.play-all-*` CSS。**per-clip 機制（hash/karaoke/manifest/sidecar）零改動**，純疊一層。
+- **驗證**：`astro check` 0 error、`astro build` 154 頁綠。live preview 全狀態機實測（stub Audio 驅動 + 真音檔）：起播→11 段逐段前進→最後一段自然收尾回 idle、停止鈕、Esc、中途點單段＝軟離開且改播該段、浮動列暫停/續播 morph；**真音檔 E2E**：第 1 段播放（currentTime 前進）→ seek 近結尾自然 `ended` → 自動進第 2 段新 clip（換 Izzy en-GB 聲音）。亮色截圖確認入口 amber pill 與底部浮動列。`/simplify` 4-agent（抽 pause/resume 共用 helper、去重複 progress 呼叫；其餘評估後維持）。
+- **未做（留待）**：完整 sticky mini-bar（整篇進度條/拖曳）、跨 lesson 連播、單段控制與浮動列並存的視覺去重。
+
 ### P5 — 依講者切換 TTS 聲音 🎙️（Step 1：A-minimal）　**完成：2026-06-15**
 
 - **研究**：11-agent workflow（msedge 聲音 survey／替代引擎比較／架構驗證 × 外部事實雙輪交叉驗證 × 3 方案設計 × 對抗式查證）。揭露 roadmap 原樂觀假設的反例：**音檔 hash 只吃文字、講者被剝掉**，所以「不影響 runtime」只在「沒有兩講者共用逐字相同文字」時成立。Cian 裁決：**兩步走先做 A-minimal**（build-only、runtime 零改動、可逆）、引擎留 **msedge-tts**、**多口音配音表**、clip/非真人來源留 Aria 旁白。
