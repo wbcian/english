@@ -1,6 +1,7 @@
 #!/usr/bin/env node
-// Delete ORPHAN audio: public/audio/<hash>.mp3 (+ its sibling <hash>.words.json)
-// whose hash is no longer produced by any current lesson/vocab source.
+// Delete ORPHAN audio: public/audio/<hash>.mp3 (+ its siblings <hash>.words.json
+// and <hash>.words.skip) whose hash is no longer produced by any current
+// lesson/vocab source.
 //
 // The generate-audio pipeline is content-addressed, but its manifest is rebuilt
 // from whatever .mp3 are on disk, so it NEVER removes a clip whose source text was
@@ -25,8 +26,9 @@ import { join } from 'node:path';
 import { hash } from '../src/lib/word-tokens.mjs';
 import { AUDIO_DIR, readSpeakableSources, writeManifest } from './generate-audio.mjs';
 
-// <hash>.mp3 and <hash>.words.json, where <hash> is the 12-hex content address.
-const AUDIO_FILE_RE = /^([0-9a-f]{12})\.(?:mp3|words\.json)$/;
+// <hash>.mp3, <hash>.words.json (karaoke timings), or <hash>.words.skip (degrade
+// marker), where <hash> is the 12-hex content address.
+const AUDIO_FILE_RE = /^([0-9a-f]{12})\.(?:mp3|words\.json|words\.skip)$/;
 
 async function main() {
   const confirm = process.argv.includes('--confirm') || process.argv.includes('--yes');

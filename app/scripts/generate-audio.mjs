@@ -10,6 +10,8 @@
 //
 // Output:
 //   - app/public/audio/<sha256-12>.mp3            (one per unique text)
+//   - app/public/audio/<sha256-12>.words.json     (karaoke word timings, when --words[-all] aligns)
+//   - app/public/audio/<sha256-12>.words.skip     (degrade marker: alignment failed; skip on re-run)
 //   - app/src/data/audio-manifest.json            { "<hash>": true, ... }
 //
 // Idempotent: content-addressable cache by sha256 of normalized text.
@@ -548,7 +550,11 @@ async function main() {
     let removed = 0;
     for (const [h, unit] of allUnits) {
       if (unit.voice === def) continue;
-      for (const p of [join(AUDIO_DIR, `${h}.mp3`), join(AUDIO_DIR, `${h}.words.json`)]) {
+      for (const p of [
+        join(AUDIO_DIR, `${h}.mp3`),
+        join(AUDIO_DIR, `${h}.words.json`),
+        join(AUDIO_DIR, `${h}.words.skip`), // stale degrade marker — clear it so a re-voiced clip can re-align
+      ]) {
         if (existsSync(p)) {
           await unlink(p);
           removed++;
@@ -570,6 +576,7 @@ async function main() {
   for (const [h, unit] of entries) {
     const outPath = join(AUDIO_DIR, `${h}.mp3`);
     const sidecarPath = join(AUDIO_DIR, `${h}.words.json`);
+    const skipPath = join(AUDIO_DIR, `${h}.words.skip`);
 
     let mp3Ok = false;
     if (existsSync(outPath)) {
@@ -593,9 +600,12 @@ async function main() {
       continue;
     }
 
-    // Words path: a clip needs BOTH a valid MP3 and a sidecar. Synthesize
-    // (without overwriting a valid MP3) whenever the sidecar is missing.
-    if (mp3Ok && existsSync(sidecarPath)) {
+    // Words path: a clip is "done" with a valid MP3 plus EITHER a real sidecar
+    // OR a degrade marker (<hash>.words.skip), written when alignment fails. The
+    // marker persists the degrade decision so a known-unalignable clip is skipped
+    // like a completed one — otherwise every build re-runs a doomed TTS call that
+    // only degrades again. --revoice / a text edit (→ orphan prune) clear it.
+    if (mp3Ok && (existsSync(sidecarPath) || existsSync(skipPath))) {
       skipped++;
       continue;
     }
@@ -605,11 +615,17 @@ async function main() {
       const sidecar = buildSidecar(unit.tokens ?? [], boundaries);
       if (sidecar) {
         await writeFile(sidecarPath, JSON.stringify(sidecar) + '\n');
+        if (existsSync(skipPath)) await unlink(skipPath); // re-aligned → drop stale degrade marker
         wordsWritten++;
         process.stdout.write(`  [words] ${h} ${sidecar.t.filter(Boolean).length}/${sidecar.n} aligned · ${unit.text.slice(0, 40).replace(/\s+/g, ' ')}\n`);
       } else {
+        // Record the degrade (the skip predicate above explains why this persists).
+        // The runtime never fetches .words.skip → 404 → whole-paragraph highlight,
+        // exactly as when no sidecar existed.
+        await writeFile(skipPath, '{"degraded":true}\n');
+        if (existsSync(sidecarPath)) await unlink(sidecarPath); // drop a stale sidecar (only possible if the mp3 was zeroed since)
         degraded++;
-        console.warn(`[words] DEGRADE ${h}: alignment failed -> no sidecar (${unit.text.slice(0, 44).replace(/\s+/g, ' ')})`);
+        console.warn(`[words] DEGRADE ${h}: alignment failed -> wrote skip marker (${unit.text.slice(0, 44).replace(/\s+/g, ' ')})`);
       }
     } catch (err) {
       failed++;
