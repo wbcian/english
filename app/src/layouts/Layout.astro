@@ -133,6 +133,81 @@ const { title } = Astro.props;
     .speed-control__label { display: none; } /* save header room on narrow screens */
     .speed-btn { padding: 3px 5px; }
   }
+
+  /* Play-all (lesson 連播) — injected by speech.ts. Idle: a top entry button.
+     Active: a floating bar that stays visible through scroll (the two are
+     mutually exclusive). Amber = audio, matching the per-paragraph controls. */
+  .play-all-entry {
+    all: unset;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-ui);
+    font-size: 0.9em;
+    line-height: 1;
+    margin: 6px 0 4px;
+    padding: 7px 16px;
+    border-radius: 999px;
+    color: var(--on-speak);
+    background: var(--speak-accent);
+    border: 1px solid var(--speak-accent);
+    transition: opacity 0.15s;
+  }
+  .play-all-entry[hidden] { display: none; }
+  .play-all-entry:hover { opacity: 0.88; }
+  .play-all-entry:focus-visible { outline: 2px solid var(--speak-accent); outline-offset: 2px; }
+
+  .play-all-bar {
+    position: fixed;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 60;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 7px 12px 7px 8px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 999px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+    font-family: var(--font-ui);
+  }
+  .play-all-bar[hidden] { display: none; }
+  .play-all-bar__toggle,
+  .play-all-bar__stop {
+    all: unset;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 0.85em;
+    line-height: 1;
+    border: 1px solid var(--card-border);
+    transition: color 0.15s, background-color 0.15s, border-color 0.15s;
+  }
+  .play-all-bar__toggle {
+    background: var(--speak-accent);
+    border-color: var(--speak-accent);
+    color: var(--on-speak);
+  }
+  .play-all-bar__toggle:focus-visible,
+  .play-all-bar__stop:focus-visible { outline: 2px solid var(--speak-accent); outline-offset: 1px; }
+  .play-all-bar__stop { color: var(--fg-muted); }
+  .play-all-bar__stop:hover { color: var(--accent); border-color: var(--accent); }
+  .play-all-bar__progress {
+    color: var(--fg-muted);
+    font-size: 0.82em;
+    padding-right: 4px;
+    min-width: 62px;
+    white-space: nowrap;
+  }
   main {
     max-width: 760px;
     margin: 0 auto;

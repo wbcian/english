@@ -338,7 +338,7 @@ function clearCurrent(): void {
   currentEl = null;
 }
 
-function playAudioFile(src: string, el: HTMLElement, hash: string): void {
+function playAudioFile(src: string, el: HTMLElement, hash: string, onDone?: () => void): void {
   clearCurrent();
   const audio = new Audio(src);
   audio.preload = 'auto';
@@ -361,7 +361,10 @@ function playAudioFile(src: string, el: HTMLElement, hash: string): void {
     currentAudio = null;
     if (currentEl === el) currentEl = null;
   };
-  audio.addEventListener('ended', cleanup);
+  // Natural end → clean up, then signal completion (drives play-all advance).
+  // A deliberate teardown fires 'error' (src=''), not 'ended', so onDone never
+  // fires on stop.
+  audio.addEventListener('ended', () => { cleanup(); onDone?.(); });
   audio.addEventListener('error', () => {
     // Only fall back to Web Speech on a GENUINE load/decode failure — not when
     // clearCurrent() deliberately tore this clip down (it sets src='', which
@@ -372,7 +375,8 @@ function playAudioFile(src: string, el: HTMLElement, hash: string): void {
     const intentional = teardownAudios.has(audio);
     teardownAudios.delete(audio);
     cleanup();
-    if (!intentional) void speakViaWebSpeech(getElText(el), el);
+    // Carry onDone into the fallback so play-all still advances after Web Speech.
+    if (!intentional) void speakViaWebSpeech(getElText(el), el, onDone);
   });
 
   void audio.play().catch(() => cleanup());
@@ -475,7 +479,7 @@ function getElText(el: HTMLElement): string {
 
 // ---- Web Speech fallback ----
 
-async function speakViaWebSpeech(text: string, el: HTMLElement): Promise<void> {
+async function speakViaWebSpeech(text: string, el: HTMLElement, onDone?: () => void): Promise<void> {
   await voicesReady;
 
   clearCurrent();
@@ -489,6 +493,7 @@ async function speakViaWebSpeech(text: string, el: HTMLElement): Promise<void> {
     el.classList.remove('speaking');
     setBtnState(el, 'idle');
     currentEl = null;
+    onDone?.(); // no voice → skip this clip so play-all still advances
     return;
   }
 
@@ -507,6 +512,7 @@ async function speakViaWebSpeech(text: string, el: HTMLElement): Promise<void> {
             el.classList.remove('speaking');
             setBtnState(el, 'idle');
             currentEl = null;
+            onDone?.(); // natural end of this clip → advance play-all (if active)
           }
         };
         u.onend = cleanup;
@@ -521,14 +527,47 @@ async function speakViaWebSpeech(text: string, el: HTMLElement): Promise<void> {
 
 const manifest = audioManifest as Record<string, true>;
 
-async function speakText(text: string, el: HTMLElement): Promise<void> {
+// onDone (optional) fires ONLY on natural completion of this clip — used by the
+// play-all orchestrator to advance to the next paragraph. A deliberate teardown
+// (stop / Esc / switching clips) never fires it.
+async function speakText(text: string, el: HTMLElement, onDone?: () => void): Promise<void> {
   const hash = await sha256Short(text);
   if (manifest[hash]) {
     const src = `${import.meta.env.BASE_URL}audio/${hash}.mp3`;
-    playAudioFile(src, el, hash);
+    playAudioFile(src, el, hash, onDone);
     return;
   }
-  return speakViaWebSpeech(text, el);
+  return speakViaWebSpeech(text, el, onDone);
+}
+
+// ---- pause / resume the live clip (shared by single-paragraph + play-all) ----
+
+// Pause in place (MP3 or Web Speech) without tearing down — the karaoke trail
+// freezes at the current word.
+function pauseCurrent(): void {
+  if (currentAudio) {
+    currentAudio.pause();
+    cancelKaraokeTick();
+  } else if (synth.speaking) {
+    synth.pause();
+  }
+}
+
+// Resume from the pause position and restart the karaoke tick from the live
+// audio.currentTime (binary search re-finds the spot, so mid-clip resume just
+// works; the sidecar re-fetch is browser-cached and bails gracefully if gone).
+// onReject handles a rejected MP3 resume (media element invalidated while
+// paused) so the control isn't left stuck on ⏸ with nothing playing.
+function resumeCurrent(el: HTMLElement, hash: string | null, onReject: () => void): void {
+  if (currentAudio) {
+    currentAudio.play().catch(onReject);
+    if (hash) {
+      cancelKaraokeTick();
+      startWordHighlight(currentAudio, el, hash);
+    }
+  } else if (synth.paused) {
+    synth.resume();
+  }
 }
 
 // ---- play button click handler (paragraph path) ----
@@ -537,38 +576,18 @@ async function handlePlayBtnClick(p: HTMLElement): Promise<void> {
   const ctx = pCtx.get(p);
   if (!ctx) return;
 
+  exitPlayAll(); // manual control of one paragraph → leave play-all (audio kept)
+
   const btnState = ctx.play.dataset.state ?? 'idle';
 
   if (btnState === 'playing') {
-    // Pause in-progress playback — do NOT tear down; just suspend.
-    if (currentAudio) {
-      currentAudio.pause();
-      // Stop karaoke tick loop; highlight stays frozen at current word.
-      cancelKaraokeTick();
-    } else if (synth.speaking) {
-      synth.pause();
-    }
+    pauseCurrent(); // suspend in place; do NOT tear down
     setBtnState(p, 'paused');
     return;
   }
 
   if (btnState === 'paused') {
-    // Resume from pause position.
-    if (currentAudio) {
-      // A rejected resume (e.g. media element invalidated while paused) would
-      // otherwise leave the button stuck on ⏸ with nothing playing.
-      currentAudio.play().catch(() => clearCurrent());
-      if (ctx.hash) {
-        // Restart the karaoke tick from the live audio.currentTime — it picks
-        // its position from binary search, so resuming mid-clip just works.
-        // Re-running startWordHighlight re-fetches the sidecar, which is fine:
-        // it's browser-cached and bails gracefully if missing.
-        cancelKaraokeTick();
-        startWordHighlight(currentAudio, p, ctx.hash);
-      }
-    } else if (synth.paused) {
-      synth.resume();
-    }
+    resumeCurrent(p, ctx.hash, () => clearCurrent());
     setBtnState(p, 'playing');
     return;
   }
@@ -582,9 +601,154 @@ async function handleReplayBtnClick(p: HTMLElement): Promise<void> {
   const ctx = pCtx.get(p);
   if (!ctx) return;
 
+  exitPlayAll(); // manual control → leave play-all
   // Full teardown of current state (even if it's this same paragraph paused).
   clearCurrent();
   void speakText(ctx.text, p);
+}
+
+// ---- play-all (lesson 連播) orchestrator ----
+//
+// Sequential playback layered over the single-active-element model: play each
+// .speakable paragraph in DOM order, advancing on each clip's NATURAL end
+// (onDone). All per-clip machinery (audio, karaoke, voice routing) is reused
+// untouched. Idle shows a top entry button; while active a floating bar (the
+// only visible state source) drives pause/stop and shows progress.
+
+let playAllActive = false;
+let playAllPaused = false;
+let playAllList: HTMLElement[] = [];
+let playAllIndex = 0;
+let playAllEntryBtn: HTMLButtonElement | null = null;
+let playAllBar: HTMLElement | null = null;
+let playAllToggleBtn: HTMLButtonElement | null = null;
+let playAllProgress: HTMLElement | null = null;
+
+function updatePlayAllProgress(): void {
+  if (playAllProgress) playAllProgress.textContent = `第 ${playAllIndex + 1} / ${playAllList.length} 段`;
+}
+
+function setPlayAllToggle(state: 'playing' | 'paused'): void {
+  if (!playAllToggleBtn) return;
+  playAllToggleBtn.textContent = state === 'playing' ? '⏸' : '▶';
+  playAllToggleBtn.setAttribute('aria-label', state === 'playing' ? '暫停' : '繼續');
+}
+
+// idle ↔ active render locations are mutually exclusive, so play-all state has a
+// single visible source: the top entry button OR the floating bar, never both.
+function showPlayAllBar(): void {
+  if (playAllEntryBtn) playAllEntryBtn.hidden = true;
+  if (playAllBar) playAllBar.hidden = false;
+  setPlayAllToggle('playing');
+  // progress is rendered by the immediately-following playAllStep(0).
+}
+
+// Reset to idle UI WITHOUT touching audio — the shared primitive behind hard
+// stop (which also clearCurrent()s), soft exit, and natural finish.
+function resetPlayAll(): void {
+  playAllActive = false;
+  playAllPaused = false;
+  if (playAllBar) playAllBar.hidden = true;
+  if (playAllEntryBtn) playAllEntryBtn.hidden = false;
+}
+
+function playAllStep(i: number): void {
+  playAllIndex = i;
+  const p = playAllList[i];
+  const ctx = pCtx.get(p);
+  if (!ctx) { advancePlayAll(); return; } // unwired (shouldn't happen) → skip
+  updatePlayAllProgress();
+  p.scrollIntoView({ block: 'center', behavior: 'smooth' });
+  void speakText(ctx.text, p, () => {
+    if (!playAllActive) return; // superseded by stop / exit since this clip began
+    advancePlayAll();
+  });
+}
+
+function advancePlayAll(): void {
+  if (playAllIndex + 1 < playAllList.length) playAllStep(playAllIndex + 1);
+  else resetPlayAll(); // reached the end → back to the idle entry button
+}
+
+function startPlayAll(): void {
+  if (!playAllList.length || playAllActive) return;
+  playAllActive = true;
+  playAllPaused = false;
+  showPlayAllBar();
+  playAllStep(0);
+}
+
+// Hard stop (stop button / Esc): leave play-all AND tear down audio.
+function stopPlayAll(): void {
+  resetPlayAll();
+  clearCurrent();
+}
+
+// Soft exit (user took manual control of one paragraph/word): leave play-all but
+// DON'T touch audio — the control they clicked manages it from here.
+function exitPlayAll(): void {
+  if (!playAllActive) return;
+  resetPlayAll();
+}
+
+// Floating-bar pause/resume: freeze/continue the SEQUENCE at the current clip
+// (mirrors handlePlayBtnClick's per-clip pause/resume).
+function togglePlayAllPause(): void {
+  if (!playAllActive) return;
+  if (!playAllPaused) {
+    pauseCurrent();
+    playAllPaused = true;
+    setPlayAllToggle('paused');
+  } else {
+    const p = playAllList[playAllIndex];
+    resumeCurrent(p, pCtx.get(p)?.hash ?? null, () => stopPlayAll());
+    playAllPaused = false;
+    setPlayAllToggle('playing');
+  }
+}
+
+function wirePlayAll(): void {
+  playAllList = Array.from(document.querySelectorAll<HTMLElement>('blockquote > p.speakable'));
+  if (!playAllList.length) return; // vocab pages / no speakable body → no play-all
+  const article = document.querySelector('article');
+  if (!article) return;
+
+  // Idle entry button at the top of the lesson body (just below the meta row).
+  const entry = document.createElement('button');
+  entry.type = 'button';
+  entry.className = 'play-all-entry';
+  entry.textContent = '▶ 播放整篇';
+  entry.addEventListener('click', () => startPlayAll());
+  const meta = article.querySelector('.lesson-meta');
+  if (meta?.nextSibling) article.insertBefore(entry, meta.nextSibling);
+  else article.insertBefore(entry, article.firstChild);
+  playAllEntryBtn = entry;
+
+  // Floating control (hidden until active) — stays visible through scroll.
+  const bar = document.createElement('div');
+  bar.className = 'play-all-bar';
+  bar.hidden = true;
+
+  const toggle = document.createElement('button');
+  toggle.type = 'button';
+  toggle.className = 'play-all-bar__toggle';
+  toggle.addEventListener('click', () => togglePlayAllPause());
+
+  const stop = document.createElement('button');
+  stop.type = 'button';
+  stop.className = 'play-all-bar__stop';
+  stop.textContent = '■';
+  stop.setAttribute('aria-label', '停止');
+  stop.addEventListener('click', () => stopPlayAll());
+
+  const progress = document.createElement('span');
+  progress.className = 'play-all-bar__progress';
+
+  bar.append(toggle, stop, progress);
+  document.body.appendChild(bar);
+  playAllBar = bar;
+  playAllToggleBtn = toggle;
+  playAllProgress = progress;
 }
 
 // ---- click wiring ----
@@ -608,6 +772,7 @@ function wireOneSpeakableWord(el: HTMLElement): void {
       e.stopPropagation();
       e.stopImmediatePropagation();
     }
+    exitPlayAll(); // tapping a vocab word → leave play-all
     // Toggle-off: re-click the currently speaking element → stop
     if (currentEl === el) {
       clearCurrent();
@@ -695,11 +860,13 @@ function wireSpeakable(): void {
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && (currentAudio || synth.speaking || synth.pending || synth.paused)) {
     clearCurrent();
+    exitPlayAll(); // Esc + clearCurrent = hard stop of play-all too
   }
 });
 
 function init(): void {
   wireSpeakable();
+  wirePlayAll();
   wireSpeedControl();
 }
 
