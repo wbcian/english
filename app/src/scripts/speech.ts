@@ -619,10 +619,15 @@ let playAllActive = false;
 let playAllPaused = false;
 let playAllList: HTMLElement[] = [];
 let playAllIndex = 0;
-let playAllEntryBtn: HTMLButtonElement | null = null;
 let playAllBar: HTMLElement | null = null;
 let playAllToggleBtn: HTMLButtonElement | null = null;
 let playAllProgress: HTMLElement | null = null;
+
+// Centre the currently-playing paragraph in view (used by auto-advance and the
+// floating bar's "back to current" button, e.g. after the user scrolls away).
+function scrollToCurrent(): void {
+  if (playAllActive) playAllList[playAllIndex]?.scrollIntoView({ block: 'center', behavior: 'smooth' });
+}
 
 function updatePlayAllProgress(): void {
   if (playAllProgress) playAllProgress.textContent = `第 ${playAllIndex + 1} / ${playAllList.length} 段`;
@@ -634,10 +639,10 @@ function setPlayAllToggle(state: 'playing' | 'paused'): void {
   playAllToggleBtn.setAttribute('aria-label', state === 'playing' ? '暫停' : '繼續');
 }
 
-// idle ↔ active render locations are mutually exclusive, so play-all state has a
-// single visible source: the top entry button OR the floating bar, never both.
+// The entry button stays put (icon, never hidden — hiding it reflowed the page);
+// only the floating bar appears/disappears, and it's position:fixed so it never
+// shifts layout.
 function showPlayAllBar(): void {
-  if (playAllEntryBtn) playAllEntryBtn.hidden = true;
   if (playAllBar) playAllBar.hidden = false;
   setPlayAllToggle('playing');
   // progress is rendered by the immediately-following playAllStep(0).
@@ -649,7 +654,6 @@ function resetPlayAll(): void {
   playAllActive = false;
   playAllPaused = false;
   if (playAllBar) playAllBar.hidden = true;
-  if (playAllEntryBtn) playAllEntryBtn.hidden = false;
 }
 
 function playAllStep(i: number): void {
@@ -658,7 +662,7 @@ function playAllStep(i: number): void {
   const ctx = pCtx.get(p);
   if (!ctx) { advancePlayAll(); return; } // unwired (shouldn't happen) → skip
   updatePlayAllProgress();
-  p.scrollIntoView({ block: 'center', behavior: 'smooth' });
+  scrollToCurrent();
   void speakText(ctx.text, p, () => {
     if (!playAllActive) return; // superseded by stop / exit since this clip began
     advancePlayAll();
@@ -714,15 +718,17 @@ function wirePlayAll(): void {
   if (!article) return;
 
   // Idle entry button at the top of the lesson body (just below the meta row).
+  // Icon-only, and it stays put while playing — never hidden, so the page never
+  // reflows. Clicking it while play-all is active is a no-op (startPlayAll guards).
   const entry = document.createElement('button');
   entry.type = 'button';
   entry.className = 'play-all-entry';
-  entry.textContent = '▶ 播放整篇';
+  entry.textContent = '▶';
+  entry.setAttribute('aria-label', '播放整篇');
   entry.addEventListener('click', () => startPlayAll());
   const meta = article.querySelector('.lesson-meta');
   if (meta?.nextSibling) article.insertBefore(entry, meta.nextSibling);
   else article.insertBefore(entry, article.firstChild);
-  playAllEntryBtn = entry;
 
   // Floating control (hidden until active) — stays visible through scroll.
   const bar = document.createElement('div');
@@ -744,7 +750,16 @@ function wirePlayAll(): void {
   const progress = document.createElement('span');
   progress.className = 'play-all-bar__progress';
 
-  bar.append(toggle, stop, progress);
+  // Back-to-current: scroll the playing paragraph into view (after the user
+  // scrolls away to read elsewhere).
+  const locate = document.createElement('button');
+  locate.type = 'button';
+  locate.className = 'play-all-bar__locate';
+  locate.textContent = '◎';
+  locate.setAttribute('aria-label', '回到播放位置');
+  locate.addEventListener('click', () => scrollToCurrent());
+
+  bar.append(toggle, stop, progress, locate);
   document.body.appendChild(bar);
   playAllBar = bar;
   playAllToggleBtn = toggle;
