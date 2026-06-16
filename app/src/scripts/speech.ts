@@ -717,9 +717,10 @@ function wirePlayAll(): void {
   const article = document.querySelector('article');
   if (!article) return;
 
-  // Idle entry button at the top of the lesson body (just below the meta row).
-  // Icon-only, and it stays put while playing — never hidden, so the page never
-  // reflows. Clicking it while play-all is active is a no-op (startPlayAll guards).
+  // Idle entry button — a small icon at the END of the meta row (date · level),
+  // so it shares a line instead of taking its own. Icon-only and never hidden, so
+  // the page never reflows. Clicking it while play-all is active is a no-op
+  // (startPlayAll guards).
   const entry = document.createElement('button');
   entry.type = 'button';
   entry.className = 'play-all-entry';
@@ -727,7 +728,7 @@ function wirePlayAll(): void {
   entry.setAttribute('aria-label', '播放整篇');
   entry.addEventListener('click', () => startPlayAll());
   const meta = article.querySelector('.lesson-meta');
-  if (meta?.nextSibling) article.insertBefore(entry, meta.nextSibling);
+  if (meta) meta.appendChild(entry);
   else article.insertBefore(entry, article.firstChild);
 
   // Floating control (hidden until active) — stays visible through scroll.
