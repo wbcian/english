@@ -55,6 +55,7 @@ interface ParagraphPlayCtx {
   hash: string | null;
   play: HTMLButtonElement;
   replay: HTMLButtonElement;
+  stop: HTMLButtonElement;
 }
 const pCtx = new WeakMap<HTMLElement, ParagraphPlayCtx>();
 
@@ -149,8 +150,8 @@ function getSpeakableText(p: HTMLElement): string {
   for (const node of Array.from(p.childNodes)) {
     if (node.nodeType === Node.ELEMENT_NODE) {
       const el = node as Element;
-      // Always skip injected speak-btn / replay-btn buttons.
-      if (el.tagName === 'BUTTON') continue;
+      // Always skip our injected controls — the button container and any button.
+      if (el.tagName === 'BUTTON' || el.classList.contains('speak-btns')) continue;
       // The first non-button element: if it's STRONG, it's the speaker label.
       if (!foundFirstMeaningfulEl) {
         foundFirstMeaningfulEl = true;
@@ -224,24 +225,27 @@ function showNoVoiceBanner() {
 function setBtnState(p: HTMLElement, state: PlayState): void {
   const ctx = pCtx.get(p);
   if (!ctx) return;
-  const { play, replay } = ctx;
+  const { play, replay, stop } = ctx;
 
   if (state === 'idle') {
     play.textContent = '▶';
     play.setAttribute('aria-label', 'Play');
     play.dataset.state = 'idle';
     replay.hidden = true;
+    stop.hidden = true;
   } else if (state === 'playing') {
     play.textContent = '⏸';
     play.setAttribute('aria-label', 'Pause');
     play.dataset.state = 'playing';
     replay.hidden = true;
+    stop.hidden = false;
   } else {
     // paused
     play.textContent = '▶';
     play.setAttribute('aria-label', 'Resume');
     play.dataset.state = 'paused';
     replay.hidden = false;
+    stop.hidden = false;
   }
 }
 
@@ -619,6 +623,7 @@ let playAllActive = false;
 let playAllPaused = false;
 let playAllList: HTMLElement[] = [];
 let playAllIndex = 0;
+let playAllEntryBtn: HTMLButtonElement | null = null;
 let playAllBar: HTMLElement | null = null;
 let playAllToggleBtn: HTMLButtonElement | null = null;
 let playAllProgress: HTMLElement | null = null;
@@ -639,10 +644,10 @@ function setPlayAllToggle(state: 'playing' | 'paused'): void {
   playAllToggleBtn.setAttribute('aria-label', state === 'playing' ? '暫停' : '繼續');
 }
 
-// The entry button stays put (icon, never hidden — hiding it reflowed the page);
-// only the floating bar appears/disappears, and it's position:fixed so it never
-// shifts layout.
+// idle ↔ active have one visible state source: the small meta-row entry button
+// when idle, the floating bar when active — never both.
 function showPlayAllBar(): void {
+  if (playAllEntryBtn) playAllEntryBtn.hidden = true;
   if (playAllBar) playAllBar.hidden = false;
   setPlayAllToggle('playing');
   // progress is rendered by the immediately-following playAllStep(0).
@@ -654,6 +659,7 @@ function resetPlayAll(): void {
   playAllActive = false;
   playAllPaused = false;
   if (playAllBar) playAllBar.hidden = true;
+  if (playAllEntryBtn) playAllEntryBtn.hidden = false;
 }
 
 function playAllStep(i: number): void {
@@ -682,8 +688,10 @@ function startPlayAll(): void {
   playAllStep(0);
 }
 
-// Hard stop (stop button / Esc): leave play-all AND tear down audio.
-function stopPlayAll(): void {
+// Hard stop, from anywhere (the floating bar ■, a paragraph's ■, Esc, or a
+// failed resume): leave any play-all sequence AND tear down the current clip,
+// returning everything to idle.
+function hardStop(): void {
   resetPlayAll();
   clearCurrent();
 }
@@ -705,7 +713,7 @@ function togglePlayAllPause(): void {
     setPlayAllToggle('paused');
   } else {
     const p = playAllList[playAllIndex];
-    resumeCurrent(p, pCtx.get(p)?.hash ?? null, () => stopPlayAll());
+    resumeCurrent(p, pCtx.get(p)?.hash ?? null, () => hardStop());
     playAllPaused = false;
     setPlayAllToggle('playing');
   }
@@ -718,9 +726,8 @@ function wirePlayAll(): void {
   if (!article) return;
 
   // Idle entry button — a small icon at the END of the meta row (date · level),
-  // so it shares a line instead of taking its own. Icon-only and never hidden, so
-  // the page never reflows. Clicking it while play-all is active is a no-op
-  // (startPlayAll guards).
+  // so it shares a line instead of taking its own. Hidden while play-all is
+  // active (the floating bar takes over as the single state source).
   const entry = document.createElement('button');
   entry.type = 'button';
   entry.className = 'play-all-entry';
@@ -730,6 +737,7 @@ function wirePlayAll(): void {
   const meta = article.querySelector('.lesson-meta');
   if (meta) meta.appendChild(entry);
   else article.insertBefore(entry, article.firstChild);
+  playAllEntryBtn = entry;
 
   // Floating control (hidden until active) — stays visible through scroll.
   const bar = document.createElement('div');
@@ -746,7 +754,7 @@ function wirePlayAll(): void {
   stop.className = 'play-all-bar__stop';
   stop.textContent = '■';
   stop.setAttribute('aria-label', '停止');
-  stop.addEventListener('click', () => stopPlayAll());
+  stop.addEventListener('click', () => hardStop());
 
   const progress = document.createElement('span');
   progress.className = 'play-all-bar__progress';
@@ -811,8 +819,8 @@ function wireSpeakable(): void {
 
     p.classList.add('speakable');
 
-    // Play/pause button (▶ / ⏸) — state-dependent attributes (icon,
-    // aria-label, data-state, replay visibility) come from setBtnState below.
+    // Play/pause button (▶ / ⏸) — state-dependent attributes (icon, aria-label,
+    // data-state, replay/stop visibility) come from setBtnState below.
     const playBtn = document.createElement('button');
     playBtn.className = 'speak-btn';
     playBtn.setAttribute('type', 'button');
@@ -824,17 +832,28 @@ function wireSpeakable(): void {
     replayBtn.setAttribute('type', 'button');
     replayBtn.textContent = '↻';
 
-    const ctx: ParagraphPlayCtx = { text, hash: null, play: playBtn, replay: replayBtn };
+    // Stop button (■) — visible while playing or paused; tears the clip down to idle.
+    const stopBtn = document.createElement('button');
+    stopBtn.className = 'speak-btn speak-btn--stop';
+    stopBtn.setAttribute('aria-label', 'Stop');
+    stopBtn.setAttribute('type', 'button');
+    stopBtn.textContent = '■';
+
+    const ctx: ParagraphPlayCtx = { text, hash: null, play: playBtn, replay: replayBtn, stop: stopBtn };
     pCtx.set(p, ctx);
     setBtnState(p, 'idle');
 
     // Pre-compute hash in the background so first play is instant.
     void sha256Short(text).then(h => { ctx.hash = h; });
 
-    // Insert buttons at the very start of the paragraph, before any children
-    // (including the leading <strong> speaker label if present).
-    p.insertBefore(replayBtn, p.firstChild);
-    p.insertBefore(playBtn, p.firstChild);
+    // A flex-column container in the right gutter stacks whatever buttons are
+    // visible (1 idle · 2 playing · 3 paused) and auto-centres the visible set —
+    // no per-state offsets. Inserted before any children (incl. the leading
+    // <strong> speaker label).
+    const btns = document.createElement('div');
+    btns.className = 'speak-btns';
+    btns.append(playBtn, replayBtn, stopBtn);
+    p.insertBefore(btns, p.firstChild);
 
     playBtn.addEventListener('click', (e) => {
       e.stopPropagation(); // don't bubble to paragraph
@@ -844,6 +863,11 @@ function wireSpeakable(): void {
     replayBtn.addEventListener('click', (e) => {
       e.stopPropagation();
       void handleReplayBtnClick(p);
+    });
+
+    stopBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      hardStop(); // leave any play-all sequence + tear down this clip → idle
     });
 
     // Paragraph body click: do nothing (explicit no-op to satisfy spec §2).
@@ -875,8 +899,7 @@ function wireSpeakable(): void {
 // Esc cancels both audio file playback and Web Speech, and resets all button UIs
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && (currentAudio || synth.speaking || synth.pending || synth.paused)) {
-    clearCurrent();
-    exitPlayAll(); // Esc + clearCurrent = hard stop of play-all too
+    hardStop();
   }
 });
 
