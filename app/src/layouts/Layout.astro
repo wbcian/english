@@ -332,10 +332,10 @@ const { title } = Astro.props;
     border-left-color: var(--speak-accent);
   }
 
-  /* Play / pause / replay / stop buttons live in a flex column at the right edge
-     of each speakable <p>; padding-right makes the gutter so text never shifts.
-     Hidden buttons collapse out, so the visible set (1 idle · 2 playing · 3
-     paused) stays vertically centred as a group — no per-state offsets. */
+  /* Play / pause / stop buttons live in a flex column at the right edge of each
+     speakable <p>; padding-right makes the gutter so text never shifts. Hidden
+     buttons collapse out, so the visible set (1 idle · 2 playing/paused) stays
+     vertically centred as a group — no per-state offsets. */
   .speak-btns {
     position: absolute;
     right: 0;
@@ -366,7 +366,7 @@ const { title } = Astro.props;
     -webkit-user-select: none;
   }
   /* Our explicit display beats the UA's [hidden] { display: none } (author
-     styles win over UA styles), so restore it — the replay button is toggled
+     styles win over UA styles), so restore it — the stop button is toggled
      via the hidden attribute. */
   .speak-btn[hidden] { display: none; }
   /* While a play-all sequence runs, hide the per-paragraph inline controls — the
@@ -395,8 +395,6 @@ const { title } = Astro.props;
   blockquote > p.speakable .speak-btn[data-state="paused"] {
     opacity: 0.9;
   }
-  /* Column order is play · replay · stop, so paused stacks resume (▶) over reset
-     (↻) over stop (■); playing shows just pause (⏸) over stop (■). */
   /* Word-by-word (karaoke) highlight — TWO tiers, font-color only, no background.
      .w spans start at the normal body color, so paragraphs without a timing
      sidecar look exactly like plain text. As audio plays, each read word flips to

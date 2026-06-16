@@ -44,17 +44,16 @@ const teardownAudios = new WeakSet<HTMLAudioElement>();
 // Playback states for the per-paragraph play button.
 // 'idle'   → showing ▶, nothing playing for this element
 // 'playing'→ showing ⏸, audio/speech in progress
-// 'paused' → showing ▶ + ↻ replay button, audio/speech paused
+// 'paused' → showing ▶ (resume) + ■ stop, audio/speech paused
 type PlayState = 'idle' | 'playing' | 'paused';
 
 // Per-paragraph state keyed by the wired <p>: speakable text (also used for
-// pause/resume + replay), pre-computed hash, and the injected buttons.
+// pause/resume), pre-computed hash, and the injected buttons.
 interface ParagraphPlayCtx {
   text: string;
   // The pre-computed hash — null until first play (hash is async).
   hash: string | null;
   play: HTMLButtonElement;
-  replay: HTMLButtonElement;
   stop: HTMLButtonElement;
 }
 const pCtx = new WeakMap<HTMLElement, ParagraphPlayCtx>();
@@ -225,26 +224,23 @@ function showNoVoiceBanner() {
 function setBtnState(p: HTMLElement, state: PlayState): void {
   const ctx = pCtx.get(p);
   if (!ctx) return;
-  const { play, replay, stop } = ctx;
+  const { play, stop } = ctx;
 
   if (state === 'idle') {
     play.textContent = '▶';
     play.setAttribute('aria-label', 'Play');
     play.dataset.state = 'idle';
-    replay.hidden = true;
     stop.hidden = true;
   } else if (state === 'playing') {
     play.textContent = '⏸';
     play.setAttribute('aria-label', 'Pause');
     play.dataset.state = 'playing';
-    replay.hidden = true;
     stop.hidden = false;
   } else {
     // paused
     play.textContent = '▶';
     play.setAttribute('aria-label', 'Resume');
     play.dataset.state = 'paused';
-    replay.hidden = false;
     stop.hidden = false;
   }
 }
@@ -601,16 +597,6 @@ async function handlePlayBtnClick(p: HTMLElement): Promise<void> {
   void speakText(ctx.text, p);
 }
 
-async function handleReplayBtnClick(p: HTMLElement): Promise<void> {
-  const ctx = pCtx.get(p);
-  if (!ctx) return;
-
-  exitPlayAll(); // manual control → leave play-all
-  // Full teardown of current state (even if it's this same paragraph paused).
-  clearCurrent();
-  void speakText(ctx.text, p);
-}
-
 // ---- play-all (lesson 連播) orchestrator ----
 //
 // Sequential playback layered over the single-active-element model: play each
@@ -813,8 +799,8 @@ function wireOneSpeakableWord(el: HTMLElement): void {
 
 function wireSpeakable(): void {
   // Blockquote paragraphs — only mostly-English ones.
-  // Instead of attaching click to the whole paragraph, inject a play button and
-  // wire only the button (and a replay button for the paused state).
+  // Instead of attaching click to the whole paragraph, inject play/stop buttons
+  // and wire only the buttons.
   document.querySelectorAll<HTMLElement>('blockquote > p').forEach(p => {
     // Buttons aren't inserted yet, and getSpeakableText skips <button>
     // elements anyway, so this read is safe either way.
@@ -825,17 +811,10 @@ function wireSpeakable(): void {
     p.classList.add('speakable');
 
     // Play/pause button (▶ / ⏸) — state-dependent attributes (icon, aria-label,
-    // data-state, replay/stop visibility) come from setBtnState below.
+    // data-state, stop visibility) come from setBtnState below.
     const playBtn = document.createElement('button');
     playBtn.className = 'speak-btn';
     playBtn.setAttribute('type', 'button');
-
-    // Replay button (↻) — only visible in 'paused' state.
-    const replayBtn = document.createElement('button');
-    replayBtn.className = 'speak-btn speak-btn--replay';
-    replayBtn.setAttribute('aria-label', 'Replay from start');
-    replayBtn.setAttribute('type', 'button');
-    replayBtn.textContent = '↻';
 
     // Stop button (■) — visible while playing or paused; tears the clip down to idle.
     const stopBtn = document.createElement('button');
@@ -844,7 +823,7 @@ function wireSpeakable(): void {
     stopBtn.setAttribute('type', 'button');
     stopBtn.textContent = '■';
 
-    const ctx: ParagraphPlayCtx = { text, hash: null, play: playBtn, replay: replayBtn, stop: stopBtn };
+    const ctx: ParagraphPlayCtx = { text, hash: null, play: playBtn, stop: stopBtn };
     pCtx.set(p, ctx);
     setBtnState(p, 'idle');
 
@@ -852,22 +831,17 @@ function wireSpeakable(): void {
     void sha256Short(text).then(h => { ctx.hash = h; });
 
     // A flex-column container in the right gutter stacks whatever buttons are
-    // visible (1 idle · 2 playing · 3 paused) and auto-centres the visible set —
-    // no per-state offsets. Inserted before any children (incl. the leading
+    // visible (1 idle · 2 playing/paused) and auto-centres the visible set — no
+    // per-state offsets. Inserted before any children (incl. the leading
     // <strong> speaker label).
     const btns = document.createElement('div');
     btns.className = 'speak-btns';
-    btns.append(playBtn, replayBtn, stopBtn);
+    btns.append(playBtn, stopBtn);
     p.insertBefore(btns, p.firstChild);
 
     playBtn.addEventListener('click', (e) => {
       e.stopPropagation(); // don't bubble to paragraph
       void handlePlayBtnClick(p);
-    });
-
-    replayBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      void handleReplayBtnClick(p);
     });
 
     stopBtn.addEventListener('click', (e) => {
