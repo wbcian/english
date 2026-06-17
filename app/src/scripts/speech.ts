@@ -272,11 +272,11 @@ function updateRateUI(): void {
   }
 }
 
-// Inject a small speed selector into the header nav. Idempotent — safe to call
-// once per page load.
-function wireSpeedControl(): void {
-  if (document.querySelector('.speed-control')) return;
-
+// Build a `速度 0.8× 1× …` selector. The rate buttons register into the shared
+// speedBtns array (not replace it), so every instance — header + sticky bar —
+// stays a single state source: updateRateUI lights the active rate across all of
+// them and setPlaybackRate is untouched.
+function buildSpeedControl(): HTMLDivElement {
   const wrap = document.createElement('div');
   wrap.className = 'speed-control';
 
@@ -285,7 +285,7 @@ function wireSpeedControl(): void {
   label.textContent = '速度';
   wrap.appendChild(label);
 
-  speedBtns = RATE_OPTIONS.map(r => {
+  for (const r of RATE_OPTIONS) {
     const b = document.createElement('button');
     b.type = 'button';
     b.className = 'speed-btn';
@@ -294,15 +294,57 @@ function wireSpeedControl(): void {
     b.setAttribute('aria-label', `Playback speed ${r}×`);
     b.addEventListener('click', () => setPlaybackRate(r));
     wrap.appendChild(b);
-    return { btn: b, rate: r };
-  });
+    speedBtns.push({ btn: b, rate: r });
+  }
+  return wrap;
+}
 
+// Inject the speed selector into the header nav. Idempotent — safe to call once
+// per page load.
+function wireSpeedControl(): void {
+  if (document.querySelector('.speed-control')) return;
   // Every page that loads this script renders Layout's <header><nav.top-nav>;
   // the optional chain just no-ops if a future page omits it (playback still
   // works, only the control is absent).
-  document.querySelector('header .top-nav')?.appendChild(wrap);
-
+  document.querySelector('header .top-nav')?.appendChild(buildSpeedControl());
   updateRateUI();
+}
+
+// A slim top bar that mirrors the header speed control. It's normally hidden and
+// slides in only once the header control scrolls out of view, so the speed is
+// adjustable at any scroll position without permanently occupying reading space.
+function wireStickySpeedBar(): void {
+  if (document.querySelector('.sticky-speed-bar')) return;
+  const headerControl = document.querySelector('.speed-control');
+  if (!headerControl) return; // no speed control on this page → nothing to mirror
+
+  const bar = document.createElement('div');
+  bar.className = 'sticky-speed-bar';
+  const inner = document.createElement('div');
+  inner.className = 'sticky-speed-bar__inner';
+  inner.appendChild(buildSpeedControl()); // shares speedBtns with the header
+  bar.appendChild(inner);
+  document.body.appendChild(bar);
+  updateRateUI(); // sync the just-added buttons to the current rate
+
+  // Reveal once the header control has scrolled above the viewport. A passive,
+  // rAF-throttled scroll/resize handler — the same scroll pattern the lesson
+  // page's reading-spine uses (an IntersectionObserver is lighter but the same
+  // idea; reusing the established pattern keeps one way to "react to scroll").
+  let ticking = false;
+  const sync = (): void => {
+    ticking = false;
+    bar.classList.toggle('is-visible', headerControl.getBoundingClientRect().bottom <= 0);
+  };
+  const onScroll = (): void => {
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(sync);
+    }
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
+  sync();
 }
 
 // ---- audio file playback path (preferred) ----
@@ -901,6 +943,7 @@ function init(): void {
   wireSpeakable();
   wirePlayAll();
   wireSpeedControl();
+  wireStickySpeedBar();
 }
 
 if (document.readyState === 'loading') {

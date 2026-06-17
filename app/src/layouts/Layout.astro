@@ -134,6 +134,46 @@ const { title } = Astro.props;
     .speed-btn { padding: 3px 5px; }
   }
 
+  /* Sticky speed bar (speech.ts wireStickySpeedBar) — a slim top strip that
+     mirrors the header speed control. Hidden by default; .is-visible is toggled
+     on by a rAF-throttled scroll handler (in speech.ts) once the header control
+     scrolls off-screen, so speed stays adjustable at any scroll position.
+     Full-width band, content centred to the 760px column with the control pushed
+     right (mirrors header). z-index sits below .reading-progress (50) so its 3px
+     line stays on top. */
+  .sticky-speed-bar {
+    position: fixed;
+    inset: 0 0 auto 0;
+    z-index: 40;
+    background: var(--bg);
+    border-bottom: 1px solid var(--card-border);
+    padding: 6px 24px;
+    opacity: 0;
+    transform: translateY(-100%);
+    pointer-events: none; /* non-interactive while hidden */
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+  .sticky-speed-bar.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  .sticky-speed-bar__inner {
+    max-width: 760px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    /* fade only, no slide — transform stays none in both states, so the base
+       transform-transition is inert and the opacity transition still fades. */
+    .sticky-speed-bar,
+    .sticky-speed-bar.is-visible { transform: none; }
+  }
+  @media (max-width: 640px) {
+    .sticky-speed-bar { padding: 6px 16px; }
+  }
+
   /* Play-all (lesson 連播) — injected by speech.ts. Idle: a top entry button.
      Active: a floating bar that stays visible through scroll (the two are
      mutually exclusive). Amber = audio, matching the per-paragraph controls. */
