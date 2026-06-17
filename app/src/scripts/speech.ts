@@ -219,6 +219,21 @@ function showNoVoiceBanner() {
   setTimeout(() => b.remove(), 8000);
 }
 
+// ---- control icons ----
+// Inline SVG, not font glyphs: iOS gives ▶/⏸ (and friends) emoji presentation
+// and renders them as colour emoji, ignoring the button's theme colour. SVG with
+// fill="currentColor" renders identically everywhere and inherits each button's
+// colour. The `ctl-icon` class carries the sizing (1em, tracking the button's
+// font-size as the old text glyphs did) — keeping it on the icon, not on a list
+// of consumer button classes, so any new control button is sized for free. paths
+// centred for a circular button.
+const ICON_PLAY =
+  '<svg class="ctl-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 6.5v11l9-5.5z" fill="currentColor"/></svg>';
+const ICON_PAUSE =
+  '<svg class="ctl-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 5.5h3.4v13H7zM13.6 5.5H17v13h-3.4z" fill="currentColor"/></svg>';
+const ICON_STOP =
+  '<svg class="ctl-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="5.5" y="5.5" width="13" height="13" rx="1.5" fill="currentColor"/></svg>';
+
 // ---- play button UI state ----
 
 function setBtnState(p: HTMLElement, state: PlayState): void {
@@ -227,18 +242,18 @@ function setBtnState(p: HTMLElement, state: PlayState): void {
   const { play, stop } = ctx;
 
   if (state === 'idle') {
-    play.textContent = '▶';
+    play.innerHTML = ICON_PLAY;
     play.setAttribute('aria-label', 'Play');
     play.dataset.state = 'idle';
     stop.hidden = true;
   } else if (state === 'playing') {
-    play.textContent = '⏸';
+    play.innerHTML = ICON_PAUSE;
     play.setAttribute('aria-label', 'Pause');
     play.dataset.state = 'playing';
     stop.hidden = false;
   } else {
     // paused
-    play.textContent = '▶';
+    play.innerHTML = ICON_PLAY;
     play.setAttribute('aria-label', 'Resume');
     play.dataset.state = 'paused';
     stop.hidden = false;
@@ -626,7 +641,7 @@ function updatePlayAllProgress(): void {
 
 function setPlayAllToggle(state: 'playing' | 'paused'): void {
   if (!playAllToggleBtn) return;
-  playAllToggleBtn.textContent = state === 'playing' ? '⏸' : '▶';
+  playAllToggleBtn.innerHTML = state === 'playing' ? ICON_PAUSE : ICON_PLAY;
   playAllToggleBtn.setAttribute('aria-label', state === 'playing' ? '暫停' : '繼續');
 }
 
@@ -722,7 +737,7 @@ function wirePlayAll(): void {
   const entry = document.createElement('button');
   entry.type = 'button';
   entry.className = 'play-all-entry';
-  entry.textContent = '▶';
+  entry.innerHTML = ICON_PLAY;
   entry.setAttribute('aria-label', '播放整篇');
   entry.addEventListener('click', () => startPlayAll());
   const meta = article.querySelector('.lesson-meta');
@@ -743,7 +758,7 @@ function wirePlayAll(): void {
   const stop = document.createElement('button');
   stop.type = 'button';
   stop.className = 'play-all-bar__stop';
-  stop.textContent = '■';
+  stop.innerHTML = ICON_STOP;
   stop.setAttribute('aria-label', '停止');
   stop.addEventListener('click', () => hardStop());
 
@@ -821,7 +836,7 @@ function wireSpeakable(): void {
     stopBtn.className = 'speak-btn speak-btn--stop';
     stopBtn.setAttribute('aria-label', 'Stop');
     stopBtn.setAttribute('type', 'button');
-    stopBtn.textContent = '■';
+    stopBtn.innerHTML = ICON_STOP;
 
     const ctx: ParagraphPlayCtx = { text, hash: null, play: playBtn, stop: stopBtn };
     pCtx.set(p, ctx);
