@@ -7,7 +7,28 @@
 
 ## 🚧 In Progress
 
-_（目前沒有正在做的）_
+### P9 — 速度控制捲動後 sticky 顯示 🐢📌　**Effort: S**
+
+> P7（語速切換鈕）的後續 slice。**不是**完整 sticky 播放 mini-bar（進度條/拖曳/transport）——那仍在未做；本項只讓**速度控制**在捲動後跟著使用者。
+
+- **動機**：P7 的速度鈕只在頂部 header；讀 lesson 往下捲、邊聽邊讀時控制捲出視窗、無法中途變速。Cian 需求是「**任何時候都能調速度**」（含尚未按播放、純預讀時）。
+- **期望行為**：
+  - 頁面頂端維持現在的 header 速度控制（在頂端就用它）。
+  - 當 header 的 `.speed-control` 捲出視窗（不再可見）→ 頂部淡入一條 `fixed` 薄條，只含速度控制；捲回頂部讓原控制重新可見 → 薄條淡出。對應 Cian 選定的「**看不到原控制才出現 sticky**」（reveal-on-scroll，非 always-on）。
+  - 薄條與 header 控制**共用同一份狀態**：active 高亮同步、播放中即時變速、`localStorage` 記憶全沿用。
+- **版面**：薄條 `position: fixed; top: 0`、整寬**實心 `--bg` 背景 ＋ 細下緣線 `--card-border`**（v1 不做 backdrop-blur，避免額外成本），內容維持 760px 置中、速度控制靠右（鏡像 header）。z-index 介於 `.reading-progress`（50）之下、一般內容之上（取 40），讓 3px 進度線保持最上層。slide+fade 進出（`translateY(-100%)→0` ＋ opacity）；`prefers-reduced-motion` 則只 fade。
+- **手機**：沿用既有 640px 斷點隱藏「速度」字樣、縮小鈕 padding。薄條**只放速度鈕、不放 nav**。與底部 `.play-all-bar` 一上一下不衝突；連播中也能從頂部薄條變速。
+- **實作切點**：
+  - `app/src/scripts/speech.ts`：
+    - 新增 `wireStickySpeedBar()`：建立薄條 DOM，其速度鈕 push 進**同一個 `speedBtns` 陣列** → `updateRateUI` 自動同步雙處、`setPlaybackRate` 完全不動。
+    - `IntersectionObserver` 觀察 header `.speed-control`：not intersecting → 薄條加 `.is-visible`；intersecting → 移除。**須在 `wireSpeedControl` 注入 `.speed-control` 之後**才建立 observer（它是 JS 動態插入）。
+  - `app/src/layouts/Layout.astro`：新增 `.sticky-speed-bar` CSS（fixed/top/背景/z-index/transition/`.is-visible`）；薄條內沿用既有 `.speed-control`/`.speed-btn` 樣式。
+- **依賴 / 風險**：
+  - **單一狀態來源是主要正確性風險**：雙處速度 UI 必須共用 `speedBtns`，否則 active 高亮不同步。驗收要兩處一起看。
+  - 與 `.reading-progress`（z-50, top:0, 3px）、`.reading-spine`（≥1200px, top:92px）、`.play-all-bar`（z-60, bottom）的座標/層級不可打架——薄條 top:0、高 ~40px，不碰 spine 與底部列。
+  - 非 lesson 頁（index/vocab）也載入 speech.ts；薄條在不捲動的頁面永不出現＝無害。
+- **不做（YAGNI）**：不把 nav 放進薄條、不在薄條加暫停/停止 transport（那是另一個「sticky 播放 mini-bar」slice，仍未做）、不碰 `.play-all-bar`、不做整篇進度條/拖曳。
+- **驗收**：lessons 頁桌機＋手機 live preview——捲到原控制消失後薄條淡入、捲回收起；兩處 active 同步；播放中從薄條變速即時生效＋reload 後持久化；亮/暗、≥1200px（spine 並存）、連播中（底部列並存）皆正常。`astro check` 0 error、`astro build` 154 頁綠。commit 前 `/simplify`。
 
 ---
 
