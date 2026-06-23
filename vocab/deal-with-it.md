@@ -19,5 +19,8 @@ source: "lesson: The Devil Wears Prada first day"
 ## Usage tip
 單獨命令句 `Deal with it.` 很直接，常帶「別來煩我」的味道。工作上想客氣一點可說 `Could you take care of it?`；`deal with a problem/customer` 則只是中性的「處理」。
 
+## Synonyms
+[figure it out](figure-it-out.md)（原片講師點名的同義替換）、work it out、sort it out
+
 ## Encounters
 - 2026-06-23 — first learned (RealLife English: Emily tells Andy to handle it herself)

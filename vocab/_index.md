@@ -10,6 +10,7 @@
 | [drip coffee](drip-coffee.md) | n.phr. | 滴濾咖啡 | 1 | 2026-06-23 | noun-phrase, coffee, drink, daily |
 | [run errands](run-errands.md) | v.phr. | 跑腿；外出辦雜事 | 1 | 2026-06-23 | verb-phrase, daily, work, chores, toeic |
 | [deal with it](deal-with-it.md) | phr. | 接受現實並處理；自己想辦法 | 1 | 2026-06-23 | phrase, conversation, conflict, informal, register-trap |
+| [figure it out](figure-it-out.md) | phr. | 自己想辦法弄懂；搞清楚 | 1 | 2026-06-23 | phrase, conversation, problem-solving, informal |
 | [fling](fling.md) | v./n. | 猛丟；甩；短暫戀情 | 1 | 2026-06-23 | verb, noun, irregular-verb, motion, informal, multi-meaning |
 | [foam](foam.md) | n./v. | 泡沫；奶泡；起泡 | 1 | 2026-06-23 | noun, verb, coffee, liquid, daily |
 | [man](man.md) | v. | 顧守；操作；派人駐守 | 1 | 2026-06-23 | verb, work, staffing, operations, multi-meaning |
