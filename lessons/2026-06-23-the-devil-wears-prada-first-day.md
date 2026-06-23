@@ -8,6 +8,13 @@ audio: true
 level: B2
 title_zh: The Devil Wears Prada — Miranda 的地獄級第一天
 title_en: "Coffee orders, impossible expectations, and 11 expressions from Andy's first day"
+# Per-lesson cast → TTS voice (build-only; see lessons/_conventions.md §5.2).
+# Emily Charlton is British and high-strung → en-GB Sonia + baked prosody
+# (slightly faster/higher = clipped, rapid-fire boss). Andy = a distinct en-US
+# voice so the dialogue reads as two people instead of one narrator.
+speaker_voices:
+  emily: { voice: "en-GB-SoniaNeural", rate: "+10%", pitch: "+4%" }
+  andy: "en-US-JennyNeural"
 ---
 
 # The Devil Wears Prada — Miranda 的地獄級第一天
@@ -45,9 +52,9 @@ title_en: "Coffee orders, impossible expectations, and 11 expressions from Andy'
 > Emily（05:30）：電話每次響都必須接。電話一轉進語音信箱，她就會非常不高興。你得死守在那張桌子旁。
 
 > **Emily (06:29)**
-> One time an assistant left the desk because she sliced her hand open with a letter opener. Man the desk at all times. Got it?
+> One time an assistant left the desk because she sliced her hand open with a letter opener. Man the desk at all times. Got it.
 
-> Emily（06:29）：有一次助理用拆信刀割傷手，所以離開了座位。無論何時都要有人顧著櫃檯。懂了嗎？
+> Emily（06:29）：有一次助理用拆信刀割傷手，所以離開了座位。無論何時都要有人顧著櫃檯。懂了沒。
 
 > **Emily (07:59)**
 > You get coffee, and you run errands. Yet I'm in charge of her schedule, her appointments, and her expenses.
@@ -59,10 +66,15 @@ title_en: "Coffee orders, impossible expectations, and 11 expressions from Andy'
 
 > Emily（08:34）：秋天我可以跟她去巴黎參加時裝週，還能穿高級訂製服。太美好了。
 
-> **Emily (09:24)**
-> Oh, Emily? What do I do? Deal with it.
+> **Andy (09:24)**
+> Oh, Emily? What do I do—
 
-> Emily（09:24）：「Emily，我該怎麼辦？」自己處理。
+> Andy（09:24）：「Emily？我該怎麼辦——」
+
+> **Emily (09:24)**
+> Deal with it.
+
+> Emily（09:24）：自己處理。
 
 ## Key Vocabulary
 
@@ -71,7 +83,7 @@ title_en: "Coffee orders, impossible expectations, and 11 expressions from Andy'
 | skimmed milk | n.phr. | 脫脂牛奶 | 美式更常說 `skim milk` |
 | drip coffee | n.phr. | 滴濾咖啡 | 熱水通過濾紙中的咖啡粉 |
 | run errands | v.phr. | 跑腿；辦雜事 | buy groceries / pick up dry cleaning |
-| deal with it | phrase | 接受現實並處理 | 直接、可能不耐煩 |
+| deal with it | phrase | 接受現實並處理 | ≈ figure it out；直接、可能不耐煩 |
 | fling | v. | 隨手猛丟；甩 | 比 throw 更快、更不在意 |
 | foam | n. | 泡沫；奶泡 | no foam / extra foam |
 | man | v. | 顧守；操作；派人駐守 | man the desk / phones / station |
@@ -106,11 +118,20 @@ title_en: "Coffee orders, impossible expectations, and 11 expressions from Andy'
 
 ## Cultural & Register Notes
 
-- **`deal with it` 很看語氣**：朋友間可表示「接受現實吧」，主管冷冷丟出來則可能很不耐煩。想禮貌一點可說 `Could you take care of it?`
+- **`deal with it` 很看語氣**：朋友間可表示「接受現實吧」，主管冷冷丟出來則可能很不耐煩。原片講師也點出同義替換 `figure it out`（都用在「別來煩我、自己想辦法」）；想禮貌一點可說 `Could you take care of it?`
 - **`man` 當動詞仍很常見**：意思是「顧守、操作、派人駐守」，和「男性」無關。正式或中性替代可用 `staff`、`operate`、`cover`。
 - **`skimmed milk` vs `skim milk`**：截圖使用 `skimmed milk`；美式咖啡店通常更常聽到 `skim milk`。
 - **`on the line` vs `on the chopping block`**：前者泛指處於風險；後者有「已被擺上砧板、快被砍掉」的強烈畫面，常用於工作、預算或專案即將被裁撤。
 - **`couture`** 通常指 `haute couture` 高級訂製服。這是時尚領域字，放在 lesson 理解即可，不列入本次主動詞庫。
+
+## 順帶認得（被動字，原片有教）
+
+原片講師 Ksenia 還順帶解釋了幾個字，不是這次的主動目標，但聽到要認得：
+
+- **appointments** — 約好的會議或約定（scheduled meetings / commitments）。Emily 說自己負責 Miranda 的 appointments。
+- **expenses** — 花出去的錢、支出（the money spent）。Emily 替 Miranda 管 expenses。
+- **divine** /dɪˈvaɪn/ — 口語裡＝「美好極了、棒透了」（≈ wonderful），帶點誇張、時尚圈愛用。Emily：「It's divine.」
+- **fall** — 美式英語的「秋天」（＝ autumn，英式較常用 autumn）。
 
 ## Study Tips / Takeaways
 
