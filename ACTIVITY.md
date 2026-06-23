@@ -6,6 +6,8 @@
 ---
 
 ## 2026-06-23
+- 🎧 **新 lesson：《The Devil Wears Prada》— Miranda 的地獄級第一天**（dialogue · B2）：依 RealLife English / Ksenia 字幕截圖整理 Andy 第一天上班場景。主題＝咖啡訂單、辦公室值守、跑腿分工與工作風險；收錄完整可見台詞、職場套句、`be chained to` 被動結構與 `if + 現在式` 後果句。
+- 📚 **新增 11 個單字／片語**：**skimmed milk**（脫脂牛奶；美式常說 skim milk）、**drip coffee**（滴濾咖啡）、**run errands**（跑腿辦雜事）、**deal with it**（接受並處理；語氣陷阱）、**fling**（猛丟；fling–flung–flung）、**foam**（泡沫／奶泡）、**man**（動詞：顧守／操作）、**searing**（灼熱／劇烈）、**chained to**（因責任走不開）、**on the line**（處於風險）、**on the chopping block**（面臨被砍）。全 ★1，並做 `on the line` vs `on the chopping block` 辨析。詞庫 141→152。
 - 📚 **新增 5 個單字**（影集學單字 app 複習清單 Progressed vocabulary）：**swell up**（腫起來／膨脹）、**know-it-all**（萬事通、自以為什麼都懂，貶義）、**get even**（報復、扯平、以牙還牙）、**drill**（電鑽／反覆操練／演習／鑽孔，一字多義）、**speedometer**（時速表）。全 ★1，建單字檔＋雙語例句（karaoke 格式）＋同步 `_index.md`。交叉連結：know-it-all → smart aleck / conceited / opinionated（自負性格家族）；drill 操練義 → grill（反覆、密集）；speedometer 標重音陷阱 spi-DOM-i-ter 並與 odometer 區分。
 
 ## 2026-06-18
