@@ -145,6 +145,23 @@ _（目前沒有正在做的）_
 
 ---
 
+### P11 — 既有卡司全面 retrofit per-speaker prosody 🎭🎚️　**Effort: S–M（免費、純 build）**
+
+> 接 2026-06-23 上線的 **per-speaker prosody**（見 Done／`lessons/_conventions.md` §5.2）。目前只有《The Devil Wears Prada》的 Emily 試烤了 prosody；其餘 dialogue 篇的卡司（`speaker-voices.json` 的 ethan／lenny／zane／cat／ksenia／izzy／sabrina／front desk／receptionist／guest…）**仍只有「不同音色」、沒有「不同語氣」**。
+
+- **動機**：dialogue 篇已經一人一聲音，但每個聲音都用預設語速/音高念 → 角色之間缺「個性化的 delivery」。把 prosody 補到全卡司，podcast／影劇對白會更像真人對話、更好分辨誰在講，也順便練不同語速的聽力。
+- **期望行為**：`speaker-voices.json` 每個講者由純字串升級成 `{ voice, rate, pitch }`，依角色/語境給一張**克制**的 prosody 表（例：能量型主持人略快、沉穩旁白中性、緊張角色音高微高）。per-lesson `speaker_voices` 仍可覆寫個別篇章。
+- **實作切點**：
+  - 機制**已就緒**（`normalizeVoiceEntry`／`resolveVoiceEntry`／`synthesizeToFile` 都吃 prosody，`--revoice` 也會重生帶 prosody 的 clip）→ 這步**只動資料、不動程式**：編 `speaker-voices.json` ＋ 跑 `npm run audio:revoice`（＝ `--revoice --words-all`，重生 mp3＋karaoke sidecar 保證對齊）。
+  - 先列一張「角色 → persona → rate/pitch」小表給 Cian 過目再動（避免一次烤壞語速）。
+  - 驗證沿用本次流程：`astro build` 綠 ＋ hash-sync ＋ prune 0 orphan ＋ live preview 數值法（`sidecar.n==span`、onset 單調、maxOnset<時長）＋ 抽樣 byte-exact 確認烤進真檔。
+- **依賴 / 風險**：
+  - **學習者可懂度優先**：prosody 要保守（建議 rate ±0–10%、pitch ±0–5%），別為了戲劇性犧牲跟讀清晰度；上線後 Cian 實聽再微調。
+  - **重生成本**：改全域卡司 → `--revoice` 會重生**所有**該卡司 clip（dialogue 全篇約 ~140 個 mp3）＋ sidecar，網路時間 ＋ git binary churn（一批 mp3 重新提交）。完全可逆（還原 json ＋ revoice）。
+  - prosody 與 voice 同軸吃 text-only-hash 限制（§5.2）：同文字不同 prosody 仍撞同一檔；目前語料 0 例。
+
+---
+
 ## 💡 Ideas（還沒排優先序）
 
 _（隨時補）_
