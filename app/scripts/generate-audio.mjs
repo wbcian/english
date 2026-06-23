@@ -149,14 +149,32 @@ export function speakerSegments(raw) {
     .filter(Boolean);
 }
 
-// Resolve the TTS voice for a paragraph from its raw leading-<strong> label.
+// A speaker-voices entry is EITHER a bare voice string ("en-US-AriaNeural") OR an
+// object { voice, rate?, pitch?, volume? } that also bakes prosody (rate/pitch/
+// volume) into synthesis. Prosody is build-only, exactly like the voice itself —
+// the hash stays text-only, so neither reaches the runtime (see _conventions.md
+// §5.2). Normalize both forms to { voice, prosody } (prosody = null when none).
+function normalizeVoiceEntry(entry) {
+  if (!entry) return null;
+  if (typeof entry === 'string') return { voice: entry, prosody: null };
+  if (typeof entry === 'object' && typeof entry.voice === 'string') {
+    const prosody = {};
+    for (const k of ['rate', 'pitch', 'volume']) {
+      if (entry[k] !== undefined && entry[k] !== null) prosody[k] = entry[k];
+    }
+    return { voice: entry.voice, prosody: Object.keys(prosody).length ? prosody : null };
+  }
+  return null; // malformed → treat as no entry (falls through to narrator)
+}
+
+// Resolve { voice, prosody } for a paragraph from its raw leading-<strong> label.
 // Tries each dash-separated segment, matching the cast map by full slug first
 // (so "front desk" and "guest (cian)" win as whole keys), then by first word
 // for short "Name + descriptor" segments ("sabrina interview preview" →
-// "sabrina"). Any miss → default narrator voice.
-export function resolveVoice(speakerRaw, perLessonMap, voiceTable) {
+// "sabrina"). Any miss → default narrator voice, no prosody.
+export function resolveVoiceEntry(speakerRaw, perLessonMap, voiceTable) {
   const speakers = voiceTable.speakers || {};
-  const lookup = (slug) => (perLessonMap && perLessonMap[slug]) || speakers[slug];
+  const lookup = (slug) => normalizeVoiceEntry((perLessonMap && perLessonMap[slug]) ?? speakers[slug]);
   for (const seg of speakerSegments(speakerRaw)) {
     const direct = lookup(seg);
     if (direct) return direct;
@@ -168,7 +186,13 @@ export function resolveVoice(speakerRaw, perLessonMap, voiceTable) {
       if (byFirst) return byFirst;
     }
   }
-  return voiceTable.default || VOICE;
+  return { voice: voiceTable.default || VOICE, prosody: null };
+}
+
+// Back-compat thin wrapper: the voice STRING only (used by test-speaker-parser and
+// any caller that just wants the voice). resolveVoiceEntry is the full form.
+export function resolveVoice(speakerRaw, perLessonMap, voiceTable) {
+  return resolveVoiceEntry(speakerRaw, perLessonMap, voiceTable).voice;
 }
 
 export function collectSpeakable(mdAst) {
@@ -257,9 +281,13 @@ function escapeForSsml(text) {
 // drains the WordBoundary metadata stream and returns the raw boundary `Data`
 // objects ([{ Offset, Duration, text:{ Text } }, ...], 100ns ticks). Otherwise
 // returns [].
-async function synthesizeToFile(text, outPath, { wantWords = false, voice = VOICE } = {}) {
+async function synthesizeToFile(text, outPath, { wantWords = false, voice = VOICE, prosody = null } = {}) {
   const tts = await getTtsClient(voice, wantWords);
-  const { audioStream, metadataStream } = tts.toStream(escapeForSsml(text));
+  // prosody (rate/pitch/volume) is wrapped into the SSML <prosody> by msedge-tts.
+  // No prosody → pass undefined → identical SSML to before (unchanged clips). The
+  // WordBoundary metadata stream is a client-level setting, so prosody never
+  // affects karaoke alignment — the timings are captured from THIS synthesized mp3.
+  const { audioStream, metadataStream } = tts.toStream(escapeForSsml(text), prosody ?? undefined);
 
   // Keep the freshly-synthesized audio only if there's no valid MP3 yet.
   let keepAudio = true;
@@ -526,9 +554,9 @@ async function main() {
     for (const u of units) {
       const h = hash(u.text);
       const wantWords = u.kind === 'paragraph' && wantsWordsFor(name);
-      const voice = resolveVoice(u.speakerRaw, perLessonMap, voiceTable);
+      const { voice, prosody } = resolveVoiceEntry(u.speakerRaw, perLessonMap, voiceTable);
       if (!allUnits.has(h)) {
-        allUnits.set(h, { ...u, sources: [name], wantWords, voice });
+        allUnits.set(h, { ...u, sources: [name], wantWords, voice, prosody });
       } else {
         const existing = allUnits.get(h);
         existing.sources.push(name);
@@ -549,7 +577,10 @@ async function main() {
     const def = voiceTable.default || VOICE;
     let removed = 0;
     for (const [h, unit] of allUnits) {
-      if (unit.voice === def) continue;
+      // Re-render anything that isn't plain default narrator: a non-default voice
+      // OR a default-voice clip carrying baked prosody (else a prosody change
+      // would never re-synthesize, since synthesizeToFile skips existing mp3s).
+      if (unit.voice === def && !unit.prosody) continue;
       for (const p of [
         join(AUDIO_DIR, `${h}.mp3`),
         join(AUDIO_DIR, `${h}.words.json`),
@@ -590,7 +621,7 @@ async function main() {
         continue;
       }
       try {
-        await synthesizeToFile(unit.text, outPath, { voice: unit.voice });
+        await synthesizeToFile(unit.text, outPath, { voice: unit.voice, prosody: unit.prosody });
         generated++;
         process.stdout.write(`  [${generated}] ${h} ${unit.kind} ${unit.text.slice(0, 50).replace(/\s+/g, ' ')}\n`);
       } catch (err) {
@@ -610,7 +641,7 @@ async function main() {
       continue;
     }
     try {
-      const boundaries = await synthesizeToFile(unit.text, outPath, { wantWords: true, voice: unit.voice });
+      const boundaries = await synthesizeToFile(unit.text, outPath, { wantWords: true, voice: unit.voice, prosody: unit.prosody });
       if (!mp3Ok) generated++;
       const sidecar = buildSidecar(unit.tokens ?? [], boundaries);
       if (sidecar) {

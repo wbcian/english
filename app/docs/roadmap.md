@@ -125,6 +125,26 @@ _（目前沒有正在做的）_
 
 ---
 
+### P10 — 付費 TTS 真情緒語氣（Azure AI Speech）🎭　**Effort: M（評估，未排）**
+
+> 起因：2026-06-23 review《The Devil Wears Prada》lesson 時 Cian 問「語音能不能有語氣與聲調」。兩輪獨立查證（rany2/edge-tts README + issue #426、Microsoft Learn、msedge-tts 源碼）後的結論與選項。
+
+- **現況（免費 Edge 端點的天花板）**：`msedge-tts` 走的免費 Edge「朗讀」端點，SSML 被硬限制成單一 `<voice>`＋單一 `<prosody>`。**只能做 prosody（語速／音高／音量）**，這是唯一的表情槓桿。真情緒 style（`mstts:express-as`：cheerful／angry／sad／excited／whispering／shouting…）**送進去會被忽略、甚至播成不相干的預設音檔**（issue #426，維護者 `not_planned`）。
+  - 已就地做掉的免費版（2026-06-23 P5.1）：① 每講者換聲音（已有機制）；② **per-speaker prosody** 烤進合成（`speaker_voices` 物件式 `{voice, rate, pitch}`，本篇 Emily＝Sonia +10%語速/+4%音高）。neural 聲音本來就有自然句子語調（問句上揚）。要更進一步的「情緒」就到付費為止。
+- **動機**：若要真正的 cheerful／stern／excited 等情緒語氣（劇本對白、情境課很吃這個），只能換付費引擎。
+- **首選方案：Azure AI Speech（最省工的升級）**
+  - **同聲音名稱**：`en-US-AriaNeural` 在 Azure 支援 16 種 style（angry/cheerful/excited/sad/shouting/whispering/customerservice/newscast-…），JennyNeural/GuyNeural/SoniaNeural 等也各有 style 清單（**只有部分聲音**支援，有官方 voice styles 表）。
+  - **同 WordBoundary 逐字 timing 模型**：pipeline 現在就在 parse `WordBoundary`（100ns ticks），Azure 也是同一套 → **karaoke sidecar 幾乎零改動**。
+  - **成本**：約 $15／百萬字元（neural）；免費層 **F0 = 每月 50 萬字元**，本專案語料量遠低於此 → 實質免費。
+  - **實作切點**：抽一層 TTS provider（Azure 走官方 SDK／WebSocket 取 WordBoundary，REST 拿不到逐字 timing）；`speaker_voices` 物件再加 `style`／`styledegree` 欄（build-only、hash 仍 text-only，與現有 voice/prosody 同軸）；key（region）走環境變數、CI/headless 無 key 時 soft-fail 退回 Edge（沿用現有 fallback 哲學）。
+- **替代方案（為何不選）**：
+  - **ElevenLabs**：表情最強（v3 行內 `[excited]`/`[whispers]`、字元級 timestamp），但要把 sidecar 從 word 改成 char→word 分組，工程量較大。
+  - **OpenAI `gpt-4o-mini-tts`**：語氣 steering 最好用（free-text `instructions`），但**完全沒有 timestamp** → 直接弄壞 karaoke，除非另接強制對齊。排除。
+  - **Google TTS**：表情與 timing 互斥（timing 只在較陽春的聲音上），不划算。
+- **依賴 / 風險**：要一把 Azure key＋region（雲端帳號）；引擎抽象層是新介面，需測 Edge↔Azure 兩條路的 hash/manifest parity；style 只在子集聲音可用，配音表要先查 voice styles 表。**決策待 Cian 拍板**是否值得為情緒語氣引入付費依賴。
+
+---
+
 ## 💡 Ideas（還沒排優先序）
 
 _（隨時補）_
