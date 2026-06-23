@@ -6,6 +6,17 @@
 
 | 單字 | 詞性 | 中文 | ★ | 上次複習 | tags |
 |---|---|---|---|---|---|
+| [skimmed milk](skimmed-milk.md) | n.phr. | 脫脂牛奶（美式常說 skim milk） | 1 | 2026-06-23 | noun-phrase, food, drink, coffee, british-vs-american |
+| [drip coffee](drip-coffee.md) | n.phr. | 滴濾咖啡 | 1 | 2026-06-23 | noun-phrase, coffee, drink, daily |
+| [run errands](run-errands.md) | v.phr. | 跑腿；外出辦雜事 | 1 | 2026-06-23 | verb-phrase, daily, work, chores, toeic |
+| [deal with it](deal-with-it.md) | phr. | 接受現實並處理；自己想辦法 | 1 | 2026-06-23 | phrase, conversation, conflict, informal, register-trap |
+| [fling](fling.md) | v./n. | 猛丟；甩；短暫戀情 | 1 | 2026-06-23 | verb, noun, irregular-verb, motion, informal, multi-meaning |
+| [foam](foam.md) | n./v. | 泡沫；奶泡；起泡 | 1 | 2026-06-23 | noun, verb, coffee, liquid, daily |
+| [man](man.md) | v. | 顧守；操作；派人駐守 | 1 | 2026-06-23 | verb, work, staffing, operations, multi-meaning |
+| [searing](searing.md) | adj. | 灼熱的；劇烈的；尖銳猛烈的 | 1 | 2026-06-23 | adjective, intensity, heat, pain, criticism |
+| [chained to](chained-to.md) | adj.phr. | 被綁在…；因責任走不開 | 1 | 2026-06-23 | phrase, metaphor, work, obligation, informal |
+| [on the line](on-the-line.md) | idiom | 岌岌可危；處於風險中 | 1 | 2026-06-23 | idiom, risk, work, reputation, toeic |
+| [on the chopping block](on-the-chopping-block.md) | idiom | 面臨被砍；可能遭解雇或裁撤 | 1 | 2026-06-23 | idiom, work, layoffs, risk, vivid-language |
 | [swell up](swell-up.md) | phr.v. | 腫起來；膨脹；鼓起 | 1 | 2026-06-23 | phrasal-verb, body, medical, daily, irregular-verb |
 | [know-it-all](know-it-all.md) | n. | 自以為什麼都懂的人；萬事通（貶義） | 1 | 2026-06-23 | noun, personality, informal, insult-mild, compound |
 | [get even](get-even.md) | idiom | 報復；扯平；以牙還牙 | 1 | 2026-06-23 | idiom, revenge, conflict, informal, daily |
