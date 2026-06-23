@@ -6,6 +6,11 @@
 
 | 單字 | 詞性 | 中文 | ★ | 上次複習 | tags |
 |---|---|---|---|---|---|
+| [swell up](swell-up.md) | phr.v. | 腫起來；膨脹；鼓起 | 1 | 2026-06-23 | phrasal-verb, body, medical, daily, irregular-verb |
+| [know-it-all](know-it-all.md) | n. | 自以為什麼都懂的人；萬事通（貶義） | 1 | 2026-06-23 | noun, personality, informal, insult-mild, compound |
+| [get even](get-even.md) | idiom | 報復；扯平；以牙還牙 | 1 | 2026-06-23 | idiom, revenge, conflict, informal, daily |
+| [drill](drill.md) | n./v. | 電鑽；反覆操練；演習；鑽孔 | 1 | 2026-06-23 | noun, verb, multi-meaning, tools, training, toeic |
+| [speedometer](speedometer.md) | n. | 時速表；速度表 | 1 | 2026-06-23 | noun, car, driving, instrument, ⚠️stress-trap |
 | [deposit](deposit.md) | n./v. | 押金；保證金；存款 | 1 | 2026-06-11 | noun, verb, travel, hotel, finance, payment |
 | [scam](scam.md) | n./v. | 詐騙；騙局 | 1 | 2026-06-11 | noun, verb, daily, crime, informal |
 | [lodging](lodging.md) | n. | 住宿；臨時住所（書面） | 1 | 2026-06-11 | noun, travel, formal |
