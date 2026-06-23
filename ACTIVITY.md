@@ -5,6 +5,9 @@
 
 ---
 
+## 2026-06-23
+- 📚 **新增 5 個單字**（影集學單字 app 複習清單 Progressed vocabulary）：**swell up**（腫起來／膨脹）、**know-it-all**（萬事通、自以為什麼都懂，貶義）、**get even**（報復、扯平、以牙還牙）、**drill**（電鑽／反覆操練／演習／鑽孔，一字多義）、**speedometer**（時速表）。全 ★1，建單字檔＋雙語例句（karaoke 格式）＋同步 `_index.md`。交叉連結：know-it-all → smart aleck / conceited / opinionated（自負性格家族）；drill 操練義 → grill（反覆、密集）；speedometer 標重音陷阱 spi-DOM-i-ter 並與 odometer 區分。
+
 ## 2026-06-18
 - 🐢 **App P9：速度控制捲動後 sticky 顯示**（roadmap P9 → Done）。P7 語速鈕只在頂部 header、往下捲就用不到；需求是「任何時候都能調速度」。落地：頂端維持原 header 控制，當它捲出視窗（`getBoundingClientRect().bottom <= 0`）→ 頂部 slide+fade 進一條 `fixed` 薄條，只含速度控制，捲回收起（reveal-on-scroll）。**單一狀態來源**：抽 `buildSpeedControl()` 讓 header＋sticky 兩組速度鈕 push 進同一個 `speedBtns` 陣列 → `updateRateUI` 自動同步、`setPlaybackRate` 零改動（點任一組都同步另一組＋持久化，數值法實測過）。reveal 用 rAF-throttled scroll handler（對齊 lesson `reading-spine` 既有模式；原 spec 寫 IntersectionObserver，因 headless 不 fire＋與既有模式一致而改）。`Layout.astro` 加 `.sticky-speed-bar` CSS（z-40 在進度線之下、760px 置中靠右、`prefers-reduced-motion` 只 fade、≤640px 藏「速度」字）。先 brainstorm 定方案（reveal-on-scroll vs always-on vs 浮動膠囊）→ 寫 spec 進 roadmap → 實作 → live preview 數值驗 → `/simplify`（修 3 條小註解/CSS）。`astro check` 0 error、build 154 頁綠。**headless 限制**：scroll/rAF/transition 在 0×0 headless 預覽不 fire，實際捲動淡入動畫待真機（iPhone）確認；predicate＋兩終態＋狀態同步＋RWD 皆已數值驗。
 - 同時：**🐛 修 iPhone 播放控制圖示變 emoji**——`▶ ⏸ ■` 原是 Unicode glyph 用 `textContent` 塞按鈕，iOS 套 emoji presentation 變彩色 emoji；改成 inline SVG（`fill="currentColor"` 繼承主題色、`.ctl-icon` 自帶尺寸），全平台一致、根治。
