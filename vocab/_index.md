@@ -6,6 +6,13 @@
 
 | 單字 | 詞性 | 中文 | ★ | 上次複習 | tags |
 |---|---|---|---|---|---|
+| [get to](get-to.md) | v.phr. | 有幸、得以（做好事，對比 have to） | 1 | 2026-06-25 | verb-phrase, privilege, contrast-with-have-to, daily, toeic |
+| [roll over to](roll-over-to.md) | phr.v. | （自動）轉到、續轉、滾存（roll to voicemail） | 1 | 2026-06-25 | phrasal-verb, automatic, phone, subscription, toeic |
+| [yet](yet.md) | conj./adv. | 然而；可是（轉折，≠ not yet） | 1 | 2026-06-25 | conjunction, contrast, connector, multi-meaning, toeic |
+| [skim](skim.md) | v. | 略讀；撇去（表面之物） | 1 | 2026-06-25 | verb, multi-meaning, reading-skill, toeic |
+| [divine](divine.md) | adj. | 美妙極了（口語）；神聖的 | 1 | 2026-06-25 | adjective, informal, intensifier, multi-meaning |
+| [couture](couture.md) | n. | 高級訂製服（時尚字） | 1 | 2026-06-25 | noun, fashion, french-loanword, niche |
+| [on the chopping block](on-the-chopping-block.md) | idiom | 面臨被砍；可能遭解雇或裁撤 | 1 | 2026-06-25 | idiom, work, layoffs, risk, vivid-language |
 | [skimmed milk](skimmed-milk.md) | n.phr. | 脫脂牛奶（美式常說 skim milk） | 1 | 2026-06-23 | noun-phrase, food, drink, coffee, british-vs-american |
 | [drip coffee](drip-coffee.md) | n.phr. | 滴濾咖啡 | 1 | 2026-06-23 | noun-phrase, coffee, drink, daily |
 | [run errands](run-errands.md) | v.phr. | 跑腿；外出辦雜事 | 1 | 2026-06-23 | verb-phrase, daily, work, chores, toeic |
@@ -17,7 +24,6 @@
 | [searing](searing.md) | adj. | 灼熱的；劇烈的；尖銳猛烈的 | 1 | 2026-06-23 | adjective, intensity, heat, pain, criticism |
 | [chained to](chained-to.md) | adj.phr. | 被綁在…；因責任走不開 | 1 | 2026-06-23 | phrase, metaphor, work, obligation, informal |
 | [on the line](on-the-line.md) | idiom | 岌岌可危；處於風險中 | 1 | 2026-06-23 | idiom, risk, work, reputation, toeic |
-| [on the chopping block](on-the-chopping-block.md) | idiom | 面臨被砍；可能遭解雇或裁撤 | 1 | 2026-06-23 | idiom, work, layoffs, risk, vivid-language |
 | [swell up](swell-up.md) | phr.v. | 腫起來；膨脹；鼓起 | 1 | 2026-06-23 | phrasal-verb, body, medical, daily, irregular-verb |
 | [know-it-all](know-it-all.md) | n. | 自以為什麼都懂的人；萬事通（貶義） | 1 | 2026-06-23 | noun, personality, informal, insult-mild, compound |
 | [get even](get-even.md) | idiom | 報復；扯平；以牙還牙 | 1 | 2026-06-23 | idiom, revenge, conflict, informal, daily |

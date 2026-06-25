@@ -5,8 +5,8 @@ pos: idiom
 zh: 面臨被砍；可能遭解雇或裁撤
 proficiency: 1
 first_seen: 2026-06-23
-last_reviewed: 2026-06-23
-review_count: 1
+last_reviewed: 2026-06-25
+review_count: 2
 tags: [idiom, work, layoffs, risk, vivid-language]
 source: "lesson: The Devil Wears Prada first day"
 ---
@@ -21,3 +21,4 @@ source: "lesson: The Devil Wears Prada first day"
 
 ## Encounters
 - 2026-06-23 — first learned (RealLife English: "My head is on the chopping block.")
+- 2026-06-25 — reviewed (Coach Max 拆解砧板畫面，並對比 `on the line` vs `on the chopping block`)
