@@ -91,6 +91,9 @@ speaker_voices:
 | chained to | adj.phr. | 被綁在…；走不開 | 多為誇張比喻 |
 | on the line | idiom | 岌岌可危；有風險 | my job / reputation is on the line |
 | on the chopping block | idiom | 面臨被砍、被解雇 | 比 `on the line` 更接近即將被處置 |
+| get to | v.phr. | 有幸、得以（做好事） | 福利語氣，對比 have to（必須） |
+| roll to voicemail | v.phr. | （電話）自動轉語音信箱 | roll (over) to ＝（自動）轉接／續轉 |
+| yet | conj./adv. | 然而；可是（轉折） | ≠ not yet；比 but 更書面、更有力 |
 
 ## Useful Phrases & Patterns
 
@@ -116,13 +119,23 @@ speaker_voices:
 
 `If + 現在式, 主詞 + 現在式` 可描述真實、立即的後果。別受中文影響寫成 `If you will mess up`；`if` 子句這裡直接用現在式。
 
+### 3. ...an assistant left the desk because she **sliced her hand open**.
+
+`slice + 受詞 + open` 是**結果補語**結構：`動詞 + 受詞 + 形容詞`，那個形容詞描述動作造成的**結果狀態**。這裡的 `open` 是**形容詞**（手變成「裂開」的狀態），不是動詞；整句也**沒有省略任何連接詞**——`because` 就是連接「原因」的那個連接詞。同類結構：`push the door open`、`cut it open`、`wipe the table clean`、`knock him out`。
+
+> She kicked the door open and ran inside.
+
+> 她一腳把門踹開，衝了進去。
+
 ## Cultural & Register Notes
 
 - **`deal with it` 很看語氣**：朋友間可表示「接受現實吧」，主管冷冷丟出來則可能很不耐煩。原片講師也點出同義替換 `figure it out`（都用在「別來煩我、自己想辦法」）；想禮貌一點可說 `Could you take care of it?`
 - **`man` 當動詞仍很常見**：意思是「顧守、操作、派人駐守」，和「男性」無關。正式或中性替代可用 `staff`、`operate`、`cover`。
-- **`skimmed milk` vs `skim milk`**：截圖使用 `skimmed milk`；美式咖啡店通常更常聽到 `skim milk`。
+- **`skimmed milk` vs `skim milk`**：截圖使用 `skimmed milk`；美式咖啡店通常更常聽到 `skim milk`。⚠️ 動詞 `skim` 另有超常用的「**略讀、快速瀏覽**」義（`skim an article`，TOEIC 閱讀技巧）——和「撇去表面油脂」是同一個畫面延伸出來的。
 - **`on the line` vs `on the chopping block`**：前者泛指處於風險；後者有「已被擺上砧板、快被砍掉」的強烈畫面，常用於工作、預算或專案即將被裁撤。
-- **`couture`** 通常指 `haute couture` 高級訂製服。這是時尚領域字，放在 lesson 理解即可，不列入本次主動詞庫。
+- **`couture`** 通常指 `haute couture` 高級訂製服。時尚領域字、日常少用，這次 Cian 問起已收進詞庫供辨識。
+- **`get to` vs `have to`**：`get to + 原形`＝「有幸／得以」（福利、好運）；`have to`＝「必須」（義務）。Emily 連用兩次 `get to` 是在炫耀她才有的特權。
+- **`yet` 當「然而」**：這裡的 `yet` 是轉折連接詞（≈ but / however），不是「還沒」(not yet)；放句首時比 `but` 更書面、更有對比力道。
 
 ## 順帶認得（被動字，原片有教）
 
