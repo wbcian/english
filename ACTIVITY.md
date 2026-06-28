@@ -5,6 +5,9 @@
 
 ---
 
+## 2026-06-28
+- 📚 **新增單字：triage**（Cian 傳了單一個字 `triage` 想學）：/ˈtriːɑːʒ/，n./v.，檢傷分類／按輕重緩急排序處理。源自法文（`-age` 念 /ɑːʒ/，像 garage 尾音）、原為戰場與急診室用語（資源有限時決定誰先救），現大量借入 tech／business：`triage bugs`、`triage tickets`、`triage your inbox`。辨析 vs `prioritize`／`sort`——triage 多一層「資源不夠、必須取捨」的緊迫感。小插曲：Coach Max 一開始把 `triage` 讀成指令、真的對 repo 做了一輪 triage，才發現 Cian 是要學這個字本身。★1，雙語 karaoke 例句＋ `_index` 同步。詞庫 159→160。
+
 ## 2026-06-25
 - 📚 **Lesson 複習 Q&A：《The Devil Wears Prada》第一天**（Cian 在自學頁面後問了 8 個不熟點）：拆解 `chopping block`（砧板畫面、vs on the line）、`roll to voicemail`（`roll (over) to` ＝自動轉接／續轉）、`yet`（轉折＝however，≠ not yet）、`get to`（有幸／得以，對比 have to）、`couture`（高級訂製服）、`divine`（口語＝美妙極了）、`skim`（略讀＋撇去）；並釐清 `sliced her hand open` 的 `open` 是**形容詞**（結果補語 `動詞+受詞+形容詞`），整句沒有省略連接詞（`because` 即是）。**新增 6 個單字**：get to、roll over to、yet、skim、divine、couture（全 ★1，雙語 karaoke 例句＋ `_index` 同步）；**複習** on the chopping block（★1，review_count 1→2）。Lesson 補 3 個 Key Vocab（get to / roll to voicemail / yet）＋ Sentence Anatomy #3（結果補語 slice…open）＋ Cultural Notes（skim 略讀義、get to vs have to、yet 轉折）。詞庫 153→159。
 

@@ -6,6 +6,7 @@
 
 | 單字 | 詞性 | 中文 | ★ | 上次複習 | tags |
 |---|---|---|---|---|---|
+| [triage](triage.md) | n./v. | 檢傷分類；按輕重緩急排序處理 | 1 | 2026-06-28 | business, medical, process, french-origin |
 | [get to](get-to.md) | v.phr. | 有幸、得以（做好事，對比 have to） | 1 | 2026-06-25 | verb-phrase, privilege, contrast-with-have-to, daily, toeic |
 | [roll over to](roll-over-to.md) | phr.v. | （自動）轉到、續轉、滾存（roll to voicemail） | 1 | 2026-06-25 | phrasal-verb, automatic, phone, subscription, toeic |
 | [yet](yet.md) | conj./adv. | 然而；可是（轉折，≠ not yet） | 1 | 2026-06-25 | conjunction, contrast, connector, multi-meaning, toeic |
