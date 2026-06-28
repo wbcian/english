@@ -9,9 +9,9 @@
 - 詳細 Profile → [PROFILE.md](PROFILE.md)
 
 ## 快照（隨更新同步）
-- 已收錄單字：160
-- 5★ 精熟：0　 3–4★ 學習中：8　 1–2★ 新／脆弱：152
-- 最近活動日期：2026-06-28（📚 **新增單字：triage**：Cian 傳單字 `triage` 想學 → /ˈtriːɑːʒ/、n./v.、檢傷分類／按輕重緩急排序處理。源自法文（`-age` 念 /ɑːʒ/）、原為戰場與急診室用語，現大量借入 tech／business（`triage bugs`／`tickets`／`inbox`）；辨析 vs prioritize／sort（多一層「資源不夠、必須取捨」的緊迫感）。小插曲：Coach Max 一開始把 `triage` 當指令、真的對 repo 做了一輪分流，才發現是要學這字。★1，雙語例句＋ `_index` 同步。詞庫 159→160）
+- 已收錄單字：161
+- 5★ 精熟：0　 3–4★ 學習中：8　 1–2★ 新／脆弱：153
+- 最近活動日期：2026-06-28（📚 **新增 2 個外語借詞單字**：① **triage** /ˈtriːɑːʒ/（n./v.，檢傷分類／按輕重緩急排序處理；法文借詞、原戰場與急診用語、現借入 tech／business `triage bugs`；辨析 vs prioritize＝多「資源不夠、必須取捨」感）——小插曲：Coach Max 先把 `triage` 當指令、真對 repo 分流了一輪才發現是要學字；② **Einstellung effect** /ˈaɪnʃtɛlʊŋ/（n.，定勢效應／思維定勢；德文借詞、原意超日常 setting／attitude，借進英文窄化成心理學 the Einstellung effect＝被舊成功經驗卡住、看不見更好解；Luchins 水罐實驗；辨析 vs functional fixedness）。兩字對照：triage＝主動取捨好習慣 vs Einstellung＝被舊經驗綁架壞陷阱。皆 ★1，雙語 karaoke 例句＋ `_index` 同步。詞庫 159→**161**）
 - 上一活動日期：2026-06-25（📚 **Lesson 複習 Q&A：《The Devil Wears Prada》第一天**：Cian 在自學頁面後問 8 個不熟點 → 拆解 chopping block（vs on the line）、roll to voicemail（`roll (over) to`＝自動轉接／續轉）、yet（轉折＝however，≠ not yet）、get to（有幸／得以，對比 have to）、couture、divine、skim，並釐清 `sliced her hand open` 的 `open` 是**形容詞**（結果補語 `動詞+受詞+形容詞`）、整句沒省略連接詞（`because` 即是）。**新增 6 字**：get to／roll over to／yet／skim／divine／couture（全 ★1，雙語例句＋ `_index` 同步）；**複習** on the chopping block（★1，review_count 1→2）。Lesson 補 3 Key Vocab（get to／roll to voicemail／yet）＋ Sentence Anatomy #3（結果補語 slice…open）＋ Cultural Notes（skim 略讀義／get to vs have to／yet 轉折）。詞庫 153→**159**）
 - 上二活動日期：2026-06-23（🔧 **review＋修《The Devil Wears Prada》lesson**：對照原片字幕 + final-film transcript 雙來源查證 → 拆開被合併的 `Oh, Emily? What do I do—`（Andy）／`Deal with it.`（Emily）對白、查證第 5 句 `Got it.`（確認是 Emily）、補 `figure it out`（詞庫 152→**153**）＋「順帶認得」被動字 appointments/expenses/divine/fall。🎙️ **App：per-speaker prosody 上線**——`speaker_voices` 值可寫 `{voice,rate,pitch}` 物件把語速/音高烤進合成（build-only、hash text-only、karaoke 零改動）；本篇 Emily＝en-GB Sonia +10%語速/+4%音高（連珠炮主管）、Andy＝en-US Jenny → dialogue 變兩個人。astro check 0 error、build 172 頁綠、karaoke 11/11 數值驗、byte-exact 證明烤進真檔。免費 Edge 只有 prosody，真情緒 style 需付費 Azure → 評估進 roadmap P10）
 - 上三活動日期：2026-06-23（🎧 **新 lesson：《The Devil Wears Prada》— Miranda 的地獄級第一天**（dialogue · B2）＋ 📚 **新增 11 個單字／片語**：skimmed milk、drip coffee、run errands、deal with it、fling、foam、man（動詞）、searing、chained to、on the line、on the chopping block。依 RealLife English / Ksenia 字幕截圖整理咖啡訂單、辦公室值守、跑腿分工與工作風險；全 ★1，建檔＋雙語例句＋ `_index.md` 同步，並做 `on the line` vs `on the chopping block` 辨析。詞庫 141→152）

@@ -6,6 +6,7 @@
 ---
 
 ## 2026-06-28
+- 📚 **新增單字：Einstellung effect**（Cian 傳單字 `Einstellung` 想學，緊接 triage 之後、又一個外語借詞）：/ˈaɪnʃtɛlʊŋ/，n.，定勢效應／思維定勢。德文原意超日常（setting／attitude／聘用），但借進英文後語意窄化成心理學的 **the Einstellung effect**——因過去成功經驗卡在熟悉舊方法、看不見更好/更簡單的新解。經典 Luchins 水罐實驗。辨析 vs functional fixedness／mental set／cognitive rigidity。與前一字 `triage` 對照：triage 是主動取捨的好習慣、Einstellung 是被舊經驗綁架的壞陷阱。★1，雙語 karaoke 例句＋ `_index` 同步。詞庫 160→161。
 - 📚 **新增單字：triage**（Cian 傳了單一個字 `triage` 想學）：/ˈtriːɑːʒ/，n./v.，檢傷分類／按輕重緩急排序處理。源自法文（`-age` 念 /ɑːʒ/，像 garage 尾音）、原為戰場與急診室用語（資源有限時決定誰先救），現大量借入 tech／business：`triage bugs`、`triage tickets`、`triage your inbox`。辨析 vs `prioritize`／`sort`——triage 多一層「資源不夠、必須取捨」的緊迫感。小插曲：Coach Max 一開始把 `triage` 讀成指令、真的對 repo 做了一輪 triage，才發現 Cian 是要學這個字本身。★1，雙語 karaoke 例句＋ `_index` 同步。詞庫 159→160。
 
 ## 2026-06-25
