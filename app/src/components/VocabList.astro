@@ -72,24 +72,39 @@ const searchIndex = entries.map((e) => ({
         { name: 'tags', weight: 1 },
         { name: 'pos', weight: 0.5 },
       ],
-      threshold: 0.35,
+      // 0.3 keeps typo tolerance but stops a 6-char query fuzzy-matching dozens
+      // of unrelated words (at 0.35, "man" matched 94 of 161 entries).
+      threshold: 0.3,
       ignoreLocation: true,
     });
+    const list = root.querySelector('.vocab-list');
     const rows = Array.from(root.querySelectorAll<HTMLElement>('.vocab-row'));
+    const rowById = new Map(rows.map((r) => [r.dataset.id ?? '', r]));
 
     const applyFilter = () => {
       const q = input.value.trim();
       if (!q) {
-        rows.forEach((r) => (r.style.display = ''));
+        // Restore original (proficiency-sorted) order and show everything.
+        rows.forEach((r) => {
+          r.style.display = '';
+          list?.appendChild(r);
+        });
         if (emptyEl) emptyEl.hidden = true;
         return;
       }
-      const hits = new Set(fuse.search(q).map((r) => r.item.id));
-      rows.forEach((r) => {
-        r.style.display = hits.has(r.dataset.id ?? '') ? '' : 'none';
+      // fuse.search returns results already sorted best-match-first; hide
+      // everything, then show + re-append matches in that order so the most
+      // relevant entry lands on top instead of buried in DOM order.
+      const results = fuse.search(q);
+      rows.forEach((r) => (r.style.display = 'none'));
+      results.forEach((res) => {
+        const row = rowById.get(res.item.id);
+        if (!row) return;
+        row.style.display = '';
+        list?.appendChild(row);
       });
       if (emptyEl && emptyQueryEl) {
-        if (hits.size === 0) {
+        if (results.length === 0) {
           (emptyQueryEl as HTMLElement).textContent = q;
           emptyEl.hidden = false;
         } else {
