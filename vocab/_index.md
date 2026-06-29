@@ -6,6 +6,7 @@
 
 | 單字 | 詞性 | 中文 | ★ | 上次複習 | tags |
 |---|---|---|---|---|---|
+| [primer](primer.md) | n. | 入門書／入門指南；底漆；底火（一字多義＋發音分岔陷阱） | 1 | 2026-06-29 | noun, multi-meaning, pronunciation-trap, tech-writing, daily |
 | [Einstellung effect](einstellung-effect.md) | n. | 定勢效應；思維定勢（被舊經驗綁住、看不到更好解法） | 1 | 2026-06-28 | psychology, german-origin, cognition, jargon, niche |
 | [triage](triage.md) | n./v. | 檢傷分類；按輕重緩急排序處理 | 1 | 2026-06-28 | business, medical, process, french-origin |
 | [get to](get-to.md) | v.phr. | 有幸、得以（做好事，對比 have to） | 1 | 2026-06-25 | verb-phrase, privilege, contrast-with-have-to, daily, toeic |
