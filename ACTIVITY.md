@@ -5,6 +5,10 @@
 
 ---
 
+## 2026-07-01
+- 🎧 **新 lesson：RealLife English — 用「80/20」攻片語動詞**（talk · B1 · 講師 Ethan · 字幕截圖 ~4 min 3 段）：Ethan 針對「卡關（been stuck at the same level）」的中級學習者，主張別念更兇、要念更聰明——把火力集中在**單字學習的 80/20**＝phrasal verbs／idioms／word formation。本課聚焦片語動詞，用 "John was going to **push back** the meeting but **ended up** **calling it off** instead." 示範母語密度，再給 4 個訣竅（從最常見學起／按情境分類／查 splittable 可拆性／每個配一個同義替身）。模組：Topic & Summary、正文（Ethan 三段＋引述 Thiago）、Key Vocab、Phrasal Verbs Decoder（片語動詞→替身字）、Sentence Anatomy（三連發片語動詞＋可拆/不可拆受詞位置）、Cultural Notes（80/20 帕雷托、rock a look、without further ado、get by 吞 by）、Takeaways。
+- 📚 **新增 12 字／片語**：push back、end up、call off、get by、hang out、put up with、stand out、stack up（8 個片語動詞）＋ without further ado、get straight to the point、in one sitting（3 個 idiom）＋ rock（動詞口語義「自信頂著某造型」）。重點辨析：**splittable**（可拆 call it off ✅／call off it ❌）vs 不可拆（put up with it）；片語動詞 vs 替身字（口說優先片語動詞、別退回 postpone/cancel 書面字）。全 ★1，建檔＋雙語 karaoke 例句＋ `_index` 同步。詞庫 163→**175**。
+
 ## 2026-06-30
 - 📚 **新增單字：mastery**（Cian 傳了單一個字 `mastery` 想學）：/ˈmæstəri/，n.，精通、嫻熟；掌控、駕馭。兩義同一條根 `master`（v.）→ `mastery`（n.）。重點放在**介系詞分工**——`mastery of X`＝精通某技能（最高頻，配 achieve／gain／demonstrate），`mastery over X`＝凌駕／控制某對象（mastery over your emotions／the market）；記憶鉤 of＝精通技能、over＝壓制對象。詞家族 master→mastery→masterful/masterly→masterpiece。TOEIC 角度：`mastery of` 比 `being good at` 正式有力。近義 command／proficiency／expertise／prowess／virtuosity。★1，雙語 karaoke 例句（精通＋掌控各一句）＋ `_index` 同步。詞庫 162→163。
 
