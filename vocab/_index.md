@@ -6,6 +6,18 @@
 
 | 單字 | 詞性 | 中文 | ★ | 上次複習 | tags |
 |---|---|---|---|---|---|
+| [push back](push-back.md) | phr.v. | （把…）延期、延後；反對（pushback） | 1 | 2026-07-01 | phrasal-verb, splittable, business, scheduling, toeic |
+| [end up](end-up.md) | phr.v. | 結果變成、最後落得 | 1 | 2026-07-01 | phrasal-verb, result, daily, narrative, toeic |
+| [call off](call-off.md) | phr.v. | 取消（已安排的事）；叫…停手 | 1 | 2026-07-01 | phrasal-verb, splittable, cancel, daily, toeic |
+| [get by](get-by.md) | phr.v. | 勉強應付、過得去 | 1 | 2026-07-01 | phrasal-verb, survival, money, daily, toeic |
+| [hang out](hang-out.md) | phr.v. | （和某人）閒晃、消磨時間 | 1 | 2026-07-01 | phrasal-verb, social, casual, high-frequency, daily |
+| [put up with](put-up-with.md) | phr.v. | 忍受、容忍 | 1 | 2026-07-01 | phrasal-verb, three-word, tolerance, daily, toeic |
+| [stand out](stand-out.md) | phr.v. | 顯眼、突出、跳出來 | 1 | 2026-07-01 | phrasal-verb, prominence, resume, daily, toeic |
+| [stack up](stack-up.md) | phr.v. | 累積、積少成多；比高下 | 1 | 2026-07-01 | phrasal-verb, accumulation, comparison, daily, toeic |
+| [without further ado](without-further-ado.md) | idiom | 廢話不多說、閒話休提 | 1 | 2026-07-01 | idiom, set-phrase, presentation, opener |
+| [get straight to the point](get-straight-to-the-point.md) | idiom | 直接切入重點、開門見山 | 1 | 2026-07-01 | idiom, communication, directness, daily, toeic |
+| [in one sitting](in-one-sitting.md) | idiom | 一口氣（一次做完） | 1 | 2026-07-01 | idiom, time, intensity, reading, daily |
+| [rock](rock.md) | v. | （自信地）頂著某造型；很棒（口語） | 1 | 2026-07-01 | verb, slang, fashion, casual, multi-meaning |
 | [mastery](mastery.md) | n. | 精通、嫻熟；掌控、駕馭（of＝精通技能／over＝掌控對象） | 1 | 2026-06-30 | noun, skill, control, toeic, formal |
 | [primer](primer.md) | n. | 入門書／入門指南；底漆；底火（一字多義＋發音分岔陷阱） | 1 | 2026-06-29 | noun, multi-meaning, pronunciation-trap, tech-writing, daily |
 | [Einstellung effect](einstellung-effect.md) | n. | 定勢效應；思維定勢（被舊經驗綁住、看不到更好解法） | 1 | 2026-06-28 | psychology, german-origin, cognition, jargon, niche |
