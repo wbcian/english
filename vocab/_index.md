@@ -6,6 +6,7 @@
 
 | 單字 | 詞性 | 中文 | ★ | 上次複習 | tags |
 |---|---|---|---|---|---|
+| [mastery](mastery.md) | n. | 精通、嫻熟；掌控、駕馭（of＝精通技能／over＝掌控對象） | 1 | 2026-06-30 | noun, skill, control, toeic, formal |
 | [primer](primer.md) | n. | 入門書／入門指南；底漆；底火（一字多義＋發音分岔陷阱） | 1 | 2026-06-29 | noun, multi-meaning, pronunciation-trap, tech-writing, daily |
 | [Einstellung effect](einstellung-effect.md) | n. | 定勢效應；思維定勢（被舊經驗綁住、看不到更好解法） | 1 | 2026-06-28 | psychology, german-origin, cognition, jargon, niche |
 | [triage](triage.md) | n./v. | 檢傷分類；按輕重緩急排序處理 | 1 | 2026-06-28 | business, medical, process, french-origin |

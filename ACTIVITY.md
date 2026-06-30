@@ -5,6 +5,9 @@
 
 ---
 
+## 2026-06-30
+- 📚 **新增單字：mastery**（Cian 傳了單一個字 `mastery` 想學）：/ˈmæstəri/，n.，精通、嫻熟；掌控、駕馭。兩義同一條根 `master`（v.）→ `mastery`（n.）。重點放在**介系詞分工**——`mastery of X`＝精通某技能（最高頻，配 achieve／gain／demonstrate），`mastery over X`＝凌駕／控制某對象（mastery over your emotions／the market）；記憶鉤 of＝精通技能、over＝壓制對象。詞家族 master→mastery→masterful/masterly→masterpiece。TOEIC 角度：`mastery of` 比 `being good at` 正式有力。近義 command／proficiency／expertise／prowess／virtuosity。★1，雙語 karaoke 例句（精通＋掌控各一句）＋ `_index` 同步。詞庫 162→163。
+
 ## 2026-06-29
 - 📚 **新增單字：primer**（Cian 傳了單一個字 `primer` 想學）：/ˈprɪmər/，n.，入門書／入門指南；底漆；底火／雷管。重點放在**一字多義＋發音分岔陷阱**——「入門書」義美式念 /ˈprɪmər/（短 i），但「底漆／底火／妝前乳」永遠念 /ˈpraɪmər/（長 i），同一個字撞到兩種音、靠上下文判斷（`a primer on AI` vs `spray primer`）。最高頻用法 `a primer on X` = X 的入門教材（科技／商業文章常見）。近義 introduction／crash course／the ABCs；底漆 undercoat／base coat。★1，雙語 karaoke 例句（三義各一句）＋ `_index` 同步。詞庫 161→162。
 
