@@ -179,6 +179,32 @@ _（目前沒有正在做的）_
   - 緊湊化別壓到 karaoke 已讀蔓延的行內高亮（P2 拿掉滾動框正是為了不裁字）：收間距後確認亮字不被裁、行距仍夠 trail 呼吸。
   - 收工照既有規矩：`astro build` 綠、`check-audio-hash-sync` 11+11、`/simplify`。
 
+### P13 — 每日練習編排 + 進度白板（依學習科學 survey）🗓️📊　**Effort: L（分兩 facet / 可分階段）**
+
+> 起因：2026-07-01 deep-research 學習科學 survey（結論 SSOT 見 [`reference/learning-efficiency-research.md`](../../reference/learning-efficiency-research.md)）。survey 最強證據＝**間隔練習(spacing) > 集中猛K**、**規律 > 總量**；碎片化微學習對「記憶層(單字SRS)＋輸入層(閱讀/影片片段)＋小輸出(noticing)」有效，但**口說流利度與段落級深度寫作需保護較長整塊時段**。目前 app 有 lessons＋vocab＋(規劃中的) P4 flashcard，但**缺一層「今天該練什麼／有沒有維持規律」的編排與追蹤**。Cian 的原始需求：想「利用零碎時間隨時做一次練習」。
+
+- **動機**：把 app 從「內容瀏覽器」升級成「練習系統」。survey 指出成效關鍵不是任何單一活動，而是**天天做、分散練、對的活動放對的時段**。碎片時間隨時來一發正好命中證據最強的碎片化記憶＋輸入層；但需要一個東西幫他 (a) 決定這次碎片時間做什麼、(b) 看到自己的規律與待複習進度、(c) 不讓全碎片擠掉每週的口說/寫作整塊。
+- **期望行為**（兩個 facet，可分階段上）：
+  - **Facet A — 每日練習編排（micro-session orchestrator）**：一個 `/practice`（或首頁入口）「開始今天的練習」。按下 → 依證據組一份 3–15 分鐘混合 micro-session（長度可選，碎片隨時來）：
+    - **N 張到期單字卡**（接 P4 SRS；spacing 是效率之王、最適合碎片）
+    - **一段輸入**（隨機／接續一篇 lesson 的一段，或短影片片段；守 survey 的「限定程度＋讀完給個交代」→ 讀完彈「用一句話總結」）
+    - **一個小輸出 prompt**（造一句用到剛複習的字；noticing 型輸出，碎片可做）
+  - **Facet B — 練習進度白板（progress board / dashboard）**：把「規律」視覺化——
+    - **連續天數 streak** ＋ 近 N 週「有練/沒練」熱力格（強化 spacing 的「天天做」）
+    - **待複習量**（今天到期幾張卡、幾段沒回顧的 lesson）
+    - **每週「保護整塊」提醒**：口說（shadowing/對話）與段落級寫作各排 1–2 次較長 block，白板顯示本週做了沒（survey 明確：這兩者**不能只靠碎片**）
+    - 可選：modality 平衡（本週輸入/單字/輸出/口說佔比），對照 survey 建議配比
+- **實作切點**：
+  - **強依賴 P4**（flashcard SRS）：micro-session 的單字卡直接用 P4 的抽卡與 localStorage → 建議 **P4 → P13** 順序。
+  - 資料層沿用 P4 哲學：**localStorage 記 streak/session log**（key prefix `englishApp:practice:`）、SoT 仍是 markdown、**不引 DB**；回流走既有「session 摘要 → 貼給 Coach Max → 套回 markdown」流程（連 vocab 的 `last_reviewed`/`review_count`）。
+  - 輸入片段來源：現有 lessons（`blockquote>p.speakable`，沿用 play-all/karaoke）；「一句話總結」「造一句」用純文字 textarea 存 localStorage 草稿，鼓勵貼回對話給 Coach Max 批改。
+  - 新頁 `app/src/pages/practice/index.astro`（編排器）＋ dashboard 元件（streak 熱力格純 CSS grid、待複習數由 P4 SRS 狀態算）；挑 modality/★/tag 共用 P3 filter。
+- **依賴 / 風險**：
+  - **先做 P4（甚至 P3）**：本項疊在 flashcard 之上，P4 未上線前 Facet A 缺單字料。**Facet B 的 streak/白板只需 session log，可先做當獨立速贏**。
+  - **app 只能編排「可碎片」層＋提醒「保護塊」，不能取代真人口說/深度寫作批改**（survey 天花板）：白板追蹤與提醒 OK，實際對話/寫作批改仍走 Coach Max 對話流，別過度期待 app 內建。
+  - **別過度設計 SRS/推薦**：初版「到期卡 + 一段 lesson + 一個造句 prompt + streak 格」就有 80% 價值；沿用 P4 觀察指標紀律（v1 上線後 Cian 是否真的每天點開，再決定 v2）。
+  - localStorage 存活風險同 P4（清 cache／Safari ITP／換裝置）——streak 是動力工具、非帳本，真資料靠 markdown 回填。
+
 ---
 
 ## 💡 Ideas（還沒排優先序）
