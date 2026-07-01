@@ -6,6 +6,24 @@
 
 | 單字 | 詞性 | 中文 | ★ | 上次複習 | tags |
 |---|---|---|---|---|---|
+| [scorching](scorching.md) | adj. | 灼熱的、酷熱的 | 1 | 2026-07-01 | adjective, weather, hot, intensity, summer |
+| [sweltering](sweltering.md) | adj. | 悶熱難受的（很熱＋不舒服） | 1 | 2026-07-01 | adjective, weather, hot, discomfort, summer |
+| [sizzling](sizzling.md) | adj. | 熱到滋滋作響、快被烤焦的 | 1 | 2026-07-01 | adjective, weather, hot, onomatopoeia, summer |
+| [heatwave](heatwave.md) | n. | 熱浪（持續數日、比平常熱很多） | 1 | 2026-07-01 | noun, weather, climate, news, summer |
+| [mirage](mirage.md) | n. | 海市蜃樓；抓不到的幻象 | 1 | 2026-07-01 | noun, optics, illusion, french-origin, summer |
+| [cruelly hot](cruelly-hot.md) | phr. | 酷熱、熱到殘忍（日本「酷暑日」英譯） | 1 | 2026-07-01 | phrase, weather, hot, japan, summer |
+| [muggy](muggy.md) | adj. | 又濕又悶熱的 | 1 | 2026-07-01 | adjective, weather, humidity, discomfort, summer |
+| [sweating buckets](sweating-buckets.md) | phr. | 滿頭大汗、汗如雨下 | 1 | 2026-07-01 | idiom, hyperbole, sweat, body, summer |
+| [drenched in sweat](drenched-in-sweat.md) | phr. | 汗濕透、全身濕透 | 1 | 2026-07-01 | idiom, hyperbole, sweat, body, summer |
+| [brain freeze](brain-freeze.md) | n. | 大腦凍結、冰淇淋頭痛 | 1 | 2026-07-01 | noun, informal, body, ice-cream, summer |
+| [melt](melt.md) | v. | 融化（物理／熱／情感一字三用） | 1 | 2026-07-01 | verb, multi-meaning, temperature, emotion, summer |
+| [summer fling](summer-fling.md) | n. | 夏日短暫戀情（短而熱烈、不太認真） | 1 | 2026-07-01 | noun, romance, casual, seasonal, summer |
+| [parasol](parasol.md) | n. | 陽傘、遮陽傘 | 1 | 2026-07-01 | noun, sun-protection, object, french-origin, summer |
+| [beat down](beat-down.md) | phr.v. | （陽光）強烈曝曬、無情照下 | 1 | 2026-07-01 | phrasal-verb, sun, weather, imagery, summer |
+| [sunburned](sunburned.md) | adj. | 曬傷的 | 1 | 2026-07-01 | adjective, skin, sun, health, summer |
+| [summer solstice](summer-solstice.md) | n. | 夏至（一年中最長的白天） | 1 | 2026-07-01 | noun, astronomy, season, calendar, summer |
+| [equinox](equinox.md) | n. | 分點（春分／秋分，晝夜等長） | 1 | 2026-07-01 | noun, astronomy, season, calendar, latin-origin |
+| [midnight sun](midnight-sun.md) | n. | 午夜太陽、永晝（極晝） | 1 | 2026-07-01 | noun, geography, arctic, phenomenon, summer |
 | [socratic](socratic.md) | adj. | 蘇格拉底式的（用提問引導、非直接給答案） | 1 | 2026-07-01 | adjective, education, philosophy, teaching, toeic |
 | [push back](push-back.md) | phr.v. | （把…）延期、延後；反對（pushback） | 1 | 2026-07-01 | phrasal-verb, splittable, business, scheduling, toeic |
 | [end up](end-up.md) | phr.v. | 結果變成、最後落得 | 1 | 2026-07-01 | phrasal-verb, result, daily, narrative, toeic |
