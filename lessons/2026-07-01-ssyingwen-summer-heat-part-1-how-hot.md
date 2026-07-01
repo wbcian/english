@@ -36,8 +36,8 @@ title_en: "Ways to say it's blazing hot — scorching, sweltering, sizzling, hea
 **好熱啊 系列**（ssyingwen P04 · 共 3 part）：
 
 - **Part 1：到底有多熱 + 冷氣救命** → 你在這（好熱說法 · scorching/sweltering/sizzling · 熱浪 · 冷氣）
-- **Part 2：濕、黏、汗，還有冰**（濕熱 · 流汗 · 冰品 · 融化）— 稍後補上
-- **Part 3：太陽、海邊與夏天的浪漫**（防曬 · 海灘 · 夏至 · 午夜太陽）— 稍後補上
+- **Part 2：濕、黏、汗，還有冰** → [lesson](2026-07-01-ssyingwen-summer-heat-part-2-sweat-and-ice.md)（濕熱 · 流汗 · 冰品 · 融化）
+- **Part 3：太陽、海邊與夏天的浪漫** → [lesson](2026-07-01-ssyingwen-summer-heat-part-3-sun-and-beach.md)（防曬 · 海灘 · 夏至 · 午夜太陽）
 
 ---
 
@@ -181,4 +181,6 @@ title_en: "Ways to say it's blazing hot — scorching, sweltering, sizzling, hea
 
 ## 🔗 Next Up — Part 2：濕、黏、汗，還有冰
 
-Part 2 換場景：台灣的濕熱（humid／muggy／feels-like temperature）、流汗的各種說法（sweating buckets、drenched in sweat）、還有消暑冰品與「融化」melt——配 Señorita、Olivia Rodrigo、Kali Uchis。稍後補上。
+Part 2 換場景：台灣的濕熱（humid／muggy／feels-like temperature）、流汗的各種說法（sweating buckets、drenched in sweat）、還有消暑冰品與「融化」melt——配 Señorita、Olivia Rodrigo、Kali Uchis。
+
+→ [Part 2：濕、黏、汗，還有冰](2026-07-01-ssyingwen-summer-heat-part-2-sweat-and-ice.md)
