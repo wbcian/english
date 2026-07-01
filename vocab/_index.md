@@ -6,6 +6,7 @@
 
 | 單字 | 詞性 | 中文 | ★ | 上次複習 | tags |
 |---|---|---|---|---|---|
+| [socratic](socratic.md) | adj. | 蘇格拉底式的（用提問引導、非直接給答案） | 1 | 2026-07-01 | adjective, education, philosophy, teaching, toeic |
 | [push back](push-back.md) | phr.v. | （把…）延期、延後；反對（pushback） | 1 | 2026-07-01 | phrasal-verb, splittable, business, scheduling, toeic |
 | [end up](end-up.md) | phr.v. | 結果變成、最後落得 | 1 | 2026-07-01 | phrasal-verb, result, daily, narrative, toeic |
 | [call off](call-off.md) | phr.v. | 取消（已安排的事）；叫…停手 | 1 | 2026-07-01 | phrasal-verb, splittable, cancel, daily, toeic |
