@@ -6,6 +6,11 @@
 ---
 
 ## 2026-07-01
+- 🎧 **新 lesson：時事英文 ssyingwen「好熱啊」P04 → 三部曲 Part 1：到底有多熱 + 冷氣救命**（talk · B1 · 主持人 Han · 中文講解＋英文歌 · 本地 whisper 轉錄 40 min，slug `2026-07-01-ssyingwen-summer-heat-part-1-how-hot`）：這集用 **15 首夏日金曲**教夏天英文。Part 1 主攻「怎麼喊熱」與「怎麼降溫」——hot 以外的道地說法（baking hot／insanely hot／the heat is brutal／feels like a sauna）、三個「很熱」形容詞細分（**scorching**＝很熱／**sweltering**＝悶到不舒服／**sizzling**＝快烤焦）、熱浪 heatwave＋海市蜃樓 mirage＋高溫警報 heat advisory/warning/alert、以及一整組冷氣句（aircon/AC、turn up、**blast the AC on high**、turn down the temperature、make it cooler、adjust）。模組：Topic & Summary、正文（主題群改寫＋歌詞英文版權區）、Key Vocab（17 條）、Playlist（6 首）、Sentence Anatomy（blast on high＋turn up/down 陷阱）、Cultural Notes、Takeaways。歌單 Selena Gomez《Summer's Not Hot》/ Chappell Roan《HOT TO GO!》/ Glass Animals《Heat Waves》/ Pussycat Dolls《Don't Cha》/ Bananarama & Taylor Swift《Cruel Summer》。live preview 驗：20 段英文 blockquote 可朗讀＋卡拉 OK、歌手標籤已從朗讀剝除、`word` 欄可唸、Playlist 不唸、0 raw `>`；`astro build` 綠、hash-sync 11+11、generated 音檔 failed=0 degraded=0。
+- 🔎 **外部事實雙輪交叉驗證（+直查）修正**：主持人所引 Pussycat Dolls《Don't Cha》「sizzle like a summertime cookout」雙源查無此句（**不採用**）；「The Guardian 報道」日本酷暑日查無原文，改標 **AFP／外媒**（核心事實無誤：JMA 2026/4 定「酷暑日」40°C+，英譯 cruelly hot）；Chappell Roan《HOT TO GO!》年份 **2023**。raw transcript 存 `transcripts/2026-07-01-15-summer-vibes.txt`（含 `.srt`）。
+- ⏸️ **Part 2／3 與各字 `vocab/` 建檔待 Cian 看過 Part 1 再續**（詞庫維持 176、vocab 檔暫緩，避免三部曲改版後重工）。
+
+## 2026-07-01
 📚 **新增單字：Socratic** /səˈkrætɪk/（adj.，蘇格拉底式的）——Cian 傳單字想學。重點放在招牌搭配 **the Socratic method**＝用一連串提問逼出對方自己的推理，而不是直接給答案（法學院／教學／面試常用），以及它是**專有形容詞、字首 S 常大寫**。延伸 `Socratic questioning / dialogue / irony`。★1，雙語 karaoke 例句（mentor 追問＋教練問答各一句）＋ `_index` 同步。詞庫 175→176。
 
 ## 2026-07-01
