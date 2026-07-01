@@ -160,6 +160,25 @@ _（目前沒有正在做的）_
   - **重生成本**：改全域卡司 → `--revoice` 會重生**所有**該卡司 clip（dialogue 全篇約 ~140 個 mp3）＋ sidecar，網路時間 ＋ git binary churn（一批 mp3 重新提交）。完全可逆（還原 json ＋ revoice）。
   - prosody 與 voice 同軸吃 text-only-hash 限制（§5.2）：同文字不同 prosody 仍撞同一檔；目前語料 0 例。
 
+### P12 — 雙語顯示優化：更緊湊、中文更退位、英文段拿掉橘邊條 📐🎯　**Effort: S（純 CSS/樣式，build-only）**
+
+> 接 P6（EN/zh 雙聲部分流）與 P2（可朗讀段落左側 amber 邊條）。Cian 2026-07-01 回饋：讀 lesson 正文時想讓**英文段落更聚焦**——排版可以更緊湊、中譯字體再小／再退一點、英文段落左側的橘色邊條可以拿掉，減少視覺雜訊。
+
+- **動機**：目前正文一段英文（serif 主聲部）＋一段中譯（較淡較小 sans 副聲部）順流，且每個可朗讀英文段左側有一條 dim amber 邊條（P2）。整體資訊密度偏鬆、中英對比還不夠強、左邊條在不放音時只是裝飾 → 英文段落不夠聚焦。想讓「英文為主、中文為輔」的視覺層級更明確、版面更緊湊。
+- **期望行為**：
+  - **更緊湊**：收斂 EN/zh blockquote 配對之間、段與段之間的垂直間距（`blockquote` margin、正文行距/段距），一屏塞更多、閱讀節奏更順。
+  - **中文更退位**：中譯 sans 副聲部再縮一級字級／再降一點對比（比目前更小、更淡），強化「英文主、中文輔」層級；但仍須**可讀**（別小到要瞇眼、手機尤其注意）。
+  - **英文段拿掉橘邊條**：可朗讀英文段落 **idle 狀態不顯示左側 amber 邊條**（消除裝飾性雜訊、讓英文段更乾淨聚焦）。
+- **實作切點**：
+  - 純 `app/src/layouts/Layout.astro` 的 CSS（`blockquote`、`.speakable`、EN/zh 分流的 `[lang="en"]` vs 中譯樣式、`--font-en`／字級變數）；**不動 markdown、不動 karaoke 契約、不動 hash**（`blockquote>p`／`.w`／`data-wi`／textContent 全不碰）→ build-only、零 hash drift。
+  - 中文字級：找 P6 Phase 2 的「中譯較淡較小 sans 副聲部」規則，再調小一級＋降對比。
+  - 拿邊條：把 `.speakable` idle 的 `border-left`（dim amber）改透明／移除。
+- **依賴 / 風險**：
+  - ⚠️ **左邊條身兼「正在播放」指示**（P2）：對**沒有 karaoke sidecar** 的段落，播放中變亮變粗的左邊條是它**唯一**的「正在播」提示。若 idle 拿掉邊條，**播放中仍要保留一個 affordance**——建議 idle 無邊條、**播放中才顯示**（亮 amber 邊條或替代 cue），別把 playing 指示一起拿掉。
+  - 中文縮太小傷可讀性（尤其手機）：改字級/對比後要 **亮/暗 × 桌機/手機** 都 live preview 實測（沿用 P6 流程：`preview_resize` 給真 viewport、量 computed font-size/color/margin）。
+  - 緊湊化別壓到 karaoke 已讀蔓延的行內高亮（P2 拿掉滾動框正是為了不裁字）：收間距後確認亮字不被裁、行距仍夠 trail 呼吸。
+  - 收工照既有規矩：`astro build` 綠、`check-audio-hash-sync` 11+11、`/simplify`。
+
 ---
 
 ## 💡 Ideas（還沒排優先序）
