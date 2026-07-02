@@ -6,6 +6,7 @@
 
 | 單字 | 詞性 | 中文 | ★ | 上次複習 | tags |
 |---|---|---|---|---|---|
+| [harvest](harvest.md) | n./v. | 收穫、收成；收割、採收 | 1 | 2026-07-02 | noun, verb, agriculture, multi-meaning, figurative |
 | [scorching](scorching.md) | adj. | 灼熱的、酷熱的 | 1 | 2026-07-01 | adjective, weather, hot, intensity, summer |
 | [sweltering](sweltering.md) | adj. | 悶熱難受的（很熱＋不舒服） | 1 | 2026-07-01 | adjective, weather, hot, discomfort, summer |
 | [sizzling](sizzling.md) | adj. | 熱到滋滋作響、快被烤焦的 | 1 | 2026-07-01 | adjective, weather, hot, onomatopoeia, summer |
