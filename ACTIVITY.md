@@ -6,6 +6,7 @@
 ---
 
 ## 2026-07-02
+📚 **新增單字：childish** /ˈtʃaɪldɪʃ/（adj.，幼稚的、孩子氣的，貶義）——Cian 傳單字想學。重點是跟 **childlike**（天真純真、中性偏正面）要分清楚，childish 幾乎永遠是貶義；常見句型 **It's childish of + 人 + to V**；反義詞 mature。★1，雙語 karaoke 例句兩句＋ `_index` 同步。詞庫 197→198。
 📚 **新增單字：crook** /krʊk/（n.，騙子、罪犯；彎曲處、彎鉤）——Cian 傳單字想學。一字多義：「騙子/罪犯」義口語偏老派，類似 swindler／con artist；「彎曲處」義最常見片語 **the crook of one's arm/elbow**（手肘內側彎曲處）。形容詞 crooked＝彎曲的，也引申「不正直、狡詐的」。★1，雙語 karaoke 例句兩句（罪犯義＋身體部位義各一）＋ `_index` 同步。詞庫 196→197。
 📚 **新增單字：jerk** /dʒɜːrk/（n./v.，混蛋、討厭鬼；猛拉、抽動）——Cian 傳單字想學。重點是名詞義罵人「混蛋」最常見，語氣比 asshole 溫和一點、比 idiot 更帶惡意（強調對人差勁不體貼）；動詞義較中性，延伸片語 **knee-jerk reaction**（膝反射式直覺反應）。★1，雙語 karaoke 例句兩句（名詞＋動詞各一）＋ `_index` 同步。詞庫 195→196。
 📚 **新增單字：prank** /præŋk/（n./v.，惡作劇）——Cian 傳單字想學。重點是招牌搭配 **pull a prank (on someone)**，動詞固定用 "pull" 不是 "do"／"make"；及物動詞用法可直接 "prank someone"。延伸 April Fools' Day、prankster、practical joke（正式說法）。★1，雙語 karaoke 例句兩句＋ `_index` 同步。詞庫 194→195。

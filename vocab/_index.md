@@ -175,6 +175,7 @@
 | [prank](prank.md) | n./v. | 惡作劇 | 1 | 2026-07-02 | noun, verb, humor, social, daily |
 | [jerk](jerk.md) | n./v. | 混蛋、討厭鬼；猛拉、抽動 | 1 | 2026-07-02 | noun, verb, insult, motion, daily |
 | [crook](crook.md) | n. | 騙子、罪犯；彎曲處、彎鉤 | 1 | 2026-07-02 | noun, crime, informal, body, multi-meaning |
+| [childish](childish.md) | adj. | 幼稚的、孩子氣的（貶義） | 1 | 2026-07-02 | adjective, emotion, insult, maturity, daily |
 | [headed to](headed-to.md) | phr. | 前往；朝...而去 | 2 | 2026-04-29 | phrasal-verb, daily |
 | [cram](cram.md) | v. | 塞滿；臨時抱佛腳 | 2 | 2026-06-01 | verb, study, multi-meaning |
 | [keen](keen.md) | adj. | 熱衷的；敏銳的 | 2 | 2026-04-29 | adjective, emotion |

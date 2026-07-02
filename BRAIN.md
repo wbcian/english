@@ -9,10 +9,11 @@
 - 詳細 Profile → [PROFILE.md](PROFILE.md)
 
 ## 快照（隨更新同步）
-- 已收錄單字：197
-- 5★ 精熟：0　 3–4★ 學習中：8　 1–2★ 新／脆弱：189
-- 最近活動日期：2026-07-02（📚 **新增單字：crook** /krʊk/（n.，騙子、罪犯；彎曲處、彎鉤）——Cian 傳單字想學。一字多義：「騙子/罪犯」義口語偏老派，類似 swindler／con artist；「彎曲處」義最常見片語 **the crook of one's arm/elbow**（手肘內側彎曲處）。形容詞 crooked＝彎曲的，也引申「不正直、狡詐的」。★1，雙語 karaoke 例句兩句（罪犯義＋身體部位義各一）＋ `_index` 同步。詞庫 196→**197**）
-- 上一活動日期：2026-07-02（📚 **新增單字：jerk** /dʒɜːrk/（n./v.，混蛋、討厭鬼；猛拉、抽動）——Cian 傳單字想學。重點是名詞義罵人「混蛋」最常見，語氣比 asshole 溫和一點、比 idiot 更帶惡意（強調對人差勁不體貼）；動詞義較中性，延伸片語 **knee-jerk reaction**（膝反射式直覺反應）。★1，雙語 karaoke 例句兩句（名詞＋動詞各一）＋ `_index` 同步。詞庫 195→196）
+- 已收錄單字：198
+- 5★ 精熟：0　 3–4★ 學習中：8　 1–2★ 新／脆弱：190
+- 最近活動日期：2026-07-02（📚 **新增單字：childish** /ˈtʃaɪldɪʃ/（adj.，幼稚的、孩子氣的，貶義）——Cian 傳單字想學。重點是跟 **childlike**（天真純真、中性偏正面）要分清楚，childish 幾乎永遠是貶義；常見句型 **It's childish of + 人 + to V**；反義詞 mature。★1，雙語 karaoke 例句兩句＋ `_index` 同步。詞庫 197→**198**）
+- 上一活動日期：2026-07-02（📚 **新增單字：crook** /krʊk/（n.，騙子、罪犯；彎曲處、彎鉤）——Cian 傳單字想學。一字多義：「騙子/罪犯」義口語偏老派，類似 swindler／con artist；「彎曲處」義最常見片語 **the crook of one's arm/elbow**（手肘內側彎曲處）。形容詞 crooked＝彎曲的，也引申「不正直、狡詐的」。★1，雙語 karaoke 例句兩句（罪犯義＋身體部位義各一）＋ `_index` 同步。詞庫 196→197）
+- 上二活動日期：2026-07-02（📚 **新增單字：jerk** /dʒɜːrk/（n./v.，混蛋、討厭鬼；猛拉、抽動）——Cian 傳單字想學。重點是名詞義罵人「混蛋」最常見，語氣比 asshole 溫和一點、比 idiot 更帶惡意（強調對人差勁不體貼）；動詞義較中性，延伸片語 **knee-jerk reaction**（膝反射式直覺反應）。★1，雙語 karaoke 例句兩句（名詞＋動詞各一）＋ `_index` 同步。詞庫 195→196）
 - 上二活動日期：2026-07-02（📚 **新增單字：prank** /præŋk/（n./v.，惡作劇）——Cian 傳單字想學。重點是招牌搭配 **pull a prank (on someone)**，動詞固定用 "pull" 不是 "do"／"make"；及物動詞用法可直接 "prank someone"。延伸 April Fools' Day、prankster、practical joke（正式說法）。★1，雙語 karaoke 例句兩句＋ `_index` 同步。詞庫 194→195）
 - 上二活動日期：2026-07-01（🎧 **新 lesson：時事英文 ssyingwen「好熱啊」P04 → 三部曲 Part 1——到底有多熱＋冷氣救命**（talk · B1 · 主持人 Han · 中文講解＋英文歌 · 本地 whisper 轉錄 40 min）：用 15 首夏日金曲教夏天英文。Part 1 主攻「怎麼喊熱／怎麼降溫」——hot 以外道地說法（baking/insanely hot、the heat is brutal、feels like a sauna）、三個「很熱」形容詞細分（scorching 很熱／sweltering 悶到不舒服／sizzling 快烤焦）、heatwave＋mirage＋高溫警報、冷氣句組（blast the AC on high／turn down the temperature／make it cooler／turn up vs down 陷阱）。歌單 Selena Gomez《Summer's Not Hot》/ Chappell Roan《HOT TO GO!》/ Glass Animals《Heat Waves》/ Bananarama & Taylor Swift《Cruel Summer》。**外部事實雙輪＋直查修正**：Pussycat Dolls《Don't Cha》「summertime cookout」查無（不採用）、日本酷暑日「Guardian」改標 AFP／外媒、HOT TO GO! 2023。live preview＋`astro build` 全綠（hash-sync 11+11、failed=0）。raw transcript `transcripts/2026-07-01-15-summer-vibes.txt`。**三部曲 P1/P2/P3 全數完成**（正文皆連貫英文旁白、Series Map 互連；P2 濕熱/流汗/冰品/融化、P3 防曬/海灘/夏至/午夜太陽），另建 **18 個 keeper 單字**（詞庫 176→**194**），全 live preview＋build 綠。）
 - 上一活動日期：2026-07-01（📚 **新增單字：Socratic** /səˈkrætɪk/（adj.，蘇格拉底式的）——Cian 傳單字想學。重點：招牌搭配 **the Socratic method**＝用一連串提問逼出對方自己推理、而非直接給答案（法學院／教學／面試常用）；**專有形容詞、字首 S 常大寫**；延伸 `Socratic questioning / dialogue / irony`。核心語感＝用問句引導 > 直接給答案。★1，雙語 karaoke 例句＋ `_index` 同步。詞庫 175→**176**）
