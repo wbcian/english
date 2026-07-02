@@ -6,7 +6,7 @@ zh: 沒用的傢伙、玻璃心／媽寶（口語貶義）
 proficiency: 1
 first_seen: 2026-07-02
 last_reviewed: 2026-07-02
-review_count: 1
+review_count: 2
 tags: [noun, insult, informal, maturity, daily]
 source: "user requested vocab"
 ---
@@ -28,3 +28,4 @@ crybaby, wimp, wuss（都偏口語貶義）
 
 ## Encounters
 - 2026-07-02 — first learned (user used it on Coach Max 😏)
+- 2026-07-02 — retrieval quiz: produced "such a baby" ✅ (fixed crash→break down, over, article)

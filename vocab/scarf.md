@@ -6,7 +6,7 @@ zh: 圍巾；（口語動詞）狼吞虎嚥地吃掉
 proficiency: 1
 first_seen: 2026-07-02
 last_reviewed: 2026-07-02
-review_count: 1
+review_count: 2
 tags: [noun, verb, clothing, eating, informal]
 source: "user requested vocab"
 ---
@@ -28,3 +28,4 @@ source: "user requested vocab"
 
 ## Encounters
 - 2026-07-02 — first learned (user requested)
+- 2026-07-02 — retrieval quiz: recalled "scarf" ✅ (fixed over→down, dropped -ed, fired→fried)

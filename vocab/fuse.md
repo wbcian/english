@@ -6,7 +6,7 @@ zh: 保險絲；引信、導火線；（動詞）融合、熔合
 proficiency: 1
 first_seen: 2026-07-02
 last_reviewed: 2026-07-02
-review_count: 1
+review_count: 2
 tags: [noun, verb, multi-meaning, idiom, daily]
 source: "user requested vocab"
 ---
@@ -28,3 +28,4 @@ source: "user requested vocab"
 
 ## Encounters
 - 2026-07-02 — first learned (user requested)
+- 2026-07-02 — retrieval quiz: forgot "have a short fuse" → re-taught (weak spot)

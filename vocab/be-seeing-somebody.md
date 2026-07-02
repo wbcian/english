@@ -6,7 +6,7 @@ zh: 在跟某人交往／約會中（有對象了）
 proficiency: 1
 first_seen: 2026-07-02
 last_reviewed: 2026-07-02
-review_count: 1
+review_count: 2
 tags: [phrase, relationship, idiom, present-continuous, daily]
 source: "user requested vocab"
 ---
@@ -28,3 +28,4 @@ be dating someone, be involved with someone
 
 ## Encounters
 - 2026-07-02 — first learned (user requested)
+- 2026-07-02 — retrieval quiz: recalled progressive "seeing" ✅ (missed object "each other")

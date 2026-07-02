@@ -6,7 +6,7 @@ zh: 同事（較正式、同行、同領域的人）
 proficiency: 1
 first_seen: 2026-07-02
 last_reviewed: 2026-07-02
-review_count: 1
+review_count: 2
 tags: [noun, work, people, ⚠️easy-to-confuse, business]
 source: "user requested vocab"
 ---
@@ -32,3 +32,4 @@ coworker（較口語）, associate, peer
 
 ## Encounters
 - 2026-07-02 — first learned (user noticed colleague vs college look-alike)
+- 2026-07-02 — retrieval quiz: recalled "colleague" ✅ (fixed "a lunch"→"have lunch")

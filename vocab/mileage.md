@@ -6,7 +6,7 @@ zh: 里程數；（引申）效益、好處、利用價值
 proficiency: 1
 first_seen: 2026-07-02
 last_reviewed: 2026-07-02
-review_count: 1
+review_count: 2
 tags: [noun, multi-meaning, idiom, business, daily]
 source: "user requested vocab"
 ---
@@ -28,3 +28,4 @@ source: "user requested vocab"
 
 ## Encounters
 - 2026-07-02 — first learned (user requested)
+- 2026-07-02 — retrieval quiz: needed hint, then recalled "get mileage out of" structure ✅

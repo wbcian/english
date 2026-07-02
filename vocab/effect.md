@@ -6,7 +6,7 @@ zh: 效果、影響、作用
 proficiency: 1
 first_seen: 2026-07-02
 last_reviewed: 2026-07-02
-review_count: 1
+review_count: 2
 tags: [noun, ⚠️easy-to-confuse, toeic, cause-effect, daily]
 source: "user requested vocab"
 ---
@@ -28,3 +28,4 @@ result, outcome, impact, consequence
 
 ## Encounters
 - 2026-07-02 — first learned (user requested)
+- 2026-07-02 — retrieval quiz: ⭐ perfect — "Staying up late affects my concentration" (affect vs effect nailed)
