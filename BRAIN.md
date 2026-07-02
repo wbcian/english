@@ -53,7 +53,7 @@
 - [`PROFILE.md`](PROFILE.md) — 目標 / 弱點 / 偏好
 - [`reference/cefr-toeic-levels.md`](reference/cefr-toeic-levels.md) — 英文分級制度對照表（CEFR ↔ TOEIC / IELTS / TOEFL / Cambridge / GEPT）；lesson `level` 欄與 app badge 的依據
 - [`reference/cefr-leveling-process.md`](reference/cefr-leveling-process.md) — **lesson 分級評估 SOP**（怎麼給 `level`：錨點、判準、B2/C1 決策、assessor prompt 範本）；新 lesson 標 level 一律照這套
-- [`reference/learning-efficiency-research.md`](reference/learning-efficiency-research.md) — **學習科學 survey（2026-07-01）**：英文怎麼學最有效率 / 一天多少 / 碎片化微學習可行嗎（deep-research + 對抗查證）。最強結論＝間隔練習(spacing)>猛K、規律>總量；碎片化適合記憶+輸入層、口說與深度寫作需保護整塊。**app roadmap P13 的依據**
+- [`reference/learning-efficiency-research.md`](reference/learning-efficiency-research.md) — **學習科學 survey（2026-07-02 彙整複查版）**：英文怎麼學最有效率 / 一天多少 / 碎片化微學習可行嗎。最強結論＝間隔練習（spacing）> 集中猛 K；沒有跨技能「每分鐘效率排行榜」。碎片時間適合提取、輸入、小型形式聚焦與短輸出，整合口說／深度寫作需保護完整時段。**app roadmap P13 的依據**
 
 ## 給 LLM 的維護規則
 
