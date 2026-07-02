@@ -40,12 +40,14 @@
 - **第三人稱單數 -s 漏掉**：寫過 "My sister go all out" 應為 "My sister **goes**" 或 "**is going**"（2026-04-28 drill Q1）
 - **過去完成式 vs 現在完成式 混淆**：寫過 "You had practiced a lot" 應為 "You'**ve** practiced"（2026-04-28 drill Q2）
 - **複合句時態不一致**：前半 `is going`，後半要繼續 `is flying`，不能切回原形
+- **過去式 -ed 漏掉**：說過 "He scarf over..." 應為 "He **scarfed** down..."（2026-07-02 retrieval quiz；同一天口說又漏一次，屬高頻踩坑）
 - **檢查 SOP**：寫完每句 → 動詞變化檢查（單複數、時態）
 
 ### 2. 👹 名詞單複數 / 冠詞 a / an / the
 - **複數 -s 漏掉**：寫過 "Children's face lit up" 應為 "Children's **faces**"（多個孩子，多張臉）
 - **冠詞漏掉**：寫過 "in convenience store" 應為 "**at a** convenience store"；"saw Christmas tree" 應為 "saw **the** Christmas tree"
-- **冠詞多餘**：寫過 "to the investors" 在泛指情境應為 "to investors"
+- **冠詞多餘**：寫過 "to the investors" 在泛指情境應為 "to investors"；說過 "I have **a** lunch" 應為 "I have lunch"（三餐不可數不加 a）（2026-07-02 quiz）
+- **冠詞漏掉（續）**：說過 "...whole fired chicken" 應為 "the **whole plate of** fried chicken"（2026-07-02 quiz）
 - **檢查 SOP**：寫完每句 → 名詞單複數 ✓ + 冠詞 a/an/the ✓
 
 ### 3. 👹 中翻英直譯結構（動作要名詞化）
