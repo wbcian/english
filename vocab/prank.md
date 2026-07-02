@@ -6,7 +6,7 @@ zh: 惡作劇
 proficiency: 1
 first_seen: 2026-07-02
 last_reviewed: 2026-07-02
-review_count: 1
+review_count: 2
 tags: [noun, verb, humor, social, daily]
 source: "user requested vocab"
 ---
@@ -29,3 +29,4 @@ Related: April Fools' Day、prankster（惡作劇的人）
 
 ## Encounters
 - 2026-07-02 — first learned (user requested)
+- 2026-07-02 — reviewed same session

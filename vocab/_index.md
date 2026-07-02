@@ -176,6 +176,25 @@
 | [jerk](jerk.md) | n./v. | 混蛋、討厭鬼；猛拉、抽動 | 1 | 2026-07-02 | noun, verb, insult, motion, daily |
 | [crook](crook.md) | n. | 騙子、罪犯；彎曲處、彎鉤 | 1 | 2026-07-02 | noun, crime, informal, body, multi-meaning |
 | [childish](childish.md) | adj. | 幼稚的、孩子氣的（貶義） | 1 | 2026-07-02 | adjective, emotion, insult, maturity, daily |
+| [baby](baby.md) | n. | 沒用的傢伙、玻璃心／媽寶（口語貶義） | 1 | 2026-07-02 | noun, insult, informal, maturity, daily |
+| [mileage](mileage.md) | n. | 里程數；效益、好處、利用價值 | 1 | 2026-07-02 | noun, multi-meaning, idiom, business, daily |
+| [fuse](fuse.md) | n./v. | 保險絲；引信；融合 | 1 | 2026-07-02 | noun, verb, multi-meaning, idiom, daily |
+| [cuisine](cuisine.md) | n. | 菜系、料理風格 | 1 | 2026-07-02 | noun, food, culture, french-origin, travel |
+| [fiber](fiber.md) | n. | 纖維（膳食／材質） | 1 | 2026-07-02 | noun, food, health, material, idiom |
+| [alpaca](alpaca.md) | n. | 羊駝 | 1 | 2026-07-02 | noun, animal, spanish-origin, wool, niche |
+| [metallic](metallic.md) | adj. | 金屬的、金屬質感／金屬味的 | 1 | 2026-07-02 | adjective, material, sensory, description, daily |
+| [effect](effect.md) | n. | 效果、影響、作用 | 1 | 2026-07-02 | noun, ⚠️easy-to-confuse, toeic, cause-effect, daily |
+| [scarf](scarf.md) | n./v. | 圍巾；狼吞虎嚥地吃 | 1 | 2026-07-02 | noun, verb, clothing, eating, informal |
+| [ingenuity](ingenuity.md) | n. | 創造力、巧思、機智 | 1 | 2026-07-02 | noun, ⚠️easy-to-confuse, problem-solving, toeic, positive |
+| [gadget](gadget.md) | n. | 小玩意、科技小裝置 | 1 | 2026-07-02 | noun, technology, informal, object, daily |
+| [pardon](pardon.md) | n./v./interj. | 原諒；赦免；你說什麼？ | 1 | 2026-07-02 | noun, verb, politeness, law, multi-meaning |
+| [I beg your pardon](i-beg-your-pardon.md) | phr. | 請再說一次／你說什麼（帶慍）／抱歉 | 1 | 2026-07-02 | phrase, politeness, tone-dependent, british, daily |
+| [be seeing somebody](be-seeing-somebody.md) | phr. | 在跟某人交往／有對象 | 1 | 2026-07-02 | phrase, relationship, idiom, present-continuous, daily |
+| [seem](seem.md) | v. | 似乎、看起來（是） | 1 | 2026-07-02 | verb, linking-verb, hedging, grammar, daily |
+| [classmate](classmate.md) | n. | 同班同學 | 1 | 2026-07-02 | noun, school, people, relationship, daily |
+| [coworker](coworker.md) | n. | 同事（口語、平行同事） | 1 | 2026-07-02 | noun, work, people, relationship, business |
+| [colleague](colleague.md) | n. | 同事（較正式、同行） | 1 | 2026-07-02 | noun, work, people, ⚠️easy-to-confuse, business |
+| [college](college.md) | n. | 大學／學院（美式泛指大學） | 1 | 2026-07-02 | noun, education, us-uk-difference, ⚠️easy-to-confuse, daily |
 | [headed to](headed-to.md) | phr. | 前往；朝...而去 | 2 | 2026-04-29 | phrasal-verb, daily |
 | [cram](cram.md) | v. | 塞滿；臨時抱佛腳 | 2 | 2026-06-01 | verb, study, multi-meaning |
 | [keen](keen.md) | adj. | 熱衷的；敏銳的 | 2 | 2026-04-29 | adjective, emotion |
