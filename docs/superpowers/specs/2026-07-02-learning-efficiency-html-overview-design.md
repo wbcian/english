@@ -9,13 +9,11 @@
 
 ## 成果位置
 
-- **實際產出（Claude 主線，2026-07-02）**：兩份單一 HTML 已產在 `~/Downloads/`：
-  - 正式總覽＋學習策略：`english-learning-consolidated.html`
-  - 臨時三模型比較：`english-learning-model-comparison.html`
-- 目前**未納入版本控制**（留在使用者 Downloads 供瀏覽）；若要長期保存可再移入 `reference/learning-efficiency-overview.html`。
-- **分歧備忘**：實作版為字體個性使用 Google Fonts CDN（失敗時優雅退回系統字），與本 spec「不依賴 CDN」的目標略有出入；若移入版本控制，建議改為純系統字自足版。
+- **正式總覽（已版控）**：`reference/learning-efficiency-overview.html` — **Codex 自足版**（無 CDN、只連 DOI，8 節「從研究到你的下一週」單一路徑閱讀流），已隨本次整合納入版本控制。
+- **另一豐富版（未版控）**：Claude 主線的 `~/Downloads/english-learning-consolidated.html`（暖調「證據審計」設計、含「大數字≠強證據」對照圖；用 Google Fonts CDN，失敗時優雅退回系統字）。兩版內容一致、風格互補。
+- **臨時三模型比較（未版控）**：`~/Downloads/english-learning-model-comparison.html`。
 
-原設計目標（保留為決策紀錄）：兩份頁面都應是可直接開啟的單一 HTML。
+原設計目標（保留為決策紀錄）：可直接開啟的單一 HTML；版控的正式版採自足（無 CDN、只連 DOI）。
 
 ## 正式總覽：單一路徑報告
 

@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="英文學習效率研究總覽，以及針對 Cian TOEIC 750+ 目標的每日與每週學習策略。">
+  <title>英文學習效率：從研究到你的下一週</title>
+  <style>
+    :root {
+      --paper: #f5f1e8;
+      --surface: #fffdf8;
+      --ink: #20302a;
+      --muted: #637068;
+      --line: #d8d3c7;
+      --green: #365f4d;
+      --green-soft: #dfe9e1;
+      --amber: #9a632a;
+      --amber-soft: #f3e3cd;
+      --rose: #8b4e4e;
+      --rose-soft: #f0dddd;
+      --blue: #496878;
+      --blue-soft: #dfe9ee;
+      --shadow: 0 18px 50px rgba(32, 48, 42, .08);
+      --radius: 18px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 4%, rgba(190, 208, 190, .38), transparent 30rem),
+        var(--paper);
+      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.7;
+    }
+    a { color: var(--green); text-underline-offset: .2em; }
+    a:hover { color: #244638; }
+    .shell { width: min(1100px, calc(100% - 36px)); margin: 0 auto; }
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid rgba(54, 95, 77, .18);
+      background: rgba(245, 241, 232, .92);
+      backdrop-filter: blur(12px);
+    }
+    .topbar-inner {
+      min-height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+    .brand { font-weight: 780; letter-spacing: -.02em; }
+    nav { display: flex; gap: 16px; overflow-x: auto; white-space: nowrap; font-size: .9rem; }
+    nav a { color: var(--muted); text-decoration: none; }
+    header { padding: 76px 0 38px; }
+    .eyebrow {
+      color: var(--amber);
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    h1, h2, h3 { line-height: 1.18; letter-spacing: -.035em; }
+    h1 { max-width: 850px; margin: 12px 0 18px; font-size: clamp(2.45rem, 7vw, 5.4rem); }
+    h2 { margin: 0 0 16px; font-size: clamp(1.8rem, 4vw, 3rem); }
+    h3 { margin: 0 0 8px; font-size: 1.18rem; }
+    .lede { max-width: 760px; margin: 0; color: var(--muted); font-size: 1.13rem; }
+    .meta { margin-top: 24px; color: var(--muted); font-size: .9rem; }
+    main { padding-bottom: 72px; }
+    section { scroll-margin-top: 82px; margin: 28px 0 64px; }
+    .section-intro { max-width: 790px; color: var(--muted); margin: 0 0 24px; }
+    .executive-summary-box {
+      padding: clamp(22px, 4vw, 38px);
+      border: 1px solid #cbd9ce;
+      border-radius: 26px;
+      background: linear-gradient(145deg, #f9fbf7, var(--green-soft));
+      box-shadow: var(--shadow);
+    }
+    .executive-summary-box h2 { font-size: 1.65rem; }
+    .executive-summary-box ul { margin: 0; padding-left: 1.2rem; }
+    .executive-summary-box li + li { margin-top: 12px; }
+    .principles, .change-grid, .skill-grid, .source-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .principle, .change, .skill, .source-note, .action-card {
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+    }
+    .number {
+      display: inline-grid;
+      width: 34px;
+      height: 34px;
+      place-items: center;
+      margin-bottom: 20px;
+      border-radius: 50%;
+      color: #fff;
+      background: var(--green);
+      font-weight: 800;
+    }
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      font-size: .76rem;
+      font-weight: 750;
+      background: var(--green-soft);
+      color: var(--green);
+    }
+    .tag.caution { background: var(--amber-soft); color: var(--amber); }
+    .tag.reject { background: var(--rose-soft); color: var(--rose); }
+    .tag.context { background: var(--blue-soft); color: var(--blue); }
+    .change p, .skill p, .source-note p { margin-bottom: 0; color: var(--muted); }
+    .strategy {
+      border-radius: 26px;
+      overflow: hidden;
+      color: #f6f6ef;
+      background: var(--ink);
+      box-shadow: var(--shadow);
+    }
+    .strategy-head { padding: clamp(28px, 5vw, 48px); border-bottom: 1px solid rgba(255,255,255,.14); }
+    .strategy-head p { max-width: 750px; color: #cbd5cf; }
+    .strategy-list { display: grid; grid-template-columns: 1fr 2fr; }
+    .priority {
+      display: contents;
+    }
+    .priority > div { padding: 22px 30px; border-bottom: 1px solid rgba(255,255,255,.11); }
+    .priority-rank { color: #d4b47f; font-weight: 800; }
+    .priority strong { display: block; margin-bottom: 4px; font-size: 1.06rem; }
+    .priority p { margin: 0; color: #cbd5cf; }
+    .callout {
+      margin-top: 20px;
+      padding: 18px 20px;
+      border-left: 5px solid var(--amber);
+      border-radius: 10px;
+      background: var(--amber-soft);
+    }
+    .callout strong { color: #70451c; }
+    .week-grid { display: grid; grid-template-columns: .9fr 1.2fr 1fr; gap: 16px; }
+    .action-card { position: relative; padding-top: 50px; }
+    .action-label {
+      position: absolute;
+      top: 18px;
+      left: 22px;
+      color: var(--amber);
+      font-size: .76rem;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+    .action-card ol, .action-card ul { margin-bottom: 0; padding-left: 1.2rem; }
+    .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+    table { width: 100%; border-collapse: collapse; min-width: 760px; }
+    th, td { padding: 15px 17px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+    th { color: var(--green); background: #edf2ec; font-size: .82rem; letter-spacing: .03em; }
+    tr:last-child td { border-bottom: 0; }
+    .skill { min-height: 210px; }
+    .skill-head { display: flex; align-items: start; justify-content: space-between; gap: 10px; }
+    .skill ul { padding-left: 1.15rem; color: var(--muted); }
+    .question-list { display: grid; gap: 12px; padding: 0; list-style: none; }
+    .question-list li { padding: 15px 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
+    footer { padding: 30px 0 50px; border-top: 1px solid var(--line); color: var(--muted); font-size: .88rem; }
+    footer p { margin: 4px 0; }
+    @media (max-width: 820px) {
+      .principles, .change-grid, .skill-grid, .source-grid, .week-grid { grid-template-columns: 1fr; }
+      .strategy-list { grid-template-columns: 1fr; }
+      .priority { display: block; border-bottom: 1px solid rgba(255,255,255,.11); }
+      .priority > div { border: 0; padding: 16px 22px; }
+      .priority > div + div { padding-top: 0; }
+      nav { display: none; }
+      header { padding-top: 54px; }
+    }
+    @media (max-width: 480px) {
+      .shell { width: min(100% - 24px, 1100px); }
+      h1 { font-size: 2.45rem; }
+      .principle, .change, .skill, .source-note, .action-card { padding: 18px; }
+    }
+    @media print {
+      .topbar { display: none; }
+      body { background: #fff; }
+      .shell { width: 100%; max-width: none; }
+      section { break-inside: avoid; }
+      .strategy { background: #fff; color: var(--ink); border: 1px solid var(--line); box-shadow: none; }
+      .strategy-head p, .priority p { color: var(--muted); }
+      .priority > div { border-color: var(--line); }
+      a { color: inherit; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="shell topbar-inner">
+      <div class="brand">English Learning Brain</div>
+      <nav aria-label="頁面導覽">
+        <a href="#answer">結論</a>
+        <a href="#evidence">證據</a>
+        <a href="#strategy">你的策略</a>
+        <a href="#week">下一週</a>
+        <a href="#skills">六技能</a>
+        <a href="#limits">限制</a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="shell">
+    <header data-contract-section="title">
+      <div class="eyebrow">Research synthesis · 2026-07-02</div>
+      <h1>英文學習效率：從研究到你的下一週</h1>
+      <p class="lede">給 Cian 的研究總覽：以 TOEIC 750+ 為主目標，同時避免把學習變成只有刷題、背卡與追 streak。</p>
+      <p class="meta">依據五份研究成果彙整與原始來源複查。效果量不可跨不同研究設計直接排名。</p>
+    </header>
+
+    <main data-report-audience="product stakeholders">
+      <section id="answer" class="executive-summary-box" data-contract-section="executive-summary">
+        <h2>Executive Summary</h2>
+        <ul>
+          <li><strong>最可靠的原則是「分散、提取、適配、閉環」。</strong> 同樣內容要隔開來練；先回想再看答案；材料難度要能理解主線；輸出後要有回饋與第二次表現。</li>
+          <li><strong>不要找單一效率之王。</strong> SRS 對詞彙有效，但不能取代閱讀、聽力、口說與寫作；研究也沒有直接比較每種活動的每分鐘總報酬。</li>
+          <li><strong>你的第一優先不是再排更多內容，而是取得 TOEIC baseline。</strong> baseline 尚未記錄完成；沒有 LC／RC／Part 5–7 分項，就無法決定輸入與形式聚焦的比例。</li>
+          <li><strong>碎片時間養頻率，完整時段養整合。</strong> 平日做 retrieval、短輸入與小型修正；每週保留口說與寫作／長篇理解各一個完整時段。</li>
+        </ul>
+      </section>
+
+      <section id="evidence" data-contract-section="key-findings">
+        <div class="eyebrow">The shared core</div>
+        <h2>四個原則，比任何 App 或分鐘數更穩</h2>
+        <p class="section-intro">五份資料真正交集的不是「每天 45 分鐘」或「25% × 4」，而是以下四個可跨活動套用的設計原則。</p>
+        <div class="principles">
+          <article class="principle">
+            <span class="number">1</span>
+            <h3>分散 Spacing</h3>
+            <p>把相同內容分散到不同時段與日期。L2 統合分析納入 48 個實驗、98 個效果量、3,411 人，延後測驗尤其受益。</p>
+            <p><a href="https://doi.org/10.1111/lang.12479">Kim &amp; Webb, 2022</a></p>
+          </article>
+          <article class="principle">
+            <span class="number">2</span>
+            <h3>提取 Retrieval</h3>
+            <p>看答案、字幕或原文前，先嘗試想起、說出或寫出。對單字最容易直接落地；不要把反覆重讀誤當成已經學會。</p>
+            <p><a href="https://doi.org/10.1177/1529100612453266">Dunlosky et al., 2013</a></p>
+          </article>
+          <article class="principle">
+            <span class="number">3</span>
+            <h3>適配 Fit</h3>
+            <p>輸入要保有理解主線的能力。閱讀統合分析顯示，限制到合適程度的選材，加上讀後 accountability，效果更穩。</p>
+            <p><a href="https://doi.org/10.1007/s10648-025-10068-6">Sangers et al., 2025</a></p>
+          </article>
+          <article class="principle">
+            <span class="number">4</span>
+            <h3>閉環 Feedback loop</h3>
+            <p>輸入後要能重述，輸出後要能修正。線上寫作回饋與對話型口說系統都有中等程度的統合證據。</p>
+            <p><a href="https://doi.org/10.1007/s40299-021-00594-6">Writing feedback</a> · <a href="https://doi.org/10.1017/S0958344025100268">Dialogue CALL</a></p>
+          </article>
+        </div>
+      </section>
+
+      <section data-contract-section="key-findings">
+        <div class="eyebrow">What changed after verification</div>
+        <h2>這次複查，修正了四個太漂亮的說法</h2>
+        <p class="section-intro">這些修正會直接改變學習配置與 app roadmap：降低單一工具承諾、增加目標式文法與回饋後重做。</p>
+        <div class="change-grid">
+          <article class="change">
+            <span class="tag caution">下修</span>
+            <h3>SRS 不是跨技能效率之王</h3>
+            <p>科技輔助詞彙統合效果為 <strong>d=0.64</strong>，但只證明對詞彙有效，也存在異質性與可能的出版偏誤。</p>
+          </article>
+          <article class="change">
+            <span class="tag">上修</span>
+            <h3>文法不該是 0 分鐘</h3>
+            <p>兩份統合分析支持明確、聚焦形式教學。正確做法是由錯誤觸發的小閉環，不是長時間刷孤立規則。</p>
+          </article>
+          <article class="change">
+            <span class="tag caution">限制</span>
+            <h3>影片 g=0.89 不是淨因果效果</h3>
+            <p>最新研究使用 within-group pre/post，容易放大變化，且異質性高；可以支持方向，不能拿來證明影片勝過閱讀。</p>
+          </article>
+          <article class="change">
+            <span class="tag reject">拒絕</span>
+            <h3>固定分鐘與時段不是科學處方</h3>
+            <p>沒有通用最佳 25–30 分鐘，也不支持所有人早上文法、下午輸入、晚上輸出。模板只用來降低啟動成本。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="strategy" class="strategy" data-contract-section="recommended-next-steps">
+        <div class="strategy-head">
+          <div class="eyebrow">Recommended Next Steps</div>
+          <h2>Cian 的策略：先校準，再形成每日閉環</h2>
+          <p>你的主目標是 TOEIC 750+，但 Profile 裡的 baseline 模考仍未標記完成；已知弱點集中在時態、單複數／冠詞與中翻英句構。以下順序比平均分配所有技能更實際。</p>
+        </div>
+        <div class="strategy-list">
+          <div class="priority">
+            <div class="priority-rank">Priority 01</div>
+            <div>
+              <strong>先做一次完整 TOEIC baseline</strong>
+              <p>計時完成 LC＋RC，回報總分估計與 Part 5／6／7 分項。baseline 是後續配置的分母；未完成前不假裝知道聽讀比例。</p>
+            </div>
+          </div>
+          <div class="priority">
+            <div class="priority-rank">Priority 02</div>
+            <div>
+              <strong>每日保留兩個核心：到期提取＋有交代的輸入</strong>
+              <p>SRS 只清 due cards；閱讀或聽力結束後，用 1–3 句英文重述主旨，留下 1–2 個可重用語塊。</p>
+            </div>
+          </div>
+          <div class="priority">
+            <div class="priority-rank">Priority 03</div>
+            <div>
+              <strong>用錯誤驅動文法，不照章節順序學</strong>
+              <p>每次只抓一個真實錯誤：時態、第三人稱、冠詞、單複數或動名詞主詞。短規則 → 改句 → 自造句 → 數日後重測。</p>
+            </div>
+          </div>
+          <div class="priority">
+            <div class="priority-rank">Priority 04</div>
+            <div>
+              <strong>每週兩個 deep blocks，保住真實使用</strong>
+              <p>一次 20–40 分鐘完整口說；一次 30–60 分鐘寫作或長篇理解。兩者都要有回饋後第二次表現。</p>
+            </div>
+          </div>
+          <div class="priority">
+            <div class="priority-rank">Measure</div>
+            <div>
+              <strong>追蹤延後表現，不追完成感</strong>
+              <p>看七天後能否想起、同類錯誤是否下降、第二次口說／寫作是否改善，以及 TOEIC 分項是否移動。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="week" data-contract-section="recommended-next-steps">
+        <div class="eyebrow">Your next week</div>
+        <h2>下一週只需要三種日型</h2>
+        <p class="section-intro">分鐘數是起始模板，不是最佳劑量。精神差就做忙碌日；有正常時間做一般日；完整時段不拆碎。</p>
+        <div class="week-grid">
+          <article class="action-card">
+            <span class="action-label">Busy · 20 min</span>
+            <h3>保住接觸與閉環</h3>
+            <ol>
+              <li>到期 SRS 5–8 分</li>
+              <li>短輸入 7–10 分</li>
+              <li>一句重述＋一個修正 5 分</li>
+            </ol>
+          </article>
+          <article class="action-card">
+            <span class="action-label">Standard · 45–60 min</span>
+            <h3>完整的每日循環</h3>
+            <ol>
+              <li>閱讀／聽力 15–25 分</li>
+              <li>到期 retrieval 8–12 分</li>
+              <li>錯誤驅動文法 5–10 分</li>
+              <li>口說或短寫 12–20 分，回饋後重做</li>
+            </ol>
+          </article>
+          <article class="action-card">
+            <span class="action-label">Deep · 2 blocks/week</span>
+            <h3>整合而不是切碎</h3>
+            <ul>
+              <li>口說：20–40 分鐘</li>
+              <li>寫作／長篇理解：30–60 分鐘</li>
+              <li>週末檢查 Four Strands 是否偏食</li>
+            </ul>
+          </article>
+        </div>
+        <div class="callout"><strong>本週第一件事：</strong>如果 TOEIC baseline 還沒做，把其中一個 deep block 改成完整模考；完成前不要微調太多 app 功能或讀書比例。</div>
+      </section>
+
+      <section id="skills" data-contract-section="key-findings">
+        <div class="eyebrow">Six roles, not six competitors</div>
+        <h2>六種活動各自解不同問題</h2>
+        <p class="section-intro">不要跨不同結果變項直接排效果量。用「角色、碎片化邊界、完成條件」決定何時做哪一種。</p>
+        <div class="skill-grid">
+          <article class="skill">
+            <div class="skill-head"><h3>單字與片語</h3><span class="tag">適合碎片</span></div>
+            <ul><li>角色：建立可提取詞彙</li><li>完成：先回想、看回饋、安排再現</li><li>避免：只辨認、不造句；新卡過量</li></ul>
+          </article>
+          <article class="skill">
+            <div class="skill-head"><h3>閱讀</h3><span class="tag context">可短可長</span></div>
+            <ul><li>角色：理解、語塊、閱讀速度</li><li>完成：主旨摘要或理解問題</li><li>避免：材料過難、只計頁數</li></ul>
+          </article>
+          <article class="skill">
+            <div class="skill-head"><h3>影片／Podcast</h3><span class="tag context">可短可長</span></div>
+            <ul><li>角色：聲音辨識、語調、情境輸入</li><li>完成：重述＋留下可用語塊</li><li>避免：被動娛樂、把字幕當理解</li></ul>
+          </article>
+          <article class="skill">
+            <div class="skill-head"><h3>文法</h3><span class="tag">短閉環</span></div>
+            <ul><li>角色：修正高頻錯誤</li><li>完成：改句、自造句、延後再測</li><li>避免：長篇規則、只做選擇題</li></ul>
+          </article>
+          <article class="skill">
+            <div class="skill-head"><h3>口說</h3><span class="tag caution">需完整時段</span></div>
+            <ul><li>角色：即時組句、互動、流利度</li><li>完成：回饋後重講</li><li>避免：只有 shadowing，沒有自由表達</li></ul>
+          </article>
+          <article class="skill">
+            <div class="skill-head"><h3>寫作</h3><span class="tag caution">需完整時段</span></div>
+            <ul><li>角色：組織、精確度、錯誤診斷</li><li>完成：保留原稿與修正版</li><li>避免：只接受 AI 改寫，自己不重寫</li></ul>
+          </article>
+        </div>
+      </section>
+
+      <section data-contract-section="further-questions">
+        <div class="eyebrow">Further Questions</div>
+        <h2>下一輪決策，需要 baseline 與四週真實資料</h2>
+        <ul class="question-list">
+          <li><strong>TOEIC 分項：</strong>LC 與 RC 誰先限制 750？Part 5、6、7 的主要瓶頸不同。</li>
+          <li><strong>四週遵從度：</strong>忙碌日與一般日哪一種能真實持續？不要用理想行程估計。</li>
+          <li><strong>延後表現：</strong>七天後詞彙回想、同類文法錯誤與重講品質是否改善？</li>
+          <li><strong>工具角色：</strong>App 是否讓閉環更容易完成，還是只增加 streak 與點擊數？</li>
+        </ul>
+      </section>
+
+      <section id="limits" data-contract-section="caveats-and-assumptions">
+        <div class="eyebrow">Caveats and Assumptions</div>
+        <h2>研究能定原則，不能替你精算每一分鐘</h2>
+        <div class="source-grid">
+          <article class="source-note">
+            <span class="tag caution">不可比較</span>
+            <h3>效果量來自不同設計與結果</h3>
+            <p>詞彙、閱讀、口說與寫作的測量不同；within-group 與 control-group 效果也不能放在同一排行榜。</p>
+          </article>
+          <article class="source-note">
+            <span class="tag context">框架</span>
+            <h3>Four Strands 不是最佳化試驗</h3>
+            <p>25% × 4 適合檢查長期偏食，不代表每天精準四等分會得到最大效果。</p>
+          </article>
+          <article class="source-note">
+            <span class="tag caution">證據風險</span>
+            <h3>MALL 的漂亮數字要連同偏誤一起讀</h3>
+            <p>App 統合分析排除離群值後為 g=0.88，但所有納入研究整體偏誤風險高，證據品質低或極低。</p>
+          </article>
+          <article class="source-note">
+            <span class="tag">可稽核</span>
+            <h3>完整方法與來源留在 SSOT</h3>
+            <p>本頁是決策總覽；研究數、限制、來源分級與模型輸出稽核請回到 <a href="learning-efficiency-research.md">彙整複查報告</a>。</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p><strong>English Learning Brain · Learning Efficiency Overview</strong></p>
+      <p>更新：2026-07-02 · 對象：Cian · 主要目標：TOEIC 750+</p>
+      <p>這是一份研究導向的學習設計，不是考試分數保證。</p>
+    </footer>
+  </div>
+</body>
+</html>
