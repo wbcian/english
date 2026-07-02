@@ -181,7 +181,7 @@ _（目前沒有正在做的）_
 
 ### P13 — 每日練習編排 + 進度白板（依學習科學 survey）🗓️📊　**Effort: L（分兩 facet / 可分階段）**
 
-> 起因：2026-07-01 deep-research 學習科學 survey（結論 SSOT 見 [`reference/learning-efficiency-research.md`](../../reference/learning-efficiency-research.md)）。survey 最強證據＝**間隔練習(spacing) > 集中猛K**、**規律 > 總量**；碎片化微學習對「記憶層(單字SRS)＋輸入層(閱讀/影片片段)＋小輸出(noticing)」有效，但**口說流利度與段落級深度寫作需保護較長整塊時段**。目前 app 有 lessons＋vocab＋(規劃中的) P4 flashcard，但**缺一層「今天該練什麼／有沒有維持規律」的編排與追蹤**。Cian 的原始需求：想「利用零碎時間隨時做一次練習」。
+> 起因：2026-07-01 deep-research 學習科學 survey（結論 SSOT 見 [`reference/learning-efficiency-research.md`](../../reference/learning-efficiency-research.md)）。survey 最強證據＝**間隔練習(spacing) > 集中猛K**、**規律 > 總量**；碎片化微學習對「記憶層(單字SRS)＋輸入層(閱讀/影片片段)＋小輸出(noticing)」有效，但**口說流利度與段落級深度寫作需保護較長整塊時段**。目前 app 有 lessons＋vocab＋(規劃中的) P4 flashcard，但**缺一層「今天該練什麼／有沒有維持規律」的編排與追蹤**。Cian 的原始需求：想「利用零碎時間隨時做一次練習」。（survey 已於 2026-07-02 經 Gemini／ChatGPT 兩份外部報告三方交叉查證強化，見 §8：新增 Dunlosky 2013「檢索>被動複習」、Nation Four Strands 數值配置。）
 
 - **動機**：把 app 從「內容瀏覽器」升級成「練習系統」。survey 指出成效關鍵不是任何單一活動，而是**天天做、分散練、對的活動放對的時段**。碎片時間隨時來一發正好命中證據最強的碎片化記憶＋輸入層；但需要一個東西幫他 (a) 決定這次碎片時間做什麼、(b) 看到自己的規律與待複習進度、(c) 不讓全碎片擠掉每週的口說/寫作整塊。
 - **期望行為**（兩個 facet，可分階段上）：
@@ -193,7 +193,7 @@ _（目前沒有正在做的）_
     - **連續天數 streak** ＋ 近 N 週「有練/沒練」熱力格（強化 spacing 的「天天做」）
     - **待複習量**（今天到期幾張卡、幾段沒回顧的 lesson）
     - **每週「保護整塊」提醒**：口說（shadowing/對話）與段落級寫作各排 1–2 次較長 block，白板顯示本週做了沒（survey 明確：這兩者**不能只靠碎片**）
-    - 可選：modality 平衡（本週輸入/單字/輸出/口說佔比），對照 survey 建議配比
+    - 可選：modality 平衡（本週輸入/單字/輸出/口說佔比），對照 **Nation Four Strands**（約各 25%：意義輸入／意義輸出／語言形式學習／流暢發展；見 survey §8 三方查證的驗證版數值框架，取代坊間 80/20→50/50）
 - **實作切點**：
   - **強依賴 P4**（flashcard SRS）：micro-session 的單字卡直接用 P4 的抽卡與 localStorage → 建議 **P4 → P13** 順序。
   - 資料層沿用 P4 哲學：**localStorage 記 streak/session log**（key prefix `englishApp:practice:`）、SoT 仍是 markdown、**不引 DB**；回流走既有「session 摘要 → 貼給 Coach Max → 套回 markdown」流程（連 vocab 的 `last_reviewed`/`review_count`）。
