@@ -6,6 +6,7 @@
 ---
 
 ## 2026-07-02
+📚 **新增單字：jerk** /dʒɜːrk/（n./v.，混蛋、討厭鬼；猛拉、抽動）——Cian 傳單字想學。重點是名詞義罵人「混蛋」最常見，語氣比 asshole 溫和一點、比 idiot 更帶惡意（強調對人差勁不體貼）；動詞義較中性，延伸片語 **knee-jerk reaction**（膝反射式直覺反應）。★1，雙語 karaoke 例句兩句（名詞＋動詞各一）＋ `_index` 同步。詞庫 195→196。
 📚 **新增單字：prank** /præŋk/（n./v.，惡作劇）——Cian 傳單字想學。重點是招牌搭配 **pull a prank (on someone)**，動詞固定用 "pull" 不是 "do"／"make"；及物動詞用法可直接 "prank someone"。延伸 April Fools' Day、prankster、practical joke（正式說法）。★1，雙語 karaoke 例句兩句＋ `_index` 同步。詞庫 194→195。
 
 ## 2026-07-01

@@ -173,6 +173,7 @@
 | [luggage forwarding](luggage-forwarding.md) | n.phr. | 行李宅配（takkyubin） | 1 | 2026-05-31 | noun-phrase, travel, japan |
 | [wake-up call](wake-up-call.md) | n.phr. | 叫醒服務；警鐘 | 1 | 2026-05-31 | noun-phrase, travel, hotel, idiom |
 | [prank](prank.md) | n./v. | 惡作劇 | 1 | 2026-07-02 | noun, verb, humor, social, daily |
+| [jerk](jerk.md) | n./v. | 混蛋、討厭鬼；猛拉、抽動 | 1 | 2026-07-02 | noun, verb, insult, motion, daily |
 | [headed to](headed-to.md) | phr. | 前往；朝...而去 | 2 | 2026-04-29 | phrasal-verb, daily |
 | [cram](cram.md) | v. | 塞滿；臨時抱佛腳 | 2 | 2026-06-01 | verb, study, multi-meaning |
 | [keen](keen.md) | adj. | 熱衷的；敏銳的 | 2 | 2026-04-29 | adjective, emotion |
