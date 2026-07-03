@@ -6,7 +6,7 @@ zh: 放空、恍神、精神不集中
 proficiency: 1
 first_seen: 2026-07-03
 last_reviewed: 2026-07-03
-review_count: 1
+review_count: 2
 tags: [phrasal-verb, intransitive, attention, informal, daily]
 source: "user requested vocab"
 ---
@@ -30,3 +30,4 @@ space out, drift off, tune out
 
 ## Encounters
 - 2026-07-03 — first learned (user requested vocab)
+- 2026-07-03 — seen in Soul lesson (real movie context)

@@ -6,7 +6,7 @@ zh: 表現得超好、大成功（誇獎用語）
 proficiency: 1
 first_seen: 2026-07-03
 last_reviewed: 2026-07-03
-review_count: 1
+review_count: 2
 tags: [phrasal-verb, informal, encouragement, register-trap, daily]
 source: "user requested vocab"
 ---
@@ -30,3 +30,4 @@ nail it, crush it, smash it, ace it
 
 ## Encounters
 - 2026-07-03 — first learned (user requested vocab)
+- 2026-07-03 — seen in Soul lesson (real movie context)

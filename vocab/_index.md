@@ -205,6 +205,11 @@
 | [kill it](kill-it.md) | phr.v. | 表現得超好、大成功（誇獎用語） | 1 | 2026-07-03 | phrasal-verb, informal, encouragement, register-trap, daily |
 | [flow state](flow-state.md) | n.phr. | 心流狀態、全神貫注忘我的狀態 | 1 | 2026-07-03 | noun-phrase, psychology, focus, productivity, modern |
 | [be in the zone](in-the-zone.md) | phrase | 進入超專注狀態、心流（口語版） | 1 | 2026-07-03 | phrase, focus, informal, sports, contrast-with-zone-out |
+| [soundcheck](soundcheck.md) | n. | 演出前的音響／設備測試（試音） | 1 | 2026-07-03 | noun, music, performance, live-event, daily |
+| [full-time position](full-time-position.md) | n.phr. | 全職職位（穩定薪水、福利、保障） | 1 | 2026-07-03 | noun-phrase, work, career, employment, toeic |
+| [teach](teach-slang.md) | n. | （稱呼用俚語）老師（像叫醫生 Doc） | 1 | 2026-07-03 | noun, slang, address-term, informal, occupation |
+| [where have you been](where-have-you-been.md) | idiom | 「你（怎麼現在才出現）？」——對埋沒的才華表驚訝 | 1 | 2026-07-03 | idiom, present-perfect, compliment, surprise, talent |
+| [take the wheel](take-the-wheel.md) | v.phr. | 接手掌控（字面：接過方向盤） | 1 | 2026-07-03 | verb-phrase, idiom, control, driving-metaphor, daily |
 | [headed to](headed-to.md) | phr. | 前往；朝...而去 | 2 | 2026-04-29 | phrasal-verb, daily |
 | [cram](cram.md) | v. | 塞滿；臨時抱佛腳 | 2 | 2026-06-01 | verb, study, multi-meaning |
 | [keen](keen.md) | adj. | 熱衷的；敏銳的 | 2 | 2026-04-29 | adjective, emotion |
