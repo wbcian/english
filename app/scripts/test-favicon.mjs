@@ -15,6 +15,10 @@ assert.match(svg, /prefers-color-scheme:\s*dark/);
 assert.match(layout, /rel="icon"\s+type="image\/svg\+xml"/);
 assert.match(layout, /favicon\.svg/);
 assert.match(layout, /favicon\.ico/);
+assert.ok(
+  layout.indexOf('favicon.ico') < layout.indexOf('favicon.svg'),
+  'SVG favicon must be declared after the ICO fallback so supporting browsers prefer it',
+);
 
 assert.equal(ico.readUInt16LE(0), 0);
 assert.equal(ico.readUInt16LE(2), 1);
