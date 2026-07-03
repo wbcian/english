@@ -10,6 +10,9 @@
 # Claude Code session state (do not push)
 .claude/
 
+# Superpowers visual brainstorming state (local preview server)
+/.superpowers/
+
 # Node
 node_modules/
 
