@@ -17,7 +17,8 @@
     "audio:revoice": "node scripts/generate-audio.mjs --revoice --words-all",
     "audio:prune": "node scripts/prune-audio.mjs",
     "check:hash-sync": "node scripts/check-audio-hash-sync.mjs",
-    "test:speaker": "node scripts/test-speaker-parser.mjs"
+    "test:speaker": "node scripts/test-speaker-parser.mjs",
+    "test:favicon": "node scripts/test-favicon.mjs"
   },
   "dependencies": {
     "astro": "^6.3.7",
