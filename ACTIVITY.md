@@ -5,6 +5,9 @@
 
 ---
 
+## 2026-07-03
+📚 **單字批次練習：一次 7 字/片語（曖昧系 + 潮流黑話 + 職場表達）**——Cian 連續丟字，採批次存檔模式（卡片即時給、持久化延到「練習結束」才一次做，見 memory [[vocab-batch-save-workflow]]）。新增：**be interested in someone**（曖昧初期含蓄有好感，例句含「偷瞄」情境 steal glances at）、**be into someone**（比 interested 更熱烈上頭，口語）、**pick up**（一字四義：接人/自然學會/搭訕/接電話，⚠️可拆 pick you up ✅／pick up you ❌）、**swag**（自信氣場 vs 展會贈品雙義，⚠️稍過氣俚語）、**conversational in**（語言能力階梯 basic<conversational<fluent<native，履歷用語）、**zone out**（放空恍神，不及物不可拆）、**kill it**（誇獎「表現超好」，⚠️另義「關掉它」靠語境分，近義 nail it）。全 ★1，雙語 karaoke 例句＋ `_index` 同步。詞庫 218→**225**。
+
 ## 2026-07-02
 📚 **新增單字：harvest** /ˈhɑːrvɪst/（n./v.，收穫、收成；收割、採收）——Cian 傳單字想學（一開始被 Coach Max 誤當成「單字 harvest＝去收割一波單字」的指令 😅，其實只是要查字）。重點是**名詞動詞同形**（the harvest 收成／to harvest X 採收），以及比喻用法 **harvest data／harvest energy**（大量蒐集），搭配詞 a bumper harvest、reap the harvest。★1，雙語 karaoke 例句兩句（名詞收成義＋動詞收割義）＋ `_index` 同步。詞庫 217→218。
 📚 **碎片複習：15 分鐘 retrieval quiz（中→英快問快答）**——Cian 早上已練新字、午後有 15 分鐘 → Coach Max 依學習科學（碎片時段 CP 值最高＝主動提取＋間隔複習，見 [[english-learning-efficiency-research]]）不塞新字、改複習今早那批 ★1。Round 1 七題複習 7 字（**baby / fuse(have a short fuse) / scarf(down) / mileage(get mileage out of) / effect(affect vs effect) / colleague / be seeing somebody**），全數 review_count 1→2（同日複習、★維持 1）。表現：核心單字 retrieval 成功率高；**affect vs effect 滿分** ⭐；短板集中在**兩個系統性習慣——過去式 -ed 漏字（scarf→scarfed）、冠詞 a/the 誤用（a lunch、whole chicken）**，另 fired→fried 混淆、be seeing 漏受詞 each other。Round 2（go all out / bring up / in a pinch）未做，Cian 收在此。

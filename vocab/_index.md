@@ -196,6 +196,13 @@
 | [coworker](coworker.md) | n. | 同事（口語、平行同事） | 1 | 2026-07-02 | noun, work, people, relationship, business |
 | [colleague](colleague.md) | n. | 同事（較正式、同行） | 1 | 2026-07-02 | noun, work, people, ⚠️easy-to-confuse, business |
 | [college](college.md) | n. | 大學／學院（美式泛指大學） | 1 | 2026-07-02 | noun, education, us-uk-difference, ⚠️easy-to-confuse, daily |
+| [be interested in someone](be-interested-in-someone.md) | phrase | 對某人有意思、感興趣（曖昧初期較含蓄） | 1 | 2026-07-03 | phrase, relationship, romance, register-neutral, daily |
+| [be into someone](be-into-someone.md) | phrase | 很喜歡、很迷某人（比 interested 更熱烈） | 1 | 2026-07-03 | phrase, relationship, romance, informal, daily |
+| [pick up](pick-up.md) | phr.v. | 接（人／物）；自然學會；搭訕；接電話 | 1 | 2026-07-03 | phrasal-verb, splittable, multi-meaning, high-frequency, daily |
+| [swag](swag.md) | n. | 自信有型的氣場；（另義）贈品、周邊 | 1 | 2026-07-03 | noun, slang, attitude, fashion, informal |
+| [conversational in](conversational-in.md) | adj.phr. | （某語言）能日常對話的程度 | 1 | 2026-07-03 | adjective-phrase, language-skill, resume, toeic, formal |
+| [zone out](zone-out.md) | phr.v. | 放空、恍神、精神不集中 | 1 | 2026-07-03 | phrasal-verb, intransitive, attention, informal, daily |
+| [kill it](kill-it.md) | phr.v. | 表現得超好、大成功（誇獎用語） | 1 | 2026-07-03 | phrasal-verb, informal, encouragement, register-trap, daily |
 | [headed to](headed-to.md) | phr. | 前往；朝...而去 | 2 | 2026-04-29 | phrasal-verb, daily |
 | [cram](cram.md) | v. | 塞滿；臨時抱佛腳 | 2 | 2026-06-01 | verb, study, multi-meaning |
 | [keen](keen.md) | adj. | 熱衷的；敏銳的 | 2 | 2026-04-29 | adjective, emotion |

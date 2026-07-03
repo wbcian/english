@@ -9,9 +9,10 @@
 - 詳細 Profile → [PROFILE.md](PROFILE.md)
 
 ## 快照（隨更新同步）
-- 已收錄單字：218
-- 5★ 精熟：0　 3–4★ 學習中：8　 1–2★ 新／脆弱：210
-- 最近活動日期：2026-07-02（📚 **新增單字：harvest** /ˈhɑːrvɪst/（n./v.，收穫、收成；收割、採收）——Cian 傳單字想學（Coach Max 一度誤當成「去收割一波單字」的指令）。重點：**名詞動詞同形**（the harvest／to harvest X）＋比喻用法 **harvest data／harvest energy**（大量蒐集），搭配 a bumper harvest、reap the harvest。★1，雙語 karaoke 例句兩句＋ `_index` 同步。詞庫 217→**218**）
+- 已收錄單字：225
+- 5★ 精熟：0　 3–4★ 學習中：8　 1–2★ 新／脆弱：217
+- 最近活動日期：2026-07-03（📚 **單字批次練習：一次 7 字/片語（曖昧系 + 潮流黑話 + 職場表達）**——Cian 連續丟字，採批次存檔模式（卡片即時給、持久化延到「練習結束」才一次做）。新增 **be interested in someone**（曖昧初期含蓄有好感，例句含「偷瞄」情境 steal glances at）、**be into someone**（比 interested 更熱烈上頭）、**pick up**（一字四義：接人/自然學會/搭訕/接電話，⚠️可拆 pick you up ✅／pick up you ❌）、**swag**（自信氣場 vs 展會贈品雙義，⚠️稍過氣俚語）、**conversational in**（語言能力階梯 basic<conversational<fluent<native，履歷用語）、**zone out**（放空恍神，不及物不可拆）、**kill it**（誇獎「表現超好」，⚠️另義「關掉它」靠語境分，近義 nail it）。全 ★1，雙語 karaoke 例句＋ `_index` 同步。詞庫 218→**225**）
+- 上一活動日期：2026-07-02（📚 **新增單字：harvest** /ˈhɑːrvɪst/（n./v.，收穫、收成；收割、採收）——Cian 傳單字想學（Coach Max 一度誤當成「去收割一波單字」的指令）。重點：**名詞動詞同形**（the harvest／to harvest X）＋比喻用法 **harvest data／harvest energy**（大量蒐集），搭配 a bumper harvest、reap the harvest。★1，雙語 karaoke 例句兩句＋ `_index` 同步。詞庫 217→**218**）
 - 上一活動日期：2026-07-02（📚 **碎片複習：15 分鐘 retrieval quiz（中→英快問快答）**——早上已練新字、午後 15 分鐘 → Coach Max 依學習科學不塞新字、改**主動提取複習**今早那批 ★1。Round 1 複習 7 字：baby / fuse(have a short fuse) / scarf(down) / mileage(get mileage out of) / effect(**affect vs effect 滿分** ⭐) / colleague / be seeing somebody，全數 `review_count` 1→2（同日、★維持 1）。短板集中兩個系統性習慣——**過去式 -ed 漏字**（scarf→scarfed）、**冠詞 a/the 誤用**（a lunch、whole chicken），另 fired→fried 混淆、be seeing 漏受詞 each other。Round 2（go all out / bring up / in a pinch）Cian 收在此，未做。詞庫 217 不變）
 - 上一活動日期：2026-07-02（📚 **單字批次練習：一次 19 字/片語 + prank 複習**——Cian 連續丟字、採**批次存檔**模式（卡片即時給、持久化延到「練習結束」才一次做，見 memory `vocab-batch-save-workflow`）。新增 baby（玻璃心/媽寶 vs childish）、mileage（get mileage out of）、fuse（have a short fuse）、cuisine（法文借詞）、fiber、alpaca（vs llama）、metallic（含金屬味/聲）、effect（⚠️ affect vs effect）、scarf（動詞 scarf down、複數 scarves）、ingenuity（形容詞 ingenious ⚠️ vs ingenuous）、gadget、pardon、I beg your pardon（語氣定調）、be seeing somebody（see 進行式＝交往）、seem（連綴動詞）、稱謂四兄弟 classmate/coworker/colleague/college（⚠️ colleague /ɡ/ vs college /dʒ/）。複習 prank（★1，review_count 1→2）。全 ★1，雙語 karaoke 例句＋ `_index` 同步。詞庫 198→**217**）
 - 上一活動日期：2026-07-02（📚 **新增單字：childish** /ˈtʃaɪldɪʃ/（adj.，幼稚的、孩子氣的，貶義）——Cian 傳單字想學。重點是跟 **childlike**（天真純真、中性偏正面）要分清楚，childish 幾乎永遠是貶義；常見句型 **It's childish of + 人 + to V**；反義詞 mature。★1，雙語 karaoke 例句兩句＋ `_index` 同步。詞庫 197→**198**）
