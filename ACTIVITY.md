@@ -6,6 +6,7 @@
 ---
 
 ## 2026-07-03
+📚 **單字批次練習（第二輪）：flow state + in the zone**——Cian 問「心流狀態怎麼說」。新增 **flow state**（心理學正式用語，源自 Csikszentmihalyi，動詞搭 enter/achieve/hit/reach a flow state）與口語版 **be in the zone**（運動/電玩/日常閒聊常用）。**教學亮點**：`in the zone` 跟同日稍早學的 `zone out` 用同一個字 zone、意思卻完全相反（out＝恍神脫離專注 vs. in＝深陷專注），靠介系詞分——順勢做了跨字對照複習。全 ★1，雙語 karaoke 例句＋ `_index` 同步。詞庫 225→**227**。
 📚 **單字批次練習：一次 7 字/片語（曖昧系 + 潮流黑話 + 職場表達）**——Cian 連續丟字，採批次存檔模式（卡片即時給、持久化延到「練習結束」才一次做，見 memory [[vocab-batch-save-workflow]]）。新增：**be interested in someone**（曖昧初期含蓄有好感，例句含「偷瞄」情境 steal glances at）、**be into someone**（比 interested 更熱烈上頭，口語）、**pick up**（一字四義：接人/自然學會/搭訕/接電話，⚠️可拆 pick you up ✅／pick up you ❌）、**swag**（自信氣場 vs 展會贈品雙義，⚠️稍過氣俚語）、**conversational in**（語言能力階梯 basic<conversational<fluent<native，履歷用語）、**zone out**（放空恍神，不及物不可拆）、**kill it**（誇獎「表現超好」，⚠️另義「關掉它」靠語境分，近義 nail it）。全 ★1，雙語 karaoke 例句＋ `_index` 同步。詞庫 218→**225**。
 
 ## 2026-07-02

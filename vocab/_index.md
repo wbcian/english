@@ -203,6 +203,8 @@
 | [conversational in](conversational-in.md) | adj.phr. | （某語言）能日常對話的程度 | 1 | 2026-07-03 | adjective-phrase, language-skill, resume, toeic, formal |
 | [zone out](zone-out.md) | phr.v. | 放空、恍神、精神不集中 | 1 | 2026-07-03 | phrasal-verb, intransitive, attention, informal, daily |
 | [kill it](kill-it.md) | phr.v. | 表現得超好、大成功（誇獎用語） | 1 | 2026-07-03 | phrasal-verb, informal, encouragement, register-trap, daily |
+| [flow state](flow-state.md) | n.phr. | 心流狀態、全神貫注忘我的狀態 | 1 | 2026-07-03 | noun-phrase, psychology, focus, productivity, modern |
+| [be in the zone](in-the-zone.md) | phrase | 進入超專注狀態、心流（口語版） | 1 | 2026-07-03 | phrase, focus, informal, sports, contrast-with-zone-out |
 | [headed to](headed-to.md) | phr. | 前往；朝...而去 | 2 | 2026-04-29 | phrasal-verb, daily |
 | [cram](cram.md) | v. | 塞滿；臨時抱佛腳 | 2 | 2026-06-01 | verb, study, multi-meaning |
 | [keen](keen.md) | adj. | 熱衷的；敏銳的 | 2 | 2026-04-29 | adjective, emotion |
