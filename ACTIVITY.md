@@ -5,6 +5,11 @@
 
 ---
 
+## 2026-07-06
+📚 **新增片語：preach to the choir**——Cian 打成「**peach** to the choir」🍑，抓到拼字陷阱：是 **preach** /priːtʃ/（傳教）不是 peach /piːtʃ/（桃子）。意思＝對唱詩班傳教→**向本來就同意你的人費口舌**；招牌回應句 "You're preaching to the choir."；英式變體 preach to the converted；`choir` 發音雷點 /ˈkwaɪər/。★1，雙語 karaoke 例句＋ `_index` 同步。詞庫 241→**242**。
+📚 **新增單字：repping (rep)** /ˈrɛpɪŋ/（v.，代表、替⋯站台撐場面）——Cian 傳單字想學。`rep`＝**represent** 口語砍半版，源自嘻哈「Represent!」文化；穿隊服、掛品牌、介紹家鄉都能用。拼字重點：短母音疊字尾 rep→re**pp**ing/re**pp**ed。⚠️ 名詞 rep 另有三義靠語境分：gym reps（健身次數）、sales rep（業務代表）、street rep（名聲 reputation）。★1，雙語 karaoke 例句＋ `_index` 同步。詞庫 240→**241**。
+📚 **片語查證＋新增 2 片語：goo-goo eyes vs gaga**——Cian 問「be goo goo over someone 常見嗎？」答案：**那個組合不是標準說法**，是把兩個真片語混在一起了。新增 **make goo-goo eyes at someone**（對某人拋媚眼，`goo-goo`＝嬰兒牙牙學語聲 goo goo ga ga，固定搭配 make…at，俏皮略復古、常用來調侃朋友）與 **go/be gaga over someone**（為某人/某物瘋狂神魂顛倒，`gaga`＝痴傻，法文借字；Lady Gaga 藝名源自 Queen〈Radio Ga Ga〉當記憶鉤）。順帶跟 7/3 曖昧系做溫度對照：`interested in`（含蓄）< `into`（上頭）< `gaga over`（誇張戲劇化）。全 ★1，雙語 karaoke 例句＋ `_index` 同步。詞庫 238→**240**。
+
 ## 2026-07-03
 📚 **單字批次練習：一次 6 字/片語（跨界大雜燴：抽象名詞 + 飲料辨析 + 水果 idiom）**——Cian 連續丟字。新增 **canonical**（公認標準的，涵蓋宗教正典/學術範例/科技 canonical URL 三層次）、**adjacency**（相鄰關係，商業「鄰近市場」黑話 + 圖論 adjacency list 雙用法）、**sparkling water**（氣泡水，辨析 still water/soda water/seltzer/tonic water 全家族）、**carbonated drink**（碳酸飲料，英美加地域用字大不同：fizzy drink/soda/pop/soft drink）、**lemon**（檸檬，重點在 idiom `a lemon`＝瑕疵車/貨 + lemon law + When life gives you lemons 諺語）、**consolidation**（鞏固/整合，商業併購 + memory consolidation 記憶鞏固，呼應 [[english-learning-efficiency-research]] 的 spacing 原理）。全 ★1，雙語 karaoke 例句＋ `_index` 同步。詞庫 232→**238**。
 🎧 **新 lesson：Soul — 追夢、脆弱，與「你到底跑哪去了？」**（dialogue · B1 · RealLife English · 講師 Ethan 用 Pixar《Soul》Joe Gardner 試音場景 · ~4 min）：先完整播一次 Dorothea↔Joe 對白場景（split TTS 聲音，兩人分開聲線），再進 Ethan 的教學拆解。**間隔複習亮點**：今天稍早才學會的 `zone out`／`in the zone`／`kill it`（皆 ★1）第一次在真實電影場景複習（review_count 1→2），不是孤立例句。**外部事實查證修正**：獨立查證原片字幕／腳本來源後，發現原設計稿把「I zoned out」誤歸給 Dorothea——實際是 **Joe 自己承認恍神**，「Joe Gardner, where have you been?」才是 Dorothea 的提問；已在 lesson 內修正並註記查證過程。新增 5 個 keeper：**soundcheck**（試音）、**full-time position**（全職職位，對比 Joe 放棄的教職安全感）、**Teach**（稱呼老師的俚語，像叫 Doc）、**where have you been**（對埋沒才華表驚訝的慣用句，非字面問地點）、**take the wheel**（接手掌控）。模組含 Connected Speech（美式 T-flap：get a suit→[geh-duh-suit]）、Sentence Anatomy（"Where have you been?" 慣用現在完成式）。全新字 ★1，雙語 karaoke 例句＋ `_index` 同步。詞庫 227→**232**。
