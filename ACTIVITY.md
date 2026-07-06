@@ -6,6 +6,7 @@
 ---
 
 ## 2026-07-06
+📚 **新增單字：repping (rep)** /ˈrɛpɪŋ/（v.，代表、替⋯站台撐場面）——Cian 傳單字想學。`rep`＝**represent** 口語砍半版，源自嘻哈「Represent!」文化；穿隊服、掛品牌、介紹家鄉都能用。拼字重點：短母音疊字尾 rep→re**pp**ing/re**pp**ed。⚠️ 名詞 rep 另有三義靠語境分：gym reps（健身次數）、sales rep（業務代表）、street rep（名聲 reputation）。★1，雙語 karaoke 例句＋ `_index` 同步。詞庫 240→**241**。
 📚 **片語查證＋新增 2 片語：goo-goo eyes vs gaga**——Cian 問「be goo goo over someone 常見嗎？」答案：**那個組合不是標準說法**，是把兩個真片語混在一起了。新增 **make goo-goo eyes at someone**（對某人拋媚眼，`goo-goo`＝嬰兒牙牙學語聲 goo goo ga ga，固定搭配 make…at，俏皮略復古、常用來調侃朋友）與 **go/be gaga over someone**（為某人/某物瘋狂神魂顛倒，`gaga`＝痴傻，法文借字；Lady Gaga 藝名源自 Queen〈Radio Ga Ga〉當記憶鉤）。順帶跟 7/3 曖昧系做溫度對照：`interested in`（含蓄）< `into`（上頭）< `gaga over`（誇張戲劇化）。全 ★1，雙語 karaoke 例句＋ `_index` 同步。詞庫 238→**240**。
 
 ## 2026-07-03
