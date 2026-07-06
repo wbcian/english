@@ -6,6 +6,7 @@
 
 | 單字 | 詞性 | 中文 | ★ | 上次複習 | tags |
 |---|---|---|---|---|---|
+| [preach to the choir](preach-to-the-choir.md) | phr. | 向本來就同意你的人費口舌 | 1 | 2026-07-06 | idiom, communication, persuasion, informal, daily |
 | [repping (rep)](repping.md) | v. | 代表、替⋯站台撐場面（represent 口語縮寫） | 1 | 2026-07-06 | verb, slang, hip-hop, identity, informal |
 | [make goo-goo eyes at someone](make-goo-goo-eyes-at.md) | phr. | 對某人拋媚眼、含情脈脈放電（俏皮、略復古） | 1 | 2026-07-06 | phrase, relationship, romance, informal, humorous |
 | [go gaga over someone](go-gaga-over.md) | phr. | 為某人／某物瘋狂、神魂顛倒 | 1 | 2026-07-06 | phrase, relationship, romance, informal, hyperbole |
