@@ -6,6 +6,8 @@
 
 | 單字 | 詞性 | 中文 | ★ | 上次複習 | tags |
 |---|---|---|---|---|---|
+| [make goo-goo eyes at someone](make-goo-goo-eyes-at.md) | phr. | 對某人拋媚眼、含情脈脈放電（俏皮、略復古） | 1 | 2026-07-06 | phrase, relationship, romance, informal, humorous |
+| [go gaga over someone](go-gaga-over.md) | phr. | 為某人／某物瘋狂、神魂顛倒 | 1 | 2026-07-06 | phrase, relationship, romance, informal, hyperbole |
 | [harvest](harvest.md) | n./v. | 收穫、收成；收割、採收 | 1 | 2026-07-02 | noun, verb, agriculture, multi-meaning, figurative |
 | [scorching](scorching.md) | adj. | 灼熱的、酷熱的 | 1 | 2026-07-01 | adjective, weather, hot, intensity, summer |
 | [sweltering](sweltering.md) | adj. | 悶熱難受的（很熱＋不舒服） | 1 | 2026-07-01 | adjective, weather, hot, discomfort, summer |
