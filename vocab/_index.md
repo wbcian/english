@@ -210,6 +210,12 @@
 | [teach](teach-slang.md) | n. | （稱呼用俚語）老師（像叫醫生 Doc） | 1 | 2026-07-03 | noun, slang, address-term, informal, occupation |
 | [where have you been](where-have-you-been.md) | idiom | 「你（怎麼現在才出現）？」——對埋沒的才華表驚訝 | 1 | 2026-07-03 | idiom, present-perfect, compliment, surprise, talent |
 | [take the wheel](take-the-wheel.md) | v.phr. | 接手掌控（字面：接過方向盤） | 1 | 2026-07-03 | verb-phrase, idiom, control, driving-metaphor, daily |
+| [canonical](canonical.md) | adj. | 公認標準的、最具代表性的；符合教規的 | 1 | 2026-07-03 | adjective, standard, tech-jargon, academic, formal |
+| [adjacency](adjacency.md) | n. | 相鄰、鄰接（狀態或關係） | 1 | 2026-07-03 | noun, business-jargon, spatial, tech-jargon, formal |
+| [sparkling water](sparkling-water.md) | n. | 氣泡水 | 1 | 2026-07-03 | noun, drink, daily, restaurant |
+| [carbonated drink](carbonated-drink.md) | n. | 碳酸飲料、氣泡飲料 | 1 | 2026-07-03 | noun, drink, daily, us-uk-difference, regional-variation |
+| [lemon](lemon.md) | n. | 檸檬；（口語）瑕疵品、故障貨 | 1 | 2026-07-03 | noun, food, idiom, multi-meaning, daily |
+| [consolidation](consolidation.md) | n. | 鞏固；整合、合併 | 1 | 2026-07-03 | noun, business-jargon, finance, cognitive-science, formal |
 | [headed to](headed-to.md) | phr. | 前往；朝...而去 | 2 | 2026-04-29 | phrasal-verb, daily |
 | [cram](cram.md) | v. | 塞滿；臨時抱佛腳 | 2 | 2026-06-01 | verb, study, multi-meaning |
 | [keen](keen.md) | adj. | 熱衷的；敏銳的 | 2 | 2026-04-29 | adjective, emotion |
