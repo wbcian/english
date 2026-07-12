@@ -220,6 +220,7 @@
 | [carbonated drink](carbonated-drink.md) | n. | 碳酸飲料、氣泡飲料 | 1 | 2026-07-03 | noun, drink, daily, us-uk-difference, regional-variation |
 | [lemon](lemon.md) | n. | 檸檬；（口語）瑕疵品、故障貨 | 1 | 2026-07-03 | noun, food, idiom, multi-meaning, daily |
 | [consolidation](consolidation.md) | n. | 鞏固；整合、合併 | 1 | 2026-07-03 | noun, business-jargon, finance, cognitive-science, formal |
+| [capstone](capstone.md) | n. | 壓頂石；（比喻）巔峰之作、集大成的收尾 | 1 | 2026-07-12 | noun, education, career, metaphor, toeic |
 | [headed to](headed-to.md) | phr. | 前往；朝...而去 | 2 | 2026-04-29 | phrasal-verb, daily |
 | [cram](cram.md) | v. | 塞滿；臨時抱佛腳 | 2 | 2026-06-01 | verb, study, multi-meaning |
 | [keen](keen.md) | adj. | 熱衷的；敏銳的 | 2 | 2026-04-29 | adjective, emotion |

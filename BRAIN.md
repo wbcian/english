@@ -9,9 +9,10 @@
 - 詳細 Profile → [PROFILE.md](PROFILE.md)
 
 ## 快照（隨更新同步）
-- 已收錄單字：242
-- 5★ 精熟：0　 3–4★ 學習中：8　 1–2★ 新／脆弱：234
-- 最近活動日期：2026-07-06（📚 **新增片語：preach to the choir**——Cian 打成「peach to the choir」🍑，修正拼字 preach /priːtʃ/ vs peach /piːtʃ/。意思＝向本來就同意你的人費口舌；招牌句 "You're preaching to the choir."；英式變體 preach to the converted；choir 發音 /ˈkwaɪər/。★1，雙語 karaoke 例句＋ `_index` 同步。詞庫 241→**242**）
+- 已收錄單字：243
+- 5★ 精熟：0　 3–4★ 學習中：8　 1–2★ 新／脆弱：235
+- 最近活動日期：2026-07-12（📚 **新增單字：capstone** /ˈkæpstoʊn/（n.，壓頂石；比喻巔峰之作、集大成的收尾）——Cian 傳單字想學。重點：比喻義在**「完成、收尾」而非只是「最高」**（vs pinnacle/peak）；招牌搭配 **capstone project/course**（美國大學畢業專題高頻用語）＋句型 `the capstone of + 一段歷程`；配對記憶 **cornerstone**（基石，底部起頭）vs capstone（頂端收尾）。★1，雙語 karaoke 例句兩句＋ `_index` 同步。詞庫 242→**243**）
+- 上一活動日期：2026-07-06（📚 **新增片語：preach to the choir**——Cian 打成「peach to the choir」🍑，修正拼字 preach /priːtʃ/ vs peach /piːtʃ/。意思＝向本來就同意你的人費口舌；招牌句 "You're preaching to the choir."；英式變體 preach to the converted；choir 發音 /ˈkwaɪər/。★1，雙語 karaoke 例句＋ `_index` 同步。詞庫 241→**242**）
 - 同日活動：2026-07-06（📚 **新增單字：repping (rep)** /ˈrɛpɪŋ/（v.，代表、替⋯站台撐場面）——`rep`＝represent 口語砍半版，源自嘻哈「Represent!」；拼字疊字尾 rep→repping/repped；⚠️ 名詞 rep 三義：gym reps／sales rep／street rep。★1，雙語 karaoke 例句＋ `_index` 同步。詞庫 240→**241**）
 - 同日活動：2026-07-06（📚 **片語查證＋新增 2 片語：goo-goo eyes vs gaga**——Cian 問「be goo goo over someone 常見嗎？」→ 該組合**非標準說法**、是兩個真片語的混搭。新增 **make goo-goo eyes at someone**（拋媚眼，goo-goo＝嬰兒語 goo goo ga ga，固定 make…at，俏皮復古）與 **go/be gaga over someone**（神魂顛倒，gaga＝痴傻法文借字，Lady Gaga←Queen〈Radio Ga Ga〉記憶鉤）；跟 7/3 曖昧系做溫度對照 interested in < into < gaga over。全 ★1，雙語 karaoke 例句＋ `_index` 同步。詞庫 238→**240**）
 - 上一活動日期：2026-07-03（📚 **單字批次練習：一次 6 字/片語（跨界大雜燴：抽象名詞 + 飲料辨析 + 水果 idiom）**——新增 **canonical**（公認標準，宗教/學術/科技 canonical URL 三層次）、**adjacency**（相鄰關係，商業「鄰近市場」+ 圖論 adjacency list）、**sparkling water**（氣泡水，辨析 still/soda water/seltzer/tonic water）、**carbonated drink**（碳酸飲料，英美加地域用字：fizzy drink/soda/pop）、**lemon**（檸檬，重點 idiom a lemon＝瑕疵車 + lemon law + 諺語）、**consolidation**（鞏固/整合，商業併購 + memory consolidation 呼應學習科學 spacing 原理）。全 ★1，雙語 karaoke 例句＋ `_index` 同步。詞庫 232→**238**）

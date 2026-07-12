@@ -5,6 +5,9 @@
 
 ---
 
+## 2026-07-12
+📚 **新增單字：capstone** /ˈkæpstoʊn/（n.，壓頂石；比喻巔峰之作、集大成的收尾）——Cian 傳單字想學。字面＝金字塔/牆最頂端那塊石頭（cap+stone），放上去才算完工；比喻義重點在**「完成、收尾」而非只是「最高」**（vs pinnacle/peak 只講高度）。招牌搭配 **capstone project/course**（美國大學畢業專題高頻用語），句型 `the capstone of + 一段歷程`；配對記憶 **cornerstone**（基石，底部起頭）vs capstone（頂端收尾）。履歷/面試講 side project 可用 "the capstone of my learning journey"。★1，雙語 karaoke 例句兩句（生涯巔峰義＋畢業專題義各一）＋ `_index` 同步。詞庫 242→**243**。
+
 ## 2026-07-06
 📚 **新增片語：preach to the choir**——Cian 打成「**peach** to the choir」🍑，抓到拼字陷阱：是 **preach** /priːtʃ/（傳教）不是 peach /piːtʃ/（桃子）。意思＝對唱詩班傳教→**向本來就同意你的人費口舌**；招牌回應句 "You're preaching to the choir."；英式變體 preach to the converted；`choir` 發音雷點 /ˈkwaɪər/。★1，雙語 karaoke 例句＋ `_index` 同步。詞庫 241→**242**。
 📚 **新增單字：repping (rep)** /ˈrɛpɪŋ/（v.，代表、替⋯站台撐場面）——Cian 傳單字想學。`rep`＝**represent** 口語砍半版，源自嘻哈「Represent!」文化；穿隊服、掛品牌、介紹家鄉都能用。拼字重點：短母音疊字尾 rep→re**pp**ing/re**pp**ed。⚠️ 名詞 rep 另有三義靠語境分：gym reps（健身次數）、sales rep（業務代表）、street rep（名聲 reputation）。★1，雙語 karaoke 例句＋ `_index` 同步。詞庫 240→**241**。
