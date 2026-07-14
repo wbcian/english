@@ -5,6 +5,9 @@
 
 ---
 
+## 2026-07-14
+📚 **中翻英辨析＋新增單字：「素材」怎麼講**——Cian 問「素材」的英文，拆成四個依情境分工的字：**material**（泛用，寫作/研究/創作皆可，抓不準先選這個）、**footage**（限影像素材，不可數，如 raw footage/security footage）、**content**（行銷/社群語境，⚠️重音陷阱 CONtent 名詞 vs conTENT 形容詞）、**source material**（改編作品的原著，如小說→電影）。另 📚 **新增單字：merchant** /ˈmɜːrtʃənt/（n.，商人、貿易商）——Cian 傳單字想學，語感偏傳統/大宗貿易商，現代日常「做生意的人」用 businessman/trader；現代延伸見於電商 online merchant、merchant account。全 ★1，雙語 karaoke 例句＋ `_index` 同步。詞庫 243→**248**。
+
 ## 2026-07-12
 📚 **新增單字：capstone** /ˈkæpstoʊn/（n.，壓頂石；比喻巔峰之作、集大成的收尾）——Cian 傳單字想學。字面＝金字塔/牆最頂端那塊石頭（cap+stone），放上去才算完工；比喻義重點在**「完成、收尾」而非只是「最高」**（vs pinnacle/peak 只講高度）。招牌搭配 **capstone project/course**（美國大學畢業專題高頻用語），句型 `the capstone of + 一段歷程`；配對記憶 **cornerstone**（基石，底部起頭）vs capstone（頂端收尾）。履歷/面試講 side project 可用 "the capstone of my learning journey"。★1，雙語 karaoke 例句兩句（生涯巔峰義＋畢業專題義各一）＋ `_index` 同步。詞庫 242→**243**。
 

@@ -221,6 +221,11 @@
 | [lemon](lemon.md) | n. | 檸檬；（口語）瑕疵品、故障貨 | 1 | 2026-07-03 | noun, food, idiom, multi-meaning, daily |
 | [consolidation](consolidation.md) | n. | 鞏固；整合、合併 | 1 | 2026-07-03 | noun, business-jargon, finance, cognitive-science, formal |
 | [capstone](capstone.md) | n. | 壓頂石；（比喻）巔峰之作、集大成的收尾 | 1 | 2026-07-12 | noun, education, career, metaphor, toeic |
+| [material](material.md) | n. | 素材、材料（泛用） | 1 | 2026-07-14 | noun, writing, general-purpose, multi-meaning, daily |
+| [footage](footage.md) | n. | 影片素材 | 1 | 2026-07-14 | noun, video, media, uncountable, daily |
+| [content](content.md) | n. | 內容素材 | 1 | 2026-07-14 | noun, marketing, social-media, ⚠️stress-trap, daily |
+| [source material](source-material.md) | n.phr. | 原始素材、原著素材 | 1 | 2026-07-14 | noun-phrase, adaptation, film, literature, formal |
+| [merchant](merchant.md) | n. | 商人、貿易商 | 1 | 2026-07-14 | noun, business, trade, e-commerce, daily |
 | [headed to](headed-to.md) | phr. | 前往；朝...而去 | 2 | 2026-04-29 | phrasal-verb, daily |
 | [cram](cram.md) | v. | 塞滿；臨時抱佛腳 | 2 | 2026-06-01 | verb, study, multi-meaning |
 | [keen](keen.md) | adj. | 熱衷的；敏銳的 | 2 | 2026-04-29 | adjective, emotion |
