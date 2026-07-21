@@ -36,3 +36,41 @@ tools/models/
 # Exception: app pre-generated Edge TTS audio is content-addressable and
 # committed so deploys don't depend on the Edge TTS service being reachable.
 !app/public/audio/*.mp3
+
+# Clips belonging to private, locally-excluded lessons (see .git/info/exclude).
+# They have to be listed here rather than there, because the un-ignore above
+# outranks $GIT_DIR/info/exclude. Audio is content-addressed, so a hash is the
+# only way to name one; these carry no text and are already derivable as the
+# manifest hashes with no committed mp3. Regenerate: `npm --prefix app run audio:gen:all`.
+app/public/audio/0db89d1797f2.*
+app/public/audio/109ed0043bfe.*
+app/public/audio/127a814c6403.*
+app/public/audio/240ed4221749.*
+app/public/audio/2e8b21b777ab.*
+app/public/audio/2f5ad264a688.*
+app/public/audio/3ce61d12bc84.*
+app/public/audio/450d52ce5411.*
+app/public/audio/4643ee06e8ab.*
+app/public/audio/4e97dd42c4d9.*
+app/public/audio/6a10f0d99e96.*
+app/public/audio/6ee08e6eb3bc.*
+app/public/audio/79fa09ff903a.*
+app/public/audio/7b457e57b145.*
+app/public/audio/7ba45c517661.*
+app/public/audio/83a9ebb6da49.*
+app/public/audio/936df1a76df3.*
+app/public/audio/95eddd911ec9.*
+app/public/audio/9682933a2d2b.*
+app/public/audio/aa3850283600.*
+app/public/audio/aee70baff517.*
+app/public/audio/b022fd0aca56.*
+app/public/audio/b6c6cec42d4a.*
+app/public/audio/be1b303e5b74.*
+app/public/audio/c580fe0bf316.*
+app/public/audio/caf17169c1e0.*
+app/public/audio/d13720e80588.*
+app/public/audio/d80429cefb61.*
+app/public/audio/de51964cb8cd.*
+app/public/audio/e32944d9eb33.*
+app/public/audio/f06b47efb4e1.*
+app/public/audio/f52f341d0503.*
