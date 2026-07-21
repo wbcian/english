@@ -33,6 +33,7 @@ type: lesson
 track: reading | dialogue | talk
 audio: true | false           # 原始素材有無真人聲音；純元資料，不影響 app 朗讀
 level: A1|A2|B1|B2|C1|C2      # optional，CEFR 難度（單一級）；評法見 ../reference/cefr-leveling-process.md
+unlisted: true                # optional，見 §1.1；不列出但網址可直接開
 series: <series-slug>         # optional，多 part 系列才填
 part: <N>                     # optional，series 有填時才填
 url: https://...              # optional（reading 建議填原文 URL）
@@ -46,6 +47,30 @@ title_en: <英文副標一行>       # 建議填；從 Topic & Summary 的英文
 > `title_zh` / `title_en` 為 optional（schema 允許省略以免未來新檔忘了加就 build 爆）；但**強烈建議填寫**。顯示邏輯：Lesson 卡片以 `title_zh`（若有）取代 slug 當主標；`title_zh` 與 `title_en` 同時存在時，卡片 h2 下方另起一行英文小字副標。搜尋引擎也會對這兩欄加較高權重。
 
 > ⚠️ `audio` 是**純元資料**：app 的朗讀由 markdown DOM 結構決定（見 §5），**與 `audio` / `track` 任何 frontmatter 無關**。`audio: false` **不會**關掉朗讀。
+
+---
+
+## 1.1 `unlisted`：不列出，但網址仍可開
+
+含個人資訊、不想被隨手瀏覽到的 lesson 標 `unlisted: true`。
+
+- **會消失的**：首頁 Lessons 列表、Fuse 搜尋索引、tab 上的計數。單一過濾點在 `app/src/pages/index.astro` 取 collection 時（`.filter(l => !l.data.unlisted)`），所以三者自動一致。
+- **不會消失的**：`app/src/pages/lessons/[...slug].astro` 的 `getStaticPaths` 仍吃**全部** lesson，頁面照樣 build，**直接開網址可讀**。頁面上會多一個虛線 `🔒 未列出` badge，否則打開分不出來。
+
+> ⚠️ **`unlisted` ≠ private。** repo 與 GitHub Pages 都是公開的——unlisted 只是「不列出」，任何知道網址的人仍讀得到，原始 markdown 也在 GitHub 上。
+
+### 真正私密的內容：再加一層本機排除
+
+不能外流的 lesson 除了標 `unlisted: true`，還要讓它**根本不進 repo**（CI 上不存在該檔 → 不 build 那一頁 → GitHub Pages 上沒有）。排除規則刻意拆兩處，各有原因：
+
+| 排除什麼 | 寫在哪 | 為什麼 |
+|---|---|---|
+| lesson 的 `.md` | **`.git/info/exclude`** | `.gitignore` 會被 commit，把私人 lesson 的檔名寫進去等於**公開它的標題**。`info/exclude` 永不離開本機。 |
+| 它專屬的 `app/public/audio/<hash>.*` | **`.gitignore`** | 根 `.gitignore` 的 `!app/public/audio/*.mp3` 反排除**優先權高於** `info/exclude`，寫在那邊會失效。音檔是內容定址、只能用 hash 指名；hash 不含文字，且本來就能從「manifest 有、但 repo 沒 mp3」推導出來，寫出來不多洩漏什麼。 |
+
+「專屬」＝該 lesson 產生、但**沒有任何**公開 lesson／vocab 也產生的 hash（共用的別排除，會把公開音檔一起弄不見）。算法：用 `app/scripts/generate-audio.mjs` 匯出的 `readSpeakableSources()` 取兩邊 hash 集合相減。改過 lesson 內文後 hash 會變，記得重算。音檔隨時可用 `npm --prefix app run audio:gen:all` 在本機重生。
+
+> 殘留（可接受）：`app/src/data/audio-manifest.json` 仍會含這些 hash（它是掃本機 `public/audio/` 產生的）。內容是 `{hash: true}`、不含文字，且 CI build 時會自己重生成不含私人 hash 的版本。
 
 ---
 

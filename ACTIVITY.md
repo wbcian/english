@@ -5,6 +5,10 @@
 
 ---
 
+## 2026-07-21
+🎧 **新 lesson：面試自我介紹拆解**（talk · B2 · **🔒 私人 lesson，未列出且不進 repo，僅存在本機**）：第一次拿 Cian 自撰的英文口說稿當 lesson 正文逐字檢查（內容含個人求職資訊，故本檔只留學習重點、不記稿子細節）。**總評結構 A、時態 A−、用字 B+**——稿子命中英文面試的三段式（Now → Path → Why you），四種時態（現在簡單／現在完成／過去簡單／現在完成進行）**全部切對**，這對中文母語者不簡單。真正要修的四類：① ⚠️ **懸垂分詞（dangling participle）**——句尾 `, V-ing ...` 的隱藏主詞跟主句主詞對不上，這是全篇唯一真文法錯，給了三種修法＋「把主句主詞補回去唸一次」的自檢法；② **重複用字**（同一個副詞／介系詞兩句內出現兩次）；③ 現在完成式後面硬接現在簡單式導致**平行結構鬆掉**；④ **中式搭配三連**：technical practice → keeping my technical skills sharp／matched…well → lined up really well with／deliver features → **ship** features。教學模組：Sentence Anatomy 六段（時態四層地圖、分詞構句降級、同位語一句話解釋公司、`where` 關係副詞＋spend on/at/V-ing、懸垂分詞、`make + O + adj` 呼應 6/25 的 `sliced her hand open`）、Polish Pass（八處對照表＋可直接背的潤稿全文）、Useful Phrases 十句自介骨架模板、Connected Speech（**AC**-cess vs ac**CESS** 重音、three-**anna**-half）、Cultural Notes（空窗期怎麼講不用道歉、"I'm a user myself" 是王牌、結尾別太謙卑）。新增 6 個 keeper：**come to a close**（告一段落，⚠️主詞是事不是人＋close 唸 /s/）、**growth phase**（成長期，產品生命週期四段）、**line up with**（吻合，取代 match…well）、**have a personal connection to**（面試講「我本身就是使用者」的王牌句）、**ship**（科技業比 deliver 道地）、**access point**（AP；router/switch/AP 分工）。全 ★1，雙語 karaoke 例句＋ `_index` 同步。詞庫 248→**254**。
+🔒 **App：`unlisted` frontmatter 欄位上線**——lesson 標 `unlisted: true` 即從首頁列表、Fuse 搜尋索引、tab 計數一併消失，但 `[...slug]` 的 `getStaticPaths` 照樣 build 該頁，**網址仍可直接開**。單一過濾點（`index.astro` 取 collection 時就濾掉）→ 列表/搜尋/計數自動一致；lesson 頁另加虛線 `🔒 未列出` badge，否則打開分不出來。⚠️ **unlisted ≠ private**：repo 與 GitHub Pages 都是公開的，所以真正私密的內容另外走 `.gitignore`（本次該篇 lesson 與其專屬音檔皆已排除、只留本機）。
+
 ## 2026-07-14
 📚 **中翻英辨析＋新增單字：「素材」怎麼講**——Cian 問「素材」的英文，拆成四個依情境分工的字：**material**（泛用，寫作/研究/創作皆可，抓不準先選這個）、**footage**（限影像素材，不可數，如 raw footage/security footage）、**content**（行銷/社群語境，⚠️重音陷阱 CONtent 名詞 vs conTENT 形容詞）、**source material**（改編作品的原著，如小說→電影）。另 📚 **新增單字：merchant** /ˈmɜːrtʃənt/（n.，商人、貿易商）——Cian 傳單字想學，語感偏傳統/大宗貿易商，現代日常「做生意的人」用 businessman/trader；現代延伸見於電商 online merchant、merchant account。全 ★1，雙語 karaoke 例句＋ `_index` 同步。詞庫 243→**248**。
 
