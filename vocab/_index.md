@@ -6,6 +6,12 @@
 
 | 單字 | 詞性 | 中文 | ★ | 上次複習 | tags |
 |---|---|---|---|---|---|
+| [come to a close](come-to-a-close.md) | v.phr. | 告一段落、劃下句點（主詞是事不是人） | 1 | 2026-07-21 | phrase, business, interview, euphemism, formal |
+| [growth phase](growth-phase.md) | n.phr. | 成長期（產品／公司快速擴張的階段） | 1 | 2026-07-21 | noun-phrase, business, startup, career, toeic |
+| [line up with](line-up-with.md) | phr.v. | 與⋯吻合、對得上、一致 | 1 | 2026-07-21 | phrasal-verb, business, interview, alignment, daily |
+| [have a personal connection to](have-a-personal-connection-to.md) | v.phr. | 對⋯有個人淵源、有一份私人的連結 | 1 | 2026-07-21 | phrase, interview, business, emotion, formal |
+| [ship](ship.md) | v. | （軟體業）出貨、把功能上線；運送 | 1 | 2026-07-21 | verb, tech, business, jargon, high-frequency |
+| [access point](access-point.md) | n. | 無線基地台（AP）；接入點 | 1 | 2026-07-21 | noun, networking, hardware, tech, abbreviation |
 | [preach to the choir](preach-to-the-choir.md) | phr. | 向本來就同意你的人費口舌 | 1 | 2026-07-06 | idiom, communication, persuasion, informal, daily |
 | [repping (rep)](repping.md) | v. | 代表、替⋯站台撐場面（represent 口語縮寫） | 1 | 2026-07-06 | verb, slang, hip-hop, identity, informal |
 | [make goo-goo eyes at someone](make-goo-goo-eyes-at.md) | phr. | 對某人拋媚眼、含情脈脈放電（俏皮、略復古） | 1 | 2026-07-06 | phrase, relationship, romance, informal, humorous |
