@@ -6,7 +6,9 @@
 
 | 單字 | 詞性 | 中文 | ★ | 上次複習 | tags |
 |---|---|---|---|---|---|
-| [wrap up](wrap-up.md) | phr.v. | 收尾、結束（把事情做完收掉）；包起來 | 1 | 2026-07-21 | phrasal-verb, business, meeting, interview, daily |
+| [be there through](be-there-through.md) | v.phr. | 全程都在、從頭到尾參與（並撐過）某段歷程 | 1 | 2026-07-21 | phrase, career, interview, preposition, business |
+| [around](around-approximation.md) | prep./adv. | 大約、差不多（接數字前）；周圍 | 1 | 2026-07-21 | preposition, number, hedging, time, daily |
+| [wrap up](wrap-up.md) | phr.v. | 收尾、結束（把事情做完收掉）；包起來 | 1 | 2026-07-21 | phrasal-verb, business, meeting, interview, daily, ⭐當天主動使用 |
 | [come to a close](come-to-a-close.md) | v.phr. | 告一段落、劃下句點（主詞是事不是人） | 1 | 2026-07-21 | phrase, business, interview, euphemism, formal |
 | [growth phase](growth-phase.md) | n.phr. | 成長期（產品／公司快速擴張的階段） | 1 | 2026-07-21 | noun-phrase, business, startup, career, toeic |
 | [line up with](line-up-with.md) | phr.v. | 與⋯吻合、對得上、一致 | 1 | 2026-07-21 | phrasal-verb, business, interview, alignment, daily |

@@ -6,7 +6,7 @@ zh: 收尾、結束（把事情做完收掉）；把⋯包起來
 proficiency: 1
 first_seen: 2026-07-21
 last_reviewed: 2026-07-21
-review_count: 1
+review_count: 2
 tags: [phrasal-verb, business, meeting, interview, daily]
 source: "Cian 自己改稿時用出來的字（面試自介 V2）"
 ---
@@ -32,3 +32,4 @@ finish up, close out, tie up loose ends, conclude；反向 kick off（開場）
 
 ## Encounters
 - 2026-07-21 — first learned（Cian 修稿時自己用出來，順勢收進詞庫；與 come to a close 做主詞／語氣辨析）
+- 2026-07-21 — ⭐ **主動使用**：學會當天就用 "wrapped up" 宣告練習結束，主詞／語氣／時態全對（不是照樣造句，是真的在對話裡調用）
