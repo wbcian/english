@@ -16,6 +16,10 @@ const lessons = defineCollection({
     audio: z.boolean().optional(),
     // CEFR 難度分級（顯示用；對照表見 reference/cefr-toeic-levels.md）
     level: z.enum(['A1', 'A2', 'B1', 'B2', 'C1', 'C2']).optional(),
+    // 未列出：首頁列表、搜尋索引、計數都跳過，但頁面照樣 build、網址仍可直接開。
+    // 給含個人資訊、不想被隨手瀏覽到的 lesson 用。⚠️ unlisted ≠ private——真的不想
+    // 公開的內容要另外 gitignore（見 .gitignore 的 private lesson 區塊）。
+    unlisted: z.boolean().optional(),
     url: z.string().url().optional(),
     word_count: z.number().optional(),
     reading_time_min: z.number().optional(),

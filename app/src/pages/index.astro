@@ -4,11 +4,15 @@ import Layout from '../layouts/Layout.astro';
 import LessonsList from '../components/LessonsList.astro';
 import VocabList from '../components/VocabList.astro';
 
-const lessons = await getCollection('lessons');
+const allLessons = await getCollection('lessons');
 const vocab = await getCollection('vocab');
-if (lessons.length === 0) {
+if (allLessons.length === 0) {
   throw new Error("Empty 'lessons' collection — check glob base path");
 }
+// `unlisted: true` drops a lesson from the listing only — the [...slug] route
+// still builds its page, so a direct URL keeps working. Filtering here (not
+// downstream) means list, Fuse search index and tab count all follow.
+const lessons = allLessons.filter((l) => !l.data.unlisted);
 
 // Series-aware ordering: keep every part of a series contiguous (Part 1→2→3),
 // and float each series block to its most-recent member's date so recent series

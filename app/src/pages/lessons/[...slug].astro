@@ -11,7 +11,7 @@ export async function getStaticPaths() {
 type Props = { entry: CollectionEntry<'lessons'> };
 const { entry } = Astro.props as Props;
 const { Content } = await render(entry);
-const { date, topic, series, part, level } = entry.data;
+const { date, topic, series, part, level, unlisted } = entry.data;
 const dateStr = date.toISOString().slice(0, 10);
 ---
 
@@ -23,6 +23,7 @@ const dateStr = date.toISOString().slice(0, 10);
       <time>{dateStr}</time>
       {level && <LevelBadge level={level} showToeic />}
       {series && part != null && <span class="badge">{series} · Part {part}</span>}
+      {unlisted && <span class="badge badge-unlisted">🔒 未列出</span>}
     </div>
     <Content />
   </article>
@@ -99,6 +100,13 @@ const dateStr = date.toISOString().slice(0, 10);
     padding: 2px 8px;
     border-radius: 999px;
     font-size: 0.9em;
+  }
+  /* Unlisted lessons are reachable by URL but never listed — flag them on the
+     page itself, otherwise there's no way to tell one apart from a normal one. */
+  .badge-unlisted {
+    background: transparent;
+    color: var(--fg-muted);
+    border: 1px dashed var(--card-border);
   }
   article { padding-bottom: 4em; }
 
