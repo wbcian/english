@@ -5,8 +5,8 @@ pos: n
 zh: 名聲；聲譽
 proficiency: 1          # 1–5 ★
 first_seen: 2026-06-10
-last_reviewed: 2026-06-10
-review_count: 1
+last_reviewed: 2026-07-23
+review_count: 2
 tags: [noun, social]
 source: "lesson: Anne With An E follow-up Q&A"
 ---
@@ -29,3 +29,4 @@ standing, name, repute
 
 ## Encounters
 - 2026-06-10 — first learned (Anne With An E follow-up Q&A)
+- 2026-07-23 — reappeared (lesson: Forget Me Not — Jin Sung "dreads losing his reputation" 怕壞了學生會長的名聲)

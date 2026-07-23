@@ -6,6 +6,21 @@
 
 | 單字 | 詞性 | 中文 | ★ | 上次複習 | tags |
 |---|---|---|---|---|---|
+| [rooted](rooted.md) | adj. | 有歸屬感的；扎根的；根深蒂固的 | 1 | 2026-07-23 | adjective, emotion, metaphor, belonging, literary |
+| [relocation](relocation.md) | n. | 搬遷；遷移；調職搬家 | 1 | 2026-07-23 | noun, business, moving, toeic, formal |
+| [conceal](conceal.md) | v. | 隱藏；隱瞞；遮掩 | 1 | 2026-07-23 | verb, formal, toeic, concealment, ⚠️pairs-with-disclose |
+| [physician](physician.md) | n. | 醫師（doctor 的正式說法） | 1 | 2026-07-23 | noun, medical, formal, toeic, ⚠️easy-to-confuse |
+| [prominent](prominent.md) | adj. | 顯眼的；傑出的；重要的 | 1 | 2026-07-23 | adjective, toeic, importance, description, formal |
+| [disclose](disclose.md) | v. | 揭露；公開（原本隱藏的資訊） | 1 | 2026-07-23 | verb, formal, toeic, business, ⚠️pairs-with-conceal |
+| [debut](debut.md) | n./adj./v. | 首度亮相；處女作；初次登場 | 1 | 2026-07-23 | noun, french-origin, ⚠️pronunciation-trap, entertainment, toeic |
+| [dread](dread.md) | v./n. | 害怕、畏懼（即將到來的事）；恐懼感 | 1 | 2026-07-23 | verb, noun, emotion, fear, ⚠️grammar-dread-Ving |
+| [mock](mock.md) | v./adj. | 嘲弄、譏笑（惡意）；模擬的、仿製的 | 1 | 2026-07-23 | verb, adjective, emotion, multi-meaning, daily |
+| [erupt](erupt.md) | v. | （情緒／衝突）爆發；（火山）噴發 | 1 | 2026-07-23 | verb, emotion, metaphor, volcano, vivid-language |
+| [impulsively](impulsively.md) | adv. | 衝動地；不加思索地 | 1 | 2026-07-23 | adverb, behavior, personality, toeic, decision-making |
+| [suspend](suspend.md) | v. | 使停學／停職；暫停；懸掛 | 1 | 2026-07-23 | verb, toeic, school, work, multi-meaning |
+| [manifest](manifest.md) | v. | 顯化；顯現；（adj.）明顯的 | 1 | 2026-07-23 | verb, multi-meaning, modern-slang |
+| [reputation](reputation.md) | n. | 名聲；聲譽 | 1 | 2026-07-23 | noun, social |
+| [confront](confront.md) | v. | 當面對質；正面面對 | 1 | 2026-07-23 | verb, conflict |
 | [be there through](be-there-through.md) | v.phr. | 全程都在、從頭到尾參與（並撐過）某段歷程 | 1 | 2026-07-21 | phrase, career, interview, preposition, business |
 | [around](around-approximation.md) | prep./adv. | 大約、差不多（接數字前）；周圍 | 1 | 2026-07-21 | preposition, number, hedging, time, daily |
 | [wrap up](wrap-up.md) | phr.v. | 收尾、結束（把事情做完收掉）；包起來 | 1 | 2026-07-21 | phrasal-verb, business, meeting, interview, daily, ⭐當天主動使用 |
@@ -88,9 +103,7 @@
 | [steam room](steam-room.md) | n. | 蒸氣室 | 1 | 2026-06-11 | noun, travel, hotel, spa |
 | [sauna](sauna.md) | n. | 三溫暖；烤箱（乾熱） | 1 | 2026-06-11 | noun, travel, hotel, spa, finland |
 | [lotion](lotion.md) | n. | 乳液；護膚液 | 1 | 2026-06-11 | noun, daily, skincare, hotel, amenities |
-| [reputation](reputation.md) | n. | 名聲；聲譽 | 1 | 2026-06-10 | noun, social |
 | [practically](practically.md) | adv. | 幾乎；實際上 | 1 | 2026-06-10 | adverb, intensifier |
-| [confront](confront.md) | v. | 當面對質；正面面對 | 1 | 2026-06-10 | verb, conflict |
 | [back in the day](back-in-the-day.md) | idiom | 以前那個年代；當年 | 1 | 2026-06-10 | idiom, time |
 | [moral](moral.md) | adj./n. | 道德的；（複數）道德觀 | 1 | 2026-06-10 | adjective, noun, values |
 | [speak one's mind](speak-ones-mind.md) | idiom | 直言不諱；說出真心話 | 1 | 2026-06-09 | idiom, personality, communication, daily |
@@ -133,7 +146,6 @@
 | [running through one's head](running-through-ones-head.md) | idiom | 想法／旋律一直在腦中循環 | 1 | 2026-05-23 | idiom, thought, music, daily |
 | [that's on you](thats-on-you.md) | phr. | 那是你的責任；你自找的 | 1 | 2026-05-23 | phrase, responsibility, casual |
 | [conceited](conceited.md) | adj. | 自負的；自視甚高 | 1 | 2026-05-23 | adjective, personality, tap-t |
-| [manifest](manifest.md) | v. | 顯化；顯現；（adj.）明顯的 | 1 | 2026-05-23 | verb, multi-meaning, modern-slang |
 | [product taste](product-taste.md) | n.phr. | 產品品味；對產品好壞的直覺判斷力 | 1 | 2026-05-25 | product, startup, idiom-modern, work |
 | [first principles](first-principles.md) | n.phr. | 第一性原理（回到本質推理） | 1 | 2026-05-25 | thinking, startup, work, decision-making |
 | [amorphous](amorphous.md) | adj. | 無定形的；模糊的；邊界不清的 | 1 | 2026-05-25 | adjective, abstract, work, vocab-upgrade |

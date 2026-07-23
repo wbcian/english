@@ -5,8 +5,8 @@ pos: v
 zh: 當面對質；正面面對
 proficiency: 1          # 1–5 ★
 first_seen: 2026-06-10
-last_reviewed: 2026-06-10
-review_count: 1
+last_reviewed: 2026-07-23
+review_count: 2
 tags: [verb, conflict]
 source: "lesson: Anne With An E follow-up Q&A"
 ---
@@ -27,3 +27,4 @@ challenge, face, stand up to
 
 ## Encounters
 - 2026-06-10 — first learned (Anne With An E follow-up Q&A)
+- 2026-07-23 — reappeared (lesson: Forget Me Not — "Callie confronts her mother" 在車上跟媽媽攤牌，面對「面對現實」義)
