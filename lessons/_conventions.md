@@ -234,6 +234,33 @@ App 依日期 desc 排序，同日期內以 `part` asc 為 secondary sort。
 </details>
 ```
 
+### 5.7 `wide_layout: marginalia`：寬螢幕書卷版面（opt-in pilot）
+
+frontmatter 標 `wide_layout: marginalia`，該篇在 **≥1024px** 會重構成「書框」版面：每個 `## section`
+變成 `[ 左側 margin rail 236px | 正文 well ≤64ch ]`，輔助教材（TOEIC 關鍵字、測驗答案、句構註記、
+Coach Max）搬進右側 rail；窄螢幕自動退回單欄堆疊。由 rehype `inject-marginalia.mjs`（gate by
+frontmatter、註冊在最後）產出，CSS 只 inline 在該篇、**其餘課與 vocab byte 不變**。目前 pilot 只上
+Forget Me Not 一篇。
+
+rail 內容用 **`[!type]` callout marker**（寫在**一般段落／清單**，**絕不可用 blockquote**）：
+
+```markdown
+[!chips] TOEIC 關鍵字        <!-- 後面接一個 markdown 清單，每個 <li> 變一顆 pill -->
+
+- **relocation** 搬遷
+- **conceal** 隱藏
+
+[!note] ✍ **Coach Max**：一句署名邊註（Study Tips / 各節小提示都用它）。
+[!anno] 句構要點，會在 rail 自動編號（Sentence Anatomy 的要點逐條寫）。
+[!answer] **Q1 · B**。原文：… ← Reading Comprehension 答案；rehype 會包成可折疊 `<details>` 收在 rail。
+```
+
+> ⚠️ **為什麼一定要非-blockquote**：`generate-audio.mjs` 的 `collectSpeakable` 只從 **blockquote** 與
+> **`word` 表格欄**抽可朗讀文字。rail callout 常含英文例句（如 `[!anno]` 的可套句），若寫成 blockquote
+> 會被判 speakable、產生新音檔 hash（破壞 `generated=0`）。寫成一般段落／清單就永遠不會被抽取。
+> 因此 marginalia 篇的 Reading Comprehension 答案改用 `[!answer]`（§5.6 的 `<details>` 是非-marginalia
+> 篇的一般寫法）。
+
 ### 邊界速查
 
 | 狀況 | 處理 |
