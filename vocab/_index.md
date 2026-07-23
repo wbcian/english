@@ -6,6 +6,8 @@
 
 | 單字 | 詞性 | 中文 | ★ | 上次複習 | tags |
 |---|---|---|---|---|---|
+| [turnover](turnover.md) | n. | 人員流動率；離職率（財務語境則指營業額） | 1 | 2026-07-23 | noun, business, hr, multi-meaning, toeic |
+| [stall](stall.md) | v. | 停滯不前；卡住不動；（引擎）熄火拋錨 | 1 | 2026-07-23 | verb, business, metaphor, progress, toeic |
 | [rooted](rooted.md) | adj. | 有歸屬感的；扎根的；根深蒂固的 | 1 | 2026-07-23 | adjective, emotion, metaphor, belonging, literary |
 | [relocation](relocation.md) | n. | 搬遷；遷移；調職搬家 | 1 | 2026-07-23 | noun, business, moving, toeic, formal |
 | [conceal](conceal.md) | v. | 隱藏；隱瞞；遮掩 | 1 | 2026-07-23 | verb, formal, toeic, concealment, ⚠️pairs-with-disclose |
