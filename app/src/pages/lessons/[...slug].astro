@@ -128,7 +128,9 @@ const dateStr = date.toISOString().slice(0, 10);
   }
 
   /* Left scroll-spy spine — sits in the margin beside the 760px reading column,
-     only when the viewport is wide enough to hold it without crowding the text. */
+     only when the viewport is wide enough to hold it without crowding the text.
+     Kept exactly as-is: the two-lane Close Reading breaks out only to the RIGHT, so
+     it never reaches this left rail. */
   .reading-spine {
     position: fixed;
     top: 92px;

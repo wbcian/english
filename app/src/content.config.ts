@@ -20,6 +20,9 @@ const lessons = defineCollection({
     // 給含個人資訊、不想被隨手瀏覽到的 lesson 用。⚠️ unlisted ≠ private——真的不想
     // 公開的內容要另外 gitignore（見 .gitignore 的 private lesson 區塊）。
     unlisted: z.boolean().optional(),
+    // 雙語兩欄閱讀（opt-in pilot）：true 時 rehype inject-bilingual 才把成對的
+    // 英/中 blockquote 併成兩欄 .bilingual；未設時維持上下堆疊（現行版面）。
+    two_lane: z.boolean().optional(),
     url: z.string().url().optional(),
     word_count: z.number().optional(),
     reading_time_min: z.number().optional(),

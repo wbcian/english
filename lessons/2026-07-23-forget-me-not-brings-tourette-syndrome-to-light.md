@@ -8,6 +8,7 @@ audio: true
 level: B2
 series: forget-me-not
 part: 1
+two_lane: true
 title_zh: Forget Me Not — 妥瑞症女孩的漂泊與救贖（Unit 15-1）
 title_en: "A rootless girl with Tourette's learns to stop hiding — and finally finds acceptance"
 ---

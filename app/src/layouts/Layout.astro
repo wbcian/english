@@ -41,6 +41,7 @@ const { title } = Astro.props;
     --speak-accent: #f59e0b;      /* amber — play controls + active-paragraph rail */
     --speak-read: #9a5b06;        /* amber read-trail TEXT (proven; AA on --bg) */
     --speak-highlight: #fbe6cf;   /* amber wash — word-tap playback ONLY */
+    --pair-lit: rgba(91, 107, 134, 0.14); /* cool-neutral wash — hovered/paired sentence (NOT amber: amber is playback) */
     --card-bg: #fffdf8;
     --card-border: #e4dcc9;
     --pill-bg: #ece3d3;           /* warm-neutral brand pill (badge / tab count / pos) */
@@ -61,6 +62,7 @@ const { title } = Astro.props;
       --speak-accent: #fbbf24;    /* amber — audio */
       --speak-read: #fbbf24;      /* bright amber reads cleanly as text on dark bg */
       --speak-highlight: #3a3320;
+      --pair-lit: rgba(160, 176, 205, 0.18);
       --card-bg: #232019;
       --card-border: #36312a;
       --pill-bg: #332e24;
@@ -357,7 +359,8 @@ const { title } = Astro.props;
      active state lives entirely in the border, so it works for no-sidecar
      paragraphs too (no word trail) and never reflows the text — the border grows
      into the negative margin, not the text column. cursor is default because only
-     the injected button triggers playback (not the text body). */
+     the injected button triggers playback — EXCEPT inside a two-lane .bilingual
+     block, where the whole paragraph is the click target (scoped below). */
   blockquote > p.speakable {
     cursor: default;
     margin-left: -1em;
@@ -482,6 +485,76 @@ const { title } = Astro.props;
     opacity: 0.7;
     vertical-align: 0.3em;
   }
+  /* ============================================================
+     Two-lane bilingual Close Reading (build: rehype inject-bilingual).
+     Each run of paired (EN, ZH) blockquotes is wrapped in .bilingual with the
+     blockquotes in interleaved source order (EN, ZH, EN, ZH …), so:
+       - narrow  → natural block flow = EN-over-ZH per pair (mobile pairing kept)
+       - ≥1024px → 2-col grid = EN left, ZH right, each pair row-aligned
+     The <blockquote>/<p>/.w subtree is untouched → audio hash + karaoke unchanged.
+     Hover a sentence and speech.ts lights its counterpart (.lit); the playing
+     sentence's counterpart gets .mate-speaking. ============ */
+  .bilingual > blockquote {
+    margin: 0 0 0.85em;
+    padding: 0;
+    border: 0;
+    background: transparent;
+  }
+  .bilingual > blockquote > p { margin: 0.1em 0; }
+  /* EN lane keeps the amber playable rail, self-contained (no negative margin).
+     The whole paragraph is the click target here (two-lane pilot), so cursor is a
+     pointer and hovering washes it cool-neutral. */
+  .bilingual > blockquote[lang="en"] > p.speakable {
+    cursor: pointer;
+    margin-left: 0;
+    padding-left: 13px;
+    padding-right: 0;
+    border-left: 2px solid color-mix(in srgb, var(--speak-accent) 38%, transparent);
+  }
+  .bilingual > blockquote[lang="en"] > p.speakable:hover { background: var(--pair-lit); }
+  .bilingual > blockquote[lang="en"] > p.speakable.speaking {
+    border-left-width: 3px;
+    border-left-color: var(--speak-accent);
+  }
+  /* Two-lane: the ▶ moves to the sentence start (left rail) and demotes to a
+     hover/focus-only keyboard affordance; the per-paragraph stop is retired (Esc /
+     tapping another sentence). Scoped to .bilingual so every other lesson keeps
+     its right-gutter play + stop controls unchanged. */
+  .bilingual .speak-btns { right: auto; left: -3px; top: 0.32em; transform: none; }
+  .bilingual .speak-btn { opacity: 0; }
+  .bilingual .speak-btn--stop { display: none; }
+  @media (hover: none) { .bilingual .speak-btn { opacity: 0.45; } }
+  /* ZH lane: the crutch — clickable (tapping it plays its EN mate), padded to
+     align with the EN rail, no rail of its own. */
+  .bilingual > blockquote:not([lang="en"]) > p {
+    cursor: pointer;
+    padding-left: 13px;
+    border-radius: 3px;
+    transition: background-color 0.15s;
+  }
+  .bilingual > blockquote:not([lang="en"]) > p:hover { background: var(--pair-lit); }
+  /* Cross-highlight (speech.ts toggles .lit / .mate-speaking onto the paired
+     blockquote in the OTHER lane; blockquote-level so multi-<p> mates all light). */
+  .bilingual blockquote.lit > p,
+  .bilingual blockquote.mate-speaking > p { background: var(--pair-lit); }
+
+  @media (min-width: 1024px) {
+    /* Two lanes, breaking out to the RIGHT only. The left edge stays at the reading
+       column, so the fixed left TOC spine (kept per the owner's decision) is never
+       overlapped — the column's content-box left sits a constant ~26px right of the
+       spine's right edge, at any width. The empty right margin becomes the extra
+       reading width; capped so ultrawide doesn't over-stretch. */
+    .bilingual {
+      width: min(calc(50vw + 332px), 1040px);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 40px;
+      row-gap: 20px;
+      align-items: start;
+    }
+    .bilingual > blockquote { margin: 0; }
+  }
+
   .no-voice-banner {
     position: fixed;
     bottom: 16px;

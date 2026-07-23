@@ -377,6 +377,58 @@ function stopWordHighlight(): void {
   litIndex = -1;
 }
 
+// ---- bilingual pairing (two-lane Close Reading) ----
+// The build-time inject-bilingual plugin wraps each (EN, ZH) blockquote pair in a
+// .bilingual grid and stamps a matching data-pair on both blockquotes. The mate
+// relationship is static, so resolveMateBlockquote walks it ONCE at wire time and
+// mateMap caches the English <p> → its Chinese counterpart blockquote. The
+// per-event hover/playback paths then do an O(1) lookup instead of re-walking.
+// Anything outside a .bilingual (lone blockquotes, vocab cells) has no entry.
+const mateMap = new WeakMap<HTMLElement, HTMLElement>();
+
+// Wire-time only: the paired blockquote in the other lane (same data-pair).
+function resolveMateBlockquote(el: HTMLElement): HTMLElement | null {
+  const bq = el.closest<HTMLElement>('blockquote[data-pair]');
+  const wrap = bq?.parentElement;
+  if (!bq || !wrap) return null;
+  const pid = bq.getAttribute('data-pair');
+  return (Array.from(wrap.children).find(
+    s => s !== bq && s.getAttribute('data-pair') === pid,
+  ) as HTMLElement | undefined) ?? null;
+}
+
+// Toggle .speaking on the playing paragraph AND mirror .mate-speaking onto its
+// counterpart blockquote — the single place the two stay in sync, so every
+// add/remove of .speaking goes through here.
+function setParagraphSpeaking(el: HTMLElement, on: boolean): void {
+  el.classList.toggle('speaking', on);
+  mateMap.get(el)?.classList.toggle('mate-speaking', on);
+}
+
+// A click that lands mid-text-selection should not play — let the user select.
+function hasActiveSelection(): boolean {
+  const sel = window.getSelection();
+  return !!sel && !sel.isCollapsed;
+}
+
+// Wire one paragraph as a click-to-play trigger with hover cross-highlight, for
+// the two-lane pilot. `trigger` is the tapped/hovered paragraph (EN or ZH),
+// `playEl` is the English paragraph whose clip actually plays, and `mateBq` is the
+// other-lane blockquote to light on hover. Idempotent (safe across re-init/HMR).
+function wireBilingualSentence(trigger: HTMLElement, playEl: HTMLElement, mateBq: HTMLElement | null): void {
+  if (trigger.dataset.bilingualWired === '1') return;
+  trigger.dataset.bilingualWired = '1';
+  trigger.addEventListener('click', (e) => {
+    const t = e.target as HTMLElement;
+    if (t.closest('.speak-btns') || t.closest('a') || hasActiveSelection()) return;
+    void handlePlayBtnClick(playEl);
+  });
+  if (mateBq) {
+    trigger.addEventListener('mouseenter', () => mateBq.classList.toggle('lit', true));
+    trigger.addEventListener('mouseleave', () => mateBq.classList.toggle('lit', false));
+  }
+}
+
 function clearCurrent(): void {
   // Only the active element's button can be non-idle; the rest already are.
   if (currentEl) setBtnState(currentEl, 'idle');
@@ -391,7 +443,7 @@ function clearCurrent(): void {
   // speaking/pending being reliably true. Without it, pausing Web Speech A
   // then playing B leaves A stuck in the paused queue and B never starts.
   if (synth.speaking || synth.pending || synth.paused) synth.cancel();
-  currentEl?.classList.remove('speaking');
+  if (currentEl) setParagraphSpeaking(currentEl, false);
   currentEl = null;
 }
 
@@ -400,7 +452,7 @@ function playAudioFile(src: string, el: HTMLElement, hash: string, onDone?: () =
   const audio = new Audio(src);
   audio.preload = 'auto';
   audio.playbackRate = playbackRate;
-  el.classList.add('speaking');
+  setParagraphSpeaking(el, true);
   setBtnState(el, 'playing');
   currentEl = el;
   currentAudio = audio;
@@ -414,7 +466,7 @@ function playAudioFile(src: string, el: HTMLElement, hash: string, onDone?: () =
     if (currentAudio !== audio) return;
     stopWordHighlight();
     setBtnState(el, 'idle');
-    if (currentEl === el) el.classList.remove('speaking');
+    if (currentEl === el) setParagraphSpeaking(el, false);
     currentAudio = null;
     if (currentEl === el) currentEl = null;
   };
@@ -540,14 +592,14 @@ async function speakViaWebSpeech(text: string, el: HTMLElement, onDone?: () => v
   await voicesReady;
 
   clearCurrent();
-  el.classList.add('speaking');
+  setParagraphSpeaking(el, true);
   setBtnState(el, 'playing');
   currentEl = el;
 
   const voice = pickEnglishVoice();
   if (!voice) {
     showNoVoiceBanner();
-    el.classList.remove('speaking');
+    setParagraphSpeaking(el, false);
     setBtnState(el, 'idle');
     currentEl = null;
     onDone?.(); // no voice → skip this clip so play-all still advances
@@ -566,7 +618,7 @@ async function speakViaWebSpeech(text: string, el: HTMLElement, onDone?: () => v
       if (i === chunks.length - 1) {
         const cleanup = () => {
           if (currentEl === el) {
-            el.classList.remove('speaking');
+            setParagraphSpeaking(el, false);
             setBtnState(el, 'idle');
             currentEl = null;
             onDone?.(); // natural end of this clip → advance play-all (if active)
@@ -835,8 +887,7 @@ function wireOneSpeakableWord(el: HTMLElement): void {
     // NB: clicks inside <a> are deliberately NOT ignored here — vocab list
     // rows wrap their .speakable-word in an <a>, and a tap on the word should
     // speak rather than navigate. Only skip on user text selection.
-    const sel = window.getSelection();
-    if (sel && !sel.isCollapsed) return;
+    if (hasActiveSelection()) return;
     if (insideLink) {
       // Cancel link navigation so a tap on the word means "speak", not
       // "open detail page".
@@ -906,10 +957,9 @@ function wireSpeakable(): void {
       hardStop(); // leave any play-all sequence + tear down this clip → idle
     });
 
-    // Paragraph body click: do nothing (explicit no-op to satisfy spec §2).
-    // Text selection and link clicks are unaffected because we don't prevent
-    // any defaults on them — only stopPropagation would matter if there were
-    // outer handlers, and there aren't.
+    // Two-lane pilot paragraphs (whole-paragraph click + hover cross-highlight) are
+    // wired separately in wireBilingual(), keeping this generic loop free of any
+    // .bilingual special-casing — every non-pilot lesson behaves exactly as before.
   });
 
   // Lesson vocab tables — find the column whose <th> is exactly "word",
@@ -932,6 +982,27 @@ function wireSpeakable(): void {
   document.querySelectorAll<HTMLElement>('.speakable-word').forEach(wireOneSpeakableWord);
 }
 
+// Wire both lanes of every two-lane pair (the pilot's whole-paragraph click +
+// hover cross-highlight): the EN paragraph plays its own clip, the ZH paragraph
+// plays its English mate, and hovering either lights the other lane. Runs AFTER
+// wireSpeakable so each EN <p> already has its pCtx/buttons; scoped to .bilingual
+// so every other lesson is untouched.
+function wireBilingual(): void {
+  document.querySelectorAll<HTMLElement>('.bilingual').forEach(block => {
+    block.querySelectorAll<HTMLElement>('blockquote[lang="en"] > p.speakable').forEach(enP => {
+      const zhBq = resolveMateBlockquote(enP);
+      if (zhBq) mateMap.set(enP, zhBq); // cached for the .mate-speaking mirror during playback
+      wireBilingualSentence(enP, enP, zhBq);
+    });
+    block.querySelectorAll<HTMLElement>('blockquote:not([lang="en"]) > p').forEach(zhP => {
+      const enBq = resolveMateBlockquote(zhP);
+      const enP = enBq?.querySelector<HTMLElement>('p.speakable');
+      if (!enP) return;
+      wireBilingualSentence(zhP, enP, enBq);
+    });
+  });
+}
+
 // Esc cancels both audio file playback and Web Speech, and resets all button UIs
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && (currentAudio || synth.speaking || synth.pending || synth.paused)) {
@@ -941,6 +1012,7 @@ document.addEventListener('keydown', e => {
 
 function init(): void {
   wireSpeakable();
+  wireBilingual();
   wirePlayAll();
   wireSpeedControl();
   wireStickySpeedBar();
