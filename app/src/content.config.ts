@@ -23,6 +23,10 @@ const lessons = defineCollection({
     // 雙語兩欄閱讀（opt-in pilot）：true 時 rehype inject-bilingual 才把成對的
     // 英/中 blockquote 併成兩欄 .bilingual；未設時維持上下堆疊（現行版面）。
     two_lane: z.boolean().optional(),
+    // 寬螢幕書卷版面（opt-in pilot）：'marginalia' 時 rehype inject-marginalia 才把
+    // 每個 ## section 重構成 rail+well 書框、輔助教材搬進右側 margin rail；未設時維持
+    // 單欄。CSS 只在該篇 inline 輸出，其餘頁面 byte 不變。
+    wide_layout: z.enum(['marginalia']).optional(),
     url: z.string().url().optional(),
     word_count: z.number().optional(),
     reading_time_min: z.number().optional(),

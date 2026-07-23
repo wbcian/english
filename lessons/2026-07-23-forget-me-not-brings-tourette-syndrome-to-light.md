@@ -9,6 +9,7 @@ level: B2
 series: forget-me-not
 part: 1
 two_lane: true
+wide_layout: marginalia
 title_zh: Forget Me Not — 妥瑞症女孩的漂泊與救贖（Unit 15-1）
 title_en: "A rootless girl with Tourette's learns to stop hiding — and finally finds acceptance"
 ---
@@ -19,13 +20,21 @@ title_en: "A rootless girl with Tourette's learns to stop hiding — and finally
 
 ## Topic & Summary
 
+[!chips] TOEIC 關鍵字
+
+- **relocation** 搬遷
+- **conceal** 隱藏
+- **physician** 醫師
+- **disclose** 揭露
+- **prominent** 顯眼
+
 空中美語文學單元選了 Ellie Terry 的處女作小說 **Forget Me Not**（中譯《月亮都是一樣的》）。主角 **Calliope Snow（暱稱 Callie）** 是個有妥瑞症（Tourette syndrome）的女孩：爸爸車禍過世後，媽媽情緒不穩、不斷換男友，每次分手就搬家，Callie 已經搬到第十次、從沒在任何地方「扎過根」。母親和醫師都要她把病藏起來，但妥瑞症藏不住，換來的是同學的注視、竊竊私語與霸凌。這集把整本書的劇情分兩幕摘要朗讀完，Day 2 才深入談作者。對 Cian 最有料的地方：這是一篇**乾淨的敘事型導讀**，字彙密度高又都是 TOEIC 會考的字（relocation / conceal / physician / prominent / disclose），而且 Patrick 老師直接示範了怎麼拆**分詞構句**——正中你的句構弱點。
 
 *The English Digest literature unit picks Ellie Terry's debut novel* **Forget Me Not**. *The main character,* **Calliope Snow (Callie)**, *has Tourette syndrome. After her father dies, her unstable mother hops from boyfriend to boyfriend, and every breakup means another move — Callie is now on her tenth relocation and has never felt rooted anywhere. Both her mother and physician urge her to hide her condition, but the tics can't be concealed, and stares, whispers, and bullying follow her. This episode summarizes the whole plot in two acts; Day 2 will go deeper on the author. Best part for you: it's a clean narrative read, packed with high-value TOEIC words, and the Chinese teacher literally walks through a reduced participial clause — right at your weak spot.*
 
 ## Article Map · 劇情兩幕一眼看完
 
-TOEIC Part 7 略讀訓練——先抓骨架，再讀細節。
+[!note] 劇情兩幕一眼看完 · **TOEIC Part 7 略讀訓練**——先抓骨架，再讀細節。表格橫跨整版。
 
 | 幕 | 段落重點 | one-line gist | 該抓的字 |
 |---|---|---|---|
@@ -39,6 +48,8 @@ TOEIC Part 7 略讀訓練——先抓骨架，再讀細節。
 ---
 
 ## Close Reading · 課文全文（兩幕，可朗讀 🔊）
+
+[!note] 課文兩幕 · 已上線的**兩軌閱讀**（點整句播放＋逐字），住在正文框裡橫跨整版。
 
 > **Act 1 — The rootless girl**
 > Forget Me Not brings Tourette syndrome to light. Calliope Snow, known as Callie, has never stayed anywhere long enough to feel rooted.
@@ -92,6 +103,8 @@ TOEIC Part 7 略讀訓練——先抓骨架，再讀細節。
 
 ## Key Vocabulary（可朗讀 🔊）
 
+[!note] 20 字 · **word 欄點了朗讀**。表格橫跨整版呼吸。
+
 | word | pos | zh | TOEIC | note |
 |---|---|---|---|---|
 | [rooted](../vocab/rooted.md) | adj. | 有歸屬感的；扎根的 | — | `feel rooted`＝有根、有連結；反義 `uprooted` 連根拔起 |
@@ -117,7 +130,7 @@ TOEIC Part 7 略讀訓練——先抓骨架，再讀細節。
 
 ## Reading Comprehension · 模擬 TOEIC Part 7
 
-先自己作答，再點開答案。
+先自己作答，再點開右欄的答案。
 
 **Q1 · Main idea** — What is the main reason Callie has "never stayed anywhere long enough to feel rooted"?
 
@@ -126,11 +139,7 @@ TOEIC Part 7 略讀訓練——先抓骨架，再讀細節。
 - (C) She keeps getting suspended from school
 - (D) Her Tourette syndrome forces her to change schools
 
-<details><summary>答案 + 解析</summary>
-
-**B**。原文：*"her mother becomes unstable and dependent on boyfriends. Every breakup means another move."* (A) 是主持人拿來**類比**的例子（military brats），不是 Callie 本人；(C)(D) 沒有原文支撐。
-
-</details>
+[!answer] **Q1 · B**。原文：*"her mother becomes unstable and dependent on boyfriends. Every breakup means another move."* (A) 是主持人拿來**類比**的例子（military brats），不是 Callie 本人；(C)(D) 沒有原文支撐。
 
 **Q2 · Vocab in context** — In "Both her mother and **physician** urge her to hide it," *physician* most nearly means:
 
@@ -139,11 +148,7 @@ TOEIC Part 7 略讀訓練——先抓骨架，再讀細節。
 - (C) A doctor
 - (D) A therapist
 
-<details><summary>答案 + 解析</summary>
-
-**C**。physician 就是 doctor 的正式版。主持人原話：*"Physician is another word for doctor. They're both correct."*
-
-</details>
+[!answer] **Q2 · C**。physician 就是 doctor 的正式版。主持人原話：*"Physician is another word for doctor. They're both correct."*
 
 **Q3 · Inference** — Why does Jin Sung talk to Callie after school but avoid her in public?
 
@@ -152,11 +157,7 @@ TOEIC Part 7 略讀訓練——先抓骨架，再讀細節。
 - (C) His parents forbid him from seeing her
 - (D) He is also being bullied
 
-<details><summary>答案 + 解析</summary>
-
-**B**。原文：*"Jin Sung dreads losing his reputation… avoids her in public."* 他是備受矚目的學生會長，怕跟被霸凌的女孩走太近會影響形象。
-
-</details>
+[!answer] **Q3 · B**。原文：*"Jin Sung dreads losing his reputation… avoids her in public."* 他是備受矚目的學生會長，怕跟被霸凌的女孩走太近會影響形象。
 
 **Q4 · Detail** — What finally happens when Callie **discloses** her Tourette syndrome at her new school?
 
@@ -165,11 +166,7 @@ TOEIC Part 7 略讀訓練——先抓骨架，再讀細節。
 - (C) Her classmates respond with warmth and acceptance
 - (D) She has to relocate one more time
 
-<details><summary>答案 + 解析</summary>
-
-**C**。原文：*"she introduces herself honestly and discloses her Tourette syndrome. Surprisingly, her classmates respond with warmth and acceptance."* 主動坦白反而換來接納——正好推翻「藏起來」的建議。
-
-</details>
+[!answer] **Q4 · C**。原文：*"she introduces herself honestly and discloses her Tourette syndrome. Surprisingly, her classmates respond with warmth and acceptance."* 主動坦白反而換來接納——正好推翻「藏起來」的建議。
 
 **Q5 · Application（自由作答）** — 用英文寫 3-4 句：如果你是 Callie，到新學校時你會選擇 `conceal` 還是 `disclose` 你的狀況？為什麼？句子裡至少用到 `conceal`、`disclose`、`reputation` 其中兩個。寫完貼回來，Coach Max 幫你抓 native 度。
 
@@ -185,18 +182,23 @@ TOEIC Part 7 略讀訓練——先抓骨架，再讀細節。
 
 骨架：`(Being) + p.p. …, 主詞 + 動詞 …`
 
-- 完整版是 `Jin Sung is drawn to Callie…, and he dreads…`。因為兩句**主詞相同（Jin Sung）**，前半就砍掉主詞和 be 動詞，只留過去分詞 `Drawn to…` 當開頭——這就是**分詞構句**。
-- `drawn to sb`＝被某人吸引（draw 的被動）。開頭用分詞 = native 敘事的「輕量開場」，比 `Because he was drawn to her,` 乾淨。
-- ⚠️ **你的老陷阱（懸垂分詞）**：開頭分詞的隱藏主詞，一定要等於主句主詞。這裡 `Drawn to Callie` 的人是 Jin Sung，主句主詞也是 Jin Sung ✅。若寫成 `Drawn to Callie, her reputation…` 就爛掉了（被吸引的不是 reputation）。
-- 可套句：`Raised in three different cities, she makes friends fast.`（＝Because she was raised…）
+[!anno] 完整版是 `Jin Sung is drawn to Callie…, and he dreads…`。因為兩句**主詞相同（Jin Sung）**，前半就砍掉主詞和 be 動詞，只留過去分詞 `Drawn to…` 當開頭——這就是**分詞構句**。
+
+[!anno] `drawn to sb`＝被某人吸引（draw 的被動）。開頭用分詞 = native 敘事的「輕量開場」，比 `Because he was drawn to her,` 乾淨。
+
+[!anno] ⚠️ **你的老陷阱（懸垂分詞）**：開頭分詞的隱藏主詞，一定要等於主句主詞。這裡 `Drawn to Callie` 的人是 Jin Sung，主句主詞也是 Jin Sung ✅。若寫成 `Drawn to Callie, her reputation…` 就爛掉了（被吸引的不是 reputation）。
+
+[!anno] 可套句：`Raised in three different cities, she makes friends fast.`（＝Because she was raised…）
 
 ### 句 2：擬人 + 關係子句
 
 **Callie carries a secret that refuses to stay hidden.**
 
-- `a secret that refuses to stay hidden`＝一個「拒絕躲藏」的秘密。秘密沒有意志，作者卻用 `refuses`（拒絕）**擬人化**，畫面立刻活起來——像個不受控的調皮小孩。Patrick 老師特別稱讚這個動詞用得好。
-- `stay + 形容詞`＝維持某狀態（stay hidden／stay calm／stay put）。
-- 可套句：`He has a talent that refuses to stay quiet.`（一個藏不住的才華）
+[!anno] `a secret that refuses to stay hidden`＝一個「拒絕躲藏」的秘密。秘密沒有意志，作者卻用 `refuses`（拒絕）**擬人化**，畫面立刻活起來——像個不受控的調皮小孩。Patrick 老師特別稱讚這個動詞用得好。
+
+[!anno] `stay + 形容詞`＝維持某狀態（stay hidden／stay calm／stay put）。
+
+[!anno] 可套句：`He has a talent that refuses to stay quiet.`（一個藏不住的才華）
 
 ---
 
@@ -217,4 +219,4 @@ TOEIC Part 7 略讀訓練——先抓骨架，再讀細節。
 2. **開頭分詞 = 敘事升級鍵**：想讓句子不要每句都 `He was…, and he…`，把其中一句改成開頭分詞（`Drawn to…`, `Raised in…`, `Known as…`）。但**一定檢查隱藏主詞**對不對得上主句——這是你上次面試稿踩過的雷。
 3. **break up（動）vs breakup（名）**：分開兩個字是動詞片語（`break up with him`），連成一個字是名詞（`a messy breakup`）。同源不同詞性靠「空格」區分，這類 TOEIC 詞性題很愛考。
 
-> 💡 Coach Max 提醒：Day 2 會深入談作者 Ellie Terry（她本人就有妥瑞症，用自己的人生寫這本書）。想先預習就記住 `bring sth to light`（讓某事被看見）跟 `live with a condition`（帶著某個病症生活）這兩個招牌說法。
+[!note] ✍ **Coach Max**：Day 2 會深入談作者 Ellie Terry（她本人就有妥瑞症，用自己的人生寫這本書）。想先預習就記住 `bring sth to light`（讓某事被看見）跟 `live with a condition`（帶著某個病症生活）這兩個招牌說法。

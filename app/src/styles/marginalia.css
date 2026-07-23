@@ -1,0 +1,151 @@
+/* MARGINALIA wide-screen lesson layout (pilot). Injected as an inline <style> by
+   app/src/rehype/inject-marginalia.mjs ONLY into the opt-in lesson's content, so it
+   never enters the shared Layout.<hash>.css bundle and touches no page template —
+   every other page's HTML stays byte-identical. Selectors are the .m-* classes this
+   plugin emits, which exist on no other page, so bare (unprefixed) scoping is safe.
+   Structure:
+     <section class="m-sec"> <h2 class="m-h2" id> … well/full … <aside class="m-rail">
+       <span class="m-folio"> … rail items … </aside> </section>
+   DOM is source-order (heading → content → rail), so the narrow stack reads
+   content-first; ≥1024px the grid pulls the DOM-last rail back into column 1.
+   Colour grammar unchanged: amber (--speak-accent)=audio, rust (--accent)=nav/labels. */
+
+/* ---- rail apparatus (styled at every width; on narrow they trail the content) ---- */
+.m-rail {
+  font-size: 0.85rem;
+  color: var(--fg-muted);
+  counter-reset: m-anno; /* section-local numbering for .m-anno (no plugin data-n) */
+  margin-top: 10px;
+}
+.m-folio {
+  display: none; /* wayfinding chrome — wide screens only (restored in the grid below) */
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.06em;
+  font-size: 0.72rem;
+}
+.m-chips { margin: 0 0 10px; }
+.m-chips-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  margin-bottom: 6px;
+}
+.m-chips ul { list-style: none; padding: 0; margin: 0; }
+.m-chips li {
+  border: 1px solid var(--card-border);
+  border-radius: 7px;
+  padding: 4px 9px;
+  margin: 0 0 5px;
+  background: var(--card-bg);
+  font-size: 0.82rem;
+}
+.m-chips li strong { color: var(--fg); font-weight: 600; }
+.m-note {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-left: 2px solid var(--speak-accent);
+  border-radius: 0 7px 7px 0;
+  padding: 7px 10px;
+  margin: 0 0 10px;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+.m-note strong { color: var(--accent); }
+.m-anno {
+  position: relative;
+  padding-left: 18px;
+  margin: 0 0 11px;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  counter-increment: m-anno;
+}
+.m-anno::before {
+  content: counter(m-anno) ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+/* Quiz answers: collapsible in the margin — the summary is the affordance, so the
+   answer never shows before the learner tries (holds on narrow too). */
+.m-answer { padding: 6px 10px; }
+.m-answer > summary {
+  cursor: pointer;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.8rem;
+  list-style: revert;
+}
+.m-answer > p { margin: 6px 0 0; font-size: 0.8rem; line-height: 1.55; }
+
+/* ================= wide frame: ≥1024px ================= */
+@media (min-width: 1024px) {
+  main:has(.m-sec) { max-width: 1010px; }
+  /* Per-section rails are the wayfinding here — retire the fixed left spine. */
+  main:has(.m-sec) .reading-spine { display: none; }
+
+  .m-sec {
+    display: grid;
+    grid-template-columns: 236px minmax(0, 1fr);
+    column-gap: 40px;
+    position: relative;
+    padding-top: 22px;
+    margin-top: 26px;
+  }
+  .m-sec:first-of-type { margin-top: 14px; }
+  /* Each section = a book page: a full-bleed hairline with a forget-me-not ✿. */
+  .m-sec::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -24px;
+    right: -24px;
+    border-top: 1px solid var(--card-border);
+  }
+  .m-sec::after {
+    content: "✿";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--bg);
+    color: var(--accent);
+    font-size: 11px;
+    padding: 0 8px;
+  }
+
+  /* DOM order is [h2, well/full…, rail]; place them explicitly so the rail sits
+     column 1 (label row 1, folio+apparatus row 2) and the well fills column 2. */
+  .m-h2 {
+    grid-column: 1;
+    grid-row: 1;
+    margin: 0;
+    padding-top: 0;
+    border-top: 0; /* the ::before hairline replaces the global h2 rule */
+    font-size: 0.78rem;
+  }
+  .m-rail {
+    grid-column: 1;
+    grid-row: 2;
+    margin-top: 0;
+    align-self: start;
+  }
+  .m-folio { display: block; margin-bottom: 10px; }
+  .m-well {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    max-width: 64ch;
+    font-size: 1.04rem;
+  }
+  .m-well p { margin: 0.6em 0; }
+  /* Full-bleed rows (tables, Close Reading) — auto row placement so a section can
+     hold several without them colliding on one row. */
+  .m-full { grid-column: 1 / -1; }
+  .m-full > table { margin: 0.3em 0; }
+  /* Close Reading two-lane fills the frame instead of breaking rightward. */
+  .m-full > .bilingual { width: auto; }
+}
