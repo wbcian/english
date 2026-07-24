@@ -3,6 +3,8 @@ word: have a personal connection to
 phonetic: /hæv ə ˈpɜːrsənl kəˈnekʃn tə/
 pos: v.phr.
 zh: 對⋯有個人淵源、有一份私人的連結
+cefr: "B2?"
+frequency: low
 proficiency: 1
 first_seen: 2026-07-21
 last_reviewed: 2026-07-21

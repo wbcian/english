@@ -3,6 +3,8 @@ word: material
 phonetic: /məˈtɪriəl/
 pos: n.
 zh: 素材、材料
+cefr: "A2"
+frequency: high
 proficiency: 1
 first_seen: 2026-07-14
 last_reviewed: 2026-07-14

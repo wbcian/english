@@ -3,6 +3,8 @@ word: excruciating
 phonetic: /ɪkˈskruːʃieɪtɪŋ/
 pos: adj
 zh: 極度痛苦的；難熬到極點的；詳細到令人受不了的
+cefr: "C1"
+frequency: low
 proficiency: 3
 first_seen: 2026-04-29
 last_reviewed: 2026-05-02

@@ -3,6 +3,8 @@ word: repping (rep)
 phonetic: /ˈrɛpɪŋ/
 pos: v
 zh: 代表、替⋯站台撐場面（represent 的口語縮寫）
+cefr: "C1?"
+frequency: low
 proficiency: 1
 first_seen: 2026-07-06
 last_reviewed: 2026-07-06

@@ -3,6 +3,8 @@ word: around
 phonetic: /əˈraʊnd/
 pos: prep./adv.
 zh: 大約、差不多（接數字前）；周圍、到處
+cefr: "A2"
+frequency: high
 proficiency: 1
 first_seen: 2026-07-21
 last_reviewed: 2026-07-21

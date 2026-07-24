@@ -3,6 +3,8 @@ word: confront
 phonetic: /kənˈfrʌnt/
 pos: v
 zh: 當面對質；正面面對
+cefr: "B2"
+frequency: mid
 proficiency: 1          # 1–5 ★
 first_seen: 2026-06-10
 last_reviewed: 2026-07-23

@@ -3,6 +3,8 @@ word: scorching
 phonetic: /ˈskɔːrtʃɪŋ/
 pos: adj
 zh: 灼熱的、酷熱的
+cefr: "B2"
+frequency: low
 proficiency: 1
 first_seen: 2026-07-01
 last_reviewed: 2026-07-01

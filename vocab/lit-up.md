@@ -3,6 +3,8 @@ word: lit up
 phonetic: /lɪt ʌp/
 pos: phr.v / adj
 zh: 點亮；（臉/眼）為之一亮、綻放喜悅；嗨翻；微醺
+cefr: "B2"
+frequency: low
 proficiency: 3
 first_seen: 2026-04-27
 last_reviewed: 2026-04-28

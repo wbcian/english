@@ -3,6 +3,8 @@ word: stroll
 phonetic: /stroʊl/
 pos: v. / n.
 zh: 悠閒地走、漫步（不是趕路的 walk）
+cefr: "B1"
+frequency: mid
 proficiency: 1
 first_seen: 2026-05-26
 last_reviewed: 2026-05-26

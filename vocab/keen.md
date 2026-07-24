@@ -3,6 +3,8 @@ word: keen
 phonetic: /kiːn/
 pos: adj
 zh: 熱衷的；敏銳的；強烈的
+cefr: "B2"
+frequency: mid
 proficiency: 2
 first_seen: 2026-04-29
 last_reviewed: 2026-04-29

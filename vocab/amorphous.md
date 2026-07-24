@@ -3,6 +3,8 @@ word: amorphous
 phonetic: /əˈmɔːrfəs/
 pos: adj.
 zh: 無定形的；模糊的；邊界不清的
+cefr: "C1"
+frequency: low
 proficiency: 1
 first_seen: 2026-05-25
 last_reviewed: 2026-05-25

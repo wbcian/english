@@ -3,6 +3,8 @@ word: going under
 phonetic: /ˈɡoʊɪŋ ˈʌndər/
 pos: v.phr.
 zh: （公司／船）倒掉；沉沒；（人）失去意識
+cefr: "B2"
+frequency: low
 proficiency: 2
 first_seen: 2026-04-30
 last_reviewed: 2026-04-30

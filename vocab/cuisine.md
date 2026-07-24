@@ -3,6 +3,8 @@ word: cuisine
 phonetic: /kwɪˈziːn/
 pos: n.
 zh: 菜系、料理風格
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-02
 last_reviewed: 2026-07-02

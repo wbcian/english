@@ -3,6 +3,8 @@ word: equinox
 phonetic: /ˈiːkwɪnɑːks/
 pos: n
 zh: 分點（春分／秋分，晝夜幾乎等長）
+cefr: "B2?"
+frequency: low
 proficiency: 1
 first_seen: 2026-07-01
 last_reviewed: 2026-07-01

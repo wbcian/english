@@ -3,6 +3,8 @@ word: partway
 phonetic: /ˈpɑːrtˌweɪ/
 pos: adv.
 zh: 走到一半、進行到一部分
+cefr: "B1?"
+frequency: low
 proficiency: 1
 first_seen: 2026-07-24
 last_reviewed: 2026-07-24

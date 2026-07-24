@@ -3,6 +3,8 @@ word: easy breezy
 phonetic: /ˈiːzi ˈbriːzi/
 pos: idiom (adj.phr.)
 zh: 輕鬆寫意；毫無壓力
+cefr: "C1?"
+frequency: low
 proficiency: 3
 first_seen: 2026-04-27
 last_reviewed: 2026-04-28

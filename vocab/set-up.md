@@ -3,6 +3,8 @@ word: set up
 phonetic: /sɛt ʌp/
 pos: phr.v
 zh: 為…鋪路；建立；安排；介紹對象；陷害
+cefr: "B1"
+frequency: high
 proficiency: 4
 first_seen: 2026-04-27
 last_reviewed: 2026-04-28

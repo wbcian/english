@@ -3,6 +3,8 @@ word: turnover
 phonetic: /ˈtɜːrnˌoʊvər/
 pos: n.
 zh: 人員流動率；離職率（財務語境則指營業額）
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-23
 last_reviewed: 2026-07-23

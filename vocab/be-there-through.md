@@ -3,6 +3,8 @@ word: be there through
 phonetic: /bi ðer θruː/
 pos: v.phr.
 zh: 全程都在、從頭到尾參與（並撐過）某段歷程
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-21
 last_reviewed: 2026-07-21

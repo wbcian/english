@@ -3,6 +3,8 @@ word: track down
 phonetic: /træk daʊn/
 pos: phr.v
 zh: 追查到；找出（費力尋找後找到）
+cefr: "B1"
+frequency: mid
 proficiency: 1          # 1–5 ★
 first_seen: 2026-06-01
 last_reviewed: 2026-06-01

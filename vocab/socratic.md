@@ -3,6 +3,8 @@ word: socratic
 phonetic: /səˈkrætɪk/
 pos: adj
 zh: 蘇格拉底式的（用一連串提問引導對方自己想通，而非直接給答案）
+cefr: "C1"
+frequency: low
 proficiency: 1
 first_seen: 2026-07-01
 last_reviewed: 2026-07-01

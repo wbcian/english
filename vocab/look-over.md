@@ -3,6 +3,8 @@ word: look something over
 phonetic: /lʊk ˈoʊvər/
 pos: phr.v
 zh: 仔細看過；端詳；檢視
+cefr: "B1"
+frequency: mid
 proficiency: 1
 first_seen: 2026-06-01
 last_reviewed: 2026-06-01

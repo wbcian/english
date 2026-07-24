@@ -3,6 +3,8 @@ word: end up
 phonetic: /ˌɛnd ˈʌp/
 pos: phr.v.
 zh: 結果變成、最後落得（某狀態／地點／做某事）
+cefr: "B1"
+frequency: high
 proficiency: 1
 first_seen: 2026-07-01
 last_reviewed: 2026-07-01

@@ -3,6 +3,8 @@ word: speak one's mind
 phonetic: /spiːk wʌnz maɪnd/
 pos: idiom
 zh: 直言不諱；說出真心話
+cefr: "B2"
+frequency: low
 proficiency: 1          # 1–5 ★
 first_seen: 2026-06-09
 last_reviewed: 2026-06-09

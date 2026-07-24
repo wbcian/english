@@ -3,6 +3,8 @@ word: debunk
 phonetic: /diːˈbʌŋk/
 pos: v
 zh: 揭穿、戳破（不實說法／迷思）
+cefr: "B2"
+frequency: low
 proficiency: 1          # 1–5 ★
 first_seen: 2026-06-01
 last_reviewed: 2026-06-01

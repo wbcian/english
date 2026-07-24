@@ -3,6 +3,8 @@ word: exhibit
 phonetic: /ɪɡˈzɪbɪt/
 pos: v/n
 zh: 展示、陳列；展現（特質）；（n.）展品、證物
+cefr: "B2"
+frequency: mid
 proficiency: 1          # 1–5 ★
 first_seen: 2026-06-01
 last_reviewed: 2026-06-01

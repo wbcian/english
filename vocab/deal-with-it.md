@@ -3,6 +3,8 @@ word: deal with it
 phonetic: /diːl wɪð ɪt/
 pos: phr.
 zh: 接受現實並處理；自己想辦法
+cefr: "B1"
+frequency: high
 proficiency: 1
 first_seen: 2026-06-23
 last_reviewed: 2026-06-23

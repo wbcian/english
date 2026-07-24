@@ -3,6 +3,8 @@ word: alpaca
 phonetic: /ælˈpækə/
 pos: n.
 zh: 羊駝
+cefr: "A2"
+frequency: low
 proficiency: 1
 first_seen: 2026-07-02
 last_reviewed: 2026-07-02

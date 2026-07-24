@@ -3,6 +3,8 @@ word: skim
 phonetic: /skɪm/
 pos: v.
 zh: 略讀、快速瀏覽；撇去（表面之物）
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-06-25
 last_reviewed: 2026-06-25

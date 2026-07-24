@@ -3,6 +3,8 @@ word: at-a-glance
 phonetic: /ət ə ɡlæns/
 pos: adj. (compound) / adv. phr.
 zh: 一眼可看的；瀏覽式的；快速概觀
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-05-26
 last_reviewed: 2026-05-26

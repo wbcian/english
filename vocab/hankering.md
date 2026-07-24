@@ -3,6 +3,8 @@ word: hankering
 phonetic: /ˈhæŋkərɪŋ/
 pos: n
 zh: 強烈的渴望；嘴饞
+cefr: "C1"
+frequency: low
 proficiency: 1
 first_seen: 2026-05-21
 last_reviewed: 2026-05-21

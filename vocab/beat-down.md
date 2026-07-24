@@ -3,6 +3,8 @@ word: beat down
 phonetic: /biːt daʊn/
 pos: phr.v
 zh: （陽光）強烈曝曬、無情地照下來
+cefr: "B2"
+frequency: low
 proficiency: 1
 first_seen: 2026-07-01
 last_reviewed: 2026-07-01

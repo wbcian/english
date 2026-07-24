@@ -3,6 +3,8 @@ word: play on words
 phonetic: /ˌpleɪ ɒn ˈwɜːrdz/
 pos: n.phr
 zh: 雙關語；玩文字遊戲
+cefr: "B2"
+frequency: low
 proficiency: 1
 first_seen: 2026-05-21
 last_reviewed: 2026-05-21

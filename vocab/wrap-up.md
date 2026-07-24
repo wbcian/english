@@ -3,6 +3,8 @@ word: wrap up
 phonetic: /ræp ʌp/
 pos: phr.v.
 zh: 收尾、結束（把事情做完收掉）；把⋯包起來
+cefr: "B1"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-21
 last_reviewed: 2026-07-21

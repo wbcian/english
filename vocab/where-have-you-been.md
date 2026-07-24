@@ -3,6 +3,8 @@ word: where have you been
 phonetic: /wɛr hæv juː bɪn/
 pos: idiom
 zh: 「你（怎麼現在才出現）？」——對埋沒的才華表驚訝
+cefr: "B2"
+frequency: low
 proficiency: 1
 first_seen: 2026-07-03
 last_reviewed: 2026-07-03

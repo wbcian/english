@@ -3,6 +3,8 @@ word: go through a rough patch
 phonetic: /ɡoʊ θruː ə rʌf pætʃ/
 pos: idiom
 zh: 經歷一段難熬期；過得不順
+cefr: "B2"
+frequency: low
 proficiency: 2
 first_seen: 2026-04-30
 last_reviewed: 2026-04-30

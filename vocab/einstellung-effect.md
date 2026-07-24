@@ -3,6 +3,8 @@ word: Einstellung effect
 phonetic: /ˈaɪnʃtɛlʊŋ ɪˌfɛkt/
 pos: noun
 zh: 定勢效應；思維定勢（被舊經驗綁住、看不到更好解法）
+cefr: "C1?"
+frequency: low
 proficiency: 1
 first_seen: 2026-06-28
 last_reviewed: 2026-06-28

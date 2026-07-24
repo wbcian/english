@@ -3,6 +3,8 @@ word: cruelly hot
 phonetic: /ˈkruːəli hɑːt/
 pos: phr
 zh: 酷熱、熱到殘忍
+cefr: "C1?"
+frequency: low
 proficiency: 1
 first_seen: 2026-07-01
 last_reviewed: 2026-07-01

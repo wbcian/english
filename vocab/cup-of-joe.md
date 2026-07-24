@@ -3,6 +3,8 @@ word: cup of Joe
 phonetic: /ˌkʌp əv ˈdʒoʊ/
 pos: n.phr
 zh: 一杯咖啡（俚語）
+cefr: "C1?"
+frequency: low
 proficiency: 1
 first_seen: 2026-05-21
 last_reviewed: 2026-05-21

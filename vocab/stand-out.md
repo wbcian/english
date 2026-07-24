@@ -3,6 +3,8 @@ word: stand out
 phonetic: /ˌstænd ˈaʊt/
 pos: phr.v.
 zh: 顯眼、突出、（特別）跳出來引人注意
+cefr: "B1"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-01
 last_reviewed: 2026-07-01

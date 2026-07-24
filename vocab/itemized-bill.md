@@ -3,6 +3,8 @@ word: itemized bill
 phonetic: /ˈaɪtəmaɪzd bɪl/
 pos: n. phr.
 zh: 逐項明細帳單
+cefr: "B2"
+frequency: low
 proficiency: 1
 first_seen: 2026-05-31
 last_reviewed: 2026-05-31

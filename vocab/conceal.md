@@ -3,6 +3,8 @@ word: conceal
 phonetic: /kənˈsiːl/
 pos: v.
 zh: 隱藏；隱瞞；遮掩
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-23
 last_reviewed: 2026-07-23

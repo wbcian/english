@@ -3,6 +3,8 @@ word: conceited
 phonetic: /kənˈsiːtɪd/ (口語常見 tap T → [kənˈsiːdɪd])
 pos: adj
 zh: 自負的；自視甚高的；臭屁的
+cefr: "B2"
+frequency: low
 proficiency: 1
 first_seen: 2026-05-23
 last_reviewed: 2026-05-23

@@ -3,6 +3,8 @@ word: time horizon
 phonetic: /taɪm həˈraɪ.zən/
 pos: n. phr.
 zh: 時間視野；規劃／決策考慮的時間長度
+cefr: "B2"
+frequency: low
 proficiency: 1
 first_seen: 2026-05-26
 last_reviewed: 2026-05-26

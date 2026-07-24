@@ -3,6 +3,8 @@ word: grill
 phonetic: /ɡrɪl/
 pos: v.
 zh: 嚴厲質問、連珠炮地問（口語）；用烤架烤（字面）
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-05-26
 last_reviewed: 2026-05-26

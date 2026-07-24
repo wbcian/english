@@ -3,6 +3,8 @@ word: summer fling
 phonetic: /ˈsʌmər flɪŋ/
 pos: n
 zh: 夏日短暫戀情（短而熱烈、不太認真）
+cefr: "B2"
+frequency: low
 proficiency: 1
 first_seen: 2026-07-01
 last_reviewed: 2026-07-01

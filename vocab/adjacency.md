@@ -3,6 +3,8 @@ word: adjacency
 phonetic: /əˈdʒeɪsənsi/
 pos: n.
 zh: 相鄰、鄰接（狀態或關係）
+cefr: "C1"
+frequency: low
 proficiency: 1
 first_seen: 2026-07-03
 last_reviewed: 2026-07-03

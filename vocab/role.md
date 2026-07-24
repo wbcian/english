@@ -3,6 +3,8 @@ word: role
 phonetic: /roʊl/
 pos: n.
 zh: 職位、職務；角色
+cefr: "B1"
+frequency: high
 proficiency: 1
 first_seen: 2026-07-23
 last_reviewed: 2026-07-23

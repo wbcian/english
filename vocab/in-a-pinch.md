@@ -3,6 +3,8 @@ word: in a pinch
 phonetic: /ɪn ə pɪntʃ/
 pos: idiom
 zh: 處境困難；緊要關頭；急用時
+cefr: "B2"
+frequency: low
 proficiency: 2
 first_seen: 2026-04-30
 last_reviewed: 2026-05-02

@@ -3,6 +3,8 @@ word: cast a wide net
 phonetic: /kæst ə waɪd nɛt/
 pos: idiom (v.phr.)
 zh: 廣撒網；廣泛尋找資源／人選
+cefr: "B2"
+frequency: low
 proficiency: 1
 first_seen: 2026-05-28
 last_reviewed: 2026-05-28

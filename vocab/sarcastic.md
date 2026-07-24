@@ -3,6 +3,8 @@ word: sarcastic
 phonetic: /sɑːrˈkæstɪk/
 pos: adj
 zh: 諷刺的；挖苦的；酸言酸語的
+cefr: "B2"
+frequency: mid
 proficiency: 1          # 1–5 ★
 first_seen: 2026-06-01
 last_reviewed: 2026-06-01

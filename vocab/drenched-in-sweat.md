@@ -3,6 +3,8 @@ word: drenched in sweat
 phonetic: /drentʃt ɪn swet/
 pos: phr
 zh: 汗濕透、全身濕透
+cefr: "B2"
+frequency: low
 proficiency: 1
 first_seen: 2026-07-01
 last_reviewed: 2026-07-01

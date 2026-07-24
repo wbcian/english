@@ -3,6 +3,8 @@ word: call off
 phonetic: /ˌkɔːl ˈɔːf/
 pos: phr.v.
 zh: 取消（已安排好的事）；叫…停手
+cefr: "B1"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-01
 last_reviewed: 2026-07-01

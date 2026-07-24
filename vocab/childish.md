@@ -3,6 +3,8 @@ word: childish
 phonetic: /ˈtʃaɪldɪʃ/
 pos: adj.
 zh: 幼稚的、孩子氣的（貶義）
+cefr: "A2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-02
 last_reviewed: 2026-07-02

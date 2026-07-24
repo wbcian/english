@@ -3,6 +3,8 @@ word: flow state
 phonetic: /floʊ steɪt/
 pos: n.phr.
 zh: 心流狀態、全神貫注忘我的狀態
+cefr: "B2"
+frequency: low
 proficiency: 1
 first_seen: 2026-07-03
 last_reviewed: 2026-07-03

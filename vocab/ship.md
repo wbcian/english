@@ -3,6 +3,8 @@ word: ship
 phonetic: /ʃɪp/
 pos: v.
 zh: （軟體業）出貨、把功能上線交付；（一般）運送、寄出
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-21
 last_reviewed: 2026-07-21

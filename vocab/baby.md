@@ -3,6 +3,8 @@ word: baby
 phonetic: /ˈbeɪbi/
 pos: n.
 zh: 沒用的傢伙、玻璃心／媽寶（口語貶義）
+cefr: "B1?"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-02
 last_reviewed: 2026-07-02

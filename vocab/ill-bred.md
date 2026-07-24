@@ -3,6 +3,8 @@ word: ill-bred
 phonetic: /ˌɪlˈbred/
 pos: adj
 zh: 沒家教的；沒教養的（侮辱、老派）
+cefr: "C2?"
+frequency: low
 proficiency: 1          # 1–5 ★
 first_seen: 2026-06-09
 last_reviewed: 2026-06-09

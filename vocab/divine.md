@@ -3,6 +3,8 @@ word: divine
 phonetic: /dɪˈvaɪn/
 pos: adj.
 zh: 美妙極了、棒透了（口語）；神聖的
+cefr: "C1"
+frequency: low
 proficiency: 1
 first_seen: 2026-06-25
 last_reviewed: 2026-06-25

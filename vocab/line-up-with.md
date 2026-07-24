@@ -3,6 +3,8 @@ word: line up with
 phonetic: /laɪn ʌp wɪð/
 pos: phr.v.
 zh: 與⋯吻合、對得上、一致
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-21
 last_reviewed: 2026-07-21

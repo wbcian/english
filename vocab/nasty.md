@@ -3,6 +3,8 @@ word: nasty
 phonetic: /ˈnæsti/
 pos: adj
 zh: 惡毒的；難聽的；糟糕的；噁心的
+cefr: "B1"
+frequency: mid
 proficiency: 1          # 1–5 ★
 first_seen: 2026-06-09
 last_reviewed: 2026-06-09

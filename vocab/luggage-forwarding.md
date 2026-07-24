@@ -3,6 +3,8 @@ word: luggage forwarding
 phonetic: /ˈlʌɡɪdʒ ˈfɔːwədɪŋ/
 pos: n. phr.
 zh: 行李宅配寄送（日本：takkyubin 宅急便）
+cefr: "B2"
+frequency: low
 proficiency: 1
 first_seen: 2026-05-31
 last_reviewed: 2026-05-31

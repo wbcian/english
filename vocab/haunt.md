@@ -3,6 +3,8 @@ word: haunt
 phonetic: /hɔːnt/
 pos: v / n
 zh: 縈繞、糾纏；（鬼）出沒；常去之地
+cefr: "B2"
+frequency: mid
 proficiency: 2
 first_seen: 2026-04-29
 last_reviewed: 2026-04-29

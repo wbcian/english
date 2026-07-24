@@ -3,6 +3,8 @@ word: humorous twist
 phonetic: /ˈhjuːmərəs twɪst/
 pos: n.phr.
 zh: 幽默的轉折；反差萌的橋段
+cefr: "B2"
+frequency: low
 proficiency: 1
 first_seen: 2026-04-30
 last_reviewed: 2026-05-02

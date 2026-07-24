@@ -3,6 +3,8 @@ word: fuse
 phonetic: /fjuːz/
 pos: n./v.
 zh: 保險絲；引信、導火線；（動詞）融合、熔合
+cefr: "B2"
+frequency: low
 proficiency: 1
 first_seen: 2026-07-02
 last_reviewed: 2026-07-02

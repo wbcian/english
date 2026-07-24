@@ -3,6 +3,8 @@ word: sketches
 phonetic: /ˈsketʃɪz/
 pos: n (pl.) / v (3rd-sg)
 zh: 素描；草圖；速寫；喜劇短劇
+cefr: "B1"
+frequency: mid
 proficiency: 2
 first_seen: 2026-04-29
 last_reviewed: 2026-04-29

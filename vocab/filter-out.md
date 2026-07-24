@@ -3,6 +3,8 @@ word: filter out
 phonetic: /ˈfɪltər aʊt/
 pos: phr.v.
 zh: 過濾掉；篩除
+cefr: "B1"
+frequency: mid
 proficiency: 1
 first_seen: 2026-05-29
 last_reviewed: 2026-05-29

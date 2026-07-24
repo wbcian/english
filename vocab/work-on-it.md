@@ -3,6 +3,8 @@ word: work on it
 phonetic: /wɜːrk ɑːn ɪt/
 pos: phr.v.
 zh: 處理、著手做；努力改善
+cefr: "B1"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-24
 last_reviewed: 2026-07-24

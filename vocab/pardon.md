@@ -3,6 +3,8 @@ word: pardon
 phonetic: /ˈpɑːrdn/
 pos: n./v./interj.
 zh: 原諒、寬恕；（法律）赦免；（口語）你說什麼？
+cefr: "B1"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-02
 last_reviewed: 2026-07-02

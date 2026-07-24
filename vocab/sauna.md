@@ -3,6 +3,8 @@ word: sauna
 phonetic: /ˈsɔːnə/ or /ˈsaʊnə/
 pos: n.
 zh: 三溫暖；烤箱（乾熱式）
+cefr: "A2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-06-11
 last_reviewed: 2026-06-11

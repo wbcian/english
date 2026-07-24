@@ -3,6 +3,8 @@ word: suspend
 phonetic: /səˈspend/
 pos: v.
 zh: 使停學／停職；暫停；懸掛
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-23
 last_reviewed: 2026-07-23

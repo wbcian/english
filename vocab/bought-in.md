@@ -3,6 +3,8 @@ word: bought in
 phonetic: /bɔːt ɪn/
 pos: adj. (idiom) / phr. v.
 zh: 買單了；被說服、認同並承諾投入
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-05-26
 last_reviewed: 2026-05-26

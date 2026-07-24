@@ -3,6 +3,8 @@ word: dogfood
 phonetic: /ˈdɔːɡfuːd/
 pos: v. (also n.)
 zh: 內部試吃；公司內部先用自家產品
+cefr: "B2?"
+frequency: low
 proficiency: 1
 first_seen: 2026-05-26
 last_reviewed: 2026-05-26

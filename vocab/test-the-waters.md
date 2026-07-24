@@ -3,6 +3,8 @@ word: test the waters
 phonetic: /tɛst ðə ˈwɔːtərz/
 pos: idiom
 zh: 試水溫；先探探情況（在全力投入前小規模試探反應）
+cefr: "B2"
+frequency: mid
 proficiency: 1          # 1–5 ★
 first_seen: 2026-06-01
 last_reviewed: 2026-06-01

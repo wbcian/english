@@ -3,6 +3,8 @@ word: just so you know
 phonetic: /dʒʌst soʊ juː noʊ/
 pos: phr.
 zh: 先跟你說一下；只是讓你知道（預防性 FYI）
+cefr: "B1"
+frequency: mid
 proficiency: 1
 first_seen: 2026-06-11
 last_reviewed: 2026-06-11

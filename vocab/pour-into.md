@@ -3,6 +3,8 @@ word: pour (one's) ... into
 phonetic: /pɔːr/
 pos: v (idiomatic)
 zh: 傾注（心血、精力、情感）於...
+cefr: "B2"
+frequency: mid
 proficiency: 2
 first_seen: 2026-04-29
 last_reviewed: 2026-04-29

@@ -3,6 +3,8 @@ word: solid
 phonetic: /ˈsɑːlɪd/
 pos: adj.
 zh: 穩固可靠的、沒問題的；固體的
+cefr: "B1"
+frequency: high
 proficiency: 1
 first_seen: 2026-07-24
 last_reviewed: 2026-07-24

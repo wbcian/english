@@ -3,6 +3,8 @@ word: stall
 phonetic: /stɔːl/
 pos: v.
 zh: 停滯不前；卡住不動；（引擎）熄火拋錨
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-23
 last_reviewed: 2026-07-23

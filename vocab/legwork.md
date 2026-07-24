@@ -3,6 +3,8 @@ word: legwork
 phonetic: /ˈlɛɡwɜːrk/
 pos: n. (uncountable)
 zh: 跑腿；事前準備功夫；耗體力的基礎工作
+cefr: "B2"
+frequency: low
 proficiency: 1
 first_seen: 2026-05-28
 last_reviewed: 2026-05-28

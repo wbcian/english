@@ -3,6 +3,8 @@ word: i beg your pardon
 phonetic: /aɪ ˈbɛɡ jɔːr ˈpɑːrdn/
 pos: phrase
 zh: 請再說一次（正式）／你說什麼？（帶慍怒）／抱歉（道歉）
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-02
 last_reviewed: 2026-07-02

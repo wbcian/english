@@ -3,6 +3,8 @@ word: metallic
 phonetic: /məˈtælɪk/
 pos: adj.
 zh: 金屬的、金屬質感的；（味道／聲音）金屬味的、鏗鏘的
+cefr: "B1"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-02
 last_reviewed: 2026-07-02

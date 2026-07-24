@@ -3,6 +3,8 @@ word: I guess so
 phonetic: /aɪ ˈɡes soʊ/
 pos: phr
 zh: 大概吧；應該吧（不確定／興趣缺缺）
+cefr: "A2"
+frequency: high
 proficiency: 1
 first_seen: 2026-05-21
 last_reviewed: 2026-05-21

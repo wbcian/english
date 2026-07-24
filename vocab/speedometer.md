@@ -3,6 +3,8 @@ word: speedometer
 phonetic: /spiˈdɑːmɪtər/
 pos: n.
 zh: 時速表；速度表（車輛儀表）
+cefr: "B1"
+frequency: low
 proficiency: 1          # 1–5 ★
 first_seen: 2026-06-23
 last_reviewed: 2026-06-23

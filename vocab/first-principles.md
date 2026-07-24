@@ -3,6 +3,8 @@ word: first principles
 phonetic: /fɜːst ˈprɪnsəpəlz/
 pos: n. phr.
 zh: 第一性原理（回到本質推理，不靠類比）
+cefr: "B2?"
+frequency: low
 proficiency: 1
 first_seen: 2026-05-25
 last_reviewed: 2026-05-25

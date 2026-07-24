@@ -3,6 +3,8 @@ word: without further ado
 phonetic: /wɪˌðaʊt ˌfɜːrðər əˈduː/
 pos: idiom
 zh: 廢話不多說、閒話休提、不再耽擱
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-01
 last_reviewed: 2026-07-01

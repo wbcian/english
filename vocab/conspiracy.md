@@ -3,6 +3,8 @@ word: conspiracy
 phonetic: /kənˈspɪrəsi/
 pos: n
 zh: 陰謀；共謀
+cefr: "B2"
+frequency: mid
 proficiency: 1          # 1–5 ★
 first_seen: 2026-06-01
 last_reviewed: 2026-06-01

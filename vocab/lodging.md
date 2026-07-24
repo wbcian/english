@@ -3,6 +3,8 @@ word: lodging
 phonetic: /ˈlɒdʒɪŋ/
 pos: n.
 zh: 住宿；臨時住所
+cefr: "B2"
+frequency: low
 proficiency: 1
 first_seen: 2026-06-11
 last_reviewed: 2026-06-11

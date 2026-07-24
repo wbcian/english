@@ -3,6 +3,8 @@ word: mastery
 phonetic: /ˈmæstəri/
 pos: n
 zh: 精通、嫻熟；掌控、駕馭
+cefr: "B2"
+frequency: low
 proficiency: 1
 first_seen: 2026-06-30
 last_reviewed: 2026-06-30

@@ -3,6 +3,8 @@ word: content
 phonetic: /ˈkɑːntɛnt/
 pos: n.
 zh: 內容素材
+cefr: "B1"
+frequency: high
 proficiency: 1
 first_seen: 2026-07-14
 last_reviewed: 2026-07-14

@@ -3,6 +3,8 @@ word: drip coffee
 phonetic: /drɪp ˈkɔːfi/
 pos: n.phr.
 zh: 滴濾咖啡
+cefr: "A2?"
+frequency: mid
 proficiency: 1
 first_seen: 2026-06-23
 last_reviewed: 2026-06-23

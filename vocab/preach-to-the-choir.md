@@ -3,6 +3,8 @@ word: preach to the choir
 phonetic: /ˌpriːtʃ tə ðə ˈkwaɪər/
 pos: phrase
 zh: 對唱詩班傳教＝向本來就同意你的人費口舌
+cefr: "C1?"
+frequency: low
 proficiency: 1
 first_seen: 2026-07-06
 last_reviewed: 2026-07-06

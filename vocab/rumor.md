@@ -3,6 +3,8 @@ word: rumor
 phonetic: /ˈruːmər/
 pos: n./v.
 zh: 謠言；謠傳
+cefr: "B1"
+frequency: mid
 proficiency: 1          # 1–5 ★
 first_seen: 2026-06-09
 last_reviewed: 2026-06-09

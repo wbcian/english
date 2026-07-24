@@ -3,6 +3,8 @@ word: pitch
 phonetic: /pɪtʃ/
 pos: v / n
 zh: 推銷（點子／提案）；提案；投球
+cefr: "B2"
+frequency: mid
 proficiency: 4
 first_seen: 2026-04-27
 last_reviewed: 2026-04-28

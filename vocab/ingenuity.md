@@ -3,6 +3,8 @@ word: ingenuity
 phonetic: /ˌɪndʒəˈnuːəti/
 pos: n.
 zh: 創造力、巧思、機智（解決問題的聰明才智）
+cefr: "C1?"
+frequency: low
 proficiency: 1
 first_seen: 2026-07-02
 last_reviewed: 2026-07-02

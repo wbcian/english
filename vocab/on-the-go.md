@@ -3,6 +3,8 @@ word: on the go
 phonetic: /ɑːn ðə ɡoʊ/
 pos: idiom / adv. phr.
 zh: 移動中；在路上；忙碌奔波中
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-05-26
 last_reviewed: 2026-05-26

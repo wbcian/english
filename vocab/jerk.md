@@ -3,6 +3,8 @@ word: jerk
 phonetic: /dʒɜːrk/
 pos: n./v.
 zh: 混蛋、討厭鬼；猛拉、抽動
+cefr: "B1"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-02
 last_reviewed: 2026-07-02

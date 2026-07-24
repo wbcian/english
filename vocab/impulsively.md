@@ -3,6 +3,8 @@ word: impulsively
 phonetic: /ɪmˈpʌlsɪvli/
 pos: adv.
 zh: 衝動地；不加思索地；一時興起地
+cefr: "B2"
+frequency: low
 proficiency: 1
 first_seen: 2026-07-23
 last_reviewed: 2026-07-23

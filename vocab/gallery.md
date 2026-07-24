@@ -3,6 +3,8 @@ word: gallery
 phonetic: /ˈɡæləri/
 pos: n
 zh: 畫廊；藝廊；觀眾席
+cefr: "B1"
+frequency: mid
 proficiency: 2
 first_seen: 2026-04-29
 last_reviewed: 2026-04-29

@@ -3,6 +3,8 @@ word: push back
 phonetic: /ˌpʊʃ ˈbæk/
 pos: phr.v.
 zh: （把…）延期、延後；（名詞 pushback）反對、抵制
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-01
 last_reviewed: 2026-07-01

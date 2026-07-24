@@ -3,6 +3,8 @@ word: back in the day
 phonetic: /bæk ɪn ðə deɪ/
 pos: idiom
 zh: 以前那個年代；當年
+cefr: "B2"
+frequency: mid
 proficiency: 1          # 1–5 ★
 first_seen: 2026-06-10
 last_reviewed: 2026-06-10

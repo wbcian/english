@@ -3,6 +3,8 @@ word: has nothing to do with
 phonetic: /hæz ˈnʌθɪŋ tə ˈduː wɪð/
 pos: phr.
 zh: 跟…一點關係都沒有
+cefr: "B1"
+frequency: high
 proficiency: 1
 first_seen: 2026-05-23
 last_reviewed: 2026-05-23

@@ -3,6 +3,8 @@ word: man
 phonetic: /mæn/
 pos: v.
 zh: 顧守；操作；派人駐守
+cefr: "B2"
+frequency: low
 proficiency: 1
 first_seen: 2026-06-23
 last_reviewed: 2026-06-23

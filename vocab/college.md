@@ -3,6 +3,8 @@ word: college
 phonetic: /ˈkɑːlɪdʒ/
 pos: n.
 zh: 大學／學院（美式常泛指大學階段）
+cefr: "A2"
+frequency: high
 proficiency: 1
 first_seen: 2026-07-02
 last_reviewed: 2026-07-02

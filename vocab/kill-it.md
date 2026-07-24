@@ -3,6 +3,8 @@ word: kill it
 phonetic: /kɪl ɪt/
 pos: phr.v.
 zh: 表現得超好、大成功（誇獎用語）
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-03
 last_reviewed: 2026-07-03

@@ -3,6 +3,8 @@ word: figure it out
 phonetic: /ˈfɪɡjər ɪt aʊt/
 pos: phr.
 zh: 自己想辦法弄懂；搞清楚
+cefr: "B1"
+frequency: high
 proficiency: 1
 first_seen: 2026-06-23
 last_reviewed: 2026-06-23

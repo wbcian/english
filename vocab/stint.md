@@ -3,6 +3,8 @@ word: stint
 phonetic: /stɪnt/
 pos: n. / v.
 zh: （任職／工作的）一段期間；任期
+cefr: "B2?"
+frequency: low
 proficiency: 1
 first_seen: 2026-05-28
 last_reviewed: 2026-05-28

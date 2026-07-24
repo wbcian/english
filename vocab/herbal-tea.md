@@ -3,6 +3,8 @@ word: herbal tea
 phonetic: "美 /ˈɝːbəl tiː/ · 英 /ˈhɜːbəl tiː/"
 pos: n.phr.
 zh: 花草茶；草本茶
+cefr: "B1?"
+frequency: mid
 proficiency: 1
 first_seen: 2026-05-23
 last_reviewed: 2026-05-23

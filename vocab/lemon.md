@@ -3,6 +3,8 @@ word: lemon
 phonetic: /ˈlɛmən/
 pos: n.
 zh: 檸檬；（口語）瑕疵品、故障貨（尤指爛車）
+cefr: "B2"
+frequency: low
 proficiency: 1
 first_seen: 2026-07-03
 last_reviewed: 2026-07-03

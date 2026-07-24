@@ -3,6 +3,8 @@ word: quirk
 phonetic: /kwɜːrk/
 pos: n
 zh: 怪癖；古怪的小特點；（命運的）巧妙安排
+cefr: "B2"
+frequency: low
 proficiency: 1          # 1–5 ★
 first_seen: 2026-06-01
 last_reviewed: 2026-06-01

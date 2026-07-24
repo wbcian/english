@@ -3,6 +3,8 @@ word: erupt
 phonetic: /ɪˈrʌpt/
 pos: v.
 zh: （情緒／衝突）爆發；（火山）噴發
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-23
 last_reviewed: 2026-07-23

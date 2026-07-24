@@ -3,6 +3,8 @@ word: pick up
 phonetic: /pɪk ʌp/
 pos: phr.v.
 zh: 接（人／物）；（不刻意地）學會；搭訕；接電話
+cefr: "B1"
+frequency: high
 proficiency: 1
 first_seen: 2026-07-03
 last_reviewed: 2026-07-03

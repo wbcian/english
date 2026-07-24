@@ -3,6 +3,8 @@ word: prosthetic
 phonetic: /prɑːsˈθɛtɪk/
 pos: adj/n
 zh: 義肢的；（n.）義肢、人工裝置
+cefr: "B2?"
+frequency: low
 proficiency: 1          # 1–5 ★
 first_seen: 2026-06-01
 last_reviewed: 2026-06-01

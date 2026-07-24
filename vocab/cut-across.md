@@ -3,6 +3,8 @@ word: cut across
 phonetic: /kʌt əˈkrɔːs/
 pos: phr. v.
 zh: 橫跨（組織／類別／邊界）；不受限於某個區隔
+cefr: "B2?"
+frequency: low
 proficiency: 1
 first_seen: 2026-05-26
 last_reviewed: 2026-05-26

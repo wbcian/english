@@ -3,6 +3,8 @@ word: rooted
 phonetic: /ˈruːtɪd/
 pos: adj.
 zh: 有歸屬感的；扎根的；根深蒂固的
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-23
 last_reviewed: 2026-07-23

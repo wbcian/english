@@ -3,6 +3,8 @@ word: parasol
 phonetic: /ˈpærəsɔːl/
 pos: n
 zh: 陽傘、遮陽傘
+cefr: "B1?"
+frequency: low
 proficiency: 1
 first_seen: 2026-07-01
 last_reviewed: 2026-07-01

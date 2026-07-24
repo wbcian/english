@@ -3,6 +3,8 @@ word: pause
 phonetic: /pɔːz/
 pos: v / n
 zh: 停頓；暫停；間隔
+cefr: "A2"
+frequency: high
 proficiency: 2
 first_seen: 2026-04-29
 last_reviewed: 2026-04-29

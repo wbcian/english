@@ -3,6 +3,8 @@ word: brought up
 phonetic: /brɔːt ʌp/
 pos: phr.v (past of "bring up")
 zh: 提起（話題）；撫養長大；嘔吐（委婉）
+cefr: "B1"
+frequency: mid
 proficiency: 2
 first_seen: 2026-04-29
 last_reviewed: 2026-05-02

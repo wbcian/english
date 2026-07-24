@@ -3,6 +3,8 @@ word: research preview
 phonetic: /ˈriː.sɝtʃ ˈpriː.vjuː/
 pos: n. phr.
 zh: 研究預覽版（產品早期 branding 策略）
+cefr: "B2"
+frequency: low
 proficiency: 1
 first_seen: 2026-05-26
 last_reviewed: 2026-05-26

@@ -3,6 +3,8 @@ word: sunburned
 phonetic: /ˈsʌnbɜːrnd/
 pos: adj
 zh: 曬傷的
+cefr: "A2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-01
 last_reviewed: 2026-07-01

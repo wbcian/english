@@ -3,6 +3,8 @@ word: synthesize
 phonetic: /ˈsɪn.θə.saɪz/
 pos: v.
 zh: 綜合；統整（多個來源 → 一個輸出）；合成
+cefr: "C1?"
+frequency: low
 proficiency: 1
 first_seen: 2026-05-26
 last_reviewed: 2026-05-26

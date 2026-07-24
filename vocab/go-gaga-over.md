@@ -3,6 +3,8 @@ word: go gaga over someone
 phonetic: /ˌɡoʊ ˈɡɑːɡɑː/
 pos: phrase
 zh: 為某人／某物瘋狂、神魂顛倒
+cefr: "B2?"
+frequency: low
 proficiency: 1
 first_seen: 2026-07-06
 last_reviewed: 2026-07-06

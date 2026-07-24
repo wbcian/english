@@ -3,6 +3,8 @@ word: mirage
 phonetic: /məˈrɑːʒ/
 pos: n
 zh: 海市蜃樓；（比喻）看得到卻抓不到的幻象
+cefr: "B2"
+frequency: low
 proficiency: 1
 first_seen: 2026-07-01
 last_reviewed: 2026-07-01

@@ -3,6 +3,8 @@ word: like (discourse marker)
 phonetic: /laɪk/
 pos: discourse marker
 zh: 就是…／像是…／我就：（口語三種用法）
+cefr: "B2?"
+frequency: high
 proficiency: 1
 first_seen: 2026-05-23
 last_reviewed: 2026-05-23

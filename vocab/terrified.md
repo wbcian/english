@@ -3,6 +3,8 @@ word: terrified
 phonetic: /ˈterɪfaɪd/
 pos: adj.
 zh: 嚇壞的；非常害怕的
+cefr: "B1"
+frequency: mid
 proficiency: 1
 first_seen: 2026-04-30
 last_reviewed: 2026-04-30

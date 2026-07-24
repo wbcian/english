@@ -3,6 +3,8 @@ word: canonical
 phonetic: /kəˈnɑːnɪkəl/
 pos: adj.
 zh: 公認標準的、最具代表性的；（宗教）符合教規的、正典的
+cefr: "C1"
+frequency: low
 proficiency: 1
 first_seen: 2026-07-03
 last_reviewed: 2026-07-24

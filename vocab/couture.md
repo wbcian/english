@@ -3,6 +3,8 @@ word: couture
 phonetic: /kuˈtʊr/
 pos: n.
 zh: 高級訂製服（時裝）
+cefr: "C1"
+frequency: low
 proficiency: 1
 first_seen: 2026-06-25
 last_reviewed: 2026-06-25

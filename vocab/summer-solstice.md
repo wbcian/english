@@ -3,6 +3,8 @@ word: summer solstice
 phonetic: /ˈsʌmər ˈsɑːlstɪs/
 pos: n
 zh: 夏至（一年中最長的白天）
+cefr: "B2"
+frequency: low
 proficiency: 1
 first_seen: 2026-07-01
 last_reviewed: 2026-07-01

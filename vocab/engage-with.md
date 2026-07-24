@@ -3,6 +3,8 @@ word: engage with
 phonetic: /ɪnˈɡeɪdʒ wɪð/
 pos: phr.v
 zh: 投入、認真接觸（內容／教材／人）
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-06-01
 last_reviewed: 2026-06-01

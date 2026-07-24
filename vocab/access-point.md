@@ -3,6 +3,8 @@ word: access point
 phonetic: /ˈækses pɔɪnt/
 pos: n.
 zh: 無線基地台（AP）；（廣義）接入點、入口
+cefr: "B1?"
+frequency: low
 proficiency: 1
 first_seen: 2026-07-21
 last_reviewed: 2026-07-21

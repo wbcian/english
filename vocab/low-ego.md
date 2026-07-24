@@ -3,6 +3,8 @@ word: low ego
 phonetic: /loʊ ˈiːɡoʊ/
 pos: adj. phr.
 zh: 自我意識低；不擺架子；不在意 title／面子
+cefr: "B2"
+frequency: low
 proficiency: 1
 first_seen: 2026-05-25
 last_reviewed: 2026-05-25

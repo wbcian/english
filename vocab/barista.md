@@ -3,6 +3,8 @@ word: barista
 phonetic: /bəˈriːstə/
 pos: n
 zh: 咖啡師
+cefr: "A2?"
+frequency: mid
 proficiency: 1
 first_seen: 2026-05-23
 last_reviewed: 2026-05-23

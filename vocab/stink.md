@@ -3,6 +3,8 @@ word: stink
 phonetic: /stɪŋk/
 pos: v./n.
 zh: 發臭；（口語）爛透了；醜聞、騷動
+cefr: "B1"
+frequency: mid
 proficiency: 2
 first_seen: 2026-04-30
 last_reviewed: 2026-04-30

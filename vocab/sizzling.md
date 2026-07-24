@@ -3,6 +3,8 @@ word: sizzling
 phonetic: /ˈsɪzlɪŋ/
 pos: adj
 zh: 熱到滋滋作響、快被烤焦的
+cefr: "B2?"
+frequency: low
 proficiency: 1
 first_seen: 2026-07-01
 last_reviewed: 2026-07-01

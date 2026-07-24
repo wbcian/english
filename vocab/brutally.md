@@ -3,6 +3,8 @@ word: brutally
 phonetic: /ˈbruːtəli/
 pos: adv.
 zh: 殘酷地、毫不留情地（強化「狠勁」的副詞）
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-05-26
 last_reviewed: 2026-05-26

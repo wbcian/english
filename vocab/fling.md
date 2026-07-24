@@ -3,6 +3,8 @@ word: fling
 phonetic: /flɪŋ/
 pos: v./n.
 zh: 猛丟；甩；短暫戀情
+cefr: "B2"
+frequency: low
 proficiency: 1
 first_seen: 2026-06-23
 last_reviewed: 2026-06-23

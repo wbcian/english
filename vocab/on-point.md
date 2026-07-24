@@ -3,6 +3,8 @@ word: on point
 phonetic: /ɒn ˈpɔɪnt/
 pos: idiom
 zh: 完美無瑕；精準到位；恰到好處（口語）
+cefr: "B2?"
+frequency: mid
 proficiency: 1          # 1–5 ★
 first_seen: 2026-06-01
 last_reviewed: 2026-06-01

@@ -3,6 +3,8 @@ word: merchant
 phonetic: /ˈmɜːrtʃənt/
 pos: n.
 zh: 商人、貿易商
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-14
 last_reviewed: 2026-07-14

@@ -3,6 +3,8 @@ word: incorrigible
 phonetic: /ɪnˈkɔːrɪdʒəbl/
 pos: adj
 zh: 無可救藥的；屢勸不改的；改不了的
+cefr: "C2"
+frequency: low
 proficiency: 3
 first_seen: 2026-04-29
 last_reviewed: 2026-04-30

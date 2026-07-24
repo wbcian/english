@@ -3,6 +3,8 @@ word: running through one's head
 phonetic: /ˈrʌnɪŋ θruː wʌnz hed/
 pos: idiom
 zh: （想法 / 旋律）一直在腦中重複；揮之不去
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-05-23
 last_reviewed: 2026-05-23

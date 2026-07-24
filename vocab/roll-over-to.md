@@ -3,6 +3,8 @@ word: roll over to
 phonetic: /roʊl ˈoʊvər tə/
 pos: phr.v.
 zh: （自動）轉到、續轉、滾存到（下一個狀態）
+cefr: "B2"
+frequency: low
 proficiency: 1
 first_seen: 2026-06-25
 last_reviewed: 2026-06-25

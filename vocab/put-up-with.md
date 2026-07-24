@@ -3,6 +3,8 @@ word: put up with
 phonetic: /ˌpʊt ˈʌp wɪð/
 pos: phr.v.
 zh: 忍受、容忍（討厭的人或事）
+cefr: "B1"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-01
 last_reviewed: 2026-07-01

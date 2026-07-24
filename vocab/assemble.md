@@ -3,6 +3,8 @@ word: assemble
 phonetic: /əˈsɛmbl/
 pos: v
 zh: 組裝、拼裝；集合、聚集
+cefr: "B2"
+frequency: mid
 proficiency: 1          # 1–5 ★
 first_seen: 2026-06-01
 last_reviewed: 2026-06-01

@@ -3,6 +3,8 @@ word: colleague
 phonetic: /ˈkɑːliːɡ/
 pos: n.
 zh: 同事（較正式、同行、同領域的人）
+cefr: "B1"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-02
 last_reviewed: 2026-07-02

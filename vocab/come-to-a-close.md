@@ -3,6 +3,8 @@ word: come to a close
 phonetic: /kʌm tə ə kloʊs/
 pos: v.phr.
 zh: 告一段落、劃下句點、結束
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-21
 last_reviewed: 2026-07-21

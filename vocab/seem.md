@@ -3,6 +3,8 @@ word: seem
 phonetic: /siːm/
 pos: v.
 zh: 似乎、好像、看起來（是）
+cefr: "A2"
+frequency: high
 proficiency: 1
 first_seen: 2026-07-02
 last_reviewed: 2026-07-02

@@ -3,6 +3,8 @@ word: opinionated
 phonetic: /əˈpɪnjəneɪtɪd/
 pos: adj.
 zh: 有強烈意見的；有定見的
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-05-29
 last_reviewed: 2026-05-29

@@ -3,6 +3,8 @@ word: eager
 phonetic: /ˈiːɡər/
 pos: adj
 zh: 渴望的；急切的；迫不及待的
+cefr: "B2"
+frequency: mid
 proficiency: 2
 first_seen: 2026-04-29
 last_reviewed: 2026-04-29

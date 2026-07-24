@@ -3,6 +3,8 @@ word: coworker
 phonetic: /ˈkoʊwɜːrkər/
 pos: n.
 zh: 同事（口語、平行同層級）
+cefr: "A2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-02
 last_reviewed: 2026-07-02

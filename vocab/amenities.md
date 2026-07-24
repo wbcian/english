@@ -3,6 +3,8 @@ word: amenities
 phonetic: /əˈmenətiz/
 pos: n. (pl.)
 zh: 備品；設施
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-05-31
 last_reviewed: 2026-06-11

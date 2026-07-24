@@ -3,6 +3,8 @@ word: product taste
 phonetic: /ˈprɒdʌkt teɪst/
 pos: n. phr.
 zh: 產品品味；對產品好壞的直覺判斷力
+cefr: "B2?"
+frequency: low
 proficiency: 1
 first_seen: 2026-05-25
 last_reviewed: 2026-05-25

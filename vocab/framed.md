@@ -3,6 +3,8 @@ word: framed
 phonetic: /freɪmd/
 pos: v (past) / adj
 zh: 被陷害；被裝框；被設計
+cefr: "B2"
+frequency: mid
 proficiency: 2
 first_seen: 2026-04-29
 last_reviewed: 2026-04-29

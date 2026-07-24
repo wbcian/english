@@ -3,6 +3,8 @@ word: steam room
 phonetic: /stiːm ruːm/
 pos: n.
 zh: 蒸氣室；蒸氣浴
+cefr: "A2"
+frequency: low
 proficiency: 1
 first_seen: 2026-06-11
 last_reviewed: 2026-06-11

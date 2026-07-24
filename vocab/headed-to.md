@@ -3,6 +3,8 @@ word: headed to
 phonetic: /ˈhedɪd tuː/
 pos: phr (v + prep)
 zh: 前往；朝...而去；正要去
+cefr: "B1"
+frequency: mid
 proficiency: 2
 first_seen: 2026-04-29
 last_reviewed: 2026-04-29

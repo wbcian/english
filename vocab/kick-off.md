@@ -3,6 +3,8 @@ word: kick off
 phonetic: /kɪk ɔːf/
 pos: phr. v. (also n. `kick-off`)
 zh: 啟動（任務、專案、會議）；開球
+cefr: "B1"
+frequency: high
 proficiency: 1
 first_seen: 2026-05-26
 last_reviewed: 2026-05-26

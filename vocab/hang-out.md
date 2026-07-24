@@ -3,6 +3,8 @@ word: hang out
 phonetic: /ˌhæŋ ˈaʊt/
 pos: phr.v.
 zh: （和某人）閒晃、消磨時間、廝混
+cefr: "A2"
+frequency: high
 proficiency: 1
 first_seen: 2026-07-01
 last_reviewed: 2026-07-01

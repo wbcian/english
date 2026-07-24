@@ -3,6 +3,8 @@ word: be into someone
 phonetic: /biː ˈɪntuː ˈsʌmwʌn/
 pos: phrase
 zh: 很喜歡、很迷某人（比 interested 更熱烈、更口語）
+cefr: "B1"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-03
 last_reviewed: 2026-07-03

@@ -3,6 +3,8 @@ word: be interested in someone
 phonetic: /biː ˈɪntrəstɪd ɪn ˈsʌmwʌn/
 pos: phrase
 zh: 對某人有意思、感興趣（曖昧初期較含蓄的說法）
+cefr: "B1"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-03
 last_reviewed: 2026-07-03

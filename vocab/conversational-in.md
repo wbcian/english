@@ -3,6 +3,8 @@ word: conversational in
 phonetic: /ˌkɑːnvərˈseɪʃənəl ɪn/
 pos: adj.phr.
 zh: （某語言）能日常對話的程度
+cefr: "B2"
+frequency: low
 proficiency: 1
 first_seen: 2026-07-03
 last_reviewed: 2026-07-03

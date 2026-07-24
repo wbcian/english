@@ -3,6 +3,8 @@ word: top of mind
 phonetic: /tɑːp əv maɪnd/
 pos: idiom / adj. phr.
 zh: 心中最在意的；正在想的；首要 priority
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-05-26
 last_reviewed: 2026-05-26

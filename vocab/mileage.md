@@ -3,6 +3,8 @@ word: mileage
 phonetic: /ˈmaɪlɪdʒ/
 pos: n.
 zh: 里程數；（引申）效益、好處、利用價值
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-02
 last_reviewed: 2026-07-02

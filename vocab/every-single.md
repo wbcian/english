@@ -3,6 +3,8 @@ word: every single
 phonetic: /ˈevri ˈsɪŋɡəl/
 pos: det.phr.
 zh: 每一個（零例外、加強版）
+cefr: "A2"
+frequency: high
 proficiency: 1
 first_seen: 2026-05-23
 last_reviewed: 2026-05-23

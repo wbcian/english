@@ -3,6 +3,8 @@ word: that's on you
 phonetic: /ðæts ɒn juː/
 pos: phr.
 zh: 那是你的責任；你自找的；你的鍋
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-05-23
 last_reviewed: 2026-05-23

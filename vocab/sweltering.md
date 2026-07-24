@@ -3,6 +3,8 @@ word: sweltering
 phonetic: /ˈsweltərɪŋ/
 pos: adj
 zh: 悶熱難受的（很熱＋不舒服）
+cefr: "C1?"
+frequency: low
 proficiency: 1
 first_seen: 2026-07-01
 last_reviewed: 2026-07-01

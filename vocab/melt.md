@@ -3,6 +3,8 @@ word: melt
 phonetic: /melt/
 pos: v
 zh: 融化（物理／熱到融化／心融化，一字三用）
+cefr: "A2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-01
 last_reviewed: 2026-07-01

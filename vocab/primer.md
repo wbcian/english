@@ -3,6 +3,8 @@ word: primer
 phonetic: /ˈprɪmər/
 pos: n
 zh: 入門書／入門指南；底漆；底火／雷管
+cefr: "B2?"
+frequency: low
 proficiency: 1
 first_seen: 2026-06-29
 last_reviewed: 2026-06-29

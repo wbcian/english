@@ -3,6 +3,8 @@ word: emerging
 phonetic: /ɪˈmɜːrdʒɪŋ/
 pos: adj.
 zh: 正在浮現的；新興的
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-05-26
 last_reviewed: 2026-05-26

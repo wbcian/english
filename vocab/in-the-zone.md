@@ -3,6 +3,8 @@ word: be in the zone
 phonetic: /biː ɪn ðə zoʊn/
 pos: phrase
 zh: 進入超專注狀態、心流（口語版）
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-03
 last_reviewed: 2026-07-03

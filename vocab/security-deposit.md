@@ -3,6 +3,8 @@ word: security deposit
 phonetic: /sɪˈkjʊərəti dɪˈpɒzɪt/
 pos: n. phr.
 zh: 保證金；押金
+cefr: "B1"
+frequency: mid
 proficiency: 1
 first_seen: 2026-05-31
 last_reviewed: 2026-05-31

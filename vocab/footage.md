@@ -3,6 +3,8 @@ word: footage
 phonetic: /ˈfʊtɪdʒ/
 pos: n.
 zh: 影片素材
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-14
 last_reviewed: 2026-07-14

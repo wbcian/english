@@ -3,6 +3,8 @@ word: crook
 phonetic: /krʊk/
 pos: n.
 zh: 騙子、罪犯；彎曲處、彎鉤
+cefr: "B2"
+frequency: low
 proficiency: 1
 first_seen: 2026-07-02
 last_reviewed: 2026-07-02

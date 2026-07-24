@@ -3,6 +3,8 @@ word: teach
 phonetic: /tiːtʃ/
 pos: n.
 zh: （稱呼用俚語）老師（像叫醫生 Doc）；短、非正式
+cefr: "C1?"
+frequency: low
 proficiency: 1
 first_seen: 2026-07-03
 last_reviewed: 2026-07-03

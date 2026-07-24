@@ -3,6 +3,8 @@ word: accommodation tax
 phonetic: /əˌkɒməˈdeɪʃn tæks/
 pos: n. phr.
 zh: 住宿税（日本：宿泊税）
+cefr: "B2"
+frequency: low
 proficiency: 1
 first_seen: 2026-05-31
 last_reviewed: 2026-05-31

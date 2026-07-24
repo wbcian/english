@@ -3,6 +3,8 @@ word: stack up
 phonetic: /ˌstæk ˈʌp/
 pos: phr.v.
 zh: 累積、積少成多；（vs against）比較高下
+cefr: "B2"
+frequency: low
 proficiency: 1
 first_seen: 2026-07-01
 last_reviewed: 2026-07-01

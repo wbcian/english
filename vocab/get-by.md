@@ -3,6 +3,8 @@ word: get by
 phonetic: /ˌɡɛt ˈbaɪ/
 pos: phr.v.
 zh: 勉強應付、過得去、將就
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-01
 last_reviewed: 2026-07-01

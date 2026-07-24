@@ -3,6 +3,8 @@ word: disclose
 phonetic: /dɪsˈkloʊz/
 pos: v.
 zh: 揭露；公開（原本隱藏的資訊）
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-23
 last_reviewed: 2026-07-23

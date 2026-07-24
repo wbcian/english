@@ -3,6 +3,8 @@ word: take the wheel
 phonetic: /teɪk ðə wiːl/
 pos: v.phr.
 zh: 接手掌控（字面：接過方向盤）
+cefr: "B2"
+frequency: low
 proficiency: 1
 first_seen: 2026-07-03
 last_reviewed: 2026-07-03

@@ -3,6 +3,8 @@ word: run errands
 phonetic: /rʌn ˈerəndz/
 pos: v.phr.
 zh: 跑腿；外出辦雜事
+cefr: "B1"
+frequency: mid
 proficiency: 1
 first_seen: 2026-06-23
 last_reviewed: 2026-06-23

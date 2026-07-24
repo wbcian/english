@@ -3,6 +3,8 @@ word: pick someone's brain
 phonetic: /pɪk ˈsʌmwʌnz breɪn/
 pos: idiom (v.phr.)
 zh: 向某人請益；汲取某人的知識
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-05-28
 last_reviewed: 2026-05-28

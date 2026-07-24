@@ -3,6 +3,8 @@ word: theatrical
 phonetic: /θiˈætrɪkl/
 pos: adj
 zh: 戲劇性的；誇張的；舞台的
+cefr: "B2?"
+frequency: low
 proficiency: 3
 first_seen: 2026-04-27
 last_reviewed: 2026-04-30

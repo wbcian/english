@@ -3,6 +3,8 @@ word: brilliant
 phonetic: /ˈbrɪljənt/
 pos: adj
 zh: 超棒的；很讚（英式俚語）；才華洋溢的
+cefr: "B1"
+frequency: high
 proficiency: 1
 first_seen: 2026-05-23
 last_reviewed: 2026-05-23

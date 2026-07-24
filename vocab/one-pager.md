@@ -3,6 +3,8 @@ word: one pager
 phonetic: /wʌn ˈpeɪdʒər/
 pos: n.
 zh: 一頁摘要文件
+cefr: "B2"
+frequency: low
 proficiency: 1
 first_seen: 2026-05-28
 last_reviewed: 2026-05-28

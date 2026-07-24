@@ -3,6 +3,8 @@ word: searing
 phonetic: /ˈsɪrɪŋ/
 pos: adj.
 zh: 灼熱的；劇烈的；尖銳猛烈的
+cefr: "C1"
+frequency: low
 proficiency: 1
 first_seen: 2026-06-23
 last_reviewed: 2026-06-23

@@ -3,6 +3,8 @@ word: lower the friction
 phonetic: /ˈloʊ.ɚ ðə ˈfrɪk.ʃən/
 pos: v. phr.
 zh: 降低摩擦力（降低做某事的阻力）
+cefr: "B2"
+frequency: low
 proficiency: 1
 first_seen: 2026-05-26
 last_reviewed: 2026-05-26

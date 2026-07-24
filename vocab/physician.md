@@ -3,6 +3,8 @@ word: physician
 phonetic: /fɪˈzɪʃən/
 pos: n.
 zh: 醫師（doctor 的正式說法）
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-23
 last_reviewed: 2026-07-23

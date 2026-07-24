@@ -3,6 +3,8 @@ word: settle the bill
 phonetic: /ˈsetl ðə bɪl/
 pos: v. phr.
 zh: 結清帳款；付清
+cefr: "B2"
+frequency: low
 proficiency: 1
 first_seen: 2026-05-31
 last_reviewed: 2026-05-31

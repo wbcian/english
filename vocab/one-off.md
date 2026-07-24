@@ -3,6 +3,8 @@ word: one-off
 phonetic: /wʌn ɔːf/
 pos: adj. / n.
 zh: 一次性的（非循環、非常態）
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-05-26
 last_reviewed: 2026-05-26

@@ -3,6 +3,8 @@ word: know-it-all
 phonetic: /ˈnoʊ ɪt ɔːl/
 pos: n.
 zh: 自以為什麼都懂的人；萬事通（貶義）
+cefr: "B2"
+frequency: low
 proficiency: 1          # 1–5 ★
 first_seen: 2026-06-23
 last_reviewed: 2026-06-23

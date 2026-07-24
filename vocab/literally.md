@@ -3,6 +3,8 @@ word: literally
 phonetic: /ˈlɪtərəli/
 pos: adv
 zh: 真的；簡直；超…（口語強調用）
+cefr: "B2"
+frequency: high
 proficiency: 1
 first_seen: 2026-05-23
 last_reviewed: 2026-05-23

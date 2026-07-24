@@ -3,6 +3,8 @@ word: triage
 phonetic: /ˈtriːɑːʒ/
 pos: noun / verb
 zh: 檢傷分類；按輕重緩急排序處理
+cefr: "B2"
+frequency: low
 proficiency: 1
 first_seen: 2026-06-28
 last_reviewed: 2026-06-28

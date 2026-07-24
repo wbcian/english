@@ -3,6 +3,8 @@ word: switch something up
 phonetic: /swɪtʃ ˈsʌmθɪŋ ʌp/
 pos: phr.v
 zh: 換個方式；求新求變
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-05-21
 last_reviewed: 2026-05-21

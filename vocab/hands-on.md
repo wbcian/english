@@ -3,6 +3,8 @@ word: hands-on
 phonetic: /ˌhændz ˈɒn/
 pos: adj/adv
 zh: 親自動手的；實作的；實務型的
+cefr: "B2"
+frequency: mid
 proficiency: 1          # 1–5 ★
 first_seen: 2026-06-01
 last_reviewed: 2026-06-01

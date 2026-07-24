@@ -3,6 +3,8 @@ word: capstone
 phonetic: /ˈkæpstoʊn/
 pos: n.
 zh: 壓頂石；（比喻）巔峰之作、集大成的收尾
+cefr: "C1"
+frequency: low
 proficiency: 1
 first_seen: 2026-07-12
 last_reviewed: 2026-07-12

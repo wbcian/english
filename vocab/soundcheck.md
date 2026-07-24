@@ -3,6 +3,8 @@ word: soundcheck
 phonetic: /ˈsaʊndtʃɛk/
 pos: n.
 zh: 演出前的音響／設備測試（試音）
+cefr: "B1"
+frequency: low
 proficiency: 1
 first_seen: 2026-07-03
 last_reviewed: 2026-07-03

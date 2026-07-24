@@ -3,6 +3,8 @@ word: get even
 phonetic: /ɡɛt ˈiːvən/
 pos: idiom
 zh: 報復；扯平；以牙還牙
+cefr: "B2"
+frequency: low
 proficiency: 1          # 1–5 ★
 first_seen: 2026-06-23
 last_reviewed: 2026-06-23

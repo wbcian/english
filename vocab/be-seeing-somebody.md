@@ -3,6 +3,8 @@ word: be seeing somebody
 phonetic: /biː ˈsiːɪŋ ˈsʌmbədi/
 pos: phrase
 zh: 在跟某人交往／約會中（有對象了）
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-02
 last_reviewed: 2026-07-02

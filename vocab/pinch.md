@@ -3,6 +3,8 @@ word: pinch
 phonetic: /pɪntʃ/
 pos: v./n.
 zh: 捏；掐；偷（口語）；一小撮；困境
+cefr: "B1"
+frequency: mid
 proficiency: 1
 first_seen: 2026-04-30
 last_reviewed: 2026-04-30

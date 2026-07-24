@@ -3,6 +3,8 @@ word: touching grass
 phonetic: /ˈtʌtʃ.ɪŋ ɡræs/
 pos: idiom (verb phr.)
 zh: 出去走走；離開電腦；接觸現實
+cefr: "C1?"
+frequency: low
 proficiency: 1
 first_seen: 2026-05-26
 last_reviewed: 2026-05-26

@@ -3,6 +3,8 @@ word: rapid-fire
 phonetic: /ˈræpɪd faɪər/
 pos: adj.
 zh: 連珠炮式的；快速接連不斷的
+cefr: "B2"
+frequency: low
 proficiency: 1
 first_seen: 2026-06-11
 last_reviewed: 2026-06-11

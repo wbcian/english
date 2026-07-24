@@ -3,6 +3,8 @@ word: deposit
 phonetic: /dɪˈpɒzɪt/
 pos: n./v.
 zh: 押金；保證金；存款；存入
+cefr: "B1"
+frequency: mid
 proficiency: 1
 first_seen: 2026-06-11
 last_reviewed: 2026-06-11

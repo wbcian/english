@@ -3,6 +3,8 @@ word: wear many hats
 phonetic: /wɛr ˈmɛni hæts/
 pos: idiom
 zh: 身兼數職；什麼都做
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-05-25
 last_reviewed: 2026-05-25

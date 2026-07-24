@@ -3,6 +3,8 @@ word: put one's heart and soul (into)
 phonetic: /pʊt jər hɑːrt ən soʊl/
 pos: idiom (phr.v.)
 zh: 全心全意投入；傾注心血
+cefr: "B2"
+frequency: low
 proficiency: 2
 first_seen: 2026-04-29
 last_reviewed: 2026-04-29

@@ -3,6 +3,8 @@ word: nail it
 phonetic: /neɪl ɪt/
 pos: phr.v.
 zh: 完美搞定；做到位；精準命中
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-06-11
 last_reviewed: 2026-06-11

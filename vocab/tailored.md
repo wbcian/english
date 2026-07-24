@@ -3,6 +3,8 @@ word: tailored
 phonetic: /ˈteɪ.lɚd/
 pos: adj. (also v. past tense)
 zh: 量身打造的；客製化的；剪裁合身的
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-05-26
 last_reviewed: 2026-05-26

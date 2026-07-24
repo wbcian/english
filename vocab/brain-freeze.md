@@ -3,6 +3,8 @@ word: brain freeze
 phonetic: /breɪn friːz/
 pos: n
 zh: 大腦凍結、冰淇淋頭痛（吃冰太快的短暫刺痛）
+cefr: "B1?"
+frequency: low
 proficiency: 1
 first_seen: 2026-07-01
 last_reviewed: 2026-07-01

@@ -3,6 +3,8 @@ word: zone out
 phonetic: /zoʊn aʊt/
 pos: phr.v.
 zh: 放空、恍神、精神不集中
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-03
 last_reviewed: 2026-07-03

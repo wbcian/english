@@ -3,6 +3,8 @@ word: practically
 phonetic: /ˈpræktɪkli/
 pos: adv
 zh: 幾乎；實際上
+cefr: "B2"
+frequency: mid
 proficiency: 1          # 1–5 ★
 first_seen: 2026-06-10
 last_reviewed: 2026-06-10

@@ -3,6 +3,8 @@ word: AGI-pilled
 phonetic: /ˌeɪ.dʒiː.aɪ pɪld/
 pos: adj. (slang)
 zh: 信 AGI 願景信到底的；對 AGI 全 in 的
+cefr: "C1?"
+frequency: low
 proficiency: 1
 first_seen: 2026-05-26
 last_reviewed: 2026-05-26

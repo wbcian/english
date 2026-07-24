@@ -3,6 +3,8 @@ word: cram
 phonetic: /kræm/
 pos: v
 zh: 塞滿；擠入；臨時抱佛腳
+cefr: "B2"
+frequency: low
 proficiency: 2
 first_seen: 2026-04-29
 last_reviewed: 2026-06-01

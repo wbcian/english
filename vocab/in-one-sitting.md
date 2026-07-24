@@ -3,6 +3,8 @@ word: in one sitting
 phonetic: /ɪn ˌwʌn ˈsɪtɪŋ/
 pos: idiom
 zh: 一口氣（一次坐定就做完，不分次）
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-01
 last_reviewed: 2026-07-01

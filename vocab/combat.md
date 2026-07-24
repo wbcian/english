@@ -3,6 +3,8 @@ word: combat
 phonetic: "n. /ˈkɑːmbæt/ | v. /kəmˈbæt/"
 pos: n / v
 zh: 戰鬥；對抗；抵抗；打擊
+cefr: "B2"
+frequency: mid
 proficiency: 3
 first_seen: 2026-04-27
 last_reviewed: 2026-04-27

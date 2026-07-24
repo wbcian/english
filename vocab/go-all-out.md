@@ -3,6 +3,8 @@ word: go all out
 phonetic: /ɡoʊ ɔːl aʊt/
 pos: phr.v
 zh: 卯足全力；火力全開
+cefr: "B2"
+frequency: mid
 proficiency: 2
 first_seen: 2026-04-27
 last_reviewed: 2026-05-02

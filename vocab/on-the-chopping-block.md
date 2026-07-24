@@ -3,6 +3,8 @@ word: on the chopping block
 phonetic: /ɑːn ðə ˈtʃɑːpɪŋ blɑːk/
 pos: idiom
 zh: 面臨被砍；可能遭解雇或裁撤
+cefr: "B2"
+frequency: low
 proficiency: 1
 first_seen: 2026-06-23
 last_reviewed: 2026-06-25

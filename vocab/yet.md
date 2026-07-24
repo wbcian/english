@@ -3,6 +3,8 @@ word: yet
 phonetic: /jet/
 pos: conj./adv.
 zh: 然而；可是（轉折）
+cefr: "B2"
+frequency: high
 proficiency: 1
 first_seen: 2026-06-25
 last_reviewed: 2026-06-25

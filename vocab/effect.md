@@ -3,6 +3,8 @@ word: effect
 phonetic: /ɪˈfɛkt/
 pos: n.
 zh: 效果、影響、作用
+cefr: "B1"
+frequency: high
 proficiency: 1
 first_seen: 2026-07-02
 last_reviewed: 2026-07-02

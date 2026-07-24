@@ -3,6 +3,8 @@ word: habitually
 phonetic: /həˈbɪtʃuəli/
 pos: adv
 zh: 習慣性地；慣常地
+cefr: "B2"
+frequency: low
 proficiency: 2
 first_seen: 2026-04-29
 last_reviewed: 2026-04-29

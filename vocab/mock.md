@@ -3,6 +3,8 @@ word: mock
 phonetic: /mɑːk/
 pos: v./adj.
 zh: 嘲弄、譏笑（惡意）；模擬的、仿製的
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-23
 last_reviewed: 2026-07-23

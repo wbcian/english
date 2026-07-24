@@ -4,281 +4,281 @@
 > 排序規則：先按 ★ 由低到高（最該複習的在最上面），同 ★ 內按 `last_reviewed` 由舊到新。
 > 維護：每次新增 / 更新單字檔，**同步更新此表的對應列**。
 
-| 單字 | 詞性 | 中文 | ★ | 上次複習 | tags |
-|---|---|---|---|---|---|
-| [solid](solid.md) | adj. | 穩固可靠的、沒問題的；固體的 | 1 | 2026-07-24 | adjective, daily, business, multi-meaning, toeic |
-| [pace](pace.md) | n./v. | 步調、速度；（v.）踱步 | 1 | 2026-07-24 | noun, verb, daily, work, toeic |
-| [partway](partway.md) | adv. | 走到一半、進行到一部分 | 1 | 2026-07-24 | adverb, daily, progress |
-| [work on it](work-on-it.md) | phr.v. | 處理、著手做；努力改善 | 1 | 2026-07-24 | phrasal-verb, daily, business, improvement |
-| [role](role.md) | n. | 職位、職務；角色 | 1 | 2026-07-23 | noun, career, interview, business, toeic, ⚠️homophone-roll |
-| [turnover](turnover.md) | n. | 人員流動率；離職率（財務語境則指營業額） | 1 | 2026-07-23 | noun, business, hr, multi-meaning, toeic |
-| [stall](stall.md) | v. | 停滯不前；卡住不動；（引擎）熄火拋錨 | 1 | 2026-07-23 | verb, business, metaphor, progress, toeic |
-| [rooted](rooted.md) | adj. | 有歸屬感的；扎根的；根深蒂固的 | 1 | 2026-07-23 | adjective, emotion, metaphor, belonging, literary |
-| [relocation](relocation.md) | n. | 搬遷；遷移；調職搬家 | 1 | 2026-07-23 | noun, business, moving, toeic, formal |
-| [conceal](conceal.md) | v. | 隱藏；隱瞞；遮掩 | 1 | 2026-07-23 | verb, formal, toeic, concealment, ⚠️pairs-with-disclose |
-| [physician](physician.md) | n. | 醫師（doctor 的正式說法） | 1 | 2026-07-23 | noun, medical, formal, toeic, ⚠️easy-to-confuse |
-| [prominent](prominent.md) | adj. | 顯眼的；傑出的；重要的 | 1 | 2026-07-23 | adjective, toeic, importance, description, formal |
-| [disclose](disclose.md) | v. | 揭露；公開（原本隱藏的資訊） | 1 | 2026-07-23 | verb, formal, toeic, business, ⚠️pairs-with-conceal |
-| [debut](debut.md) | n./adj./v. | 首度亮相；處女作；初次登場 | 1 | 2026-07-23 | noun, french-origin, ⚠️pronunciation-trap, entertainment, toeic |
-| [dread](dread.md) | v./n. | 害怕、畏懼（即將到來的事）；恐懼感 | 1 | 2026-07-23 | verb, noun, emotion, fear, ⚠️grammar-dread-Ving |
-| [mock](mock.md) | v./adj. | 嘲弄、譏笑（惡意）；模擬的、仿製的 | 1 | 2026-07-23 | verb, adjective, emotion, multi-meaning, daily |
-| [erupt](erupt.md) | v. | （情緒／衝突）爆發；（火山）噴發 | 1 | 2026-07-23 | verb, emotion, metaphor, volcano, vivid-language |
-| [impulsively](impulsively.md) | adv. | 衝動地；不加思索地 | 1 | 2026-07-23 | adverb, behavior, personality, toeic, decision-making |
-| [suspend](suspend.md) | v. | 使停學／停職；暫停；懸掛 | 1 | 2026-07-23 | verb, toeic, school, work, multi-meaning |
-| [manifest](manifest.md) | v. | 顯化；顯現；（adj.）明顯的 | 1 | 2026-07-23 | verb, multi-meaning, modern-slang |
-| [reputation](reputation.md) | n. | 名聲；聲譽 | 1 | 2026-07-23 | noun, social |
-| [confront](confront.md) | v. | 當面對質；正面面對 | 1 | 2026-07-23 | verb, conflict |
-| [be there through](be-there-through.md) | v.phr. | 全程都在、從頭到尾參與（並撐過）某段歷程 | 1 | 2026-07-21 | phrase, career, interview, preposition, business |
-| [around](around-approximation.md) | prep./adv. | 大約、差不多（接數字前）；周圍 | 1 | 2026-07-21 | preposition, number, hedging, time, daily |
-| [wrap up](wrap-up.md) | phr.v. | 收尾、結束（把事情做完收掉）；包起來 | 1 | 2026-07-21 | phrasal-verb, business, meeting, interview, daily, ⭐當天主動使用 |
-| [come to a close](come-to-a-close.md) | v.phr. | 告一段落、劃下句點（主詞是事不是人） | 1 | 2026-07-21 | phrase, business, interview, euphemism, formal |
-| [growth phase](growth-phase.md) | n.phr. | 成長期（產品／公司快速擴張的階段） | 1 | 2026-07-21 | noun-phrase, business, startup, career, toeic |
-| [line up with](line-up-with.md) | phr.v. | 與⋯吻合、對得上、一致 | 1 | 2026-07-21 | phrasal-verb, business, interview, alignment, daily |
-| [have a personal connection to](have-a-personal-connection-to.md) | v.phr. | 對⋯有個人淵源、有一份私人的連結 | 1 | 2026-07-21 | phrase, interview, business, emotion, formal |
-| [ship](ship.md) | v. | （軟體業）出貨、把功能上線；運送 | 1 | 2026-07-21 | verb, tech, business, jargon, high-frequency |
-| [access point](access-point.md) | n. | 無線基地台（AP）；接入點 | 1 | 2026-07-21 | noun, networking, hardware, tech, abbreviation |
-| [preach to the choir](preach-to-the-choir.md) | phr. | 向本來就同意你的人費口舌 | 1 | 2026-07-06 | idiom, communication, persuasion, informal, daily |
-| [repping (rep)](repping.md) | v. | 代表、替⋯站台撐場面（represent 口語縮寫） | 1 | 2026-07-06 | verb, slang, hip-hop, identity, informal |
-| [make goo-goo eyes at someone](make-goo-goo-eyes-at.md) | phr. | 對某人拋媚眼、含情脈脈放電（俏皮、略復古） | 1 | 2026-07-06 | phrase, relationship, romance, informal, humorous |
-| [go gaga over someone](go-gaga-over.md) | phr. | 為某人／某物瘋狂、神魂顛倒 | 1 | 2026-07-06 | phrase, relationship, romance, informal, hyperbole |
-| [harvest](harvest.md) | n./v. | 收穫、收成；收割、採收 | 1 | 2026-07-02 | noun, verb, agriculture, multi-meaning, figurative |
-| [scorching](scorching.md) | adj. | 灼熱的、酷熱的 | 1 | 2026-07-01 | adjective, weather, hot, intensity, summer |
-| [sweltering](sweltering.md) | adj. | 悶熱難受的（很熱＋不舒服） | 1 | 2026-07-01 | adjective, weather, hot, discomfort, summer |
-| [sizzling](sizzling.md) | adj. | 熱到滋滋作響、快被烤焦的 | 1 | 2026-07-01 | adjective, weather, hot, onomatopoeia, summer |
-| [heatwave](heatwave.md) | n. | 熱浪（持續數日、比平常熱很多） | 1 | 2026-07-01 | noun, weather, climate, news, summer |
-| [mirage](mirage.md) | n. | 海市蜃樓；抓不到的幻象 | 1 | 2026-07-01 | noun, optics, illusion, french-origin, summer |
-| [cruelly hot](cruelly-hot.md) | phr. | 酷熱、熱到殘忍（日本「酷暑日」英譯） | 1 | 2026-07-01 | phrase, weather, hot, japan, summer |
-| [muggy](muggy.md) | adj. | 又濕又悶熱的 | 1 | 2026-07-01 | adjective, weather, humidity, discomfort, summer |
-| [sweating buckets](sweating-buckets.md) | phr. | 滿頭大汗、汗如雨下 | 1 | 2026-07-01 | idiom, hyperbole, sweat, body, summer |
-| [drenched in sweat](drenched-in-sweat.md) | phr. | 汗濕透、全身濕透 | 1 | 2026-07-01 | idiom, hyperbole, sweat, body, summer |
-| [brain freeze](brain-freeze.md) | n. | 大腦凍結、冰淇淋頭痛 | 1 | 2026-07-01 | noun, informal, body, ice-cream, summer |
-| [melt](melt.md) | v. | 融化（物理／熱／情感一字三用） | 1 | 2026-07-01 | verb, multi-meaning, temperature, emotion, summer |
-| [summer fling](summer-fling.md) | n. | 夏日短暫戀情（短而熱烈、不太認真） | 1 | 2026-07-01 | noun, romance, casual, seasonal, summer |
-| [parasol](parasol.md) | n. | 陽傘、遮陽傘 | 1 | 2026-07-01 | noun, sun-protection, object, french-origin, summer |
-| [beat down](beat-down.md) | phr.v. | （陽光）強烈曝曬、無情照下 | 1 | 2026-07-01 | phrasal-verb, sun, weather, imagery, summer |
-| [sunburned](sunburned.md) | adj. | 曬傷的 | 1 | 2026-07-01 | adjective, skin, sun, health, summer |
-| [summer solstice](summer-solstice.md) | n. | 夏至（一年中最長的白天） | 1 | 2026-07-01 | noun, astronomy, season, calendar, summer |
-| [equinox](equinox.md) | n. | 分點（春分／秋分，晝夜等長） | 1 | 2026-07-01 | noun, astronomy, season, calendar, latin-origin |
-| [midnight sun](midnight-sun.md) | n. | 午夜太陽、永晝（極晝） | 1 | 2026-07-01 | noun, geography, arctic, phenomenon, summer |
-| [socratic](socratic.md) | adj. | 蘇格拉底式的（用提問引導、非直接給答案） | 1 | 2026-07-01 | adjective, education, philosophy, teaching, toeic |
-| [push back](push-back.md) | phr.v. | （把…）延期、延後；反對（pushback） | 1 | 2026-07-01 | phrasal-verb, splittable, business, scheduling, toeic |
-| [end up](end-up.md) | phr.v. | 結果變成、最後落得 | 1 | 2026-07-01 | phrasal-verb, result, daily, narrative, toeic |
-| [call off](call-off.md) | phr.v. | 取消（已安排的事）；叫…停手 | 1 | 2026-07-01 | phrasal-verb, splittable, cancel, daily, toeic |
-| [get by](get-by.md) | phr.v. | 勉強應付、過得去 | 1 | 2026-07-01 | phrasal-verb, survival, money, daily, toeic |
-| [hang out](hang-out.md) | phr.v. | （和某人）閒晃、消磨時間 | 1 | 2026-07-01 | phrasal-verb, social, casual, high-frequency, daily |
-| [put up with](put-up-with.md) | phr.v. | 忍受、容忍 | 1 | 2026-07-01 | phrasal-verb, three-word, tolerance, daily, toeic |
-| [stand out](stand-out.md) | phr.v. | 顯眼、突出、跳出來 | 1 | 2026-07-01 | phrasal-verb, prominence, resume, daily, toeic |
-| [stack up](stack-up.md) | phr.v. | 累積、積少成多；比高下 | 1 | 2026-07-01 | phrasal-verb, accumulation, comparison, daily, toeic |
-| [without further ado](without-further-ado.md) | idiom | 廢話不多說、閒話休提 | 1 | 2026-07-01 | idiom, set-phrase, presentation, opener |
-| [get straight to the point](get-straight-to-the-point.md) | idiom | 直接切入重點、開門見山 | 1 | 2026-07-01 | idiom, communication, directness, daily, toeic |
-| [in one sitting](in-one-sitting.md) | idiom | 一口氣（一次做完） | 1 | 2026-07-01 | idiom, time, intensity, reading, daily |
-| [rock](rock.md) | v. | （自信地）頂著某造型；很棒（口語） | 1 | 2026-07-01 | verb, slang, fashion, casual, multi-meaning |
-| [mastery](mastery.md) | n. | 精通、嫻熟；掌控、駕馭（of＝精通技能／over＝掌控對象） | 1 | 2026-06-30 | noun, skill, control, toeic, formal |
-| [primer](primer.md) | n. | 入門書／入門指南；底漆；底火（一字多義＋發音分岔陷阱） | 1 | 2026-06-29 | noun, multi-meaning, pronunciation-trap, tech-writing, daily |
-| [Einstellung effect](einstellung-effect.md) | n. | 定勢效應；思維定勢（被舊經驗綁住、看不到更好解法） | 1 | 2026-06-28 | psychology, german-origin, cognition, jargon, niche |
-| [triage](triage.md) | n./v. | 檢傷分類；按輕重緩急排序處理 | 1 | 2026-06-28 | business, medical, process, french-origin |
-| [get to](get-to.md) | v.phr. | 有幸、得以（做好事，對比 have to） | 1 | 2026-06-25 | verb-phrase, privilege, contrast-with-have-to, daily, toeic |
-| [roll over to](roll-over-to.md) | phr.v. | （自動）轉到、續轉、滾存（roll to voicemail） | 1 | 2026-06-25 | phrasal-verb, automatic, phone, subscription, toeic |
-| [yet](yet.md) | conj./adv. | 然而；可是（轉折，≠ not yet） | 1 | 2026-06-25 | conjunction, contrast, connector, multi-meaning, toeic |
-| [skim](skim.md) | v. | 略讀；撇去（表面之物） | 1 | 2026-06-25 | verb, multi-meaning, reading-skill, toeic |
-| [divine](divine.md) | adj. | 美妙極了（口語）；神聖的 | 1 | 2026-06-25 | adjective, informal, intensifier, multi-meaning |
-| [couture](couture.md) | n. | 高級訂製服（時尚字） | 1 | 2026-06-25 | noun, fashion, french-loanword, niche |
-| [on the chopping block](on-the-chopping-block.md) | idiom | 面臨被砍；可能遭解雇或裁撤 | 1 | 2026-06-25 | idiom, work, layoffs, risk, vivid-language |
-| [skimmed milk](skimmed-milk.md) | n.phr. | 脫脂牛奶（美式常說 skim milk） | 1 | 2026-06-23 | noun-phrase, food, drink, coffee, british-vs-american |
-| [drip coffee](drip-coffee.md) | n.phr. | 滴濾咖啡 | 1 | 2026-06-23 | noun-phrase, coffee, drink, daily |
-| [run errands](run-errands.md) | v.phr. | 跑腿；外出辦雜事 | 1 | 2026-06-23 | verb-phrase, daily, work, chores, toeic |
-| [deal with it](deal-with-it.md) | phr. | 接受現實並處理；自己想辦法 | 1 | 2026-06-23 | phrase, conversation, conflict, informal, register-trap |
-| [figure it out](figure-it-out.md) | phr. | 自己想辦法弄懂；搞清楚 | 1 | 2026-06-23 | phrase, conversation, problem-solving, informal |
-| [fling](fling.md) | v./n. | 猛丟；甩；短暫戀情 | 1 | 2026-06-23 | verb, noun, irregular-verb, motion, informal, multi-meaning |
-| [foam](foam.md) | n./v. | 泡沫；奶泡；起泡 | 1 | 2026-06-23 | noun, verb, coffee, liquid, daily |
-| [man](man.md) | v. | 顧守；操作；派人駐守 | 1 | 2026-06-23 | verb, work, staffing, operations, multi-meaning |
-| [searing](searing.md) | adj. | 灼熱的；劇烈的；尖銳猛烈的 | 1 | 2026-06-23 | adjective, intensity, heat, pain, criticism |
-| [chained to](chained-to.md) | adj.phr. | 被綁在…；因責任走不開 | 1 | 2026-06-23 | phrase, metaphor, work, obligation, informal |
-| [on the line](on-the-line.md) | idiom | 岌岌可危；處於風險中 | 1 | 2026-06-23 | idiom, risk, work, reputation, toeic |
-| [swell up](swell-up.md) | phr.v. | 腫起來；膨脹；鼓起 | 1 | 2026-06-23 | phrasal-verb, body, medical, daily, irregular-verb |
-| [know-it-all](know-it-all.md) | n. | 自以為什麼都懂的人；萬事通（貶義） | 1 | 2026-06-23 | noun, personality, informal, insult-mild, compound |
-| [get even](get-even.md) | idiom | 報復；扯平；以牙還牙 | 1 | 2026-06-23 | idiom, revenge, conflict, informal, daily |
-| [drill](drill.md) | n./v. | 電鑽；反覆操練；演習；鑽孔 | 1 | 2026-06-23 | noun, verb, multi-meaning, tools, training, toeic |
-| [speedometer](speedometer.md) | n. | 時速表；速度表 | 1 | 2026-06-23 | noun, car, driving, instrument, ⚠️stress-trap |
-| [deposit](deposit.md) | n./v. | 押金；保證金；存款 | 1 | 2026-06-11 | noun, verb, travel, hotel, finance, payment |
-| [scam](scam.md) | n./v. | 詐騙；騙局 | 1 | 2026-06-11 | noun, verb, daily, crime, informal |
-| [lodging](lodging.md) | n. | 住宿；臨時住所（書面） | 1 | 2026-06-11 | noun, travel, formal |
-| [rapid-fire](rapid-fire.md) | adj. | 連珠炮式的；快速接連的 | 1 | 2026-06-11 | adjective, journalism, interview, compound |
-| [nail it](nail-it.md) | phr.v. | 完美搞定；做到位 | 1 | 2026-06-11 | phrasal-verb, informal, encouragement, daily |
-| [rinse off](rinse-off.md) | phr.v. | 沖洗乾淨；用水沖掉 | 1 | 2026-06-11 | phrasal-verb, daily, hygiene, travel, japan |
-| [just so you know](just-so-you-know.md) | phr. | 先跟你說一下（預防性 FYI） | 1 | 2026-06-11 | phrase, conversation, fyi, daily |
-| [steam room](steam-room.md) | n. | 蒸氣室 | 1 | 2026-06-11 | noun, travel, hotel, spa |
-| [sauna](sauna.md) | n. | 三溫暖；烤箱（乾熱） | 1 | 2026-06-11 | noun, travel, hotel, spa, finland |
-| [lotion](lotion.md) | n. | 乳液；護膚液 | 1 | 2026-06-11 | noun, daily, skincare, hotel, amenities |
-| [practically](practically.md) | adv. | 幾乎；實際上 | 1 | 2026-06-10 | adverb, intensifier |
-| [back in the day](back-in-the-day.md) | idiom | 以前那個年代；當年 | 1 | 2026-06-10 | idiom, time |
-| [moral](moral.md) | adj./n. | 道德的；（複數）道德觀 | 1 | 2026-06-10 | adjective, noun, values |
-| [speak one's mind](speak-ones-mind.md) | idiom | 直言不諱；說出真心話 | 1 | 2026-06-09 | idiom, personality, communication, daily |
-| [gossip](gossip.md) | n./v. | 八卦；說閒話 | 1 | 2026-06-09 | noun, verb, social, daily, uncountable |
-| [rumor](rumor.md) | n./v. | 謠言；謠傳（英式 rumour） | 1 | 2026-06-09 | noun, verb, social, news, british-vs-american |
-| [nasty](nasty.md) | adj. | 惡毒的；難聽的；糟糕的 | 1 | 2026-06-09 | adjective, emotion, multi-meaning, daily, toeic |
-| [devastated](devastated.md) | adj. | 心碎的；徹底崩潰的 | 1 | 2026-06-09 | adjective, emotion, intensity, daily |
-| [ill-bred](ill-bred.md) | adj. | 沒家教的；沒教養的（侮辱、老派） | 1 | 2026-06-09 | adjective, insult, dated, ⚠️register-trap |
-| [consent](consent.md) | n./v. | 同意；許可 | 1 | 2026-06-09 | noun, verb, formal, legal, modern, toeic |
-| [hands-on](hands-on.md) | adj./adv. | 親自動手的；實作的；實務型的 | 1 | 2026-06-01 | adjective, work, learning, toeic |
-| [look something over](look-over.md) | phr.v | 仔細看過；端詳；檢視（separable） | 1 | 2026-06-01 | phrasal-verb, separable, review, connected-speech |
-| [engage with](engage-with.md) | phr.v | 投入、認真接觸（內容／教材／人） | 1 | 2026-06-01 | phrasal-verb, learning, work, formal |
-| [debunk](debunk.md) | v. | 揭穿、戳破（不實說法／迷思） | 1 | 2026-06-01 | verb, news, science, modern |
-| [conspiracy](conspiracy.md) | n. | 陰謀；共謀（多用 conspiracy theory ⚠️stress） | 1 | 2026-06-01 | noun, news, stress-trap |
-| [exhibit](exhibit.md) | v./n. | 展示；展現（特質）；展品、證物（⚠️silent h） | 1 | 2026-06-01 | verb, noun, toeic, pronunciation-trap |
-| [fusion](fusion.md) | n. | 融合；結合；（物理）核融合 | 1 | 2026-06-01 | noun, food, music, science |
-| [sarcastic](sarcastic.md) | adj. | 諷刺的；挖苦的；酸言酸語的 | 1 | 2026-06-01 | adjective, tone, humor, daily |
-| [smart aleck](smart-aleck.md) | n. | 自作聰明的人；耍嘴皮子的傢伙（略過時） | 1 | 2026-06-01 | noun, informal, personality, dated |
-| [assemble](assemble.md) | v. | 組裝、拼裝；集合、聚集 | 1 | 2026-06-01 | verb, multi-meaning, toeic, work |
-| [on point](on-point.md) | idiom | 完美無瑕；精準到位（口語） | 1 | 2026-06-01 | idiom, slang, modern, register-trap |
-| [test the waters](test-the-waters.md) | idiom | 試水溫；先探探情況再投入 | 1 | 2026-06-01 | idiom, business, career, toeic |
-| [quirk](quirk.md) | n. | 怪癖；古怪的小特點（adj. quirky） | 1 | 2026-06-01 | noun, personality, daily |
-| [prosthetic](prosthetic.md) | adj./n. | 義肢的；（n.）義肢、人工裝置 | 1 | 2026-06-01 | adjective, noun, medical, film-sfx |
-| [track down](track-down.md) | phr.v. | 追查到；找出（費力尋找後找到） | 1 | 2026-06-01 | phrasal-verb, separable, search, toeic |
-| [terrified](terrified.md) | adj. | 嚇壞的；非常害怕的 | 1 | 2026-04-30 | adjective, emotion, fear |
-| [pinch](pinch.md) | v./n. | 捏；掐；偷；一小撮；困境（含三態） | 1 | 2026-04-30 | verb, multi-meaning, regular-verb |
-| [humorous twist](humorous-twist.md) | n.phr. | 幽默的轉折；反差萌 | 1 | 2026-05-02 | phrase, narrative, storytelling, ⚠️quiz-miss |
-| [hankering](hankering.md) | n. | 強烈的渴望；嘴饞 | 1 | 2026-05-21 | noun, desire, food, informal |
-| [cup of Joe](cup-of-joe.md) | n.phr. | 一杯咖啡（俚語） | 1 | 2026-05-21 | noun-phrase, slang, american, coffee |
-| [I guess so](i-guess-so.md) | phr. | 大概吧；應該吧（冷淡／不確定） | 1 | 2026-05-21 | phrase, conversation, hedging |
-| [switch something up](switch-something-up.md) | phr.v. | 換個方式；求新求變 | 1 | 2026-05-21 | phrasal-verb, change, informal |
-| [play on words](play-on-words.md) | n.phr. | 雙關語；玩文字遊戲 | 1 | 2026-05-21 | noun-phrase, language, humor |
-| [has nothing to do with](has-nothing-to-do-with.md) | phr. | 跟…一點關係都沒有 | 1 | 2026-05-23 | phrase, conversation, clarification, daily |
-| [like (discourse marker)](like-discourse-marker.md) | discourse marker | 就是…／像是…／我就：（三種用法） | 1 | 2026-05-23 | discourse-marker, gen-z, ⚠️register-trap |
-| [literally](literally.md) | adv. | 真的；簡直；超…（口語強調） | 1 | 2026-05-23 | adverb, intensifier, gen-z, multi-meaning |
-| [every single](every-single.md) | det.phr. | 每一個（零例外、加強版） | 1 | 2026-05-23 | determiner, intensifier, emphasis |
-| [barista](barista.md) | n. | 咖啡師 | 1 | 2026-05-23 | noun, occupation, italian-loanword |
-| [herbal tea](herbal-tea.md) | n.phr. | 花草茶（美音 drop H） | 1 | 2026-05-23 | noun-phrase, drink, british-vs-american |
-| [brilliant](brilliant.md) | adj. | 超讚的（英式俚語）；才華洋溢的 | 1 | 2026-05-23 | adjective, british-slang, multi-meaning |
-| [running through one's head](running-through-ones-head.md) | idiom | 想法／旋律一直在腦中循環 | 1 | 2026-05-23 | idiom, thought, music, daily |
-| [that's on you](thats-on-you.md) | phr. | 那是你的責任；你自找的 | 1 | 2026-05-23 | phrase, responsibility, casual |
-| [conceited](conceited.md) | adj. | 自負的；自視甚高 | 1 | 2026-05-23 | adjective, personality, tap-t |
-| [product taste](product-taste.md) | n.phr. | 產品品味；對產品好壞的直覺判斷力 | 1 | 2026-05-25 | product, startup, idiom-modern, work |
-| [first principles](first-principles.md) | n.phr. | 第一性原理（回到本質推理） | 1 | 2026-05-25 | thinking, startup, work, decision-making |
-| [amorphous](amorphous.md) | adj. | 無定形的；模糊的；邊界不清的 | 1 | 2026-05-25 | adjective, abstract, work, vocab-upgrade |
-| [wear many hats](wear-many-hats.md) | idiom | 身兼數職；什麼都做 | 1 | 2026-05-25 | idiom, work, startup, multi-role |
-| [low ego](low-ego.md) | adj.phr. | 自我意識低；不擺架子 | 1 | 2026-05-25 | adjective, startup, work, modern-idiom |
-| [lean into](lean-into.md) | phr.v. | 擁抱（挑戰／趨勢）；傾身投入 | 1 | 2026-05-25 | phrasal-verb, modern-idiom, work, attitude |
-| [grill](grill.md) | v. | 嚴厲質問；連珠炮地問（口語） | 1 | 2026-05-26 | verb, journalism, interview, idiomatic-extension |
-| [emerging](emerging.md) | adj. | 正在浮現的；新興的 | 1 | 2026-05-26 | adjective, business, trend, ⚠️easy-to-confuse |
-| [acknowledge](acknowledge.md) | v. | 承認（事實）；認可；確認收到 | 1 | 2026-05-26 | verb, business, communication, formal |
-| [brutally](brutally.md) | adv. | 殘酷地、毫不留情地（強化詞） | 1 | 2026-05-26 | adverb, intensifier, work, ⚠️collocation-restricted |
-| [stroll](stroll.md) | v./n. | 悠閒地走、漫步 | 1 | 2026-05-26 | verb, motion, casual, contrast-with-walk |
-| [tornado](tornado.md) | n. | 龍捲風（含 idiom on the inside of the ~） | 1 | 2026-05-26 | noun, weather, metaphor, idiom |
-| [demolish](demolish.md) | v. | 摧毀、拆除、徹底擊垮 | 1 | 2026-05-26 | verb, destruction, regular-verb, multi-meaning |
-| [mind meld](mind-meld.md) | n./v.(idiom) | 心智融合；默契超強到不需要解釋 | 1 | 2026-05-26 | idiom, work, nerd-culture, star-trek |
-| [AGI-pilled](agi-pilled.md) | adj.(slang) | 信 AGI 願景信到底的；對 AGI 全 in 的 | 1 | 2026-05-26 | adjective, slang, internet, suffix-pilled |
-| [research preview](research-preview.md) | n.phr. | 研究預覽版（產品早期 branding 策略） | 1 | 2026-05-26 | noun-phrase, product, startup, branding |
-| [dogfood](dogfood.md) | v. | 內部試吃；公司內部先用自家產品 | 1 | 2026-05-26 | verb, tech-industry, jargon, product-development |
-| [lower the friction](lower-the-friction.md) | v.phr. | 降低摩擦力（降低做某事的阻力） | 1 | 2026-05-26 | verb-phrase, startup, ux, process-design |
-| [rowing the same direction](rowing-the-same-direction.md) | idiom | 往同一方向划船；團隊步調一致 | 1 | 2026-05-26 | idiom, work, alignment, sports-metaphor |
-| [thought partner](thought-partner.md) | n.phr. | 思考夥伴；對等 brainstorm 的人 | 1 | 2026-05-26 | noun-phrase, work, collaboration, modern-idiom |
-| [bought in](bought-in.md) | adj.(idiom) | 買單了；被說服、認同並承諾投入 | 1 | 2026-05-26 | adjective, idiom, work, alignment |
-| [time horizon](time-horizon.md) | n.phr. | 時間視野；規劃／決策考慮的時間長度 | 1 | 2026-05-26 | noun-phrase, business, planning, formal |
-| [cut across](cut-across.md) | phr.v. | 橫跨（組織／類別／邊界）；不受限於某個區隔 | 1 | 2026-05-26 | phrasal-verb, business, organization, formal |
-| [kick off](kick-off.md) | phr.v. | 啟動（任務、專案、會議）；開球 | 1 | 2026-05-26 | phrasal-verb, work, sports, high-frequency |
-| [one-off](one-off.md) | adj./n. | 一次性的（非循環、非常態） | 1 | 2026-05-26 | adjective, work, frequency, british-origin |
-| [on the go](on-the-go.md) | idiom | 移動中；在路上；忙碌奔波中 | 1 | 2026-05-26 | idiom, daily, mobility, modern-lifestyle |
-| [touching grass](touching-grass.md) | idiom | 出去走走；離開電腦；接觸現實 | 1 | 2026-05-26 | idiom, slang, internet, modern, ⚠️register-trap |
-| [at-a-glance](at-a-glance.md) | adj./adv.phr. | 一眼可看的；瀏覽式的；快速概觀 | 1 | 2026-05-26 | adjective, compound, ui, dashboard |
-| [synthesize](synthesize.md) | v. | 綜合；統整（多個來源 → 一個輸出） | 1 | 2026-05-26 | verb, business, research, ai, formal |
-| [tailored](tailored.md) | adj. | 量身打造的；客製化的；剪裁合身的 | 1 | 2026-05-26 | adjective, business, customization, sales |
-| [inbox zero](inbox-zero.md) | n.phr. | 收件夾清零；郵件全部處理完的狀態 | 1 | 2026-05-26 | noun-phrase, productivity, modern-jargon |
-| [dossier](dossier.md) | n. | 情報檔；資料夾；某主題的完整檔案 | 1 | 2026-05-26 | noun, formal, business, french-loanword |
-| [top of mind](top-of-mind.md) | idiom | 心中最在意的；正在想的；首要 priority | 1 | 2026-05-26 | idiom, business, work, priority |
-| [cast a wide net](cast-a-wide-net.md) | idiom | 廣撒網；廣泛尋找資源／人選 | 1 | 2026-05-28 | idiom, business, networking, fishing-metaphor |
-| [pick someone's brain](pick-someones-brain.md) | idiom | 向某人請益；汲取知識（被作者反對泛用） | 1 | 2026-05-28 | idiom, business, networking, ⚠️overused |
-| [legwork](legwork.md) | n. | 跑腿；事前準備功夫 | 1 | 2026-05-28 | noun, business, work, toeic, uncountable |
-| [one pager](one-pager.md) | n. | 一頁摘要文件 | 1 | 2026-05-28 | noun, business, document, startup |
-| [stint](stint.md) | n./v. | （任職／工作的）一段期間；任期 | 1 | 2026-05-28 | noun, career, business, toeic, time-duration |
-| [opinionated](opinionated.md) | adj. | 有強烈意見的；有定見的 | 1 | 2026-05-29 | adjective, personality, tech-culture, work, ⚠️connotation-trap |
-| [autonomy](autonomy.md) | n. | 自主性；自主權 | 1 | 2026-05-29 | noun, work, business, toeic, startup, formal |
-| [in demand](in-demand.md) | adj.phr. | 搶手的；有需求的 | 1 | 2026-05-29 | adjective-phrase, business, toeic, market, hiring |
-| [filter out](filter-out.md) | phr.v. | 過濾掉；篩除 | 1 | 2026-05-29 | phrasal-verb, business, toeic, process, hiring |
-| [complimentary](complimentary.md) | adj. | 免費招待的（飯店常用） | 1 | 2026-05-31 | adjective, travel, hotel, toeic |
-| [amenities](amenities.md) | n.(pl.) | 備品；設施 | 1 | 2026-06-11 | noun, plural, travel, hotel, toeic |
-| [accommodation tax](accommodation-tax.md) | n.phr. | 住宿税（日：宿泊税） | 1 | 2026-05-31 | noun-phrase, travel, japan, toeic |
-| [pre-authorization](pre-authorization.md) | n. | 預先授權；暫扣 | 1 | 2026-05-31 | noun, travel, hotel, payment |
-| [security deposit](security-deposit.md) | n.phr. | 保證金；押金 | 1 | 2026-05-31 | noun-phrase, travel, hotel, payment |
-| [itemized bill](itemized-bill.md) | n.phr. | 逐項明細帳單 | 1 | 2026-05-31 | noun-phrase, travel, business, toeic |
-| [settle the bill](settle-the-bill.md) | v.phr. | 結清帳款；付清 | 1 | 2026-05-31 | verb-phrase, travel, business, toeic |
-| [late check-out](late-check-out.md) | n.phr. | 延後退房 | 1 | 2026-05-31 | noun-phrase, travel, hotel, toeic |
-| [luggage forwarding](luggage-forwarding.md) | n.phr. | 行李宅配（takkyubin） | 1 | 2026-05-31 | noun-phrase, travel, japan |
-| [wake-up call](wake-up-call.md) | n.phr. | 叫醒服務；警鐘 | 1 | 2026-05-31 | noun-phrase, travel, hotel, idiom |
-| [prank](prank.md) | n./v. | 惡作劇 | 1 | 2026-07-02 | noun, verb, humor, social, daily |
-| [jerk](jerk.md) | n./v. | 混蛋、討厭鬼；猛拉、抽動 | 1 | 2026-07-02 | noun, verb, insult, motion, daily |
-| [crook](crook.md) | n. | 騙子、罪犯；彎曲處、彎鉤 | 1 | 2026-07-02 | noun, crime, informal, body, multi-meaning |
-| [childish](childish.md) | adj. | 幼稚的、孩子氣的（貶義） | 1 | 2026-07-02 | adjective, emotion, insult, maturity, daily |
-| [baby](baby.md) | n. | 沒用的傢伙、玻璃心／媽寶（口語貶義） | 1 | 2026-07-02 | noun, insult, informal, maturity, daily |
-| [mileage](mileage.md) | n. | 里程數；效益、好處、利用價值 | 1 | 2026-07-02 | noun, multi-meaning, idiom, business, daily |
-| [fuse](fuse.md) | n./v. | 保險絲；引信；融合 | 1 | 2026-07-02 | noun, verb, multi-meaning, idiom, daily |
-| [cuisine](cuisine.md) | n. | 菜系、料理風格 | 1 | 2026-07-02 | noun, food, culture, french-origin, travel |
-| [fiber](fiber.md) | n. | 纖維（膳食／材質） | 1 | 2026-07-02 | noun, food, health, material, idiom |
-| [alpaca](alpaca.md) | n. | 羊駝 | 1 | 2026-07-02 | noun, animal, spanish-origin, wool, niche |
-| [metallic](metallic.md) | adj. | 金屬的、金屬質感／金屬味的 | 1 | 2026-07-02 | adjective, material, sensory, description, daily |
-| [effect](effect.md) | n. | 效果、影響、作用 | 1 | 2026-07-02 | noun, ⚠️easy-to-confuse, toeic, cause-effect, daily |
-| [scarf](scarf.md) | n./v. | 圍巾；狼吞虎嚥地吃 | 1 | 2026-07-02 | noun, verb, clothing, eating, informal |
-| [ingenuity](ingenuity.md) | n. | 創造力、巧思、機智 | 1 | 2026-07-02 | noun, ⚠️easy-to-confuse, problem-solving, toeic, positive |
-| [gadget](gadget.md) | n. | 小玩意、科技小裝置 | 1 | 2026-07-02 | noun, technology, informal, object, daily |
-| [pardon](pardon.md) | n./v./interj. | 原諒；赦免；你說什麼？ | 1 | 2026-07-02 | noun, verb, politeness, law, multi-meaning |
-| [I beg your pardon](i-beg-your-pardon.md) | phr. | 請再說一次／你說什麼（帶慍）／抱歉 | 1 | 2026-07-02 | phrase, politeness, tone-dependent, british, daily |
-| [be seeing somebody](be-seeing-somebody.md) | phr. | 在跟某人交往／有對象 | 1 | 2026-07-02 | phrase, relationship, idiom, present-continuous, daily |
-| [seem](seem.md) | v. | 似乎、看起來（是） | 1 | 2026-07-02 | verb, linking-verb, hedging, grammar, daily |
-| [classmate](classmate.md) | n. | 同班同學 | 1 | 2026-07-02 | noun, school, people, relationship, daily |
-| [coworker](coworker.md) | n. | 同事（口語、平行同事） | 1 | 2026-07-02 | noun, work, people, relationship, business |
-| [colleague](colleague.md) | n. | 同事（較正式、同行） | 1 | 2026-07-02 | noun, work, people, ⚠️easy-to-confuse, business |
-| [college](college.md) | n. | 大學／學院（美式泛指大學） | 1 | 2026-07-02 | noun, education, us-uk-difference, ⚠️easy-to-confuse, daily |
-| [be interested in someone](be-interested-in-someone.md) | phrase | 對某人有意思、感興趣（曖昧初期較含蓄） | 1 | 2026-07-03 | phrase, relationship, romance, register-neutral, daily |
-| [be into someone](be-into-someone.md) | phrase | 很喜歡、很迷某人（比 interested 更熱烈） | 1 | 2026-07-03 | phrase, relationship, romance, informal, daily |
-| [pick up](pick-up.md) | phr.v. | 接（人／物）；自然學會；搭訕；接電話 | 1 | 2026-07-03 | phrasal-verb, splittable, multi-meaning, high-frequency, daily |
-| [swag](swag.md) | n. | 自信有型的氣場；（另義）贈品、周邊 | 1 | 2026-07-03 | noun, slang, attitude, fashion, informal |
-| [conversational in](conversational-in.md) | adj.phr. | （某語言）能日常對話的程度 | 1 | 2026-07-03 | adjective-phrase, language-skill, resume, toeic, formal |
-| [zone out](zone-out.md) | phr.v. | 放空、恍神、精神不集中 | 1 | 2026-07-03 | phrasal-verb, intransitive, attention, informal, daily |
-| [kill it](kill-it.md) | phr.v. | 表現得超好、大成功（誇獎用語） | 1 | 2026-07-03 | phrasal-verb, informal, encouragement, register-trap, daily |
-| [flow state](flow-state.md) | n.phr. | 心流狀態、全神貫注忘我的狀態 | 1 | 2026-07-03 | noun-phrase, psychology, focus, productivity, modern |
-| [be in the zone](in-the-zone.md) | phrase | 進入超專注狀態、心流（口語版） | 1 | 2026-07-03 | phrase, focus, informal, sports, contrast-with-zone-out |
-| [soundcheck](soundcheck.md) | n. | 演出前的音響／設備測試（試音） | 1 | 2026-07-03 | noun, music, performance, live-event, daily |
-| [full-time position](full-time-position.md) | n.phr. | 全職職位（穩定薪水、福利、保障） | 1 | 2026-07-03 | noun-phrase, work, career, employment, toeic |
-| [teach](teach-slang.md) | n. | （稱呼用俚語）老師（像叫醫生 Doc） | 1 | 2026-07-03 | noun, slang, address-term, informal, occupation |
-| [where have you been](where-have-you-been.md) | idiom | 「你（怎麼現在才出現）？」——對埋沒的才華表驚訝 | 1 | 2026-07-03 | idiom, present-perfect, compliment, surprise, talent |
-| [take the wheel](take-the-wheel.md) | v.phr. | 接手掌控（字面：接過方向盤） | 1 | 2026-07-03 | verb-phrase, idiom, control, driving-metaphor, daily |
-| [canonical](canonical.md) | adj. | 公認標準的、最具代表性的；符合教規的 | 1 | 2026-07-24 | adjective, standard, tech-jargon, academic, formal |
-| [adjacency](adjacency.md) | n. | 相鄰、鄰接（狀態或關係） | 1 | 2026-07-03 | noun, business-jargon, spatial, tech-jargon, formal |
-| [sparkling water](sparkling-water.md) | n. | 氣泡水 | 1 | 2026-07-03 | noun, drink, daily, restaurant |
-| [carbonated drink](carbonated-drink.md) | n. | 碳酸飲料、氣泡飲料 | 1 | 2026-07-03 | noun, drink, daily, us-uk-difference, regional-variation |
-| [lemon](lemon.md) | n. | 檸檬；（口語）瑕疵品、故障貨 | 1 | 2026-07-03 | noun, food, idiom, multi-meaning, daily |
-| [consolidation](consolidation.md) | n. | 鞏固；整合、合併 | 1 | 2026-07-03 | noun, business-jargon, finance, cognitive-science, formal |
-| [capstone](capstone.md) | n. | 壓頂石；（比喻）巔峰之作、集大成的收尾 | 1 | 2026-07-12 | noun, education, career, metaphor, toeic |
-| [material](material.md) | n. | 素材、材料（泛用） | 1 | 2026-07-14 | noun, writing, general-purpose, multi-meaning, daily |
-| [footage](footage.md) | n. | 影片素材 | 1 | 2026-07-14 | noun, video, media, uncountable, daily |
-| [content](content.md) | n. | 內容素材 | 1 | 2026-07-14 | noun, marketing, social-media, ⚠️stress-trap, daily |
-| [source material](source-material.md) | n.phr. | 原始素材、原著素材 | 1 | 2026-07-14 | noun-phrase, adaptation, film, literature, formal |
-| [merchant](merchant.md) | n. | 商人、貿易商 | 1 | 2026-07-14 | noun, business, trade, e-commerce, daily |
-| [headed to](headed-to.md) | phr. | 前往；朝...而去 | 2 | 2026-04-29 | phrasal-verb, daily |
-| [cram](cram.md) | v. | 塞滿；臨時抱佛腳 | 2 | 2026-06-01 | verb, study, multi-meaning |
-| [keen](keen.md) | adj. | 熱衷的；敏銳的 | 2 | 2026-04-29 | adjective, emotion |
-| [eager](eager.md) | adj. | 渴望的；急切的 | 2 | 2026-04-29 | adjective, emotion |
-| [put heart and soul](put-heart-and-soul.md) | idiom | 全心全意投入 | 2 | 2026-04-29 | idiom, effort |
-| [haunt](haunt.md) | v./n. | 縈繞、糾纏；常去之地 | 2 | 2026-04-29 | verb, multi-meaning |
-| [framed](framed.md) | v./adj. | 被陷害；被裝框 | 2 | 2026-04-29 | verb, multi-meaning, crime |
-| [pour into](pour-into.md) | v. (idiom) | 傾注（心血、精力）於 | 2 | 2026-04-29 | verb, idiom, effort |
-| [sketches](sketches.md) | n. | 素描；草圖；短劇 | 2 | 2026-04-29 | noun, art, multi-meaning |
-| [gallery](gallery.md) | n. | 畫廊；藝廊；觀眾席 | 2 | 2026-04-29 | noun, art, place |
-| [pause](pause.md) | v./n. | 停頓；暫停 | 2 | 2026-04-29 | verb, conversation, daily |
-| [habitually](habitually.md) | adv. | 習慣性地 | 2 | 2026-04-29 | adverb, behavior |
-| [count on](count-on.md) | phr.v. | 信賴；指望；依靠 | 2 | 2026-04-30 | phrasal-verb, trust, daily |
-| [go through a rough patch](go-through-a-rough-patch.md) | idiom | 經歷一段難熬期；過得不順 | 2 | 2026-04-30 | idiom, hardship, daily |
-| [get through](get-through.md) | phr.v. | 撐過；熬過；（電話）打通 | 2 | 2026-04-30 | phrasal-verb, multi-meaning, hardship |
-| [going under](going-under.md) | v.phr. | 倒掉；沉沒；麻醉 | 2 | 2026-04-30 | phrasal-verb, business, idiom |
-| [stink](stink.md) | v./n. | 發臭；爛透了 | 2 | 2026-04-30 | verb, multi-meaning, opinion |
-| [brought up](brought-up.md) | phr.v. | 提起；撫養；嘔吐 | 2 | 2026-05-02 | phrasal-verb, multi-meaning, ⚠️quiz-miss×2 |
-| [in a pinch](in-a-pinch.md) | idiom | 處境困難；緊要關頭；急用時 | 2 | 2026-05-02 | idiom, situation, business, ⚠️quiz-miss |
-| [go all out](go-all-out.md) | phr.v. | 卯足全力 | 2 | 2026-05-02 | idiom, effort, ⚠️quiz-miss×2, ↓★3→2 |
-| [combat](combat.md) | n./v. | 戰鬥；對抗 | 3 | 2026-04-27 | military, formal |
-| [easy breezy](easy-breezy.md) | idiom | 輕鬆寫意 | 3 | 2026-04-28 | idiom, informal |
-| [lit up](lit-up.md) | phr.v./adj. | 點亮；臉/眼為之一亮；嗨翻 | 3 | 2026-04-28 | phrasal-verb, slang |
-| [incorrigible](incorrigible.md) | adj. | 無可救藥的；屢勸不改 | 3 | 2026-04-30 | adjective, personality, ✅quiz-hit |
-| [theatrical](theatrical.md) | adj. | 戲劇性的；誇張的 | 3 | 2026-04-30 | adjective, performance, ✅quiz-hit |
-| [excruciating](excruciating.md) | adj. | 極度痛苦的；難熬到極點的 | 3 | 2026-05-02 | adjective, intensity, ✅quiz-hit, ↑★2→3 |
-| [pitch](pitch.md) | v./n. | 推銷點子；提案 | 4 | 2026-04-28 | business, communication |
-| [set up](set-up.md) | phr.v. | 為…鋪路；安排；介紹；陷害 | 4 | 2026-04-28 | phrasal-verb |
+| 單字 | 詞性 | 中文 | 級別 | ★ | 上次複習 | tags |
+|---|---|---|---|---|---|---|
+| [solid](solid.md) | adj. | 穩固可靠的、沒問題的；固體的 | B1 · 高頻 | 1 | 2026-07-24 | adjective, daily, business, multi-meaning, toeic |
+| [pace](pace.md) | n./v. | 步調、速度；（v.）踱步 | B1 · 中頻 | 1 | 2026-07-24 | noun, verb, daily, work, toeic |
+| [partway](partway.md) | adv. | 走到一半、進行到一部分 | B1? · 低頻 | 1 | 2026-07-24 | adverb, daily, progress |
+| [work on it](work-on-it.md) | phr.v. | 處理、著手做；努力改善 | B1 · 中頻 | 1 | 2026-07-24 | phrasal-verb, daily, business, improvement |
+| [role](role.md) | n. | 職位、職務；角色 | B1 · 高頻 | 1 | 2026-07-23 | noun, career, interview, business, toeic, ⚠️homophone-roll |
+| [turnover](turnover.md) | n. | 人員流動率；離職率（財務語境則指營業額） | B2 · 中頻 | 1 | 2026-07-23 | noun, business, hr, multi-meaning, toeic |
+| [stall](stall.md) | v. | 停滯不前；卡住不動；（引擎）熄火拋錨 | B2 · 中頻 | 1 | 2026-07-23 | verb, business, metaphor, progress, toeic |
+| [rooted](rooted.md) | adj. | 有歸屬感的；扎根的；根深蒂固的 | B2 · 中頻 | 1 | 2026-07-23 | adjective, emotion, metaphor, belonging, literary |
+| [relocation](relocation.md) | n. | 搬遷；遷移；調職搬家 | B2 · 中頻 | 1 | 2026-07-23 | noun, business, moving, toeic, formal |
+| [conceal](conceal.md) | v. | 隱藏；隱瞞；遮掩 | B2 · 中頻 | 1 | 2026-07-23 | verb, formal, toeic, concealment, ⚠️pairs-with-disclose |
+| [physician](physician.md) | n. | 醫師（doctor 的正式說法） | B2 · 中頻 | 1 | 2026-07-23 | noun, medical, formal, toeic, ⚠️easy-to-confuse |
+| [prominent](prominent.md) | adj. | 顯眼的；傑出的；重要的 | B2 · 中頻 | 1 | 2026-07-23 | adjective, toeic, importance, description, formal |
+| [disclose](disclose.md) | v. | 揭露；公開（原本隱藏的資訊） | B2 · 中頻 | 1 | 2026-07-23 | verb, formal, toeic, business, ⚠️pairs-with-conceal |
+| [debut](debut.md) | n./adj./v. | 首度亮相；處女作；初次登場 | B2 · 中頻 | 1 | 2026-07-23 | noun, french-origin, ⚠️pronunciation-trap, entertainment, toeic |
+| [dread](dread.md) | v./n. | 害怕、畏懼（即將到來的事）；恐懼感 | B2 · 中頻 | 1 | 2026-07-23 | verb, noun, emotion, fear, ⚠️grammar-dread-Ving |
+| [mock](mock.md) | v./adj. | 嘲弄、譏笑（惡意）；模擬的、仿製的 | B2 · 中頻 | 1 | 2026-07-23 | verb, adjective, emotion, multi-meaning, daily |
+| [erupt](erupt.md) | v. | （情緒／衝突）爆發；（火山）噴發 | B2 · 中頻 | 1 | 2026-07-23 | verb, emotion, metaphor, volcano, vivid-language |
+| [impulsively](impulsively.md) | adv. | 衝動地；不加思索地 | B2 · 低頻 | 1 | 2026-07-23 | adverb, behavior, personality, toeic, decision-making |
+| [suspend](suspend.md) | v. | 使停學／停職；暫停；懸掛 | B2 · 中頻 | 1 | 2026-07-23 | verb, toeic, school, work, multi-meaning |
+| [manifest](manifest.md) | v. | 顯化；顯現；（adj.）明顯的 | B2? · 中頻 | 1 | 2026-07-23 | verb, multi-meaning, modern-slang |
+| [reputation](reputation.md) | n. | 名聲；聲譽 | B1 · 中頻 | 1 | 2026-07-23 | noun, social |
+| [confront](confront.md) | v. | 當面對質；正面面對 | B2 · 中頻 | 1 | 2026-07-23 | verb, conflict |
+| [be there through](be-there-through.md) | v.phr. | 全程都在、從頭到尾參與（並撐過）某段歷程 | B2 · 中頻 | 1 | 2026-07-21 | phrase, career, interview, preposition, business |
+| [around](around-approximation.md) | prep./adv. | 大約、差不多（接數字前）；周圍 | A2 · 高頻 | 1 | 2026-07-21 | preposition, number, hedging, time, daily |
+| [wrap up](wrap-up.md) | phr.v. | 收尾、結束（把事情做完收掉）；包起來 | B1 · 中頻 | 1 | 2026-07-21 | phrasal-verb, business, meeting, interview, daily, ⭐當天主動使用 |
+| [come to a close](come-to-a-close.md) | v.phr. | 告一段落、劃下句點（主詞是事不是人） | B2 · 中頻 | 1 | 2026-07-21 | phrase, business, interview, euphemism, formal |
+| [growth phase](growth-phase.md) | n.phr. | 成長期（產品／公司快速擴張的階段） | B2 · 低頻 | 1 | 2026-07-21 | noun-phrase, business, startup, career, toeic |
+| [line up with](line-up-with.md) | phr.v. | 與⋯吻合、對得上、一致 | B2 · 中頻 | 1 | 2026-07-21 | phrasal-verb, business, interview, alignment, daily |
+| [have a personal connection to](have-a-personal-connection-to.md) | v.phr. | 對⋯有個人淵源、有一份私人的連結 | B2? · 低頻 | 1 | 2026-07-21 | phrase, interview, business, emotion, formal |
+| [ship](ship.md) | v. | （軟體業）出貨、把功能上線；運送 | B2 · 中頻 | 1 | 2026-07-21 | verb, tech, business, jargon, high-frequency |
+| [access point](access-point.md) | n. | 無線基地台（AP）；接入點 | B1? · 低頻 | 1 | 2026-07-21 | noun, networking, hardware, tech, abbreviation |
+| [preach to the choir](preach-to-the-choir.md) | phr. | 向本來就同意你的人費口舌 | C1? · 低頻 | 1 | 2026-07-06 | idiom, communication, persuasion, informal, daily |
+| [repping (rep)](repping.md) | v. | 代表、替⋯站台撐場面（represent 口語縮寫） | C1? · 低頻 | 1 | 2026-07-06 | verb, slang, hip-hop, identity, informal |
+| [make goo-goo eyes at someone](make-goo-goo-eyes-at.md) | phr. | 對某人拋媚眼、含情脈脈放電（俏皮、略復古） | C1? · 低頻 | 1 | 2026-07-06 | phrase, relationship, romance, informal, humorous |
+| [go gaga over someone](go-gaga-over.md) | phr. | 為某人／某物瘋狂、神魂顛倒 | B2? · 低頻 | 1 | 2026-07-06 | phrase, relationship, romance, informal, hyperbole |
+| [harvest](harvest.md) | n./v. | 收穫、收成；收割、採收 | B1 · 中頻 | 1 | 2026-07-02 | noun, verb, agriculture, multi-meaning, figurative |
+| [scorching](scorching.md) | adj. | 灼熱的、酷熱的 | B2 · 低頻 | 1 | 2026-07-01 | adjective, weather, hot, intensity, summer |
+| [sweltering](sweltering.md) | adj. | 悶熱難受的（很熱＋不舒服） | C1? · 低頻 | 1 | 2026-07-01 | adjective, weather, hot, discomfort, summer |
+| [sizzling](sizzling.md) | adj. | 熱到滋滋作響、快被烤焦的 | B2? · 低頻 | 1 | 2026-07-01 | adjective, weather, hot, onomatopoeia, summer |
+| [heatwave](heatwave.md) | n. | 熱浪（持續數日、比平常熱很多） | B1 · 中頻 | 1 | 2026-07-01 | noun, weather, climate, news, summer |
+| [mirage](mirage.md) | n. | 海市蜃樓；抓不到的幻象 | B2 · 低頻 | 1 | 2026-07-01 | noun, optics, illusion, french-origin, summer |
+| [cruelly hot](cruelly-hot.md) | phr. | 酷熱、熱到殘忍（日本「酷暑日」英譯） | C1? · 低頻 | 1 | 2026-07-01 | phrase, weather, hot, japan, summer |
+| [muggy](muggy.md) | adj. | 又濕又悶熱的 | B2 · 低頻 | 1 | 2026-07-01 | adjective, weather, humidity, discomfort, summer |
+| [sweating buckets](sweating-buckets.md) | phr. | 滿頭大汗、汗如雨下 | B2 · 低頻 | 1 | 2026-07-01 | idiom, hyperbole, sweat, body, summer |
+| [drenched in sweat](drenched-in-sweat.md) | phr. | 汗濕透、全身濕透 | B2 · 低頻 | 1 | 2026-07-01 | idiom, hyperbole, sweat, body, summer |
+| [brain freeze](brain-freeze.md) | n. | 大腦凍結、冰淇淋頭痛 | B1? · 低頻 | 1 | 2026-07-01 | noun, informal, body, ice-cream, summer |
+| [melt](melt.md) | v. | 融化（物理／熱／情感一字三用） | A2 · 中頻 | 1 | 2026-07-01 | verb, multi-meaning, temperature, emotion, summer |
+| [summer fling](summer-fling.md) | n. | 夏日短暫戀情（短而熱烈、不太認真） | B2 · 低頻 | 1 | 2026-07-01 | noun, romance, casual, seasonal, summer |
+| [parasol](parasol.md) | n. | 陽傘、遮陽傘 | B1? · 低頻 | 1 | 2026-07-01 | noun, sun-protection, object, french-origin, summer |
+| [beat down](beat-down.md) | phr.v. | （陽光）強烈曝曬、無情照下 | B2 · 低頻 | 1 | 2026-07-01 | phrasal-verb, sun, weather, imagery, summer |
+| [sunburned](sunburned.md) | adj. | 曬傷的 | A2 · 中頻 | 1 | 2026-07-01 | adjective, skin, sun, health, summer |
+| [summer solstice](summer-solstice.md) | n. | 夏至（一年中最長的白天） | B2 · 低頻 | 1 | 2026-07-01 | noun, astronomy, season, calendar, summer |
+| [equinox](equinox.md) | n. | 分點（春分／秋分，晝夜等長） | B2? · 低頻 | 1 | 2026-07-01 | noun, astronomy, season, calendar, latin-origin |
+| [midnight sun](midnight-sun.md) | n. | 午夜太陽、永晝（極晝） | B1? · 低頻 | 1 | 2026-07-01 | noun, geography, arctic, phenomenon, summer |
+| [socratic](socratic.md) | adj. | 蘇格拉底式的（用提問引導、非直接給答案） | C1 · 低頻 | 1 | 2026-07-01 | adjective, education, philosophy, teaching, toeic |
+| [push back](push-back.md) | phr.v. | （把…）延期、延後；反對（pushback） | B2 · 中頻 | 1 | 2026-07-01 | phrasal-verb, splittable, business, scheduling, toeic |
+| [end up](end-up.md) | phr.v. | 結果變成、最後落得 | B1 · 高頻 | 1 | 2026-07-01 | phrasal-verb, result, daily, narrative, toeic |
+| [call off](call-off.md) | phr.v. | 取消（已安排的事）；叫…停手 | B1 · 中頻 | 1 | 2026-07-01 | phrasal-verb, splittable, cancel, daily, toeic |
+| [get by](get-by.md) | phr.v. | 勉強應付、過得去 | B2 · 中頻 | 1 | 2026-07-01 | phrasal-verb, survival, money, daily, toeic |
+| [hang out](hang-out.md) | phr.v. | （和某人）閒晃、消磨時間 | A2 · 高頻 | 1 | 2026-07-01 | phrasal-verb, social, casual, high-frequency, daily |
+| [put up with](put-up-with.md) | phr.v. | 忍受、容忍 | B1 · 中頻 | 1 | 2026-07-01 | phrasal-verb, three-word, tolerance, daily, toeic |
+| [stand out](stand-out.md) | phr.v. | 顯眼、突出、跳出來 | B1 · 中頻 | 1 | 2026-07-01 | phrasal-verb, prominence, resume, daily, toeic |
+| [stack up](stack-up.md) | phr.v. | 累積、積少成多；比高下 | B2 · 低頻 | 1 | 2026-07-01 | phrasal-verb, accumulation, comparison, daily, toeic |
+| [without further ado](without-further-ado.md) | idiom | 廢話不多說、閒話休提 | B2 · 中頻 | 1 | 2026-07-01 | idiom, set-phrase, presentation, opener |
+| [get straight to the point](get-straight-to-the-point.md) | idiom | 直接切入重點、開門見山 | B1 · 中頻 | 1 | 2026-07-01 | idiom, communication, directness, daily, toeic |
+| [in one sitting](in-one-sitting.md) | idiom | 一口氣（一次做完） | B2 · 中頻 | 1 | 2026-07-01 | idiom, time, intensity, reading, daily |
+| [rock](rock.md) | v. | （自信地）頂著某造型；很棒（口語） | B2 · 中頻 | 1 | 2026-07-01 | verb, slang, fashion, casual, multi-meaning |
+| [mastery](mastery.md) | n. | 精通、嫻熟；掌控、駕馭（of＝精通技能／over＝掌控對象） | B2 · 低頻 | 1 | 2026-06-30 | noun, skill, control, toeic, formal |
+| [primer](primer.md) | n. | 入門書／入門指南；底漆；底火（一字多義＋發音分岔陷阱） | B2? · 低頻 | 1 | 2026-06-29 | noun, multi-meaning, pronunciation-trap, tech-writing, daily |
+| [Einstellung effect](einstellung-effect.md) | n. | 定勢效應；思維定勢（被舊經驗綁住、看不到更好解法） | C1? · 低頻 | 1 | 2026-06-28 | psychology, german-origin, cognition, jargon, niche |
+| [triage](triage.md) | n./v. | 檢傷分類；按輕重緩急排序處理 | B2 · 低頻 | 1 | 2026-06-28 | business, medical, process, french-origin |
+| [get to](get-to.md) | v.phr. | 有幸、得以（做好事，對比 have to） | B1 · 高頻 | 1 | 2026-06-25 | verb-phrase, privilege, contrast-with-have-to, daily, toeic |
+| [roll over to](roll-over-to.md) | phr.v. | （自動）轉到、續轉、滾存（roll to voicemail） | B2 · 低頻 | 1 | 2026-06-25 | phrasal-verb, automatic, phone, subscription, toeic |
+| [yet](yet.md) | conj./adv. | 然而；可是（轉折，≠ not yet） | B2 · 高頻 | 1 | 2026-06-25 | conjunction, contrast, connector, multi-meaning, toeic |
+| [skim](skim.md) | v. | 略讀；撇去（表面之物） | B2 · 中頻 | 1 | 2026-06-25 | verb, multi-meaning, reading-skill, toeic |
+| [divine](divine.md) | adj. | 美妙極了（口語）；神聖的 | C1 · 低頻 | 1 | 2026-06-25 | adjective, informal, intensifier, multi-meaning |
+| [couture](couture.md) | n. | 高級訂製服（時尚字） | C1 · 低頻 | 1 | 2026-06-25 | noun, fashion, french-loanword, niche |
+| [on the chopping block](on-the-chopping-block.md) | idiom | 面臨被砍；可能遭解雇或裁撤 | B2 · 低頻 | 1 | 2026-06-25 | idiom, work, layoffs, risk, vivid-language |
+| [skimmed milk](skimmed-milk.md) | n.phr. | 脫脂牛奶（美式常說 skim milk） | A2 · 中頻 | 1 | 2026-06-23 | noun-phrase, food, drink, coffee, british-vs-american |
+| [drip coffee](drip-coffee.md) | n.phr. | 滴濾咖啡 | A2? · 中頻 | 1 | 2026-06-23 | noun-phrase, coffee, drink, daily |
+| [run errands](run-errands.md) | v.phr. | 跑腿；外出辦雜事 | B1 · 中頻 | 1 | 2026-06-23 | verb-phrase, daily, work, chores, toeic |
+| [deal with it](deal-with-it.md) | phr. | 接受現實並處理；自己想辦法 | B1 · 高頻 | 1 | 2026-06-23 | phrase, conversation, conflict, informal, register-trap |
+| [figure it out](figure-it-out.md) | phr. | 自己想辦法弄懂；搞清楚 | B1 · 高頻 | 1 | 2026-06-23 | phrase, conversation, problem-solving, informal |
+| [fling](fling.md) | v./n. | 猛丟；甩；短暫戀情 | B2 · 低頻 | 1 | 2026-06-23 | verb, noun, irregular-verb, motion, informal, multi-meaning |
+| [foam](foam.md) | n./v. | 泡沫；奶泡；起泡 | B1 · 中頻 | 1 | 2026-06-23 | noun, verb, coffee, liquid, daily |
+| [man](man.md) | v. | 顧守；操作；派人駐守 | B2 · 低頻 | 1 | 2026-06-23 | verb, work, staffing, operations, multi-meaning |
+| [searing](searing.md) | adj. | 灼熱的；劇烈的；尖銳猛烈的 | C1 · 低頻 | 1 | 2026-06-23 | adjective, intensity, heat, pain, criticism |
+| [chained to](chained-to.md) | adj.phr. | 被綁在…；因責任走不開 | B2 · 低頻 | 1 | 2026-06-23 | phrase, metaphor, work, obligation, informal |
+| [on the line](on-the-line.md) | idiom | 岌岌可危；處於風險中 | B2 · 中頻 | 1 | 2026-06-23 | idiom, risk, work, reputation, toeic |
+| [swell up](swell-up.md) | phr.v. | 腫起來；膨脹；鼓起 | B2 · 低頻 | 1 | 2026-06-23 | phrasal-verb, body, medical, daily, irregular-verb |
+| [know-it-all](know-it-all.md) | n. | 自以為什麼都懂的人；萬事通（貶義） | B2 · 低頻 | 1 | 2026-06-23 | noun, personality, informal, insult-mild, compound |
+| [get even](get-even.md) | idiom | 報復；扯平；以牙還牙 | B2 · 低頻 | 1 | 2026-06-23 | idiom, revenge, conflict, informal, daily |
+| [drill](drill.md) | n./v. | 電鑽；反覆操練；演習；鑽孔 | B1 · 中頻 | 1 | 2026-06-23 | noun, verb, multi-meaning, tools, training, toeic |
+| [speedometer](speedometer.md) | n. | 時速表；速度表 | B1 · 低頻 | 1 | 2026-06-23 | noun, car, driving, instrument, ⚠️stress-trap |
+| [deposit](deposit.md) | n./v. | 押金；保證金；存款 | B1 · 中頻 | 1 | 2026-06-11 | noun, verb, travel, hotel, finance, payment |
+| [scam](scam.md) | n./v. | 詐騙；騙局 | B1 · 中頻 | 1 | 2026-06-11 | noun, verb, daily, crime, informal |
+| [lodging](lodging.md) | n. | 住宿；臨時住所（書面） | B2 · 低頻 | 1 | 2026-06-11 | noun, travel, formal |
+| [rapid-fire](rapid-fire.md) | adj. | 連珠炮式的；快速接連的 | B2 · 低頻 | 1 | 2026-06-11 | adjective, journalism, interview, compound |
+| [nail it](nail-it.md) | phr.v. | 完美搞定；做到位 | B2 · 中頻 | 1 | 2026-06-11 | phrasal-verb, informal, encouragement, daily |
+| [rinse off](rinse-off.md) | phr.v. | 沖洗乾淨；用水沖掉 | B1 · 中頻 | 1 | 2026-06-11 | phrasal-verb, daily, hygiene, travel, japan |
+| [just so you know](just-so-you-know.md) | phr. | 先跟你說一下（預防性 FYI） | B1 · 中頻 | 1 | 2026-06-11 | phrase, conversation, fyi, daily |
+| [steam room](steam-room.md) | n. | 蒸氣室 | A2 · 低頻 | 1 | 2026-06-11 | noun, travel, hotel, spa |
+| [sauna](sauna.md) | n. | 三溫暖；烤箱（乾熱） | A2 · 中頻 | 1 | 2026-06-11 | noun, travel, hotel, spa, finland |
+| [lotion](lotion.md) | n. | 乳液；護膚液 | A2 · 中頻 | 1 | 2026-06-11 | noun, daily, skincare, hotel, amenities |
+| [practically](practically.md) | adv. | 幾乎；實際上 | B2 · 中頻 | 1 | 2026-06-10 | adverb, intensifier |
+| [back in the day](back-in-the-day.md) | idiom | 以前那個年代；當年 | B2 · 中頻 | 1 | 2026-06-10 | idiom, time |
+| [moral](moral.md) | adj./n. | 道德的；（複數）道德觀 | B2 · 中頻 | 1 | 2026-06-10 | adjective, noun, values |
+| [speak one's mind](speak-ones-mind.md) | idiom | 直言不諱；說出真心話 | B2 · 低頻 | 1 | 2026-06-09 | idiom, personality, communication, daily |
+| [gossip](gossip.md) | n./v. | 八卦；說閒話 | B1 · 中頻 | 1 | 2026-06-09 | noun, verb, social, daily, uncountable |
+| [rumor](rumor.md) | n./v. | 謠言；謠傳（英式 rumour） | B1 · 中頻 | 1 | 2026-06-09 | noun, verb, social, news, british-vs-american |
+| [nasty](nasty.md) | adj. | 惡毒的；難聽的；糟糕的 | B1 · 中頻 | 1 | 2026-06-09 | adjective, emotion, multi-meaning, daily, toeic |
+| [devastated](devastated.md) | adj. | 心碎的；徹底崩潰的 | B2 · 中頻 | 1 | 2026-06-09 | adjective, emotion, intensity, daily |
+| [ill-bred](ill-bred.md) | adj. | 沒家教的；沒教養的（侮辱、老派） | C2? · 低頻 | 1 | 2026-06-09 | adjective, insult, dated, ⚠️register-trap |
+| [consent](consent.md) | n./v. | 同意；許可 | B2 · 中頻 | 1 | 2026-06-09 | noun, verb, formal, legal, modern, toeic |
+| [hands-on](hands-on.md) | adj./adv. | 親自動手的；實作的；實務型的 | B2 · 中頻 | 1 | 2026-06-01 | adjective, work, learning, toeic |
+| [look something over](look-over.md) | phr.v | 仔細看過；端詳；檢視（separable） | B1 · 中頻 | 1 | 2026-06-01 | phrasal-verb, separable, review, connected-speech |
+| [engage with](engage-with.md) | phr.v | 投入、認真接觸（內容／教材／人） | B2 · 中頻 | 1 | 2026-06-01 | phrasal-verb, learning, work, formal |
+| [debunk](debunk.md) | v. | 揭穿、戳破（不實說法／迷思） | B2 · 低頻 | 1 | 2026-06-01 | verb, news, science, modern |
+| [conspiracy](conspiracy.md) | n. | 陰謀；共謀（多用 conspiracy theory ⚠️stress） | B2 · 中頻 | 1 | 2026-06-01 | noun, news, stress-trap |
+| [exhibit](exhibit.md) | v./n. | 展示；展現（特質）；展品、證物（⚠️silent h） | B2 · 中頻 | 1 | 2026-06-01 | verb, noun, toeic, pronunciation-trap |
+| [fusion](fusion.md) | n. | 融合；結合；（物理）核融合 | B2 · 中頻 | 1 | 2026-06-01 | noun, food, music, science |
+| [sarcastic](sarcastic.md) | adj. | 諷刺的；挖苦的；酸言酸語的 | B2 · 中頻 | 1 | 2026-06-01 | adjective, tone, humor, daily |
+| [smart aleck](smart-aleck.md) | n. | 自作聰明的人；耍嘴皮子的傢伙（略過時） | C1? · 低頻 | 1 | 2026-06-01 | noun, informal, personality, dated |
+| [assemble](assemble.md) | v. | 組裝、拼裝；集合、聚集 | B2 · 中頻 | 1 | 2026-06-01 | verb, multi-meaning, toeic, work |
+| [on point](on-point.md) | idiom | 完美無瑕；精準到位（口語） | B2? · 中頻 | 1 | 2026-06-01 | idiom, slang, modern, register-trap |
+| [test the waters](test-the-waters.md) | idiom | 試水溫；先探探情況再投入 | B2 · 中頻 | 1 | 2026-06-01 | idiom, business, career, toeic |
+| [quirk](quirk.md) | n. | 怪癖；古怪的小特點（adj. quirky） | B2 · 低頻 | 1 | 2026-06-01 | noun, personality, daily |
+| [prosthetic](prosthetic.md) | adj./n. | 義肢的；（n.）義肢、人工裝置 | B2? · 低頻 | 1 | 2026-06-01 | adjective, noun, medical, film-sfx |
+| [track down](track-down.md) | phr.v. | 追查到；找出（費力尋找後找到） | B1 · 中頻 | 1 | 2026-06-01 | phrasal-verb, separable, search, toeic |
+| [terrified](terrified.md) | adj. | 嚇壞的；非常害怕的 | B1 · 中頻 | 1 | 2026-04-30 | adjective, emotion, fear |
+| [pinch](pinch.md) | v./n. | 捏；掐；偷；一小撮；困境（含三態） | B1 · 中頻 | 1 | 2026-04-30 | verb, multi-meaning, regular-verb |
+| [humorous twist](humorous-twist.md) | n.phr. | 幽默的轉折；反差萌 | B2 · 低頻 | 1 | 2026-05-02 | phrase, narrative, storytelling, ⚠️quiz-miss |
+| [hankering](hankering.md) | n. | 強烈的渴望；嘴饞 | C1 · 低頻 | 1 | 2026-05-21 | noun, desire, food, informal |
+| [cup of Joe](cup-of-joe.md) | n.phr. | 一杯咖啡（俚語） | C1? · 低頻 | 1 | 2026-05-21 | noun-phrase, slang, american, coffee |
+| [I guess so](i-guess-so.md) | phr. | 大概吧；應該吧（冷淡／不確定） | A2 · 高頻 | 1 | 2026-05-21 | phrase, conversation, hedging |
+| [switch something up](switch-something-up.md) | phr.v. | 換個方式；求新求變 | B2 · 中頻 | 1 | 2026-05-21 | phrasal-verb, change, informal |
+| [play on words](play-on-words.md) | n.phr. | 雙關語；玩文字遊戲 | B2 · 低頻 | 1 | 2026-05-21 | noun-phrase, language, humor |
+| [has nothing to do with](has-nothing-to-do-with.md) | phr. | 跟…一點關係都沒有 | B1 · 高頻 | 1 | 2026-05-23 | phrase, conversation, clarification, daily |
+| [like (discourse marker)](like-discourse-marker.md) | discourse marker | 就是…／像是…／我就：（三種用法） | B2? · 高頻 | 1 | 2026-05-23 | discourse-marker, gen-z, ⚠️register-trap |
+| [literally](literally.md) | adv. | 真的；簡直；超…（口語強調） | B2 · 高頻 | 1 | 2026-05-23 | adverb, intensifier, gen-z, multi-meaning |
+| [every single](every-single.md) | det.phr. | 每一個（零例外、加強版） | A2 · 高頻 | 1 | 2026-05-23 | determiner, intensifier, emphasis |
+| [barista](barista.md) | n. | 咖啡師 | A2? · 中頻 | 1 | 2026-05-23 | noun, occupation, italian-loanword |
+| [herbal tea](herbal-tea.md) | n.phr. | 花草茶（美音 drop H） | B1? · 中頻 | 1 | 2026-05-23 | noun-phrase, drink, british-vs-american |
+| [brilliant](brilliant.md) | adj. | 超讚的（英式俚語）；才華洋溢的 | B1 · 高頻 | 1 | 2026-05-23 | adjective, british-slang, multi-meaning |
+| [running through one's head](running-through-ones-head.md) | idiom | 想法／旋律一直在腦中循環 | B2 · 中頻 | 1 | 2026-05-23 | idiom, thought, music, daily |
+| [that's on you](thats-on-you.md) | phr. | 那是你的責任；你自找的 | B2 · 中頻 | 1 | 2026-05-23 | phrase, responsibility, casual |
+| [conceited](conceited.md) | adj. | 自負的；自視甚高 | B2 · 低頻 | 1 | 2026-05-23 | adjective, personality, tap-t |
+| [product taste](product-taste.md) | n.phr. | 產品品味；對產品好壞的直覺判斷力 | B2? · 低頻 | 1 | 2026-05-25 | product, startup, idiom-modern, work |
+| [first principles](first-principles.md) | n.phr. | 第一性原理（回到本質推理） | B2? · 低頻 | 1 | 2026-05-25 | thinking, startup, work, decision-making |
+| [amorphous](amorphous.md) | adj. | 無定形的；模糊的；邊界不清的 | C1 · 低頻 | 1 | 2026-05-25 | adjective, abstract, work, vocab-upgrade |
+| [wear many hats](wear-many-hats.md) | idiom | 身兼數職；什麼都做 | B2 · 中頻 | 1 | 2026-05-25 | idiom, work, startup, multi-role |
+| [low ego](low-ego.md) | adj.phr. | 自我意識低；不擺架子 | B2 · 低頻 | 1 | 2026-05-25 | adjective, startup, work, modern-idiom |
+| [lean into](lean-into.md) | phr.v. | 擁抱（挑戰／趨勢）；傾身投入 | B2 · 中頻 | 1 | 2026-05-25 | phrasal-verb, modern-idiom, work, attitude |
+| [grill](grill.md) | v. | 嚴厲質問；連珠炮地問（口語） | B2 · 中頻 | 1 | 2026-05-26 | verb, journalism, interview, idiomatic-extension |
+| [emerging](emerging.md) | adj. | 正在浮現的；新興的 | B2 · 中頻 | 1 | 2026-05-26 | adjective, business, trend, ⚠️easy-to-confuse |
+| [acknowledge](acknowledge.md) | v. | 承認（事實）；認可；確認收到 | B2 · 高頻 | 1 | 2026-05-26 | verb, business, communication, formal |
+| [brutally](brutally.md) | adv. | 殘酷地、毫不留情地（強化詞） | B2 · 中頻 | 1 | 2026-05-26 | adverb, intensifier, work, ⚠️collocation-restricted |
+| [stroll](stroll.md) | v./n. | 悠閒地走、漫步 | B1 · 中頻 | 1 | 2026-05-26 | verb, motion, casual, contrast-with-walk |
+| [tornado](tornado.md) | n. | 龍捲風（含 idiom on the inside of the ~） | B1 · 中頻 | 1 | 2026-05-26 | noun, weather, metaphor, idiom |
+| [demolish](demolish.md) | v. | 摧毀、拆除、徹底擊垮 | B2 · 中頻 | 1 | 2026-05-26 | verb, destruction, regular-verb, multi-meaning |
+| [mind meld](mind-meld.md) | n./v.(idiom) | 心智融合；默契超強到不需要解釋 | C1? · 低頻 | 1 | 2026-05-26 | idiom, work, nerd-culture, star-trek |
+| [AGI-pilled](agi-pilled.md) | adj.(slang) | 信 AGI 願景信到底的；對 AGI 全 in 的 | C1? · 低頻 | 1 | 2026-05-26 | adjective, slang, internet, suffix-pilled |
+| [research preview](research-preview.md) | n.phr. | 研究預覽版（產品早期 branding 策略） | B2 · 低頻 | 1 | 2026-05-26 | noun-phrase, product, startup, branding |
+| [dogfood](dogfood.md) | v. | 內部試吃；公司內部先用自家產品 | B2? · 低頻 | 1 | 2026-05-26 | verb, tech-industry, jargon, product-development |
+| [lower the friction](lower-the-friction.md) | v.phr. | 降低摩擦力（降低做某事的阻力） | B2 · 低頻 | 1 | 2026-05-26 | verb-phrase, startup, ux, process-design |
+| [rowing the same direction](rowing-the-same-direction.md) | idiom | 往同一方向划船；團隊步調一致 | B2 · 低頻 | 1 | 2026-05-26 | idiom, work, alignment, sports-metaphor |
+| [thought partner](thought-partner.md) | n.phr. | 思考夥伴；對等 brainstorm 的人 | B2 · 低頻 | 1 | 2026-05-26 | noun-phrase, work, collaboration, modern-idiom |
+| [bought in](bought-in.md) | adj.(idiom) | 買單了；被說服、認同並承諾投入 | B2 · 中頻 | 1 | 2026-05-26 | adjective, idiom, work, alignment |
+| [time horizon](time-horizon.md) | n.phr. | 時間視野；規劃／決策考慮的時間長度 | B2 · 低頻 | 1 | 2026-05-26 | noun-phrase, business, planning, formal |
+| [cut across](cut-across.md) | phr.v. | 橫跨（組織／類別／邊界）；不受限於某個區隔 | B2? · 低頻 | 1 | 2026-05-26 | phrasal-verb, business, organization, formal |
+| [kick off](kick-off.md) | phr.v. | 啟動（任務、專案、會議）；開球 | B1 · 高頻 | 1 | 2026-05-26 | phrasal-verb, work, sports, high-frequency |
+| [one-off](one-off.md) | adj./n. | 一次性的（非循環、非常態） | B2 · 中頻 | 1 | 2026-05-26 | adjective, work, frequency, british-origin |
+| [on the go](on-the-go.md) | idiom | 移動中；在路上；忙碌奔波中 | B2 · 中頻 | 1 | 2026-05-26 | idiom, daily, mobility, modern-lifestyle |
+| [touching grass](touching-grass.md) | idiom | 出去走走；離開電腦；接觸現實 | C1? · 低頻 | 1 | 2026-05-26 | idiom, slang, internet, modern, ⚠️register-trap |
+| [at-a-glance](at-a-glance.md) | adj./adv.phr. | 一眼可看的；瀏覽式的；快速概觀 | B2 · 中頻 | 1 | 2026-05-26 | adjective, compound, ui, dashboard |
+| [synthesize](synthesize.md) | v. | 綜合；統整（多個來源 → 一個輸出） | C1? · 低頻 | 1 | 2026-05-26 | verb, business, research, ai, formal |
+| [tailored](tailored.md) | adj. | 量身打造的；客製化的；剪裁合身的 | B2 · 中頻 | 1 | 2026-05-26 | adjective, business, customization, sales |
+| [inbox zero](inbox-zero.md) | n.phr. | 收件夾清零；郵件全部處理完的狀態 | B2 · 低頻 | 1 | 2026-05-26 | noun-phrase, productivity, modern-jargon |
+| [dossier](dossier.md) | n. | 情報檔；資料夾；某主題的完整檔案 | C1 · 低頻 | 1 | 2026-05-26 | noun, formal, business, french-loanword |
+| [top of mind](top-of-mind.md) | idiom | 心中最在意的；正在想的；首要 priority | B2 · 中頻 | 1 | 2026-05-26 | idiom, business, work, priority |
+| [cast a wide net](cast-a-wide-net.md) | idiom | 廣撒網；廣泛尋找資源／人選 | B2 · 低頻 | 1 | 2026-05-28 | idiom, business, networking, fishing-metaphor |
+| [pick someone's brain](pick-someones-brain.md) | idiom | 向某人請益；汲取知識（被作者反對泛用） | B2 · 中頻 | 1 | 2026-05-28 | idiom, business, networking, ⚠️overused |
+| [legwork](legwork.md) | n. | 跑腿；事前準備功夫 | B2 · 低頻 | 1 | 2026-05-28 | noun, business, work, toeic, uncountable |
+| [one pager](one-pager.md) | n. | 一頁摘要文件 | B2 · 低頻 | 1 | 2026-05-28 | noun, business, document, startup |
+| [stint](stint.md) | n./v. | （任職／工作的）一段期間；任期 | B2? · 低頻 | 1 | 2026-05-28 | noun, career, business, toeic, time-duration |
+| [opinionated](opinionated.md) | adj. | 有強烈意見的；有定見的 | B2 · 中頻 | 1 | 2026-05-29 | adjective, personality, tech-culture, work, ⚠️connotation-trap |
+| [autonomy](autonomy.md) | n. | 自主性；自主權 | B2 · 中頻 | 1 | 2026-05-29 | noun, work, business, toeic, startup, formal |
+| [in demand](in-demand.md) | adj.phr. | 搶手的；有需求的 | B2 · 中頻 | 1 | 2026-05-29 | adjective-phrase, business, toeic, market, hiring |
+| [filter out](filter-out.md) | phr.v. | 過濾掉；篩除 | B1 · 中頻 | 1 | 2026-05-29 | phrasal-verb, business, toeic, process, hiring |
+| [complimentary](complimentary.md) | adj. | 免費招待的（飯店常用） | B2 · 中頻 | 1 | 2026-05-31 | adjective, travel, hotel, toeic |
+| [amenities](amenities.md) | n.(pl.) | 備品；設施 | B2 · 中頻 | 1 | 2026-06-11 | noun, plural, travel, hotel, toeic |
+| [accommodation tax](accommodation-tax.md) | n.phr. | 住宿税（日：宿泊税） | B2 · 低頻 | 1 | 2026-05-31 | noun-phrase, travel, japan, toeic |
+| [pre-authorization](pre-authorization.md) | n. | 預先授權；暫扣 | B2 · 低頻 | 1 | 2026-05-31 | noun, travel, hotel, payment |
+| [security deposit](security-deposit.md) | n.phr. | 保證金；押金 | B1 · 中頻 | 1 | 2026-05-31 | noun-phrase, travel, hotel, payment |
+| [itemized bill](itemized-bill.md) | n.phr. | 逐項明細帳單 | B2 · 低頻 | 1 | 2026-05-31 | noun-phrase, travel, business, toeic |
+| [settle the bill](settle-the-bill.md) | v.phr. | 結清帳款；付清 | B2 · 低頻 | 1 | 2026-05-31 | verb-phrase, travel, business, toeic |
+| [late check-out](late-check-out.md) | n.phr. | 延後退房 | B1 · 中頻 | 1 | 2026-05-31 | noun-phrase, travel, hotel, toeic |
+| [luggage forwarding](luggage-forwarding.md) | n.phr. | 行李宅配（takkyubin） | B2 · 低頻 | 1 | 2026-05-31 | noun-phrase, travel, japan |
+| [wake-up call](wake-up-call.md) | n.phr. | 叫醒服務；警鐘 | B1 · 中頻 | 1 | 2026-05-31 | noun-phrase, travel, hotel, idiom |
+| [prank](prank.md) | n./v. | 惡作劇 | B1 · 中頻 | 1 | 2026-07-02 | noun, verb, humor, social, daily |
+| [jerk](jerk.md) | n./v. | 混蛋、討厭鬼；猛拉、抽動 | B1 · 中頻 | 1 | 2026-07-02 | noun, verb, insult, motion, daily |
+| [crook](crook.md) | n. | 騙子、罪犯；彎曲處、彎鉤 | B2 · 低頻 | 1 | 2026-07-02 | noun, crime, informal, body, multi-meaning |
+| [childish](childish.md) | adj. | 幼稚的、孩子氣的（貶義） | A2 · 中頻 | 1 | 2026-07-02 | adjective, emotion, insult, maturity, daily |
+| [baby](baby.md) | n. | 沒用的傢伙、玻璃心／媽寶（口語貶義） | B1? · 中頻 | 1 | 2026-07-02 | noun, insult, informal, maturity, daily |
+| [mileage](mileage.md) | n. | 里程數；效益、好處、利用價值 | B2 · 中頻 | 1 | 2026-07-02 | noun, multi-meaning, idiom, business, daily |
+| [fuse](fuse.md) | n./v. | 保險絲；引信；融合 | B2 · 低頻 | 1 | 2026-07-02 | noun, verb, multi-meaning, idiom, daily |
+| [cuisine](cuisine.md) | n. | 菜系、料理風格 | B2 · 中頻 | 1 | 2026-07-02 | noun, food, culture, french-origin, travel |
+| [fiber](fiber.md) | n. | 纖維（膳食／材質） | B1 · 中頻 | 1 | 2026-07-02 | noun, food, health, material, idiom |
+| [alpaca](alpaca.md) | n. | 羊駝 | A2 · 低頻 | 1 | 2026-07-02 | noun, animal, spanish-origin, wool, niche |
+| [metallic](metallic.md) | adj. | 金屬的、金屬質感／金屬味的 | B1 · 中頻 | 1 | 2026-07-02 | adjective, material, sensory, description, daily |
+| [effect](effect.md) | n. | 效果、影響、作用 | B1 · 高頻 | 1 | 2026-07-02 | noun, ⚠️easy-to-confuse, toeic, cause-effect, daily |
+| [scarf](scarf.md) | n./v. | 圍巾；狼吞虎嚥地吃 | A2 · 中頻 | 1 | 2026-07-02 | noun, verb, clothing, eating, informal |
+| [ingenuity](ingenuity.md) | n. | 創造力、巧思、機智 | C1? · 低頻 | 1 | 2026-07-02 | noun, ⚠️easy-to-confuse, problem-solving, toeic, positive |
+| [gadget](gadget.md) | n. | 小玩意、科技小裝置 | B1 · 中頻 | 1 | 2026-07-02 | noun, technology, informal, object, daily |
+| [pardon](pardon.md) | n./v./interj. | 原諒；赦免；你說什麼？ | B1 · 中頻 | 1 | 2026-07-02 | noun, verb, politeness, law, multi-meaning |
+| [I beg your pardon](i-beg-your-pardon.md) | phr. | 請再說一次／你說什麼（帶慍）／抱歉 | B2 · 中頻 | 1 | 2026-07-02 | phrase, politeness, tone-dependent, british, daily |
+| [be seeing somebody](be-seeing-somebody.md) | phr. | 在跟某人交往／有對象 | B2 · 中頻 | 1 | 2026-07-02 | phrase, relationship, idiom, present-continuous, daily |
+| [seem](seem.md) | v. | 似乎、看起來（是） | A2 · 高頻 | 1 | 2026-07-02 | verb, linking-verb, hedging, grammar, daily |
+| [classmate](classmate.md) | n. | 同班同學 | A2 · 中頻 | 1 | 2026-07-02 | noun, school, people, relationship, daily |
+| [coworker](coworker.md) | n. | 同事（口語、平行同事） | A2 · 中頻 | 1 | 2026-07-02 | noun, work, people, relationship, business |
+| [colleague](colleague.md) | n. | 同事（較正式、同行） | B1 · 中頻 | 1 | 2026-07-02 | noun, work, people, ⚠️easy-to-confuse, business |
+| [college](college.md) | n. | 大學／學院（美式泛指大學） | A2 · 高頻 | 1 | 2026-07-02 | noun, education, us-uk-difference, ⚠️easy-to-confuse, daily |
+| [be interested in someone](be-interested-in-someone.md) | phrase | 對某人有意思、感興趣（曖昧初期較含蓄） | B1 · 中頻 | 1 | 2026-07-03 | phrase, relationship, romance, register-neutral, daily |
+| [be into someone](be-into-someone.md) | phrase | 很喜歡、很迷某人（比 interested 更熱烈） | B1 · 中頻 | 1 | 2026-07-03 | phrase, relationship, romance, informal, daily |
+| [pick up](pick-up.md) | phr.v. | 接（人／物）；自然學會；搭訕；接電話 | B1 · 高頻 | 1 | 2026-07-03 | phrasal-verb, splittable, multi-meaning, high-frequency, daily |
+| [swag](swag.md) | n. | 自信有型的氣場；（另義）贈品、周邊 | B2? · 低頻 | 1 | 2026-07-03 | noun, slang, attitude, fashion, informal |
+| [conversational in](conversational-in.md) | adj.phr. | （某語言）能日常對話的程度 | B2 · 低頻 | 1 | 2026-07-03 | adjective-phrase, language-skill, resume, toeic, formal |
+| [zone out](zone-out.md) | phr.v. | 放空、恍神、精神不集中 | B2 · 中頻 | 1 | 2026-07-03 | phrasal-verb, intransitive, attention, informal, daily |
+| [kill it](kill-it.md) | phr.v. | 表現得超好、大成功（誇獎用語） | B2 · 中頻 | 1 | 2026-07-03 | phrasal-verb, informal, encouragement, register-trap, daily |
+| [flow state](flow-state.md) | n.phr. | 心流狀態、全神貫注忘我的狀態 | B2 · 低頻 | 1 | 2026-07-03 | noun-phrase, psychology, focus, productivity, modern |
+| [be in the zone](in-the-zone.md) | phrase | 進入超專注狀態、心流（口語版） | B2 · 中頻 | 1 | 2026-07-03 | phrase, focus, informal, sports, contrast-with-zone-out |
+| [soundcheck](soundcheck.md) | n. | 演出前的音響／設備測試（試音） | B1 · 低頻 | 1 | 2026-07-03 | noun, music, performance, live-event, daily |
+| [full-time position](full-time-position.md) | n.phr. | 全職職位（穩定薪水、福利、保障） | B1 · 中頻 | 1 | 2026-07-03 | noun-phrase, work, career, employment, toeic |
+| [teach](teach-slang.md) | n. | （稱呼用俚語）老師（像叫醫生 Doc） | C1? · 低頻 | 1 | 2026-07-03 | noun, slang, address-term, informal, occupation |
+| [where have you been](where-have-you-been.md) | idiom | 「你（怎麼現在才出現）？」——對埋沒的才華表驚訝 | B2 · 低頻 | 1 | 2026-07-03 | idiom, present-perfect, compliment, surprise, talent |
+| [take the wheel](take-the-wheel.md) | v.phr. | 接手掌控（字面：接過方向盤） | B2 · 低頻 | 1 | 2026-07-03 | verb-phrase, idiom, control, driving-metaphor, daily |
+| [canonical](canonical.md) | adj. | 公認標準的、最具代表性的；符合教規的 | C1 · 低頻 | 1 | 2026-07-24 | adjective, standard, tech-jargon, academic, formal |
+| [adjacency](adjacency.md) | n. | 相鄰、鄰接（狀態或關係） | C1 · 低頻 | 1 | 2026-07-03 | noun, business-jargon, spatial, tech-jargon, formal |
+| [sparkling water](sparkling-water.md) | n. | 氣泡水 | A2 · 中頻 | 1 | 2026-07-03 | noun, drink, daily, restaurant |
+| [carbonated drink](carbonated-drink.md) | n. | 碳酸飲料、氣泡飲料 | B1 · 中頻 | 1 | 2026-07-03 | noun, drink, daily, us-uk-difference, regional-variation |
+| [lemon](lemon.md) | n. | 檸檬；（口語）瑕疵品、故障貨 | B2 · 低頻 | 1 | 2026-07-03 | noun, food, idiom, multi-meaning, daily |
+| [consolidation](consolidation.md) | n. | 鞏固；整合、合併 | B2 · 低頻 | 1 | 2026-07-03 | noun, business-jargon, finance, cognitive-science, formal |
+| [capstone](capstone.md) | n. | 壓頂石；（比喻）巔峰之作、集大成的收尾 | C1 · 低頻 | 1 | 2026-07-12 | noun, education, career, metaphor, toeic |
+| [material](material.md) | n. | 素材、材料（泛用） | A2 · 高頻 | 1 | 2026-07-14 | noun, writing, general-purpose, multi-meaning, daily |
+| [footage](footage.md) | n. | 影片素材 | B2 · 中頻 | 1 | 2026-07-14 | noun, video, media, uncountable, daily |
+| [content](content.md) | n. | 內容素材 | B1 · 高頻 | 1 | 2026-07-14 | noun, marketing, social-media, ⚠️stress-trap, daily |
+| [source material](source-material.md) | n.phr. | 原始素材、原著素材 | B2 · 低頻 | 1 | 2026-07-14 | noun-phrase, adaptation, film, literature, formal |
+| [merchant](merchant.md) | n. | 商人、貿易商 | B2 · 中頻 | 1 | 2026-07-14 | noun, business, trade, e-commerce, daily |
+| [headed to](headed-to.md) | phr. | 前往；朝...而去 | B1 · 中頻 | 2 | 2026-04-29 | phrasal-verb, daily |
+| [cram](cram.md) | v. | 塞滿；臨時抱佛腳 | B2 · 低頻 | 2 | 2026-06-01 | verb, study, multi-meaning |
+| [keen](keen.md) | adj. | 熱衷的；敏銳的 | B2 · 中頻 | 2 | 2026-04-29 | adjective, emotion |
+| [eager](eager.md) | adj. | 渴望的；急切的 | B2 · 中頻 | 2 | 2026-04-29 | adjective, emotion |
+| [put heart and soul](put-heart-and-soul.md) | idiom | 全心全意投入 | B2 · 低頻 | 2 | 2026-04-29 | idiom, effort |
+| [haunt](haunt.md) | v./n. | 縈繞、糾纏；常去之地 | B2 · 中頻 | 2 | 2026-04-29 | verb, multi-meaning |
+| [framed](framed.md) | v./adj. | 被陷害；被裝框 | B2 · 中頻 | 2 | 2026-04-29 | verb, multi-meaning, crime |
+| [pour into](pour-into.md) | v. (idiom) | 傾注（心血、精力）於 | B2 · 中頻 | 2 | 2026-04-29 | verb, idiom, effort |
+| [sketches](sketches.md) | n. | 素描；草圖；短劇 | B1 · 中頻 | 2 | 2026-04-29 | noun, art, multi-meaning |
+| [gallery](gallery.md) | n. | 畫廊；藝廊；觀眾席 | B1 · 中頻 | 2 | 2026-04-29 | noun, art, place |
+| [pause](pause.md) | v./n. | 停頓；暫停 | A2 · 高頻 | 2 | 2026-04-29 | verb, conversation, daily |
+| [habitually](habitually.md) | adv. | 習慣性地 | B2 · 低頻 | 2 | 2026-04-29 | adverb, behavior |
+| [count on](count-on.md) | phr.v. | 信賴；指望；依靠 | B1 · 中頻 | 2 | 2026-04-30 | phrasal-verb, trust, daily |
+| [go through a rough patch](go-through-a-rough-patch.md) | idiom | 經歷一段難熬期；過得不順 | B2 · 低頻 | 2 | 2026-04-30 | idiom, hardship, daily |
+| [get through](get-through.md) | phr.v. | 撐過；熬過；（電話）打通 | B1 · 中頻 | 2 | 2026-04-30 | phrasal-verb, multi-meaning, hardship |
+| [going under](going-under.md) | v.phr. | 倒掉；沉沒；麻醉 | B2 · 低頻 | 2 | 2026-04-30 | phrasal-verb, business, idiom |
+| [stink](stink.md) | v./n. | 發臭；爛透了 | B1 · 中頻 | 2 | 2026-04-30 | verb, multi-meaning, opinion |
+| [brought up](brought-up.md) | phr.v. | 提起；撫養；嘔吐 | B1 · 中頻 | 2 | 2026-05-02 | phrasal-verb, multi-meaning, ⚠️quiz-miss×2 |
+| [in a pinch](in-a-pinch.md) | idiom | 處境困難；緊要關頭；急用時 | B2 · 低頻 | 2 | 2026-05-02 | idiom, situation, business, ⚠️quiz-miss |
+| [go all out](go-all-out.md) | phr.v. | 卯足全力 | B2 · 中頻 | 2 | 2026-05-02 | idiom, effort, ⚠️quiz-miss×2, ↓★3→2 |
+| [combat](combat.md) | n./v. | 戰鬥；對抗 | B2 · 中頻 | 3 | 2026-04-27 | military, formal |
+| [easy breezy](easy-breezy.md) | idiom | 輕鬆寫意 | C1? · 低頻 | 3 | 2026-04-28 | idiom, informal |
+| [lit up](lit-up.md) | phr.v./adj. | 點亮；臉/眼為之一亮；嗨翻 | B2 · 低頻 | 3 | 2026-04-28 | phrasal-verb, slang |
+| [incorrigible](incorrigible.md) | adj. | 無可救藥的；屢勸不改 | C2 · 低頻 | 3 | 2026-04-30 | adjective, personality, ✅quiz-hit |
+| [theatrical](theatrical.md) | adj. | 戲劇性的；誇張的 | B2? · 低頻 | 3 | 2026-04-30 | adjective, performance, ✅quiz-hit |
+| [excruciating](excruciating.md) | adj. | 極度痛苦的；難熬到極點的 | C1 · 低頻 | 3 | 2026-05-02 | adjective, intensity, ✅quiz-hit, ↑★2→3 |
+| [pitch](pitch.md) | v./n. | 推銷點子；提案 | B2 · 中頻 | 4 | 2026-04-28 | business, communication |
+| [set up](set-up.md) | phr.v. | 為…鋪路；安排；介紹；陷害 | B1 · 高頻 | 4 | 2026-04-28 | phrasal-verb |

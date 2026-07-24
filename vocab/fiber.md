@@ -3,6 +3,8 @@ word: fiber
 phonetic: /ˈfaɪbər/
 pos: n.
 zh: 纖維（膳食纖維／材質纖維）；（引申）本質、氣質
+cefr: "B1"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-02
 last_reviewed: 2026-07-02

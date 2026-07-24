@@ -3,6 +3,8 @@ word: classmate
 phonetic: /ˈklæsmeɪt/
 pos: n.
 zh: 同班同學
+cefr: "A2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-02
 last_reviewed: 2026-07-02

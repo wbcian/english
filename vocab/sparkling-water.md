@@ -3,6 +3,8 @@ word: sparkling water
 phonetic: /ˈspɑːrklɪŋ ˈwɔːtər/
 pos: n.
 zh: 氣泡水
+cefr: "A2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-03
 last_reviewed: 2026-07-03

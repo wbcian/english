@@ -3,6 +3,8 @@ word: rowing the same direction
 phonetic: /ˈroʊ.ɪŋ ðə seɪm dəˈrɛk.ʃən/
 pos: idiom
 zh: 往同一方向划船；團隊步調一致
+cefr: "B2"
+frequency: low
 proficiency: 1
 first_seen: 2026-05-26
 last_reviewed: 2026-05-26

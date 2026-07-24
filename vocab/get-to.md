@@ -3,6 +3,8 @@ word: get to
 phonetic: /ˈɡet tə/
 pos: v.phr.
 zh: 有幸、得以（做某件好事）
+cefr: "B1"
+frequency: high
 proficiency: 1
 first_seen: 2026-06-25
 last_reviewed: 2026-06-25

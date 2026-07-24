@@ -3,6 +3,8 @@ word: consolidation
 phonetic: /kənˌsɒlɪˈdeɪʃən/
 pos: n.
 zh: 鞏固；整合、合併
+cefr: "B2"
+frequency: low
 proficiency: 1
 first_seen: 2026-07-03
 last_reviewed: 2026-07-03

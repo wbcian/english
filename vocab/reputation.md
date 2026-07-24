@@ -3,6 +3,8 @@ word: reputation
 phonetic: /ˌrɛpjʊˈteɪʃən/
 pos: n
 zh: 名聲；聲譽
+cefr: "B1"
+frequency: mid
 proficiency: 1          # 1–5 ★
 first_seen: 2026-06-10
 last_reviewed: 2026-07-23

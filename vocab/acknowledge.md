@@ -3,6 +3,8 @@ word: acknowledge
 phonetic: /əkˈnɑːlɪdʒ/
 pos: v.
 zh: 承認（事實）；認可；確認收到
+cefr: "B2"
+frequency: high
 proficiency: 1
 first_seen: 2026-05-26
 last_reviewed: 2026-05-26

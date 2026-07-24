@@ -3,6 +3,8 @@ word: get through
 phonetic: /ɡɛt θruː/
 pos: phr.v.
 zh: 撐過；熬過；（電話）打通；（訊息）傳達到
+cefr: "B1"
+frequency: mid
 proficiency: 2
 first_seen: 2026-04-30
 last_reviewed: 2026-04-30

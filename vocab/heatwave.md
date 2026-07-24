@@ -3,6 +3,8 @@ word: heatwave
 phonetic: /ˈhiːtweɪv/
 pos: n
 zh: 熱浪（持續數日、比平常熱很多）
+cefr: "B1"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-01
 last_reviewed: 2026-07-01

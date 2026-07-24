@@ -3,6 +3,8 @@ word: swell up
 phonetic: /swɛl ʌp/
 pos: phr.v.
 zh: 腫起來；膨脹；鼓起
+cefr: "B2"
+frequency: low
 proficiency: 1          # 1–5 ★
 first_seen: 2026-06-23
 last_reviewed: 2026-06-23

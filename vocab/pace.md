@@ -3,6 +3,8 @@ word: pace
 phonetic: /peɪs/
 pos: n./v.
 zh: 步調、速度；（v.）踱步
+cefr: "B1"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-24
 last_reviewed: 2026-07-24

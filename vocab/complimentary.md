@@ -3,6 +3,8 @@ word: complimentary
 phonetic: /ˌkɒmplɪˈmentəri/
 pos: adj
 zh: 免費招待的
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-05-31
 last_reviewed: 2026-05-31

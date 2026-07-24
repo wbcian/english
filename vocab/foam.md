@@ -3,6 +3,8 @@ word: foam
 phonetic: /foʊm/
 pos: n./v.
 zh: 泡沫；奶泡；起泡
+cefr: "B1"
+frequency: mid
 proficiency: 1
 first_seen: 2026-06-23
 last_reviewed: 2026-06-23

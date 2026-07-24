@@ -3,6 +3,8 @@ word: swag
 phonetic: /swæɡ/
 pos: n.
 zh: 自信有型的氣場、很潮的態度；（另義）贈品、周邊
+cefr: "B2?"
+frequency: low
 proficiency: 1
 first_seen: 2026-07-03
 last_reviewed: 2026-07-03

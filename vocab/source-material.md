@@ -3,6 +3,8 @@ word: source material
 phonetic: /sɔːrs məˈtɪriəl/
 pos: n.phr.
 zh: 原始素材、原著素材
+cefr: "B2"
+frequency: low
 proficiency: 1
 first_seen: 2026-07-14
 last_reviewed: 2026-07-14

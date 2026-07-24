@@ -3,6 +3,8 @@ word: sweating buckets
 phonetic: /ˈswetɪŋ ˈbʌkɪts/
 pos: phr
 zh: 滿頭大汗、汗如雨下
+cefr: "B2"
+frequency: low
 proficiency: 1
 first_seen: 2026-07-01
 last_reviewed: 2026-07-01

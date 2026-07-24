@@ -3,6 +3,8 @@ word: moral
 phonetic: /ˈmɔːrəl/
 pos: adj/n
 zh: 道德的；（複數）道德觀
+cefr: "B2"
+frequency: mid
 proficiency: 1          # 1–5 ★
 first_seen: 2026-06-10
 last_reviewed: 2026-06-10

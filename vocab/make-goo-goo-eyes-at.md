@@ -3,6 +3,8 @@ word: make goo-goo eyes at someone
 phonetic: /ˌɡuː ɡuː ˈaɪz/
 pos: phrase
 zh: 對某人拋媚眼、含情脈脈放電（俏皮、略復古）
+cefr: "C1?"
+frequency: low
 proficiency: 1
 first_seen: 2026-07-06
 last_reviewed: 2026-07-06

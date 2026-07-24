@@ -3,6 +3,8 @@ word: relocation
 phonetic: /ˌriːloʊˈkeɪʃən/
 pos: n.
 zh: 搬遷；遷移；調職搬家
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-23
 last_reviewed: 2026-07-23

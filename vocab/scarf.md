@@ -3,6 +3,8 @@ word: scarf
 phonetic: /skɑːrf/
 pos: n./v.
 zh: 圍巾；（口語動詞）狼吞虎嚥地吃掉
+cefr: "A2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-02
 last_reviewed: 2026-07-02

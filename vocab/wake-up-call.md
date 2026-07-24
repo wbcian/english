@@ -3,6 +3,8 @@ word: wake-up call
 phonetic: /ˈweɪk ʌp kɔːl/
 pos: n. phr.
 zh: 叫醒服務；（比喻）警鐘
+cefr: "B1"
+frequency: mid
 proficiency: 1
 first_seen: 2026-05-31
 last_reviewed: 2026-05-31

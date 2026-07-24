@@ -3,6 +3,8 @@ word: get straight to the point
 phonetic: /ˌɡɛt ˌstreɪt tə ðə ˈpɔɪnt/
 pos: idiom
 zh: 直接切入重點、開門見山
+cefr: "B1"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-01
 last_reviewed: 2026-07-01

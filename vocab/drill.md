@@ -3,6 +3,8 @@ word: drill
 phonetic: /drɪl/
 pos: n./v.
 zh: 電鑽、鑽頭（n.）；反覆操練、演習（n./v.）；鑽孔（v.）
+cefr: "B1"
+frequency: mid
 proficiency: 1          # 1–5 ★
 first_seen: 2026-06-23
 last_reviewed: 2026-06-23

@@ -3,6 +3,8 @@ word: rock
 phonetic: /rɑːk/
 pos: v.
 zh: （自信地）穿戴／頂著某造型；很厲害、很棒（口語）
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-01
 last_reviewed: 2026-07-01

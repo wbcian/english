@@ -3,6 +3,8 @@ word: thought partner
 phonetic: /θɔːt ˈpɑːrt.nɚ/
 pos: n. phr.
 zh: 思考夥伴；可以一起 brainstorm、辯論、互相磨想法的人
+cefr: "B2"
+frequency: low
 proficiency: 1
 first_seen: 2026-05-26
 last_reviewed: 2026-05-26

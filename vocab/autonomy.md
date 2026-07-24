@@ -3,6 +3,8 @@ word: autonomy
 phonetic: /ɔːˈtɒnəmi/
 pos: n. (uncountable)
 zh: 自主性；自主權
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-05-29
 last_reviewed: 2026-05-29

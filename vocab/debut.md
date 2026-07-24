@@ -3,6 +3,8 @@ word: debut
 phonetic: /deɪˈbjuː/
 pos: n./adj./v.
 zh: 首度亮相；處女作；初次登場
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-23
 last_reviewed: 2026-07-23

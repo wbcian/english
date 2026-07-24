@@ -3,6 +3,8 @@ word: growth phase
 phonetic: /ɡroʊθ feɪz/
 pos: n.phr.
 zh: 成長期（產品／公司快速擴張的階段）
+cefr: "B2"
+frequency: low
 proficiency: 1
 first_seen: 2026-07-21
 last_reviewed: 2026-07-21

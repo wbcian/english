@@ -3,6 +3,8 @@ word: carbonated drink
 phonetic: /ˈkɑːrbəneɪtɪd drɪŋk/
 pos: n.
 zh: 碳酸飲料、氣泡飲料（通常隱含有糖有調味）
+cefr: "B1"
+frequency: mid
 proficiency: 1
 first_seen: 2026-07-03
 last_reviewed: 2026-07-03

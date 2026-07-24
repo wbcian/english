@@ -3,6 +3,8 @@ word: skimmed milk
 phonetic: /skɪmd mɪlk/
 pos: n.phr.
 zh: 脫脂牛奶
+cefr: "A2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-06-23
 last_reviewed: 2026-06-23

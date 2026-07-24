@@ -3,6 +3,8 @@ word: inbox zero
 phonetic: /ˈɪn.bɑːks ˈziː.roʊ/
 pos: n. phr.
 zh: 收件夾清零；郵件全部處理完的狀態
+cefr: "B2"
+frequency: low
 proficiency: 1
 first_seen: 2026-05-26
 last_reviewed: 2026-05-26

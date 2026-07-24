@@ -3,6 +3,8 @@ word: dossier
 phonetic: /ˈdɔːs.i.eɪ/ (US) /ˈdɒs.i.eɪ/ (UK)
 pos: n.
 zh: 情報檔；資料夾；某主題的完整檔案
+cefr: "C1"
+frequency: low
 proficiency: 1
 first_seen: 2026-05-26
 last_reviewed: 2026-05-26

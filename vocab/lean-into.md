@@ -3,6 +3,8 @@ word: lean into
 phonetic: /liːn ˈɪntə/
 pos: phr. v.
 zh: 擁抱（挑戰／趨勢）；傾身投入；不迴避
+cefr: "B2"
+frequency: mid
 proficiency: 1
 first_seen: 2026-05-25
 last_reviewed: 2026-05-25

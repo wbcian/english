@@ -3,6 +3,8 @@ word: smart aleck
 phonetic: /ˌsmɑːrt ˈælɪk/
 pos: n
 zh: 自作聰明的人；耍嘴皮子的傢伙
+cefr: "C1?"
+frequency: low
 proficiency: 1          # 1–5 ★
 first_seen: 2026-06-01
 last_reviewed: 2026-06-01

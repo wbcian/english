@@ -3,6 +3,8 @@ word: mind meld
 phonetic: /maɪnd mɛld/
 pos: n. / v. (idiom)
 zh: 心智融合；默契超強到不需要解釋
+cefr: "C1?"
+frequency: low
 proficiency: 1
 first_seen: 2026-05-26
 last_reviewed: 2026-05-26

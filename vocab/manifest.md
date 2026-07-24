@@ -3,6 +3,8 @@ word: manifest
 phonetic: /ˈmænɪfest/
 pos: v
 zh: 顯化（把願望招來）；顯現；（adj.）明顯的
+cefr: "B2?"
+frequency: mid
 proficiency: 1
 first_seen: 2026-05-21
 last_reviewed: 2026-07-23
