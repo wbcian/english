@@ -8,49 +8,14 @@ const { frequency } = Astro.props;
 const info = FREQUENCY_INFO[frequency];
 ---
 
-<span class="freq-badge" data-freq={frequency} title={info.goal}>
-  <span class="freq-dots" aria-hidden="true"></span>
-  {info.zh}
-</span>
+<span class="freq-badge" title={info.goal}>{info.zh}</span>
 
 <style>
-  /* 刻意做成與 LevelBadge 不同的視覺語言（實心點 + 灰底），讓兩個 badge
-     並排時一眼分得出「難度」和「常見度」是兩件事，而不是同一種分級。 */
+  /* 刻意保持樸素：常見度是輔助資訊，難度 badge 才是視覺重點。所以不給底色、
+     不加粗、不用顏色分級——純文字一個詞就夠讀。 */
   .freq-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    padding: 2px 9px;
-    border-radius: 999px;
-    background: var(--card-border);
     color: var(--fg-muted);
     font-size: 0.85em;
-    font-weight: 600;
-    line-height: 1.5;
     white-space: nowrap;
   }
-
-  /* 三格裡填滿幾顆＝多常見。tier 只靠點數表達，不靠顏色（色盲友善）。
-     宣告幾個 --dot 就畫幾顆；position 三格共用，所以點永遠對齊同一組欄位。 */
-  .freq-dots {
-    --dot: radial-gradient(circle, currentColor 50%, transparent 52%);
-    display: inline-block;
-    width: 1.6em;
-    height: 0.45em;
-    background-repeat: no-repeat;
-    background-size: 0.45em 0.45em;
-    background-position: 0 0, 0.58em 0, 1.16em 0;
-  }
-  .freq-badge[data-freq='high'] .freq-dots {
-    background-image: var(--dot), var(--dot), var(--dot);
-  }
-  .freq-badge[data-freq='mid'] .freq-dots {
-    background-image: var(--dot), var(--dot);
-  }
-  .freq-badge[data-freq='low'] .freq-dots {
-    background-image: var(--dot);
-  }
-
-  /* 刻意「不」給每個 tier 專屬顏色：Layout.astro 的色彩規範裡 CEFR 色階是唯一
-     的多色例外，再加一套會讓兩個 badge 看起來像同一種分級。tier 全靠點數表達。 */
 </style>
