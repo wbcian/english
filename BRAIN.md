@@ -9,9 +9,11 @@
 - 詳細 Profile → [PROFILE.md](PROFILE.md)
 
 ## 快照（隨更新同步）
-- 已收錄單字：276
+- 已收錄單字：276（**全部標了 `cefr` + `frequency` 雙軸**）
 - 5★ 精熟：0　 3–4★ 學習中：8　 1–2★ 新／脆弱：268
-- 最近活動日期：2026-07-24（📚 **單字批次練習：solid / pace / partway / work on it ＋複習 canonical**——Cian 連續丟自撰句子與單字問意思，批次存檔。新增 **solid**（穩固可靠，⚠️多義字：物理固體 vs 口語「沒問題」）、**pace**（步調/速度，`at your own pace`／`keep pace with`）、**partway**（走到一半，`partway through + N`，對比 halfway）、**work on it**（處理／努力改善，`work on + N`）。**複習 canonical**（★1 rc1→2，正確回想出用法）。全新字 ★1，雙語 karaoke 例句＋ `_index` 同步。詞庫 272→**276**）
+- CEFR 分佈：A2 22 · B1 70 · B2 156 · C1 26 · C2 2　｜　常見度：高頻 25 · 中頻 141 · 低頻 110　｜　41 字帶 `?`（估計/邊界）
+- 最近活動日期：2026-07-24（▶️ **單字雙軸分級：全庫 backfill `cefr` + `frequency` ＋ app 顯示**——Cian 要求「單字問答與紀錄同時標常見度與級別」，選定 **CEFR** 當級別標準（與 lesson `level` 同一把尺，不另立標準）。定義寫進 [`reference/cefr-leveling-process.md` §8](reference/cefr-leveling-process.md)：`cefr`（要多好才會用）與 `frequency`（實際多常遇到）是**兩條獨立的軸**，四象限都存在（`alpaca` A2+低頻 vs `acknowledge` B2+高頻），交叉後才決定一個字要練到「主動會用」還是「看懂就好」；判斷型估計故沒把握一律標 `?`。既有 276 字由**單一 assessor agent 在同一 context** 一次評完（照 §5B「同一把尺才不會飄」），錨點字全部落回定義位置（`role`→B1、`acknowledge`→B2、`incorrigible`→C2）；套用後 SSOT ↔ `_index` parity 0 mismatch。app 端：清單與單字卡都顯示兩個 badge（CEFR 沿用既有 `LevelBadge` 色階、常見度用**點數**表達 3/2/1 顆＝色盲友善且不違反 `Layout.astro`「CEFR 是唯一多色例外」的規範），單字卡另有「難度／常見度」兩行白話說明。`?` 照實顯示不抹掉。frontmatter 改動**未汙染任何音檔 hash**（manifest 21 筆新增、**0 筆修改**）。`/simplify` 修 10 項（schema `.transform` 讓解析只做一次、CEFR 文法與 hedge 說明各收斂成單一來源、刪 6 個違反設計系統的色碼）。詞庫維持 **276**）
+- 上一活動日期：2026-07-24（📚 **單字批次練習：solid / pace / partway / work on it ＋複習 canonical**——Cian 連續丟自撰句子與單字問意思，批次存檔。新增 **solid**（穩固可靠，⚠️多義字：物理固體 vs 口語「沒問題」）、**pace**（步調/速度，`at your own pace`／`keep pace with`）、**partway**（走到一半，`partway through + N`，對比 halfway）、**work on it**（處理／努力改善，`work on + N`）。**複習 canonical**（★1 rc1→2，正確回想出用法）。全新字 ★1，雙語 karaoke 例句＋ `_index` 同步。詞庫 272→**276**）
 - 上一活動日期：2026-07-23（▶️ **App：MARGINALIA 寬螢幕書卷版面（pilot 只上 Forget Me Not 這一篇）**——大螢幕（≥1024px）把每個 `## section` 變 `[ margin rail 236px | 正文 well ≤64ch | gutter ]` 書框、全出血分頁線＋✿、folio＋章節標籤在 rail；輔助教材搬進右側 rail——TOEIC 關鍵字 chips、可折疊測驗答案、Sentence Anatomy 編號邊註、Coach Max 署名邊註；表格與 Close Reading 兩軌橫跨整版、窄螢幕退回內容優先單欄。流程：**先問 Cian 裁 Full vs Lite→選 Full**（核准的 mockup）、**計畫先過 codex 共識 review（2 輪 APPROVE、修掉 4 條 BLOCKING）**。核心＝新 rehype `app/src/rehype/inject-marginalia.mjs`（gate `wide_layout: marginalia`、**relocation-only**、註冊在最後）＋ `app/src/styles/marginalia.css`：rail 內容一律用**非-blockquote `[!type]` marker**（避開 `generate-audio.collectSpeakable` 的 blockquote-only 抽取 → 英文例句不被 hash）、CSS 由 plugin **inline 注入該篇 content**（不碰 `Layout.astro` 全域 CSS → 其餘頁 asset URL 不變）。**其餘 24 課＋全部 vocab byte-for-byte 不變＋零音檔重生**（baseline 前後全 dist HTML SHA-256 逐檔比對＝只 pilot 變、`generated=0`、manifest／mp3／sidecar SHA 全等）；`astro check` 0 error、live 數值全驗＋兩軌點播真 mp3 206；`/simplify` 純重構（pilot HTML byte 不變）。詳見 [ACTIVITY.md](ACTIVITY.md)、[`lessons/_conventions.md` §5.7](lessons/_conventions.md)）
 - 上一活動日期：2026-07-23（📚 **新增單字：role**——Cian 問面試開場句 "What are you looking for in your next role?" 裡 role 的意思。重點是「職位/職務」的正式說法（比 job 文雅、面試履歷常用），招牌句型 `in your next role`；⚠️ 同音字 `roll` 別搞混。★1，雙語 karaoke 例句＋ `_index` 同步。詞庫 271→**272**）
 - 上一活動日期：2026-07-23（📚 **新增 2 字：turnover / stall**——Cian 貼一段自撰職場英文問「turnover」與「stall as a result」的意思。新增 **turnover**（人員流動率／離職率，⚠️多義字：HR 語境 vs 財務語境的營業額）與 **stall**（停滯不前、卡住不動；本義引擎熄火拋錨），順帶講解 **as a result** 連接語串因果句。全 ★1，雙語 karaoke 例句＋ `_index` 同步。詞庫 269→**271**）
@@ -102,6 +104,8 @@ word: mockingly
 phonetic: /ˈmɑːkɪŋli/
 pos: adv
 zh: 嘲弄地
+cefr: C1               # A1–C2；不確定加 ? （如 "C1?"）。判準見 cefr-leveling-process.md §8
+frequency: low         # high | mid | low —— 實際多常遇到，與 cefr 獨立
 proficiency: 2          # 1–5 ★
 first_seen: 2026-04-15
 last_reviewed: 2026-04-27
