@@ -6,6 +6,12 @@
 
 | 單字 | 詞性 | 中文 | ★ | 上次複習 | tags |
 |---|---|---|---|---|---|
+| [fire away](fire-away.md) | phr. | 儘管問吧、你說吧 | 1 | 2026-07-24 | phrase, idiom, conversation, permission, british, toeic |
+| [ring someone back](ring-someone-back.md) | phr.v. | 回電給某人 | 1 | 2026-07-24 | phrasal-verb, british, phone, daily, toeic, separable |
+| [hound](hound.md) | n./v. | 獵犬；（v.）緊追不捨地騷擾 | 1 | 2026-07-24 | noun, verb, animal, media, multi-meaning, metaphor |
+| [put someone on the spot](put-someone-on-the-spot.md) | v.phr. | 讓某人當場下不了台、被將一軍 | 1 | 2026-07-24 | idiom, business, work, social, pressure, toeic |
+| [right off the bat](right-off-the-bat.md) | idiom | 一開頭就、劈頭第一件事 | 1 | 2026-07-24 | idiom, american, sports-origin, business, toeic, time |
+| [come over someone](come-over-someone.md) | phr.v. | （情緒／衝動）突然襲上某人心頭 | 1 | 2026-07-24 | phrasal-verb, emotion, apology, daily, multi-meaning |
 | [solid](solid.md) | adj. | 穩固可靠的、沒問題的；固體的 | 1 | 2026-07-24 | adjective, daily, business, multi-meaning, toeic |
 | [pace](pace.md) | n./v. | 步調、速度；（v.）踱步 | 1 | 2026-07-24 | noun, verb, daily, work, toeic |
 | [partway](partway.md) | adv. | 走到一半、進行到一部分 | 1 | 2026-07-24 | adverb, daily, progress |
