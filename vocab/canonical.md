@@ -5,8 +5,8 @@ pos: adj.
 zh: 公認標準的、最具代表性的；（宗教）符合教規的、正典的
 proficiency: 1
 first_seen: 2026-07-03
-last_reviewed: 2026-07-03
-review_count: 1
+last_reviewed: 2026-07-24
+review_count: 2
 tags: [adjective, standard, tech-jargon, academic, formal]
 source: "user requested vocab"
 ---
@@ -31,3 +31,4 @@ standard, definitive, authoritative, official
 
 ## Encounters
 - 2026-07-03 — first learned (user requested vocab)
+- 2026-07-24 — reviewed (Cian re-asked in conversation, recalled correctly)

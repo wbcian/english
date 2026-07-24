@@ -6,6 +6,10 @@
 
 | 單字 | 詞性 | 中文 | ★ | 上次複習 | tags |
 |---|---|---|---|---|---|
+| [solid](solid.md) | adj. | 穩固可靠的、沒問題的；固體的 | 1 | 2026-07-24 | adjective, daily, business, multi-meaning, toeic |
+| [pace](pace.md) | n./v. | 步調、速度；（v.）踱步 | 1 | 2026-07-24 | noun, verb, daily, work, toeic |
+| [partway](partway.md) | adv. | 走到一半、進行到一部分 | 1 | 2026-07-24 | adverb, daily, progress |
+| [work on it](work-on-it.md) | phr.v. | 處理、著手做；努力改善 | 1 | 2026-07-24 | phrasal-verb, daily, business, improvement |
 | [role](role.md) | n. | 職位、職務；角色 | 1 | 2026-07-23 | noun, career, interview, business, toeic, ⚠️homophone-roll |
 | [turnover](turnover.md) | n. | 人員流動率；離職率（財務語境則指營業額） | 1 | 2026-07-23 | noun, business, hr, multi-meaning, toeic |
 | [stall](stall.md) | v. | 停滯不前；卡住不動；（引擎）熄火拋錨 | 1 | 2026-07-23 | verb, business, metaphor, progress, toeic |
@@ -238,7 +242,7 @@
 | [teach](teach-slang.md) | n. | （稱呼用俚語）老師（像叫醫生 Doc） | 1 | 2026-07-03 | noun, slang, address-term, informal, occupation |
 | [where have you been](where-have-you-been.md) | idiom | 「你（怎麼現在才出現）？」——對埋沒的才華表驚訝 | 1 | 2026-07-03 | idiom, present-perfect, compliment, surprise, talent |
 | [take the wheel](take-the-wheel.md) | v.phr. | 接手掌控（字面：接過方向盤） | 1 | 2026-07-03 | verb-phrase, idiom, control, driving-metaphor, daily |
-| [canonical](canonical.md) | adj. | 公認標準的、最具代表性的；符合教規的 | 1 | 2026-07-03 | adjective, standard, tech-jargon, academic, formal |
+| [canonical](canonical.md) | adj. | 公認標準的、最具代表性的；符合教規的 | 1 | 2026-07-24 | adjective, standard, tech-jargon, academic, formal |
 | [adjacency](adjacency.md) | n. | 相鄰、鄰接（狀態或關係） | 1 | 2026-07-03 | noun, business-jargon, spatial, tech-jargon, formal |
 | [sparkling water](sparkling-water.md) | n. | 氣泡水 | 1 | 2026-07-03 | noun, drink, daily, restaurant |
 | [carbonated drink](carbonated-drink.md) | n. | 碳酸飲料、氣泡飲料 | 1 | 2026-07-03 | noun, drink, daily, us-uk-difference, regional-variation |
