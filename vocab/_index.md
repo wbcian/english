@@ -6,6 +6,12 @@
 
 | 單字 | 詞性 | 中文 | 級別 | ★ | 上次複習 | tags |
 |---|---|---|---|---|---|---|
+| [fire away](fire-away.md) | phr. | 儘管問吧、你說吧 | B2 · 中頻 | 1 | 2026-07-24 | phrase, idiom, conversation, permission, british, toeic |
+| [ring someone back](ring-someone-back.md) | phr.v. | 回電給某人 | B1 · 中頻 | 1 | 2026-07-24 | phrasal-verb, british, phone, daily, toeic, separable |
+| [hound](hound.md) | n./v. | 獵犬；（v.）緊追不捨地騷擾 | B2 · 低頻 | 1 | 2026-07-24 | noun, verb, animal, media, multi-meaning, metaphor |
+| [put someone on the spot](put-someone-on-the-spot.md) | v.phr. | 讓某人當場下不了台、被將一軍 | B2 · 中頻 | 1 | 2026-07-24 | idiom, business, work, social, pressure, toeic |
+| [right off the bat](right-off-the-bat.md) | idiom | 一開頭就、劈頭第一件事 | B2 · 中頻 | 1 | 2026-07-24 | idiom, american, sports-origin, business, toeic, time |
+| [come over someone](come-over-someone.md) | phr.v. | （情緒／衝動）突然襲上某人心頭 | B2 · 低頻 | 1 | 2026-07-24 | phrasal-verb, emotion, apology, daily, multi-meaning |
 | [dismayed](dismayed.md) | adj. | 錯愕的、沮喪的、傻眼的 | C1 · 低頻 | 1 | 2026-07-24 | adjective, emotion, formal, ⚠️passive-only |
 | [utterly](utterly.md) | adv. | 徹底地、完全地 | C1 · 中頻 | 1 | 2026-07-24 | adverb, intensifier, ⚠️collocation-restricted |
 | [colonial power](colonial-power.md) | n.phr. | 殖民強權、宗主國 | B2 · 低頻 | 1 | 2026-07-24 | noun-phrase, history, news, ⚠️stress-shift |
