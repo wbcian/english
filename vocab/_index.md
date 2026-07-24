@@ -6,6 +6,11 @@
 
 | 單字 | 詞性 | 中文 | 級別 | ★ | 上次複習 | tags |
 |---|---|---|---|---|---|---|
+| [dismayed](dismayed.md) | adj. | 錯愕的、沮喪的、傻眼的 | C1 · 低頻 | 1 | 2026-07-24 | adjective, emotion, formal, ⚠️passive-only |
+| [utterly](utterly.md) | adv. | 徹底地、完全地 | C1 · 中頻 | 1 | 2026-07-24 | adverb, intensifier, ⚠️collocation-restricted |
+| [colonial power](colonial-power.md) | n.phr. | 殖民強權、宗主國 | B2 · 低頻 | 1 | 2026-07-24 | noun-phrase, history, news, ⚠️stress-shift |
+| [in a negative light](in-a-negative-light.md) | phr. | 以負面的角度、把…講得很難聽 | B2 · 中頻 | 1 | 2026-07-24 | phrase, media, interview, ⚠️collocation-trap |
+| [fester](fester.md) | v. | 化膿；（問題、情緒）鬱積惡化 | C1 · 低頻 | 1 | 2026-07-24 | verb, emotion, metaphor, ⚠️intransitive |
 | [solid](solid.md) | adj. | 穩固可靠的、沒問題的；固體的 | B1 · 高頻 | 1 | 2026-07-24 | adjective, daily, business, multi-meaning, toeic |
 | [pace](pace.md) | n./v. | 步調、速度；（v.）踱步 | B1 · 中頻 | 1 | 2026-07-24 | noun, verb, daily, work, toeic |
 | [partway](partway.md) | adv. | 走到一半、進行到一部分 | B1? · 低頻 | 1 | 2026-07-24 | adverb, daily, progress |
