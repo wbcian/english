@@ -1,6 +1,10 @@
 ---
 import { getCollection, render, type CollectionEntry } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
+import LevelBadge from '../../components/LevelBadge.astro';
+import FrequencyBadge from '../../components/FrequencyBadge.astro';
+import { CEFR_HEDGE_NOTE, CEFR_INFO } from '../../data/cefr';
+import { FREQUENCY_INFO } from '../../data/frequency';
 
 export async function getStaticPaths() {
   const entries = await getCollection('vocab');
@@ -11,7 +15,7 @@ type Props = { entry: CollectionEntry<'vocab'> };
 const { entry } = Astro.props as Props;
 const { Content } = await render(entry);
 const {
-  word, phonetic, pos, zh, proficiency,
+  word, phonetic, pos, zh, cefr, frequency, proficiency,
   first_seen, last_reviewed, review_count, tags, source,
 } = entry.data;
 
@@ -30,10 +34,29 @@ const firstSeen = first_seen?.toISOString().slice(0, 10);
       <h1 class="word speakable-word">{word}</h1>
       {phonetic && <span class="phonetic">{phonetic}</span>}
       {pos && <span class="pos">{pos}</span>}
+      {(cefr || frequency) && (
+        <span class="badges">
+          {cefr && <LevelBadge level={cefr.level} hedged={cefr.hedged} />}
+          {frequency && <FrequencyBadge frequency={frequency} />}
+        </span>
+      )}
       <p class="zh">{zh}</p>
     </header>
 
     <dl class="meta">
+      {cefr && (
+        <>
+          <dt>級別</dt>
+          <dd>
+            {/* 兩條軸分行寫。擠成一行時 CEFR 的白話和常見度的白話會黏成一串看不懂 */}
+            <span class="axis"><span class="axis-label">難度</span>{CEFR_INFO[cefr.level].zh}</span>
+            {frequency && (
+              <span class="axis"><span class="axis-label">常見度</span>{FREQUENCY_INFO[frequency].goal}</span>
+            )}
+            {cefr.hedged && <span class="hedge-note">{CEFR_HEDGE_NOTE}</span>}
+          </dd>
+        </>
+      )}
       {proficiencyStars && (
         <>
           <dt>熟練度</dt>
@@ -94,22 +117,44 @@ const firstSeen = first_seen?.toISOString().slice(0, 10);
     font-family: ui-monospace, SFMono-Regular, monospace;
     font-size: 1.1rem;
   }
+  /* .badges 跟著 .pos 走同一條基線，讓 word / 音標 / 詞性 / 難度 badge 排成一列 */
+  .pos,
+  .badges {
+    margin-left: 10px;
+    vertical-align: 0.25em;
+  }
   .pos {
     background: var(--pill-bg);
     color: var(--pill-fg);
     padding: 2px 8px;
     border-radius: 999px;
     font-size: 0.78em;
-    margin-left: 10px;
-    vertical-align: 0.25em;
     letter-spacing: 0.04em;
     text-transform: lowercase;
+  }
+  .badges {
+    display: inline-flex;
+    gap: 6px;
   }
   .zh {
     font-size: 1.15em;
     color: var(--fg);
     margin: 8px 0 0;
     font-weight: 500;
+  }
+  .axis { display: block; }
+  .axis-label,
+  .hedge-note {
+    color: var(--fg-muted);
+    font-size: 0.88em;
+  }
+  .axis-label {
+    display: inline-block;
+    min-width: 4em;
+  }
+  .hedge-note {
+    display: block;
+    margin-top: 2px;
   }
   .meta {
     display: grid;

@@ -1,5 +1,7 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
+import { CEFR_RAW_PATTERN, parseCefr } from './data/cefr';
+import { FREQUENCY_TIERS } from './data/frequency';
 
 const lessons = defineCollection({
   loader: glob({ pattern: '[!_]*.md', base: '../lessons' }),
@@ -43,6 +45,13 @@ const vocab = defineCollection({
     phonetic: z.string().optional(),
     pos: z.string().optional(),
     zh: z.string(),
+    // 單字難度：要多好的程度才會用。判斷型估計，非官方詞表查表——結尾 `?` = 邊界/沒把握。
+    // 判準、錨點與 `?` 規則見 reference/cefr-leveling-process.md §8
+    // 在 schema 層就解析成 { level, hedged }：消費端拿到的一律是拆好的值，不會有
+    // 哪個呼叫端忘了處理 `?` 而把 "B2?" 當級別代碼直接印出去。
+    cefr: z.string().regex(CEFR_RAW_PATTERN).transform(parseCefr).optional(),
+    // 實際多常遇到，與 cefr 獨立（簡單但罕見 vs 難但天天用都存在）
+    frequency: z.enum(FREQUENCY_TIERS).optional(),
     proficiency: z.number().optional(),
     first_seen: z.coerce.date().optional(),
     last_reviewed: z.coerce.date().optional(),

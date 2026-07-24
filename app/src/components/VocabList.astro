@@ -1,5 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import LevelBadge from './LevelBadge.astro';
+import FrequencyBadge from './FrequencyBadge.astro';
 
 interface Props {
   entries: CollectionEntry<'vocab'>[];
@@ -27,7 +29,7 @@ const searchIndex = entries.map((e) => ({
   <script type="application/json" class="vocab-search-data" set:html={JSON.stringify(searchIndex)} is:inline />
   <ul class="vocab-list">
     {entries.map((entry) => {
-      const { word, phonetic, pos, zh, proficiency, last_reviewed } = entry.data;
+      const { word, phonetic, pos, zh, cefr, frequency, proficiency, last_reviewed } = entry.data;
       const stars = typeof proficiency === 'number'
         ? '★'.repeat(Math.min(5, proficiency)) + '☆'.repeat(Math.max(0, 5 - proficiency))
         : '☆☆☆☆☆';
@@ -40,6 +42,8 @@ const searchIndex = entries.map((e) => ({
               <span class="word speakable-word">{word}</span>
               {phonetic && <span class="phonetic">{phonetic}</span>}
               {pos && <span class="pos">{pos}</span>}
+              {cefr && <LevelBadge level={cefr.level} hedged={cefr.hedged} />}
+              {frequency && <FrequencyBadge frequency={frequency} />}
               <span class="stars">{stars}</span>
             </div>
             <div class="row-sub">

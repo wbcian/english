@@ -22,3 +22,25 @@ export const CEFR_INFO: Record<CefrLevel, CefrInfo> = {
   C1: { zh: '高階學術 / 專業', toeic: '945–990' },
   C2: { zh: '近母語', toeic: '— (L&R 量不到)' },
 };
+
+/**
+ * 單字級別是判斷型估計，不像 lesson `level` 只有六個乾淨的值——結尾 `?` 表示
+ * 評估者對這個字沒把握（邊界字，或 CEFR 本來就不太適用的新造詞/俚語）。
+ * 判準見 reference/cefr-leveling-process.md §8。
+ */
+export interface CefrMark {
+  level: CefrLevel;
+  /** true = 這個級別是估計值。UI 照實顯示 `?`，不要偷偷抹掉。 */
+  hedged: boolean;
+}
+
+/** vocab frontmatter `cefr` 欄的合法字面。與 parseCefr 是同一套文法的兩面，故並列在此。 */
+export const CEFR_RAW_PATTERN = new RegExp(`^(${CEFR_LEVELS.join('|')})\\??$`);
+
+export function parseCefr(raw: string): CefrMark {
+  const hedged = raw.endsWith('?');
+  return { level: (hedged ? raw.slice(0, -1) : raw) as CefrLevel, hedged };
+}
+
+/** `?` 的意思。badge tooltip 與單字卡註解共用，避免同一句解釋各寫一份。 */
+export const CEFR_HEDGE_NOTE = '? = 邊界字，這個級別是估計值，不是查官方詞表得來的';

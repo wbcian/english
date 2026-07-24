@@ -1,21 +1,22 @@
 ---
-import { CEFR_INFO, type CefrLevel } from '../data/cefr';
+import { CEFR_HEDGE_NOTE, CEFR_INFO, type CefrLevel } from '../data/cefr';
 
 interface Props {
   level: CefrLevel;
   /** 是否一併顯示 TOEIC 對應區間（文章頁用 true，卡片用 false） */
   showToeic?: boolean;
+  /** 單字用：這個級別是邊界/沒把握的估計，顯示為 `B2?`（lesson 的 level 不會 hedge） */
+  hedged?: boolean;
 }
-const { level, showToeic = false } = Astro.props;
+const { level, showToeic = false, hedged = false } = Astro.props;
 const info = CEFR_INFO[level];
+const title =
+  `CEFR ${level}${hedged ? '?' : ''} · ${info.zh} · TOEIC ~${info.toeic}` +
+  (hedged ? `（${CEFR_HEDGE_NOTE}）` : '');
 ---
 
-<span
-  class="level-badge"
-  data-level={level}
-  title={`CEFR ${level} · ${info.zh} · TOEIC ~${info.toeic}`}
->
-  <span class="level-code">{level}</span>
+<span class="level-badge" data-level={level} title={title}>
+  <span class="level-code">{level}{hedged && <span class="level-hedge">?</span>}</span>
   {showToeic && <span class="level-toeic">TOEIC ~{info.toeic}</span>}
 </span>
 
@@ -32,6 +33,8 @@ const info = CEFR_INFO[level];
     white-space: nowrap;
   }
   .level-code { letter-spacing: 0.02em; }
+  /* 淡化但不隱藏：這個字的級別是估計值，該讓人看見，不該喧賓奪主 */
+  .level-hedge { opacity: 0.6; font-weight: 500; }
   .level-toeic { font-weight: 500; font-size: 0.9em; opacity: 0.85; }
 
   /* 難度色階：易=綠 → 中=琥珀/橘 → 難=紅/紫，方便在 list 快速掃描 */
